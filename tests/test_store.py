@@ -16,17 +16,17 @@ def test_create_matter_persists(store: Store):
 def test_create_entity_assigns_unique_pseudonym(store: Store, matter_id: str):
     a = store.create_entity(matter_id, "Amazon", EntityType.ORG)
     b = store.create_entity(matter_id, "Microsoft", EntityType.ORG)
-    assert a.pseudonym == "Org_001"
-    assert b.pseudonym == "Org_002"
+    assert a.pseudonym == "Org1"
+    assert b.pseudonym == "Org2"
 
 
 def test_pseudonym_prefix_per_type(store: Store, matter_id: str):
     a = store.create_entity(matter_id, "Amazon", EntityType.ORG)
     p = store.create_entity(matter_id, "John Doe", EntityType.PERSON)
     e = store.create_entity(matter_id, "x@y.com", EntityType.EMAIL)
-    assert a.pseudonym == "Org_001"
-    assert p.pseudonym == "Person_001"
-    assert e.pseudonym == "Email_001"
+    assert a.pseudonym == "Org1"
+    assert p.pseudonym == "Person1"
+    assert e.pseudonym == "Email1"
 
 
 def test_find_by_surface_uses_normalized_match(store: Store, matter_id: str):

@@ -11,8 +11,8 @@ Jude redacts identifying information from legal documents on your machine before
 ## What it does
 
 1. **Detects** named entities in your document — persons, organizations, locations, emails, phone numbers, IBANs, court / case references, etc. — using local NER (spaCy, optionally GLiNER) plus regex and a per-matter dictionary that learns over time.
-2. **Redacts** them by replacing each with a stable pseudonym (`Org_001`, `Person_001`, …). The mapping is stored locally in SQLite, scoped per matter, never leaves your machine.
-3. **Optionally adds public-knowledge context** to selected entities (e.g. *"Org_001 — DMA-designated gatekeeper, marketplace + cloud business"*) so the LLM can reason competently without learning the actual identity. Only available in **smart mode**.
+2. **Redacts** them by replacing each with a stable pseudonym (`Org1`, `Person1`, …). The mapping is stored locally in SQLite, scoped per matter, never leaves your machine.
+3. **Optionally adds public-knowledge context** to selected entities (e.g. *"Org1 — DMA-designated gatekeeper, marketplace + cloud business"*) so the LLM can reason competently without learning the actual identity. Only available in **smart mode**.
 4. **Sends** the redacted text to your chosen LLM (Anthropic by default; pluggable).
 5. **Rehydrates** the LLM response by mapping pseudonyms back to real names, so what you read is in plain language.
 

@@ -382,7 +382,7 @@ class Store:
             "ON CONFLICT(matter_id, entity_type) DO UPDATE SET next_n = ?",
             (matter_id, entity_type.value, n + 1, n + 1),
         )
-        return f"{prefix}_{n:03d}"
+        return f"{prefix}{n}"
 
     # ----- audit -----
 

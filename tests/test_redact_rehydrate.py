@@ -26,9 +26,9 @@ def test_redact_strict_replaces_with_pseudonym(store: Store, matter_id: str):
     result = redact(text, detections, store, matter_id, Mode.STRICT)
     assert "Amazon" not in result.redacted_text
     assert "Microsoft" not in result.redacted_text
-    assert "Org_001" in result.redacted_text
-    assert "Org_002" in result.redacted_text
-    assert result.redacted_text.count("Org_001") == 2
+    assert "Org1" in result.redacted_text
+    assert "Org2" in result.redacted_text
+    assert result.redacted_text.count("Org1") == 2
 
 
 def test_redact_smart_appends_context_only_on_first_mention(
@@ -67,15 +67,15 @@ def test_rehydrate_reverses_pseudonyms(store: Store, matter_id: str):
     rehydrated = rehydrate(llm_response, store, matter_id)
     assert "Amazon" in rehydrated
     assert "Microsoft" in rehydrated
-    assert "Org_001" not in rehydrated
+    assert "Org1" not in rehydrated
 
 
 def test_rehydrate_does_not_match_partial_pseudonyms(store: Store, matter_id: str):
     store.create_entity(matter_id, "Acme", EntityType.ORG)
-    llm_response = "See Org_001 as well as Org_0011_extra (this is not a pseudonym)."
+    llm_response = "See Org1 as well as Org11_extra (this is not a pseudonym)."
     rehydrated = rehydrate(llm_response, store, matter_id)
     assert "Acme" in rehydrated
-    assert "Org_0011_extra" in rehydrated
+    assert "Org11_extra" in rehydrated
 
 
 def test_redact_smart_auto_fills_context_from_bundled_provider(
@@ -103,5 +103,5 @@ def test_redact_consistent_pseudonym_across_runs(store: Store, matter_id: str):
         Mode.STRICT,
     )
     pseudonyms = {e.canonical: e.pseudonym for e in second.entities_used}
-    assert pseudonyms["Amazon"] == "Org_001"
-    assert pseudonyms["Acme"] == "Org_002"
+    assert pseudonyms["Amazon"] == "Org1"
+    assert pseudonyms["Acme"] == "Org2"

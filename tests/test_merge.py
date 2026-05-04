@@ -64,7 +64,7 @@ def test_merge_does_not_recycle_pseudonym(store: Store, matter_id: str):
     store.merge_entities(matter_id, primary_id=a.id, secondary_id=b.id)
     c = store.create_entity(matter_id, "Apple", EntityType.ORG)
     assert c.pseudonym not in {a.pseudonym, b.pseudonym}
-    assert c.pseudonym == "Org_003"
+    assert c.pseudonym == "Org3"
 
 
 def test_rehydrate_after_merge_uses_primary_canonical(

@@ -34,10 +34,10 @@ def test_write_redacted_replaces_paragraphs_and_clears_metadata(tmp_path: Path):
     src = tmp_path / "in.docx"
     dst = tmp_path / "out.docx"
     _make_doc(src, ["Hello Amazon.", "Goodbye Microsoft."], author="Jane Doe")
-    DocxAdapter.write_redacted(src, dst, ["Hello Org_001.", "Goodbye Org_002."])
+    DocxAdapter.write_redacted(src, dst, ["Hello Org1.", "Goodbye Org2."])
     out = Document(str(dst))
     texts = [p.text for p in out.paragraphs if p.text.strip()]
-    assert texts == ["Hello Org_001.", "Goodbye Org_002."]
+    assert texts == ["Hello Org1.", "Goodbye Org2."]
     assert out.core_properties.author in ("", None)
 
 

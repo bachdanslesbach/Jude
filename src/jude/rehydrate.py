@@ -9,7 +9,7 @@ def rehydrate(text: str, store: Store, matter_id: str) -> str:
     """Replace every pseudonym in *text* with the canonical real name.
 
     Pseudonyms are matched with word boundaries so partial-prefix collisions
-    (e.g. `Org_001` is not matched inside `Org_0011`) are avoided. Longer
+    (e.g. `Org1` is not matched inside `Org11`) are avoided. Longer
     pseudonyms are processed first to be safe.
     """
 

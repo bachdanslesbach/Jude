@@ -25,7 +25,7 @@ Jude exposes two modes per matter, surfaced in the UI:
 | | **Strict** | **Smart** |
 |---|---|---|
 | Pseudonyms | yes | yes |
-| Context tags | categorical only ("a tech firm") | public-knowledge tags allowed ("a DMA gatekeeper, marketplace business") |
+| Context tags | categorical only ("a tech firm") | public-knowledge tags allowed ("a VLOP, marketplace business") |
 | LLM endpoint requirement | any | must be declared zero-retention by the user |
 | Use case | maximum confidentiality, lower analytical depth | better LLM reasoning, requires a contractually-trusted endpoint |
 

@@ -93,7 +93,9 @@ For the LLM call you need an `ANTHROPIC_API_KEY` in your environment (Anthropic'
 
 ```bash
 jude redact path/to/file.docx --matter "matter-2026-001"
+jude redact path/to/file.pdf  --matter "matter-2026-001"   # outputs .txt
 jude entities --matter "matter-2026-001"
+jude enrich   --matter "matter-2026-001"                   # auto-fill public context
 jude rehydrate path/to/llm-output.txt --matter "matter-2026-001"
 ```
 
@@ -105,11 +107,12 @@ pytest
 
 ## Roadmap
 
-- v0.1 (now): plain text + DOCX, strict / smart modes, Streamlit UI, Anthropic backend, French + English NER.
-- v0.2: native-text PDF, OpenAI / Azure backends, GLiNER as opt-in.
-- v0.3: scanned PDF (OCR), XLSX, .eml.
-- v0.4: per-matter public-knowledge RAG for smart-mode context tags (Wikipedia, EUR-Lex).
-- v0.5: Tauri+React desktop app replacing Streamlit.
+- v0.1: plain text + DOCX, strict / smart modes, Streamlit UI, Anthropic backend, French + English NER.
+- **v0.2 (now): native-text PDF, entity merge in the UI, bundled public-knowledge dataset for auto-filling smart-mode context (DMA gatekeepers, EU institutions, NCAs).**
+- v0.3: Wikipedia / EUR-Lex enrichment, OpenAI / Azure / Ollama backends, GLiNER as opt-in.
+- v0.4: scanned PDF (OCR), XLSX, .eml.
+- v0.5: re-identification risk score per entity.
+- v0.6: Tauri + React desktop app replacing Streamlit.
 
 ## License
 

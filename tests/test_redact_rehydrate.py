@@ -78,6 +78,21 @@ def test_rehydrate_does_not_match_partial_pseudonyms(store: Store, matter_id: st
     assert "Org_0011_extra" in rehydrated
 
 
+def test_redact_smart_auto_fills_context_from_bundled_provider(
+    store: Store, smart_matter_id: str
+):
+    text = "Amazon competes with Microsoft."
+    detections = [
+        _det("Amazon", 0),
+        _det("Microsoft", 21),
+    ]
+    result = redact(text, detections, store, smart_matter_id, Mode.SMART)
+    canon_to_ent = {e.canonical: e for e in result.entities_used}
+    assert canon_to_ent["Amazon"].public_context is not None
+    assert "gatekeeper" in canon_to_ent["Amazon"].public_context.lower()
+    assert "(" in result.redacted_text
+
+
 def test_redact_consistent_pseudonym_across_runs(store: Store, matter_id: str):
     redact("Amazon.", [_det("Amazon", 0)], store, matter_id, Mode.STRICT)
     second = redact(

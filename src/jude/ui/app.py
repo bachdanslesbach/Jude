@@ -4,8 +4,10 @@ from pathlib import Path
 
 import streamlit as st
 
-from jude.adapters import DocxAdapter, TextAdapter
+from jude.adapters import DocxAdapter, PdfAdapter, TextAdapter
 from jude.adapters.docx import PARAGRAPH_SEP, DocxExtraction
+from jude.adapters.pdf import PdfExtraction
+from jude.context import fill_missing_context
 from jude.detect import DetectionPipeline
 from jude.llm import AnthropicClient
 from jude.paths import default_db_path
@@ -117,7 +119,7 @@ def _tab_input(matter) -> None:
     st.session_state.user_context = user_context
 
     paste = st.text_area("Paste text", height=300, key="paste_text")
-    upload = st.file_uploader("…or upload a file", type=["txt", "docx"])
+    upload = st.file_uploader("…or upload a file", type=["txt", "docx", "pdf"])
 
     if st.button("Detect & redact", type="primary"):
         text, extraction = _load_input(paste, upload)
@@ -140,15 +142,21 @@ def _tab_input(matter) -> None:
         )
 
 
-def _load_input(paste: str, upload) -> tuple[str, DocxExtraction | None]:
+def _load_input(
+    paste: str, upload
+) -> tuple[str, DocxExtraction | PdfExtraction | None]:
     if upload is not None:
-        if upload.name.lower().endswith(".docx"):
-            tmp = Path("/tmp") / f"jude_{upload.name}"
+        name = upload.name.lower()
+        tmp = Path("/tmp") / f"jude_{upload.name}"
+        if name.endswith(".docx"):
             tmp.write_bytes(upload.read())
             extraction = DocxAdapter.read(tmp)
             return extraction.text, extraction
-        else:
-            return upload.read().decode("utf-8"), None
+        if name.endswith(".pdf"):
+            tmp.write_bytes(upload.read())
+            extraction_pdf = PdfAdapter.read(tmp)
+            return extraction_pdf.text, extraction_pdf
+        return upload.read().decode("utf-8"), None
     return paste, None
 
 
@@ -237,19 +245,36 @@ def _tab_entities(matter) -> None:
     st.subheader("Per-matter entity dictionary")
     st.caption(
         "These mappings live only on your machine. Edit `public context` to enable "
-        "smart-mode tagging — only fill it with publicly known facts about the entity."
+        "smart-mode tagging — only fill it with publicly known facts about the entity. "
+        "Use the merge dropdown when the same real entity was detected under several "
+        "surface forms (e.g. *Amazon* and *Amazon.com Inc.*)."
     )
     store = _store()
     ents = store.list_entities(matter.id)
     if not ents:
         st.info("No entities yet. Run a redaction first.")
         return
+
+    if st.button(
+        "Auto-fill missing public context (bundled known entities)",
+        help=(
+            "Looks up each entity in Jude's bundled dataset of well-known public "
+            "entities (DMA gatekeepers, EU institutions, NCAs). Only fills entities "
+            "that don't already have a public context. No network call."
+        ),
+    ):
+        n = fill_missing_context(store, matter.id)
+        st.success(f"Filled public context for {n} entities.")
+        st.rerun()
+
+    by_id = {e.id: e for e in ents}
+
     for e in ents:
         with st.container(border=True):
-            cols = st.columns([1.5, 2, 3, 4])
+            cols = st.columns([1.4, 1.8, 2.5, 3, 2])
             cols[0].markdown(f"**{e.pseudonym}**  \n_{e.entity_type.value}_")
             cols[1].markdown(f"{e.canonical}")
-            cols[2].markdown(", ".join(sorted(e.surface_forms)))
+            cols[2].markdown(", ".join(sorted(e.surface_forms)) or "—")
             new_ctx = cols[3].text_input(
                 "public context",
                 value=e.public_context or "",
@@ -259,6 +284,33 @@ def _tab_entities(matter) -> None:
             )
             if new_ctx != (e.public_context or ""):
                 store.set_public_context(e.id, new_ctx or None)
+
+            same_type = [
+                o for o in ents if o.id != e.id and o.entity_type == e.entity_type
+            ]
+            if same_type:
+                opts = ["— merge into —"] + [
+                    f"{o.pseudonym} ({o.canonical})" for o in same_type
+                ]
+                pick = cols[4].selectbox(
+                    "merge",
+                    options=opts,
+                    key=f"merge_{e.id}",
+                    label_visibility="collapsed",
+                )
+                if pick != opts[0]:
+                    target_idx = opts.index(pick) - 1
+                    target = same_type[target_idx]
+                    if cols[4].button("Confirm merge", key=f"merge_btn_{e.id}"):
+                        try:
+                            store.merge_entities(matter.id, target.id, e.id)
+                            st.success(
+                                f"Merged {e.pseudonym} ({e.canonical}) into "
+                                f"{target.pseudonym} ({target.canonical})."
+                            )
+                            st.rerun()
+                        except ValueError as err:
+                            st.error(str(err))
 
 
 main()

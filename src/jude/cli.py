@@ -8,8 +8,9 @@ import typer
 from rich import print as rprint
 from rich.table import Table
 
-from .adapters import DocxAdapter, TextAdapter
+from .adapters import DocxAdapter, PdfAdapter, TextAdapter
 from .adapters.docx import PARAGRAPH_SEP
+from .context import fill_missing_context
 from .detect import DetectionPipeline
 from .paths import default_db_path
 from .redact import redact
@@ -90,7 +91,8 @@ def redact_file(
             raise typer.Exit(1)
         pipeline = DetectionPipeline(store=store, matter_id=matter)
 
-        if path.suffix.lower() == ".docx":
+        suffix = path.suffix.lower()
+        if suffix == ".docx":
             extraction = DocxAdapter.read(path)
             for w in extraction.warnings:
                 rprint(f"[yellow]warning:[/yellow] {w}")
@@ -98,6 +100,20 @@ def redact_file(
             redacted_paragraphs = result.redacted_text.split(PARAGRAPH_SEP)
             target = out or path.with_suffix(".redacted.docx")
             DocxAdapter.write_redacted(path, target, redacted_paragraphs)
+        elif suffix == ".pdf":
+            extraction = PdfAdapter.read(path)
+            for w in extraction.warnings:
+                rprint(f"[yellow]warning:[/yellow] {w}")
+            if not extraction.text.strip():
+                rprint("[red]No extractable text. Aborting.[/red]")
+                raise typer.Exit(1)
+            result = redact(extraction.text, pipeline.detect(extraction.text), store, matter, m.mode)
+            target = out or path.with_suffix(".redacted.txt")
+            TextAdapter.write(target, result.redacted_text)
+            rprint(
+                "[yellow]note:[/yellow] PDF write-back is not yet supported. "
+                "Output is plain text."
+            )
         else:
             text = TextAdapter.read(path)
             result = redact(text, pipeline.detect(text), store, matter, m.mode)
@@ -141,6 +157,15 @@ def rehydrate_file(
     target = out or path.with_suffix(".rehydrated" + path.suffix)
     TextAdapter.write(target, result)
     rprint(f"[green]Rehydrated[/green] → {target}")
+
+
+@app.command()
+def enrich(matter: str = typer.Option(..., help="Matter id.")) -> None:
+    """Auto-fill `public context` from the bundled known-entities dataset."""
+
+    with Store(default_db_path()) as store:
+        n = fill_missing_context(store, matter)
+    rprint(f"[green]Filled public context for {n} entities.[/green]")
 
 
 @app.command()

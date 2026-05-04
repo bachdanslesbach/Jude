@@ -53,6 +53,13 @@ CREATE TABLE IF NOT EXISTS audit_log (
     detail TEXT,
     ts TEXT NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS pseudonym_counters (
+    matter_id TEXT NOT NULL REFERENCES matters(id) ON DELETE CASCADE,
+    entity_type TEXT NOT NULL,
+    next_n INTEGER NOT NULL,
+    PRIMARY KEY (matter_id, entity_type)
+);
 """
 
 
@@ -257,6 +264,75 @@ class Store:
                 (context, entity_id),
             )
 
+    def delete_entity(self, entity_id: int) -> None:
+        with self._tx() as c:
+            c.execute("DELETE FROM entities WHERE id = ?", (entity_id,))
+
+    def merge_entities(self, matter_id: str, primary_id: int, secondary_id: int) -> Entity:
+        """Merge `secondary` into `primary`.
+
+        All surface forms of secondary are moved onto primary; secondary's
+        canonical becomes a surface form of primary; if primary has no
+        public_context, secondary's is inherited. Secondary is then deleted.
+
+        The primary's pseudonym is preserved; secondary's pseudonym is freed
+        and not reused (gaps in the numbering are intentional and audit-friendly).
+        """
+
+        if primary_id == secondary_id:
+            raise ValueError("Cannot merge an entity with itself.")
+        primary = self._fetch_entity_by_id(matter_id, primary_id)
+        secondary = self._fetch_entity_by_id(matter_id, secondary_id)
+        if primary is None or secondary is None:
+            raise ValueError("Both entities must exist in the same matter.")
+        if primary.entity_type != secondary.entity_type:
+            raise ValueError(
+                f"Cannot merge entities of different types: "
+                f"{primary.entity_type.value} vs {secondary.entity_type.value}."
+            )
+
+        sec_forms = secondary.surface_forms | {secondary.canonical}
+        with self._tx() as c:
+            for form in sec_forms:
+                norm = normalize_surface(form)
+                if not norm:
+                    continue
+                c.execute(
+                    "INSERT OR IGNORE INTO surface_forms (entity_id, form, normalized) "
+                    "VALUES (?, ?, ?)",
+                    (primary_id, form, norm),
+                )
+            if not primary.public_context and secondary.public_context:
+                c.execute(
+                    "UPDATE entities SET public_context = ? WHERE id = ?",
+                    (secondary.public_context, primary_id),
+                )
+            c.execute("DELETE FROM entities WHERE id = ?", (secondary_id,))
+        self._log(
+            matter_id,
+            "entity.merge",
+            json.dumps(
+                {
+                    "primary": {"id": primary_id, "pseudonym": primary.pseudonym},
+                    "secondary_dropped": {
+                        "id": secondary_id,
+                        "pseudonym": secondary.pseudonym,
+                        "canonical": secondary.canonical,
+                    },
+                }
+            ),
+        )
+        merged = self._fetch_entity_by_id(matter_id, primary_id)
+        assert merged is not None
+        return merged
+
+    def _fetch_entity_by_id(self, matter_id: str, entity_id: int) -> Entity | None:
+        row = self._conn.execute(
+            "SELECT * FROM entities WHERE matter_id = ? AND id = ?",
+            (matter_id, entity_id),
+        ).fetchone()
+        return self._row_to_entity(row) if row else None
+
     def list_entities(self, matter_id: str) -> list[Entity]:
         rows = self._conn.execute(
             "SELECT * FROM entities WHERE matter_id = ? ORDER BY id ASC",
@@ -286,13 +362,26 @@ class Store:
     # ----- pseudonym allocation -----
 
     def _next_pseudonym(self, matter_id: str, entity_type: EntityType) -> str:
+        """Allocate the next pseudonym for `entity_type` in `matter_id`.
+
+        Counters are monotonic per (matter, type) and never decremented, so a
+        deleted or merged-away pseudonym is never reused. This preserves the
+        integrity of any document that was redacted before the change.
+        """
+
         prefix = _pseudonym_prefix(entity_type)
         row = self._conn.execute(
-            "SELECT COUNT(*) AS n FROM entities "
+            "SELECT next_n FROM pseudonym_counters "
             "WHERE matter_id = ? AND entity_type = ?",
             (matter_id, entity_type.value),
         ).fetchone()
-        n = int(row["n"]) + 1
+        n = int(row["next_n"]) if row else 1
+        self._conn.execute(
+            "INSERT INTO pseudonym_counters (matter_id, entity_type, next_n) "
+            "VALUES (?, ?, ?) "
+            "ON CONFLICT(matter_id, entity_type) DO UPDATE SET next_n = ?",
+            (matter_id, entity_type.value, n + 1, n + 1),
+        )
         return f"{prefix}_{n:03d}"
 
     # ----- audit -----

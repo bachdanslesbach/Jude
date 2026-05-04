@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from .context import ContextProvider, default_provider
 from .store import Store
 from .types import (
     Detection,
@@ -16,6 +17,7 @@ def redact(
     store: Store,
     matter_id: str,
     mode: Mode = Mode.STRICT,
+    context_provider: ContextProvider | None = None,
 ) -> RedactionResult:
     """Apply detections to text, producing pseudonymized output.
 
@@ -36,6 +38,7 @@ def redact(
             "Smart mode requires the matter to attest a zero-retention LLM endpoint."
         )
 
+    provider = context_provider or default_provider() if mode == Mode.SMART else None
     sorted_dets = sorted(detections, key=lambda d: d.start)
     used_entities: dict[int, Entity] = {}
     seen_in_output: set[int] = set()
@@ -49,6 +52,13 @@ def redact(
 
         entity = _get_or_create_entity(store, matter_id, det)
         assert entity.id is not None
+
+        if provider is not None and not entity.public_context:
+            ctx = provider.lookup(entity.canonical, entity.entity_type)
+            if ctx:
+                store.set_public_context(entity.id, ctx)
+                entity.public_context = ctx
+
         used_entities[entity.id] = entity
 
         if det.text not in entity.surface_forms:

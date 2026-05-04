@@ -104,7 +104,14 @@ class Store:
     def __init__(self, db_path: Path | str):
         self.db_path = Path(db_path)
         self.db_path.parent.mkdir(parents=True, exist_ok=True)
-        self._conn = sqlite3.connect(self.db_path, isolation_level=None)
+        # check_same_thread=False is required because Streamlit reruns the
+        # script on different threads (the WebSocket dispatcher uses a thread
+        # pool). SQLite itself serializes operations under the default
+        # threading mode, so cross-thread use is safe for our single-user
+        # workload — we just need Python to stop guarding it.
+        self._conn = sqlite3.connect(
+            self.db_path, isolation_level=None, check_same_thread=False
+        )
         self._conn.row_factory = sqlite3.Row
         self._conn.execute("PRAGMA foreign_keys = ON;")
         self._conn.executescript(SCHEMA)

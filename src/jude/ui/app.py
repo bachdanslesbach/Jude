@@ -54,6 +54,14 @@ def sidebar() -> tuple[Matter | None, Conversation | None]:
 
 
 def _matter_picker(store: Store) -> Matter | None:
+    # Honour pending programmatic selection from a previous rerun. We can't
+    # write to a widget's session_state key after the widget renders in the
+    # same run, so create-matter stashes its target here and we apply it on
+    # the next run before the widget is instantiated.
+    pending = st.session_state.pop("_pending_matter_select", None)
+    if pending is not None:
+        st.session_state["matter_select"] = pending
+
     matters = store.list_matters()
     options: dict[str, str] = {f"{m.name} · {m.mode.value}": m.id for m in matters}
     options["+ New matter"] = ""
@@ -92,7 +100,9 @@ def _matter_create(store: Store) -> Matter | None:
                     mode=Mode(mode_label),
                     zero_retention_attested=zr,
                 )
-                st.session_state["matter_select"] = f"{m.name} · {m.mode.value}"
+                st.session_state["_pending_matter_select"] = (
+                    f"{m.name} · {m.mode.value}"
+                )
                 st.rerun()
             except ValueError as e:
                 st.error(str(e))

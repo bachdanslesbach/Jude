@@ -25,8 +25,8 @@ htmlcov/
 *.swp
 .DS_Store
 
-# Local data — NEVER commit
-data/
+# Local data — NEVER commit (root-level only; bundled package data under src/ is fine)
+/data/
 *.db
 *.sqlite
 *.sqlite3

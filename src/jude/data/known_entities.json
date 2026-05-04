@@ -1,0 +1,110 @@
+{
+  "_metadata": {
+    "version": 1,
+    "description": "Bundled public-knowledge tags for well-known entities. Used as seed for smart-mode context. Only includes facts that are publicly documented elsewhere.",
+    "sources_note": "Designations from Commission decisions; institutional descriptions from primary EU sources. Last reviewed 2026-05."
+  },
+  "entities": [
+    {
+      "canonical": "Alphabet",
+      "aliases": ["Google", "Google LLC", "Alphabet Inc.", "GOOGL"],
+      "type": "ORG",
+      "context": "US tech holding (parent of Google); DMA-designated gatekeeper for Search, Maps, Play, Chrome, Android, YouTube, Ads"
+    },
+    {
+      "canonical": "Amazon",
+      "aliases": ["Amazon.com", "Amazon.com Inc.", "AMZN"],
+      "type": "ORG",
+      "context": "US tech and retail; DMA-designated gatekeeper for the Amazon Marketplace and Amazon Ads core platform services; cloud business via AWS"
+    },
+    {
+      "canonical": "Apple",
+      "aliases": ["Apple Inc.", "AAPL"],
+      "type": "ORG",
+      "context": "US tech; DMA-designated gatekeeper for iOS, the App Store and Safari"
+    },
+    {
+      "canonical": "ByteDance",
+      "aliases": ["TikTok", "ByteDance Ltd.", "字节跳动"],
+      "type": "ORG",
+      "context": "Chinese tech company; DMA-designated gatekeeper for TikTok"
+    },
+    {
+      "canonical": "Meta",
+      "aliases": ["Facebook", "Meta Platforms", "Meta Platforms Inc.", "META"],
+      "type": "ORG",
+      "context": "US tech; DMA-designated gatekeeper for Facebook, Instagram, WhatsApp, Messenger, Marketplace and Meta Ads"
+    },
+    {
+      "canonical": "Microsoft",
+      "aliases": ["Microsoft Corporation", "MSFT"],
+      "type": "ORG",
+      "context": "US tech; DMA-designated gatekeeper for Windows PC OS and LinkedIn; cloud business via Azure"
+    },
+    {
+      "canonical": "Booking",
+      "aliases": ["Booking.com", "Booking Holdings", "BKNG"],
+      "type": "ORG",
+      "context": "Online travel agency; DMA-designated gatekeeper for Booking.com (online intermediation services)"
+    },
+    {
+      "canonical": "European Commission",
+      "aliases": [
+        "EC",
+        "Commission",
+        "Commission européenne",
+        "Commission Européenne",
+        "La Commission",
+        "COM"
+      ],
+      "type": "ORG",
+      "context": "Executive arm of the EU; enforces EU competition law via DG Competition; merger control under Reg (EC) 139/2004"
+    },
+    {
+      "canonical": "Court of Justice of the European Union",
+      "aliases": [
+        "CJEU",
+        "ECJ",
+        "Cour de justice",
+        "Cour de justice de l'Union européenne",
+        "Court of Justice"
+      ],
+      "type": "ORG",
+      "context": "Top EU court; rules on direct actions and preliminary references; sits in Luxembourg"
+    },
+    {
+      "canonical": "General Court",
+      "aliases": [
+        "EU General Court",
+        "Tribunal",
+        "Tribunal de l'Union européenne"
+      ],
+      "type": "ORG",
+      "context": "First-instance EU court; hears actions for annulment of Commission decisions including competition cases"
+    },
+    {
+      "canonical": "Belgian Competition Authority",
+      "aliases": [
+        "BCA",
+        "ABC",
+        "Autorité belge de la concurrence",
+        "Belgische Mededingingsautoriteit",
+        "BMA"
+      ],
+      "type": "ORG",
+      "context": "Belgian national competition authority; enforces Belgian and EU competition law within Belgium"
+    },
+    {
+      "canonical": "Autorité de la concurrence",
+      "aliases": ["ADLC", "French Competition Authority"],
+      "type": "ORG",
+      "context": "French national competition authority; enforces French and EU competition law within France"
+    },
+    {
+      "canonical": "Bundeskartellamt",
+      "aliases": ["BKartA", "German Federal Cartel Office"],
+      "type": "ORG",
+      "context": "German national competition authority; enforces German and EU competition law within Germany"
+    }
+  ]
+}

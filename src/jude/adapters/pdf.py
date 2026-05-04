@@ -1,10 +1,17 @@
 from __future__ import annotations
 
+import shutil
+import subprocess
+import tempfile
 from dataclasses import dataclass, field
 from pathlib import Path
 
 PARAGRAPH_SEP = "\n\n"
 PAGE_MARKER = "\n\n--- Page {n} ---\n\n"
+
+
+class OCRUnavailableError(RuntimeError):
+    """Raised when OCR is requested but the system binary is not installed."""
 
 
 @dataclass
@@ -33,26 +40,54 @@ class PdfExtraction:
 
 
 class PdfAdapter:
-    """Read text from a native-text PDF.
+    """Read text from a PDF, optionally running OCR when the PDF has no text.
 
-    Limitations of v0:
-      * Scanned (image-only) PDFs are detected and surfaced as a warning;
-        no OCR is performed yet.
-      * No write-back to PDF — the redacted output is plain text. The user
-        can paste it into their LLM tool of choice.
+    Behavior:
+      * Native-text PDFs: text is extracted directly.
+      * Image-only PDFs with `enable_ocr=False`: a warning is surfaced and
+        no text is returned. The caller can then re-call with OCR enabled.
+      * Image-only PDFs with `enable_ocr=True`: `ocrmypdf` is run against
+        the file in a temp directory to produce a searchable copy, which
+        is then text-extracted normally.
+
+    `ocrmypdf` requires the `tesseract` system binary (and language data).
+    Install on macOS with `brew install tesseract tesseract-lang`. Without
+    it, calls with `enable_ocr=True` raise `OCRUnavailableError`.
     """
 
     @staticmethod
-    def read(path: Path | str) -> PdfExtraction:
+    def read(
+        path: Path | str,
+        *,
+        enable_ocr: bool = False,
+        ocr_languages: tuple[str, ...] = ("eng", "fra"),
+    ) -> PdfExtraction:
+        extraction = PdfAdapter._extract(path)
+        if extraction.is_text_pdf or not enable_ocr:
+            return extraction
+
+        # Image-only PDF and OCR is requested — run ocrmypdf and re-extract.
+        ocr_pdf = _run_ocrmypdf(Path(path), ocr_languages)
+        try:
+            ocr_extraction = PdfAdapter._extract(ocr_pdf)
+            ocr_extraction.warnings = extraction.warnings + [
+                f"OCR was applied (languages: {'+'.join(ocr_languages)})."
+            ]
+            ocr_extraction.metadata = extraction.metadata
+            return ocr_extraction
+        finally:
+            ocr_pdf.unlink(missing_ok=True)
+            ocr_pdf.parent.rmdir() if ocr_pdf.parent.exists() else None
+
+    @staticmethod
+    def _extract(path: Path | str) -> PdfExtraction:
         import pymupdf
 
         doc = pymupdf.open(str(path))
         try:
             extraction = PdfExtraction()
             extraction.metadata = {
-                k: v
-                for k, v in (doc.metadata or {}).items()
-                if v
+                k: v for k, v in (doc.metadata or {}).items() if v
             }
 
             empty_pages = 0
@@ -66,14 +101,15 @@ class PdfAdapter:
                 extraction.is_text_pdf = False
                 extraction.warnings.append(
                     "PDF appears to be image-only (no extractable text). "
-                    "OCR is not yet supported in v0; convert with an OCR tool first "
-                    "(e.g. ocrmypdf) or use a text-PDF version."
+                    "Re-run with `enable_ocr=True` (or `--ocr` on the CLI) to "
+                    "have Jude run ocrmypdf locally and extract text from a "
+                    "searchable copy."
                 )
             elif empty_pages > 0:
                 extraction.warnings.append(
                     f"{empty_pages} of {len(extraction.pages)} pages contain no "
-                    "extractable text — they may be scanned images and will be "
-                    "skipped silently."
+                    "extractable text — they may be scanned images. Re-run with "
+                    "OCR enabled to capture them."
                 )
 
             if any(extraction.metadata.values()):
@@ -89,4 +125,46 @@ class PdfAdapter:
 
     @staticmethod
     def is_text_pdf(path: Path | str) -> bool:
-        return PdfAdapter.read(path).is_text_pdf
+        return PdfAdapter._extract(path).is_text_pdf
+
+
+def _run_ocrmypdf(input_pdf: Path, languages: tuple[str, ...]) -> Path:
+    """Run `ocrmypdf` on `input_pdf` to produce a searchable PDF.
+
+    Returns the path of the OCR output (caller is responsible for cleanup).
+    Raises `OCRUnavailableError` if the system tesseract is missing.
+    """
+
+    if shutil.which("tesseract") is None:
+        raise OCRUnavailableError(
+            "OCR was requested but the `tesseract` system binary is not "
+            "installed. On macOS:\n"
+            "  brew install tesseract tesseract-lang\n"
+            "On Debian/Ubuntu:\n"
+            "  apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-fra"
+        )
+
+    tmpdir = Path(tempfile.mkdtemp(prefix="jude_ocr_"))
+    output = tmpdir / "ocr.pdf"
+    lang_arg = "+".join(languages)
+    cmd = [
+        "ocrmypdf",
+        "--language", lang_arg,
+        "--skip-text",
+        "--quiet",
+        "--output-type", "pdf",
+        str(input_pdf),
+        str(output),
+    ]
+    try:
+        subprocess.run(cmd, check=True, capture_output=True, text=True)
+    except FileNotFoundError as e:
+        raise OCRUnavailableError(
+            "`ocrmypdf` was not found on PATH. Install it with "
+            "`pip install ocrmypdf` (and ensure tesseract is installed)."
+        ) from e
+    except subprocess.CalledProcessError as e:
+        raise RuntimeError(
+            f"ocrmypdf failed (exit {e.returncode}):\n{e.stderr}"
+        ) from e
+    return output

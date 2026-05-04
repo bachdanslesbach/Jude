@@ -91,8 +91,14 @@ def redact_file(
     out: Path | None = typer.Option(
         None, help="Output path. Defaults to <input>.redacted.<ext>"
     ),
+    ocr: bool = typer.Option(
+        False,
+        "--ocr",
+        help="For PDFs only: if the file is image-only, run ocrmypdf locally "
+        "to produce searchable text first. Requires tesseract installed.",
+    ),
 ) -> None:
-    """Redact a .txt or .docx file."""
+    """Redact a .txt, .docx or .pdf file."""
 
     with Store(default_db_path()) as store:
         m = store.get_matter(matter)
@@ -111,11 +117,18 @@ def redact_file(
             target = out or path.with_suffix(".redacted.docx")
             DocxAdapter.write_redacted(path, target, redacted_paragraphs)
         elif suffix == ".pdf":
-            extraction = PdfAdapter.read(path)
+            try:
+                extraction = PdfAdapter.read(path, enable_ocr=ocr)
+            except Exception as e:
+                rprint(f"[red]PDF read failed:[/red] {e}")
+                raise typer.Exit(1) from e
             for w in extraction.warnings:
                 rprint(f"[yellow]warning:[/yellow] {w}")
             if not extraction.text.strip():
-                rprint("[red]No extractable text. Aborting.[/red]")
+                rprint(
+                    "[red]No extractable text.[/red] "
+                    "If this is a scanned PDF, re-run with --ocr."
+                )
                 raise typer.Exit(1)
             result = redact(extraction.text, pipeline.detect(extraction.text), store, matter, m.mode)
             target = out or path.with_suffix(".redacted.txt")

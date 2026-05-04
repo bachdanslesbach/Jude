@@ -109,11 +109,39 @@ pytest
 
 - v0.1: plain text + DOCX, strict / smart modes, Streamlit UI, Anthropic backend, French + English NER.
 - v0.2: native-text PDF, entity merge in the UI, bundled public-knowledge dataset for auto-filling smart-mode context (DMA gatekeepers, EU institutions, NCAs).
-- **v0.3 (now): per-paragraph language routing (no more French-model-on-English hallucinations), span shape filter (rejects all-stopword spans, dates, single lowercase words, runaway 6+-token spans), `en_core_web_lg` preferred when installed.**
-- v0.4: scanned PDF (OCR via `ocrmypdf`).
+- v0.3: per-paragraph language routing, span shape filter, `en_core_web_lg` preferred, expanded known-entities dataset to 147 entries.
+- **v0.3.1 (now): scanned PDF support via `ocrmypdf` (`--ocr` CLI flag, checkbox in UI).**
+- v0.4: chat-first UI with multi-turn redaction.
 - v0.5: Wikipedia / EUR-Lex enrichment, OpenAI / Azure / Ollama backends.
 - v0.6: re-identification risk score per entity.
 - v0.7: Tauri + React desktop app replacing Streamlit.
+
+## OCR for scanned PDFs
+
+If you redact a PDF that's image-only (scanned), Jude can run `ocrmypdf`
+locally to add a searchable text layer first, then extract from that.
+
+Requires the `tesseract` system binary:
+
+```bash
+brew install tesseract tesseract-lang   # macOS
+# or:
+apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-fra   # Debian
+```
+
+Plus the Python wrapper:
+
+```bash
+pip install -e ".[ocr]"
+```
+
+Then:
+
+```bash
+jude redact some_scan.pdf --matter <id> --ocr
+```
+
+The OCR runs entirely on your machine; nothing is sent over the network.
 
 ## License
 

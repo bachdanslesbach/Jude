@@ -52,3 +52,56 @@ def test_pdf_warns_on_metadata(tmp_path: Path):
     extraction = PdfAdapter.read(src)
     assert extraction.metadata.get("author") == "Jane Doe"
     assert any("metadata" in w.lower() for w in extraction.warnings)
+
+
+def test_image_only_pdf_without_ocr_returns_warning(tmp_path: Path):
+    src = tmp_path / "blank.pdf"
+    _make_blank_pdf(src)
+    extraction = PdfAdapter.read(src, enable_ocr=False)
+    assert extraction.is_text_pdf is False
+    assert any("ocr" in w.lower() for w in extraction.warnings)
+
+
+def test_ocr_raises_when_tesseract_missing(tmp_path: Path, monkeypatch):
+    from jude.adapters import pdf as pdf_module
+    from jude.adapters.pdf import OCRUnavailableError
+
+    monkeypatch.setattr(pdf_module.shutil, "which", lambda _: None)
+    src = tmp_path / "blank.pdf"
+    _make_blank_pdf(src)
+    with pytest.raises(OCRUnavailableError, match="tesseract"):
+        PdfAdapter.read(src, enable_ocr=True)
+
+
+@pytest.mark.skipif(
+    __import__("shutil").which("tesseract") is None,
+    reason="tesseract not installed on this machine",
+)
+def test_ocr_extracts_text_from_image_pdf(tmp_path: Path):
+    """End-to-end OCR: render text as an image, embed it in a PDF, OCR it back."""
+
+    from PIL import Image, ImageDraw, ImageFont
+    import img2pdf
+
+    img_path = tmp_path / "page.png"
+    pdf_path = tmp_path / "scanned.pdf"
+    img = Image.new("RGB", (1200, 600), "white")
+    draw = ImageDraw.Draw(img)
+    try:
+        font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 48)
+    except OSError:
+        font = ImageFont.load_default()
+    draw.text((50, 100), "Amazon competes with Microsoft.", fill="black", font=font)
+    img.save(img_path)
+    with open(pdf_path, "wb") as f:
+        f.write(img2pdf.convert(str(img_path)))
+
+    pre = PdfAdapter.read(pdf_path, enable_ocr=False)
+    assert pre.is_text_pdf is False
+
+    post = PdfAdapter.read(pdf_path, enable_ocr=True)
+    assert post.is_text_pdf is True
+    text_lower = post.text.lower()
+    assert "amazon" in text_lower
+    assert "microsoft" in text_lower
+    assert any("ocr was applied" in w.lower() for w in post.warnings)

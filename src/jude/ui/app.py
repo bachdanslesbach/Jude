@@ -120,9 +120,23 @@ def _tab_input(matter) -> None:
 
     paste = st.text_area("Paste text", height=300, key="paste_text")
     upload = st.file_uploader("…or upload a file", type=["txt", "docx", "pdf"])
+    enable_ocr = st.checkbox(
+        "Run OCR if PDF is scanned (requires tesseract)",
+        value=False,
+        help=(
+            "When checked, image-only PDFs are passed through `ocrmypdf` "
+            "locally to produce a searchable text layer before redaction. "
+            "Requires the `tesseract` binary to be installed: "
+            "`brew install tesseract tesseract-lang`."
+        ),
+    )
 
     if st.button("Detect & redact", type="primary"):
-        text, extraction = _load_input(paste, upload)
+        try:
+            text, extraction = _load_input(paste, upload, enable_ocr=enable_ocr)
+        except Exception as e:
+            st.error(f"Failed to read input: {e}")
+            return
         if not text.strip():
             st.warning("No text provided.")
             return
@@ -143,7 +157,7 @@ def _tab_input(matter) -> None:
 
 
 def _load_input(
-    paste: str, upload
+    paste: str, upload, enable_ocr: bool = False
 ) -> tuple[str, DocxExtraction | PdfExtraction | None]:
     if upload is not None:
         name = upload.name.lower()
@@ -154,7 +168,7 @@ def _load_input(
             return extraction.text, extraction
         if name.endswith(".pdf"):
             tmp.write_bytes(upload.read())
-            extraction_pdf = PdfAdapter.read(tmp)
+            extraction_pdf = PdfAdapter.read(tmp, enable_ocr=enable_ocr)
             return extraction_pdf.text, extraction_pdf
         return upload.read().decode("utf-8"), None
     return paste, None

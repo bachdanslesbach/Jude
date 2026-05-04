@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -193,10 +194,43 @@ def enrich(matter: str = typer.Option(..., help="Matter id.")) -> None:
 
 @app.command()
 def ui() -> None:
-    """Launch the Streamlit UI."""
+    """Launch the Streamlit UI.
 
+    Suppresses Streamlit's first-run email prompt and disables anonymous
+    usage telemetry — the tool's whole point is local-only operation, so
+    sending nothing back to Streamlit is the right default.
+    """
+
+    _silence_streamlit_prompts()
     here = Path(__file__).parent / "ui" / "app.py"
-    subprocess.run([sys.executable, "-m", "streamlit", "run", str(here)], check=False)
+    env = {
+        **os.environ,
+        "STREAMLIT_BROWSER_GATHER_USAGE_STATS": "false",
+        "STREAMLIT_SERVER_HEADLESS": "false",
+    }
+    subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "streamlit",
+            "run",
+            str(here),
+            "--browser.gatherUsageStats=false",
+        ],
+        check=False,
+        env=env,
+    )
+
+
+def _silence_streamlit_prompts() -> None:
+    """Pre-create ~/.streamlit/credentials.toml so Streamlit's first-run email
+    prompt never appears. Idempotent — only writes if the file is missing."""
+
+    creds = Path.home() / ".streamlit" / "credentials.toml"
+    if creds.exists():
+        return
+    creds.parent.mkdir(parents=True, exist_ok=True)
+    creds.write_text('[general]\nemail = ""\n', encoding="utf-8")
 
 
 if __name__ == "__main__":

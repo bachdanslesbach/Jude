@@ -8,7 +8,16 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterator
 
-from .types import Entity, EntityType, Matter, Mode, normalize_surface
+from .types import (
+    Conversation,
+    Entity,
+    EntityType,
+    Matter,
+    Message,
+    MessageRole,
+    Mode,
+    normalize_surface,
+)
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS matters (
@@ -60,6 +69,28 @@ CREATE TABLE IF NOT EXISTS pseudonym_counters (
     next_n INTEGER NOT NULL,
     PRIMARY KEY (matter_id, entity_type)
 );
+
+CREATE TABLE IF NOT EXISTS conversations (
+    id TEXT PRIMARY KEY,
+    matter_id TEXT NOT NULL REFERENCES matters(id) ON DELETE CASCADE,
+    title TEXT NOT NULL,
+    created_at TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_conversations_matter
+    ON conversations(matter_id, created_at DESC);
+
+CREATE TABLE IF NOT EXISTS messages (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    conversation_id TEXT NOT NULL REFERENCES conversations(id) ON DELETE CASCADE,
+    role TEXT NOT NULL,
+    redacted_text TEXT NOT NULL,
+    display_text TEXT NOT NULL,
+    created_at TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_messages_conversation
+    ON messages(conversation_id, id ASC);
 """
 
 
@@ -325,6 +356,108 @@ class Store:
         merged = self._fetch_entity_by_id(matter_id, primary_id)
         assert merged is not None
         return merged
+
+    # ----- conversations -----
+
+    def create_conversation(
+        self, matter_id: str, title: str | None = None
+    ) -> Conversation:
+        cid = str(uuid.uuid4())
+        title = title or f"Conversation {datetime.now(timezone.utc).strftime('%b %d %H:%M')}"
+        now = datetime.now(timezone.utc).isoformat()
+        with self._tx() as c:
+            c.execute(
+                "INSERT INTO conversations (id, matter_id, title, created_at) "
+                "VALUES (?, ?, ?, ?)",
+                (cid, matter_id, title, now),
+            )
+        self._log(matter_id, "conversation.create", json.dumps({"id": cid, "title": title}))
+        return Conversation(
+            id=cid,
+            matter_id=matter_id,
+            title=title,
+            created_at=datetime.fromisoformat(now),
+        )
+
+    def list_conversations(self, matter_id: str) -> list[Conversation]:
+        rows = self._conn.execute(
+            "SELECT * FROM conversations WHERE matter_id = ? ORDER BY created_at DESC",
+            (matter_id,),
+        ).fetchall()
+        return [
+            Conversation(
+                id=r["id"],
+                matter_id=r["matter_id"],
+                title=r["title"],
+                created_at=datetime.fromisoformat(r["created_at"]),
+            )
+            for r in rows
+        ]
+
+    def get_conversation(self, conversation_id: str) -> Conversation | None:
+        row = self._conn.execute(
+            "SELECT * FROM conversations WHERE id = ?", (conversation_id,)
+        ).fetchone()
+        if row is None:
+            return None
+        return Conversation(
+            id=row["id"],
+            matter_id=row["matter_id"],
+            title=row["title"],
+            created_at=datetime.fromisoformat(row["created_at"]),
+        )
+
+    def rename_conversation(self, conversation_id: str, title: str) -> None:
+        with self._tx() as c:
+            c.execute(
+                "UPDATE conversations SET title = ? WHERE id = ?",
+                (title, conversation_id),
+            )
+
+    def delete_conversation(self, conversation_id: str) -> None:
+        with self._tx() as c:
+            c.execute("DELETE FROM conversations WHERE id = ?", (conversation_id,))
+
+    def add_message(
+        self,
+        conversation_id: str,
+        role: MessageRole,
+        redacted_text: str,
+        display_text: str,
+    ) -> Message:
+        now = datetime.now(timezone.utc).isoformat()
+        with self._tx() as c:
+            cur = c.execute(
+                "INSERT INTO messages (conversation_id, role, redacted_text, "
+                "display_text, created_at) VALUES (?, ?, ?, ?, ?)",
+                (conversation_id, role.value, redacted_text, display_text, now),
+            )
+            mid = int(cur.lastrowid)
+        return Message(
+            id=mid,
+            conversation_id=conversation_id,
+            role=role,
+            redacted_text=redacted_text,
+            display_text=display_text,
+            created_at=datetime.fromisoformat(now),
+        )
+
+    def list_messages(self, conversation_id: str) -> list[Message]:
+        rows = self._conn.execute(
+            "SELECT * FROM messages WHERE conversation_id = ? ORDER BY id ASC",
+            (conversation_id,),
+        ).fetchall()
+        return [
+            Message(
+                id=r["id"],
+                conversation_id=r["conversation_id"],
+                role=MessageRole(r["role"]),
+                redacted_text=r["redacted_text"],
+                display_text=r["display_text"],
+                created_at=datetime.fromisoformat(r["created_at"]),
+            )
+            for r in rows
+        ]
 
     def _fetch_entity_by_id(self, matter_id: str, entity_id: int) -> Entity | None:
         row = self._conn.execute(

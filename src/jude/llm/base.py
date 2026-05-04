@@ -24,13 +24,30 @@ class LLMClient(ABC):
     name: str = "abstract"
 
     @abstractmethod
+    def complete_chat(
+        self,
+        system: str,
+        messages: list[dict[str, str]],
+        mode: Mode,
+        zero_retention_attested: bool,
+    ) -> LLMResponse:
+        """Multi-turn completion. `messages` is a list of {role, content} dicts."""
+
     def complete(
         self,
         system: str,
         user_message: str,
         mode: Mode,
         zero_retention_attested: bool,
-    ) -> LLMResponse: ...
+    ) -> LLMResponse:
+        """Single-turn convenience wrapper around `complete_chat`."""
+
+        return self.complete_chat(
+            system=system,
+            messages=[{"role": "user", "content": user_message}],
+            mode=mode,
+            zero_retention_attested=zero_retention_attested,
+        )
 
     @staticmethod
     def _enforce_mode(mode: Mode, zero_retention_attested: bool) -> None:

@@ -1,22 +1,26 @@
-from __future__ import annotations
+"""Jude — chat-first Streamlit UI.
 
-from pathlib import Path
+Sidebar holds matter and mode controls plus the conversation list. The main
+panel is a single chat: paste text or attach a file in the input, get a
+rehydrated response. Every input is redacted before it leaves the machine;
+every output is rehydrated before it's shown to the user. The user is
+always the last filter — they can inspect the redacted form of any turn.
+"""
+
+from __future__ import annotations
 
 import streamlit as st
 
-from jude.adapters import DocxAdapter, PdfAdapter, TextAdapter
-from jude.adapters.docx import PARAGRAPH_SEP, DocxExtraction
-from jude.adapters.pdf import PdfExtraction
-from jude.context import fill_missing_context
-from jude.detect import DetectionPipeline
+from jude.chat import FileAttachment, send_turn
 from jude.llm import AnthropicClient
 from jude.paths import default_db_path
-from jude.redact import redact
-from jude.rehydrate import rehydrate
 from jude.store import Store
-from jude.types import Mode
+from jude.types import Conversation, Matter, Mode
 
-st.set_page_config(page_title="Jude", layout="wide")
+st.set_page_config(page_title="Jude", layout="wide", initial_sidebar_state="expanded")
+
+
+# ----- session-state helpers -----
 
 
 def _store() -> Store:
@@ -25,30 +29,53 @@ def _store() -> Store:
     return st.session_state.store
 
 
-def _selected_matter():
-    store = _store()
-    matters = store.list_matters()
-    if not matters:
-        return None
-    options = {f"{m.name} ({m.mode.value})": m.id for m in matters}
-    label = st.sidebar.selectbox("Matter", list(options.keys()))
-    return store.get_matter(options[label])
+def _llm() -> AnthropicClient:
+    if "llm" not in st.session_state:
+        st.session_state.llm = AnthropicClient()
+    return st.session_state.llm
 
 
-def sidebar() -> None:
+# ----- sidebar -----
+
+
+def sidebar() -> tuple[Matter | None, Conversation | None]:
     st.sidebar.title("Jude")
     st.sidebar.caption("Local-first anonymization for legal LLM use.")
 
     store = _store()
+    matter = _matter_picker(store)
+    if matter is None:
+        return None, None
 
-    with st.sidebar.expander("Create matter", expanded=not store.list_matters()):
-        new_name = st.text_input("Matter name", key="new_matter_name")
-        new_mode_label = st.radio(
+    _mode_controls(store, matter)
+    conv = _conversation_picker(store, matter)
+    _entities_link()
+    return matter, conv
+
+
+def _matter_picker(store: Store) -> Matter | None:
+    matters = store.list_matters()
+    options: dict[str, str] = {f"{m.name} · {m.mode.value}": m.id for m in matters}
+    options["+ New matter"] = ""
+
+    label = st.sidebar.selectbox(
+        "Matter", list(options.keys()), key="matter_select"
+    )
+    if options[label] == "":
+        return _matter_create(store)
+    return store.get_matter(options[label])
+
+
+def _matter_create(store: Store) -> Matter | None:
+    with st.sidebar.expander("Create new matter", expanded=True):
+        name = st.text_input("Name", key="new_matter_name")
+        mode_label = st.radio(
             "Mode",
             options=["strict", "smart"],
             help=(
                 "Strict: pseudonyms only. "
-                "Smart: pseudonyms + public-knowledge tags; requires zero-retention LLM."
+                "Smart: pseudonyms + public-knowledge tags. "
+                "Smart requires a zero-retention LLM endpoint."
             ),
             horizontal=True,
             key="new_matter_mode",
@@ -56,275 +83,167 @@ def sidebar() -> None:
         zr = st.checkbox(
             "I attest the LLM endpoint is zero-retention",
             key="new_matter_zr",
-            disabled=(new_mode_label == "strict"),
+            disabled=(mode_label == "strict"),
         )
-        if st.button("Create matter", disabled=not new_name):
+        if st.button("Create", disabled=not name, type="primary"):
             try:
-                store.create_matter(
-                    name=new_name,
-                    mode=Mode(new_mode_label),
+                m = store.create_matter(
+                    name=name,
+                    mode=Mode(mode_label),
                     zero_retention_attested=zr,
                 )
-                st.success(f"Created matter “{new_name}”")
+                st.session_state["matter_select"] = f"{m.name} · {m.mode.value}"
+                st.rerun()
+            except ValueError as e:
+                st.error(str(e))
+    return None
+
+
+def _mode_controls(store: Store, matter: Matter) -> None:
+    st.sidebar.markdown(f"**Mode:** `{matter.mode.value}`")
+    if matter.mode == Mode.SMART:
+        if matter.zero_retention_attested:
+            st.sidebar.markdown(":green[Zero-retention attested ✓]")
+        else:
+            st.sidebar.markdown(":red[Smart mode without zero-retention attestation]")
+    with st.sidebar.expander("Change mode"):
+        new_mode = st.radio(
+            "Mode",
+            options=["strict", "smart"],
+            index=0 if matter.mode == Mode.STRICT else 1,
+            horizontal=True,
+            key=f"mode_{matter.id}",
+        )
+        zr = st.checkbox(
+            "Zero-retention attested",
+            value=matter.zero_retention_attested,
+            disabled=(new_mode == "strict"),
+            key=f"zr_{matter.id}",
+        )
+        if st.button("Save mode", key=f"save_mode_{matter.id}"):
+            try:
+                store.set_mode(matter.id, Mode(new_mode), zero_retention_attested=zr)
                 st.rerun()
             except ValueError as e:
                 st.error(str(e))
 
 
-def main() -> None:
-    sidebar()
-    matter = _selected_matter()
-    if matter is None:
-        st.info("Create a matter in the sidebar to begin.")
+def _conversation_picker(store: Store, matter: Matter) -> Conversation | None:
+    st.sidebar.divider()
+    st.sidebar.markdown("**Conversations**")
+
+    if st.sidebar.button("+ New conversation", use_container_width=True):
+        conv = store.create_conversation(matter.id)
+        st.session_state[f"active_conv_{matter.id}"] = conv.id
+        st.rerun()
+
+    conversations = store.list_conversations(matter.id)
+    if not conversations:
+        st.sidebar.caption("None yet.")
+        return None
+
+    active_key = f"active_conv_{matter.id}"
+    if active_key not in st.session_state:
+        st.session_state[active_key] = conversations[0].id
+
+    for conv in conversations:
+        is_active = st.session_state[active_key] == conv.id
+        label = ("▸ " if is_active else "  ") + conv.title
+        if st.sidebar.button(
+            label,
+            key=f"pick_{conv.id}",
+            use_container_width=True,
+            type=("primary" if is_active else "secondary"),
+        ):
+            st.session_state[active_key] = conv.id
+            st.rerun()
+    return store.get_conversation(st.session_state[active_key])
+
+
+def _entities_link() -> None:
+    st.sidebar.divider()
+    st.sidebar.page_link(
+        "pages/2_Entities.py",
+        label="🔍 Manage entities",
+        help="Per-matter dictionary of detected entities and their pseudonyms.",
+    )
+
+
+# ----- main panel -----
+
+
+def render_conversation(matter: Matter, conv: Conversation) -> None:
+    st.markdown(f"#### {conv.title}")
+    st.caption(
+        f"Matter: `{matter.name}` · Mode: `{matter.mode.value}` · "
+        f"Conv id: `{conv.id[:8]}…`"
+    )
+
+    store = _store()
+    messages = store.list_messages(conv.id)
+    for m in messages:
+        with st.chat_message(m.role.value):
+            st.markdown(m.display_text)
+            if m.redacted_text != m.display_text:
+                with st.expander("View what the LLM actually saw"):
+                    st.code(m.redacted_text, language=None)
+
+    payload = st.chat_input(
+        "Ask Jude — paste text or attach a file…",
+        accept_file="multiple",
+        file_type=["txt", "docx", "pdf"],
+    )
+
+    if not payload:
+        if not messages:
+            st.info(
+                "Type your question or paste a document to begin. Anything you "
+                "send is redacted on this machine before being sent to the LLM."
+            )
         return
 
-    st.title(matter.name)
-    st.caption(
-        f"Mode: **{matter.mode.value}** · Zero-retention attested: "
-        f"**{'yes' if matter.zero_retention_attested else 'no'}** · "
-        f"id `{matter.id}`"
-    )
-
-    tab_input, tab_review, tab_llm, tab_entities = st.tabs(
-        ["Input", "Review redaction", "Send to LLM", "Entities"]
-    )
-
-    with tab_input:
-        _tab_input(matter)
-    with tab_review:
-        _tab_review(matter)
-    with tab_llm:
-        _tab_llm(matter)
-    with tab_entities:
-        _tab_entities(matter)
-
-
-def _tab_input(matter) -> None:
-    st.subheader("Step 1 — Input text")
-    st.caption(
-        "Paste text, or upload a .txt / .docx file. The text never leaves your "
-        "machine in this step."
-    )
-
-    user_context = st.text_area(
-        "Optional matter context (sent to the LLM along with the redacted text)",
-        key="user_context",
-        height=100,
-        help=(
-            "Background facts about the matter that you want the LLM to know. "
-            "Do NOT include client identifiers here unless you have decided this "
-            "context is acceptable to share."
-        ),
-    )
-    st.session_state.user_context = user_context
-
-    paste = st.text_area("Paste text", height=300, key="paste_text")
-    upload = st.file_uploader("…or upload a file", type=["txt", "docx", "pdf"])
-    enable_ocr = st.checkbox(
-        "Run OCR if PDF is scanned (requires tesseract)",
-        value=False,
-        help=(
-            "When checked, image-only PDFs are passed through `ocrmypdf` "
-            "locally to produce a searchable text layer before redaction. "
-            "Requires the `tesseract` binary to be installed: "
-            "`brew install tesseract tesseract-lang`."
-        ),
-    )
-
-    if st.button("Detect & redact", type="primary"):
-        try:
-            text, extraction = _load_input(paste, upload, enable_ocr=enable_ocr)
-        except Exception as e:
-            st.error(f"Failed to read input: {e}")
-            return
-        if not text.strip():
-            st.warning("No text provided.")
-            return
-        if extraction is not None:
-            for w in extraction.warnings:
-                st.warning(w)
-        pipeline = DetectionPipeline(store=_store(), matter_id=matter.id)
-        detections = pipeline.detect(text)
-        result = redact(text, detections, _store(), matter.id, matter.mode)
-        st.session_state.original_text = text
-        st.session_state.redacted_text = result.redacted_text
-        st.session_state.extraction = extraction
-        st.session_state.last_n_entities = len(result.entities_used)
-        st.success(
-            f"Detected and redacted {len(result.entities_used)} entities "
-            f"({len(detections)} spans)."
-        )
-
-
-def _load_input(
-    paste: str, upload, enable_ocr: bool = False
-) -> tuple[str, DocxExtraction | PdfExtraction | None]:
-    if upload is not None:
-        name = upload.name.lower()
-        tmp = Path("/tmp") / f"jude_{upload.name}"
-        if name.endswith(".docx"):
-            tmp.write_bytes(upload.read())
-            extraction = DocxAdapter.read(tmp)
-            return extraction.text, extraction
-        if name.endswith(".pdf"):
-            tmp.write_bytes(upload.read())
-            extraction_pdf = PdfAdapter.read(tmp, enable_ocr=enable_ocr)
-            return extraction_pdf.text, extraction_pdf
-        return upload.read().decode("utf-8"), None
-    return paste, None
-
-
-def _tab_review(matter) -> None:
-    st.subheader("Step 2 — Review the redaction before sending")
-    if "redacted_text" not in st.session_state:
-        st.info("Run detection on the Input tab first.")
+    user_text = (payload.text or "").strip()
+    raw_files = list(payload.files or [])
+    if not user_text and not raw_files:
         return
-    col1, col2 = st.columns(2)
-    with col1:
-        st.markdown("**Original** (stays on your machine)")
-        st.text_area(
-            "original",
-            st.session_state.original_text,
-            height=500,
-            label_visibility="collapsed",
-            key="orig_view",
-        )
-    with col2:
-        st.markdown("**Redacted** (this is what the LLM will see)")
-        st.text_area(
-            "redacted",
-            st.session_state.redacted_text,
-            height=500,
-            label_visibility="collapsed",
-            key="redacted_view",
-        )
-    st.caption(
-        "**You** are the last filter. Read the redacted text. If you see anything "
-        "that could re-identify a party, fix it on the Entities tab or rephrase."
-    )
 
-
-def _tab_llm(matter) -> None:
-    st.subheader("Step 3 — Send to LLM")
-    if "redacted_text" not in st.session_state:
-        st.info("Run detection on the Input tab first.")
-        return
+    attachments = [FileAttachment(f.name, f.getvalue()) for f in raw_files]
 
     if matter.mode == Mode.SMART and not matter.zero_retention_attested:
         st.error(
-            "This matter is in smart mode but no zero-retention attestation is on file. "
-            "Edit the matter in the sidebar."
+            "This matter is in smart mode but no zero-retention attestation is "
+            "on file. Update the mode in the sidebar before sending."
         )
         return
 
-    instruction = st.text_area(
-        "Question / instruction for the LLM",
-        height=150,
-        key="llm_instruction",
-        placeholder="e.g. Identify the strongest counter-arguments to the position taken in §3.",
-    )
-
-    if st.button("Send", type="primary", disabled=not instruction.strip()):
-        client = AnthropicClient()
-        user_msg = (
-            (st.session_state.get("user_context") or "")
-            + "\n\n---\nDOCUMENT (anonymized):\n\n"
-            + st.session_state.redacted_text
-            + "\n\n---\nQUESTION:\n\n"
-            + instruction
-        )
+    with st.spinner("Redacting → sending to Claude → rehydrating…"):
         try:
-            response = client.complete(
-                system="",
-                user_message=user_msg,
+            send_turn(
+                conversation=conv,
+                user_text=user_text,
+                attachments=attachments,
+                store=store,
                 mode=matter.mode,
-                zero_retention_attested=matter.zero_retention_attested,
+                llm=_llm(),
             )
-        except Exception as e:
-            st.error(f"LLM call failed: {e}")
+        except PermissionError as e:
+            st.error(str(e))
             return
-        st.session_state.llm_response_raw = response.text
-        st.session_state.llm_response_rehydrated = rehydrate(
-            response.text, _store(), matter.id
-        )
-
-    if "llm_response_rehydrated" in st.session_state:
-        st.markdown("**Response (rehydrated for you)**")
-        st.markdown(st.session_state.llm_response_rehydrated)
-        with st.expander("Raw LLM response (with pseudonyms)"):
-            st.text(st.session_state.llm_response_raw)
+        except Exception as e:  # noqa: BLE001
+            st.error(f"Turn failed: {e}")
+            return
+    st.rerun()
 
 
-def _tab_entities(matter) -> None:
-    st.subheader("Per-matter entity dictionary")
-    st.caption(
-        "These mappings live only on your machine. Edit `public context` to enable "
-        "smart-mode tagging — only fill it with publicly known facts about the entity. "
-        "Use the merge dropdown when the same real entity was detected under several "
-        "surface forms (e.g. *Amazon* and *Amazon.com Inc.*)."
-    )
-    store = _store()
-    ents = store.list_entities(matter.id)
-    if not ents:
-        st.info("No entities yet. Run a redaction first.")
+def main() -> None:
+    matter, conv = sidebar()
+    if matter is None:
+        st.info("Create a matter in the sidebar to begin.")
         return
-
-    if st.button(
-        "Auto-fill missing public context (bundled known entities)",
-        help=(
-            "Looks up each entity in Jude's bundled dataset of well-known public "
-            "entities (DMA gatekeepers, EU institutions, NCAs). Only fills entities "
-            "that don't already have a public context. No network call."
-        ),
-    ):
-        n = fill_missing_context(store, matter.id)
-        st.success(f"Filled public context for {n} entities.")
-        st.rerun()
-
-    by_id = {e.id: e for e in ents}
-
-    for e in ents:
-        with st.container(border=True):
-            cols = st.columns([1.4, 1.8, 2.5, 3, 2])
-            cols[0].markdown(f"**{e.pseudonym}**  \n_{e.entity_type.value}_")
-            cols[1].markdown(f"{e.canonical}")
-            cols[2].markdown(", ".join(sorted(e.surface_forms)) or "—")
-            new_ctx = cols[3].text_input(
-                "public context",
-                value=e.public_context or "",
-                key=f"ctx_{e.id}",
-                label_visibility="collapsed",
-                placeholder="public-knowledge tag (smart mode only)",
-            )
-            if new_ctx != (e.public_context or ""):
-                store.set_public_context(e.id, new_ctx or None)
-
-            same_type = [
-                o for o in ents if o.id != e.id and o.entity_type == e.entity_type
-            ]
-            if same_type:
-                opts = ["— merge into —"] + [
-                    f"{o.pseudonym} ({o.canonical})" for o in same_type
-                ]
-                pick = cols[4].selectbox(
-                    "merge",
-                    options=opts,
-                    key=f"merge_{e.id}",
-                    label_visibility="collapsed",
-                )
-                if pick != opts[0]:
-                    target_idx = opts.index(pick) - 1
-                    target = same_type[target_idx]
-                    if cols[4].button("Confirm merge", key=f"merge_btn_{e.id}"):
-                        try:
-                            store.merge_entities(matter.id, target.id, e.id)
-                            st.success(
-                                f"Merged {e.pseudonym} ({e.canonical}) into "
-                                f"{target.pseudonym} ({target.canonical})."
-                            )
-                            st.rerun()
-                        except ValueError as err:
-                            st.error(str(err))
+    if conv is None:
+        st.info("No conversations yet. Click **+ New conversation** in the sidebar.")
+        return
+    render_conversation(matter, conv)
 
 
 main()

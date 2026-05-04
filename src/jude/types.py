@@ -76,6 +76,27 @@ class RedactionResult(BaseModel):
     mode: Mode
 
 
+class MessageRole(StrEnum):
+    USER = "user"
+    ASSISTANT = "assistant"
+
+
+class Message(BaseModel):
+    id: int | None = None
+    conversation_id: str
+    role: MessageRole
+    redacted_text: str          # what the LLM sees (pseudonymized)
+    display_text: str           # what the user sees (originals or rehydrated)
+    created_at: datetime | None = None
+
+
+class Conversation(BaseModel):
+    id: str
+    matter_id: str
+    title: str
+    created_at: datetime | None = None
+
+
 def normalize_surface(text: str) -> str:
     """Normalize a surface form for entity-merging lookup.
 

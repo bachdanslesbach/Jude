@@ -30,15 +30,25 @@ def init() -> None:
     db = default_db_path()
     Store(db).close()
     rprint(f"[green]Database ready at {db}[/green]")
-    for model in ("en_core_web_md", "fr_core_news_md"):
-        try:
-            __import__("spacy").load(model)
-            rprint(f"[green]spaCy model '{model}' OK[/green]")
-        except OSError:
-            rprint(
-                f"[yellow]spaCy model '{model}' not installed. "
-                f"Run: python -m spacy download {model}[/yellow]"
-            )
+    import spacy.util
+
+    en_options = ("en_core_web_lg", "en_core_web_md")
+    if any(spacy.util.is_package(m) for m in en_options):
+        installed = next(m for m in en_options if spacy.util.is_package(m))
+        rprint(f"[green]English NER model '{installed}' OK[/green]")
+    else:
+        rprint(
+            "[yellow]English NER model missing. Run:\n"
+            "  python -m spacy download en_core_web_lg   (recommended)\n"
+            "  python -m spacy download en_core_web_md   (lighter fallback)[/yellow]"
+        )
+    if spacy.util.is_package("fr_core_news_md"):
+        rprint("[green]French NER model 'fr_core_news_md' OK[/green]")
+    else:
+        rprint(
+            "[yellow]French NER model missing. Run:\n"
+            "  python -m spacy download fr_core_news_md[/yellow]"
+        )
 
 
 @matter_app.command("create")

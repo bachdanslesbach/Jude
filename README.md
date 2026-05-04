@@ -82,8 +82,8 @@ git clone https://github.com/etienne/jude.git
 cd jude
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
-python -m spacy download en_core_web_md
-python -m spacy download fr_core_news_md
+python -m spacy download en_core_web_lg     # English (preferred)
+python -m spacy download fr_core_news_md    # French
 jude ui                    # launches the Streamlit UI
 ```
 
@@ -108,11 +108,12 @@ pytest
 ## Roadmap
 
 - v0.1: plain text + DOCX, strict / smart modes, Streamlit UI, Anthropic backend, French + English NER.
-- **v0.2 (now): native-text PDF, entity merge in the UI, bundled public-knowledge dataset for auto-filling smart-mode context (DMA gatekeepers, EU institutions, NCAs).**
-- v0.3: Wikipedia / EUR-Lex enrichment, OpenAI / Azure / Ollama backends, GLiNER as opt-in.
-- v0.4: scanned PDF (OCR), XLSX, .eml.
-- v0.5: re-identification risk score per entity.
-- v0.6: Tauri + React desktop app replacing Streamlit.
+- v0.2: native-text PDF, entity merge in the UI, bundled public-knowledge dataset for auto-filling smart-mode context (DMA gatekeepers, EU institutions, NCAs).
+- **v0.3 (now): per-paragraph language routing (no more French-model-on-English hallucinations), span shape filter (rejects all-stopword spans, dates, single lowercase words, runaway 6+-token spans), `en_core_web_lg` preferred when installed.**
+- v0.4: scanned PDF (OCR via `ocrmypdf`).
+- v0.5: Wikipedia / EUR-Lex enrichment, OpenAI / Azure / Ollama backends.
+- v0.6: re-identification risk score per entity.
+- v0.7: Tauri + React desktop app replacing Streamlit.
 
 ## License
 

@@ -113,8 +113,11 @@ def make_provider(
 
     if wikipedia_provider is None:
         from .context_wikipedia import WikipediaContextProvider
+        from .paths import jude_home
 
-        wikipedia_provider = WikipediaContextProvider()
+        wikipedia_provider = WikipediaContextProvider(
+            cache_path=jude_home() / "wikipedia_cache.json",
+        )
     return ContextRouter([bundled, wikipedia_provider])
 
 

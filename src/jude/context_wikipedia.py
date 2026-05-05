@@ -21,6 +21,7 @@ import re
 import urllib.error
 import urllib.parse
 import urllib.request
+from pathlib import Path
 from typing import Protocol, runtime_checkable
 
 from .context import ContextProvider
@@ -76,11 +77,13 @@ class WikipediaContextProvider(ContextProvider):
         self,
         http_client: HttpClientProtocol | None = None,
         lang: str = "en",
+        cache_path: Path | str | None = None,
     ):
         self.http: HttpClientProtocol = http_client or _UrllibClient()
         self.lang = lang
+        self.cache_path = Path(cache_path) if cache_path is not None else None
         # Maps (canonical, entity_type) -> str | None (None caches negatives).
-        self._cache: dict[tuple[str, EntityType], str | None] = {}
+        self._cache: dict[tuple[str, EntityType], str | None] = self._load_cache()
 
     def lookup(self, canonical: str, entity_type: EntityType) -> str | None:
         if entity_type not in _ALLOWED_TYPES:
@@ -92,7 +95,42 @@ class WikipediaContextProvider(ContextProvider):
 
         result = self._fetch(canonical, entity_type)
         self._cache[key] = result
+        self._save_cache()
         return result
+
+    def _load_cache(self) -> dict[tuple[str, EntityType], str | None]:
+        if self.cache_path is None or not self.cache_path.exists():
+            return {}
+        try:
+            data = json.loads(self.cache_path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            return {}
+        out: dict[tuple[str, EntityType], str | None] = {}
+        for rec in data:
+            try:
+                etype = EntityType(rec["type"])
+            except (KeyError, ValueError):
+                continue
+            out[(rec.get("canonical", ""), etype)] = rec.get("context")
+        return out
+
+    def _save_cache(self) -> None:
+        if self.cache_path is None:
+            return
+        try:
+            self.cache_path.parent.mkdir(parents=True, exist_ok=True)
+            payload = [
+                {"canonical": canonical, "type": etype.value, "context": ctx}
+                for (canonical, etype), ctx in self._cache.items()
+            ]
+            self.cache_path.write_text(
+                json.dumps(payload, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
+        except OSError:
+            # Best-effort: a write failure (read-only fs, full disk) shouldn't
+            # break the lookup itself.
+            pass
 
     def _fetch(self, canonical: str, entity_type: EntityType) -> str | None:
         # For ORGs, prefer the disambiguated "(company)" page when it exists,

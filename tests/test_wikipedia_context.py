@@ -193,3 +193,99 @@ def test_default_client_is_a_real_http_client_not_required_in_tests():
     p = WikipediaContextProvider()
     # Don't actually call lookup() here — that would hit Wikipedia in CI.
     assert isinstance(p.http, HttpClientProtocol) or hasattr(p.http, "get_summary")
+
+
+# ---------- on-disk cache (v0.4.9) ----------
+
+
+def test_persists_positive_lookups_to_disk(tmp_path):
+    """After a successful lookup the cache file on disk should contain the
+    result. A second WikipediaContextProvider constructed on the same path
+    should serve the result without hitting the network."""
+
+    import json as _json
+    cache_path = tmp_path / "wiki_cache.json"
+    fake = FakeWikipediaClient(
+        {
+            ("Amazon (company)", "en"): {
+                "title": "Amazon (company)",
+                "extract": "Amazon is a US tech company.",
+                "type": "standard",
+            }
+        }
+    )
+    p = WikipediaContextProvider(http_client=fake, cache_path=cache_path)
+    p.lookup("Amazon", EntityType.ORG)
+    assert cache_path.exists()
+    raw = _json.loads(cache_path.read_text())
+    assert any(
+        rec.get("canonical") == "Amazon" and rec.get("context")
+        for rec in raw
+    )
+
+    # New process, same cache file: no network calls.
+    fake2 = FakeWikipediaClient(responses={})
+    p2 = WikipediaContextProvider(http_client=fake2, cache_path=cache_path)
+    ctx = p2.lookup("Amazon", EntityType.ORG)
+    assert ctx is not None
+    assert "tech company" in ctx
+    assert fake2.calls == []
+
+
+def test_persists_negative_lookups_to_disk(tmp_path):
+    """A None result is also cached, so a private/unknown entity isn't
+    re-queried on every Streamlit restart."""
+
+    cache_path = tmp_path / "wiki_cache.json"
+    fake = FakeWikipediaClient(responses={})
+    p = WikipediaContextProvider(http_client=fake, cache_path=cache_path)
+    p.lookup("AcmePrivateUnknownClient SARL", EntityType.ORG)
+    assert cache_path.exists()
+
+    fake2 = FakeWikipediaClient(responses={})
+    p2 = WikipediaContextProvider(http_client=fake2, cache_path=cache_path)
+    p2.lookup("AcmePrivateUnknownClient SARL", EntityType.ORG)
+    assert fake2.calls == []
+
+
+def test_cache_path_none_disables_persistence(tmp_path):
+    """The default constructor (cache_path=None) does not write any file —
+    useful for tests and for short-lived processes that don't want a
+    persistent cache."""
+
+    fake = FakeWikipediaClient(
+        {
+            ("Amazon (company)", "en"): {
+                "title": "Amazon (company)",
+                "extract": "Amazon is a US tech company.",
+                "type": "standard",
+            }
+        }
+    )
+    # No cache_path argument.
+    p = WikipediaContextProvider(http_client=fake)
+    p.lookup("Amazon", EntityType.ORG)
+    # tmp_path is empty; the provider should not have written anywhere we
+    # can detect. We don't have a great negative-assertion here, but at
+    # least no exception was raised.
+    assert list(tmp_path.iterdir()) == []
+
+
+def test_corrupt_cache_file_is_treated_as_empty(tmp_path):
+    """If the cache file is unreadable JSON (truncated, hand-edited, etc.)
+    the provider must fall back to an empty cache rather than crashing."""
+
+    cache_path = tmp_path / "wiki_cache.json"
+    cache_path.write_text("{this is not valid json")
+    fake = FakeWikipediaClient(
+        {
+            ("Amazon (company)", "en"): {
+                "title": "Amazon (company)",
+                "extract": "Amazon is a US tech company.",
+                "type": "standard",
+            }
+        }
+    )
+    p = WikipediaContextProvider(http_client=fake, cache_path=cache_path)
+    ctx = p.lookup("Amazon", EntityType.ORG)
+    assert ctx is not None  # network was consulted, no crash

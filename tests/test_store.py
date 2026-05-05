@@ -69,6 +69,92 @@ def test_smart_mode_requires_zero_retention(store: Store):
     assert refetched.zero_retention_attested is True
 
 
+def test_find_alias_matches_first_name_substring(store: Store, matter_id: str):
+    """When 'Marie-Claire Lefèvre' is already an entity, encountering just
+    'Marie-Claire' should resolve to the same entity — eliminating the
+    duplicate-pseudonym issue we hit on the test memo."""
+
+    e = store.create_entity(
+        matter_id, "Marie-Claire Lefèvre", EntityType.PERSON
+    )
+    found = store.find_entity_by_surface_or_alias(
+        matter_id, "Marie-Claire", EntityType.PERSON
+    )
+    assert found is not None
+    assert found.id == e.id
+
+
+def test_find_alias_matches_last_name_substring(store: Store, matter_id: str):
+    e = store.create_entity(
+        matter_id, "Marie-Claire Lefèvre", EntityType.PERSON
+    )
+    found = store.find_entity_by_surface_or_alias(
+        matter_id, "Lefèvre", EntityType.PERSON
+    )
+    assert found is not None
+    assert found.id == e.id
+
+
+def test_find_alias_refuses_when_ambiguous(store: Store, matter_id: str):
+    """Two persons named 'Marie-Claire X' and 'Marie-Claire Y' — auto-aliasing
+    a bare 'Marie-Claire' would be wrong; refuse and let the user decide."""
+
+    store.create_entity(matter_id, "Marie-Claire Lefèvre", EntityType.PERSON)
+    store.create_entity(matter_id, "Marie-Claire Dubois", EntityType.PERSON)
+    found = store.find_entity_by_surface_or_alias(
+        matter_id, "Marie-Claire", EntityType.PERSON
+    )
+    assert found is None
+
+
+def test_find_alias_for_org_prefix(store: Store, matter_id: str):
+    e = store.create_entity(
+        matter_id, "Pioneer Industries SA", EntityType.ORG
+    )
+    found = store.find_entity_by_surface_or_alias(
+        matter_id, "Pioneer Industries", EntityType.ORG
+    )
+    assert found is not None
+    assert found.id == e.id
+
+
+def test_find_alias_does_not_cross_entity_types(store: Store, matter_id: str):
+    """A PERSON named 'Pioneer' and an ORG named 'Pioneer Industries' must
+    not be linked even though one is a prefix of the other — the type
+    boundary is harder evidence of separateness than the lexical hint."""
+
+    store.create_entity(matter_id, "Pioneer Industries SA", EntityType.ORG)
+    found = store.find_entity_by_surface_or_alias(
+        matter_id, "Pioneer", EntityType.PERSON
+    )
+    assert found is None
+
+
+def test_find_alias_prefers_exact_match(store: Store, matter_id: str):
+    """If an exact-form entity exists alongside an alias-matchable one, the
+    exact match wins."""
+
+    exact = store.create_entity(matter_id, "Pioneer", EntityType.ORG)
+    store.create_entity(matter_id, "Pioneer Industries SA", EntityType.ORG)
+    found = store.find_entity_by_surface_or_alias(
+        matter_id, "Pioneer", EntityType.ORG
+    )
+    assert found is not None
+    assert found.id == exact.id
+
+
+def test_find_alias_returns_none_for_unhandled_types(store: Store, matter_id: str):
+    """Aliasing only fires for PERSON and ORG — for EMAIL / PHONE / IBAN /
+    URL / CASE_REF, the literal surface form is the identity (substring
+    matching would create false positives)."""
+
+    store.create_entity(matter_id, "alice@example.com", EntityType.EMAIL)
+    found = store.find_entity_by_surface_or_alias(
+        matter_id, "alice", EntityType.EMAIL
+    )
+    assert found is None
+
+
 def test_add_surface_form_idempotent(store: Store, matter_id: str):
     e = store.create_entity(matter_id, "Acme", EntityType.ORG)
     store.add_surface_form(e.id, "Acme")

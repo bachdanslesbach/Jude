@@ -254,6 +254,61 @@ class Store:
         ).fetchone()
         return self._row_to_entity(row) if row else None
 
+    def find_entity_by_surface_or_alias(
+        self,
+        matter_id: str,
+        surface: str,
+        entity_type: EntityType,
+    ) -> Entity | None:
+        """Look up an entity by surface form, falling back to a
+        substring-token alias for PERSON and ORG types.
+
+        Solves the duplicate-pseudonym problem when a document mentions
+        someone in the header by full name ("Marie-Claire Lefèvre") and
+        in the sign-off by first name only ("Marie-Claire"): the second
+        encounter resolves to the same entity instead of creating a new
+        one.
+
+        Aliasing is conservative:
+          * Only fires for PERSON and ORG (token-substring matching
+            against an EMAIL or IBAN would create false positives).
+          * Refuses to match when more than one entity of the same type
+            could plausibly own the surface — the user resolves the
+            ambiguity manually via the merge UI.
+          * Token-aligned: "Pioneer" matches "Pioneer Industries SA"
+            but not "PioneerX".
+        """
+
+        exact = self.find_entity_by_surface(matter_id, surface)
+        if exact and exact.entity_type == entity_type:
+            return exact
+
+        if entity_type not in (EntityType.PERSON, EntityType.ORG):
+            return None
+
+        norm = normalize_surface(surface)
+        if not norm:
+            return None
+        needle_tokens = norm.split()
+        if not needle_tokens:
+            return None
+
+        candidates: list[Entity] = []
+        for ent in self.list_entities(matter_id):
+            if ent.entity_type != entity_type:
+                continue
+            for form in {ent.canonical, *ent.surface_forms}:
+                f_norm = normalize_surface(form)
+                if not f_norm:
+                    continue
+                f_tokens = f_norm.split()
+                if _is_token_subsequence(needle_tokens, f_tokens):
+                    candidates.append(ent)
+                    break
+        if len(candidates) == 1:
+            return candidates[0]
+        return None
+
     def find_entity_by_pseudonym(self, matter_id: str, pseudonym: str) -> Entity | None:
         row = self._conn.execute(
             "SELECT * FROM entities WHERE matter_id = ? AND pseudonym = ?",
@@ -562,6 +617,18 @@ class Store:
             "INSERT INTO audit_log (matter_id, action, detail, ts) VALUES (?, ?, ?, ?)",
             (matter_id, action, detail, ts),
         )
+
+
+def _is_token_subsequence(needle: list[str], haystack: list[str]) -> bool:
+    """True iff `needle` appears as a contiguous run of tokens in `haystack`."""
+
+    if not needle or not haystack:
+        return False
+    n = len(needle)
+    for i in range(len(haystack) - n + 1):
+        if haystack[i : i + n] == needle:
+            return True
+    return False
 
 
 def _pseudonym_prefix(t: EntityType) -> str:

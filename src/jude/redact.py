@@ -85,10 +85,15 @@ def redact(
 def _get_or_create_entity(
     store: Store, matter_id: str, det: Detection
 ) -> Entity:
-    existing = store.find_entity_by_surface(matter_id, det.text)
+    # Exact + alias lookup. The aliasing layer turns the "Marie-Claire
+    # Lefèvre" / "Marie-Claire" duplicate-entity problem from a manual
+    # merge into a no-op the first time both forms are seen in the same
+    # matter.
+    existing = store.find_entity_by_surface_or_alias(
+        matter_id, det.text, det.entity_type
+    )
     if existing is not None:
-        if existing.entity_type == det.entity_type:
-            return existing
+        return existing
     return store.create_entity(
         matter_id=matter_id,
         canonical=det.text,

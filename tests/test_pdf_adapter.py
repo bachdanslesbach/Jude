@@ -73,6 +73,83 @@ def test_ocr_raises_when_tesseract_missing(tmp_path: Path, monkeypatch):
         PdfAdapter.read(src, enable_ocr=True)
 
 
+# ---------- native PDF write-back (v0.4.10) ----------
+
+
+def test_write_redacted_replaces_text_across_all_pages(tmp_path: Path):
+    """Each occurrence of any surface form across every page is physically
+    redacted in the output PDF — and re-extraction of the redacted PDF no
+    longer contains the real names but does contain their pseudonyms."""
+
+    src = tmp_path / "src.pdf"
+    dst = tmp_path / "out.pdf"
+    _make_text_pdf(src, [
+        "Amazon and Microsoft are the parties.",
+        "On the second page Microsoft sues Amazon.",
+    ])
+    PdfAdapter.write_redacted(
+        src, dst, replacements={"Amazon": "Org1", "Microsoft": "Org2"}
+    )
+    assert dst.exists()
+    re_read = PdfAdapter.read(dst).text
+    assert "Amazon" not in re_read
+    assert "Microsoft" not in re_read
+    assert "Org1" in re_read
+    assert "Org2" in re_read
+
+
+def test_write_redacted_handles_multiple_occurrences_on_same_page(tmp_path: Path):
+    src = tmp_path / "src.pdf"
+    dst = tmp_path / "out.pdf"
+    _make_text_pdf(src, ["Amazon Amazon Amazon Microsoft Amazon."])
+    PdfAdapter.write_redacted(
+        src, dst, replacements={"Amazon": "Org1", "Microsoft": "Org2"}
+    )
+    text = PdfAdapter.read(dst).text
+    assert "Amazon" not in text
+    # All four occurrences became Org1.
+    assert text.count("Org1") == 4
+
+
+def test_write_redacted_processes_longer_keys_first(tmp_path: Path):
+    """If both 'Amazon' and 'Amazon.com Inc.' map to the same entity, the
+    longer key must be applied first or partial-name shadowing produces
+    'Org1.com Inc.'."""
+
+    src = tmp_path / "src.pdf"
+    dst = tmp_path / "out.pdf"
+    _make_text_pdf(src, ["Amazon.com Inc. and standalone Amazon."])
+    PdfAdapter.write_redacted(
+        src,
+        dst,
+        replacements={"Amazon": "Org1", "Amazon.com Inc.": "Org1"},
+    )
+    text = PdfAdapter.read(dst).text
+    assert "Amazon" not in text
+    assert ".com Inc." not in text  # the longer form was redacted whole
+
+
+def test_write_redacted_clears_metadata_by_default(tmp_path: Path):
+    src = tmp_path / "src.pdf"
+    dst = tmp_path / "out.pdf"
+    _make_text_pdf(src, ["Hello"], author="Jane Doe")
+    PdfAdapter.write_redacted(src, dst, replacements={})
+    re_read = PdfAdapter.read(dst)
+    assert (re_read.metadata.get("author") or "") == ""
+
+
+def test_write_redacted_rejects_image_only_pdf(tmp_path: Path):
+    """v0 native write-back works only on text PDFs. For image-only inputs
+    the user should run OCR first and get a text export, or accept that
+    the redacted output is .txt."""
+
+    src = tmp_path / "blank.pdf"
+    dst = tmp_path / "out.pdf"
+    _make_blank_pdf(src)
+    with pytest.raises(ValueError, match=r"image-only"):
+        PdfAdapter.write_redacted(src, dst, replacements={})
+
+
 @pytest.mark.skipif(
     __import__("shutil").which("tesseract") is None,
     reason="tesseract not installed on this machine",

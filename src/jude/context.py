@@ -90,6 +90,34 @@ def default_provider() -> ContextProvider:
     return BundledContextProvider()
 
 
+def make_provider(
+    *,
+    use_wikipedia: bool = False,
+    wikipedia_provider: ContextProvider | None = None,
+) -> ContextProvider:
+    """Compose the ContextProvider chain used by smart-mode redaction.
+
+    The chain is always: bundled-known-entities first, optional Wikipedia
+    fallback second. The bundled dataset is fast, audited, and offline; the
+    Wikipedia fallback handles entities outside the curated set but at the
+    cost of leaking entity names to Wikipedia's server logs (so it must be
+    opt-in per matter).
+
+    `wikipedia_provider` is injectable for tests. In production it defaults
+    to `WikipediaContextProvider()` which uses urllib.
+    """
+
+    bundled = BundledContextProvider()
+    if not use_wikipedia:
+        return bundled
+
+    if wikipedia_provider is None:
+        from .context_wikipedia import WikipediaContextProvider
+
+        wikipedia_provider = WikipediaContextProvider()
+    return ContextRouter([bundled, wikipedia_provider])
+
+
 def fill_missing_context(
     store, matter_id: str, provider: ContextProvider | None = None
 ) -> int:

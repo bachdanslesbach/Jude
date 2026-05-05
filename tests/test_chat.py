@@ -121,6 +121,41 @@ def test_send_turn_refuses_smart_without_zr(store: Store):
         raise AssertionError("expected ValueError for smart mode without ZR")
 
 
+def test_send_turn_wikipedia_fallback_fills_context_for_unknown_entity(
+    store: Store, smart_matter_id: str
+):
+    """When use_wikipedia=True is passed to send_turn, an entity not in the
+    bundled dataset (here, a fictional client) gets its public_context
+    populated by the chained Wikipedia provider."""
+
+    from jude.types import EntityType
+
+    class StubWikipedia:
+        def lookup(self, canonical, entity_type):
+            if entity_type == EntityType.ORG and "Lumen" in canonical:
+                return "fake wikipedia summary about Lumen"
+            return None
+
+    conv = store.create_conversation(smart_matter_id, title="t")
+    llm = FakeLLM(replies=["Reply mentioning Org1."])
+
+    user_msg, _ = send_turn(
+        conversation=conv,
+        user_text="Lumen Reality SARL filed a complaint.",
+        attachments=[],
+        store=store,
+        mode=Mode.SMART,
+        llm=llm,
+        wikipedia_provider=StubWikipedia(),
+    )
+    # The entity should now have the Wikipedia-derived context.
+    ents = {e.canonical: e for e in store.list_entities(smart_matter_id)}
+    assert any(
+        c == "fake wikipedia summary about Lumen"
+        for c in (e.public_context for e in ents.values())
+    )
+
+
 def test_pseudonyms_are_stable_across_turns(
     store: Store, smart_matter_id: str
 ):

@@ -51,6 +51,51 @@ def test_router_returns_first_match():
     assert r.lookup("anything", EntityType.ORG) == "hit"
 
 
+def test_default_provider_with_wikipedia_falls_back_when_bundled_misses():
+    """The new `make_provider(use_wikipedia=True)` factory should chain
+    BundledContextProvider first, then a Wikipedia-backed provider — and only
+    consult Wikipedia for entities the bundled dataset doesn't already cover.
+    """
+
+    from jude.context import make_provider
+    from jude.context_wikipedia import WikipediaContextProvider
+    from jude.types import EntityType
+
+    class StubWikipedia:
+        """Records calls and returns a fixed string."""
+
+        def __init__(self):
+            self.calls: list[tuple[str, EntityType]] = []
+
+        def lookup(self, canonical, entity_type):
+            self.calls.append((canonical, entity_type))
+            return "wikipedia tag"
+
+    stub = StubWikipedia()
+    chain = make_provider(use_wikipedia=True, wikipedia_provider=stub)
+
+    # Bundled covers Amazon — Wikipedia should NOT be called.
+    bundled_hit = chain.lookup("Amazon", EntityType.ORG)
+    assert bundled_hit is not None
+    assert "gatekeeper" in bundled_hit.lower()
+    assert stub.calls == []
+
+    # Bundled does NOT cover this fictional client — Wikipedia IS called.
+    fallback_hit = chain.lookup("Acme Privately Held SARL", EntityType.ORG)
+    assert fallback_hit == "wikipedia tag"
+    assert stub.calls == [("Acme Privately Held SARL", EntityType.ORG)]
+
+
+def test_default_provider_without_wikipedia_does_not_chain():
+    """`make_provider(use_wikipedia=False)` returns the bundled-only provider
+    (the existing default). Backward-compatible with previous callers."""
+
+    from jude.context import BundledContextProvider, make_provider
+
+    p = make_provider(use_wikipedia=False)
+    assert isinstance(p, BundledContextProvider)
+
+
 def test_fill_missing_context_only_fills_empty(store: Store, matter_id: str):
     a = store.create_entity(matter_id, "Amazon", EntityType.ORG)
     b = store.create_entity(

@@ -115,13 +115,21 @@ def test_caches_repeat_lookups():
 
 
 def test_caches_negative_results_too():
-    """A lookup that returned None must not retry the network on a second call."""
+    """A lookup that returned None must not retry the network on a second call.
+
+    The first call may issue several requests internally (the provider tries
+    a few disambiguated titles for ORGs — e.g. `Apple (company)` to avoid
+    returning the fruit's article). What we care about is that a *second*
+    `lookup()` for the same key issues zero further requests.
+    """
 
     fake = FakeWikipediaClient(responses={})
     p = WikipediaContextProvider(http_client=fake)
     p.lookup("AcmeUnknownXYZ", EntityType.ORG)
+    after_first = len(fake.calls)
+    assert after_first >= 1, "first call should hit the network at least once"
     p.lookup("AcmeUnknownXYZ", EntityType.ORG)
-    assert len(fake.calls) == 1
+    assert len(fake.calls) == after_first  # no new calls
 
 
 def test_truncates_very_long_extracts():

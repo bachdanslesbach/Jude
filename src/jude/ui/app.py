@@ -152,6 +152,20 @@ def _detector_controls(matter: Matter) -> None:
                 "Requires `pip install jude[privacy-filter]`."
             ),
         )
+    with st.sidebar.expander("Smart-mode enrichment"):
+        st.checkbox(
+            "Enrich smart-mode context from Wikipedia",
+            key=f"use_wiki_{matter.id}",
+            value=False,
+            help=(
+                "When the bundled known-entities dataset doesn't cover an "
+                "entity, fall back to Wikipedia for a one-line public-"
+                "knowledge tag. Privacy note: this sends the entity's "
+                "canonical name to Wikipedia's REST API, which logs the IP "
+                "and query. Only enable for matters where the parties' "
+                "names are themselves public."
+            ),
+        )
 
 
 def _conversation_picker(store: Store, matter: Matter) -> Conversation | None:
@@ -243,6 +257,7 @@ def render_conversation(matter: Matter, conv: Conversation) -> None:
         return
 
     use_pf = bool(st.session_state.get(f"use_pf_{matter.id}", False))
+    use_wiki = bool(st.session_state.get(f"use_wiki_{matter.id}", False))
     with st.spinner("Redacting → sending to Claude → rehydrating…"):
         try:
             send_turn(
@@ -253,6 +268,7 @@ def render_conversation(matter: Matter, conv: Conversation) -> None:
                 mode=matter.mode,
                 llm=_llm(),
                 use_privacy_filter=use_pf,
+                use_wikipedia=use_wiki,
             )
         except PermissionError as e:
             st.error(str(e))

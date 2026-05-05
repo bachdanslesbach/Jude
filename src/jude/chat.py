@@ -16,6 +16,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from .adapters import DocxAdapter, PdfAdapter, TextAdapter
+from .context import ContextProvider, make_provider
 from .detect import DetectionPipeline
 from .llm.base import LLMClient
 from .redact import redact
@@ -71,12 +72,19 @@ def send_turn(
     mode: Mode,
     llm: LLMClient,
     use_privacy_filter: bool = False,
+    use_wikipedia: bool = False,
+    wikipedia_provider: ContextProvider | None = None,
 ) -> tuple[Message, Message]:
     """Run one full chat turn. Returns (saved_user_message, saved_assistant_message).
 
     `use_privacy_filter` enables the optional 5th detector backed by
     `openai/privacy-filter` for addresses, secrets and additional PII coverage.
     Requires `pip install jude[privacy-filter]`.
+
+    `use_wikipedia` (or passing an explicit `wikipedia_provider`) chains a
+    Wikipedia-backed context provider after the bundled known-entities
+    dataset. This sends entity names to Wikipedia's REST API and should be
+    opt-in per matter.
     """
 
     matter = store.get_matter(conversation.matter_id)
@@ -90,7 +98,14 @@ def send_turn(
         use_privacy_filter=use_privacy_filter,
     )
     detections = pipeline.detect(raw_user_text)
-    redaction = redact(raw_user_text, detections, store, matter.id, mode)
+    provider = make_provider(
+        use_wikipedia=use_wikipedia or wikipedia_provider is not None,
+        wikipedia_provider=wikipedia_provider,
+    )
+    redaction = redact(
+        raw_user_text, detections, store, matter.id, mode,
+        context_provider=provider,
+    )
 
     user_msg = store.add_message(
         conversation_id=conversation.id,

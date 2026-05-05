@@ -150,12 +150,24 @@ def redact_file(
                 )
                 raise typer.Exit(1)
             result = redact(extraction.text, pipeline.detect(extraction.text), store, matter, m.mode)
-            target = out or path.with_suffix(".redacted.txt")
-            TextAdapter.write(target, result.redacted_text)
-            rprint(
-                "[yellow]note:[/yellow] PDF write-back is not yet supported. "
-                "Output is plain text."
-            )
+            target = out or path.with_suffix(".redacted.pdf")
+            if target.suffix.lower() == ".pdf" and extraction.is_text_pdf:
+                replacements = {
+                    form: ent.pseudonym
+                    for ent in result.entities_used
+                    for form in ent.surface_forms
+                }
+                # Also include the canonical itself in case it isn't already
+                # a surface form (defensive — the store should have it).
+                for ent in result.entities_used:
+                    replacements.setdefault(ent.canonical, ent.pseudonym)
+                PdfAdapter.write_redacted(path, target, replacements)
+            else:
+                TextAdapter.write(target, result.redacted_text)
+                rprint(
+                    "[yellow]note:[/yellow] redacted output written as plain text "
+                    "(use --out file.pdf for native PDF write-back on text PDFs)."
+                )
         else:
             text = TextAdapter.read(path)
             result = redact(text, pipeline.detect(text), store, matter, m.mode)

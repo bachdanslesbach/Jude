@@ -127,6 +127,76 @@ class PdfAdapter:
     def is_text_pdf(path: Path | str) -> bool:
         return PdfAdapter._extract(path).is_text_pdf
 
+    @staticmethod
+    def write_redacted(
+        source_path: Path | str,
+        target_path: Path | str,
+        replacements: dict[str, str],
+        clear_metadata: bool = True,
+    ) -> None:
+        """Produce a true redacted PDF using PyMuPDF redact-annotations.
+
+        Each occurrence of any key in `replacements` across every page is
+        physically removed (not just covered) via `page.apply_redactions()`
+        and its value is rendered in place.
+
+        Limitations of v0:
+          * Image-only PDFs raise ValueError. Run OCR first, or accept
+            the .txt redacted output.
+          * The replacement is rendered with the default Helvetica face
+            at a small size that fits the original rect; complex layout
+            preservation isn't attempted.
+        """
+
+        import pymupdf
+
+        doc = pymupdf.open(str(source_path))
+        try:
+            if not _has_text(doc):
+                raise ValueError(
+                    "Cannot redact an image-only PDF natively. Run OCR "
+                    "first to add a text layer, or accept the .txt "
+                    "redacted output."
+                )
+
+            # Longer keys first to avoid partial-name shadowing — e.g. so
+            # "Amazon.com Inc." gets fully redacted before a "Amazon" pass
+            # would otherwise leave a ".com Inc." dangling.
+            ordered = sorted(replacements.items(), key=lambda kv: -len(kv[0]))
+
+            for page in doc:
+                for surface, pseudonym in ordered:
+                    if not surface:
+                        continue
+                    rects = page.search_for(surface)
+                    if not rects:
+                        continue
+                    for rect in rects:
+                        page.add_redact_annot(
+                            rect,
+                            text=pseudonym,
+                            fontname="helv",
+                            fontsize=9,
+                        )
+                    # Apply per-key so later (shorter) keys search the
+                    # already-redacted page and don't double-hit content
+                    # that was just removed.
+                    page.apply_redactions()
+
+            if clear_metadata:
+                doc.set_metadata({})
+
+            doc.save(str(target_path))
+        finally:
+            doc.close()
+
+
+def _has_text(doc) -> bool:  # type: ignore[no-untyped-def]
+    for page in doc:
+        if page.get_text("text").strip():
+            return True
+    return False
+
 
 def _run_ocrmypdf(input_pdf: Path, languages: tuple[str, ...]) -> Path:
     """Run `ocrmypdf` on `input_pdf` to produce a searchable PDF.

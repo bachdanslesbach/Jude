@@ -544,5 +544,6 @@ def _pseudonym_prefix(t: EntityType) -> str:
         EntityType.IBAN: "Iban",
         EntityType.CASE_REF: "Case",
         EntityType.URL: "Url",
+        EntityType.SECRET: "Secret",
         EntityType.OTHER: "X",
     }[t]

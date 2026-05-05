@@ -15,6 +15,7 @@ class EntityType(StrEnum):
     IBAN = "IBAN"
     CASE_REF = "CASE_REF"
     URL = "URL"
+    SECRET = "SECRET"
     OTHER = "OTHER"
 
 
@@ -27,6 +28,7 @@ class DetectionSource(StrEnum):
     REGEX = "regex"
     SPACY = "spacy"
     GLINER = "gliner"
+    PRIVACY_FILTER = "privacy_filter"
     DICTIONARY = "dictionary"
     USER = "user"
 

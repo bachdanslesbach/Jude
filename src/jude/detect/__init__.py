@@ -20,8 +20,9 @@ _SOURCE_PRIORITY = {
     DetectionSource.USER: 0,
     DetectionSource.DICTIONARY: 1,
     DetectionSource.REGEX: 2,
-    DetectionSource.GLINER: 3,
-    DetectionSource.SPACY: 4,
+    DetectionSource.PRIVACY_FILTER: 3,
+    DetectionSource.GLINER: 4,
+    DetectionSource.SPACY: 5,
 }
 
 
@@ -29,7 +30,8 @@ class DetectionPipeline:
     """Run all detectors over a text, then resolve overlaps.
 
     Resolution policy:
-      1. Higher-priority source wins (user > dictionary > regex > gliner > spacy).
+      1. Higher-priority source wins
+         (user > dictionary > regex > privacy_filter > gliner > spacy).
       2. Within the same source, the longer span wins.
       3. Ties are broken by leftmost start position.
     """
@@ -40,6 +42,7 @@ class DetectionPipeline:
         matter_id: str,
         languages: tuple[str, ...] = ("en", "fr"),
         use_gliner: bool = False,
+        use_privacy_filter: bool = False,
     ):
         self.store = store
         self.matter_id = matter_id
@@ -53,6 +56,13 @@ class DetectionPipeline:
             self.gliner: GlinerDetector | None = GlinerDetector()
         else:
             self.gliner = None
+        self.use_privacy_filter = use_privacy_filter
+        if use_privacy_filter:
+            from .privacy_filter_detector import PrivacyFilterDetector
+
+            self.privacy_filter: PrivacyFilterDetector | None = PrivacyFilterDetector()
+        else:
+            self.privacy_filter = None
 
     def detect(self, text: str) -> list[Detection]:
         candidates: list[Detection] = []
@@ -61,6 +71,8 @@ class DetectionPipeline:
         candidates.extend(self.dictionary.detect(text))
         if self.gliner is not None:
             candidates.extend(self.gliner.detect(text))
+        if self.privacy_filter is not None:
+            candidates.extend(self.privacy_filter.detect(text))
         return resolve_overlaps(candidates)
 
 

@@ -48,6 +48,7 @@ def sidebar() -> tuple[Matter | None, Conversation | None]:
         return None, None
 
     _mode_controls(store, matter)
+    _detector_controls(matter)
     conv = _conversation_picker(store, matter)
     _entities_link()
     return matter, conv
@@ -138,6 +139,21 @@ def _mode_controls(store: Store, matter: Matter) -> None:
                 st.error(str(e))
 
 
+def _detector_controls(matter: Matter) -> None:
+    with st.sidebar.expander("Advanced detectors"):
+        st.checkbox(
+            "OpenAI Privacy Filter (addresses, secrets) — heavy, ~3 GB",
+            key=f"use_pf_{matter.id}",
+            value=False,
+            help=(
+                "Adds a 5th detector backed by openai/privacy-filter for "
+                "private addresses, API keys, account numbers and other PII "
+                "that spaCy misses. First use downloads ~1.5 GB of weights. "
+                "Requires `pip install jude[privacy-filter]`."
+            ),
+        )
+
+
 def _conversation_picker(store: Store, matter: Matter) -> Conversation | None:
     st.sidebar.divider()
     st.sidebar.markdown("**Conversations**")
@@ -226,6 +242,7 @@ def render_conversation(matter: Matter, conv: Conversation) -> None:
         )
         return
 
+    use_pf = bool(st.session_state.get(f"use_pf_{matter.id}", False))
     with st.spinner("Redacting → sending to Claude → rehydrating…"):
         try:
             send_turn(
@@ -235,6 +252,7 @@ def render_conversation(matter: Matter, conv: Conversation) -> None:
                 store=store,
                 mode=matter.mode,
                 llm=_llm(),
+                use_privacy_filter=use_pf,
             )
         except PermissionError as e:
             st.error(str(e))

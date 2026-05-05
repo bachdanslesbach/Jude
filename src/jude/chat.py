@@ -70,15 +70,25 @@ def send_turn(
     store: Store,
     mode: Mode,
     llm: LLMClient,
+    use_privacy_filter: bool = False,
 ) -> tuple[Message, Message]:
-    """Run one full chat turn. Returns (saved_user_message, saved_assistant_message)."""
+    """Run one full chat turn. Returns (saved_user_message, saved_assistant_message).
+
+    `use_privacy_filter` enables the optional 5th detector backed by
+    `openai/privacy-filter` for addresses, secrets and additional PII coverage.
+    Requires `pip install jude[privacy-filter]`.
+    """
 
     matter = store.get_matter(conversation.matter_id)
     if matter is None:
         raise ValueError(f"Unknown matter for conversation {conversation.id}")
 
     raw_user_text = compose_user_message(user_text, attachments)
-    pipeline = DetectionPipeline(store=store, matter_id=matter.id)
+    pipeline = DetectionPipeline(
+        store=store,
+        matter_id=matter.id,
+        use_privacy_filter=use_privacy_filter,
+    )
     detections = pipeline.detect(raw_user_text)
     redaction = redact(raw_user_text, detections, store, matter.id, mode)
 

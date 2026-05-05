@@ -111,10 +111,36 @@ pytest
 - v0.2: native-text PDF, entity merge in the UI, bundled public-knowledge dataset for auto-filling smart-mode context (DMA gatekeepers, EU institutions, NCAs).
 - v0.3: per-paragraph language routing, span shape filter, `en_core_web_lg` preferred, expanded known-entities dataset to 147 entries.
 - v0.3.1: scanned PDF support via `ocrmypdf` (`--ocr` CLI flag, checkbox in UI).
-- **v0.4 (now): chat-first UI with multi-turn redaction. Each turn is incrementally redacted; the same entity always reuses its pseudonym across turns. Conversations are persisted per matter.**
+- v0.4: chat-first UI with multi-turn redaction. Each turn is incrementally redacted; the same entity always reuses its pseudonym across turns. Conversations are persisted per matter.
+- **v0.4.1 (now): optional fifth detector backed by `openai/privacy-filter`. Adds coverage for postal addresses, accidentally-pasted secrets (API keys, tokens) and non-IBAN account numbers. Enable in the sidebar after `pip install -e ".[privacy-filter]"`.**
 - v0.5: Wikipedia / EUR-Lex enrichment, OpenAI / Azure / Ollama backends.
 - v0.6: re-identification risk score per entity.
 - v0.7: Tauri + React desktop app replacing Streamlit.
+
+## Optional: OpenAI Privacy Filter as a 5th detector
+
+For documents containing postal addresses, accidentally-pasted secrets
+(API keys, tokens), or non-IBAN account numbers, you can enable a fifth
+detector backed by [`openai/privacy-filter`](https://huggingface.co/openai/privacy-filter)
+(Apache-2.0). It complements (does not replace) the spaCy + regex stack:
+
+| | spaCy `_lg` + regex (default) | + privacy-filter (optional) |
+|---|---|---|
+| Persons / orgs / locations | ✓ | + addresses |
+| Emails / phones / IBANs | ✓ (regex) | + non-IBAN account numbers |
+| Case refs | ✓ | — |
+| Secrets (API keys, tokens, passwords) | — | ✓ |
+
+```bash
+pip install -e ".[privacy-filter]"
+```
+
+First use downloads ~1.5 GB of weights. The model has 1.5B parameters with
+50M active (mixture-of-experts), so runtime is reasonable on consumer
+hardware including M-series Macs. Toggle it per-matter via the **Advanced
+detectors** expander in the sidebar.
+
+The model runs entirely on your machine — nothing leaves the network.
 
 ## OCR for scanned PDFs
 

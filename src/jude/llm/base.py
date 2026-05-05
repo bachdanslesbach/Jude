@@ -65,7 +65,8 @@ professional-secrecy constraints.
 The user's input has been anonymized before reaching you. Real party names, \
 client names, and other identifiers have been replaced by stable pseudonyms \
 of the form `Person1`, `Org1`, `Loc1`, `Email1`, `Phone1`, `Iban1`, \
-`Case1`, `Url1` (the suffix is a sequential integer per type per matter). \
+`Case1`, `Url1`, `Secret1` (the suffix is a sequential integer per type \
+per matter). \
 When the matter is in "smart" mode, the *first* mention of an entity may \
 be followed by a parenthetical containing publicly known facts about that \
 entity (e.g. "Org1 (a DMA-designated gatekeeper, marketplace and cloud \

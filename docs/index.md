@@ -7,12 +7,19 @@ layout: default
 
 **Anonymize legal documents on your machine before sending them to an LLM.**
 
-Jude is an open-source tool for lawyers who want to use frontier LLMs
-(Claude, GPT, etc.) for legal analysis without breaching the
+Jude is an open-source, **LLM-agnostic** tool for lawyers who want to
+use frontier LLMs for legal analysis without breaching the
 professional-secrecy obligations they owe their clients. It runs
 locally, redacts identifying information from text, Word, PDF and
-Excel documents, and rehydrates the LLM's response so you read real
+Excel documents, sends the pseudonymized version to whichever LLM
+backend you configure, and rehydrates the response so you read real
 names. The mapping table never leaves your disk.
+
+Jude ships with two LLM clients out of the box: a **cloud client**
+(Anthropic, with contractual zero-retention) and a **local client**
+(Ollama, with structural zero-retention). Plugging in OpenAI, Azure
+OpenAI, Google Vertex, Mistral, or any other provider is a small
+`LLMClient` subclass — see [contributing](https://github.com/bachdanslesbach/Jude/blob/main/CONTRIBUTING.md).
 
 > Jude is alpha software. It is not legal advice. It does not certify
 > compliance with any bar rule. Always verify the redacted output
@@ -56,8 +63,9 @@ sees only pseudonyms; the user reads only real names.
                             ▼
                     ┌────────────────┐       ┌────────────────┐
                     │ Pseudonymize   │ ────► │ LLM            │
-                    │ (per-matter    │       │ (Anthropic OR  │
-                    │  SQLite store) │       │  local Ollama) │
+                    │ (per-matter    │       │ (your chosen   │
+                    │  SQLite store) │       │  provider, or  │
+                    │                │       │  local Ollama) │
                     └───────┬────────┘       └───────┬────────┘
                             │                        │
                             │ ◄──────────────────────┘
@@ -79,7 +87,7 @@ showing you the answer.
 |---|---|---|
 | Pseudonyms | yes | yes |
 | Public-knowledge tags | none | yes — first mention of `Org1` gets *(DMA-designated gatekeeper, marketplace + cloud)* |
-| LLM endpoint requirement | any | zero-retention attestation OR a local backend (Ollama) |
+| LLM endpoint requirement | any | zero-retention attestation from the cloud provider, OR a local backend |
 | Use case | maximum confidentiality, less analytical depth | better LLM reasoning when the parties are well-known |
 
 ## What Jude reads
@@ -100,7 +108,7 @@ python3.12 -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
 python -m spacy download en_core_web_lg
 python -m spacy download fr_core_news_md
-export ANTHROPIC_API_KEY=...   # or use launchctl on macOS
+export ANTHROPIC_API_KEY=...   # or your provider's equivalent; see /docs/installation
 jude ui
 ```
 

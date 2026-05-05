@@ -37,9 +37,10 @@ plan to add the latter in a future release.
 
 Almost — yes if you use the local Ollama backend; the only network
 calls in the default pipeline are to the LLM endpoint. With Ollama
-selected as the backend, Jude is fully offline. With Anthropic and
-smart-mode Wikipedia enrichment enabled, Jude makes outbound calls
-to api.anthropic.com and en.wikipedia.org.
+selected as the backend, Jude is fully offline. With a cloud backend
+selected, Jude makes outbound calls to that provider's API endpoint;
+with smart-mode Wikipedia enrichment additionally enabled, also to
+en.wikipedia.org.
 
 ### How big should my client's name be before Jude detects it?
 
@@ -76,10 +77,11 @@ or a local backend.
 
 ### My API key was compromised — what do I do?
 
-Revoke it at the provider's console
-([Anthropic](https://console.anthropic.com/settings/keys)),
-generate a new one, and replace it via `launchctl setenv` (macOS)
-or your shell's rc file. Jude itself does not store the key.
+Revoke it at your provider's console (for Anthropic that's
+<https://console.anthropic.com/settings/keys>; for OpenAI it's
+<https://platform.openai.com/api-keys>), generate a new one, and
+replace it via `launchctl setenv` (macOS) or your shell's rc file.
+Jude itself does not store the key.
 
 ### How do I contribute?
 

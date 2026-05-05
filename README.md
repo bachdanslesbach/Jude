@@ -27,7 +27,7 @@ installation, architecture, threat model, and FAQ.
 1. **Detects** named entities in your document — persons, organizations, locations, emails, phone numbers, IBANs, court / case references, etc. — using local NER (spaCy, optionally GLiNER) plus regex and a per-matter dictionary that learns over time.
 2. **Redacts** them by replacing each with a stable pseudonym (`Org1`, `Person1`, …). The mapping is stored locally in SQLite, scoped per matter, never leaves your machine.
 3. **Optionally adds public-knowledge context** to selected entities (e.g. *"Org1 — DMA-designated gatekeeper, marketplace + cloud business"*) so the LLM can reason competently without learning the actual identity. Only available in **smart mode**.
-4. **Sends** the redacted text to your chosen LLM (Anthropic by default; pluggable).
+4. **Sends** the redacted text to your chosen LLM. Pluggable backend: Jude ships with clients for Anthropic and local Ollama; OpenAI / Azure / Google / any HTTP-accessible provider is a 50-line `LLMClient` subclass away.
 5. **Rehydrates** the LLM response by mapping pseudonyms back to real names, so what you read is in plain language.
 
 The mapping table lives only on your disk. The LLM only ever sees pseudonyms.
@@ -101,7 +101,12 @@ python -m spacy download fr_core_news_md    # French
 jude ui                    # launches the Streamlit UI
 ```
 
-For the LLM call you need an `ANTHROPIC_API_KEY` in your environment (Anthropic's API is zero-retention by default for non-flagged content).
+For the cloud LLM call you need an API key from your chosen provider in
+your environment — e.g. `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`,
+`AZURE_OPENAI_API_KEY`. Each provider has its own retention terms;
+treat the contractual "zero-retention" guarantee as a separate
+attestation step (it's a per-matter checkbox in Jude). Or skip cloud
+entirely and run locally via Ollama — see [docs/installation](docs/installation.md).
 
 ## CLI
 
@@ -121,7 +126,7 @@ pytest
 
 ## Roadmap
 
-- v0.1: plain text + DOCX, strict / smart modes, Streamlit UI, Anthropic backend, French + English NER.
+- v0.1: plain text + DOCX, strict / smart modes, Streamlit UI, first cloud LLM client (Anthropic), French + English NER.
 - v0.2: native-text PDF, entity merge in the UI, bundled public-knowledge dataset for auto-filling smart-mode context (DMA gatekeepers, EU institutions, NCAs).
 - v0.3: per-paragraph language routing, span shape filter, `en_core_web_lg` preferred, expanded known-entities dataset to 147 entries.
 - v0.3.1: scanned PDF support via `ocrmypdf` (`--ocr` CLI flag, checkbox in UI).
@@ -129,8 +134,8 @@ pytest
 - v0.4.1: optional fifth detector backed by `openai/privacy-filter`. Adds coverage for postal addresses, accidentally-pasted secrets (API keys, tokens) and non-IBAN account numbers. Enable in the sidebar after `pip install -e ".[privacy-filter]"`.
 - v0.4.2: Wikipedia fallback for smart-mode context. When the bundled dataset doesn't cover an entity, pull a one-line public-knowledge tag from Wikipedia. Opt-in per matter (entity names get sent to Wikipedia's REST API). Strict TDD from this version on — failing tests committed first, implementation in a follow-up commit.
 - v0.4.3: re-identification risk scoring. For each entity, flags whether the surrounding context (specific currency figures, dates, EU case refs co-located with the pseudonym; public-knowledge tags; canonical name leaking inside its own context tag) is structurally identifying. Surfaced as a LOW / MEDIUM / HIGH badge in the Entities page with a "why?" expander listing the contributing signals.
-- v0.4.4: Ollama backend. Per-matter LLM picker in the sidebar — choose Anthropic (cloud, contractual zero-retention) or Ollama (local, structural zero-retention). When the backend is local, smart mode works without a zero-retention attestation since prompts never leave the machine. Requires `ollama serve` running locally for the local path.
-- v0.4.5: coverage backfill. Four UI smoke tests via Streamlit's `AppTest` runner (would have caught the matter-creation crash and the SQLite cross-thread error before users hit them) and one real-LLM end-to-end regression test against the Anthropic API (gated on `ANTHROPIC_API_KEY` so it only runs when you ask for it).
+- v0.4.4: Ollama backend. Per-matter LLM picker in the sidebar — choose any configured cloud client (contractual zero-retention) or Ollama (local, structural zero-retention). When the backend is local, smart mode works without a zero-retention attestation since prompts never leave the machine. Requires `ollama serve` running locally for the local path.
+- v0.4.5: coverage backfill. Four UI smoke tests via Streamlit's `AppTest` runner (would have caught the matter-creation crash and the SQLite cross-thread error before users hit them) and one real-LLM end-to-end regression test (currently against the bundled Anthropic client; gated on its API key so it only runs when you ask for it).
 - **v0.4.6 (now): XLSX adapter. Read every cell across every sheet for the redaction pipeline; write a redacted copy preserving sheet names, cell positions and numeric values verbatim. Available in the chat UI alongside .txt/.docx/.pdf and on the CLI as `jude redact file.xlsx --matter <id>`.**
 - v0.5: EUR-Lex enrichment for case references, OpenAI / Azure backends, persistent caching of Wikipedia lookups.
 - v0.6: re-identification risk score per entity.

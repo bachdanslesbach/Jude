@@ -13,8 +13,10 @@ an issue if it doesn't.
 - **Python 3.11 or 3.12.** Python 3.13/3.14 may work but spaCy's wheel
   availability lags. If you use `pyenv` or `asdf`, pin to 3.12 for now.
 - **Git.**
-- **An LLM endpoint** — either an Anthropic API key (default) or
-  [Ollama](https://ollama.ai/) running locally for the no-network path.
+- **An LLM endpoint** — either an API key for one of the cloud
+  providers Jude ships a client for (Anthropic today; OpenAI / Azure /
+  others are a small subclass away) or [Ollama](https://ollama.ai/)
+  running locally for the no-network path.
 
 Optional, for the additional features:
 
@@ -43,23 +45,32 @@ pip install -e ".[privacy-filter]"  # OpenAI privacy filter as 5th detector
 pip install -e ".[gliner]"          # GLiNER multilingual NER
 ```
 
-## Setting your Anthropic API key
+## Setting your LLM provider's API key
+
+Each cloud provider has its own environment variable name — Jude reads
+whichever one its configured client expects:
+
+| Provider | Variable |
+|---|---|
+| Anthropic | `ANTHROPIC_API_KEY` |
+| OpenAI | `OPENAI_API_KEY` (when an OpenAI client is added) |
+| Azure OpenAI | `AZURE_OPENAI_API_KEY` (similarly) |
 
 The recommended path on macOS is **`launchctl`** — it makes the key
 available to GUI apps without storing it in plaintext config files.
 The key persists until your next reboot.
 
 ```bash
-launchctl setenv ANTHROPIC_API_KEY "sk-ant-api03-..."
+launchctl setenv ANTHROPIC_API_KEY "sk-..."   # or whichever variable
 ```
 
 If you want it to survive reboots, also add it to `~/.zshrc`:
 
 ```bash
-echo 'export ANTHROPIC_API_KEY="sk-ant-api03-..."' >> ~/.zshrc
+echo 'export ANTHROPIC_API_KEY="sk-..."' >> ~/.zshrc
 ```
 
-Or skip Anthropic entirely and use a local model — see *Using Ollama*
+Or skip cloud entirely and use a local model — see *Using Ollama*
 below.
 
 ## First run
@@ -109,9 +120,9 @@ to the latest commit.
 **`SQLite objects created in a thread can only be used in that same thread`.**
 You're on an old version. `git pull` and restart Streamlit.
 
-**Anthropic API key not picked up by the UI.** macOS GUI apps don't
-inherit shell env. Use `launchctl setenv` (see above) and restart
-Claude / Streamlit fully.
+**LLM API key not picked up by the UI.** macOS GUI apps don't inherit
+shell env. Use `launchctl setenv` (see above) and restart Streamlit
+fully.
 
 **`ollama: connection refused`.** Run `ollama serve &` in a terminal
 first.

@@ -46,8 +46,10 @@ src/jude/
 │
 ├── llm/                        # Pluggable LLM clients
 │   ├── base.py                 # LLMClient ABC + JUDE_SYSTEM_PROMPT
-│   ├── anthropic_client.py
+│   ├── anthropic_client.py     # Cloud client #1 (shipped)
 │   └── ollama_client.py        # Local-only; inherently_zero_retention=True
+│   # Adding OpenAI/Azure/Google etc.: subclass LLMClient, implement
+│   # complete_chat(), and register in llm/__init__.py.
 │
 ├── cli.py                      # Typer-backed `jude` command
 ├── data/known_entities.json    # 147-entry curated public-knowledge dataset
@@ -110,7 +112,7 @@ entity getting `Org_002` today.
    reuse theirs.
 4. Persist the user message (redacted + display copies side-by-side).
 5. Build the full conversation history in redacted form for the LLM.
-6. Call the LLM (Anthropic or Ollama).
+6. Call the LLM (whichever `LLMClient` the matter is configured to use).
 7. Rehydrate the response by reverse-mapping pseudonyms.
 8. Persist the assistant message.
 
@@ -150,7 +152,7 @@ from the user's own corpus.
 
 The mode is recorded per matter and visible at every step. The chat
 input refuses to send when the mode and backend combination is
-inconsistent (e.g. smart mode, Anthropic backend, no attestation).
+inconsistent (e.g. smart mode, a cloud backend, no attestation).
 
 ## What never leaves your machine
 
@@ -160,8 +162,8 @@ inconsistent (e.g. smart mode, Anthropic backend, no attestation).
 
 ## What does leave your machine (when applicable)
 
-- The redacted text and the JUDE system prompt go to the configured
-  LLM endpoint (Anthropic or Ollama, the latter being localhost).
+- The redacted text and the Jude system prompt go to the configured
+  LLM endpoint (a cloud provider, or localhost via Ollama).
 - Entity names go to Wikipedia if the user opts into Wikipedia
   enrichment for a matter (privacy notice in the sidebar).
 
@@ -173,6 +175,8 @@ Coverage as of the latest tag:
 
 - **132 unit & integration tests** passing.
 - 4 UI smoke tests via Streamlit's `AppTest` runner.
-- 1 real-LLM end-to-end regression test (gated on `ANTHROPIC_API_KEY`).
+- 1 real-LLM end-to-end regression test against the shipped Anthropic
+  client (gated on its API key being present; trivially adaptable to
+  any other provider once a client is added).
 - 2 tests skipped by default (OCR full-loop without `tesseract`,
   privacy-filter full-loop without the 1.5 GB model download).

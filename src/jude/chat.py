@@ -15,7 +15,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from .adapters import DocxAdapter, PdfAdapter, TextAdapter
+from .adapters import DocxAdapter, PdfAdapter, TextAdapter, XlsxAdapter
 from .context import ContextProvider, make_provider
 from .detect import DetectionPipeline
 from .llm.base import LLMClient
@@ -44,6 +44,8 @@ def read_attachment_text(att: FileAttachment, *, enable_ocr: bool = False) -> st
             return DocxAdapter.read(tmp).text
         if suffix == ".pdf":
             return PdfAdapter.read(tmp, enable_ocr=enable_ocr).text
+        if suffix == ".xlsx":
+            return XlsxAdapter.read(tmp).text
         return TextAdapter.read(tmp)
     finally:
         tmp.unlink(missing_ok=True)

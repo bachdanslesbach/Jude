@@ -99,7 +99,10 @@ def test_read_handles_empty_workbook(tmp_path: Path):
     src = tmp_path / "in.xlsx"
     _make_workbook(src, {"Sheet1": []})
     extraction = XlsxAdapter.read(src)
-    assert extraction.text == "" or extraction.text.strip() == "Sheet1"
+    # Empty sheets still emit a marker so the user can see the workbook
+    # structure (not "the file was empty"). No actual cell content though.
+    assert "Sheet1" in extraction.text
+    assert len(extraction.text) < 60
 
 
 def test_read_includes_numeric_cell_values_as_strings(tmp_path: Path):

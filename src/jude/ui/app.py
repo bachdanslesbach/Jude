@@ -291,7 +291,7 @@ def render_conversation(matter: Matter, conv: Conversation) -> None:
     payload = st.chat_input(
         "Ask Jude — paste text or attach a file…",
         accept_file="multiple",
-        file_type=["txt", "docx", "pdf"],
+        file_type=["txt", "docx", "pdf", "xlsx"],
     )
 
     if not payload:

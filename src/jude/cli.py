@@ -9,7 +9,7 @@ import typer
 from rich import print as rprint
 from rich.table import Table
 
-from .adapters import DocxAdapter, PdfAdapter, TextAdapter
+from .adapters import DocxAdapter, PdfAdapter, TextAdapter, XlsxAdapter
 from .adapters.docx import PARAGRAPH_SEP
 from .context import fill_missing_context
 from .detect import DetectionPipeline
@@ -117,6 +117,24 @@ def redact_file(
             redacted_paragraphs = result.redacted_text.split(PARAGRAPH_SEP)
             target = out or path.with_suffix(".redacted.docx")
             DocxAdapter.write_redacted(path, target, redacted_paragraphs)
+        elif suffix == ".xlsx":
+            extraction_xlsx = XlsxAdapter.read(path)
+            for w in extraction_xlsx.warnings:
+                rprint(f"[yellow]warning:[/yellow] {w}")
+            result = redact(
+                extraction_xlsx.text,
+                pipeline.detect(extraction_xlsx.text),
+                store, matter, m.mode,
+            )
+            replacements = {
+                ent.canonical: ent.pseudonym for ent in result.entities_used
+            }
+            for surface in {d.text for d in result.detections}:
+                ent = store.find_entity_by_surface(matter, surface)
+                if ent:
+                    replacements[surface] = ent.pseudonym
+            target = out or path.with_suffix(".redacted.xlsx")
+            XlsxAdapter.write_redacted(path, target, replacements)
         elif suffix == ".pdf":
             try:
                 extraction = PdfAdapter.read(path, enable_ocr=ocr)

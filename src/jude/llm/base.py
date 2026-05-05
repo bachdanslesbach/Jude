@@ -17,11 +17,18 @@ class LLMResponse(BaseModel):
 class LLMClient(ABC):
     """Pluggable LLM backend.
 
-    Implementations MUST refuse to send any prompt unless
-    `zero_retention_attested` is True when the matter is in SMART mode.
+    Implementations MUST refuse to send any prompt unless either:
+      * the matter is in STRICT mode, or
+      * the user has attested the endpoint is zero-retention, or
+      * the backend is `inherently_zero_retention` (i.e. the model runs
+        on the user's machine and no third party touches the prompt).
     """
 
     name: str = "abstract"
+    # Set to True by subclasses whose endpoint is structurally zero-
+    # retention (e.g. local Ollama). The base class's _enforce_mode then
+    # skips the attestation check.
+    inherently_zero_retention: bool = False
 
     @abstractmethod
     def complete_chat(
@@ -49,13 +56,16 @@ class LLMClient(ABC):
             zero_retention_attested=zero_retention_attested,
         )
 
-    @staticmethod
-    def _enforce_mode(mode: Mode, zero_retention_attested: bool) -> None:
-        if mode == Mode.SMART and not zero_retention_attested:
-            raise PermissionError(
-                "Refusing to send: smart mode requires explicit "
-                "zero-retention attestation for this LLM endpoint."
-            )
+    def _enforce_mode(self, mode: Mode, zero_retention_attested: bool) -> None:
+        if mode != Mode.SMART:
+            return
+        if zero_retention_attested or self.inherently_zero_retention:
+            return
+        raise PermissionError(
+            "Refusing to send: smart mode requires either explicit "
+            "zero-retention attestation or a backend that is structurally "
+            "local (e.g. Ollama)."
+        )
 
 
 JUDE_SYSTEM_PROMPT = """\

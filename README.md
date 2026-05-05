@@ -114,8 +114,9 @@ pytest
 - v0.4: chat-first UI with multi-turn redaction. Each turn is incrementally redacted; the same entity always reuses its pseudonym across turns. Conversations are persisted per matter.
 - v0.4.1: optional fifth detector backed by `openai/privacy-filter`. Adds coverage for postal addresses, accidentally-pasted secrets (API keys, tokens) and non-IBAN account numbers. Enable in the sidebar after `pip install -e ".[privacy-filter]"`.
 - v0.4.2: Wikipedia fallback for smart-mode context. When the bundled dataset doesn't cover an entity, pull a one-line public-knowledge tag from Wikipedia. Opt-in per matter (entity names get sent to Wikipedia's REST API). Strict TDD from this version on — failing tests committed first, implementation in a follow-up commit.
-- **v0.4.3 (now): re-identification risk scoring. For each entity, flags whether the surrounding context (specific currency figures, dates, EU case refs co-located with the pseudonym; public-knowledge tags; canonical name leaking inside its own context tag) is structurally identifying. Surfaced as a LOW / MEDIUM / HIGH badge in the Entities page with a "why?" expander listing the contributing signals.**
-- v0.5: EUR-Lex enrichment for case references, OpenAI / Azure / Ollama backends.
+- v0.4.3: re-identification risk scoring. For each entity, flags whether the surrounding context (specific currency figures, dates, EU case refs co-located with the pseudonym; public-knowledge tags; canonical name leaking inside its own context tag) is structurally identifying. Surfaced as a LOW / MEDIUM / HIGH badge in the Entities page with a "why?" expander listing the contributing signals.
+- **v0.4.4 (now): Ollama backend. Per-matter LLM picker in the sidebar — choose Anthropic (cloud, contractual zero-retention) or Ollama (local, structural zero-retention). When the backend is local, smart mode works without a zero-retention attestation since prompts never leave the machine. Requires `ollama serve` running locally for the local path.**
+- v0.5: EUR-Lex enrichment for case references, OpenAI / Azure backends, persistent caching of Wikipedia lookups.
 - v0.6: re-identification risk score per entity.
 - v0.7: Tauri + React desktop app replacing Streamlit.
 

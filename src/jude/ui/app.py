@@ -12,7 +12,7 @@ from __future__ import annotations
 import streamlit as st
 
 from jude.chat import FileAttachment, send_turn
-from jude.llm import AnthropicClient
+from jude.llm import AnthropicClient, LLMClient, OllamaClient
 from jude.paths import default_db_path
 from jude.store import Store
 from jude.types import Conversation, Matter, Mode
@@ -29,10 +29,25 @@ def _store() -> Store:
     return st.session_state.store
 
 
-def _llm() -> AnthropicClient:
-    if "llm" not in st.session_state:
-        st.session_state.llm = AnthropicClient()
-    return st.session_state.llm
+_DEFAULT_OLLAMA_MODEL = "llama3.3"
+
+
+def _llm_for(matter: Matter) -> LLMClient:
+    """Build (and cache) the LLMClient configured on this matter."""
+
+    cache_key = f"llm_{matter.id}_{matter.llm_endpoint}_{matter.llm_model or ''}"
+    if cache_key in st.session_state:
+        return st.session_state[cache_key]
+    if matter.llm_endpoint == "ollama":
+        client: LLMClient = OllamaClient(
+            model=matter.llm_model or _DEFAULT_OLLAMA_MODEL,
+        )
+    else:
+        client = AnthropicClient(
+            model=matter.llm_model or "claude-sonnet-4-5",
+        )
+    st.session_state[cache_key] = client
+    return client
 
 
 # ----- sidebar -----
@@ -47,6 +62,7 @@ def sidebar() -> tuple[Matter | None, Conversation | None]:
     if matter is None:
         return None, None
 
+    _backend_controls(store, matter)
     _mode_controls(store, matter)
     _detector_controls(matter)
     conv = _conversation_picker(store, matter)
@@ -110,11 +126,55 @@ def _matter_create(store: Store) -> Matter | None:
     return None
 
 
+def _backend_controls(store: Store, matter: Matter) -> None:
+    backend_label = (
+        "Anthropic (cloud)"
+        if matter.llm_endpoint == "anthropic"
+        else f"Ollama (local · {matter.llm_model or _DEFAULT_OLLAMA_MODEL})"
+    )
+    st.sidebar.markdown(f"**LLM:** `{backend_label}`")
+    with st.sidebar.expander("Change LLM backend"):
+        backend = st.radio(
+            "Backend",
+            options=["anthropic", "ollama"],
+            index=0 if matter.llm_endpoint == "anthropic" else 1,
+            horizontal=True,
+            key=f"backend_{matter.id}",
+            help=(
+                "Anthropic (cloud) requires an API key; smart mode requires "
+                "your zero-retention attestation. Ollama (local) runs entirely "
+                "on this machine — smart mode works without attestation. "
+                "Local model quality is below frontier cloud."
+            ),
+        )
+        default_model = (
+            matter.llm_model
+            or ("claude-sonnet-4-5" if backend == "anthropic" else _DEFAULT_OLLAMA_MODEL)
+        )
+        model = st.text_input(
+            "Model",
+            value=default_model,
+            key=f"model_{matter.id}",
+            help=(
+                "For Anthropic: e.g. `claude-sonnet-4-5`, `claude-opus-4-5`. "
+                "For Ollama: any tag you've pulled, e.g. `llama3.3`, "
+                "`qwen3:32b`, `mistral-large`."
+            ),
+        )
+        if st.button("Save backend", key=f"save_backend_{matter.id}"):
+            store.set_llm_endpoint(matter.id, backend, model=model or None)
+            st.rerun()
+
+
 def _mode_controls(store: Store, matter: Matter) -> None:
     st.sidebar.markdown(f"**Mode:** `{matter.mode.value}`")
     if matter.mode == Mode.SMART:
         if matter.zero_retention_attested:
             st.sidebar.markdown(":green[Zero-retention attested ✓]")
+        elif matter.llm_endpoint == "ollama":
+            st.sidebar.markdown(
+                ":green[Local backend — zero retention by construction ✓]"
+            )
         else:
             st.sidebar.markdown(":red[Smart mode without zero-retention attestation]")
     with st.sidebar.expander("Change mode"):
@@ -249,16 +309,26 @@ def render_conversation(matter: Matter, conv: Conversation) -> None:
 
     attachments = [FileAttachment(f.name, f.getvalue()) for f in raw_files]
 
-    if matter.mode == Mode.SMART and not matter.zero_retention_attested:
+    if (
+        matter.mode == Mode.SMART
+        and not matter.zero_retention_attested
+        and matter.llm_endpoint != "ollama"
+    ):
         st.error(
             "This matter is in smart mode but no zero-retention attestation is "
-            "on file. Update the mode in the sidebar before sending."
+            "on file and the backend is a remote API. Either attest in the "
+            "sidebar, switch to a local backend, or change the mode."
         )
         return
 
     use_pf = bool(st.session_state.get(f"use_pf_{matter.id}", False))
     use_wiki = bool(st.session_state.get(f"use_wiki_{matter.id}", False))
-    with st.spinner("Redacting → sending to Claude → rehydrating…"):
+    spinner_label = (
+        "Redacting → sending to local Ollama → rehydrating…"
+        if matter.llm_endpoint == "ollama"
+        else "Redacting → sending to Claude → rehydrating…"
+    )
+    with st.spinner(spinner_label):
         try:
             send_turn(
                 conversation=conv,
@@ -266,7 +336,7 @@ def render_conversation(matter: Matter, conv: Conversation) -> None:
                 attachments=attachments,
                 store=store,
                 mode=matter.mode,
-                llm=_llm(),
+                llm=_llm_for(matter),
                 use_privacy_filter=use_pf,
                 use_wikipedia=use_wiki,
             )

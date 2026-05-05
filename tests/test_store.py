@@ -44,6 +44,21 @@ def test_find_by_surface_uses_normalized_match(store: Store, matter_id: str):
     assert by_with_corp is not None and by_with_corp.id == by_full.id
 
 
+def test_set_llm_endpoint_persists(store: Store):
+    m = store.create_matter("m", llm_endpoint="anthropic")
+    store.set_llm_endpoint(m.id, "ollama", model="llama3.3:70b")
+    refetched = store.get_matter(m.id)
+    assert refetched.llm_endpoint == "ollama"
+    assert refetched.llm_model == "llama3.3:70b"
+
+
+def test_set_llm_endpoint_clears_model_when_omitted(store: Store):
+    m = store.create_matter("m", llm_endpoint="ollama")
+    store.set_llm_endpoint(m.id, "ollama", model="llama3.3:70b")
+    store.set_llm_endpoint(m.id, "anthropic", model=None)
+    assert store.get_matter(m.id).llm_model is None
+
+
 def test_smart_mode_requires_zero_retention(store: Store):
     m = store.create_matter("m", mode=Mode.STRICT)
     with pytest.raises(ValueError):

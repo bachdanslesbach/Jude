@@ -115,6 +115,17 @@ class Store:
         self._conn.row_factory = sqlite3.Row
         self._conn.execute("PRAGMA foreign_keys = ON;")
         self._conn.executescript(SCHEMA)
+        self._migrate_v2()
+
+    def _migrate_v2(self) -> None:
+        """Add columns added after the original schema. Idempotent."""
+
+        cols = {
+            row["name"]
+            for row in self._conn.execute("PRAGMA table_info(matters)").fetchall()
+        }
+        if "llm_model" not in cols:
+            self._conn.execute("ALTER TABLE matters ADD COLUMN llm_model TEXT")
 
     def close(self) -> None:
         self._conn.close()
@@ -175,6 +186,20 @@ class Store:
         ).fetchall()
         return [self._row_to_matter(r) for r in rows]
 
+    def set_llm_endpoint(
+        self, matter_id: str, endpoint: str, model: str | None = None
+    ) -> None:
+        with self._tx() as c:
+            c.execute(
+                "UPDATE matters SET llm_endpoint = ?, llm_model = ? WHERE id = ?",
+                (endpoint, model, matter_id),
+            )
+        self._log(
+            matter_id,
+            "matter.set_llm_endpoint",
+            json.dumps({"endpoint": endpoint, "model": model}),
+        )
+
     def set_mode(
         self,
         matter_id: str,
@@ -198,11 +223,16 @@ class Store:
 
     @staticmethod
     def _row_to_matter(row: sqlite3.Row) -> Matter:
+        try:
+            llm_model = row["llm_model"]
+        except (KeyError, IndexError):
+            llm_model = None
         return Matter(
             id=row["id"],
             name=row["name"],
             mode=Mode(row["mode"]),
             llm_endpoint=row["llm_endpoint"],
+            llm_model=llm_model,
             zero_retention_attested=bool(row["zero_retention_attested"]),
             created_at=datetime.fromisoformat(row["created_at"]),
         )

@@ -65,6 +65,7 @@ class Matter(BaseModel):
     name: str
     mode: Mode = Mode.STRICT
     llm_endpoint: str = "anthropic"
+    llm_model: str | None = None
     zero_retention_attested: bool = False
     created_at: datetime | None = None
 

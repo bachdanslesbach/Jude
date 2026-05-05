@@ -122,6 +122,54 @@ def test_switching_to_ollama_clears_zero_retention_warning(isolated_jude_home):
     assert "Local backend" in sidebar_md
 
 
+def test_chat_user_bubble_shows_inline_risk_badge(isolated_jude_home):
+    """After each user turn the chat panel renders a small re-identification
+    risk badge alongside the bubble — automatically, without the user having
+    to copy-paste into the Entities page. Catches the case where redacted
+    output is structurally identifying (currency + date + case ref in the
+    same paragraph as a pseudonym)."""
+
+    from jude.paths import default_db_path
+    from jude.store import Store
+    from jude.types import EntityType, MessageRole, Mode
+
+    with Store(default_db_path()) as s:
+        matter = s.create_matter("auto-risk-smoke", mode=Mode.STRICT)
+        conv = s.create_conversation(matter.id, title="t")
+        # Seed an entity so its pseudonym is known to the assessor.
+        s.create_entity(
+            matter.id, "Microsoft", EntityType.ORG,
+            surface_forms={"Microsoft"},
+        )
+        # Seed a user message with three risk signals (currency + date + case).
+        s.add_message(
+            conv.id,
+            MessageRole.USER,
+            redacted_text=(
+                "Org1 paid €1,000,000,000 on October 13, 2023 in Case T-1/24."
+            ),
+            display_text="Microsoft paid …",
+        )
+        # And an assistant reply so the turn is complete.
+        s.add_message(
+            conv.id,
+            MessageRole.ASSISTANT,
+            redacted_text="Reply about Org1.",
+            display_text="Reply about Microsoft.",
+        )
+
+    at = AppTest.from_file(APP_PATH).run(timeout=30)
+    assert not at.exception, f"app raised: {at.exception}"
+
+    rendered = " ".join(m.value for m in at.markdown).upper()
+    # Three signals → score 3 → MEDIUM badge near the user bubble.
+    assert "MEDIUM" in rendered
+    # The Org1 pseudonym must NOT leak into the user-visible bubble — the
+    # display_text we seeded uses the canonical name.
+    user_visible = " ".join(m.value for m in at.chat_message[0].markdown)
+    assert "Microsoft" in user_visible
+
+
 def test_risk_panel_assesses_pasted_redacted_text(isolated_jude_home):
     """No LLM call. The risk assessor is local; we just verify the UI
     surfaces a LOW/MEDIUM/HIGH badge when the user pastes a redacted

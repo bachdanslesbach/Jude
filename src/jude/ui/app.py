@@ -14,8 +14,9 @@ import streamlit as st
 from jude.chat import FileAttachment, send_turn
 from jude.llm import AnthropicClient, LLMClient, OllamaClient
 from jude.paths import default_db_path
+from jude.risk import RiskAssessment, RiskLevel, assess_risks
 from jude.store import Store
-from jude.types import Conversation, Matter, Mode
+from jude.types import Conversation, Matter, Message, MessageRole, Mode
 
 st.set_page_config(page_title="Jude", layout="wide", initial_sidebar_state="expanded")
 
@@ -272,6 +273,36 @@ def _entities_link() -> None:
 # ----- main panel -----
 
 
+def _render_turn_risk_badge(
+    message: Message, entities: list, mode: Mode
+) -> None:
+    """Render a re-identification risk badge alongside a user message.
+
+    Surfaces the worst-case risk for any entity actually mentioned in this
+    turn's redacted text. Silent when no risk signals are present.
+    """
+
+    risks = [
+        r for r in assess_risks(message.redacted_text, entities, mode)
+        if r.score > 0
+    ]
+    if not risks:
+        return
+    worst = risks[0]
+    badge = {
+        RiskLevel.HIGH: ":red[**HIGH** re-identification risk]",
+        RiskLevel.MEDIUM: ":orange[**MEDIUM** re-identification risk]",
+        RiskLevel.LOW: ":blue[low re-identification risk]",
+    }[worst.level]
+    st.caption(badge)
+    if worst.reasons:
+        with st.expander(f"why? · top entity: {worst.pseudonym}"):
+            for r in risks[:3]:
+                st.markdown(f"**{r.pseudonym}** — {r.level.value} ({r.score})")
+                for reason in r.reasons:
+                    st.write(f"• {reason}")
+
+
 def render_conversation(matter: Matter, conv: Conversation) -> None:
     st.markdown(f"#### {conv.title}")
     st.caption(
@@ -281,9 +312,12 @@ def render_conversation(matter: Matter, conv: Conversation) -> None:
 
     store = _store()
     messages = store.list_messages(conv.id)
+    entities = store.list_entities(matter.id)
     for m in messages:
         with st.chat_message(m.role.value):
             st.markdown(m.display_text)
+            if m.role == MessageRole.USER:
+                _render_turn_risk_badge(m, entities, matter.mode)
             if m.redacted_text != m.display_text:
                 with st.expander("View what the LLM actually saw"):
                     st.code(m.redacted_text, language=None)

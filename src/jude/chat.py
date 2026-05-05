@@ -19,7 +19,7 @@ from .adapters import DocxAdapter, PdfAdapter, TextAdapter, XlsxAdapter
 from .context import ContextProvider, make_provider
 from .detect import DetectionPipeline
 from .llm.base import LLMClient
-from .redact import redact
+from .redact import redact, redact_two_pass
 from .rehydrate import rehydrate
 from .store import Store
 from .types import Conversation, Message, MessageRole, Mode
@@ -99,13 +99,15 @@ def send_turn(
         matter_id=matter.id,
         use_privacy_filter=use_privacy_filter,
     )
-    detections = pipeline.detect(raw_user_text)
     provider = make_provider(
         use_wikipedia=use_wikipedia or wikipedia_provider is not None,
         wikipedia_provider=wikipedia_provider,
     )
-    redaction = redact(
-        raw_user_text, detections, store, matter.id, mode,
+    # Two-pass: a first detect+redact populates the per-matter dictionary
+    # so a second detection sweep catches title/header occurrences that
+    # spaCy missed in pass 1.
+    redaction = redact_two_pass(
+        raw_user_text, pipeline, store, matter.id, mode,
         context_provider=provider,
     )
 

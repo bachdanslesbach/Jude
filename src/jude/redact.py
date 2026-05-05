@@ -104,6 +104,45 @@ def _format_replacement(
     return entity.pseudonym
 
 
+def redact_two_pass(
+    text: str,
+    pipeline,  # type: ignore[no-untyped-def]
+    store: Store,
+    matter_id: str,
+    mode: Mode = Mode.STRICT,
+    context_provider: ContextProvider | None = None,
+) -> RedactionResult:
+    """Detect → redact → detect again → re-redact if the second pass found
+    spans the first didn't.
+
+    The motivating case: spaCy catches "Acme Corp" in the document body
+    (where context disambiguates it as an ORG) but misses it in a header
+    or title (where the surrounding tokens confuse the parser). The first
+    `redact()` call persists the body match into the per-matter dictionary,
+    which the next call to `pipeline.detect()` then uses to find every
+    other occurrence of the same surface form — including the title.
+
+    The second redaction is run against the ORIGINAL text (not the already-
+    redacted text), with the union of first-pass and newly-discovered
+    spans, so offsets stay coherent.
+    """
+
+    first = pipeline.detect(text)
+    first_result = redact(text, first, store, matter_id, mode, context_provider)
+
+    second = pipeline.detect(text)
+    new_spans = [d for d in second if not _overlaps_any(d, first)]
+    if not new_spans:
+        return first_result
+
+    merged = sorted(first + new_spans, key=lambda d: d.start)
+    return redact(text, merged, store, matter_id, mode, context_provider)
+
+
+def _overlaps_any(d: Detection, others: list[Detection]) -> bool:
+    return any(not (d.end <= o.start or o.end <= d.start) for o in others)
+
+
 def force_redact_span(
     text: str,
     start: int,

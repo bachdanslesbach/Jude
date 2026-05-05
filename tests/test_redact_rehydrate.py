@@ -93,6 +93,87 @@ def test_redact_smart_auto_fills_context_from_bundled_provider(
     assert "(" in result.redacted_text
 
 
+def test_two_pass_redaction_catches_spans_missed_first_time(
+    store: Store, matter_id: str
+):
+    """Reproduces the bug: spaCy catches 'Acme Corp' in the document body
+    but misses it in the title (where the surrounding 'Re:' prefix
+    confuses the parser). Two-pass redaction re-runs detection on the
+    original text with the dictionary populated by the first pass,
+    catching the title.
+    """
+
+    from jude.redact import redact_two_pass
+
+    text = "Re: Acme Corp matter\n\nNotre cliente, Acme Corp, conteste."
+    body_start = text.rindex("Acme Corp")
+    title_start = text.index("Acme Corp")
+    body_det = Detection(
+        text="Acme Corp",
+        start=body_start,
+        end=body_start + len("Acme Corp"),
+        entity_type=EntityType.ORG,
+        source=DetectionSource.SPACY,
+    )
+    title_det = Detection(
+        text="Acme Corp",
+        start=title_start,
+        end=title_start + len("Acme Corp"),
+        entity_type=EntityType.ORG,
+        source=DetectionSource.DICTIONARY,
+    )
+
+    class FakePipeline:
+        def __init__(self):
+            self.calls = 0
+
+        def detect(self, _t: str):
+            self.calls += 1
+            if self.calls == 1:
+                return [body_det]
+            return [title_det, body_det]
+
+    pipeline = FakePipeline()
+    result = redact_two_pass(
+        text, pipeline, store, matter_id, Mode.STRICT
+    )
+    # Pipeline should have been called exactly twice — once before redact,
+    # once after the dictionary was populated.
+    assert pipeline.calls == 2
+    # Both occurrences must be replaced with the same pseudonym.
+    pseudonym = result.entities_used[0].pseudonym
+    assert result.redacted_text.count(pseudonym) == 2
+    assert "Acme Corp" not in result.redacted_text
+
+
+def test_two_pass_redaction_short_circuits_when_no_new_spans(
+    store: Store, matter_id: str
+):
+    """If the second detection pass yields nothing new, the result is the
+    same as a single redact() — no extra work, no redundant rerun."""
+
+    from jude.redact import redact_two_pass
+
+    text = "Acme Corp is a company."
+    only_det = Detection(
+        text="Acme Corp", start=0, end=9,
+        entity_type=EntityType.ORG, source=DetectionSource.USER,
+    )
+
+    class StablePipeline:
+        def __init__(self):
+            self.calls = 0
+
+        def detect(self, _t: str):
+            self.calls += 1
+            return [only_det]
+
+    pipeline = StablePipeline()
+    result = redact_two_pass(text, pipeline, store, matter_id, Mode.STRICT)
+    assert pipeline.calls == 2  # we still detected twice...
+    assert result.redacted_text.count("Org1") == 1  # ...but only one redaction happened
+
+
 def test_redact_consistent_pseudonym_across_runs(store: Store, matter_id: str):
     redact("Amazon.", [_det("Amazon", 0)], store, matter_id, Mode.STRICT)
     second = redact(

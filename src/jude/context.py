@@ -97,28 +97,35 @@ def make_provider(
 ) -> ContextProvider:
     """Compose the ContextProvider chain used by smart-mode redaction.
 
-    The chain is always: bundled-known-entities first, optional Wikipedia
-    fallback second. The bundled dataset is fast, audited, and offline; the
-    Wikipedia fallback handles entities outside the curated set but at the
-    cost of leaking entity names to Wikipedia's server logs (so it must be
-    opt-in per matter).
+    Always-on tier (no network, no opt-in):
+      1. BundledContextProvider — 147 curated known entities.
+      2. EurLexContextProvider — offline ECLI / EU case-number decoder.
 
-    `wikipedia_provider` is injectable for tests. In production it defaults
-    to `WikipediaContextProvider()` which uses urllib.
+    Opt-in tier:
+      3. WikipediaContextProvider — best-effort online fallback for
+         entities outside the curated set. Sends entity names to
+         Wikipedia's REST API, so requires explicit opt-in per matter.
+
+    `wikipedia_provider` is injectable for tests. In production it
+    defaults to `WikipediaContextProvider(cache_path=...)`.
     """
 
-    bundled = BundledContextProvider()
-    if not use_wikipedia:
-        return bundled
+    from .context_eurlex import EurLexContextProvider
 
-    if wikipedia_provider is None:
-        from .context_wikipedia import WikipediaContextProvider
-        from .paths import jude_home
+    chain: list[ContextProvider] = [
+        BundledContextProvider(),
+        EurLexContextProvider(),
+    ]
+    if use_wikipedia:
+        if wikipedia_provider is None:
+            from .context_wikipedia import WikipediaContextProvider
+            from .paths import jude_home
 
-        wikipedia_provider = WikipediaContextProvider(
-            cache_path=jude_home() / "wikipedia_cache.json",
-        )
-    return ContextRouter([bundled, wikipedia_provider])
+            wikipedia_provider = WikipediaContextProvider(
+                cache_path=jude_home() / "wikipedia_cache.json",
+            )
+        chain.append(wikipedia_provider)
+    return ContextRouter(chain)
 
 
 def fill_missing_context(

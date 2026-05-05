@@ -86,14 +86,24 @@ def test_default_provider_with_wikipedia_falls_back_when_bundled_misses():
     assert stub.calls == [("Acme Privately Held SARL", EntityType.ORG)]
 
 
-def test_default_provider_without_wikipedia_does_not_chain():
-    """`make_provider(use_wikipedia=False)` returns the bundled-only provider
-    (the existing default). Backward-compatible with previous callers."""
+def test_default_provider_chains_bundled_and_eurlex():
+    """`make_provider()` always chains the bundled known-entities provider
+    AND the offline EUR-Lex case-ref decoder — both are local, privacy-
+    safe, and require no opt-in. Wikipedia (network) is the only opt-in
+    layer."""
 
-    from jude.context import BundledContextProvider, make_provider
+    from jude.context import make_provider
+    from jude.types import EntityType
 
     p = make_provider(use_wikipedia=False)
-    assert isinstance(p, BundledContextProvider)
+    # Bundled fires for known organisations.
+    assert p.lookup("Amazon", EntityType.ORG) is not None
+    # EUR-Lex fires for EU case references.
+    ctx = p.lookup("Case T-203/24", EntityType.CASE_REF)
+    assert ctx is not None
+    assert "General Court" in ctx
+    # Without Wikipedia, an unknown private ORG yields None.
+    assert p.lookup("Acme Private SARL Unknown", EntityType.ORG) is None
 
 
 def test_fill_missing_context_only_fills_empty(store: Store, matter_id: str):

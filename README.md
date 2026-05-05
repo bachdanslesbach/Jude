@@ -1,10 +1,24 @@
 # Jude
 
-**Local-first anonymization for legal documents before LLM use.**
+**Anonymize legal documents on your machine before sending them to an LLM.**
 
-Jude redacts identifying information from legal documents on your machine before any data is sent to a Large Language Model. It is designed for lawyers bound by professional secrecy obligations (e.g. Belgian Art. 458 *Code pénal*, French RIN *secret professionnel*) who want to use frontier LLMs for legal analysis without breaching client confidentiality.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Tests: 132 passing](https://img.shields.io/badge/tests-132%20passing-green.svg)](tests)
+[![Docs](https://img.shields.io/badge/docs-bachdanslesbach.github.io%2FJude-orange.svg)](https://bachdanslesbach.github.io/Jude/)
 
-> **Status:** alpha (v0.1). Use with care, and verify every redacted output yourself before sending it to an LLM. Jude is a tool — it does not relieve you of your professional obligations.
+Jude redacts identifying information from legal documents on your
+machine before any data is sent to a Large Language Model. It is
+designed for lawyers bound by professional secrecy obligations
+(Belgian Art. 458 *Code pénal*, French RIN *secret professionnel*,
+Swiss Art. 13 LLCA, etc.) who want to use frontier LLMs for legal
+analysis without breaching client confidentiality.
+
+**[→ Read the docs](https://bachdanslesbach.github.io/Jude/)** for
+installation, architecture, threat model, and FAQ.
+
+> **Status:** alpha. Use with care, and verify every redacted output
+> yourself before sending it to an LLM. Jude is a tool — it does not
+> relieve you of your professional obligations.
 
 ---
 

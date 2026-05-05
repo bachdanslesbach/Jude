@@ -1,0 +1,21 @@
+title: Jude
+description: >-
+  Local-first anonymization for legal documents before LLM use.
+baseurl: "/Jude"
+url: "https://bachdanslesbach.github.io"
+
+theme: jekyll-theme-minimal
+
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+plugins:
+  - jekyll-relative-links
+
+# Don't expose this stuff at root.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - node_modules/

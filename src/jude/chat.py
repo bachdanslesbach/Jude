@@ -26,7 +26,7 @@ from .llm.base import LLMClient
 from .redact import redact, redact_two_pass
 from .rehydrate import rehydrate
 from .store import Store
-from .types import Conversation, Entity, Message, MessageRole, Mode
+from .types import Conversation, Detection, Entity, Message, MessageRole, Mode
 
 
 class PreparedTurn(BaseModel):
@@ -38,6 +38,10 @@ class PreparedTurn(BaseModel):
     The UI shows the user this object's `redacted_text` for review;
     on approval we move on to `commit_streaming_turn` which finally
     persists messages and calls the LLM.
+
+    `detections` exposes the (start, end) spans in `raw_text` that
+    will be replaced — used by the UI to highlight them inline so
+    the user sees exactly what's being redacted before they approve.
     """
 
     model_config = ConfigDict(arbitrary_types_allowed=True)
@@ -45,6 +49,7 @@ class PreparedTurn(BaseModel):
     raw_text: str
     redacted_text: str
     entities: list[Entity]
+    detections: list[Detection] = []
     conversation_id: str
 
 
@@ -124,6 +129,7 @@ def prepare_turn(
         raw_text=raw,
         redacted_text=redaction.redacted_text,
         entities=redaction.entities_used,
+        detections=redaction.detections,
         conversation_id=conversation.id,
     )
 

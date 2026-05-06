@@ -11,6 +11,7 @@ reaches the LLM.
 
 from __future__ import annotations
 
+import html as _html
 import os
 
 import streamlit as st
@@ -453,6 +454,42 @@ def _pending_key(conv: Conversation) -> str:
     return f"pending_review_{conv.id}"
 
 
+def _highlight_original(raw_text: str, detections: list) -> str:
+    """Render `raw_text` as HTML with each redacted span wrapped in a
+    yellow highlight, so the review panel shows EXACTLY which characters
+    will be replaced. Escapes input first to prevent HTML injection."""
+
+    spans = []
+    for d in detections:
+        s = d.get("start") if isinstance(d, dict) else d.start
+        e = d.get("end") if isinstance(d, dict) else d.end
+        spans.append((int(s), int(e)))
+    spans.sort(key=lambda t: t[0])
+
+    pieces: list[str] = []
+    cursor = 0
+    for s, e in spans:
+        if s < cursor:
+            continue
+        pieces.append(_html.escape(raw_text[cursor:s]))
+        pieces.append(
+            '<mark style="background-color: rgba(255, 200, 50, 0.55); '
+            'padding: 0 2px; border-radius: 2px;">'
+            + _html.escape(raw_text[s:e])
+            + "</mark>"
+        )
+        cursor = e
+    pieces.append(_html.escape(raw_text[cursor:]))
+    body = "".join(pieces)
+    return (
+        '<pre style="white-space: pre-wrap; '
+        'font-family: -apple-system, BlinkMacSystemFont, sans-serif; '
+        'font-size: 0.92rem; max-height: 320px; overflow-y: auto; '
+        'padding: 10px; border: 1px solid #444; border-radius: 4px; '
+        'margin: 0;">' + body + "</pre>"
+    )
+
+
 def _render_review_panel(
     matter: Matter, conv: Conversation, pending: dict
 ) -> None:
@@ -466,17 +503,28 @@ def _render_review_panel(
         "actually sees. You can cancel and edit."
     )
 
+    detections = pending.get("detections") or []
     cols = st.columns(2)
     with cols[0]:
-        st.markdown("**Original (stays on your machine)**")
-        st.text_area(
-            "Original",
-            value=pending["raw_text"],
-            height=320,
-            label_visibility="collapsed",
-            disabled=True,
-            key=f"orig_review_{conv.id}",
+        st.markdown(
+            "**Original (yellow = will be redacted)**"
+            if detections
+            else "**Original (stays on your machine)**"
         )
+        if detections:
+            st.markdown(
+                _highlight_original(pending["raw_text"], detections),
+                unsafe_allow_html=True,
+            )
+        else:
+            st.text_area(
+                "Original",
+                value=pending["raw_text"],
+                height=320,
+                label_visibility="collapsed",
+                disabled=True,
+                key=f"orig_review_{conv.id}",
+            )
     with cols[1]:
         st.markdown("**Redacted (this is what the LLM will see)**")
         st.text_area(

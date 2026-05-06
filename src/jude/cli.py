@@ -87,10 +87,17 @@ def matter_list() -> None:
 
 @app.command(name="redact")
 def redact_file(
-    path: Path = typer.Argument(..., exists=True, readable=True),
+    paths: list[Path] = typer.Argument(
+        ...,
+        help="One or more .txt / .docx / .pdf / .xlsx files to redact.",
+        exists=True,
+        readable=True,
+    ),
     matter: str = typer.Option(..., help="Matter id."),
     out: Path | None = typer.Option(
-        None, help="Output path. Defaults to <input>.redacted.<ext>"
+        None,
+        help="Output path. Only valid with a single input. "
+        "Defaults to <input>.redacted.<ext>.",
     ),
     ocr: bool = typer.Option(
         False,
@@ -99,7 +106,16 @@ def redact_file(
         "to produce searchable text first. Requires tesseract installed.",
     ),
 ) -> None:
-    """Redact a .txt, .docx or .pdf file."""
+    """Redact one or more .txt / .docx / .pdf / .xlsx files. When multiple
+    files are passed, they share the same per-matter dictionary so an
+    entity detected in file 1 keeps the same pseudonym in file 2."""
+
+    if out is not None and len(paths) > 1:
+        rprint(
+            "[red]--out is only valid with a single input file. "
+            "Drop --out to use the default <input>.redacted.<ext> per file.[/red]"
+        )
+        raise typer.Exit(2)
 
     with Store(default_db_path()) as store:
         m = store.get_matter(matter)
@@ -108,71 +124,87 @@ def redact_file(
             raise typer.Exit(1)
         pipeline = DetectionPipeline(store=store, matter_id=matter)
 
-        suffix = path.suffix.lower()
-        if suffix == ".docx":
-            extraction = DocxAdapter.read(path)
-            for w in extraction.warnings:
-                rprint(f"[yellow]warning:[/yellow] {w}")
-            result = redact(extraction.text, pipeline.detect(extraction.text), store, matter, m.mode)
-            redacted_paragraphs = result.redacted_text.split(PARAGRAPH_SEP)
-            target = out or path.with_suffix(".redacted.docx")
-            DocxAdapter.write_redacted(path, target, redacted_paragraphs)
-        elif suffix == ".xlsx":
-            extraction_xlsx = XlsxAdapter.read(path)
-            for w in extraction_xlsx.warnings:
-                rprint(f"[yellow]warning:[/yellow] {w}")
-            result = redact(
-                extraction_xlsx.text,
-                pipeline.detect(extraction_xlsx.text),
-                store, matter, m.mode,
+        for idx, path in enumerate(paths, 1):
+            if len(paths) > 1:
+                rprint(f"[bold]({idx}/{len(paths)}) {path.name}[/bold]")
+            _redact_one(path, store, m, matter, pipeline, out, ocr)
+
+
+def _redact_one(
+    path: Path,
+    store: Store,
+    m,  # type: ignore[no-untyped-def]
+    matter: str,
+    pipeline: DetectionPipeline,
+    out: Path | None,
+    ocr: bool,
+) -> None:
+    """Redact a single file. Extracted so the multi-file `jude redact`
+    loop can reuse the per-suffix dispatch logic."""
+
+    suffix = path.suffix.lower()
+    if suffix == ".docx":
+        extraction = DocxAdapter.read(path)
+        for w in extraction.warnings:
+            rprint(f"[yellow]warning:[/yellow] {w}")
+        result = redact(extraction.text, pipeline.detect(extraction.text), store, matter, m.mode)
+        redacted_paragraphs = result.redacted_text.split(PARAGRAPH_SEP)
+        target = out or path.with_suffix(".redacted.docx")
+        DocxAdapter.write_redacted(path, target, redacted_paragraphs)
+    elif suffix == ".xlsx":
+        extraction_xlsx = XlsxAdapter.read(path)
+        for w in extraction_xlsx.warnings:
+            rprint(f"[yellow]warning:[/yellow] {w}")
+        result = redact(
+            extraction_xlsx.text,
+            pipeline.detect(extraction_xlsx.text),
+            store, matter, m.mode,
+        )
+        replacements = {
+            ent.canonical: ent.pseudonym for ent in result.entities_used
+        }
+        for surface in {d.text for d in result.detections}:
+            ent = store.find_entity_by_surface(matter, surface)
+            if ent:
+                replacements[surface] = ent.pseudonym
+        target = out or path.with_suffix(".redacted.xlsx")
+        XlsxAdapter.write_redacted(path, target, replacements)
+    elif suffix == ".pdf":
+        try:
+            extraction = PdfAdapter.read(path, enable_ocr=ocr)
+        except Exception as e:
+            rprint(f"[red]PDF read failed:[/red] {e}")
+            raise typer.Exit(1) from e
+        for w in extraction.warnings:
+            rprint(f"[yellow]warning:[/yellow] {w}")
+        if not extraction.text.strip():
+            rprint(
+                "[red]No extractable text.[/red] "
+                "If this is a scanned PDF, re-run with --ocr."
             )
+            raise typer.Exit(1)
+        result = redact(extraction.text, pipeline.detect(extraction.text), store, matter, m.mode)
+        target = out or path.with_suffix(".redacted.pdf")
+        if target.suffix.lower() == ".pdf" and extraction.is_text_pdf:
             replacements = {
-                ent.canonical: ent.pseudonym for ent in result.entities_used
+                form: ent.pseudonym
+                for ent in result.entities_used
+                for form in ent.surface_forms
             }
-            for surface in {d.text for d in result.detections}:
-                ent = store.find_entity_by_surface(matter, surface)
-                if ent:
-                    replacements[surface] = ent.pseudonym
-            target = out or path.with_suffix(".redacted.xlsx")
-            XlsxAdapter.write_redacted(path, target, replacements)
-        elif suffix == ".pdf":
-            try:
-                extraction = PdfAdapter.read(path, enable_ocr=ocr)
-            except Exception as e:
-                rprint(f"[red]PDF read failed:[/red] {e}")
-                raise typer.Exit(1) from e
-            for w in extraction.warnings:
-                rprint(f"[yellow]warning:[/yellow] {w}")
-            if not extraction.text.strip():
-                rprint(
-                    "[red]No extractable text.[/red] "
-                    "If this is a scanned PDF, re-run with --ocr."
-                )
-                raise typer.Exit(1)
-            result = redact(extraction.text, pipeline.detect(extraction.text), store, matter, m.mode)
-            target = out or path.with_suffix(".redacted.pdf")
-            if target.suffix.lower() == ".pdf" and extraction.is_text_pdf:
-                replacements = {
-                    form: ent.pseudonym
-                    for ent in result.entities_used
-                    for form in ent.surface_forms
-                }
-                # Also include the canonical itself in case it isn't already
-                # a surface form (defensive — the store should have it).
-                for ent in result.entities_used:
-                    replacements.setdefault(ent.canonical, ent.pseudonym)
-                PdfAdapter.write_redacted(path, target, replacements)
-            else:
-                TextAdapter.write(target, result.redacted_text)
-                rprint(
-                    "[yellow]note:[/yellow] redacted output written as plain text "
-                    "(use --out file.pdf for native PDF write-back on text PDFs)."
-                )
+            for ent in result.entities_used:
+                replacements.setdefault(ent.canonical, ent.pseudonym)
+            PdfAdapter.write_redacted(path, target, replacements)
         else:
-            text = TextAdapter.read(path)
-            result = redact(text, pipeline.detect(text), store, matter, m.mode)
-            target = out or path.with_suffix(".redacted" + path.suffix)
             TextAdapter.write(target, result.redacted_text)
+            rprint(
+                "[yellow]note:[/yellow] redacted output written as plain text "
+                "(use --out file.pdf for native PDF write-back on text PDFs)."
+            )
+    else:
+        text = TextAdapter.read(path)
+        result = redact(text, pipeline.detect(text), store, matter, m.mode)
+        target = out or path.with_suffix(".redacted" + path.suffix)
+        TextAdapter.write(target, result.redacted_text)
 
     rprint(f"[green]Redacted {len(result.entities_used)} entities[/green] → {target}")
 

@@ -552,6 +552,72 @@ class Store:
             created_at=datetime.fromisoformat(now),
         )
 
+    def export_matter_json(self, matter_id: str) -> dict:
+        """Serialise the entire matter — its row, entities (with surface
+        forms), conversations and messages — to a plain dict suitable for
+        JSON encoding. Used for backup, archival, and (eventually)
+        cross-machine portability via a future import path."""
+
+        matter = self.get_matter(matter_id)
+        if matter is None:
+            raise ValueError(f"Unknown matter: {matter_id}")
+
+        entities = self.list_entities(matter_id)
+        conversations = self.list_conversations(matter_id)
+
+        return {
+            "version": 1,
+            "matter": {
+                "id": matter.id,
+                "name": matter.name,
+                "mode": matter.mode.value,
+                "llm_endpoint": matter.llm_endpoint,
+                "llm_model": matter.llm_model,
+                "zero_retention_attested": matter.zero_retention_attested,
+                "notes": matter.notes,
+                "created_at": (
+                    matter.created_at.isoformat() if matter.created_at else None
+                ),
+            },
+            "entities": [
+                {
+                    "id": e.id,
+                    "canonical": e.canonical,
+                    "entity_type": e.entity_type.value,
+                    "pseudonym": e.pseudonym,
+                    "public_context": e.public_context,
+                    "user_marked": e.user_marked,
+                    "surface_forms": sorted(e.surface_forms),
+                    "created_at": (
+                        e.created_at.isoformat() if e.created_at else None
+                    ),
+                }
+                for e in entities
+            ],
+            "conversations": [
+                {
+                    "id": c.id,
+                    "title": c.title,
+                    "created_at": (
+                        c.created_at.isoformat() if c.created_at else None
+                    ),
+                    "messages": [
+                        {
+                            "id": m.id,
+                            "role": m.role.value,
+                            "redacted_text": m.redacted_text,
+                            "display_text": m.display_text,
+                            "created_at": (
+                                m.created_at.isoformat() if m.created_at else None
+                            ),
+                        }
+                        for m in self.list_messages(c.id)
+                    ],
+                }
+                for c in conversations
+            ],
+        }
+
     def export_conversation_markdown(self, conversation_id: str) -> str:
         """Render a conversation as a markdown transcript using the rehydrated
         display text — what the lawyer reads, not what the LLM saw."""

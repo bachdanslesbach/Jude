@@ -254,6 +254,28 @@ def enrich(matter: str = typer.Option(..., help="Matter id.")) -> None:
     rprint(f"[green]Filled public context for {n} entities.[/green]")
 
 
+@app.command(name="export")
+def export_matter(
+    matter: str = typer.Argument(..., help="Matter id."),
+    out: Path | None = typer.Option(
+        None, help="Output path. Defaults to ./jude-matter-<id>.json"
+    ),
+) -> None:
+    """Dump a matter's entities, conversations, and messages as JSON."""
+
+    import json as _json
+
+    with Store(default_db_path()) as store:
+        try:
+            data = store.export_matter_json(matter)
+        except ValueError as e:
+            rprint(f"[red]{e}[/red]")
+            raise typer.Exit(1) from e
+    target = out or Path(f"./jude-matter-{matter}.json")
+    target.write_text(_json.dumps(data, ensure_ascii=False, indent=2))
+    rprint(f"[green]Exported matter[/green] → {target}")
+
+
 @app.command()
 def ui() -> None:
     """Launch the Streamlit UI.

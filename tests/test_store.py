@@ -1,7 +1,7 @@
 import pytest
 
 from jude.store import Store
-from jude.types import EntityType, Mode
+from jude.types import EntityType, MessageRole, Mode
 
 
 def test_create_matter_persists(store: Store):
@@ -42,6 +42,51 @@ def test_find_by_surface_uses_normalized_match(store: Store, matter_id: str):
     assert by_full is not None
     assert by_short is not None and by_short.id == by_full.id
     assert by_with_corp is not None and by_with_corp.id == by_full.id
+
+
+def test_export_matter_round_trips_via_json(store: Store):
+    """A matter export captures everything needed to back the matter up
+    and (eventually) re-import on another machine: matter row, entities
+    + their surface forms, conversations + messages."""
+
+    import json as _json
+
+    m = store.create_matter("export-test", mode=Mode.STRICT)
+    store.create_entity(
+        m.id, "Acme Solutions SA", EntityType.ORG,
+        surface_forms={"Acme Solutions SA", "Acme"},
+        public_context="Belgian SA, fictional",
+    )
+    conv = store.create_conversation(m.id, title="export-conv")
+    store.add_message(
+        conv.id, MessageRole.USER,
+        redacted_text="Org1 is the client.",
+        display_text="Acme Solutions SA is the client.",
+    )
+
+    data = store.export_matter_json(m.id)
+    # Round-trips through json without loss
+    parsed = _json.loads(_json.dumps(data))
+
+    assert parsed["matter"]["id"] == m.id
+    assert parsed["matter"]["name"] == "export-test"
+    assert any(
+        ent["canonical"] == "Acme Solutions SA" for ent in parsed["entities"]
+    )
+    assert any("Acme" in ent["surface_forms"] for ent in parsed["entities"])
+    assert len(parsed["conversations"]) == 1
+    assert len(parsed["conversations"][0]["messages"]) == 1
+    assert (
+        parsed["conversations"][0]["messages"][0]["display_text"]
+        == "Acme Solutions SA is the client."
+    )
+
+
+def test_export_matter_unknown_id_raises(store: Store):
+    import pytest
+
+    with pytest.raises(ValueError):
+        store.export_matter_json("does-not-exist")
 
 
 def test_matter_notes_persist_across_lookups(store: Store):

@@ -81,6 +81,7 @@ def sidebar() -> tuple[Matter | None, Conversation | None]:
     _redaction_preview(matter)
     conv = _conversation_picker(store, matter)
     _conversation_export(matter, conv)
+    _matter_export(matter)
     _entities_link()
     return matter, conv
 
@@ -275,6 +276,28 @@ def _conversation_picker(store: Store, matter: Matter) -> Conversation | None:
 
     _conversation_management(store, matter, conversations)
     return store.get_conversation(st.session_state[active_key])
+
+
+def _matter_export(matter: Matter) -> None:
+    """Sidebar download button for a JSON dump of the entire matter
+    (entities + conversations + messages). Useful for backup."""
+
+    import json as _json
+
+    data = _store().export_matter_json(matter.id)
+    payload = _json.dumps(data, ensure_ascii=False, indent=2)
+    safe_name = "".join(
+        ch if ch.isalnum() or ch in "-_." else "-" for ch in matter.name
+    ) or matter.id
+    st.sidebar.download_button(
+        "↓ Export matter (.json)",
+        data=payload,
+        file_name=f"jude-matter-{safe_name}.json",
+        mime="application/json",
+        use_container_width=True,
+        help="Full JSON dump of this matter (entities, conversations, "
+             "messages). Plaintext — handle as confidential.",
+    )
 
 
 def _conversation_export(matter: Matter, conv: Conversation | None) -> None:

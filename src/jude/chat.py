@@ -15,6 +15,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from typing import Iterator
+
 from .adapters import DocxAdapter, PdfAdapter, TextAdapter, XlsxAdapter
 from .context import ContextProvider, make_provider
 from .detect import DetectionPipeline
@@ -137,3 +139,75 @@ def send_turn(
         display_text=rehydrated,
     )
     return user_msg, assistant_msg
+
+
+def send_turn_streaming(
+    conversation: Conversation,
+    user_text: str,
+    attachments: list[FileAttachment],
+    store: Store,
+    mode: Mode,
+    llm: LLMClient,
+    use_privacy_filter: bool = False,
+    use_wikipedia: bool = False,
+    wikipedia_provider: ContextProvider | None = None,
+) -> Iterator[str]:
+    """Generator-flavoured `send_turn`. Yields the rehydrated cumulative
+    response text as the LLM streams.
+
+    The user message is detected, redacted and persisted up-front (same
+    as the synchronous path). The assistant message is persisted at the
+    end, after the stream finishes — its `redacted_text` is the joined
+    chunks and its `display_text` is the rehydrated form.
+
+    Designed to be passed straight to Streamlit's `st.write_stream(...)`.
+    """
+
+    matter = store.get_matter(conversation.matter_id)
+    if matter is None:
+        raise ValueError(f"Unknown matter for conversation {conversation.id}")
+
+    raw_user_text = compose_user_message(user_text, attachments)
+    pipeline = DetectionPipeline(
+        store=store,
+        matter_id=matter.id,
+        use_privacy_filter=use_privacy_filter,
+    )
+    provider = make_provider(
+        use_wikipedia=use_wikipedia or wikipedia_provider is not None,
+        wikipedia_provider=wikipedia_provider,
+    )
+    redaction = redact_two_pass(
+        raw_user_text, pipeline, store, matter.id, mode,
+        context_provider=provider,
+    )
+    store.add_message(
+        conversation_id=conversation.id,
+        role=MessageRole.USER,
+        redacted_text=redaction.redacted_text,
+        display_text=raw_user_text,
+    )
+
+    history = store.list_messages(conversation.id)
+    llm_messages = [
+        {"role": m.role.value, "content": m.redacted_text} for m in history
+    ]
+
+    cumulative_redacted = ""
+    cumulative_rehydrated = ""
+    for chunk in llm.stream_chat(
+        system="",
+        messages=llm_messages,
+        mode=mode,
+        zero_retention_attested=matter.zero_retention_attested,
+    ):
+        cumulative_redacted += chunk
+        cumulative_rehydrated = rehydrate(cumulative_redacted, store, matter.id)
+        yield cumulative_rehydrated
+
+    store.add_message(
+        conversation_id=conversation.id,
+        role=MessageRole.ASSISTANT,
+        redacted_text=cumulative_redacted,
+        display_text=cumulative_rehydrated,
+    )

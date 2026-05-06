@@ -53,6 +53,27 @@ class AnthropicClient(LLMClient):
             output_tokens=getattr(msg.usage, "output_tokens", None),
         )
 
+    def stream_chat(
+        self,
+        system: str,
+        messages: list[dict[str, str]],
+        mode: Mode,
+        zero_retention_attested: bool,
+    ):
+        """Stream text deltas from the Anthropic API as they arrive."""
+
+        self._enforce_mode(mode, zero_retention_attested)
+        full_system = JUDE_SYSTEM_PROMPT + "\n\n" + system if system else JUDE_SYSTEM_PROMPT
+        with self._client.messages.stream(
+            model=self.model,
+            max_tokens=self.max_tokens,
+            system=full_system,
+            messages=messages,
+        ) as stream:
+            for text in stream.text_stream:
+                if text:
+                    yield text
+
 
 def _resolve_api_key() -> str | None:
     """Read ANTHROPIC_API_KEY from env, falling back to macOS launchctl.

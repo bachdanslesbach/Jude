@@ -126,6 +126,61 @@ class OllamaClient(LLMClient):
         )
 
 
+    def stream_chat(
+        self,
+        system: str,
+        messages: list[dict[str, str]],
+        mode: Mode,
+        zero_retention_attested: bool,
+    ):
+        """Stream chunks from Ollama's NDJSON /api/chat endpoint."""
+
+        self._enforce_mode(mode, zero_retention_attested)
+        full_system = (
+            JUDE_SYSTEM_PROMPT + "\n\n" + system if system else JUDE_SYSTEM_PROMPT
+        )
+        payload = {
+            "model": self.model,
+            "stream": True,
+            "messages": [{"role": "system", "content": full_system}, *messages],
+        }
+        url = f"{self.base_url}/api/chat"
+
+        body = json.dumps(payload).encode("utf-8")
+        req = urllib.request.Request(
+            url,
+            data=body,
+            method="POST",
+            headers={"Content-Type": "application/json"},
+        )
+        try:
+            resp = urllib.request.urlopen(req, timeout=300)
+        except urllib.error.URLError as e:
+            reason = getattr(e, "reason", e)
+            if isinstance(reason, ConnectionRefusedError):
+                raise RuntimeError(
+                    f"Could not reach Ollama at {self.base_url}. Make sure "
+                    f"the Ollama daemon is running (`ollama serve`)."
+                ) from e
+            raise RuntimeError(f"Ollama stream failed: {reason}") from e
+        try:
+            for raw_line in resp:
+                line = raw_line.strip()
+                if not line:
+                    continue
+                try:
+                    obj = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                content = (obj.get("message") or {}).get("content") or ""
+                if content:
+                    yield content
+                if obj.get("done"):
+                    break
+        finally:
+            resp.close()
+
+
 def _optional_int(d: dict | None, key: str) -> int | None:
     if not d or key not in d:
         return None

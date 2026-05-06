@@ -11,7 +11,7 @@ from __future__ import annotations
 
 import streamlit as st
 
-from jude.chat import FileAttachment, send_turn
+from jude.chat import FileAttachment, send_turn, send_turn_streaming
 from jude.llm import AnthropicClient, LLMClient, OllamaClient
 from jude.paths import default_db_path
 from jude.risk import RiskAssessment, RiskLevel, assess_risks
@@ -357,14 +357,15 @@ def render_conversation(matter: Matter, conv: Conversation) -> None:
 
     use_pf = bool(st.session_state.get(f"use_pf_{matter.id}", False))
     use_wiki = bool(st.session_state.get(f"use_wiki_{matter.id}", False))
-    spinner_label = (
-        "Redacting → sending to local Ollama → rehydrating…"
-        if matter.llm_endpoint == "ollama"
-        else "Redacting → sending to Claude → rehydrating…"
-    )
-    with st.spinner(spinner_label):
+
+    # Optimistic echo of the user's input so they see their bubble
+    # immediately, before the assistant streams.
+    with st.chat_message("user"):
+        st.markdown(user_text or "_(file attached)_")
+
+    with st.chat_message("assistant"):
         try:
-            send_turn(
+            stream = send_turn_streaming(
                 conversation=conv,
                 user_text=user_text,
                 attachments=attachments,
@@ -374,6 +375,7 @@ def render_conversation(matter: Matter, conv: Conversation) -> None:
                 use_privacy_filter=use_pf,
                 use_wikipedia=use_wiki,
             )
+            st.write_stream(stream)
         except PermissionError as e:
             st.error(str(e))
             return

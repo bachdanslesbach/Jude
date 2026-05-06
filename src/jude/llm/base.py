@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
+from typing import Iterator
 
 from pydantic import BaseModel
 
@@ -55,6 +56,30 @@ class LLMClient(ABC):
             mode=mode,
             zero_retention_attested=zero_retention_attested,
         )
+
+    def stream_chat(
+        self,
+        system: str,
+        messages: list[dict[str, str]],
+        mode: Mode,
+        zero_retention_attested: bool,
+    ) -> Iterator[str]:
+        """Yield text chunks of the assistant's response as they arrive.
+
+        Default implementation falls back to `complete_chat` and yields
+        the whole response in a single chunk — keeps the contract
+        satisfied for backends that don't natively support streaming
+        or where streaming is undesirable. Concrete clients override
+        this with a real streaming implementation.
+        """
+
+        result = self.complete_chat(
+            system=system,
+            messages=messages,
+            mode=mode,
+            zero_retention_attested=zero_retention_attested,
+        )
+        yield result.text
 
     def _enforce_mode(self, mode: Mode, zero_retention_attested: bool) -> None:
         if mode != Mode.SMART:

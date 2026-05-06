@@ -20,8 +20,16 @@ _RULES: tuple[_Rule, ...] = (
         EntityType.EMAIL,
     ),
     _Rule(
+        # IBAN: 2-letter country + 2 check digits + BBAN of 11–30
+        # alphanumerics, optionally space-grouped. The previous regex
+        # required 4-char groups, which clipped French IBANs (27 chars,
+        # trailing 3-char group). The new pattern matches the spec
+        # directly: the BBAN portion is "any number of optional
+        # spaces interleaved with [A-Z0-9]" up to the per-country max.
         "iban",
-        re.compile(r"\b[A-Z]{2}\d{2}(?:[ ]?[A-Z0-9]{4}){2,7}\b"),
+        re.compile(
+            r"\b[A-Z]{2}\d{2}(?:\s?[A-Z0-9]){11,30}\b"
+        ),
         EntityType.IBAN,
     ),
     _Rule(

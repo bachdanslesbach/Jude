@@ -68,6 +68,33 @@ def compose_user_message(text: str, attachments: list[FileAttachment]) -> str:
     return "\n\n---\n\n".join(parts)
 
 
+def preview_detection(
+    text: str,
+    store: Store,
+    matter_id: str,
+    use_privacy_filter: bool = False,
+) -> dict[str, int]:
+    """Run detection only (no redaction, no persistence) and return a
+    {EntityType.value: count} summary.
+
+    Used by the UI's "preview redaction" panel. Critically, this does
+    not write to the per-matter store — pasting text into the preview
+    must not silently populate the dictionary.
+    """
+
+    if not text.strip():
+        return {}
+    pipeline = DetectionPipeline(
+        store=store,
+        matter_id=matter_id,
+        use_privacy_filter=use_privacy_filter,
+    )
+    counts: dict[str, int] = {}
+    for d in pipeline.detect(text):
+        counts[d.entity_type.value] = counts.get(d.entity_type.value, 0) + 1
+    return counts
+
+
 def send_turn(
     conversation: Conversation,
     user_text: str,

@@ -11,7 +11,12 @@ from __future__ import annotations
 
 import streamlit as st
 
-from jude.chat import FileAttachment, send_turn, send_turn_streaming
+from jude.chat import (
+    FileAttachment,
+    preview_detection,
+    send_turn,
+    send_turn_streaming,
+)
 from jude.llm import AnthropicClient, LLMClient, OllamaClient
 from jude.paths import default_db_path
 from jude.risk import RiskAssessment, RiskLevel, assess_risks
@@ -66,6 +71,7 @@ def sidebar() -> tuple[Matter | None, Conversation | None]:
     _backend_controls(store, matter)
     _mode_controls(store, matter)
     _detector_controls(matter)
+    _redaction_preview(matter)
     conv = _conversation_picker(store, matter)
     _entities_link()
     return matter, conv
@@ -259,6 +265,32 @@ def _conversation_picker(store: Store, matter: Matter) -> Conversation | None:
             st.session_state[active_key] = conv.id
             st.rerun()
     return store.get_conversation(st.session_state[active_key])
+
+
+def _redaction_preview(matter: Matter) -> None:
+    with st.sidebar.expander("Preview detection (scratch)"):
+        st.caption(
+            "Paste text to see what Jude would detect — no chat turn is "
+            "sent and nothing is added to the per-matter dictionary."
+        )
+        sample = st.text_area(
+            "Scratch text",
+            key=f"preview_input_{matter.id}",
+            label_visibility="collapsed",
+            height=110,
+            placeholder="Paste a draft sentence or paragraph…",
+        )
+        if sample.strip():
+            counts = preview_detection(sample, _store(), matter.id)
+            if counts:
+                total = sum(counts.values())
+                st.markdown(f"**{total} entities** detected:")
+                for type_name, n in sorted(
+                    counts.items(), key=lambda kv: -kv[1]
+                ):
+                    st.markdown(f"- {n} × `{type_name}`")
+            else:
+                st.markdown("_no entities detected._")
 
 
 def _entities_link() -> None:

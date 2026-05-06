@@ -156,6 +156,56 @@ def test_send_turn_wikipedia_fallback_fills_context_for_unknown_entity(
     )
 
 
+def test_preview_detection_returns_counts_by_type(
+    store: Store, matter_id: str
+):
+    """Counts detections-by-type without persisting anything to the store
+    or producing redacted text. Used by the UI live-preview panel so the
+    user can sanity-check what Jude sees before they actually send a
+    chat turn."""
+
+    from jude.chat import preview_detection
+    from jude.types import EntityType
+
+    # Pre-populate one entity so the dictionary detector also fires.
+    store.create_entity(matter_id, "Acme Corp", EntityType.ORG)
+
+    text = (
+        "Acme Corp paid €100,000 to alice@example.com. "
+        "See Case T-1/24 and ECLI:EU:C:2024:512."
+    )
+    counts = preview_detection(text, store, matter_id)
+    assert counts.get("ORG", 0) >= 1  # Acme Corp
+    assert counts.get("EMAIL", 0) >= 1  # alice@example.com
+    assert counts.get("CASE_REF", 0) >= 2  # T-1/24 + ECLI
+
+
+def test_preview_detection_empty_text_returns_empty_dict(
+    store: Store, matter_id: str
+):
+    from jude.chat import preview_detection
+
+    assert preview_detection("", store, matter_id) == {}
+    assert preview_detection("   \n  ", store, matter_id) == {}
+
+
+def test_preview_detection_does_not_persist_anything(
+    store: Store, matter_id: str
+):
+    """Critical: previewing must NOT create entities. Otherwise typing in
+    the preview pane would silently populate the dictionary and surprise
+    the user later."""
+
+    from jude.chat import preview_detection
+
+    before = len(store.list_entities(matter_id))
+    preview_detection(
+        "Acme Corp acquired Beta SARL in 2024.", store, matter_id
+    )
+    after = len(store.list_entities(matter_id))
+    assert before == after
+
+
 def test_pseudonyms_are_stable_across_turns(
     store: Store, smart_matter_id: str
 ):

@@ -534,6 +534,29 @@ class Store:
             created_at=datetime.fromisoformat(now),
         )
 
+    def export_conversation_markdown(self, conversation_id: str) -> str:
+        """Render a conversation as a markdown transcript using the rehydrated
+        display text — what the lawyer reads, not what the LLM saw."""
+
+        conv = self.get_conversation(conversation_id)
+        if conv is None:
+            raise ValueError(f"Unknown conversation: {conversation_id}")
+        lines = [
+            f"# {conv.title}",
+            "",
+            f"_Conversation `{conv.id}`, started "
+            f"{conv.created_at.isoformat() if conv.created_at else 'unknown'}._",
+            "",
+        ]
+        for m in self.list_messages(conversation_id):
+            speaker = "You" if m.role == MessageRole.USER else "Assistant"
+            stamp = m.created_at.isoformat() if m.created_at else ""
+            lines.append(f"## {speaker} · {stamp}")
+            lines.append("")
+            lines.append(m.display_text)
+            lines.append("")
+        return "\n".join(lines)
+
     def list_messages(self, conversation_id: str) -> list[Message]:
         rows = self._conn.execute(
             "SELECT * FROM messages WHERE conversation_id = ? ORDER BY id ASC",

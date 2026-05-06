@@ -79,6 +79,7 @@ def sidebar() -> tuple[Matter | None, Conversation | None]:
     _detector_controls(matter)
     _redaction_preview(matter)
     conv = _conversation_picker(store, matter)
+    _conversation_export(matter, conv)
     _entities_link()
     return matter, conv
 
@@ -273,6 +274,27 @@ def _conversation_picker(store: Store, matter: Matter) -> Conversation | None:
 
     _conversation_management(store, matter, conversations)
     return store.get_conversation(st.session_state[active_key])
+
+
+def _conversation_export(matter: Matter, conv: Conversation | None) -> None:
+    """Render a download button to export the active conversation as
+    markdown. Useful for record-keeping; the export uses display_text
+    (real names), not the pseudonymized form."""
+
+    if conv is None:
+        return
+    md = _store().export_conversation_markdown(conv.id)
+    safe_title = "".join(
+        ch if ch.isalnum() or ch in "-_." else "-"
+        for ch in conv.title.strip()
+    ) or conv.id
+    st.sidebar.download_button(
+        "↓ Export this conversation (.md)",
+        data=md,
+        file_name=f"{safe_title}.md",
+        mime="text/markdown",
+        use_container_width=True,
+    )
 
 
 def _conversation_management(

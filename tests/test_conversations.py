@@ -41,6 +41,44 @@ def test_messages_persist_in_order(store: Store, matter_id: str):
     assert msgs[1].display_text == "Acme here"
 
 
+def test_export_conversation_as_markdown(store: Store, matter_id: str):
+    """A conversation can be exported as markdown for record-keeping.
+    The export uses the rehydrated/display text — lawyers want a normal
+    transcript, not pseudonyms."""
+
+    c = store.create_conversation(matter_id, title="Strategic analysis")
+    store.add_message(
+        c.id, MessageRole.USER,
+        redacted_text="What about Org1?",
+        display_text="What about Acme Solutions SA?",
+    )
+    store.add_message(
+        c.id, MessageRole.ASSISTANT,
+        redacted_text="Org1 has three issues.",
+        display_text="Acme Solutions SA has three issues.",
+    )
+
+    md = store.export_conversation_markdown(c.id)
+    assert "Strategic analysis" in md  # title is in the header
+    assert "Acme Solutions SA" in md  # uses display_text, not pseudonyms
+    assert "Org1" not in md  # no pseudonyms leak
+    assert "## You" in md  # friendly speaker label, not "User"
+    assert "## Assistant" in md
+
+
+def test_export_returns_empty_for_empty_conversation(store: Store, matter_id: str):
+    c = store.create_conversation(matter_id, title="Empty")
+    md = store.export_conversation_markdown(c.id)
+    assert "Empty" in md  # title still appears
+
+
+def test_export_conversation_unknown_id_raises(store: Store, matter_id: str):
+    import pytest
+
+    with pytest.raises(ValueError):
+        store.export_conversation_markdown("does-not-exist")
+
+
 def test_deleting_conversation_cascades_to_messages(store: Store, matter_id: str):
     c = store.create_conversation(matter_id, title="t")
     store.add_message(c.id, MessageRole.USER, "hi", "hi")

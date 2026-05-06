@@ -98,6 +98,7 @@ python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
 python -m spacy download en_core_web_lg     # English (preferred)
 python -m spacy download fr_core_news_md    # French
+python -m spacy download nl_core_news_md    # Dutch (Brussels bar)
 jude ui                    # launches the Streamlit UI
 ```
 

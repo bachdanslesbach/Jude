@@ -33,6 +33,7 @@ source .venv/bin/activate
 pip install -e ".[dev]"
 python -m spacy download en_core_web_lg
 python -m spacy download fr_core_news_md
+python -m spacy download nl_core_news_md   # optional; recommended for Brussels-bar work
 ```
 
 ## Optional extras

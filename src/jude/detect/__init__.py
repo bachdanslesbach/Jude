@@ -40,7 +40,7 @@ class DetectionPipeline:
         self,
         store: Store,
         matter_id: str,
-        languages: tuple[str, ...] = ("en", "fr"),
+        languages: tuple[str, ...] = ("en", "fr", "nl"),
         use_gliner: bool = False,
         use_privacy_filter: bool = False,
     ):

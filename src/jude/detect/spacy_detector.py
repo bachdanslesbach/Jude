@@ -14,6 +14,7 @@ if TYPE_CHECKING:
 _MODEL_FALLBACKS: dict[str, list[str]] = {
     "en": ["en_core_web_lg", "en_core_web_md"],
     "fr": ["fr_core_news_md"],
+    "nl": ["nl_core_news_md"],
 }
 
 
@@ -29,12 +30,17 @@ _LABEL_MAP: dict[str, EntityType] = {
 
 _MONTHS = frozenset(
     {
+        # English
         "january", "february", "march", "april", "may", "june",
         "july", "august", "september", "october", "november", "december",
         "jan", "feb", "mar", "apr", "jun", "jul", "aug", "sep", "sept",
         "oct", "nov", "dec",
+        # French
         "janvier", "février", "fevrier", "mars", "avril", "mai", "juin",
         "juillet", "août", "aout", "septembre", "octobre", "novembre", "décembre", "decembre",
+        # Dutch
+        "januari", "februari", "maart", "april", "mei", "juni",
+        "juli", "augustus", "september", "oktober", "november", "december",
     }
 )
 
@@ -67,12 +73,14 @@ def _resolve_model_for_language(lang: str, overrides: dict[str, str]) -> str | N
     return None
 
 
-@lru_cache(maxsize=2)
+@lru_cache(maxsize=4)
 def _stopwords_for(lang: str) -> frozenset[str]:
     if lang == "en":
         from spacy.lang.en.stop_words import STOP_WORDS
     elif lang == "fr":
         from spacy.lang.fr.stop_words import STOP_WORDS
+    elif lang == "nl":
+        from spacy.lang.nl.stop_words import STOP_WORDS
     else:
         return frozenset()
     return frozenset(STOP_WORDS)
@@ -152,7 +160,7 @@ class SpacyDetector:
 
     def __init__(
         self,
-        languages: tuple[str, ...] = ("en", "fr"),
+        languages: tuple[str, ...] = ("en", "fr", "nl"),
         models: dict[str, str] | None = None,
     ):
         self.languages = languages
@@ -166,6 +174,20 @@ class SpacyDetector:
             if lang is None:
                 lang = self.languages[0]
             model_name = _resolve_model_for_language(lang, self.model_overrides)
+            if model_name is None:
+                # Detected language has no installed model — fall back to
+                # the first supported language whose model IS installed,
+                # rather than silently skipping the paragraph.
+                for fallback in self.languages:
+                    if fallback == lang:
+                        continue
+                    fb_model = _resolve_model_for_language(
+                        fallback, self.model_overrides
+                    )
+                    if fb_model:
+                        model_name = fb_model
+                        lang = fallback
+                        break
             if model_name is None:
                 continue
             nlp = _load_model(model_name)

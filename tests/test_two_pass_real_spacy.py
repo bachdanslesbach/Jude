@@ -82,6 +82,44 @@ def test_two_pass_real_spacy_catches_all_caps_title(
     assert result.redacted_text.count(pseudonym) == 2
 
 
+def _detection_supports_dutch() -> bool:
+    try:
+        import spacy.util  # type: ignore[import-not-found]
+
+        return spacy.util.is_package("nl_core_news_md") or spacy.util.is_package(
+            "nl_core_news_lg"
+        )
+    except ImportError:
+        return False
+
+
+@pytest.mark.skipif(
+    not _detection_supports_dutch(),
+    reason="needs nl_core_news_md installed for the Dutch routing test",
+)
+def test_dutch_paragraph_routes_to_dutch_model(
+    store: Store, matter_id: str, real_pipeline: DetectionPipeline
+):
+    """A Dutch-language paragraph in a mixed-language document should be
+    handled by the Dutch spaCy model, not by the French/English one
+    (which would either miss entities or produce bad labels for Dutch
+    tokens). Brussels-bar relevance: many filings mix the three
+    languages."""
+
+    text = (
+        "MEMO INTERNE\n\n"
+        "De Belgische Mededingingsautoriteit heeft een onderzoek geopend "
+        "naar de praktijken van Amazon op de Belgische markt.\n\n"
+        "Le client demande conseil sur cette procédure."
+    )
+    detections = real_pipeline.detect(text)
+    surface_forms = {d.text for d in detections}
+    # Dutch paragraph should yield Amazon at minimum (it's an ORG name).
+    assert any("Amazon" in s for s in surface_forms), (
+        f"Dutch routing failed: detected {surface_forms}"
+    )
+
+
 @pytest.mark.skipif(
     not _detection_supports_lg(),
     reason="needs en_core_web_lg or en_core_web_md installed",

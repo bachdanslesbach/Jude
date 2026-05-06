@@ -35,6 +35,26 @@ def test_split_paragraphs_skips_blank_only():
     assert "Real content" in parts[0][1]
 
 
+def test_detects_dutch():
+    """Brussels-bar relevance: Dutch routes to nl when the supported set
+    includes it."""
+
+    text = (
+        "De Europese Commissie heeft een besluit genomen over de "
+        "praktijken van Amazon op de markt. De Belgische "
+        "Mededingingsautoriteit zal de zaak onderzoeken."
+    )
+    assert detect_language(text, supported=("en", "fr", "nl")) == "nl"
+
+
+def test_dutch_falls_back_to_default_when_not_supported():
+    """If 'nl' isn't in the supported set, the detector returns None
+    rather than mis-routing to French or English."""
+
+    text = "De Europese Commissie heeft een besluit genomen over de praktijken."
+    assert detect_language(text, supported=("en", "fr")) is None
+
+
 def test_split_paragraphs_handles_no_breaks():
     text = "Single paragraph without any blank line."
     parts = split_into_paragraphs(text)

@@ -452,8 +452,18 @@ def _render_review_panel(
                 )
                 st.markdown(f"- `{pseudo}` ← **{canonical}**  _{etype}_")
 
+    # Rough token estimate — character-based heuristic, accurate to
+    # within ~25% for Latin-script English/French text. Lets the user
+    # gauge cost before they approve.
+    redacted = pending["redacted_text"]
+    approx_tokens = max(1, len(redacted) // 4)
+    st.caption(
+        f"~{approx_tokens:,} tokens, {len(redacted):,} characters in the "
+        f"redacted prompt."
+    )
+
     risk_assess = assess_risks(
-        pending["redacted_text"],
+        redacted,
         _store().list_entities(matter.id),
         matter.mode,
     )

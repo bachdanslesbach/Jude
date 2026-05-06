@@ -59,6 +59,24 @@ src/jude/
         └── 2_Entities.py       # Per-matter dictionary management page
 ```
 
+## Lifecycle of one chat turn
+
+```mermaid
+flowchart TD
+    A[User types / pastes / attaches a file] --> B
+    B[chat.prepare_turn — detect + redact + persist entities]
+    B --> C[Streamlit review panel<br/>side-by-side original vs redacted<br/>+ entity mappings + risk badge]
+    C -->|Cancel| A
+    C -->|Approve & send| D
+    D[chat.commit_streaming_turn — persist user msg, stream LLM]
+    D --> E[Rehydrate cumulative chunks → user reads real names]
+    E --> F[Persist assistant msg]
+    F --> A
+```
+
+The crucial property: between B and D there is an **explicit user
+click**. No client data leaves the machine without it.
+
 ## The detection pipeline
 
 Five detectors run over the input text. Each contributes `Detection`

@@ -61,20 +61,42 @@ sees only pseudonyms; the user reads only real names.
                     └───────┬────────┘
                             │ entities + spans
                             ▼
-                    ┌────────────────┐       ┌────────────────┐
-                    │ Pseudonymize   │ ────► │ LLM            │
-                    │ (per-matter    │       │ (your chosen   │
-                    │  SQLite store) │       │  provider, or  │
-                    │                │       │  local Ollama) │
-                    └───────┬────────┘       └───────┬────────┘
-                            │                        │
-                            │ ◄──────────────────────┘
+                    ┌────────────────┐
+                    │ Pseudonymize   │
+                    │ (per-matter    │
+                    │  SQLite store) │
+                    └───────┬────────┘
+                            │
+                            ▼
+                    ┌──────────────────────┐
+                    │ ✋  REVIEW PANEL      │
+                    │  side-by-side:       │
+                    │  original  |  redacted │
+                    │  + entity mappings   │
+                    │  + risk badge        │
+                    │  [Approve] [Cancel]  │
+                    └──────────┬───────────┘
+                               │ only on Approve:
+                               ▼
+                    ┌────────────────┐
+                    │ LLM            │
+                    │ (your chosen   │
+                    │  provider, or  │
+                    │  local Ollama) │
+                    └───────┬────────┘
+                            │ pseudonymized response
                             ▼
                     ┌────────────────┐
                     │ Rehydrate the  │ →  Plain-language answer
                     │ response       │    you actually read
                     └────────────────┘
 ```
+
+**The review step is mandatory** — you can't skip it. Pressing **Send**
+in the chat opens the review panel; only **Approve & send** actually
+calls the LLM. This is the structural guarantee Jude is built around:
+no client data leaves your machine without an explicit human OK on the
+exact text that will leave.
 
 The pseudonym mapping is per-matter and lives in a single SQLite file
 on your disk. The LLM never sees a real name. When the LLM responds

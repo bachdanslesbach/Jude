@@ -4,10 +4,14 @@ Sidebar holds matter and mode controls plus the conversation list. The main
 panel is a single chat: paste text or attach a file in the input, get a
 rehydrated response. Every input is redacted before it leaves the machine;
 every output is rehydrated before it's shown to the user. The user is
-always the last filter — they can inspect the redacted form of any turn.
+always the last filter — they can inspect the redacted form of any turn,
+and crucially they must explicitly **approve & send** before any data
+reaches the LLM.
 """
 
 from __future__ import annotations
+
+import os
 
 import streamlit as st
 
@@ -562,10 +566,83 @@ def render_conversation(matter: Matter, conv: Conversation) -> None:
     st.rerun()
 
 
+def _api_key_env_for_backend(backend: str) -> str | None:
+    """Return the env var name an LLM backend needs, or None if it's
+    keyless (e.g. Ollama)."""
+
+    if backend == "anthropic":
+        return "ANTHROPIC_API_KEY"
+    return None
+
+
+def _llm_key_available(matter: Matter) -> bool:
+    """True iff the configured backend has a usable credential."""
+
+    var = _api_key_env_for_backend(matter.llm_endpoint)
+    if var is None:
+        return True  # local backend / no auth needed
+    if os.environ.get(var):
+        return True
+    # macOS bridge: read from launchctl getenv if shell env didn't have it.
+    from jude.llm.anthropic_client import _resolve_api_key
+
+    if matter.llm_endpoint == "anthropic":
+        return bool(_resolve_api_key())
+    return False
+
+
+def _render_api_key_form(matter: Matter) -> None:
+    """Block the chat behind a key-entry form when the configured backend
+    needs a credential we can't find. The submitted value is set into
+    os.environ for the lifetime of this Python process — not written to
+    disk by Jude. For persistence across sessions, the user runs
+    `launchctl setenv` (macOS) or adds an export to their shell config."""
+
+    var = _api_key_env_for_backend(matter.llm_endpoint)
+    assert var is not None
+    st.markdown(f"### 🔑 {var} required")
+    st.caption(
+        "Jude couldn't find a credential for the configured LLM backend. "
+        "Paste your key below to use it for the current session — the "
+        "value lives in this Streamlit process's memory only and is not "
+        "written to disk by Jude. For persistence across restarts, "
+        "set it once via `launchctl setenv` (macOS) or `export` (Linux/"
+        "WSL) in your shell config."
+    )
+    pasted = st.text_input(
+        var, type="password", key=f"keypad_{var}",
+        placeholder="sk-... or your provider's equivalent",
+    )
+    cols = st.columns([1, 1, 4])
+    if cols[0].button("Use for this session", type="primary"):
+        if pasted.strip():
+            os.environ[var] = pasted.strip()
+            # Drop the cached LLM client so it picks up the new key on
+            # the next call.
+            for k in list(st.session_state.keys()):
+                if isinstance(k, str) and k.startswith(f"llm_{matter.id}_"):
+                    del st.session_state[k]
+            st.success("Key accepted. Returning to the chat…")
+            st.rerun()
+    if cols[1].button("Switch to local Ollama"):
+        store = _store()
+        store.set_llm_endpoint(matter.id, "ollama", model=_DEFAULT_OLLAMA_MODEL)
+        st.rerun()
+    st.markdown(
+        "**Why bother?** "
+        "Without a key, Jude can detect and rehydrate locally but can't "
+        "send a turn to a cloud LLM. Switching to Ollama runs a model on "
+        "your own machine instead — no key, no network."
+    )
+
+
 def main() -> None:
     matter, conv = sidebar()
     if matter is None:
         st.info("Create a matter in the sidebar to begin.")
+        return
+    if not _llm_key_available(matter):
+        _render_api_key_form(matter)
         return
     if conv is None:
         st.info("No conversations yet. Click **+ New conversation** in the sidebar.")

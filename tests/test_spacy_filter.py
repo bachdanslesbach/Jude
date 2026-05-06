@@ -48,6 +48,14 @@ def test_trims_trailing_punctuation():
     assert (start, end) == (0, 8)
 
 
+def test_rejects_sheet_marker():
+    """`--- Sheet: Foo ---` is structural annotation injected by the XLSX
+    adapter; never redactable."""
+
+    assert _normalize_span("--- Sheet: Sheet1 ---", 0, 21, "en") is None
+    assert _normalize_span("--- Page 5 ---", 0, 14, "en") is None
+
+
 def test_trims_at_newline():
     text = "Maître Jean-Pierre Dubois\nDe:"
     out = _normalize_span(text, 0, len(text), "fr")

@@ -7,7 +7,12 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 PARAGRAPH_SEP = "\n\n"
-PAGE_MARKER = "\n\n--- Page {n} ---\n\n"
+# Page boundary marker. Was `--- Page {n} ---` in earlier versions; we
+# dropped the visible label because spaCy was labelling the marker
+# itself as an ORG, causing nonsense redactions. Cross-page transitions
+# now use a plain blank-line separator. Adapters that need explicit
+# page tracking can post-process this representation.
+PAGE_MARKER = "\n\n"
 
 
 class OCRUnavailableError(RuntimeError):
@@ -33,9 +38,10 @@ class PdfExtraction:
         if not self.pages:
             return ""
         parts: list[str] = []
-        for i, page in enumerate(self.pages, 1):
-            parts.append(PAGE_MARKER.format(n=i))
-            parts.append(page)
+        for page in self.pages:
+            if page.strip():
+                parts.append(PAGE_MARKER)
+                parts.append(page)
         return "".join(parts).lstrip()
 
 

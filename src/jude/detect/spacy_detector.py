@@ -48,6 +48,12 @@ _MONTHS = frozenset(
 _YEAR_RE = re.compile(r"\b(19|20)\d{2}\b")
 _PUNCT_STRIP = " \t.,;:'\""
 
+# Section/page-marker patterns. spaCy frequently labels the marker
+# *itself* as an ORG. These patterns are document structure that the
+# user's tooling injected (Sheet markers from XLSX, anything matching
+# `--- ... ---`) and must never be redacted.
+_MARKER_RE = re.compile(r"^-{2,}\s*[\w\s:.()-]*?\s*-{2,}$")
+
 
 @lru_cache(maxsize=8)
 def _load_model(name: str) -> spacy.language.Language:
@@ -101,6 +107,11 @@ def _normalize_span(
     """
 
     s = text
+    # Reject `--- Sheet: X ---` / `--- Page N ---` markers that adapters
+    # inject as structural annotation. spaCy sometimes labels them ORG;
+    # they're never real content.
+    if _MARKER_RE.match(s.strip()):
+        return None
     # Drop everything past the first newline — spaCy frequently fuses
     # consecutive header lines like "Maître X\nDe:" into one entity.
     if "\n" in s:

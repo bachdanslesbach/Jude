@@ -34,8 +34,11 @@ def test_pdf_extracts_text_per_page(tmp_path: Path):
     assert len(extraction.pages) == 2
     assert "First page text" in extraction.pages[0]
     assert "Second page text" in extraction.pages[1]
-    assert "--- Page 1 ---" in extraction.text
-    assert "--- Page 2 ---" in extraction.text
+    # Pages are joined with a blank-line separator only — no visible
+    # "--- Page N ---" marker, since spaCy was redacting the markers.
+    assert "First page text" in extraction.text
+    assert "Second page text" in extraction.text
+    assert "Page" not in extraction.text  # no visible marker
 
 
 def test_pdf_warns_on_image_only_document(tmp_path: Path):

@@ -4,6 +4,25 @@ All notable changes to Jude. The project follows TDD discipline from
 v0.4.2 onwards: each feature ships as a red-green commit pair, visible
 in the git log.
 
+## [0.6.2] — CLI test coverage
+
+Adds 7 CLI smoke tests via `typer.testing.CliRunner`:
+`init`, `matter create/list`, `redact` (single + multi-file),
+`rehydrate`, `export`. Each test isolates `JUDE_HOME` per `tmp_path`.
+
+Also documents the asymmetry in smart-mode-without-zr: store
+permits creation, LLM client refuses to send, UI gates via
+disabled checkbox.
+
+195 passing, 2 skipped.
+
+## [0.6.1] — Visual highlight in review panel
+
+The review panel's "Original" column now shows the input text
+with each detected span wrapped in a yellow `<mark>`. Users see
+exactly which characters will be replaced before they approve.
+HTML is escaped to prevent injection from user-pasted content.
+
 ## [0.6.0] — Review-before-send + accuracy + UX polish
 
 The new UX north star: **Jude is the endpoint between the user and

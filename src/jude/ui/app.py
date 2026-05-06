@@ -76,6 +76,7 @@ def sidebar() -> tuple[Matter | None, Conversation | None]:
 
     _backend_controls(store, matter)
     _mode_controls(store, matter)
+    _matter_notes(store, matter)
     _detector_controls(matter)
     _redaction_preview(matter)
     conv = _conversation_picker(store, matter)
@@ -332,6 +333,29 @@ def _conversation_management(
                 if st.session_state.get(active_key) == conv.id:
                     st.session_state.pop(active_key, None)
                 st.rerun()
+
+
+def _matter_notes(store: Store, matter: Matter) -> None:
+    """Sidebar expander for the lawyer's free-text working notes on this
+    matter. Stored locally; never sent to the LLM."""
+
+    with st.sidebar.expander("Matter notes (private)"):
+        st.caption(
+            "Free-text notes for your eyes only. Saved to the local "
+            "database; never sent to the LLM."
+        )
+        new_notes = st.text_area(
+            "notes",
+            value=matter.notes or "",
+            key=f"notes_{matter.id}",
+            label_visibility="collapsed",
+            height=140,
+            placeholder="Open questions, follow-up dates, "
+            "external references…",
+        )
+        current = matter.notes or ""
+        if new_notes != current:
+            store.set_matter_notes(matter.id, new_notes)
 
 
 def _redaction_preview(matter: Matter) -> None:

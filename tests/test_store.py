@@ -44,6 +44,25 @@ def test_find_by_surface_uses_normalized_match(store: Store, matter_id: str):
     assert by_with_corp is not None and by_with_corp.id == by_full.id
 
 
+def test_matter_notes_persist_across_lookups(store: Store):
+    """Lawyers want a free-text working-notes field per matter — not
+    sent to the LLM, just for their own reference. Persists across
+    process restarts via the matters table."""
+
+    m = store.create_matter("with-notes")
+    assert (store.get_matter(m.id).notes or "") == ""
+    store.set_matter_notes(m.id, "Client called Tuesday — confirmed scope.")
+    refetched = store.get_matter(m.id)
+    assert refetched.notes == "Client called Tuesday — confirmed scope."
+
+
+def test_matter_notes_can_be_cleared(store: Store):
+    m = store.create_matter("clearable")
+    store.set_matter_notes(m.id, "something")
+    store.set_matter_notes(m.id, None)
+    assert store.get_matter(m.id).notes is None
+
+
 def test_set_llm_endpoint_persists(store: Store):
     m = store.create_matter("m", llm_endpoint="anthropic")
     store.set_llm_endpoint(m.id, "ollama", model="llama3.3:70b")

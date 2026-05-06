@@ -67,6 +67,7 @@ class Matter(BaseModel):
     llm_endpoint: str = "anthropic"
     llm_model: str | None = None
     zero_retention_attested: bool = False
+    notes: str | None = None
     created_at: datetime | None = None
 
 

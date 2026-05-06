@@ -126,6 +126,8 @@ class Store:
         }
         if "llm_model" not in cols:
             self._conn.execute("ALTER TABLE matters ADD COLUMN llm_model TEXT")
+        if "notes" not in cols:
+            self._conn.execute("ALTER TABLE matters ADD COLUMN notes TEXT")
 
     def close(self) -> None:
         self._conn.close()
@@ -186,6 +188,17 @@ class Store:
         ).fetchall()
         return [self._row_to_matter(r) for r in rows]
 
+    def set_matter_notes(self, matter_id: str, notes: str | None) -> None:
+        """Update the matter's free-text working-notes field. None or
+        empty-after-strip clears the notes."""
+
+        cleaned = notes.strip() if isinstance(notes, str) else None
+        with self._tx() as c:
+            c.execute(
+                "UPDATE matters SET notes = ? WHERE id = ?",
+                (cleaned or None, matter_id),
+            )
+
     def set_llm_endpoint(
         self, matter_id: str, endpoint: str, model: str | None = None
     ) -> None:
@@ -227,6 +240,10 @@ class Store:
             llm_model = row["llm_model"]
         except (KeyError, IndexError):
             llm_model = None
+        try:
+            notes = row["notes"]
+        except (KeyError, IndexError):
+            notes = None
         return Matter(
             id=row["id"],
             name=row["name"],
@@ -234,6 +251,7 @@ class Store:
             llm_endpoint=row["llm_endpoint"],
             llm_model=llm_model,
             zero_retention_attested=bool(row["zero_retention_attested"]),
+            notes=notes,
             created_at=datetime.fromisoformat(row["created_at"]),
         )
 

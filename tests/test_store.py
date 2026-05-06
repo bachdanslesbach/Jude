@@ -171,6 +171,31 @@ def test_find_alias_refuses_when_ambiguous(store: Store, matter_id: str):
     assert found is None
 
 
+def test_dictionary_detector_matches_suffix_stripped_form(
+    store: Store, matter_id: str
+):
+    """When 'Lumen Reality SARL' is in the per-matter dictionary, a
+    later occurrence of just 'Lumen Reality' (no SARL) in the text must
+    also be matched by the DictionaryDetector — the full and the
+    suffix-stripped form refer to the same real entity."""
+
+    from jude.detect.dictionary_detector import DictionaryDetector
+
+    store.create_entity(
+        matter_id, "Lumen Reality SARL", EntityType.ORG,
+        surface_forms={"Lumen Reality SARL"},
+    )
+    text = (
+        "Lumen Reality SARL is the seller. Earlier, Lumen Reality "
+        "was incorporated in 2018."
+    )
+    detector = DictionaryDetector(store=store, matter_id=matter_id)
+    detections = detector.detect(text)
+    surfaces = {d.text for d in detections}
+    assert "Lumen Reality SARL" in surfaces
+    assert "Lumen Reality" in surfaces  # the suffix-stripped form is matched
+
+
 def test_find_alias_for_org_prefix(store: Store, matter_id: str):
     e = store.create_entity(
         matter_id, "Pioneer Industries SA", EntityType.ORG

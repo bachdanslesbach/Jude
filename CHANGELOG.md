@@ -4,11 +4,91 @@ All notable changes to Jude. The project follows TDD discipline from
 v0.4.2 onwards: each feature ships as a red-green commit pair, visible
 in the git log.
 
-## [Unreleased]
+## [0.6.0] — Review-before-send + accuracy + UX polish
 
-- Plans: EUR-Lex enrichment for case references, auto-running risk
-  score per chat turn, persistent Wikipedia cache, native PDF
-  write-back.
+The new UX north star: **Jude is the endpoint between the user and
+the LLM.** Pressing Send no longer sends — it opens a review panel
+showing exactly what the LLM will see. Only when the user clicks
+**Approve & send** does anything reach the network.
+
+### Review-before-send flow (v0.5.2)
+- New `prepare_turn` / `commit_streaming_turn` split. Submitting the
+  chat input runs detection + redaction (entities persisted for
+  pseudonym stability) and stashes a `PreparedTurn` in session state.
+- Side-by-side review panel: original (stays on machine) vs redacted
+  (LLM sees this), expander listing every entity mapping, re-id
+  risk badge with top-5 contributing reasons, ✓ Approve & send / ←
+  Cancel buttons.
+
+### API key entry form (v0.5.3)
+- When the configured backend needs a credential and Jude can't find
+  one (env var nor macOS launchctl bridge), a focused key-entry form
+  replaces the chat panel. One-click switch to local Ollama for
+  users who'd rather not provide a cloud key.
+
+### Token estimate + Mermaid lifecycle diagram (v0.5.5)
+- Review panel shows "~X tokens, Y characters" so users gauge cost
+  before approval.
+- docs/architecture has a Mermaid flowchart of the full chat-turn
+  lifecycle including the cancel branch.
+
+### Sharper system prompt (v0.5.6)
+- Clarifies that the user is a practising lawyer, that Jude's role is
+  research support not advice, and that citations should be primary
+  (treaty articles, regulation numbers, ECLI).
+
+### Bulk redact via CLI (v0.5.7)
+- `jude redact a.docx b.pdf c.xlsx --matter X` processes multiple
+  files sharing the same per-matter dictionary, so the same person
+  keeps the same pseudonym across all of them.
+
+### Per-matter notes (v0.5.8)
+- Free-text working-notes field per matter, never sent to the LLM.
+
+### Matter JSON export (v0.5.9)
+- `jude export <matter-id>` and a sidebar download button dump the
+  full matter (entities + conversations + messages) as JSON for
+  backup and archival.
+
+### Accuracy: surface-form aliasing (v0.4.13)
+- "Marie-Claire Lefèvre" + later "Marie-Claire" now resolve to the
+  same Entity automatically — no more duplicate pseudonyms requiring
+  a manual merge. Conservative: refuses to alias when more than one
+  candidate of the same type exists.
+
+### Accuracy: real-spaCy two-pass integration test (v0.4.14)
+- Proves on real text that ALL-CAPS titles missed by spaCy on the
+  first pass are caught on the second via the dictionary populated
+  by the body match.
+
+### Streaming LLM responses (v0.4.15)
+- Words appear as the model produces them. Cumulative text rehydrated
+  chunk-by-chunk, so users never see pseudonyms — even mid-stream.
+
+### Live-preview detection panel (v0.4.16)
+- Sidebar expander where users paste draft text and see what Jude
+  would detect, without sending a turn or polluting the dictionary.
+
+### Per-conversation rename / delete (v0.4.17)
+
+### Dutch language support (v0.4.18)
+- Brussels-bar relevance: per-paragraph language routing handles
+  en/fr/nl independently, with graceful fallback when a model isn't
+  installed.
+
+### EU regulatory regex (v0.5.1)
+- Country-prefixed VAT numbers (BE/FR/DE/IT/ES/NL/LU/AT/PT/IE/PL/SE/
+  DK/FI), French SIREN/SIRET, Belgian National Register Numbers.
+
+### Inline re-id risk badge in chat (v0.4.8)
+- Every user chat bubble shows a badge if the redacted form has any
+  signal — currency figure, date, case ref in the same paragraph as
+  a pseudonym, or a public-knowledge tag that narrows the
+  candidate pool.
+
+### Persistent Wikipedia cache (v0.4.9)
+- `~/.jude/wikipedia_cache.json` so Streamlit restarts don't re-fire
+  the same network calls (or re-leak the same entity names).
 
 ## [0.4.7] — Documentation & landing site
 

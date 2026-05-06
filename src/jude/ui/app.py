@@ -264,7 +264,46 @@ def _conversation_picker(store: Store, matter: Matter) -> Conversation | None:
         ):
             st.session_state[active_key] = conv.id
             st.rerun()
+
+    _conversation_management(store, matter, conversations)
     return store.get_conversation(st.session_state[active_key])
+
+
+def _conversation_management(
+    store: Store,
+    matter: Matter,
+    conversations: list[Conversation],
+) -> None:
+    """Inline rename / delete actions for conversations.
+
+    Each row is a (title-input, delete-button) pair so the sidebar
+    stays compact. Renames fire when the input loses focus (Streamlit
+    default text_input rerun behaviour); deletions show a one-click
+    button styled as `:red[🗑]` and clear the active selection if the
+    deleted conversation was the active one.
+    """
+
+    if not conversations:
+        return
+    with st.sidebar.expander("Manage conversations"):
+        for conv in conversations:
+            cols = st.columns([5, 1])
+            new_title = cols[0].text_input(
+                "title",
+                value=conv.title,
+                key=f"rename_{conv.id}",
+                label_visibility="collapsed",
+            )
+            new_title = (new_title or "").strip()
+            if new_title and new_title != conv.title:
+                store.rename_conversation(conv.id, new_title)
+                st.rerun()
+            if cols[1].button("🗑", key=f"del_{conv.id}", help="Delete this conversation"):
+                store.delete_conversation(conv.id)
+                active_key = f"active_conv_{matter.id}"
+                if st.session_state.get(active_key) == conv.id:
+                    st.session_state.pop(active_key, None)
+                st.rerun()
 
 
 def _redaction_preview(matter: Matter) -> None:

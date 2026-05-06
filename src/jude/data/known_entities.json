@@ -1513,6 +1513,132 @@
       "type": "ORG",
       "context": "International financial institution providing financing and advice to developing countries",
       "redact": false
+    },
+    {
+      "canonical": "Digital Markets Act",
+      "aliases": [
+        "DMA",
+        "Regulation (EU) 2022/1925"
+      ],
+      "type": "ORG",
+      "context": "EU regulation on contestable and fair digital markets; gatekeeper obligations under Articles 5–7",
+      "redact": false
+    },
+    {
+      "canonical": "Digital Services Act",
+      "aliases": [
+        "DSA",
+        "Regulation (EU) 2022/2065"
+      ],
+      "type": "ORG",
+      "context": "EU regulation on a single market for digital services; obligations on intermediary services and VLOPs/VLOSEs",
+      "redact": false
+    },
+    {
+      "canonical": "General Data Protection Regulation",
+      "aliases": [
+        "GDPR",
+        "Regulation (EU) 2016/679",
+        "RGPD"
+      ],
+      "type": "ORG",
+      "context": "EU regulation on personal data protection; lex generalis on data processing in the Union",
+      "redact": false
+    },
+    {
+      "canonical": "EU Merger Regulation",
+      "aliases": [
+        "EUMR",
+        "Regulation (EC) 139/2004",
+        "Reg 139/2004",
+        "Reg (EC) 139/2004"
+      ],
+      "type": "ORG",
+      "context": "EU regulation on the control of concentrations between undertakings (merger control)",
+      "redact": false
+    },
+    {
+      "canonical": "Regulation 1/2003",
+      "aliases": [
+        "Regulation (EC) 1/2003",
+        "Reg 1/2003",
+        "antitrust procedure regulation"
+      ],
+      "type": "ORG",
+      "context": "EU regulation implementing the competition rules of Articles 101 and 102 TFEU",
+      "redact": false
+    },
+    {
+      "canonical": "AI Act",
+      "aliases": [
+        "Artificial Intelligence Act",
+        "Regulation (EU) 2024/1689"
+      ],
+      "type": "ORG",
+      "context": "EU regulation laying down harmonised rules on artificial intelligence; risk-based obligations",
+      "redact": false
+    },
+    {
+      "canonical": "TFEU",
+      "aliases": [
+        "Treaty on the Functioning of the European Union",
+        "Functioning Treaty"
+      ],
+      "type": "ORG",
+      "context": "Treaty on the Functioning of the European Union; primary EU law including competition rules (Art. 101–102)",
+      "redact": false
+    },
+    {
+      "canonical": "TEU",
+      "aliases": [
+        "Treaty on European Union",
+        "Maastricht Treaty"
+      ],
+      "type": "ORG",
+      "context": "Treaty on European Union; primary EU law including the EU's values, institutions and external action",
+      "redact": false
+    },
+    {
+      "canonical": "Charter of Fundamental Rights",
+      "aliases": [
+        "CFR",
+        "EU Charter",
+        "Charter of Fundamental Rights of the European Union"
+      ],
+      "type": "ORG",
+      "context": "EU Charter of Fundamental Rights; binding on EU institutions and member states when implementing EU law",
+      "redact": false
+    },
+    {
+      "canonical": "European Convention on Human Rights",
+      "aliases": [
+        "ECHR",
+        "Convention",
+        "European Convention"
+      ],
+      "type": "ORG",
+      "context": "Council of Europe treaty on human rights; enforced by the European Court of Human Rights",
+      "redact": false
+    },
+    {
+      "canonical": "NIS2 Directive",
+      "aliases": [
+        "NIS 2",
+        "Directive (EU) 2022/2555"
+      ],
+      "type": "ORG",
+      "context": "EU directive on measures for a high common level of cybersecurity",
+      "redact": false
+    },
+    {
+      "canonical": "ePrivacy Directive",
+      "aliases": [
+        "Directive 2002/58/EC",
+        "ePrivacy"
+      ],
+      "type": "ORG",
+      "context": "EU directive on privacy in electronic communications; cookie consent rules",
+      "redact": false
     }
   ]
 }

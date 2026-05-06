@@ -56,6 +56,17 @@ def test_companies_in_bundled_are_still_redactable():
     assert not is_public_no_redact("Meta", EntityType.ORG)
 
 
+def test_eu_regulations_are_no_redact():
+    """The Digital Markets Act, GDPR, EUMR and similar are public
+    regulations — must never be pseudonymised."""
+
+    assert is_public_no_redact("Digital Markets Act", EntityType.ORG)
+    assert is_public_no_redact("DMA", EntityType.ORG)
+    assert is_public_no_redact("GDPR", EntityType.ORG)
+    assert is_public_no_redact("Regulation (EC) 139/2004", EntityType.ORG)
+    assert is_public_no_redact("TFEU", EntityType.ORG)
+
+
 def test_unknown_entities_default_to_redactable():
     assert not is_public_no_redact("Acme Solutions SA", EntityType.ORG)
     assert not is_public_no_redact("Marie-Claire Lefèvre", EntityType.PERSON)

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from .context import ContextProvider, default_provider
+from .public_knowledge import is_public_no_redact
 from .store import Store
 from .types import (
     Detection,
@@ -39,7 +40,14 @@ def redact(
         )
 
     provider = context_provider or default_provider() if mode == Mode.SMART else None
-    sorted_dets = sorted(detections, key=lambda d: d.start)
+    # Drop detections that match a bundled public-knowledge institution
+    # (regulators, courts, treaties, etc.). Their mention does not
+    # identify a client; redacting them strips the LLM of regulatory
+    # framing without any privacy gain.
+    sorted_dets = sorted(
+        [d for d in detections if not is_public_no_redact(d.text, d.entity_type)],
+        key=lambda d: d.start,
+    )
     used_entities: dict[int, Entity] = {}
     seen_in_output: set[int] = set()
 

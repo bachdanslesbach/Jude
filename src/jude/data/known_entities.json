@@ -7,45 +7,80 @@
   "entities": [
     {
       "canonical": "Alphabet",
-      "aliases": ["Google", "Google LLC", "Alphabet Inc.", "GOOGL"],
+      "aliases": [
+        "Google",
+        "Google LLC",
+        "Alphabet Inc.",
+        "GOOGL"
+      ],
       "type": "ORG",
-      "context": "US tech holding (parent of Google); DMA-designated gatekeeper for Search, Maps, Play, Chrome, Android, YouTube, Ads"
+      "context": "US tech holding (parent of Google); DMA-designated gatekeeper for Search, Maps, Play, Chrome, Android, YouTube, Ads",
+      "redact": true
     },
     {
       "canonical": "Amazon",
-      "aliases": ["Amazon.com", "Amazon.com Inc.", "AMZN"],
+      "aliases": [
+        "Amazon.com",
+        "Amazon.com Inc.",
+        "AMZN"
+      ],
       "type": "ORG",
-      "context": "US tech and retail; DMA-designated gatekeeper for the Amazon Marketplace and Amazon Ads core platform services; cloud business via AWS"
+      "context": "US tech and retail; DMA-designated gatekeeper for the Amazon Marketplace and Amazon Ads core platform services; cloud business via AWS",
+      "redact": true
     },
     {
       "canonical": "Apple",
-      "aliases": ["Apple Inc.", "AAPL"],
+      "aliases": [
+        "Apple Inc.",
+        "AAPL"
+      ],
       "type": "ORG",
-      "context": "US tech; DMA-designated gatekeeper for iOS, the App Store and Safari"
+      "context": "US tech; DMA-designated gatekeeper for iOS, the App Store and Safari",
+      "redact": true
     },
     {
       "canonical": "ByteDance",
-      "aliases": ["TikTok", "ByteDance Ltd.", "字节跳动"],
+      "aliases": [
+        "TikTok",
+        "ByteDance Ltd.",
+        "字节跳动"
+      ],
       "type": "ORG",
-      "context": "Chinese tech company; DMA-designated gatekeeper for TikTok"
+      "context": "Chinese tech company; DMA-designated gatekeeper for TikTok",
+      "redact": true
     },
     {
       "canonical": "Meta",
-      "aliases": ["Facebook", "Meta Platforms", "Meta Platforms Inc.", "META"],
+      "aliases": [
+        "Facebook",
+        "Meta Platforms",
+        "Meta Platforms Inc.",
+        "META"
+      ],
       "type": "ORG",
-      "context": "US tech; DMA-designated gatekeeper for Facebook, Instagram, WhatsApp, Messenger, Marketplace and Meta Ads"
+      "context": "US tech; DMA-designated gatekeeper for Facebook, Instagram, WhatsApp, Messenger, Marketplace and Meta Ads",
+      "redact": true
     },
     {
       "canonical": "Microsoft",
-      "aliases": ["Microsoft Corporation", "MSFT"],
+      "aliases": [
+        "Microsoft Corporation",
+        "MSFT"
+      ],
       "type": "ORG",
-      "context": "US tech; DMA-designated gatekeeper for Windows PC OS and LinkedIn; cloud business via Azure"
+      "context": "US tech; DMA-designated gatekeeper for Windows PC OS and LinkedIn; cloud business via Azure",
+      "redact": true
     },
     {
       "canonical": "Booking",
-      "aliases": ["Booking.com", "Booking Holdings", "BKNG"],
+      "aliases": [
+        "Booking.com",
+        "Booking Holdings",
+        "BKNG"
+      ],
       "type": "ORG",
-      "context": "Online travel agency; DMA-designated gatekeeper for Booking.com (online intermediation services)"
+      "context": "Online travel agency; DMA-designated gatekeeper for Booking.com (online intermediation services)",
+      "redact": true
     },
     {
       "canonical": "European Commission",
@@ -59,25 +94,39 @@
         "Europese Commissie"
       ],
       "type": "ORG",
-      "context": "Executive arm of the EU; enforces EU competition law via DG Competition; merger control under Reg (EC) 139/2004"
+      "context": "Executive arm of the EU; enforces EU competition law via DG Competition; merger control under Reg (EC) 139/2004",
+      "redact": false
     },
     {
       "canonical": "DG Competition",
-      "aliases": ["DG COMP", "Directorate-General for Competition", "Direction générale de la concurrence"],
+      "aliases": [
+        "DG COMP",
+        "Directorate-General for Competition",
+        "Direction générale de la concurrence"
+      ],
       "type": "ORG",
-      "context": "European Commission department responsible for EU competition policy and enforcement (antitrust, mergers, State aid)"
+      "context": "European Commission department responsible for EU competition policy and enforcement (antitrust, mergers, State aid)",
+      "redact": false
     },
     {
       "canonical": "Hearing Officer",
-      "aliases": ["Conseiller-auditeur", "EU Hearing Officer"],
+      "aliases": [
+        "Conseiller-auditeur",
+        "EU Hearing Officer"
+      ],
       "type": "ORG",
-      "context": "Independent Commission official safeguarding procedural rights of parties in EU competition proceedings"
+      "context": "Independent Commission official safeguarding procedural rights of parties in EU competition proceedings",
+      "redact": false
     },
     {
       "canonical": "European Competition Network",
-      "aliases": ["ECN", "Réseau européen de la concurrence"],
+      "aliases": [
+        "ECN",
+        "Réseau européen de la concurrence"
+      ],
       "type": "ORG",
-      "context": "Forum of EU national competition authorities and the Commission for cooperation under Regulation 1/2003"
+      "context": "Forum of EU national competition authorities and the Commission for cooperation under Regulation 1/2003",
+      "redact": false
     },
     {
       "canonical": "Court of Justice of the European Union",
@@ -90,7 +139,8 @@
         "Hof van Justitie"
       ],
       "type": "ORG",
-      "context": "Top EU court; rules on direct actions and preliminary references; sits in Luxembourg"
+      "context": "Top EU court; rules on direct actions and preliminary references; sits in Luxembourg",
+      "redact": false
     },
     {
       "canonical": "General Court",
@@ -101,139 +151,238 @@
         "Gerecht"
       ],
       "type": "ORG",
-      "context": "First-instance EU court; hears actions for annulment of Commission decisions including competition cases"
+      "context": "First-instance EU court; hears actions for annulment of Commission decisions including competition cases",
+      "redact": false
     },
     {
       "canonical": "Council of the European Union",
-      "aliases": ["Council of the EU", "Conseil de l'Union européenne", "Council of Ministers"],
+      "aliases": [
+        "Council of the EU",
+        "Conseil de l'Union européenne",
+        "Council of Ministers"
+      ],
       "type": "ORG",
-      "context": "EU co-legislator alongside the European Parliament; represents member-state governments"
+      "context": "EU co-legislator alongside the European Parliament; represents member-state governments",
+      "redact": false
     },
     {
       "canonical": "European Parliament",
-      "aliases": ["EP", "Parlement européen", "Europees Parlement"],
+      "aliases": [
+        "EP",
+        "Parlement européen",
+        "Europees Parlement"
+      ],
       "type": "ORG",
-      "context": "Directly elected EU legislative body; co-legislator with the Council and exercises budgetary and oversight powers"
+      "context": "Directly elected EU legislative body; co-legislator with the Council and exercises budgetary and oversight powers",
+      "redact": false
     },
     {
       "canonical": "European Council",
-      "aliases": ["Conseil européen"],
+      "aliases": [
+        "Conseil européen"
+      ],
       "type": "ORG",
-      "context": "EU institution composed of heads of state or government; defines the Union's general political direction and priorities"
+      "context": "EU institution composed of heads of state or government; defines the Union's general political direction and priorities",
+      "redact": false
     },
     {
       "canonical": "European Court of Auditors",
-      "aliases": ["ECA", "Cour des comptes européenne"],
+      "aliases": [
+        "ECA",
+        "Cour des comptes européenne"
+      ],
       "type": "ORG",
-      "context": "EU institution auditing the finances of the Union; based in Luxembourg"
+      "context": "EU institution auditing the finances of the Union; based in Luxembourg",
+      "redact": false
     },
     {
       "canonical": "European Central Bank",
-      "aliases": ["ECB", "Banque centrale européenne", "BCE", "Europäische Zentralbank", "EZB"],
+      "aliases": [
+        "ECB",
+        "Banque centrale européenne",
+        "BCE",
+        "Europäische Zentralbank",
+        "EZB"
+      ],
       "type": "ORG",
-      "context": "Central bank of the euro area; conducts monetary policy and supervises significant banks under the SSM"
+      "context": "Central bank of the euro area; conducts monetary policy and supervises significant banks under the SSM",
+      "redact": false
     },
     {
       "canonical": "European Investment Bank",
-      "aliases": ["EIB", "Banque européenne d'investissement", "BEI"],
+      "aliases": [
+        "EIB",
+        "Banque européenne d'investissement",
+        "BEI"
+      ],
       "type": "ORG",
-      "context": "EU lending institution owned by member states; finances projects supporting EU policy objectives"
+      "context": "EU lending institution owned by member states; finances projects supporting EU policy objectives",
+      "redact": false
     },
     {
       "canonical": "European Economic Area",
-      "aliases": ["EEA", "Espace économique européen"],
+      "aliases": [
+        "EEA",
+        "Espace économique européen"
+      ],
       "type": "ORG",
-      "context": "Agreement extending the EU single market to Iceland, Liechtenstein and Norway"
+      "context": "Agreement extending the EU single market to Iceland, Liechtenstein and Norway",
+      "redact": false
     },
     {
       "canonical": "Body of European Regulators for Electronic Communications",
-      "aliases": ["BEREC", "ORECE"],
+      "aliases": [
+        "BEREC",
+        "ORECE"
+      ],
       "type": "ORG",
-      "context": "EU body coordinating national regulators for electronic communications networks and services"
+      "context": "EU body coordinating national regulators for electronic communications networks and services",
+      "redact": false
     },
     {
       "canonical": "European Securities and Markets Authority",
-      "aliases": ["ESMA", "AEMF", "Autorité européenne des marchés financiers"],
+      "aliases": [
+        "ESMA",
+        "AEMF",
+        "Autorité européenne des marchés financiers"
+      ],
       "type": "ORG",
-      "context": "EU agency supervising securities markets and investor protection; based in Paris"
+      "context": "EU agency supervising securities markets and investor protection; based in Paris",
+      "redact": false
     },
     {
       "canonical": "European Banking Authority",
-      "aliases": ["EBA", "ABE", "Autorité bancaire européenne"],
+      "aliases": [
+        "EBA",
+        "ABE",
+        "Autorité bancaire européenne"
+      ],
       "type": "ORG",
-      "context": "EU agency setting harmonised banking standards and overseeing banking supervision; based in Paris"
+      "context": "EU agency setting harmonised banking standards and overseeing banking supervision; based in Paris",
+      "redact": false
     },
     {
       "canonical": "European Insurance and Occupational Pensions Authority",
-      "aliases": ["EIOPA", "AEAPP"],
+      "aliases": [
+        "EIOPA",
+        "AEAPP"
+      ],
       "type": "ORG",
-      "context": "EU agency for insurance and occupational pensions supervision; based in Frankfurt"
+      "context": "EU agency for insurance and occupational pensions supervision; based in Frankfurt",
+      "redact": false
     },
     {
       "canonical": "Agency for the Cooperation of Energy Regulators",
-      "aliases": ["ACER", "Agence de coopération des régulateurs de l'énergie"],
+      "aliases": [
+        "ACER",
+        "Agence de coopération des régulateurs de l'énergie"
+      ],
       "type": "ORG",
-      "context": "EU agency coordinating national energy regulators in electricity and gas markets; based in Ljubljana"
+      "context": "EU agency coordinating national energy regulators in electricity and gas markets; based in Ljubljana",
+      "redact": false
     },
     {
       "canonical": "European Union Agency for Cybersecurity",
-      "aliases": ["ENISA", "EU Cybersecurity Agency"],
+      "aliases": [
+        "ENISA",
+        "EU Cybersecurity Agency"
+      ],
       "type": "ORG",
-      "context": "EU agency for network and information security; supports member states and EU institutions on cybersecurity"
+      "context": "EU agency for network and information security; supports member states and EU institutions on cybersecurity",
+      "redact": false
     },
     {
       "canonical": "European Medicines Agency",
-      "aliases": ["EMA", "Agence européenne des médicaments"],
+      "aliases": [
+        "EMA",
+        "Agence européenne des médicaments"
+      ],
       "type": "ORG",
-      "context": "EU agency evaluating and supervising medicines; based in Amsterdam"
+      "context": "EU agency evaluating and supervising medicines; based in Amsterdam",
+      "redact": false
     },
     {
       "canonical": "European Food Safety Authority",
-      "aliases": ["EFSA", "Autorité européenne de sécurité des aliments", "AESA"],
+      "aliases": [
+        "EFSA",
+        "Autorité européenne de sécurité des aliments",
+        "AESA"
+      ],
       "type": "ORG",
-      "context": "EU agency providing scientific advice on food and feed safety; based in Parma"
+      "context": "EU agency providing scientific advice on food and feed safety; based in Parma",
+      "redact": false
     },
     {
       "canonical": "European Data Protection Board",
-      "aliases": ["EDPB", "Comité européen de la protection des données", "CEPD"],
+      "aliases": [
+        "EDPB",
+        "Comité européen de la protection des données",
+        "CEPD"
+      ],
       "type": "ORG",
-      "context": "EU body of national DPAs ensuring consistent application of the GDPR across the Union"
+      "context": "EU body of national DPAs ensuring consistent application of the GDPR across the Union",
+      "redact": false
     },
     {
       "canonical": "European Data Protection Supervisor",
-      "aliases": ["EDPS", "Contrôleur européen de la protection des données"],
+      "aliases": [
+        "EDPS",
+        "Contrôleur européen de la protection des données"
+      ],
       "type": "ORG",
-      "context": "Independent EU authority supervising personal data processing by EU institutions and bodies"
+      "context": "Independent EU authority supervising personal data processing by EU institutions and bodies",
+      "redact": false
     },
     {
       "canonical": "European Union Intellectual Property Office",
-      "aliases": ["EUIPO", "Office de l'Union européenne pour la propriété intellectuelle"],
+      "aliases": [
+        "EUIPO",
+        "Office de l'Union européenne pour la propriété intellectuelle"
+      ],
       "type": "ORG",
-      "context": "EU agency for the registration of EU trade marks and registered Community designs; based in Alicante"
+      "context": "EU agency for the registration of EU trade marks and registered Community designs; based in Alicante",
+      "redact": false
     },
     {
       "canonical": "Community Plant Variety Office",
-      "aliases": ["CPVO", "Office communautaire des variétés végétales", "OCVV"],
+      "aliases": [
+        "CPVO",
+        "Office communautaire des variétés végétales",
+        "OCVV"
+      ],
       "type": "ORG",
-      "context": "EU agency granting Community plant variety rights; based in Angers"
+      "context": "EU agency granting Community plant variety rights; based in Angers",
+      "redact": false
     },
     {
       "canonical": "EFTA Surveillance Authority",
-      "aliases": ["ESA", "Autorité de surveillance AELE"],
+      "aliases": [
+        "ESA",
+        "Autorité de surveillance AELE"
+      ],
       "type": "ORG",
-      "context": "Authority monitoring compliance with EEA rules in Iceland, Liechtenstein and Norway, including competition and State aid"
+      "context": "Authority monitoring compliance with EEA rules in Iceland, Liechtenstein and Norway, including competition and State aid",
+      "redact": false
     },
     {
       "canonical": "EFTA Court",
-      "aliases": ["Cour AELE"],
+      "aliases": [
+        "Cour AELE"
+      ],
       "type": "ORG",
-      "context": "Court for the three EEA EFTA states; interprets the EEA Agreement; based in Luxembourg"
+      "context": "Court for the three EEA EFTA states; interprets the EEA Agreement; based in Luxembourg",
+      "redact": false
     },
     {
       "canonical": "European Free Trade Association",
-      "aliases": ["EFTA", "AELE", "Association européenne de libre-échange"],
+      "aliases": [
+        "EFTA",
+        "AELE",
+        "Association européenne de libre-échange"
+      ],
       "type": "ORG",
-      "context": "Intergovernmental organisation of Iceland, Liechtenstein, Norway and Switzerland promoting free trade"
+      "context": "Intergovernmental organisation of Iceland, Liechtenstein, Norway and Switzerland promoting free trade",
+      "redact": false
     },
     {
       "canonical": "Belgian Competition Authority",
@@ -245,673 +394,1125 @@
         "BMA"
       ],
       "type": "ORG",
-      "context": "Belgian national competition authority; enforces Belgian and EU competition law within Belgium"
+      "context": "Belgian national competition authority; enforces Belgian and EU competition law within Belgium",
+      "redact": false
     },
     {
       "canonical": "Autorité de la concurrence",
-      "aliases": ["ADLC", "French Competition Authority"],
+      "aliases": [
+        "ADLC",
+        "French Competition Authority"
+      ],
       "type": "ORG",
-      "context": "French national competition authority; enforces French and EU competition law within France"
+      "context": "French national competition authority; enforces French and EU competition law within France",
+      "redact": false
     },
     {
       "canonical": "Bundeskartellamt",
-      "aliases": ["BKartA", "German Federal Cartel Office"],
+      "aliases": [
+        "BKartA",
+        "German Federal Cartel Office"
+      ],
       "type": "ORG",
-      "context": "German national competition authority; enforces German and EU competition law within Germany"
+      "context": "German national competition authority; enforces German and EU competition law within Germany",
+      "redact": false
     },
     {
       "canonical": "Bundeswettbewerbsbehörde",
-      "aliases": ["BWB", "Austrian Federal Competition Authority"],
+      "aliases": [
+        "BWB",
+        "Austrian Federal Competition Authority"
+      ],
       "type": "ORG",
-      "context": "Austrian national competition authority; enforces Austrian and EU competition law within Austria"
+      "context": "Austrian national competition authority; enforces Austrian and EU competition law within Austria",
+      "redact": false
     },
     {
       "canonical": "Komisia za zashtita na konkurentsiyata",
-      "aliases": ["CPC Bulgaria", "Bulgarian Commission on Protection of Competition", "КЗК"],
+      "aliases": [
+        "CPC Bulgaria",
+        "Bulgarian Commission on Protection of Competition",
+        "КЗК"
+      ],
       "type": "ORG",
-      "context": "Bulgarian national competition authority; enforces Bulgarian and EU competition law within Bulgaria"
+      "context": "Bulgarian national competition authority; enforces Bulgarian and EU competition law within Bulgaria",
+      "redact": false
     },
     {
       "canonical": "Agencija za zaštitu tržišnog natjecanja",
-      "aliases": ["AZTN", "Croatian Competition Agency"],
+      "aliases": [
+        "AZTN",
+        "Croatian Competition Agency"
+      ],
       "type": "ORG",
-      "context": "Croatian national competition authority; enforces Croatian and EU competition law within Croatia"
+      "context": "Croatian national competition authority; enforces Croatian and EU competition law within Croatia",
+      "redact": false
     },
     {
       "canonical": "Commission for the Protection of Competition (Cyprus)",
-      "aliases": ["CPC Cyprus", "Επιτροπή Προστασίας του Ανταγωνισμού"],
+      "aliases": [
+        "CPC Cyprus",
+        "Επιτροπή Προστασίας του Ανταγωνισμού"
+      ],
       "type": "ORG",
-      "context": "Cypriot national competition authority; enforces Cypriot and EU competition law within Cyprus"
+      "context": "Cypriot national competition authority; enforces Cypriot and EU competition law within Cyprus",
+      "redact": false
     },
     {
       "canonical": "Úřad pro ochranu hospodářské soutěže",
-      "aliases": ["ÚOHS", "Czech Office for the Protection of Competition"],
+      "aliases": [
+        "ÚOHS",
+        "Czech Office for the Protection of Competition"
+      ],
       "type": "ORG",
-      "context": "Czech national competition authority; enforces Czech and EU competition law within Czechia"
+      "context": "Czech national competition authority; enforces Czech and EU competition law within Czechia",
+      "redact": false
     },
     {
       "canonical": "Konkurrence- og Forbrugerstyrelsen",
-      "aliases": ["KFST", "Danish Competition and Consumer Authority"],
+      "aliases": [
+        "KFST",
+        "Danish Competition and Consumer Authority"
+      ],
       "type": "ORG",
-      "context": "Danish national competition authority; enforces Danish and EU competition law within Denmark"
+      "context": "Danish national competition authority; enforces Danish and EU competition law within Denmark",
+      "redact": false
     },
     {
       "canonical": "Konkurentsiamet",
-      "aliases": ["Estonian Competition Authority"],
+      "aliases": [
+        "Estonian Competition Authority"
+      ],
       "type": "ORG",
-      "context": "Estonian national competition authority; enforces Estonian and EU competition law within Estonia"
+      "context": "Estonian national competition authority; enforces Estonian and EU competition law within Estonia",
+      "redact": false
     },
     {
       "canonical": "Kilpailu- ja kuluttajavirasto",
-      "aliases": ["KKV", "Finnish Competition and Consumer Authority", "FCCA"],
+      "aliases": [
+        "KKV",
+        "Finnish Competition and Consumer Authority",
+        "FCCA"
+      ],
       "type": "ORG",
-      "context": "Finnish national competition authority; enforces Finnish and EU competition law within Finland"
+      "context": "Finnish national competition authority; enforces Finnish and EU competition law within Finland",
+      "redact": false
     },
     {
       "canonical": "Epitropi Antagonismou",
-      "aliases": ["HCC", "Hellenic Competition Commission", "Επιτροπή Ανταγωνισμού"],
+      "aliases": [
+        "HCC",
+        "Hellenic Competition Commission",
+        "Επιτροπή Ανταγωνισμού"
+      ],
       "type": "ORG",
-      "context": "Greek national competition authority; enforces Greek and EU competition law within Greece"
+      "context": "Greek national competition authority; enforces Greek and EU competition law within Greece",
+      "redact": false
     },
     {
       "canonical": "Gazdasági Versenyhivatal",
-      "aliases": ["GVH", "Hungarian Competition Authority"],
+      "aliases": [
+        "GVH",
+        "Hungarian Competition Authority"
+      ],
       "type": "ORG",
-      "context": "Hungarian national competition authority; enforces Hungarian and EU competition law within Hungary"
+      "context": "Hungarian national competition authority; enforces Hungarian and EU competition law within Hungary",
+      "redact": false
     },
     {
       "canonical": "Competition and Consumer Protection Commission",
-      "aliases": ["CCPC", "Irish Competition Authority"],
+      "aliases": [
+        "CCPC",
+        "Irish Competition Authority"
+      ],
       "type": "ORG",
-      "context": "Irish national competition authority; enforces Irish and EU competition law within Ireland"
+      "context": "Irish national competition authority; enforces Irish and EU competition law within Ireland",
+      "redact": false
     },
     {
       "canonical": "Autorità Garante della Concorrenza e del Mercato",
-      "aliases": ["AGCM", "Italian Competition Authority"],
+      "aliases": [
+        "AGCM",
+        "Italian Competition Authority"
+      ],
       "type": "ORG",
-      "context": "Italian national competition authority; enforces Italian and EU competition law within Italy"
+      "context": "Italian national competition authority; enforces Italian and EU competition law within Italy",
+      "redact": false
     },
     {
       "canonical": "Konkurences padome",
-      "aliases": ["KP", "Latvian Competition Council"],
+      "aliases": [
+        "KP",
+        "Latvian Competition Council"
+      ],
       "type": "ORG",
-      "context": "Latvian national competition authority; enforces Latvian and EU competition law within Latvia"
+      "context": "Latvian national competition authority; enforces Latvian and EU competition law within Latvia",
+      "redact": false
     },
     {
       "canonical": "Konkurencijos taryba",
-      "aliases": ["Lithuanian Competition Council"],
+      "aliases": [
+        "Lithuanian Competition Council"
+      ],
       "type": "ORG",
-      "context": "Lithuanian national competition authority; enforces Lithuanian and EU competition law within Lithuania"
+      "context": "Lithuanian national competition authority; enforces Lithuanian and EU competition law within Lithuania",
+      "redact": false
     },
     {
       "canonical": "Conseil de la concurrence (Luxembourg)",
-      "aliases": ["Luxembourg Competition Council", "Autorité de concurrence du Luxembourg"],
+      "aliases": [
+        "Luxembourg Competition Council",
+        "Autorité de concurrence du Luxembourg"
+      ],
       "type": "ORG",
-      "context": "Luxembourg national competition authority; enforces Luxembourg and EU competition law within Luxembourg"
+      "context": "Luxembourg national competition authority; enforces Luxembourg and EU competition law within Luxembourg",
+      "redact": false
     },
     {
       "canonical": "Malta Competition and Consumer Affairs Authority",
-      "aliases": ["MCCAA"],
+      "aliases": [
+        "MCCAA"
+      ],
       "type": "ORG",
-      "context": "Maltese national competition authority; enforces Maltese and EU competition law within Malta"
+      "context": "Maltese national competition authority; enforces Maltese and EU competition law within Malta",
+      "redact": false
     },
     {
       "canonical": "Autoriteit Consument en Markt",
-      "aliases": ["ACM", "Dutch Authority for Consumers and Markets"],
+      "aliases": [
+        "ACM",
+        "Dutch Authority for Consumers and Markets"
+      ],
       "type": "ORG",
-      "context": "Dutch national competition authority; enforces Dutch and EU competition law within the Netherlands"
+      "context": "Dutch national competition authority; enforces Dutch and EU competition law within the Netherlands",
+      "redact": false
     },
     {
       "canonical": "Urząd Ochrony Konkurencji i Konsumentów",
-      "aliases": ["UOKiK", "Polish Office of Competition and Consumer Protection"],
+      "aliases": [
+        "UOKiK",
+        "Polish Office of Competition and Consumer Protection"
+      ],
       "type": "ORG",
-      "context": "Polish national competition authority; enforces Polish and EU competition law within Poland"
+      "context": "Polish national competition authority; enforces Polish and EU competition law within Poland",
+      "redact": false
     },
     {
       "canonical": "Autoridade da Concorrência",
-      "aliases": ["AdC", "Portuguese Competition Authority"],
+      "aliases": [
+        "AdC",
+        "Portuguese Competition Authority"
+      ],
       "type": "ORG",
-      "context": "Portuguese national competition authority; enforces Portuguese and EU competition law within Portugal"
+      "context": "Portuguese national competition authority; enforces Portuguese and EU competition law within Portugal",
+      "redact": false
     },
     {
       "canonical": "Consiliul Concurenței",
-      "aliases": ["Romanian Competition Council"],
+      "aliases": [
+        "Romanian Competition Council"
+      ],
       "type": "ORG",
-      "context": "Romanian national competition authority; enforces Romanian and EU competition law within Romania"
+      "context": "Romanian national competition authority; enforces Romanian and EU competition law within Romania",
+      "redact": false
     },
     {
       "canonical": "Protimonopolný úrad Slovenskej republiky",
-      "aliases": ["PMÚ SR", "Slovak Antimonopoly Office"],
+      "aliases": [
+        "PMÚ SR",
+        "Slovak Antimonopoly Office"
+      ],
       "type": "ORG",
-      "context": "Slovak national competition authority; enforces Slovak and EU competition law within Slovakia"
+      "context": "Slovak national competition authority; enforces Slovak and EU competition law within Slovakia",
+      "redact": false
     },
     {
       "canonical": "Javna agencija za varstvo konkurence",
-      "aliases": ["AVK", "Slovenian Competition Protection Agency"],
+      "aliases": [
+        "AVK",
+        "Slovenian Competition Protection Agency"
+      ],
       "type": "ORG",
-      "context": "Slovenian national competition authority; enforces Slovenian and EU competition law within Slovenia"
+      "context": "Slovenian national competition authority; enforces Slovenian and EU competition law within Slovenia",
+      "redact": false
     },
     {
       "canonical": "Comisión Nacional de los Mercados y la Competencia",
-      "aliases": ["CNMC", "Spanish National Markets and Competition Commission"],
+      "aliases": [
+        "CNMC",
+        "Spanish National Markets and Competition Commission"
+      ],
       "type": "ORG",
-      "context": "Spanish national competition authority and sectoral regulator; enforces Spanish and EU competition law within Spain"
+      "context": "Spanish national competition authority and sectoral regulator; enforces Spanish and EU competition law within Spain",
+      "redact": false
     },
     {
       "canonical": "Konkurrensverket",
-      "aliases": ["KKV Sweden", "Swedish Competition Authority"],
+      "aliases": [
+        "KKV Sweden",
+        "Swedish Competition Authority"
+      ],
       "type": "ORG",
-      "context": "Swedish national competition authority; enforces Swedish and EU competition law within Sweden"
+      "context": "Swedish national competition authority; enforces Swedish and EU competition law within Sweden",
+      "redact": false
     },
     {
       "canonical": "Commission nationale de l'informatique et des libertés",
-      "aliases": ["CNIL", "French Data Protection Authority"],
+      "aliases": [
+        "CNIL",
+        "French Data Protection Authority"
+      ],
       "type": "ORG",
-      "context": "French data protection authority; supervises GDPR compliance within France"
+      "context": "French data protection authority; supervises GDPR compliance within France",
+      "redact": false
     },
     {
       "canonical": "Garante per la protezione dei dati personali",
-      "aliases": ["Garante", "Italian Data Protection Authority", "Garante Privacy"],
+      "aliases": [
+        "Garante",
+        "Italian Data Protection Authority",
+        "Garante Privacy"
+      ],
       "type": "ORG",
-      "context": "Italian data protection authority; supervises GDPR compliance within Italy"
+      "context": "Italian data protection authority; supervises GDPR compliance within Italy",
+      "redact": false
     },
     {
       "canonical": "Agencia Española de Protección de Datos",
-      "aliases": ["AEPD", "Spanish Data Protection Authority"],
+      "aliases": [
+        "AEPD",
+        "Spanish Data Protection Authority"
+      ],
       "type": "ORG",
-      "context": "Spanish data protection authority; supervises GDPR compliance within Spain"
+      "context": "Spanish data protection authority; supervises GDPR compliance within Spain",
+      "redact": false
     },
     {
       "canonical": "Bundesbeauftragte für den Datenschutz und die Informationsfreiheit",
-      "aliases": ["BfDI", "German Federal Data Protection Commissioner"],
+      "aliases": [
+        "BfDI",
+        "German Federal Data Protection Commissioner"
+      ],
       "type": "ORG",
-      "context": "German federal data protection supervisor; oversees federal bodies and telecom/postal sectors under GDPR"
+      "context": "German federal data protection supervisor; oversees federal bodies and telecom/postal sectors under GDPR",
+      "redact": false
     },
     {
       "canonical": "Autorité de protection des données",
-      "aliases": ["APD", "GBA", "Gegevensbeschermingsautoriteit", "Belgian Data Protection Authority"],
+      "aliases": [
+        "APD",
+        "GBA",
+        "Gegevensbeschermingsautoriteit",
+        "Belgian Data Protection Authority"
+      ],
       "type": "ORG",
-      "context": "Belgian data protection authority; supervises GDPR compliance within Belgium"
+      "context": "Belgian data protection authority; supervises GDPR compliance within Belgium",
+      "redact": false
     },
     {
       "canonical": "Autoriteit Persoonsgegevens",
-      "aliases": ["AP", "Dutch Data Protection Authority"],
+      "aliases": [
+        "AP",
+        "Dutch Data Protection Authority"
+      ],
       "type": "ORG",
-      "context": "Dutch data protection authority; supervises GDPR compliance within the Netherlands"
+      "context": "Dutch data protection authority; supervises GDPR compliance within the Netherlands",
+      "redact": false
     },
     {
       "canonical": "Datatilsynet (Denmark)",
-      "aliases": ["Danish Data Protection Agency"],
+      "aliases": [
+        "Danish Data Protection Agency"
+      ],
       "type": "ORG",
-      "context": "Danish data protection authority; supervises GDPR compliance within Denmark"
+      "context": "Danish data protection authority; supervises GDPR compliance within Denmark",
+      "redact": false
     },
     {
       "canonical": "Datenschutzbehörde",
-      "aliases": ["DSB", "Austrian Data Protection Authority"],
+      "aliases": [
+        "DSB",
+        "Austrian Data Protection Authority"
+      ],
       "type": "ORG",
-      "context": "Austrian data protection authority; supervises GDPR compliance within Austria"
+      "context": "Austrian data protection authority; supervises GDPR compliance within Austria",
+      "redact": false
     },
     {
       "canonical": "Komisja za zashtita na lichnite danni",
-      "aliases": ["KZLD", "Bulgarian Data Protection Commission", "CPDP Bulgaria"],
+      "aliases": [
+        "KZLD",
+        "Bulgarian Data Protection Commission",
+        "CPDP Bulgaria"
+      ],
       "type": "ORG",
-      "context": "Bulgarian data protection authority; supervises GDPR compliance within Bulgaria"
+      "context": "Bulgarian data protection authority; supervises GDPR compliance within Bulgaria",
+      "redact": false
     },
     {
       "canonical": "Agencija za zaštitu osobnih podataka",
-      "aliases": ["AZOP", "Croatian Personal Data Protection Agency"],
+      "aliases": [
+        "AZOP",
+        "Croatian Personal Data Protection Agency"
+      ],
       "type": "ORG",
-      "context": "Croatian data protection authority; supervises GDPR compliance within Croatia"
+      "context": "Croatian data protection authority; supervises GDPR compliance within Croatia",
+      "redact": false
     },
     {
       "canonical": "Office of the Commissioner for Personal Data Protection (Cyprus)",
-      "aliases": ["Cyprus DPA"],
+      "aliases": [
+        "Cyprus DPA"
+      ],
       "type": "ORG",
-      "context": "Cypriot data protection authority; supervises GDPR compliance within Cyprus"
+      "context": "Cypriot data protection authority; supervises GDPR compliance within Cyprus",
+      "redact": false
     },
     {
       "canonical": "Úřad pro ochranu osobních údajů",
-      "aliases": ["ÚOOÚ", "Czech Data Protection Office"],
+      "aliases": [
+        "ÚOOÚ",
+        "Czech Data Protection Office"
+      ],
       "type": "ORG",
-      "context": "Czech data protection authority; supervises GDPR compliance within Czechia"
+      "context": "Czech data protection authority; supervises GDPR compliance within Czechia",
+      "redact": false
     },
     {
       "canonical": "Andmekaitse Inspektsioon",
-      "aliases": ["AKI", "Estonian Data Protection Inspectorate"],
+      "aliases": [
+        "AKI",
+        "Estonian Data Protection Inspectorate"
+      ],
       "type": "ORG",
-      "context": "Estonian data protection authority; supervises GDPR compliance within Estonia"
+      "context": "Estonian data protection authority; supervises GDPR compliance within Estonia",
+      "redact": false
     },
     {
       "canonical": "Tietosuojavaltuutetun toimisto",
-      "aliases": ["Finnish Data Protection Ombudsman", "Tietosuojavaltuutettu"],
+      "aliases": [
+        "Finnish Data Protection Ombudsman",
+        "Tietosuojavaltuutettu"
+      ],
       "type": "ORG",
-      "context": "Finnish data protection authority; supervises GDPR compliance within Finland"
+      "context": "Finnish data protection authority; supervises GDPR compliance within Finland",
+      "redact": false
     },
     {
       "canonical": "Hellenic Data Protection Authority",
-      "aliases": ["HDPA", "Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα"],
+      "aliases": [
+        "HDPA",
+        "Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα"
+      ],
       "type": "ORG",
-      "context": "Greek data protection authority; supervises GDPR compliance within Greece"
+      "context": "Greek data protection authority; supervises GDPR compliance within Greece",
+      "redact": false
     },
     {
       "canonical": "Nemzeti Adatvédelmi és Információszabadság Hatóság",
-      "aliases": ["NAIH", "Hungarian National Authority for Data Protection and Freedom of Information"],
+      "aliases": [
+        "NAIH",
+        "Hungarian National Authority for Data Protection and Freedom of Information"
+      ],
       "type": "ORG",
-      "context": "Hungarian data protection authority; supervises GDPR compliance within Hungary"
+      "context": "Hungarian data protection authority; supervises GDPR compliance within Hungary",
+      "redact": false
     },
     {
       "canonical": "Data Protection Commission (Ireland)",
-      "aliases": ["DPC", "Irish Data Protection Commission"],
+      "aliases": [
+        "DPC",
+        "Irish Data Protection Commission"
+      ],
       "type": "ORG",
-      "context": "Irish data protection authority; lead supervisor for many big-tech firms with EU HQ in Ireland"
+      "context": "Irish data protection authority; lead supervisor for many big-tech firms with EU HQ in Ireland",
+      "redact": false
     },
     {
       "canonical": "Datu valsts inspekcija",
-      "aliases": ["DVI", "Latvian Data State Inspectorate"],
+      "aliases": [
+        "DVI",
+        "Latvian Data State Inspectorate"
+      ],
       "type": "ORG",
-      "context": "Latvian data protection authority; supervises GDPR compliance within Latvia"
+      "context": "Latvian data protection authority; supervises GDPR compliance within Latvia",
+      "redact": false
     },
     {
       "canonical": "Valstybinė duomenų apsaugos inspekcija",
-      "aliases": ["VDAI", "Lithuanian State Data Protection Inspectorate"],
+      "aliases": [
+        "VDAI",
+        "Lithuanian State Data Protection Inspectorate"
+      ],
       "type": "ORG",
-      "context": "Lithuanian data protection authority; supervises GDPR compliance within Lithuania"
+      "context": "Lithuanian data protection authority; supervises GDPR compliance within Lithuania",
+      "redact": false
     },
     {
       "canonical": "Commission nationale pour la protection des données",
-      "aliases": ["CNPD Luxembourg", "Luxembourg Data Protection Authority"],
+      "aliases": [
+        "CNPD Luxembourg",
+        "Luxembourg Data Protection Authority"
+      ],
       "type": "ORG",
-      "context": "Luxembourg data protection authority; supervises GDPR compliance within Luxembourg"
+      "context": "Luxembourg data protection authority; supervises GDPR compliance within Luxembourg",
+      "redact": false
     },
     {
       "canonical": "Office of the Information and Data Protection Commissioner (Malta)",
-      "aliases": ["IDPC", "Malta DPA"],
+      "aliases": [
+        "IDPC",
+        "Malta DPA"
+      ],
       "type": "ORG",
-      "context": "Maltese data protection authority; supervises GDPR compliance within Malta"
+      "context": "Maltese data protection authority; supervises GDPR compliance within Malta",
+      "redact": false
     },
     {
       "canonical": "Urząd Ochrony Danych Osobowych",
-      "aliases": ["UODO", "Polish Personal Data Protection Office"],
+      "aliases": [
+        "UODO",
+        "Polish Personal Data Protection Office"
+      ],
       "type": "ORG",
-      "context": "Polish data protection authority; supervises GDPR compliance within Poland"
+      "context": "Polish data protection authority; supervises GDPR compliance within Poland",
+      "redact": false
     },
     {
       "canonical": "Comissão Nacional de Proteção de Dados",
-      "aliases": ["CNPD Portugal", "Portuguese Data Protection Commission"],
+      "aliases": [
+        "CNPD Portugal",
+        "Portuguese Data Protection Commission"
+      ],
       "type": "ORG",
-      "context": "Portuguese data protection authority; supervises GDPR compliance within Portugal"
+      "context": "Portuguese data protection authority; supervises GDPR compliance within Portugal",
+      "redact": false
     },
     {
       "canonical": "Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal",
-      "aliases": ["ANSPDCP", "Romanian Data Protection Authority"],
+      "aliases": [
+        "ANSPDCP",
+        "Romanian Data Protection Authority"
+      ],
       "type": "ORG",
-      "context": "Romanian data protection authority; supervises GDPR compliance within Romania"
+      "context": "Romanian data protection authority; supervises GDPR compliance within Romania",
+      "redact": false
     },
     {
       "canonical": "Úrad na ochranu osobných údajov Slovenskej republiky",
-      "aliases": ["UOOU SR", "Slovak Data Protection Office"],
+      "aliases": [
+        "UOOU SR",
+        "Slovak Data Protection Office"
+      ],
       "type": "ORG",
-      "context": "Slovak data protection authority; supervises GDPR compliance within Slovakia"
+      "context": "Slovak data protection authority; supervises GDPR compliance within Slovakia",
+      "redact": false
     },
     {
       "canonical": "Informacijski pooblaščenec",
-      "aliases": ["IP-RS", "Slovenian Information Commissioner"],
+      "aliases": [
+        "IP-RS",
+        "Slovenian Information Commissioner"
+      ],
       "type": "ORG",
-      "context": "Slovenian data protection authority; supervises GDPR compliance within Slovenia"
+      "context": "Slovenian data protection authority; supervises GDPR compliance within Slovenia",
+      "redact": false
     },
     {
       "canonical": "Integritetsskyddsmyndigheten",
-      "aliases": ["IMY", "Swedish Authority for Privacy Protection"],
+      "aliases": [
+        "IMY",
+        "Swedish Authority for Privacy Protection"
+      ],
       "type": "ORG",
-      "context": "Swedish data protection authority; supervises GDPR compliance within Sweden"
+      "context": "Swedish data protection authority; supervises GDPR compliance within Sweden",
+      "redact": false
     },
     {
       "canonical": "United States Department of Justice Antitrust Division",
-      "aliases": ["DOJ Antitrust", "DOJ Antitrust Division", "US DOJ ATR"],
+      "aliases": [
+        "DOJ Antitrust",
+        "DOJ Antitrust Division",
+        "US DOJ ATR"
+      ],
       "type": "ORG",
-      "context": "US federal antitrust enforcer; criminal cartel prosecutions and civil antitrust litigation"
+      "context": "US federal antitrust enforcer; criminal cartel prosecutions and civil antitrust litigation",
+      "redact": false
     },
     {
       "canonical": "Federal Trade Commission",
-      "aliases": ["FTC", "US FTC"],
+      "aliases": [
+        "FTC",
+        "US FTC"
+      ],
       "type": "ORG",
-      "context": "US federal agency enforcing competition and consumer protection laws"
+      "context": "US federal agency enforcing competition and consumer protection laws",
+      "redact": false
     },
     {
       "canonical": "Competition and Markets Authority",
-      "aliases": ["CMA", "UK CMA"],
+      "aliases": [
+        "CMA",
+        "UK CMA"
+      ],
       "type": "ORG",
-      "context": "UK competition authority; enforces UK competition and consumer law and operates the Digital Markets Unit"
+      "context": "UK competition authority; enforces UK competition and consumer law and operates the Digital Markets Unit",
+      "redact": false
     },
     {
       "canonical": "Office of Communications",
-      "aliases": ["Ofcom"],
+      "aliases": [
+        "Ofcom"
+      ],
       "type": "ORG",
-      "context": "UK communications regulator with concurrent competition powers in telecoms, broadcasting and online safety"
+      "context": "UK communications regulator with concurrent competition powers in telecoms, broadcasting and online safety",
+      "redact": false
     },
     {
       "canonical": "Financial Conduct Authority",
-      "aliases": ["FCA", "UK FCA"],
+      "aliases": [
+        "FCA",
+        "UK FCA"
+      ],
       "type": "ORG",
-      "context": "UK regulator of financial services with concurrent competition powers in financial markets"
+      "context": "UK regulator of financial services with concurrent competition powers in financial markets",
+      "redact": false
     },
     {
       "canonical": "Wettbewerbskommission",
-      "aliases": ["COMCO", "WEKO", "Swiss Competition Commission", "Commission de la concurrence (CH)"],
+      "aliases": [
+        "COMCO",
+        "WEKO",
+        "Swiss Competition Commission",
+        "Commission de la concurrence (CH)"
+      ],
       "type": "ORG",
-      "context": "Swiss competition authority; enforces the Swiss Cartel Act"
+      "context": "Swiss competition authority; enforces the Swiss Cartel Act",
+      "redact": false
     },
     {
       "canonical": "Australian Competition and Consumer Commission",
-      "aliases": ["ACCC"],
+      "aliases": [
+        "ACCC"
+      ],
       "type": "ORG",
-      "context": "Australian national competition and consumer protection authority"
+      "context": "Australian national competition and consumer protection authority",
+      "redact": false
     },
     {
       "canonical": "Competition Bureau Canada",
-      "aliases": ["Competition Bureau", "Bureau de la concurrence"],
+      "aliases": [
+        "Competition Bureau",
+        "Bureau de la concurrence"
+      ],
       "type": "ORG",
-      "context": "Canadian federal competition law enforcer led by the Commissioner of Competition"
+      "context": "Canadian federal competition law enforcer led by the Commissioner of Competition",
+      "redact": false
     },
     {
       "canonical": "Japan Fair Trade Commission",
-      "aliases": ["JFTC", "公正取引委員会"],
+      "aliases": [
+        "JFTC",
+        "公正取引委員会"
+      ],
       "type": "ORG",
-      "context": "Japanese national competition authority; enforces the Antimonopoly Act"
+      "context": "Japanese national competition authority; enforces the Antimonopoly Act",
+      "redact": false
     },
     {
       "canonical": "Korea Fair Trade Commission",
-      "aliases": ["KFTC", "공정거래위원회"],
+      "aliases": [
+        "KFTC",
+        "공정거래위원회"
+      ],
       "type": "ORG",
-      "context": "South Korean national competition authority; enforces the Monopoly Regulation and Fair Trade Act"
+      "context": "South Korean national competition authority; enforces the Monopoly Regulation and Fair Trade Act",
+      "redact": false
     },
     {
       "canonical": "State Administration for Market Regulation",
-      "aliases": ["SAMR", "国家市场监督管理总局"],
+      "aliases": [
+        "SAMR",
+        "国家市场监督管理总局"
+      ],
       "type": "ORG",
-      "context": "Chinese national market regulator; enforces the Anti-Monopoly Law and merger control in China"
+      "context": "Chinese national market regulator; enforces the Anti-Monopoly Law and merger control in China",
+      "redact": false
     },
     {
       "canonical": "Conselho Administrativo de Defesa Econômica",
-      "aliases": ["CADE", "Brazilian Administrative Council for Economic Defense"],
+      "aliases": [
+        "CADE",
+        "Brazilian Administrative Council for Economic Defense"
+      ],
       "type": "ORG",
-      "context": "Brazilian national competition authority; enforces the Brazilian Competition Law"
+      "context": "Brazilian national competition authority; enforces the Brazilian Competition Law",
+      "redact": false
     },
     {
       "canonical": "Competition Commission of South Africa",
-      "aliases": ["CompCom", "South African Competition Commission"],
+      "aliases": [
+        "CompCom",
+        "South African Competition Commission"
+      ],
       "type": "ORG",
-      "context": "South African national competition authority; enforces the Competition Act"
+      "context": "South African national competition authority; enforces the Competition Act",
+      "redact": false
     },
     {
       "canonical": "Comisión Federal de Competencia Económica",
-      "aliases": ["COFECE", "Mexican Federal Economic Competition Commission"],
+      "aliases": [
+        "COFECE",
+        "Mexican Federal Economic Competition Commission"
+      ],
       "type": "ORG",
-      "context": "Mexican national competition authority; enforces the Federal Economic Competition Law"
+      "context": "Mexican national competition authority; enforces the Federal Economic Competition Law",
+      "redact": false
     },
     {
       "canonical": "Rekabet Kurumu",
-      "aliases": ["TCB", "Turkish Competition Authority"],
+      "aliases": [
+        "TCB",
+        "Turkish Competition Authority"
+      ],
       "type": "ORG",
-      "context": "Turkish national competition authority; enforces the Turkish Act on the Protection of Competition"
+      "context": "Turkish national competition authority; enforces the Turkish Act on the Protection of Competition",
+      "redact": false
     },
     {
       "canonical": "Israel Competition Authority",
-      "aliases": ["רשות התחרות", "Israeli Competition Authority"],
+      "aliases": [
+        "רשות התחרות",
+        "Israeli Competition Authority"
+      ],
       "type": "ORG",
-      "context": "Israeli national competition authority; enforces the Israeli Economic Competition Law"
+      "context": "Israeli national competition authority; enforces the Israeli Economic Competition Law",
+      "redact": false
     },
     {
       "canonical": "Competition Commission of India",
-      "aliases": ["CCI", "Indian Competition Commission"],
+      "aliases": [
+        "CCI",
+        "Indian Competition Commission"
+      ],
       "type": "ORG",
-      "context": "Indian national competition authority; enforces the Competition Act 2002"
+      "context": "Indian national competition authority; enforces the Competition Act 2002",
+      "redact": false
     },
     {
       "canonical": "Competition and Consumer Commission of Singapore",
-      "aliases": ["CCCS", "Singapore Competition Commission"],
+      "aliases": [
+        "CCCS",
+        "Singapore Competition Commission"
+      ],
       "type": "ORG",
-      "context": "Singaporean national competition and consumer protection authority"
+      "context": "Singaporean national competition and consumer protection authority",
+      "redact": false
     },
     {
       "canonical": "Organisation for Economic Co-operation and Development",
-      "aliases": ["OECD", "Organisation de coopération et de développement économiques", "OCDE"],
+      "aliases": [
+        "OECD",
+        "Organisation de coopération et de développement économiques",
+        "OCDE"
+      ],
       "type": "ORG",
-      "context": "Intergovernmental organisation of mostly high-income economies; sets economic and regulatory standards"
+      "context": "Intergovernmental organisation of mostly high-income economies; sets economic and regulatory standards",
+      "redact": false
     },
     {
       "canonical": "OECD Competition Committee",
-      "aliases": ["Comité de la concurrence de l'OCDE"],
+      "aliases": [
+        "Comité de la concurrence de l'OCDE"
+      ],
       "type": "ORG",
-      "context": "OECD body that develops international competition policy guidance and peer reviews"
+      "context": "OECD body that develops international competition policy guidance and peer reviews",
+      "redact": false
     },
     {
       "canonical": "United Nations Conference on Trade and Development",
-      "aliases": ["UNCTAD", "CNUCED"],
+      "aliases": [
+        "UNCTAD",
+        "CNUCED"
+      ],
       "type": "ORG",
-      "context": "UN body on trade, investment and development; hosts the UN Set on Restrictive Business Practices"
+      "context": "UN body on trade, investment and development; hosts the UN Set on Restrictive Business Practices",
+      "redact": false
     },
     {
       "canonical": "International Competition Network",
-      "aliases": ["ICN", "Réseau international de la concurrence"],
+      "aliases": [
+        "ICN",
+        "Réseau international de la concurrence"
+      ],
       "type": "ORG",
-      "context": "Informal network of competition authorities worldwide promoting convergence of competition law and policy"
+      "context": "Informal network of competition authorities worldwide promoting convergence of competition law and policy",
+      "redact": false
     },
     {
       "canonical": "World Trade Organization",
-      "aliases": ["WTO", "OMC", "Organisation mondiale du commerce"],
+      "aliases": [
+        "WTO",
+        "OMC",
+        "Organisation mondiale du commerce"
+      ],
       "type": "ORG",
-      "context": "Intergovernmental organisation regulating international trade; based in Geneva"
+      "context": "Intergovernmental organisation regulating international trade; based in Geneva",
+      "redact": false
     },
     {
       "canonical": "World Intellectual Property Organization",
-      "aliases": ["WIPO", "OMPI", "Organisation mondiale de la propriété intellectuelle"],
+      "aliases": [
+        "WIPO",
+        "OMPI",
+        "Organisation mondiale de la propriété intellectuelle"
+      ],
       "type": "ORG",
-      "context": "UN agency for intellectual property; administers IP treaties and global registration systems"
+      "context": "UN agency for intellectual property; administers IP treaties and global registration systems",
+      "redact": false
     },
     {
       "canonical": "International Court of Justice",
-      "aliases": ["ICJ", "Cour internationale de justice", "CIJ"],
+      "aliases": [
+        "ICJ",
+        "Cour internationale de justice",
+        "CIJ"
+      ],
       "type": "ORG",
-      "context": "Principal judicial organ of the United Nations; sits in The Hague"
+      "context": "Principal judicial organ of the United Nations; sits in The Hague",
+      "redact": false
     },
     {
       "canonical": "International Centre for Settlement of Investment Disputes",
-      "aliases": ["ICSID", "CIRDI", "Centre international pour le règlement des différends relatifs aux investissements"],
+      "aliases": [
+        "ICSID",
+        "CIRDI",
+        "Centre international pour le règlement des différends relatifs aux investissements"
+      ],
       "type": "ORG",
-      "context": "World Bank Group institution administering investor-state arbitration under the ICSID Convention"
+      "context": "World Bank Group institution administering investor-state arbitration under the ICSID Convention",
+      "redact": false
     },
     {
       "canonical": "OECD Working Group on Bribery",
-      "aliases": ["WGB", "Groupe de travail de l'OCDE sur la corruption"],
+      "aliases": [
+        "WGB",
+        "Groupe de travail de l'OCDE sur la corruption"
+      ],
       "type": "ORG",
-      "context": "OECD body monitoring implementation of the Anti-Bribery Convention by State Parties"
+      "context": "OECD body monitoring implementation of the Anti-Bribery Convention by State Parties",
+      "redact": false
     },
     {
       "canonical": "Council of Europe",
-      "aliases": ["CoE", "Conseil de l'Europe"],
+      "aliases": [
+        "CoE",
+        "Conseil de l'Europe"
+      ],
       "type": "ORG",
-      "context": "International organisation promoting human rights, democracy and the rule of law; based in Strasbourg"
+      "context": "International organisation promoting human rights, democracy and the rule of law; based in Strasbourg",
+      "redact": false
     },
     {
       "canonical": "European Court of Human Rights",
-      "aliases": ["ECtHR", "Cour européenne des droits de l'homme", "CEDH"],
+      "aliases": [
+        "ECtHR",
+        "Cour européenne des droits de l'homme",
+        "CEDH"
+      ],
       "type": "ORG",
-      "context": "Council of Europe court enforcing the European Convention on Human Rights; sits in Strasbourg"
+      "context": "Council of Europe court enforcing the European Convention on Human Rights; sits in Strasbourg",
+      "redact": false
     },
     {
       "canonical": "Venice Commission",
-      "aliases": ["European Commission for Democracy through Law", "Commission de Venise"],
+      "aliases": [
+        "European Commission for Democracy through Law",
+        "Commission de Venise"
+      ],
       "type": "ORG",
-      "context": "Council of Europe advisory body on constitutional matters"
+      "context": "Council of Europe advisory body on constitutional matters",
+      "redact": false
     },
     {
       "canonical": "Cour constitutionnelle (Belgium)",
-      "aliases": ["Grondwettelijk Hof", "Belgian Constitutional Court", "Verfassungsgerichtshof (BE)"],
+      "aliases": [
+        "Grondwettelijk Hof",
+        "Belgian Constitutional Court",
+        "Verfassungsgerichtshof (BE)"
+      ],
       "type": "ORG",
-      "context": "Belgian Constitutional Court; rules on conformity of legislation with the Constitution and federal division of powers"
+      "context": "Belgian Constitutional Court; rules on conformity of legislation with the Constitution and federal division of powers",
+      "redact": false
     },
     {
       "canonical": "Cour de cassation (Belgium)",
-      "aliases": ["Hof van Cassatie", "Belgian Court of Cassation"],
+      "aliases": [
+        "Hof van Cassatie",
+        "Belgian Court of Cassation"
+      ],
       "type": "ORG",
-      "context": "Belgian supreme court for civil, commercial and criminal matters; reviews points of law"
+      "context": "Belgian supreme court for civil, commercial and criminal matters; reviews points of law",
+      "redact": false
     },
     {
       "canonical": "Conseil d'État (Belgium)",
-      "aliases": ["Raad van State (BE)", "Belgian Council of State"],
+      "aliases": [
+        "Raad van State (BE)",
+        "Belgian Council of State"
+      ],
       "type": "ORG",
-      "context": "Belgian supreme administrative court; reviews legality of administrative acts and advises on legislation"
+      "context": "Belgian supreme administrative court; reviews legality of administrative acts and advises on legislation",
+      "redact": false
     },
     {
       "canonical": "Conseil constitutionnel",
-      "aliases": ["French Constitutional Council"],
+      "aliases": [
+        "French Constitutional Council"
+      ],
       "type": "ORG",
-      "context": "French Constitutional Council; reviews constitutionality of laws and rules on elections"
+      "context": "French Constitutional Council; reviews constitutionality of laws and rules on elections",
+      "redact": false
     },
     {
       "canonical": "Cour de cassation (France)",
-      "aliases": ["French Court of Cassation"],
+      "aliases": [
+        "French Court of Cassation"
+      ],
       "type": "ORG",
-      "context": "French supreme court for civil and criminal matters; reviews points of law"
+      "context": "French supreme court for civil and criminal matters; reviews points of law",
+      "redact": false
     },
     {
       "canonical": "Conseil d'État (France)",
-      "aliases": ["French Council of State"],
+      "aliases": [
+        "French Council of State"
+      ],
       "type": "ORG",
-      "context": "French supreme administrative court and government legal adviser"
+      "context": "French supreme administrative court and government legal adviser",
+      "redact": false
     },
     {
       "canonical": "Bundesverfassungsgericht",
-      "aliases": ["BVerfG", "German Federal Constitutional Court"],
+      "aliases": [
+        "BVerfG",
+        "German Federal Constitutional Court"
+      ],
       "type": "ORG",
-      "context": "German Federal Constitutional Court; rules on conformity with the Basic Law; sits in Karlsruhe"
+      "context": "German Federal Constitutional Court; rules on conformity with the Basic Law; sits in Karlsruhe",
+      "redact": false
     },
     {
       "canonical": "Bundesgerichtshof",
-      "aliases": ["BGH", "German Federal Court of Justice"],
+      "aliases": [
+        "BGH",
+        "German Federal Court of Justice"
+      ],
       "type": "ORG",
-      "context": "German Federal Court of Justice; supreme court for civil and criminal matters"
+      "context": "German Federal Court of Justice; supreme court for civil and criminal matters",
+      "redact": false
     },
     {
       "canonical": "Corte costituzionale",
-      "aliases": ["Italian Constitutional Court", "Consulta"],
+      "aliases": [
+        "Italian Constitutional Court",
+        "Consulta"
+      ],
       "type": "ORG",
-      "context": "Italian Constitutional Court; rules on the constitutionality of laws"
+      "context": "Italian Constitutional Court; rules on the constitutionality of laws",
+      "redact": false
     },
     {
       "canonical": "Corte di cassazione",
-      "aliases": ["Italian Court of Cassation", "Cassazione"],
+      "aliases": [
+        "Italian Court of Cassation",
+        "Cassazione"
+      ],
       "type": "ORG",
-      "context": "Italian supreme court for civil and criminal matters; reviews points of law"
+      "context": "Italian supreme court for civil and criminal matters; reviews points of law",
+      "redact": false
     },
     {
       "canonical": "Tribunal Constitucional (Spain)",
-      "aliases": ["Spanish Constitutional Court", "TC España"],
+      "aliases": [
+        "Spanish Constitutional Court",
+        "TC España"
+      ],
       "type": "ORG",
-      "context": "Spanish Constitutional Court; rules on conformity of laws with the Constitution"
+      "context": "Spanish Constitutional Court; rules on conformity of laws with the Constitution",
+      "redact": false
     },
     {
       "canonical": "Tribunal Supremo",
-      "aliases": ["Spanish Supreme Court", "TS España"],
+      "aliases": [
+        "Spanish Supreme Court",
+        "TS España"
+      ],
       "type": "ORG",
-      "context": "Spanish Supreme Court; highest court in all matters except constitutional"
+      "context": "Spanish Supreme Court; highest court in all matters except constitutional",
+      "redact": false
     },
     {
       "canonical": "Hoge Raad",
-      "aliases": ["Hoge Raad der Nederlanden", "Dutch Supreme Court"],
+      "aliases": [
+        "Hoge Raad der Nederlanden",
+        "Dutch Supreme Court"
+      ],
       "type": "ORG",
-      "context": "Dutch Supreme Court; reviews points of law in civil, criminal and tax matters"
+      "context": "Dutch Supreme Court; reviews points of law in civil, criminal and tax matters",
+      "redact": false
     },
     {
       "canonical": "Raad van State (Netherlands)",
-      "aliases": ["Dutch Council of State"],
+      "aliases": [
+        "Dutch Council of State"
+      ],
       "type": "ORG",
-      "context": "Dutch Council of State; supreme administrative court and government legal adviser"
+      "context": "Dutch Council of State; supreme administrative court and government legal adviser",
+      "redact": false
     },
     {
       "canonical": "Cour de cassation (Luxembourg)",
-      "aliases": ["Luxembourg Court of Cassation"],
+      "aliases": [
+        "Luxembourg Court of Cassation"
+      ],
       "type": "ORG",
-      "context": "Luxembourg supreme court for civil, commercial and criminal matters"
+      "context": "Luxembourg supreme court for civil, commercial and criminal matters",
+      "redact": false
     },
     {
       "canonical": "Supreme Court of the United Kingdom",
-      "aliases": ["UKSC", "UK Supreme Court"],
+      "aliases": [
+        "UKSC",
+        "UK Supreme Court"
+      ],
       "type": "ORG",
-      "context": "Final court of appeal for the United Kingdom on civil matters and for England, Wales and Northern Ireland on criminal matters"
+      "context": "Final court of appeal for the United Kingdom on civil matters and for England, Wales and Northern Ireland on criminal matters",
+      "redact": false
     },
     {
       "canonical": "Supreme Court of the United States",
-      "aliases": ["SCOTUS", "US Supreme Court"],
+      "aliases": [
+        "SCOTUS",
+        "US Supreme Court"
+      ],
       "type": "ORG",
-      "context": "Highest federal court of the United States; final arbiter on US federal law and the US Constitution"
+      "context": "Highest federal court of the United States; final arbiter on US federal law and the US Constitution",
+      "redact": false
     },
     {
       "canonical": "Verfassungsgerichtshof",
-      "aliases": ["VfGH", "Austrian Constitutional Court"],
+      "aliases": [
+        "VfGH",
+        "Austrian Constitutional Court"
+      ],
       "type": "ORG",
-      "context": "Austrian Constitutional Court; reviews conformity of laws with the Constitution"
+      "context": "Austrian Constitutional Court; reviews conformity of laws with the Constitution",
+      "redact": false
     },
     {
       "canonical": "Oberster Gerichtshof",
-      "aliases": ["OGH", "Austrian Supreme Court"],
+      "aliases": [
+        "OGH",
+        "Austrian Supreme Court"
+      ],
       "type": "ORG",
-      "context": "Austrian supreme court for civil and criminal matters"
+      "context": "Austrian supreme court for civil and criminal matters",
+      "redact": false
     },
     {
       "canonical": "Tribunal Constitucional (Portugal)",
-      "aliases": ["Portuguese Constitutional Court", "TC Portugal"],
+      "aliases": [
+        "Portuguese Constitutional Court",
+        "TC Portugal"
+      ],
       "type": "ORG",
-      "context": "Portuguese Constitutional Court; reviews conformity of laws with the Constitution"
+      "context": "Portuguese Constitutional Court; reviews conformity of laws with the Constitution",
+      "redact": false
     },
     {
       "canonical": "Supremo Tribunal de Justiça",
-      "aliases": ["STJ", "Portuguese Supreme Court of Justice"],
+      "aliases": [
+        "STJ",
+        "Portuguese Supreme Court of Justice"
+      ],
       "type": "ORG",
-      "context": "Portuguese Supreme Court of Justice; highest court for civil and criminal matters"
+      "context": "Portuguese Supreme Court of Justice; highest court for civil and criminal matters",
+      "redact": false
     },
     {
       "canonical": "Trybunał Konstytucyjny",
-      "aliases": ["TK", "Polish Constitutional Tribunal"],
+      "aliases": [
+        "TK",
+        "Polish Constitutional Tribunal"
+      ],
       "type": "ORG",
-      "context": "Polish Constitutional Tribunal; reviews conformity of legal acts with the Constitution"
+      "context": "Polish Constitutional Tribunal; reviews conformity of legal acts with the Constitution",
+      "redact": false
     },
     {
       "canonical": "Sąd Najwyższy",
-      "aliases": ["SN", "Polish Supreme Court"],
+      "aliases": [
+        "SN",
+        "Polish Supreme Court"
+      ],
       "type": "ORG",
-      "context": "Polish Supreme Court; highest court for civil, criminal and labour matters"
+      "context": "Polish Supreme Court; highest court for civil, criminal and labour matters",
+      "redact": false
     },
     {
       "canonical": "Financial Action Task Force",
-      "aliases": ["FATF", "GAFI", "Groupe d'action financière"],
+      "aliases": [
+        "FATF",
+        "GAFI",
+        "Groupe d'action financière"
+      ],
       "type": "ORG",
-      "context": "Intergovernmental body setting standards on anti-money laundering and counter-terrorist financing"
+      "context": "Intergovernmental body setting standards on anti-money laundering and counter-terrorist financing",
+      "redact": false
     },
     {
       "canonical": "Office of Foreign Assets Control",
-      "aliases": ["OFAC", "US Treasury OFAC"],
+      "aliases": [
+        "OFAC",
+        "US Treasury OFAC"
+      ],
       "type": "ORG",
-      "context": "US Treasury office administering and enforcing US economic and trade sanctions"
+      "context": "US Treasury office administering and enforcing US economic and trade sanctions",
+      "redact": false
     },
     {
       "canonical": "Bank for International Settlements",
-      "aliases": ["BIS", "BRI", "Banque des règlements internationaux"],
+      "aliases": [
+        "BIS",
+        "BRI",
+        "Banque des règlements internationaux"
+      ],
       "type": "ORG",
-      "context": "International financial institution serving central banks; based in Basel"
+      "context": "International financial institution serving central banks; based in Basel",
+      "redact": false
     },
     {
       "canonical": "International Monetary Fund",
-      "aliases": ["IMF", "FMI", "Fonds monétaire international"],
+      "aliases": [
+        "IMF",
+        "FMI",
+        "Fonds monétaire international"
+      ],
       "type": "ORG",
-      "context": "International financial institution promoting monetary cooperation and financial stability"
+      "context": "International financial institution promoting monetary cooperation and financial stability",
+      "redact": false
     },
     {
       "canonical": "World Bank",
-      "aliases": ["Banque mondiale", "World Bank Group", "WBG"],
+      "aliases": [
+        "Banque mondiale",
+        "World Bank Group",
+        "WBG"
+      ],
       "type": "ORG",
-      "context": "International financial institution providing financing and advice to developing countries"
+      "context": "International financial institution providing financing and advice to developing countries",
+      "redact": false
     }
   ]
 }

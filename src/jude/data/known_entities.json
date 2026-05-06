@@ -1639,6 +1639,18 @@
       "type": "ORG",
       "context": "EU directive on privacy in electronic communications; cookie consent rules",
       "redact": false
+    },
+    {
+      "canonical": "European Union",
+      "aliases": [
+        "EU",
+        "Union européenne",
+        "UE",
+        "Europäische Union"
+      ],
+      "type": "ORG",
+      "context": "Supranational political and economic union of 27 member states",
+      "redact": false
     }
   ]
 }

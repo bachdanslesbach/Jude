@@ -48,6 +48,30 @@ def test_trims_trailing_punctuation():
     assert (start, end) == (0, 8)
 
 
+def test_rejects_legal_document_headers():
+    """spaCy mislabels common legal-doc section headers and role labels
+    as ORG when they appear capitalised at line start. The shape filter
+    drops them deterministically."""
+
+    for label in [
+        "Buyer", "Counsel", "Working Draft", "Structure",
+        "Confidential", "Privileged", "PARTIES", "Lessor",
+        "control review", "Merger Control",
+    ]:
+        assert _normalize_span(label, 0, len(label), "en") is None, (
+            f"Should have rejected legal header: {label!r}"
+        )
+
+
+def test_does_not_reject_real_orgs_that_resemble_headers():
+    """`Pioneer` is a legitimate ORG name — even though it sounds like
+    a label, it must NOT be rejected by the legal-header filter."""
+
+    out = _normalize_span("Pioneer Industries SA", 0, 21, "en")
+    assert out is not None
+    assert out[0] == "Pioneer Industries SA"
+
+
 def test_rejects_sheet_marker():
     """`--- Sheet: Foo ---` is structural annotation injected by the XLSX
     adapter; never redactable."""

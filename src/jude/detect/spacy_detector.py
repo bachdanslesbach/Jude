@@ -54,6 +54,37 @@ _PUNCT_STRIP = " \t.,;:'\""
 # `--- ... ---`) and must never be redacted.
 _MARKER_RE = re.compile(r"^-{2,}\s*[\w\s:.()-]*?\s*-{2,}$")
 
+# Common labels in legal / business documents that spaCy occasionally
+# mislabels as ORG when they appear capitalised at the start of a line
+# or in a heading. These are document-structure tokens, not entities.
+# Stored normalised (lowercase, no punctuation) for fast lookup.
+_LEGAL_HEADERS = frozenset({
+    # Roles in transaction docs
+    "buyer", "seller", "purchaser", "vendor",
+    "lender", "borrower", "guarantor",
+    "client", "counsel", "solicitor", "attorney", "advocate",
+    "lessor", "lessee", "licensor", "licensee",
+    "drafter", "drafters", "parties",
+    # Document classifications
+    "draft", "working draft", "final", "confidential", "privileged",
+    "for discussion", "for review", "internal", "executed",
+    "annex", "exhibit", "schedule", "appendix",
+    # Section labels frequently capitalised at line start
+    "subject", "from", "to", "date", "re",
+    "memorandum", "memo", "minutes", "agenda",
+    "structure", "transaction structure", "background", "recitals",
+    "considerations", "definitions", "interpretation",
+    "representations", "warranties", "indemnification",
+    "termination", "miscellaneous", "boilerplate",
+    "governing law", "jurisdiction", "dispute resolution",
+    "force majeure", "confidentiality clause",
+    "regulatory considerations", "regulatory considerations",
+    "control review", "merger control",
+    # Common short labels
+    "section", "article", "chapter", "clause", "paragraph",
+    "title", "heading", "subheading",
+})
+
 
 @lru_cache(maxsize=8)
 def _load_model(name: str) -> spacy.language.Language:
@@ -111,6 +142,11 @@ def _normalize_span(
     # inject as structural annotation. spaCy sometimes labels them ORG;
     # they're never real content.
     if _MARKER_RE.match(s.strip()):
+        return None
+    # Reject common legal-document section labels and role headers that
+    # spaCy mislabels as ORG when they appear capitalised at line start.
+    normalised_label = re.sub(r"[^\w\s]", "", s).strip().lower()
+    if normalised_label in _LEGAL_HEADERS:
         return None
     # Drop everything past the first newline — spaCy frequently fuses
     # consecutive header lines like "Maître X\nDe:" into one entity.

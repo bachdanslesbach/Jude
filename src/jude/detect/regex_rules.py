@@ -25,6 +25,47 @@ _RULES: tuple[_Rule, ...] = (
         EntityType.IBAN,
     ),
     _Rule(
+        # EU VAT numbers: country prefix + 8-12 digits (varies by member
+        # state). Requires the prefix so we don't grab every order number.
+        "eu_vat",
+        re.compile(
+            r"\b(?:BE0?\d{9,10}|FR[A-Z0-9]{2}\d{9}|DE\d{9}|IT\d{11}|"
+            r"ES[A-Z0-9]\d{7}[A-Z0-9]|NL\d{9}B\d{2}|LU\d{8}|"
+            r"AT[Uu]\d{8}|PT\d{9}|IE\d[A-Z0-9]\d{5}[A-Z]|"
+            r"PL\d{10}|SE\d{12}|DK\d{8}|FI\d{8})\b"
+        ),
+        EntityType.IBAN,  # VAT shares the IBAN bucket for v0
+    ),
+    _Rule(
+        # French SIRET (14 digits) — must come before SIREN to win the
+        # priority race when a SIRET fully contains a SIREN as prefix.
+        "french_siret",
+        re.compile(
+            r"(?<!\d)(?:SIRET\s*[:\s]?\s*)?\d{14}(?!\d)",
+            re.IGNORECASE,
+        ),
+        EntityType.IBAN,
+    ),
+    _Rule(
+        # French SIREN (9 digits, often after the word SIREN).
+        "french_siren",
+        re.compile(
+            r"(?<!\d)(?:SIREN\s*[:\s]?\s*)?\d{9}(?!\d)",
+            re.IGNORECASE,
+        ),
+        EntityType.IBAN,
+    ),
+    _Rule(
+        # Belgian National Register number (RRN). Format: YY.MM.DD-NNN.CC
+        # where CC is a control number. Less commonly: YYMMDD-NNNCC.
+        "belgian_rrn",
+        re.compile(
+            r"\b\d{2}\.\d{2}\.\d{2}-\d{3}\.\d{2}\b"
+            r"|\b\d{6}-\d{3}\.?\d{2}\b"
+        ),
+        EntityType.IBAN,
+    ),
+    _Rule(
         "phone_intl",
         re.compile(
             r"(?<!\w)\+\d{1,3}[\s.-]?\(?\d{1,4}\)?(?:[\s.-]?\d{2,4}){2,5}(?!\w)"

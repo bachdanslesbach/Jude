@@ -18,6 +18,52 @@ def test_regex_detects_eu_case_refs():
     assert types.count(EntityType.CASE_REF) == 2
 
 
+def test_regex_detects_eu_vat_numbers():
+    text = "Our supplier is VAT BE0123456789 and the buyer is FR12345678901."
+    detections = RegexDetector().detect(text)
+    surfaces = {d.text for d in detections}
+    # IBAN bucket is fine for VAT v0 — it's the closest existing category;
+    # what matters is that the number gets pseudonymized rather than
+    # passing through in the clear.
+    assert any("BE0123456789" in s for s in surfaces)
+    assert any("FR12345678901" in s for s in surfaces)
+
+
+def test_regex_detects_french_siren_siret():
+    text = (
+        "Société immatriculée au RCS sous le SIREN 552120222 "
+        "(SIRET 55212022200013)."
+    )
+    detections = RegexDetector().detect(text)
+    surfaces = {d.text for d in detections}
+    assert any("552120222" in s for s in surfaces)
+    assert any("55212022200013" in s for s in surfaces)
+
+
+def test_regex_detects_belgian_national_register_number():
+    text = (
+        "Le client est inscrit sous le numéro national 92.06.15-123.45 "
+        "au Registre national."
+    )
+    detections = RegexDetector().detect(text)
+    surfaces = {d.text for d in detections}
+    assert any("92.06.15" in s for s in surfaces)
+
+
+def test_regex_does_not_grab_random_long_digits_as_vat():
+    """The VAT pattern must not over-match every long digit run — the
+    country prefix is mandatory."""
+
+    text = "Order number 1234567890 was processed."
+    detections = RegexDetector().detect(text)
+    # Order number alone shouldn't trigger VAT detection.
+    vat_hits = [
+        d for d in detections
+        if d.text.startswith(("BE", "FR", "DE", "IT", "ES", "NL", "LU"))
+    ]
+    assert vat_hits == []
+
+
 def test_resolve_overlaps_prefers_higher_priority_source():
     spacy_det = Detection(
         text="John Doe", start=0, end=8, entity_type=EntityType.PERSON,

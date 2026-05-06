@@ -17,6 +17,8 @@ from pathlib import Path
 
 from typing import Iterator
 
+from pydantic import BaseModel, ConfigDict
+
 from .adapters import DocxAdapter, PdfAdapter, TextAdapter, XlsxAdapter
 from .context import ContextProvider, make_provider
 from .detect import DetectionPipeline
@@ -24,7 +26,26 @@ from .llm.base import LLMClient
 from .redact import redact, redact_two_pass
 from .rehydrate import rehydrate
 from .store import Store
-from .types import Conversation, Message, MessageRole, Mode
+from .types import Conversation, Entity, Message, MessageRole, Mode
+
+
+class PreparedTurn(BaseModel):
+    """A user turn that has been detected + redacted but not yet sent.
+
+    The entities are already persisted in the per-matter store (so
+    pseudonym allocation is stable), but the user message and the
+    assistant message have NOT been written to the conversation log.
+    The UI shows the user this object's `redacted_text` for review;
+    on approval we move on to `commit_streaming_turn` which finally
+    persists messages and calls the LLM.
+    """
+
+    model_config = ConfigDict(arbitrary_types_allowed=True)
+
+    raw_text: str
+    redacted_text: str
+    entities: list[Entity]
+    conversation_id: str
 
 
 class FileAttachment:
@@ -66,6 +87,92 @@ def compose_user_message(text: str, attachments: list[FileAttachment]) -> str:
     if text.strip():
         parts.append(text)
     return "\n\n---\n\n".join(parts)
+
+
+def prepare_turn(
+    conversation: Conversation,
+    user_text: str,
+    attachments: list[FileAttachment],
+    store: Store,
+    mode: Mode,
+    use_privacy_filter: bool = False,
+    use_wikipedia: bool = False,
+    wikipedia_provider: ContextProvider | None = None,
+) -> PreparedTurn:
+    """Detect + redact for review. Entities ARE persisted (pseudonym
+    stability), but no message is written to the conversation log yet."""
+
+    matter = store.get_matter(conversation.matter_id)
+    if matter is None:
+        raise ValueError(f"Unknown matter for conversation {conversation.id}")
+
+    raw = compose_user_message(user_text, attachments)
+    pipeline = DetectionPipeline(
+        store=store,
+        matter_id=matter.id,
+        use_privacy_filter=use_privacy_filter,
+    )
+    provider = make_provider(
+        use_wikipedia=use_wikipedia or wikipedia_provider is not None,
+        wikipedia_provider=wikipedia_provider,
+    )
+    redaction = redact_two_pass(
+        raw, pipeline, store, matter.id, mode,
+        context_provider=provider,
+    )
+    return PreparedTurn(
+        raw_text=raw,
+        redacted_text=redaction.redacted_text,
+        entities=redaction.entities_used,
+        conversation_id=conversation.id,
+    )
+
+
+def commit_streaming_turn(
+    conversation: Conversation,
+    prepared: PreparedTurn,
+    store: Store,
+    mode: Mode,
+    llm: LLMClient,
+) -> Iterator[str]:
+    """Persist the user message from a prepared turn, stream the assistant
+    reply, and persist the assistant message at end-of-stream. Yields
+    rehydrated cumulative text the same way send_turn_streaming does."""
+
+    matter = store.get_matter(conversation.matter_id)
+    if matter is None:
+        raise ValueError(f"Unknown matter for conversation {conversation.id}")
+
+    store.add_message(
+        conversation_id=conversation.id,
+        role=MessageRole.USER,
+        redacted_text=prepared.redacted_text,
+        display_text=prepared.raw_text,
+    )
+
+    history = store.list_messages(conversation.id)
+    llm_messages = [
+        {"role": m.role.value, "content": m.redacted_text} for m in history
+    ]
+
+    cumulative_redacted = ""
+    cumulative_rehydrated = ""
+    for chunk in llm.stream_chat(
+        system="",
+        messages=llm_messages,
+        mode=mode,
+        zero_retention_attested=matter.zero_retention_attested,
+    ):
+        cumulative_redacted += chunk
+        cumulative_rehydrated = rehydrate(cumulative_redacted, store, matter.id)
+        yield cumulative_rehydrated
+
+    store.add_message(
+        conversation_id=conversation.id,
+        role=MessageRole.ASSISTANT,
+        redacted_text=cumulative_redacted,
+        display_text=cumulative_rehydrated,
+    )
 
 
 def preview_detection(

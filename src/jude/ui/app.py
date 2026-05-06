@@ -13,9 +13,11 @@ import streamlit as st
 
 from jude.chat import (
     FileAttachment,
+    PreparedTurn,
+    commit_streaming_turn,
+    prepare_turn,
     preview_detection,
     send_turn,
-    send_turn_streaming,
 )
 from jude.llm import AnthropicClient, LLMClient, OllamaClient
 from jude.paths import default_db_path
@@ -374,6 +376,104 @@ def _render_turn_risk_badge(
                     st.write(f"• {reason}")
 
 
+def _pending_key(conv: Conversation) -> str:
+    return f"pending_review_{conv.id}"
+
+
+def _render_review_panel(
+    matter: Matter, conv: Conversation, pending: dict
+) -> None:
+    """Show the redacted text + entity diff for explicit human review,
+    with Approve/Cancel buttons. This is THE filter step Jude exists for."""
+
+    st.markdown("### 🔒 Review what will be sent")
+    st.caption(
+        "Nothing has been sent to the LLM yet. Read the redacted text "
+        "carefully — anything that survives this step is what the LLM "
+        "actually sees. You can cancel and edit."
+    )
+
+    cols = st.columns(2)
+    with cols[0]:
+        st.markdown("**Original (stays on your machine)**")
+        st.text_area(
+            "Original",
+            value=pending["raw_text"],
+            height=320,
+            label_visibility="collapsed",
+            disabled=True,
+            key=f"orig_review_{conv.id}",
+        )
+    with cols[1]:
+        st.markdown("**Redacted (this is what the LLM will see)**")
+        st.text_area(
+            "Redacted",
+            value=pending["redacted_text"],
+            height=320,
+            label_visibility="collapsed",
+            disabled=True,
+            key=f"red_review_{conv.id}",
+        )
+
+    entities = pending.get("entities") or []
+    if entities:
+        with st.expander(f"{len(entities)} entities mapped"):
+            for ent in entities:
+                pseudo = ent.get("pseudonym") if isinstance(ent, dict) else ent.pseudonym
+                canonical = ent.get("canonical") if isinstance(ent, dict) else ent.canonical
+                etype = ent.get("entity_type") if isinstance(ent, dict) else (
+                    ent.entity_type.value if hasattr(ent.entity_type, "value") else ent.entity_type
+                )
+                st.markdown(f"- `{pseudo}` ← **{canonical}**  _{etype}_")
+
+    risk_assess = assess_risks(
+        pending["redacted_text"],
+        _store().list_entities(matter.id),
+        matter.mode,
+    )
+    risk_assess = [r for r in risk_assess if r.score > 0]
+    if risk_assess:
+        worst = risk_assess[0]
+        badge = {
+            RiskLevel.HIGH: ":red[**HIGH** re-identification risk — review carefully]",
+            RiskLevel.MEDIUM: ":orange[**MEDIUM** re-identification risk]",
+            RiskLevel.LOW: ":blue[low re-identification risk]",
+        }[worst.level]
+        st.markdown(badge)
+        with st.expander(f"why? · top entity: {worst.pseudonym}"):
+            for r in risk_assess[:5]:
+                st.markdown(f"**{r.pseudonym}** — {r.level.value} ({r.score})")
+                for reason in r.reasons:
+                    st.write(f"• {reason}")
+
+    cols = st.columns([1, 1, 4])
+    approve = cols[0].button(
+        "✓ Approve & send", type="primary", key=f"approve_{conv.id}"
+    )
+    cancel = cols[1].button("← Cancel", key=f"cancel_{conv.id}")
+    if cancel:
+        st.session_state.pop(_pending_key(conv), None)
+        st.rerun()
+    if approve:
+        try:
+            llm = _llm_for(matter)
+            prepared_obj = PreparedTurn.model_validate(pending)
+            with st.chat_message("assistant"):
+                st.write_stream(commit_streaming_turn(
+                    conversation=conv,
+                    prepared=prepared_obj,
+                    store=_store(),
+                    mode=matter.mode,
+                    llm=llm,
+                ))
+            st.session_state.pop(_pending_key(conv), None)
+            st.rerun()
+        except PermissionError as e:
+            st.error(str(e))
+        except Exception as e:  # noqa: BLE001
+            st.error(f"Send failed: {e}")
+
+
 def render_conversation(matter: Matter, conv: Conversation) -> None:
     st.markdown(f"#### {conv.title}")
     st.caption(
@@ -393,6 +493,14 @@ def render_conversation(matter: Matter, conv: Conversation) -> None:
                 with st.expander("View what the LLM actually saw"):
                     st.code(m.redacted_text, language=None)
 
+    # If there's a pending review for this conversation, render it instead
+    # of the chat input — the user must approve or cancel before typing
+    # anything new.
+    pending = st.session_state.get(_pending_key(conv))
+    if pending:
+        _render_review_panel(matter, conv, pending)
+        return
+
     payload = st.chat_input(
         "Ask Jude — paste text or attach a file…",
         accept_file="multiple",
@@ -402,8 +510,9 @@ def render_conversation(matter: Matter, conv: Conversation) -> None:
     if not payload:
         if not messages:
             st.info(
-                "Type your question or paste a document to begin. Anything you "
-                "send is redacted on this machine before being sent to the LLM."
+                "Type your question or paste a document to begin. Every turn "
+                "is detected and redacted locally first; you'll review the "
+                "redacted form before anything is sent to the LLM."
             )
         return
 
@@ -429,30 +538,27 @@ def render_conversation(matter: Matter, conv: Conversation) -> None:
     use_pf = bool(st.session_state.get(f"use_pf_{matter.id}", False))
     use_wiki = bool(st.session_state.get(f"use_wiki_{matter.id}", False))
 
-    # Optimistic echo of the user's input so they see their bubble
-    # immediately, before the assistant streams.
-    with st.chat_message("user"):
-        st.markdown(user_text or "_(file attached)_")
+    # NEW UX: don't send straight to the LLM. Prepare the turn (run
+    # detection + redaction) and stash the result for explicit human
+    # review on the next rerun. Approve & send is a separate click.
+    try:
+        prepared = prepare_turn(
+            conversation=conv,
+            user_text=user_text,
+            attachments=attachments,
+            store=store,
+            mode=matter.mode,
+            use_privacy_filter=use_pf,
+            use_wikipedia=use_wiki,
+        )
+    except PermissionError as e:
+        st.error(str(e))
+        return
+    except Exception as e:  # noqa: BLE001
+        st.error(f"Preparation failed: {e}")
+        return
 
-    with st.chat_message("assistant"):
-        try:
-            stream = send_turn_streaming(
-                conversation=conv,
-                user_text=user_text,
-                attachments=attachments,
-                store=store,
-                mode=matter.mode,
-                llm=_llm_for(matter),
-                use_privacy_filter=use_pf,
-                use_wikipedia=use_wiki,
-            )
-            st.write_stream(stream)
-        except PermissionError as e:
-            st.error(str(e))
-            return
-        except Exception as e:  # noqa: BLE001
-            st.error(f"Turn failed: {e}")
-            return
+    st.session_state[_pending_key(conv)] = prepared.model_dump()
     st.rerun()
 
 

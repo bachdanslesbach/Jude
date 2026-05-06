@@ -206,6 +206,83 @@ def test_preview_detection_does_not_persist_anything(
     assert before == after
 
 
+def test_prepare_turn_runs_detection_without_persisting_messages(
+    store: Store, matter_id: str
+):
+    """prepare_turn() runs detection + redaction (entities ARE persisted
+    so the dictionary stays consistent and pseudonyms are stable) but
+    does NOT save any user/assistant message. The user can still cancel."""
+
+    from jude.chat import prepare_turn
+
+    conv = store.create_conversation(matter_id, title="t")
+    prepared = prepare_turn(
+        conversation=conv,
+        user_text="Amazon paid €100M.",
+        attachments=[],
+        store=store,
+        mode=Mode.STRICT,
+    )
+    # Entities created (so pseudonym allocation is committed)
+    assert len(store.list_entities(matter_id)) >= 1
+    # But no messages persisted
+    assert store.list_messages(conv.id) == []
+    # The prepared object exposes what the UI needs to render review.
+    assert "Amazon" not in prepared.redacted_text
+    assert "Amazon" in prepared.raw_text
+    assert any(e.canonical == "Amazon" for e in prepared.entities)
+
+
+def test_commit_streaming_turn_persists_both_messages_and_yields_chunks(
+    store: Store, matter_id: str
+):
+    from jude.chat import commit_streaming_turn, prepare_turn
+    from tests.test_streaming import StreamingFakeLLM
+
+    conv = store.create_conversation(matter_id, title="t")
+    prepared = prepare_turn(
+        conversation=conv,
+        user_text="Microsoft is mentioned.",
+        attachments=[],
+        store=store,
+        mode=Mode.STRICT,
+    )
+    llm = StreamingFakeLLM(chunks=["Hello ", "from the ", "model."])
+    pieces = list(commit_streaming_turn(
+        conversation=conv,
+        prepared=prepared,
+        store=store,
+        mode=Mode.STRICT,
+        llm=llm,
+    ))
+    assert pieces  # something streamed
+    msgs = store.list_messages(conv.id)
+    assert len(msgs) == 2
+    assert msgs[0].role == MessageRole.USER
+    assert msgs[1].role == MessageRole.ASSISTANT
+
+
+def test_prepare_then_discard_does_not_pollute_messages(
+    store: Store, matter_id: str
+):
+    """If the user hits Cancel after preview, no message ever gets
+    persisted — only the entities (which is fine because pseudonym
+    stability is per-matter)."""
+
+    from jude.chat import prepare_turn
+
+    conv = store.create_conversation(matter_id, title="t")
+    prepare_turn(
+        conversation=conv,
+        user_text="Some sensitive Amazon mention.",
+        attachments=[],
+        store=store,
+        mode=Mode.STRICT,
+    )
+    assert store.list_messages(conv.id) == []
+    assert any(e.canonical == "Amazon" for e in store.list_entities(matter_id))
+
+
 def test_pseudonyms_are_stable_across_turns(
     store: Store, smart_matter_id: str
 ):

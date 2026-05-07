@@ -11,12 +11,6 @@
       "text": "TotalEnergies SE"
     },
     {
-      "start": 22,
-      "end": 35,
-      "type": "ORG",
-      "text": "TotalEnergies"
-    },
-    {
       "start": 41,
       "end": 66,
       "type": "ORG",
@@ -53,22 +47,10 @@
       "text": "TotalEnergies SE"
     },
     {
-      "start": 258,
-      "end": 271,
-      "type": "ORG",
-      "text": "TotalEnergies"
-    },
-    {
       "start": 278,
       "end": 308,
       "type": "ORG",
       "text": "Mediterranean Solar Group SARL"
-    },
-    {
-      "start": 278,
-      "end": 303,
-      "type": "ORG",
-      "text": "Mediterranean Solar Group"
     },
     {
       "start": 351,

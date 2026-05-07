@@ -18,19 +18,42 @@ CORPUS_DIR = Path(__file__).parent / "corpus"
 
 def _spans(text: str, annotations: list[tuple[str, str]]) -> list[dict]:
     """Find all occurrences of each annotation, return GoldSpan dicts.
-    Same surface form repeated → multiple spans."""
 
-    out = []
+    De-duplicates: when a shorter annotation occurrence is fully
+    contained inside a longer annotation occurrence (e.g. "Lumen
+    Reality" inside "Lumen Reality SARL" at the same character
+    positions), only the longer form is kept. This is correct because
+    the benchmark uses lenient overlap: a prediction of "Lumen Reality"
+    will be credited as a TP against the longer gold span. Keeping
+    both would produce phantom false-negatives.
+    """
+
+    candidates = []
     for surface, type_ in annotations:
         for m in re.finditer(re.escape(surface), text):
-            out.append({
+            candidates.append({
                 "start": m.start(),
                 "end": m.end(),
                 "type": type_,
                 "text": surface,
             })
-    out.sort(key=lambda s: s["start"])
-    return out
+
+    # Drop any candidate strictly contained in a longer candidate of the
+    # same type at overlapping char positions.
+    kept = []
+    for c in candidates:
+        contained = any(
+            o is not c
+            and o["type"] == c["type"]
+            and o["start"] <= c["start"]
+            and c["end"] <= o["end"]
+            and (o["end"] - o["start"]) > (c["end"] - c["start"])
+            for o in candidates
+        )
+        if not contained:
+            kept.append(c)
+    kept.sort(key=lambda s: (s["start"], -(s["end"] - s["start"])))
+    return kept
 
 
 def doc_term_sheet_en():

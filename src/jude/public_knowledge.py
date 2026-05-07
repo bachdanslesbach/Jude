@@ -55,19 +55,46 @@ _LEADING_ARTICLES = (
 )
 
 
+@lru_cache(maxsize=1)
+def _no_redact_names() -> set[str]:
+    """Set of normalised canonical/alias forms regardless of type. Used
+    as a fallback when spaCy mislabels a known institution (e.g. it
+    sometimes labels 'Bundeskartellamt' as PERSON or LOC)."""
+
+    names: set[str] = set()
+    for rec in _load_bundled():
+        if rec.get("redact", True):
+            continue
+        names.update(rec.get("_normalized_aliases", set()))
+    return names
+
+
 def is_public_no_redact(text: str, entity_type: EntityType) -> bool:
     """True if `text` matches a bundled public-knowledge entity that is
-    flagged as `redact: false`. Strips a leading definite/indefinite
-    article before lookup so 'the European Commission' still matches."""
+    flagged as `redact: false`. Lookup strategy:
+
+      1. (normalised, type) exact match.
+      2. Article-stripped (normalised, type) match.
+      3. Type-agnostic name match — covers spaCy's tendency to mislabel
+         institutional names as PERSON or LOC. The bundled redact=false
+         entries are heavyweight institutions / regulations that no
+         real person or place would plausibly share a name with.
+    """
 
     norm = normalize_surface(text)
     if not norm:
         return False
-    if (norm, entity_type.value) in _no_redact_index():
+    idx = _no_redact_index()
+    names = _no_redact_names()
+    if (norm, entity_type.value) in idx:
         return True
     for art in _LEADING_ARTICLES:
         if norm.startswith(art):
             stripped = norm[len(art):].strip()
-            if stripped and (stripped, entity_type.value) in _no_redact_index():
+            if stripped and (stripped, entity_type.value) in idx:
                 return True
+            if stripped and stripped in names:
+                return True
+    if norm in names:
+        return True
     return False

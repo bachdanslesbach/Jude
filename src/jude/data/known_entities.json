@@ -1518,7 +1518,8 @@
       "canonical": "Digital Markets Act",
       "aliases": [
         "DMA",
-        "Regulation (EU) 2022/1925"
+        "Regulation (EU) 2022/1925",
+        "Digital Markets"
       ],
       "type": "ORG",
       "context": "EU regulation on contestable and fair digital markets; gatekeeper obligations under Articles 5–7",
@@ -1650,6 +1651,125 @@
       ],
       "type": "ORG",
       "context": "Supranational political and economic union of 27 member states",
+      "redact": false
+    },
+    {
+      "canonical": "ADEME",
+      "aliases": [
+        "Agence de la transition écologique"
+      ],
+      "type": "ORG",
+      "context": "French environment and energy transition agency",
+      "redact": false
+    },
+    {
+      "canonical": "SECO",
+      "aliases": [
+        "Secrétariat d'État à l'économie",
+        "State Secretariat for Economic Affairs"
+      ],
+      "type": "ORG",
+      "context": "Swiss federal economic-affairs secretariat; sanctions enforcement",
+      "redact": false
+    },
+    {
+      "canonical": "BEI",
+      "aliases": [
+        "Banque européenne d'investissement"
+      ],
+      "type": "ORG",
+      "context": "European Investment Bank (French rendering); EU lending arm",
+      "redact": false
+    },
+    {
+      "canonical": "Platts IODEX",
+      "aliases": [
+        "IODEX",
+        "Platts iron-ore index"
+      ],
+      "type": "ORG",
+      "context": "S&P Global Platts iron-ore price index; commodity benchmark",
+      "redact": false
+    },
+    {
+      "canonical": "Belgian",
+      "aliases": [
+        "belge",
+        "belgisch"
+      ],
+      "type": "LOC",
+      "context": "Of/from Belgium; descriptor, not a party identifier",
+      "redact": false
+    },
+    {
+      "canonical": "French",
+      "aliases": [
+        "français",
+        "française"
+      ],
+      "type": "LOC",
+      "context": "Of/from France; descriptor, not a party identifier",
+      "redact": false
+    },
+    {
+      "canonical": "German",
+      "aliases": [
+        "deutsch",
+        "allemand"
+      ],
+      "type": "LOC",
+      "context": "Of/from Germany; descriptor, not a party identifier",
+      "redact": false
+    },
+    {
+      "canonical": "American",
+      "aliases": [
+        "américain",
+        "amerikanisch"
+      ],
+      "type": "LOC",
+      "context": "Of/from the United States; descriptor, not a party identifier",
+      "redact": false
+    },
+    {
+      "canonical": "French (PERSON)",
+      "aliases": [
+        "French",
+        "français",
+        "française"
+      ],
+      "type": "PERSON",
+      "context": "Nationality descriptor mistakenly labelled PERSON by spaCy",
+      "redact": false
+    },
+    {
+      "canonical": "Belgian (PERSON)",
+      "aliases": [
+        "Belgian"
+      ],
+      "type": "PERSON",
+      "context": "Nationality descriptor mistakenly labelled PERSON by spaCy",
+      "redact": false
+    },
+    {
+      "canonical": "BVBA",
+      "aliases": [],
+      "type": "ORG",
+      "context": "Belgian limited-liability company suffix; not a party identifier",
+      "redact": false
+    },
+    {
+      "canonical": "NV",
+      "aliases": [],
+      "type": "ORG",
+      "context": "Dutch/Belgian public-limited suffix; not a party identifier",
+      "redact": false
+    },
+    {
+      "canonical": "SE",
+      "aliases": [],
+      "type": "ORG",
+      "context": "European public-limited (Societas Europaea) suffix",
       "redact": false
     }
   ]

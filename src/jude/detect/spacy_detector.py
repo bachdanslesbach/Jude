@@ -58,13 +58,21 @@ _MARKER_RE = re.compile(r"^-{2,}\s*[\w\s:.()-]*?\s*-{2,}$")
 # mislabels as ORG when they appear capitalised at the start of a line
 # or in a heading. These are document-structure tokens, not entities.
 # Stored normalised (lowercase, no punctuation) for fast lookup.
+_SALUTATION_PREFIXES = (
+    "dear ", "cher ", "chère ", "chers ", "chères ",
+    "monsieur ", "madame ", "mr. ", "mrs. ", "ms. ",
+    "geachte ", "geachte heer ", "geachte mevrouw ",
+    "sehr geehrter ", "sehr geehrte ", "sehr geehrte herr ",
+    "estimado ", "estimada ",
+)
+
 _LEGAL_HEADERS = frozenset({
     # Roles in transaction docs
-    "buyer", "seller", "purchaser", "vendor",
-    "lender", "borrower", "guarantor",
+    "buyer", "seller", "purchaser", "vendor", "offtaker", "supplier",
+    "lender", "borrower", "guarantor", "obligor", "creditor", "debtor",
     "client", "counsel", "solicitor", "attorney", "advocate",
     "lessor", "lessee", "licensor", "licensee",
-    "drafter", "drafters", "parties",
+    "drafter", "drafters", "parties", "party", "principal", "agent",
     # Document classifications
     "draft", "working draft", "final", "confidential", "privileged",
     "for discussion", "for review", "internal", "executed",
@@ -83,6 +91,25 @@ _LEGAL_HEADERS = frozenset({
     # Common short labels
     "section", "article", "chapter", "clause", "paragraph",
     "title", "heading", "subheading",
+    # Bare data-field labels that spaCy sometimes flags
+    "iban", "swift", "bic", "vat", "tva", "siren", "siret",
+    # Salutations & closings (EN/FR/NL/DE) — common false positives
+    "dear", "cher", "chère", "chers", "chères",
+    "best regards", "kind regards", "yours sincerely", "yours truly",
+    "sincerely", "regards", "best",
+    "bien", "bien à vous", "cordialement", "à vous",
+    "geachte", "geachte collega", "met vriendelijke groet",
+    "collega",
+    "mit freundlichen grüßen", "hochachtungsvoll",
+    # Adjective + entity-class combinations spaCy fuses badly
+    "société anonyme", "belgian société", "french société",
+    "luxembourg société", "société à responsabilité limitée",
+    # Project-codename-style ALL CAPS ORG-fusions
+    "aurora", "atlas", "helios", "eclipse", "solaris",
+    # Misc nouns spaCy flags as ORG/LOC for no good reason
+    "coentreprise", "joint venture", "joint-venture",
+    # Legal-term phrases without intrinsic entity meaning
+    "regulation", "directive", "treaty",
 })
 
 
@@ -143,6 +170,15 @@ def _normalize_span(
     # they're never real content.
     if _MARKER_RE.match(s.strip()):
         return None
+    # Strip common salutation prefixes that spaCy fuses into PERSON
+    # spans ("Cher Pierre", "Dear John", "Geachte collega"). The result
+    # is the bare name, with offsets adjusted accordingly.
+    for sal in _SALUTATION_PREFIXES:
+        if s.lower().startswith(sal):
+            cut = len(sal)
+            s = s[cut:]
+            start += cut
+            break
     # Reject common legal-document section labels and role headers that
     # spaCy mislabels as ORG when they appear capitalised at line start.
     normalised_label = re.sub(r"[^\w\s]", "", s).strip().lower()

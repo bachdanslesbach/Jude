@@ -10,9 +10,10 @@ from ..types import Detection, DetectionSource
 # 'Lumen Reality' (with no SARL) refers to the same entity and must be
 # caught — otherwise the document's first body mention escapes redaction.
 _SUFFIX_RE = re.compile(
-    r"\s+(?:Inc\.?|LLC|Ltd\.?|Limited|S\.?A\.?|SARL|SAS|"
+    r"\s+(?:Inc\.?|LLC|Ltd\.?|Limited|S\.?A\.?|SARL|SAS|SE|"
     r"GmbH|AG|N\.?V\.?|B\.?V\.?|PLC|Co\.?|Corp\.?|"
-    r"Corporation|Company|SPRL|SCRL|ASBL)\b\.?",
+    r"Corporation|Company|SPRL|SCRL|ASBL|BVBA|"
+    r"plc|s\.?p\.?a\.?|kg|ohg|oy|ab|aktiebolag|asa)\b\.?",
     re.IGNORECASE,
 )
 

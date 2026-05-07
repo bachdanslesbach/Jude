@@ -78,6 +78,20 @@ def test_aliases_match_case_insensitively():
     assert is_public_no_redact("Court of Justice", EntityType.ORG)
 
 
+def test_definite_article_does_not_block_match():
+    """spaCy frequently includes the definite article in its span boundary
+    ("the European Commission" instead of "European Commission"). The
+    public-knowledge filter must still recognize the underlying entity."""
+
+    assert is_public_no_redact("the European Commission", EntityType.ORG)
+    assert is_public_no_redact("the Commission", EntityType.ORG)
+    assert is_public_no_redact("the Digital Markets Act", EntityType.ORG)
+    assert is_public_no_redact("the CJEU", EntityType.ORG)
+    # French articles
+    assert is_public_no_redact("la Commission", EntityType.ORG)
+    assert is_public_no_redact("la Commission européenne", EntityType.ORG)
+
+
 # ---------- end-to-end ----------
 
 

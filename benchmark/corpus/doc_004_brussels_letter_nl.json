@@ -1,0 +1,69 @@
+{
+  "id": "doc_004_brussels_letter_nl",
+  "title": "Brussels-bar advice letter (Dutch)",
+  "language": "nl",
+  "text": "GEACHTE COLLEGA,\n\nHierbij bevestigen wij ons advies inzake het geschil tussen onze cliënt Vermeer Logistics BVBA en de tegenpartij De Smet & Zonen NV. Het dossier wordt behandeld door de Belgische Mededingingsautoriteit onder kenmerk C2026-001.\n\nOnze contactgegevens:\n- Maître Jan Peeters, j.peeters@example-be-legal.be, +32 2 555 0123\n- Adres kantoor: Wetstraat 16, 1040 Brussel.\n\nDe zaak verwijst naar Case C-403/19 voor de jurisdictiekwestie. Wij verwachten dat de Europese Commissie geen actie zal ondernemen onder de Digital Markets Act.\n\nHet cliëntenrekening voor de afhandeling: BE68 5390 0754 7034.\n\nMet vriendelijke groet,\nJan Peeters",
+  "gold_spans": [
+    {
+      "start": 90,
+      "end": 112,
+      "type": "ORG",
+      "text": "Vermeer Logistics BVBA"
+    },
+    {
+      "start": 131,
+      "end": 149,
+      "type": "ORG",
+      "text": "De Smet & Zonen NV"
+    },
+    {
+      "start": 277,
+      "end": 288,
+      "type": "PERSON",
+      "text": "Jan Peeters"
+    },
+    {
+      "start": 290,
+      "end": 319,
+      "type": "EMAIL",
+      "text": "j.peeters@example-be-legal.be"
+    },
+    {
+      "start": 321,
+      "end": 335,
+      "type": "PHONE",
+      "text": "+32 2 555 0123"
+    },
+    {
+      "start": 353,
+      "end": 365,
+      "type": "LOC",
+      "text": "Wetstraat 16"
+    },
+    {
+      "start": 372,
+      "end": 379,
+      "type": "LOC",
+      "text": "Brussel"
+    },
+    {
+      "start": 404,
+      "end": 417,
+      "type": "CASE_REF",
+      "text": "Case C-403/19"
+    },
+    {
+      "start": 586,
+      "end": 605,
+      "type": "IBAN",
+      "text": "BE68 5390 0754 7034"
+    },
+    {
+      "start": 632,
+      "end": 643,
+      "type": "PERSON",
+      "text": "Jan Peeters"
+    }
+  ],
+  "notes": "Dutch counsel-to-counsel letter. SHOULD redact: client / counterparty names, lawyer name + contacts, office address, case ref C-403/19 (a citation but Belgian internal reference here), IBAN. SHOULD NOT redact: Belgische Mededingingsautoriteit, Europese Commissie, Digital Markets Act."
+}

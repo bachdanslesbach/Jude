@@ -1,0 +1,87 @@
+{
+  "id": "doc_005_supply_agreement_en",
+  "title": "Iron-ore supply agreement (English)",
+  "language": "en",
+  "text": "LONG-TERM SUPPLY AGREEMENT — DRAFT v3\n\nParties:\n  Supplier: Acme Mining Holdings Ltd, a Cayman exempted company.\n  Offtaker: Bavarian Steel Holdings AG, Munich.\n\nCounsel:\n  Dr. Markus Weber (m.weber@example-de.de, +49 89 1234 5678) — for Acme Mining Holdings Ltd.\n  Lars Andersson (l.andersson@example-svensk-juridik.se) — for Bavarian Steel Holdings AG.\n\nThe agreement contemplates supply of approximately 8.4 million metric tonnes of iron ore concentrates over 5 years. Aggregate contract value: USD 2,300,000,000. Pricing follows the Platts IODEX 65% Fe Index.\n\nCompetition / antitrust:\nThe Bundeskartellamt has been informed. The Swiss COMCO is unlikely to take an interest. Article 101 TFEU applies; vertical block exemption Regulation (EU) 2022/720 may be relevant.\n\nSanctions:\nThe Supplier confirms compliance with OFAC, EU sanctions (Council Regulation (EU) 833/2014), and SECO requirements.\n\nWire instructions:\nBeneficiary: Acme Mining Holdings Ltd\nIBAN: DE89 3704 0044 0532 0130 00\nSWIFT/BIC: COBADEFFXXX\n\nSigned at Hamburg on 15 May 2026.",
+  "gold_spans": [
+    {
+      "start": 60,
+      "end": 84,
+      "type": "ORG",
+      "text": "Acme Mining Holdings Ltd"
+    },
+    {
+      "start": 125,
+      "end": 151,
+      "type": "ORG",
+      "text": "Bavarian Steel Holdings AG"
+    },
+    {
+      "start": 153,
+      "end": 159,
+      "type": "LOC",
+      "text": "Munich"
+    },
+    {
+      "start": 177,
+      "end": 189,
+      "type": "PERSON",
+      "text": "Markus Weber"
+    },
+    {
+      "start": 191,
+      "end": 212,
+      "type": "EMAIL",
+      "text": "m.weber@example-de.de"
+    },
+    {
+      "start": 214,
+      "end": 230,
+      "type": "PHONE",
+      "text": "+49 89 1234 5678"
+    },
+    {
+      "start": 238,
+      "end": 262,
+      "type": "ORG",
+      "text": "Acme Mining Holdings Ltd"
+    },
+    {
+      "start": 266,
+      "end": 280,
+      "type": "PERSON",
+      "text": "Lars Andersson"
+    },
+    {
+      "start": 282,
+      "end": 319,
+      "type": "EMAIL",
+      "text": "l.andersson@example-svensk-juridik.se"
+    },
+    {
+      "start": 327,
+      "end": 353,
+      "type": "ORG",
+      "text": "Bavarian Steel Holdings AG"
+    },
+    {
+      "start": 933,
+      "end": 957,
+      "type": "ORG",
+      "text": "Acme Mining Holdings Ltd"
+    },
+    {
+      "start": 964,
+      "end": 991,
+      "type": "IBAN",
+      "text": "DE89 3704 0044 0532 0130 00"
+    },
+    {
+      "start": 1026,
+      "end": 1033,
+      "type": "LOC",
+      "text": "Hamburg"
+    }
+  ],
+  "notes": "Long-term commodity supply agreement. SHOULD redact: supplier / offtaker names, counsel names + contacts, IBAN, city refs that locate parties (Munich = offtaker HQ, Hamburg = signing place). SHOULD NOT redact: Bundeskartellamt, Swiss COMCO, OFAC, SECO, Article 101 TFEU, Regulation (EU) 2022/720, Council Regulation (EU) 833/2014."
+}

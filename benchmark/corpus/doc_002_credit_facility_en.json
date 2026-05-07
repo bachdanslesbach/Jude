@@ -1,0 +1,87 @@
+{
+  "id": "doc_002_credit_facility_en",
+  "title": "Pioneer Industries / UBS — Credit facility memo",
+  "language": "en",
+  "text": "MEMORANDUM — €750M REVOLVING CREDIT FACILITY\n\nTo: Christian Hartmann (c.hartmann@ubs-legal.ch, +41 44 234 5678)\nFrom: Anne-Sophie Lefèvre, External Counsel\nSubject: Pioneer Industries SA / UBS — proposed pricing terms\n\nDear Christian,\n\nPioneer Industries SA, a Luxembourg société anonyme, has requested a €750,000,000 multi-currency revolving credit facility from UBS. Pricing on the term sheet is SOFR + 175 bps, stepping down to 125 bps at investment grade. Disbursement will route through IBAN LU60 0030 1234 5678 9000.\n\nThe Bundeskartellamt and the Autorité de la concurrence have been notified. The European Banking Authority has issued no objection to the proposed structure under the leveraged-transactions guidance. We expect closing by Q3 2026.\n\nThe matter ID for our records is M-2026-PIO-001.\n\nPlease call me at +33 1 53 89 76 21 if you have questions.\n\nBest regards,\nAnne-Sophie Lefèvre\na.lefevre@example-swiss-legal.ch",
+  "gold_spans": [
+    {
+      "start": 50,
+      "end": 68,
+      "type": "PERSON",
+      "text": "Christian Hartmann"
+    },
+    {
+      "start": 70,
+      "end": 93,
+      "type": "EMAIL",
+      "text": "c.hartmann@ubs-legal.ch"
+    },
+    {
+      "start": 95,
+      "end": 110,
+      "type": "PHONE",
+      "text": "+41 44 234 5678"
+    },
+    {
+      "start": 118,
+      "end": 137,
+      "type": "PERSON",
+      "text": "Anne-Sophie Lefèvre"
+    },
+    {
+      "start": 165,
+      "end": 186,
+      "type": "ORG",
+      "text": "Pioneer Industries SA"
+    },
+    {
+      "start": 189,
+      "end": 192,
+      "type": "ORG",
+      "text": "UBS"
+    },
+    {
+      "start": 236,
+      "end": 257,
+      "type": "ORG",
+      "text": "Pioneer Industries SA"
+    },
+    {
+      "start": 261,
+      "end": 271,
+      "type": "LOC",
+      "text": "Luxembourg"
+    },
+    {
+      "start": 364,
+      "end": 367,
+      "type": "ORG",
+      "text": "UBS"
+    },
+    {
+      "start": 497,
+      "end": 521,
+      "type": "IBAN",
+      "text": "LU60 0030 1234 5678 9000"
+    },
+    {
+      "start": 823,
+      "end": 840,
+      "type": "PHONE",
+      "text": "+33 1 53 89 76 21"
+    },
+    {
+      "start": 879,
+      "end": 898,
+      "type": "PERSON",
+      "text": "Anne-Sophie Lefèvre"
+    },
+    {
+      "start": 899,
+      "end": 931,
+      "type": "EMAIL",
+      "text": "a.lefevre@example-swiss-legal.ch"
+    }
+  ],
+  "notes": "Counsel-to-counsel memorandum on a syndicated facility. SHOULD redact: lawyer names + contacts, borrower (Pioneer Industries SA), arranger (UBS, since here it's a party not a regulator). SHOULD NOT redact: Bundeskartellamt, Autorité de la concurrence, European Banking Authority — these are regulators in plain references. The matter ID M-2026-PIO-001 is internal but not necessarily PII; conservative annotation excludes it."
+}

@@ -1,0 +1,141 @@
+{
+  "id": "doc_003_solaris_jv_fr",
+  "title": "Projet Solaris — Note JV (French)",
+  "language": "fr",
+  "text": "NOTE CONFIDENTIELLE — TotalEnergies SE / Mediterranean Solar Group\n\nBruxelles, le 8 avril 2026\n\nÀ : Pierre Dubois (p.dubois@example-cabinet-fr.fr, +33 1 53 89 76 21)\nDe : Maria Rodríguez\n\nObjet : Coentreprise photovoltaïque en Afrique du Nord\n\nCher Pierre,\n\nTotalEnergies SE et Mediterranean Solar Group SARL envisagent une coentreprise dans laquelle TotalEnergies détiendrait 60% du capital. L'engagement total d'investissement est de 1.200.000.000 €. Le siège de Mediterranean Solar Group se trouve à Casablanca.\n\nL'Autorité de la concurrence française a été informée. La Commission européenne examinera l'opération si les seuils de la Regulation (EC) 139/2004 sont atteints. L'ADEME et la BEI sont susceptibles de co-financer la phase de construction.\n\nLe compte de séquestre est ouvert à BIL : IBAN LU28 0019 4006 4475 0000.\n\nLes contrats définitifs devraient être signés à Casablanca le 30 septembre 2026. Mon adresse pour le courrier confidentiel : Maria Rodríguez, 14 boulevard Haussmann, 75009 Paris.\n\nBien à vous,\nMaria Rodríguez (m.rodriguez@example-cabinet.fr)",
+  "gold_spans": [
+    {
+      "start": 22,
+      "end": 38,
+      "type": "ORG",
+      "text": "TotalEnergies SE"
+    },
+    {
+      "start": 22,
+      "end": 35,
+      "type": "ORG",
+      "text": "TotalEnergies"
+    },
+    {
+      "start": 41,
+      "end": 66,
+      "type": "ORG",
+      "text": "Mediterranean Solar Group"
+    },
+    {
+      "start": 100,
+      "end": 113,
+      "type": "PERSON",
+      "text": "Pierre Dubois"
+    },
+    {
+      "start": 115,
+      "end": 145,
+      "type": "EMAIL",
+      "text": "p.dubois@example-cabinet-fr.fr"
+    },
+    {
+      "start": 147,
+      "end": 164,
+      "type": "PHONE",
+      "text": "+33 1 53 89 76 21"
+    },
+    {
+      "start": 171,
+      "end": 186,
+      "type": "PERSON",
+      "text": "Maria Rodríguez"
+    },
+    {
+      "start": 258,
+      "end": 274,
+      "type": "ORG",
+      "text": "TotalEnergies SE"
+    },
+    {
+      "start": 258,
+      "end": 271,
+      "type": "ORG",
+      "text": "TotalEnergies"
+    },
+    {
+      "start": 278,
+      "end": 308,
+      "type": "ORG",
+      "text": "Mediterranean Solar Group SARL"
+    },
+    {
+      "start": 278,
+      "end": 303,
+      "type": "ORG",
+      "text": "Mediterranean Solar Group"
+    },
+    {
+      "start": 351,
+      "end": 364,
+      "type": "ORG",
+      "text": "TotalEnergies"
+    },
+    {
+      "start": 465,
+      "end": 490,
+      "type": "ORG",
+      "text": "Mediterranean Solar Group"
+    },
+    {
+      "start": 503,
+      "end": 513,
+      "type": "LOC",
+      "text": "Casablanca"
+    },
+    {
+      "start": 792,
+      "end": 795,
+      "type": "ORG",
+      "text": "BIL"
+    },
+    {
+      "start": 803,
+      "end": 827,
+      "type": "IBAN",
+      "text": "LU28 0019 4006 4475 0000"
+    },
+    {
+      "start": 878,
+      "end": 888,
+      "type": "LOC",
+      "text": "Casablanca"
+    },
+    {
+      "start": 955,
+      "end": 970,
+      "type": "PERSON",
+      "text": "Maria Rodríguez"
+    },
+    {
+      "start": 972,
+      "end": 994,
+      "type": "LOC",
+      "text": "14 boulevard Haussmann"
+    },
+    {
+      "start": 1002,
+      "end": 1007,
+      "type": "LOC",
+      "text": "Paris"
+    },
+    {
+      "start": 1023,
+      "end": 1038,
+      "type": "PERSON",
+      "text": "Maria Rodríguez"
+    },
+    {
+      "start": 1040,
+      "end": 1070,
+      "type": "EMAIL",
+      "text": "m.rodriguez@example-cabinet.fr"
+    }
+  ],
+  "notes": "Working memo on a North-Africa solar JV. SHOULD redact: lawyer names + contacts, parties (TotalEnergies, Mediterranean Solar Group), city addresses, IBAN, BIL (named as the depository bank, hence party-adjacent). SHOULD NOT redact: Autorité de la concurrence, Commission européenne, Regulation (EC) 139/2004, ADEME, BEI."
+}

@@ -1,0 +1,105 @@
+{
+  "id": "doc_001_term_sheet_en",
+  "title": "Project Aurora — Draft term sheet (English)",
+  "language": "en",
+  "text": "PROJECT AURORA — DRAFT TERM SHEET\nPRIVILEGED & CONFIDENTIAL — Working Draft of 12 March 2026\n\nParties:\n  - Buyer: Acme Solutions SA, a Belgian société anonyme headquartered in Brussels.\n  - Seller: Lumen Reality SARL, a French société à responsabilité limitée at 22 rue de Rivoli, 75001 Paris.\n\nCounsel:\n  - For the buyer: Maître Sophie Martin (sophie.martin@example-law.eu, +33 1 44 55 66 77).\n  - For the seller: Dr. James Chen (j.chen@example-cabinet.fr).\n\nThe Buyer proposes to acquire 100% of Lumen Reality SARL for €450,000,000, payable in cash on closing. The transaction will be subject to clearance under Regulation (EU) 139/2004 and notification under the Digital Markets Act if applicable. The European Commission has been pre-notified.\n\nEscrow account: BNP Paribas, IBAN FR76 3000 4000 5000 0123 4567 890.\n\nThe matter has been assigned reference Case T-203/24 internally.",
+  "gold_spans": [
+    {
+      "start": 114,
+      "end": 131,
+      "type": "ORG",
+      "text": "Acme Solutions SA"
+    },
+    {
+      "start": 176,
+      "end": 184,
+      "type": "LOC",
+      "text": "Brussels"
+    },
+    {
+      "start": 198,
+      "end": 216,
+      "type": "ORG",
+      "text": "Lumen Reality SARL"
+    },
+    {
+      "start": 198,
+      "end": 211,
+      "type": "ORG",
+      "text": "Lumen Reality"
+    },
+    {
+      "start": 266,
+      "end": 279,
+      "type": "LOC",
+      "text": "rue de Rivoli"
+    },
+    {
+      "start": 287,
+      "end": 292,
+      "type": "LOC",
+      "text": "Paris"
+    },
+    {
+      "start": 330,
+      "end": 343,
+      "type": "PERSON",
+      "text": "Sophie Martin"
+    },
+    {
+      "start": 345,
+      "end": 373,
+      "type": "EMAIL",
+      "text": "sophie.martin@example-law.eu"
+    },
+    {
+      "start": 375,
+      "end": 392,
+      "type": "PHONE",
+      "text": "+33 1 44 55 66 77"
+    },
+    {
+      "start": 419,
+      "end": 429,
+      "type": "PERSON",
+      "text": "James Chen"
+    },
+    {
+      "start": 431,
+      "end": 456,
+      "type": "EMAIL",
+      "text": "j.chen@example-cabinet.fr"
+    },
+    {
+      "start": 498,
+      "end": 516,
+      "type": "ORG",
+      "text": "Lumen Reality SARL"
+    },
+    {
+      "start": 498,
+      "end": 511,
+      "type": "ORG",
+      "text": "Lumen Reality"
+    },
+    {
+      "start": 765,
+      "end": 776,
+      "type": "ORG",
+      "text": "BNP Paribas"
+    },
+    {
+      "start": 783,
+      "end": 816,
+      "type": "IBAN",
+      "text": "FR76 3000 4000 5000 0123 4567 890"
+    },
+    {
+      "start": 858,
+      "end": 871,
+      "type": "CASE_REF",
+      "text": "Case T-203/24"
+    }
+  ],
+  "notes": "Fictional M&A term sheet. SHOULD redact: client names (Acme, Lumen Reality), counsel names + contacts, addresses, IBAN, internal case ref. SHOULD NOT redact: European Commission, Digital Markets Act, Regulation (EU) 139/2004, Buyer/Seller/Counsel labels."
+}

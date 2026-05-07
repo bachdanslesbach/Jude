@@ -42,11 +42,32 @@ def _no_redact_index() -> dict[tuple[str, str], dict]:
     return index
 
 
+# Leading definite/indefinite articles in EN/FR/DE that spaCy commonly
+# absorbs into its entity spans ("the European Commission" instead of
+# "European Commission"). Stripped before alias lookup so the filter
+# still fires.
+_LEADING_ARTICLES = (
+    "the ", "a ", "an ",
+    "le ", "la ", "les ", "l'", "l’", "un ", "une ",
+    "der ", "die ", "das ", "den ", "dem ", "des ",
+    "el ", "los ", "las ", "il ", "lo ", "gli ", "i ",
+    "de ", "het ",
+)
+
+
 def is_public_no_redact(text: str, entity_type: EntityType) -> bool:
     """True if `text` matches a bundled public-knowledge entity that is
-    flagged as `redact: false`."""
+    flagged as `redact: false`. Strips a leading definite/indefinite
+    article before lookup so 'the European Commission' still matches."""
 
     norm = normalize_surface(text)
     if not norm:
         return False
-    return (norm, entity_type.value) in _no_redact_index()
+    if (norm, entity_type.value) in _no_redact_index():
+        return True
+    for art in _LEADING_ARTICLES:
+        if norm.startswith(art):
+            stripped = norm[len(art):].strip()
+            if stripped and (stripped, entity_type.value) in _no_redact_index():
+                return True
+    return False

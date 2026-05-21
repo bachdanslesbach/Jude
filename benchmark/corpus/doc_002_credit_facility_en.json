@@ -41,6 +41,12 @@
       "text": "UBS"
     },
     {
+      "start": 224,
+      "end": 233,
+      "type": "PERSON",
+      "text": "Christian"
+    },
+    {
       "start": 236,
       "end": 257,
       "type": "ORG",

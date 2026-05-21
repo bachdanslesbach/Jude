@@ -1771,6 +1771,34 @@
       "type": "ORG",
       "context": "European public-limited (Societas Europaea) suffix",
       "redact": false
+    },
+    {
+      "canonical": "Swiss COMCO",
+      "aliases": [
+        "COMCO",
+        "Wettbewerbskommission",
+        "Weko",
+        "Swiss Competition Commission"
+      ],
+      "type": "ORG",
+      "context": "Swiss Competition Commission; enforces Swiss antitrust law",
+      "redact": false
+    },
+    {
+      "canonical": "Cayman Islands",
+      "aliases": [
+        "Cayman"
+      ],
+      "type": "LOC",
+      "context": "British Overseas Territory; common offshore incorporation jurisdiction",
+      "redact": false
+    },
+    {
+      "canonical": "Delaware",
+      "aliases": [],
+      "type": "LOC",
+      "context": "US state; common US-incorporation jurisdiction descriptor",
+      "redact": false
     }
   ]
 }

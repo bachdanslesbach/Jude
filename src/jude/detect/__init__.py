@@ -41,7 +41,7 @@ class DetectionPipeline:
         store: Store,
         matter_id: str,
         languages: tuple[str, ...] = ("en", "fr", "nl"),
-        use_gliner: bool = False,
+        use_gliner: bool | None = None,
         use_privacy_filter: bool = False,
     ):
         self.store = store
@@ -49,6 +49,12 @@ class DetectionPipeline:
         self.regex = RegexDetector()
         self.spacy = SpacyDetector(languages=languages)
         self.dictionary = DictionaryDetector(store=store, matter_id=matter_id)
+        # GLiNER auto-detect: when use_gliner is None (the default) we
+        # enable it iff the `gliner` package is importable. Explicit
+        # True/False overrides the auto behaviour. This makes
+        # `pip install -e ".[gliner]"` a single-step opt-in.
+        if use_gliner is None:
+            use_gliner = _gliner_available()
         self.use_gliner = use_gliner
         if use_gliner:
             from .gliner_detector import GlinerDetector
@@ -97,3 +103,14 @@ def resolve_overlaps(detections: Iterable[Detection]) -> list[Detection]:
 
 def _overlaps(a: Detection, b: Detection) -> bool:
     return not (a.end <= b.start or b.end <= a.start)
+
+
+def _gliner_available() -> bool:
+    """True iff the `gliner` package is importable in this interpreter.
+    Cached at module import so we don't re-import on every pipeline."""
+
+    try:
+        import gliner  # noqa: F401
+    except ImportError:
+        return False
+    return True

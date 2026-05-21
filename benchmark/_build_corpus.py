@@ -129,6 +129,7 @@ Anne-Sophie Lefèvre
 a.lefevre@example-swiss-legal.ch"""
     annotations = [
         ("Christian Hartmann", "PERSON"),
+        ("Christian", "PERSON"),  # salutation reference to the same person
         ("c.hartmann@ubs-legal.ch", "EMAIL"),
         ("+41 44 234 5678", "PHONE"),
         ("Anne-Sophie Lefèvre", "PERSON"),

@@ -38,9 +38,12 @@ ENTITIES_PAGE = str(Path("src/jude/ui/pages/2_Entities.py").resolve())
 
 @pytest.fixture
 def isolated_jude_home(tmp_path: Path, monkeypatch):
-    """Point JUDE_HOME at an empty tmp dir for each UI test."""
+    """Point JUDE_HOME at an empty tmp dir for each UI test, and provide
+    a dummy ANTHROPIC_API_KEY so the v0.5.3 key-entry form doesn't replace
+    the chat panel during UI tests (these tests never call the LLM)."""
 
     monkeypatch.setenv("JUDE_HOME", str(tmp_path))
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "sk-ant-test-noop")
     return tmp_path
 
 

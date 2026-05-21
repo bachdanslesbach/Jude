@@ -12,7 +12,13 @@ if TYPE_CHECKING:
 
 
 _MODEL_FALLBACKS: dict[str, list[str]] = {
-    "en": ["en_core_web_lg", "en_core_web_md"],
+    # English: prefer the transformer pipeline (RoBERTa-base under the
+    # hood, ~0.91 F1 OntoNotes vs ~0.85 for _lg). The trf model adds
+    # ~400 MB on disk and is slower at inference (still <1s/page on
+    # M-series), but the recall gain on short ORG acronyms (UBS) and
+    # short city names (Brussels, Luxembourg) is material — see
+    # docs/benchmark.md.
+    "en": ["en_core_web_trf", "en_core_web_lg", "en_core_web_md"],
     "fr": ["fr_core_news_md"],
     "nl": ["nl_core_news_md"],
 }

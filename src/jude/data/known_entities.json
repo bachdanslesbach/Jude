@@ -1799,6 +1799,196 @@
       "type": "LOC",
       "context": "US state; common US-incorporation jurisdiction descriptor",
       "redact": false
+    },
+    {
+      "canonical": "United Kingdom",
+      "aliases": [
+        "UK",
+        "Great Britain",
+        "GB"
+      ],
+      "type": "LOC",
+      "context": "Sovereign state; common jurisdiction descriptor",
+      "redact": false
+    },
+    {
+      "canonical": "Hong Kong",
+      "aliases": [
+        "HK"
+      ],
+      "type": "LOC",
+      "context": "Special Administrative Region of China; common incorporation jurisdiction",
+      "redact": false
+    },
+    {
+      "canonical": "Singapore",
+      "aliases": [
+        "SG"
+      ],
+      "type": "LOC",
+      "context": "Sovereign state; common Asian incorporation jurisdiction",
+      "redact": false
+    },
+    {
+      "canonical": "Switzerland",
+      "aliases": [
+        "CH",
+        "Swiss"
+      ],
+      "type": "LOC",
+      "context": "Sovereign state; jurisdiction descriptor",
+      "redact": false
+    },
+    {
+      "canonical": "Ireland",
+      "aliases": [
+        "IE",
+        "Republic of Ireland"
+      ],
+      "type": "LOC",
+      "context": "EU member state; jurisdiction descriptor",
+      "redact": false
+    },
+    {
+      "canonical": "Netherlands",
+      "aliases": [
+        "NL",
+        "Holland"
+      ],
+      "type": "LOC",
+      "context": "EU member state; jurisdiction descriptor",
+      "redact": false
+    },
+    {
+      "canonical": "Jersey",
+      "aliases": [],
+      "type": "LOC",
+      "context": "British Crown Dependency; common offshore finance jurisdiction",
+      "redact": false
+    },
+    {
+      "canonical": "Guernsey",
+      "aliases": [],
+      "type": "LOC",
+      "context": "British Crown Dependency; common offshore finance jurisdiction",
+      "redact": false
+    },
+    {
+      "canonical": "Isle of Man",
+      "aliases": [],
+      "type": "LOC",
+      "context": "British Crown Dependency; common offshore finance jurisdiction",
+      "redact": false
+    },
+    {
+      "canonical": "Bermuda",
+      "aliases": [],
+      "type": "LOC",
+      "context": "British Overseas Territory; common offshore incorporation jurisdiction",
+      "redact": false
+    },
+    {
+      "canonical": "BVI",
+      "aliases": [
+        "British Virgin Islands"
+      ],
+      "type": "LOC",
+      "context": "British Overseas Territory; common offshore incorporation jurisdiction",
+      "redact": false
+    },
+    {
+      "canonical": "Luxembourg",
+      "aliases": [
+        "LU"
+      ],
+      "type": "LOC",
+      "context": "EU member state; common holding-company jurisdiction",
+      "redact": false
+    },
+    {
+      "canonical": "Massachusetts",
+      "aliases": [
+        "MA"
+      ],
+      "type": "LOC",
+      "context": "US state; jurisdiction descriptor",
+      "redact": false
+    },
+    {
+      "canonical": "California",
+      "aliases": [
+        "CA"
+      ],
+      "type": "LOC",
+      "context": "US state; jurisdiction descriptor",
+      "redact": false
+    },
+    {
+      "canonical": "New York State",
+      "aliases": [
+        "NY State"
+      ],
+      "type": "LOC",
+      "context": "US state; jurisdiction descriptor",
+      "redact": false
+    },
+    {
+      "canonical": "Information Commissioner's Office",
+      "aliases": [
+        "ICO",
+        "UK ICO"
+      ],
+      "type": "ORG",
+      "context": "UK data-protection regulator; supervises UK GDPR compliance",
+      "redact": false
+    },
+    {
+      "canonical": "Office of Financial Sanctions Implementation",
+      "aliases": [
+        "OFSI"
+      ],
+      "type": "ORG",
+      "context": "UK Treasury body administering financial sanctions",
+      "redact": false
+    },
+    {
+      "canonical": "Specially Designated Nationals",
+      "aliases": [
+        "SDN",
+        "SDN List"
+      ],
+      "type": "ORG",
+      "context": "OFAC sanctions list of blocked persons/entities",
+      "redact": false
+    },
+    {
+      "canonical": "USPTO",
+      "aliases": [
+        "United States Patent and Trademark Office",
+        "U.S. Patent and Trademark Office"
+      ],
+      "type": "ORG",
+      "context": "US patent and trade-mark authority",
+      "redact": false
+    },
+    {
+      "canonical": "PTAB",
+      "aliases": [
+        "Patent Trial and Appeal Board"
+      ],
+      "type": "ORG",
+      "context": "USPTO administrative tribunal",
+      "redact": false
+    },
+    {
+      "canonical": "SPF Finances",
+      "aliases": [
+        "FOD Financiën",
+        "Belgian Federal Public Service Finance"
+      ],
+      "type": "ORG",
+      "context": "Belgian federal tax administration",
+      "redact": false
     }
   ]
 }

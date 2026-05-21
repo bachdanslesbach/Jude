@@ -102,6 +102,51 @@ _RULES: tuple[_Rule, ...] = (
         re.compile(r"\bECLI:[A-Z]{2}:[A-Z0-9]+:\d{4}:[A-Z0-9.]+\b"),
         EntityType.CASE_REF,
     ),
+    _Rule(
+        # US federal court docket: 1:26-cv-00489-RGA, 2:24-cr-00012-JES.
+        # district_no:year-type-seq-judge_initials.
+        "us_district_docket",
+        re.compile(
+            r"\b\d+:\d{2}-(?:cv|cr|md|mj|mc|mh|bk|ap)-\d{4,6}"
+            r"(?:-[A-Z]{2,4})?\b",
+            re.IGNORECASE,
+        ),
+        EntityType.CASE_REF,
+    ),
+    _Rule(
+        # USPTO PTAB inter-partes review: IPR2025-00712.
+        "uspto_ptab",
+        re.compile(r"\b(?:IPR|PGR|CBM)\d{4}-\d{5}\b"),
+        EntityType.CASE_REF,
+    ),
+    _Rule(
+        # Bundeskartellamt case numbers: B6-127/26, VK-12/24, etc.
+        "bundeskartellamt_case",
+        re.compile(r"\b(?:B\d+|VK|KVR|KZR)-\d+/\d{2}\b"),
+        EntityType.CASE_REF,
+    ),
+    _Rule(
+        # Internal matter / docket ID containing a 4-digit year somewhere.
+        # Catches M-2026-PIO-001, FE-COMP-2026-088, RVK-2026-BPC-014,
+        # HRT-2026-GINKGO-01, WP-CREST-TLW-2026, etc. The leading lookahead
+        # rejects "LONG-TERM"-style phrases (no digits) and "ORTIZ-VALDEZ"
+        # (looks docket-shaped but is two surnames).
+        "internal_matter_id_with_year",
+        re.compile(
+            r"\b(?=[A-Z0-9-]*(?:19|20)\d{2})"
+            r"[A-Z]{1,8}(?:-[A-Z0-9]+){1,5}\b"
+        ),
+        EntityType.CASE_REF,
+    ),
+    _Rule(
+        # Numeric-trailer matter IDs: two+ alphabetic segments then a
+        # 3-5-digit number (CT-WB-026, FE-COMP-088). Won't match
+        # "PIO-001" alone (single alpha segment) and won't match
+        # "LONG-TERM" (no digits).
+        "internal_matter_id_numeric_trailer",
+        re.compile(r"\b[A-Z]{2,8}-[A-Z]{2,8}-\d{3,5}\b"),
+        EntityType.CASE_REF,
+    ),
 )
 
 

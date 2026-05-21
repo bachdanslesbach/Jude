@@ -99,6 +99,16 @@ _LEGAL_HEADERS = frozenset({
     "title", "heading", "subheading",
     # Bare data-field labels that spaCy sometimes flags
     "iban", "swift", "bic", "vat", "tva", "siren", "siret",
+    # Generic firm-organisation labels frequently flagged as ORG
+    "firm", "the firm", "associates", "and associates",
+    "department", "team", "office",
+    # Function / role labels (departments inside organisations)
+    "hr", "human resources", "people ops", "people operations",
+    "dpo", "data protection officer",
+    "cfo", "ceo", "coo", "cto", "general counsel", "in-house counsel",
+    "compliance", "compliance team", "legal", "legal team",
+    "finance", "operations", "engineering", "product",
+    "audit", "audit committee", "supervisory board", "board",
     # Salutations & closings (EN/FR/NL/DE) — common false positives
     "dear", "cher", "chère", "chers", "chères",
     "best regards", "kind regards", "yours sincerely", "yours truly",

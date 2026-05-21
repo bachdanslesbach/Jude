@@ -31,7 +31,8 @@ cd Jude
 python3.12 -m venv .venv
 source .venv/bin/activate
 pip install -e ".[dev]"
-python -m spacy download en_core_web_lg
+python -m spacy download en_core_web_trf   # English transformer (recommended; ~400 MB, F1 0.96 on EN benchmark)
+python -m spacy download en_core_web_lg    # English fallback (statistical, lighter)
 python -m spacy download fr_core_news_md
 python -m spacy download nl_core_news_md   # optional; recommended for Brussels-bar work
 ```

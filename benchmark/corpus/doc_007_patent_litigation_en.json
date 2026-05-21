@@ -1,0 +1,189 @@
+{
+  "id": "doc_007_patent_litigation_en",
+  "title": "Helios v. Lumen — patent claim-construction brief",
+  "language": "en",
+  "text": "IN THE UNITED STATES DISTRICT COURT FOR THE DISTRICT OF DELAWARE\n\nHelios Photonics Inc., Plaintiff,\nv.\nLumen Optical Systems Corp., Defendant.\n\nCivil Action No. 1:26-cv-00489-RGA\n\nPLAINTIFF'S OPENING BRIEF ON CLAIM CONSTRUCTION (excerpt)\n\nPlaintiff Helios Photonics Inc. (\"Helios\"), a Delaware corporation with its principal place of business at 2200 Greenfield Drive, San Jose, California 95110, brings this action against Lumen Optical Systems Corp. (\"Lumen\"), a Cayman exempted company with its US office in Austin, Texas. The dispute concerns U.S. Patent No. 11,482,917 (\"the '917 patent\") covering tunable laser modulation in optical transceivers.\n\nThe named inventor, Dr. Anika Krishnamurthy, is Helios's Chief Scientist. Dr. Krishnamurthy will testify that her June 2018 lab notebook (Helios Bates HEL-NB-00231) discloses every limitation of claim 1 well before Lumen's earliest priority date.\n\nLumen's lead engineer on the accused product line is Mr. Jonas Sandström, formerly of Helios's R&D team. Mr. Sandström left Helios in November 2020, three months before Lumen filed its competing application. We will present forensic evidence that Mr. Sandström downloaded 412 confidential design files to a personal device the week of his departure.\n\nCounsel for Helios: Rebecca Lin (rlin@example-patent-firm.com, +1 415 555 0188), with co-counsel Dr. Stefan Müller appearing pro hac vice.\n\nLumen is represented by Wilkerson Stone LLP. The USPTO concurrently has the related IPR2025-00712 under consideration.",
+  "gold_spans": [
+    {
+      "start": 66,
+      "end": 87,
+      "type": "ORG",
+      "text": "Helios Photonics Inc."
+    },
+    {
+      "start": 103,
+      "end": 130,
+      "type": "ORG",
+      "text": "Lumen Optical Systems Corp."
+    },
+    {
+      "start": 161,
+      "end": 178,
+      "type": "CASE_REF",
+      "text": "1:26-cv-00489-RGA"
+    },
+    {
+      "start": 249,
+      "end": 270,
+      "type": "ORG",
+      "text": "Helios Photonics Inc."
+    },
+    {
+      "start": 273,
+      "end": 279,
+      "type": "ORG",
+      "text": "Helios"
+    },
+    {
+      "start": 346,
+      "end": 367,
+      "type": "LOC",
+      "text": "2200 Greenfield Drive"
+    },
+    {
+      "start": 369,
+      "end": 377,
+      "type": "LOC",
+      "text": "San Jose"
+    },
+    {
+      "start": 424,
+      "end": 451,
+      "type": "ORG",
+      "text": "Lumen Optical Systems Corp."
+    },
+    {
+      "start": 454,
+      "end": 459,
+      "type": "ORG",
+      "text": "Lumen"
+    },
+    {
+      "start": 511,
+      "end": 517,
+      "type": "LOC",
+      "text": "Austin"
+    },
+    {
+      "start": 678,
+      "end": 697,
+      "type": "PERSON",
+      "text": "Anika Krishnamurthy"
+    },
+    {
+      "start": 702,
+      "end": 708,
+      "type": "ORG",
+      "text": "Helios"
+    },
+    {
+      "start": 728,
+      "end": 745,
+      "type": "PERSON",
+      "text": "Dr. Krishnamurthy"
+    },
+    {
+      "start": 792,
+      "end": 798,
+      "type": "ORG",
+      "text": "Helios"
+    },
+    {
+      "start": 869,
+      "end": 874,
+      "type": "ORG",
+      "text": "Lumen"
+    },
+    {
+      "start": 902,
+      "end": 907,
+      "type": "ORG",
+      "text": "Lumen"
+    },
+    {
+      "start": 959,
+      "end": 974,
+      "type": "PERSON",
+      "text": "Jonas Sandström"
+    },
+    {
+      "start": 988,
+      "end": 994,
+      "type": "ORG",
+      "text": "Helios"
+    },
+    {
+      "start": 1007,
+      "end": 1020,
+      "type": "PERSON",
+      "text": "Mr. Sandström"
+    },
+    {
+      "start": 1026,
+      "end": 1032,
+      "type": "ORG",
+      "text": "Helios"
+    },
+    {
+      "start": 1071,
+      "end": 1076,
+      "type": "ORG",
+      "text": "Lumen"
+    },
+    {
+      "start": 1149,
+      "end": 1162,
+      "type": "PERSON",
+      "text": "Mr. Sandström"
+    },
+    {
+      "start": 1265,
+      "end": 1271,
+      "type": "ORG",
+      "text": "Helios"
+    },
+    {
+      "start": 1273,
+      "end": 1284,
+      "type": "PERSON",
+      "text": "Rebecca Lin"
+    },
+    {
+      "start": 1286,
+      "end": 1314,
+      "type": "EMAIL",
+      "text": "rlin@example-patent-firm.com"
+    },
+    {
+      "start": 1316,
+      "end": 1331,
+      "type": "PHONE",
+      "text": "+1 415 555 0188"
+    },
+    {
+      "start": 1354,
+      "end": 1367,
+      "type": "PERSON",
+      "text": "Stefan Müller"
+    },
+    {
+      "start": 1393,
+      "end": 1398,
+      "type": "ORG",
+      "text": "Lumen"
+    },
+    {
+      "start": 1417,
+      "end": 1436,
+      "type": "ORG",
+      "text": "Wilkerson Stone LLP"
+    },
+    {
+      "start": 1477,
+      "end": 1490,
+      "type": "CASE_REF",
+      "text": "IPR2025-00712"
+    }
+  ],
+  "notes": "US patent litigation pleading. SHOULD redact: both parties and all short forms, civil action number (party-specific), inventor and ex-employee names, opposing firm (Wilkerson Stone LLP), counsel contacts, addresses pinning the parties, IPR docket. SHOULD NOT redact: Delaware (state-of-incorporation descriptor), Cayman (incorporation descriptor), USPTO (regulator), 'California', 'Texas' here are state names tied to party HQs — annotate the city, not the state, to keep it lenient. The patent number is a public document identifier, not PII."
+}

@@ -1,0 +1,165 @@
+{
+  "id": "doc_008_regulatory_submission_en",
+  "title": "Polaris / MeridianMedia — Bundeskartellamt filing",
+  "language": "en",
+  "text": "SUBMISSION TO THE BUNDESKARTELLAMT\nCase file B6-127/26 — Proposed acquisition of MeridianMedia GmbH by Polaris Broadcasting AG\n\nFiled by: Dr. Friedrich Albrecht, Partner, on behalf of Polaris Broadcasting AG\nDate: 21 May 2026\nContact: f.albrecht@example-de-kartell.de / +49 30 2576 4400\n\n1. Notifying party\n\nPolaris Broadcasting AG (\"Polaris\"), a Berlin-headquartered Aktiengesellschaft (Karl-Liebknecht-Straße 8, 10178 Berlin), proposes to acquire 100% of the share capital of MeridianMedia GmbH (\"MeridianMedia\"), a Hamburg-based regional broadcaster controlled by the Henkel-Vorwerk family trust.\n\n2. The target\n\nMeridianMedia operates 14 regional FM radio licences and a streaming service (MeridianFM+) with approximately 2.1 million monthly active listeners. Its CEO, Ms. Renate Hofmann, will remain in post for an 18-month transition period under a side letter dated 14 May 2026.\n\n3. Competition assessment\n\nPolaris and MeridianMedia do not currently compete in any product market. Polaris is active only in television; MeridianMedia is radio-only. We submit that no horizontal overlap arises. Vertical concerns are limited because Polaris's content-licensing business sells to all radio broadcasters on FRAND terms.\n\nThe transaction has no EU dimension under the EU Merger Regulation (Regulation (EC) 139/2004); turnover thresholds are not met. The Autorité de la concurrence and the ACM have been informally apprised but no parallel filing is required.\n\n4. Escrow\n\nThe purchase-price escrow is held at Deutsche Bank under IBAN DE12 5001 0517 5407 3249 31. Total consideration: EUR 184,500,000.\n\nPlease direct further questions to the undersigned.",
+  "gold_spans": [
+    {
+      "start": 45,
+      "end": 54,
+      "type": "CASE_REF",
+      "text": "B6-127/26"
+    },
+    {
+      "start": 81,
+      "end": 99,
+      "type": "ORG",
+      "text": "MeridianMedia GmbH"
+    },
+    {
+      "start": 103,
+      "end": 126,
+      "type": "ORG",
+      "text": "Polaris Broadcasting AG"
+    },
+    {
+      "start": 142,
+      "end": 160,
+      "type": "PERSON",
+      "text": "Friedrich Albrecht"
+    },
+    {
+      "start": 184,
+      "end": 207,
+      "type": "ORG",
+      "text": "Polaris Broadcasting AG"
+    },
+    {
+      "start": 235,
+      "end": 267,
+      "type": "EMAIL",
+      "text": "f.albrecht@example-de-kartell.de"
+    },
+    {
+      "start": 270,
+      "end": 286,
+      "type": "PHONE",
+      "text": "+49 30 2576 4400"
+    },
+    {
+      "start": 308,
+      "end": 331,
+      "type": "ORG",
+      "text": "Polaris Broadcasting AG"
+    },
+    {
+      "start": 334,
+      "end": 341,
+      "type": "ORG",
+      "text": "Polaris"
+    },
+    {
+      "start": 347,
+      "end": 353,
+      "type": "LOC",
+      "text": "Berlin"
+    },
+    {
+      "start": 388,
+      "end": 412,
+      "type": "LOC",
+      "text": "Karl-Liebknecht-Straße 8"
+    },
+    {
+      "start": 414,
+      "end": 426,
+      "type": "LOC",
+      "text": "10178 Berlin"
+    },
+    {
+      "start": 478,
+      "end": 496,
+      "type": "ORG",
+      "text": "MeridianMedia GmbH"
+    },
+    {
+      "start": 499,
+      "end": 512,
+      "type": "ORG",
+      "text": "MeridianMedia"
+    },
+    {
+      "start": 518,
+      "end": 525,
+      "type": "LOC",
+      "text": "Hamburg"
+    },
+    {
+      "start": 571,
+      "end": 585,
+      "type": "PERSON",
+      "text": "Henkel-Vorwerk"
+    },
+    {
+      "start": 616,
+      "end": 629,
+      "type": "ORG",
+      "text": "MeridianMedia"
+    },
+    {
+      "start": 694,
+      "end": 705,
+      "type": "ORG",
+      "text": "MeridianFM+"
+    },
+    {
+      "start": 777,
+      "end": 791,
+      "type": "PERSON",
+      "text": "Renate Hofmann"
+    },
+    {
+      "start": 914,
+      "end": 921,
+      "type": "ORG",
+      "text": "Polaris"
+    },
+    {
+      "start": 926,
+      "end": 939,
+      "type": "ORG",
+      "text": "MeridianMedia"
+    },
+    {
+      "start": 988,
+      "end": 995,
+      "type": "ORG",
+      "text": "Polaris"
+    },
+    {
+      "start": 1026,
+      "end": 1039,
+      "type": "ORG",
+      "text": "MeridianMedia"
+    },
+    {
+      "start": 1138,
+      "end": 1145,
+      "type": "ORG",
+      "text": "Polaris"
+    },
+    {
+      "start": 1510,
+      "end": 1523,
+      "type": "ORG",
+      "text": "Deutsche Bank"
+    },
+    {
+      "start": 1535,
+      "end": 1562,
+      "type": "IBAN",
+      "text": "DE12 5001 0517 5407 3249 31"
+    }
+  ],
+  "notes": "Merger filing to a national authority. SHOULD redact: notifying party + target + all short forms, counsel name + contacts, target CEO, family trust name, both party addresses, escrow bank, IBAN, case file ref (party-specific). SHOULD NOT redact: Bundeskartellamt, Autorité de la concurrence, ACM, EU Merger Regulation, Regulation (EC) 139/2004. 'Aktiengesellschaft' is a corporate-form label."
+}

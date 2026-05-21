@@ -1,0 +1,165 @@
+{
+  "id": "doc_020_insolvency_update_en",
+  "title": "Avenir Retail Holdings — administrator's update",
+  "language": "en",
+  "text": "INSOLVENCY UPDATE MEMORANDUM\nRe: In the matter of Avenir Retail Holdings SA (in administration)\n\nTo: Creditors' Committee\nFrom: Insolvency Administrator: Mr. Théodore Lacombe, Lacombe Restructuring Avocats\nDate: 21 May 2026\nCourt reference: T.Comm.Bxl 2025/A/4408\n\n1. Procedural posture\n\nAvenir Retail Holdings SA (\"Avenir\") was placed in judicial reorganisation by the Tribunal de l'entreprise francophone de Bruxelles on 14 November 2025. The conversion to formal administration was ordered on 12 March 2026 following the failure of the proposed continuation plan. The court appointed the undersigned as administrator pursuant to Book XX of the Belgian Code of Economic Law.\n\n2. Asset realisations\n\nSince the last update of 15 April 2026:\n\n(a) Sale of the Avenir Lyon distribution centre (registered address: 84 avenue Tony Garnier, 69007 Lyon) completed on 30 April 2026 for EUR 23,400,000 to LogiSud Investissements SAS. Net proceeds, after secured-creditor payouts to KBC, have been credited to the administration account at Belfius (IBAN BE74 0682 7777 0001).\n\n(b) Discussions are ongoing with two potential buyers for the Avenir-branded e-commerce platform: a strategic buyer represented by Ms. Alexandra Petrescu (a.petrescu@strategicbuyer.example.eu) and a financial sponsor represented by Mr. Eitan Bar-Levav.\n\n(c) The previously-reported tax dispute with the Belgian SPF Finances remains unresolved. The Belgian Court of Cassation is scheduled to hear the related appeal on 18 September 2026.\n\n3. Employment\n\nOf the 412 former Avenir employees, 287 have been transferred to acquirers under article 61 CCT 32bis. The remaining 125 staff received their final settlement on 30 April 2026, signed off by HR director Ms. Ingrid Vanderbeke.\n\n4. Next steps\n\nThe administrator will convene the next creditors' committee on 11 June 2026 at the Brussels offices of Lacombe Restructuring Avocats, Boulevard du Régent 47, 1000 Brussels.\n\nContact: t.lacombe@lacombe-restructuring.example.be / +32 2 555 8800.",
+  "gold_spans": [
+    {
+      "start": 50,
+      "end": 75,
+      "type": "ORG",
+      "text": "Avenir Retail Holdings SA"
+    },
+    {
+      "start": 158,
+      "end": 174,
+      "type": "PERSON",
+      "text": "Théodore Lacombe"
+    },
+    {
+      "start": 176,
+      "end": 205,
+      "type": "ORG",
+      "text": "Lacombe Restructuring Avocats"
+    },
+    {
+      "start": 241,
+      "end": 263,
+      "type": "CASE_REF",
+      "text": "T.Comm.Bxl 2025/A/4408"
+    },
+    {
+      "start": 288,
+      "end": 313,
+      "type": "ORG",
+      "text": "Avenir Retail Holdings SA"
+    },
+    {
+      "start": 316,
+      "end": 322,
+      "type": "ORG",
+      "text": "Avenir"
+    },
+    {
+      "start": 758,
+      "end": 764,
+      "type": "ORG",
+      "text": "Avenir"
+    },
+    {
+      "start": 765,
+      "end": 769,
+      "type": "LOC",
+      "text": "Lyon"
+    },
+    {
+      "start": 811,
+      "end": 833,
+      "type": "LOC",
+      "text": "84 avenue Tony Garnier"
+    },
+    {
+      "start": 841,
+      "end": 845,
+      "type": "LOC",
+      "text": "Lyon"
+    },
+    {
+      "start": 896,
+      "end": 923,
+      "type": "ORG",
+      "text": "LogiSud Investissements SAS"
+    },
+    {
+      "start": 973,
+      "end": 976,
+      "type": "ORG",
+      "text": "KBC"
+    },
+    {
+      "start": 1030,
+      "end": 1037,
+      "type": "ORG",
+      "text": "Belfius"
+    },
+    {
+      "start": 1044,
+      "end": 1063,
+      "type": "IBAN",
+      "text": "BE74 0682 7777 0001"
+    },
+    {
+      "start": 1129,
+      "end": 1135,
+      "type": "ORG",
+      "text": "Avenir"
+    },
+    {
+      "start": 1202,
+      "end": 1220,
+      "type": "PERSON",
+      "text": "Alexandra Petrescu"
+    },
+    {
+      "start": 1222,
+      "end": 1258,
+      "type": "EMAIL",
+      "text": "a.petrescu@strategicbuyer.example.eu"
+    },
+    {
+      "start": 1303,
+      "end": 1318,
+      "type": "PERSON",
+      "text": "Eitan Bar-Levav"
+    },
+    {
+      "start": 1538,
+      "end": 1544,
+      "type": "ORG",
+      "text": "Avenir"
+    },
+    {
+      "start": 1727,
+      "end": 1744,
+      "type": "PERSON",
+      "text": "Ingrid Vanderbeke"
+    },
+    {
+      "start": 1846,
+      "end": 1854,
+      "type": "LOC",
+      "text": "Brussels"
+    },
+    {
+      "start": 1866,
+      "end": 1895,
+      "type": "ORG",
+      "text": "Lacombe Restructuring Avocats"
+    },
+    {
+      "start": 1897,
+      "end": 1919,
+      "type": "LOC",
+      "text": "Boulevard du Régent 47"
+    },
+    {
+      "start": 1926,
+      "end": 1934,
+      "type": "LOC",
+      "text": "Brussels"
+    },
+    {
+      "start": 1946,
+      "end": 1988,
+      "type": "EMAIL",
+      "text": "t.lacombe@lacombe-restructuring.example.be"
+    },
+    {
+      "start": 1991,
+      "end": 2005,
+      "type": "PHONE",
+      "text": "+32 2 555 8800"
+    }
+  ],
+  "notes": "Insolvency administrator's update to creditors' committee. SHOULD redact: debtor + short forms, administrator + firm + Brussels office address + contact, court file ref, sold distribution-centre address + city, buyer (LogiSud), secured creditor (KBC, here a party), administration bank (Belfius) + IBAN, named potential buyers and their representatives, HR director. SHOULD NOT redact: 'Tribunal de l'entreprise francophone de Bruxelles' (a Belgian court), 'Belgian Code of Economic Law' (statute), 'SPF Finances' (Belgian tax administration / regulator), 'Belgian Court of Cassation' (court — in whitelist as 'Cour de cassation (Belgium)'), 'CCT 32bis' (collective bargaining instrument / statute)."
+}

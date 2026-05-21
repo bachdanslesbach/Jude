@@ -1,0 +1,99 @@
+{
+  "id": "doc_017_data_breach_notification_en",
+  "title": "Stedelijk Verzekeringen — DPA breach notification",
+  "language": "en",
+  "text": "DATA BREACH NOTIFICATION — DRAFT FOR DPA SUBMISSION\n\nNotification to the Autoriteit Persoonsgegevens\nArticle 33 GDPR — Notification of a personal data breach\nDate: 21 May 2026\n\n1. Controller details\n\nName of controller: Stedelijk Verzekeringen NV\nRegistered office: Beursplein 5, 1012 JW Amsterdam\nDPO: Mr. Roeland van der Meer (r.vandermeer@stedelijk-verz.example.nl, +31 20 555 0099)\nReference: SV-DPO-IR-2026-007\n\n2. Nature of the breach\n\nOn 18 May 2026 at approximately 03:14 CET, an unauthorised actor obtained access to a Stedelijk Verzekeringen NV customer-data export hosted in an Azure blob storage container. The container had been temporarily reconfigured with public-read access on 14 May 2026 by a contractor, Mr. Lennart Voskamp of Voskamp ICT BV, in connection with an analytics integration project.\n\n3. Personal data concerned\n\nApproximately 218,400 data subjects, primarily Dutch and Belgian retail life-insurance customers. Categories: full name, date of birth, postal address, BSN (national identification number), policy number, and inception/renewal dates. No financial-account data was exposed.\n\n4. Likely consequences\n\nRisk of identity theft and targeted phishing. The breach satisfies the Article 33(1) threshold (\"likely to result in a risk to the rights and freedoms of natural persons\").\n\n5. Measures taken\n\nContainer access revoked at 09:42 CET on 18 May 2026 by our infrastructure lead, Ms. Jasmijn Beekhuis. The Belgian counterpart authority, the Autorité de protection des données (APD), and the Information Commissioner's Office (for affected Dutch nationals resident in the UK) will be informed in parallel.\n\n6. External counsel\n\nWe are advised by Ms. Anne Vermeulen of Vermeulen & Partners, Brussels (a.vermeulen@vermeulen-partners.example.be).",
+  "gold_spans": [
+    {
+      "start": 220,
+      "end": 246,
+      "type": "ORG",
+      "text": "Stedelijk Verzekeringen NV"
+    },
+    {
+      "start": 266,
+      "end": 278,
+      "type": "LOC",
+      "text": "Beursplein 5"
+    },
+    {
+      "start": 288,
+      "end": 297,
+      "type": "LOC",
+      "text": "Amsterdam"
+    },
+    {
+      "start": 307,
+      "end": 327,
+      "type": "PERSON",
+      "text": "Roeland van der Meer"
+    },
+    {
+      "start": 329,
+      "end": 367,
+      "type": "EMAIL",
+      "text": "r.vandermeer@stedelijk-verz.example.nl"
+    },
+    {
+      "start": 369,
+      "end": 384,
+      "type": "PHONE",
+      "text": "+31 20 555 0099"
+    },
+    {
+      "start": 397,
+      "end": 415,
+      "type": "CASE_REF",
+      "text": "SV-DPO-IR-2026-007"
+    },
+    {
+      "start": 528,
+      "end": 554,
+      "type": "ORG",
+      "text": "Stedelijk Verzekeringen NV"
+    },
+    {
+      "start": 727,
+      "end": 742,
+      "type": "PERSON",
+      "text": "Lennart Voskamp"
+    },
+    {
+      "start": 746,
+      "end": 760,
+      "type": "ORG",
+      "text": "Voskamp ICT BV"
+    },
+    {
+      "start": 1420,
+      "end": 1436,
+      "type": "PERSON",
+      "text": "Jasmijn Beekhuis"
+    },
+    {
+      "start": 1685,
+      "end": 1699,
+      "type": "PERSON",
+      "text": "Anne Vermeulen"
+    },
+    {
+      "start": 1703,
+      "end": 1723,
+      "type": "ORG",
+      "text": "Vermeulen & Partners"
+    },
+    {
+      "start": 1725,
+      "end": 1733,
+      "type": "LOC",
+      "text": "Brussels"
+    },
+    {
+      "start": 1735,
+      "end": 1776,
+      "type": "EMAIL",
+      "text": "a.vermeulen@vermeulen-partners.example.be"
+    }
+  ],
+  "notes": "GDPR Article 33 breach notification to a national DPA. SHOULD redact: controller + short forms + registered office, DPO + contact, internal ref, third-party contractor + firm, internal infrastructure-lead employee, outside counsel + firm + office city + contact. SHOULD NOT redact: Autoriteit Persoonsgegevens, Autorité de protection des données / APD, Information Commissioner's Office (all DPAs are public regulators), GDPR Article 33, 'Dutch', 'Belgian' (descriptors), Azure (a public-knowledge Microsoft cloud product; Microsoft is in the gatekeeper list and IS redactable in principle — but 'Azure blob storage container' here is a generic technical reference, so we omit it; Jude is expected to leave it alone)."
+}

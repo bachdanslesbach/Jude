@@ -1,0 +1,135 @@
+{
+  "id": "doc_012_engagement_letter_en",
+  "title": "BluePine / RVK — engagement letter",
+  "language": "en",
+  "text": "ENGAGEMENT LETTER\n\nBetween:\n  Client: BluePine Capital Partners LP, with offices at 540 Madison Avenue, 18th Floor, New York, NY 10022 (\"Client\")\n  Counsel: Reinhart Voss & Klein, Avenue Louise 250, 1050 Brussels (\"RVK\" or \"the Firm\")\n\nDated: 21 May 2026\nMatter ID: RVK-2026-BPC-014\n\n1. Scope\n\nThe Firm is engaged to advise the Client on EU-law aspects of its proposed minority investment in NordVent Holdings AS (Oslo). The engagement covers (i) merger-control analysis, (ii) FDI screening across France, Germany and Italy, and (iii) coordination with local counsel in Norway.\n\n2. Lead attorneys\n\nThe matter will be led by Maître Charlotte Beaumont (c.beaumont@rvk-law.example.be, direct line +32 2 555 4470). Day-to-day work will be supervised by senior associate Dr. Henrik Olsson. Junior associates may be assigned as workload requires.\n\n3. Fees\n\nOur standard hourly rates apply: Partners EUR 950–1,250, Counsel EUR 750–900, Senior Associates EUR 550–700, Associates EUR 350–490. Fees are billed monthly. A retainer of EUR 75,000 is payable on signature to RVK's client account, IBAN BE63 0689 9999 9999, BIC GKCCBEBB.\n\n4. Conflicts\n\nThe Firm has performed a conflicts check and is not aware of any impediment. The Client confirms that it does not regard any of the Firm's other current clients listed in Annex 1 as adverse parties.\n\n5. Confidentiality\n\nThe engagement is subject to professional secrecy under Belgian law and Article 458 of the Belgian Penal Code.\n\nAcknowledged:\nFor the Client: Vivian Park, Managing Partner, BluePine Capital Partners LP\nFor RVK: Charlotte Beaumont",
+  "gold_spans": [
+    {
+      "start": 38,
+      "end": 66,
+      "type": "ORG",
+      "text": "BluePine Capital Partners LP"
+    },
+    {
+      "start": 84,
+      "end": 102,
+      "type": "LOC",
+      "text": "540 Madison Avenue"
+    },
+    {
+      "start": 116,
+      "end": 124,
+      "type": "LOC",
+      "text": "New York"
+    },
+    {
+      "start": 157,
+      "end": 178,
+      "type": "ORG",
+      "text": "Reinhart Voss & Klein"
+    },
+    {
+      "start": 180,
+      "end": 197,
+      "type": "LOC",
+      "text": "Avenue Louise 250"
+    },
+    {
+      "start": 204,
+      "end": 212,
+      "type": "LOC",
+      "text": "Brussels"
+    },
+    {
+      "start": 215,
+      "end": 218,
+      "type": "ORG",
+      "text": "RVK"
+    },
+    {
+      "start": 266,
+      "end": 282,
+      "type": "CASE_REF",
+      "text": "RVK-2026-BPC-014"
+    },
+    {
+      "start": 266,
+      "end": 269,
+      "type": "ORG",
+      "text": "RVK"
+    },
+    {
+      "start": 392,
+      "end": 412,
+      "type": "ORG",
+      "text": "NordVent Holdings AS"
+    },
+    {
+      "start": 414,
+      "end": 418,
+      "type": "LOC",
+      "text": "Oslo"
+    },
+    {
+      "start": 631,
+      "end": 649,
+      "type": "PERSON",
+      "text": "Charlotte Beaumont"
+    },
+    {
+      "start": 651,
+      "end": 680,
+      "type": "EMAIL",
+      "text": "c.beaumont@rvk-law.example.be"
+    },
+    {
+      "start": 694,
+      "end": 708,
+      "type": "PHONE",
+      "text": "+32 2 555 4470"
+    },
+    {
+      "start": 770,
+      "end": 783,
+      "type": "PERSON",
+      "text": "Henrik Olsson"
+    },
+    {
+      "start": 1061,
+      "end": 1064,
+      "type": "ORG",
+      "text": "RVK"
+    },
+    {
+      "start": 1088,
+      "end": 1107,
+      "type": "IBAN",
+      "text": "BE63 0689 9999 9999"
+    },
+    {
+      "start": 1500,
+      "end": 1511,
+      "type": "PERSON",
+      "text": "Vivian Park"
+    },
+    {
+      "start": 1531,
+      "end": 1559,
+      "type": "ORG",
+      "text": "BluePine Capital Partners LP"
+    },
+    {
+      "start": 1564,
+      "end": 1567,
+      "type": "ORG",
+      "text": "RVK"
+    },
+    {
+      "start": 1569,
+      "end": 1587,
+      "type": "PERSON",
+      "text": "Charlotte Beaumont"
+    }
+  ],
+  "notes": "Standard client engagement letter. SHOULD redact: client + short forms + HQ address, firm + abbreviation + office address, target company + short form + HQ city, lead and supervising attorneys + contact, internal matter ID, firm client-account IBAN, client signatory. SHOULD NOT redact: 'Belgian law', 'France', 'Germany', 'Italy', 'Norway' (general jurisdictional references at country level — not pinning the party). Article 458 Belgian Penal Code is a statute reference."
+}

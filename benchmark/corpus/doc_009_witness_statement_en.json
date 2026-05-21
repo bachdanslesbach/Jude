@@ -1,0 +1,153 @@
+{
+  "id": "doc_009_witness_statement_en",
+  "title": "Ortiz-Valdez — whistleblower witness statement",
+  "language": "en",
+  "text": "WITNESS STATEMENT OF MS. CARMEN ORTIZ-VALDEZ\n\nI, Carmen Ortiz-Valdez, of 47 Elm Street, Apt 3B, Boston, Massachusetts 02114, will say as follows:\n\n1. I am 39 years old and I am a former Senior Procurement Manager at Cascadia Technologies LLC. I worked there from January 2020 until I resigned on 8 April 2026.\n\n2. My direct manager throughout was Mr. Wesley Tan, Vice-President of Procurement. Mr. Tan reported to the CFO, Ms. Patricia Almgren.\n\n3. On 12 February 2026 at approximately 14:30, Mr. Tan called me into his office. Also present was Mr. Devlin O'Connor from the legal team. Mr. Tan asked me to \"find a way\" to award the Q2 components contract to Vertex Microsystems LLP without running the competitive RFP that company policy required. I refused.\n\n4. Vertex Microsystems LLP is, to my knowledge, partly owned by Mr. Tan's brother-in-law, Mr. Aleksander Petrov. Mr. Petrov is listed as a 24% shareholder according to the public Delaware filing I retrieved on 10 March 2026.\n\n5. After I refused, my access to the procurement system was suspended within 48 hours. On 1 April 2026 I was placed on \"performance review\". On 8 April 2026 I resigned.\n\n6. I have provided copies of the relevant emails (including Mr. Tan's message of 13 February 2026 from wesley.tan@cascadia-tech.com) to my attorney, Ms. Hilda Brennan of Brennan & Park LLP.\n\n7. The matter has been referred internally as Case CT-WB-026 by Cascadia's outside counsel.\n\nSigned: Carmen Ortiz-Valdez\nDated: 15 May 2026\nReachable at: c.ortiz.valdez@example-mail.com / +1 617 555 0142",
+  "gold_spans": [
+    {
+      "start": 49,
+      "end": 68,
+      "type": "PERSON",
+      "text": "Carmen Ortiz-Valdez"
+    },
+    {
+      "start": 73,
+      "end": 86,
+      "type": "LOC",
+      "text": "47 Elm Street"
+    },
+    {
+      "start": 96,
+      "end": 102,
+      "type": "LOC",
+      "text": "Boston"
+    },
+    {
+      "start": 216,
+      "end": 241,
+      "type": "ORG",
+      "text": "Cascadia Technologies LLC"
+    },
+    {
+      "start": 351,
+      "end": 361,
+      "type": "PERSON",
+      "text": "Wesley Tan"
+    },
+    {
+      "start": 394,
+      "end": 401,
+      "type": "PERSON",
+      "text": "Mr. Tan"
+    },
+    {
+      "start": 427,
+      "end": 443,
+      "type": "PERSON",
+      "text": "Patricia Almgren"
+    },
+    {
+      "start": 493,
+      "end": 500,
+      "type": "PERSON",
+      "text": "Mr. Tan"
+    },
+    {
+      "start": 549,
+      "end": 564,
+      "type": "PERSON",
+      "text": "Devlin O'Connor"
+    },
+    {
+      "start": 586,
+      "end": 593,
+      "type": "PERSON",
+      "text": "Mr. Tan"
+    },
+    {
+      "start": 658,
+      "end": 681,
+      "type": "ORG",
+      "text": "Vertex Microsystems LLP"
+    },
+    {
+      "start": 763,
+      "end": 786,
+      "type": "ORG",
+      "text": "Vertex Microsystems LLP"
+    },
+    {
+      "start": 824,
+      "end": 831,
+      "type": "PERSON",
+      "text": "Mr. Tan"
+    },
+    {
+      "start": 854,
+      "end": 871,
+      "type": "PERSON",
+      "text": "Aleksander Petrov"
+    },
+    {
+      "start": 873,
+      "end": 883,
+      "type": "PERSON",
+      "text": "Mr. Petrov"
+    },
+    {
+      "start": 1216,
+      "end": 1223,
+      "type": "PERSON",
+      "text": "Mr. Tan"
+    },
+    {
+      "start": 1259,
+      "end": 1287,
+      "type": "EMAIL",
+      "text": "wesley.tan@cascadia-tech.com"
+    },
+    {
+      "start": 1309,
+      "end": 1322,
+      "type": "PERSON",
+      "text": "Hilda Brennan"
+    },
+    {
+      "start": 1326,
+      "end": 1344,
+      "type": "ORG",
+      "text": "Brennan & Park LLP"
+    },
+    {
+      "start": 1398,
+      "end": 1407,
+      "type": "CASE_REF",
+      "text": "CT-WB-026"
+    },
+    {
+      "start": 1411,
+      "end": 1419,
+      "type": "ORG",
+      "text": "Cascadia"
+    },
+    {
+      "start": 1448,
+      "end": 1467,
+      "type": "PERSON",
+      "text": "Carmen Ortiz-Valdez"
+    },
+    {
+      "start": 1501,
+      "end": 1532,
+      "type": "EMAIL",
+      "text": "c.ortiz.valdez@example-mail.com"
+    },
+    {
+      "start": 1535,
+      "end": 1550,
+      "type": "PHONE",
+      "text": "+1 617 555 0142"
+    }
+  ],
+  "notes": "Witness statement with rich PII. SHOULD redact: witness + her home address + her contact details, employer + subsidiary mentions, every named individual (managers, third-party relative, attorney, opposing-firm partner), third-party supplier company, witness's outside counsel firm, internal case ref. SHOULD NOT redact: 'Delaware' (a US-state descriptor for the filing jurisdiction, not a party identifier), 'Senior Procurement Manager', 'Vice-President', 'CFO' (role labels), 'Massachusetts' (state-level, leave city for redaction)."
+}

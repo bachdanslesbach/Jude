@@ -1,0 +1,171 @@
+{
+  "id": "doc_019_antitrust_complaint_en",
+  "title": "Velora v. Apple — DMA complaint to the Commission",
+  "language": "en",
+  "text": "COMPLAINT UNDER ARTICLE 7(2) REGULATION 1/2003\nSubmitted to the European Commission, DG Competition\n\nComplainant: Velora Streaming Services Ltd\nDate: 21 May 2026\nCounsel: Maître Étienne Garnier, Garnier Vasseur SCP\n\nI. Identity of the complainant\n\nVelora Streaming Services Ltd (\"Velora\") is an Irish-incorporated audio-streaming company headquartered at 16 Sir John Rogerson's Quay, Dublin 2, Ireland. Velora has approximately 4.6 million monthly active users across the EEA. Its CEO is Ms. Sinéad Brennan; its Head of Public Policy and the primary point of contact for this submission is Mr. Théo Roussel (t.roussel@velora.example.ie, +353 1 555 0011).\n\nII. The respondent\n\nThe complaint is directed against Apple Inc. (\"Apple\") in its capacity as DMA-designated gatekeeper for the App Store. The conduct under complaint relates to Apple's commission structure, anti-steering provisions, and selective enforcement of in-app-purchase requirements against Velora's iOS application.\n\nIII. Conduct complained of\n\nVelora alleges that, since the entry into force of the DMA on 7 March 2024, Apple has:\n\n(a) continued to apply a 27% commission to \"linked-out\" payment transactions, contrary to Article 5(4) DMA;\n(b) imposed onerous \"scare-screen\" warnings on Velora users following a linked-out checkout flow, in breach of Article 6(13) DMA; and\n(c) selectively rejected Velora's iOS app updates in February and April 2026 on pretextual grounds, despite materially identical updates being approved for competitor apps.\n\nVelora has documented 47 specific incidents. Affidavits from Velora's product manager, Mr. Hideo Nakamura, and senior engineer Ms. Wiktoria Lewandowska are attached as Annex 3.\n\nIV. Relief sought\n\nVelora respectfully requests that the Commission (i) open formal proceedings under Article 20 DMA, (ii) impose interim measures, and (iii) consider penalties under Article 30 DMA.\n\nCounsel contact: e.garnier@garnier-vasseur.example.fr / +33 1 56 90 22 14.",
+  "gold_spans": [
+    {
+      "start": 114,
+      "end": 143,
+      "type": "ORG",
+      "text": "Velora Streaming Services Ltd"
+    },
+    {
+      "start": 178,
+      "end": 193,
+      "type": "PERSON",
+      "text": "Étienne Garnier"
+    },
+    {
+      "start": 195,
+      "end": 214,
+      "type": "ORG",
+      "text": "Garnier Vasseur SCP"
+    },
+    {
+      "start": 248,
+      "end": 277,
+      "type": "ORG",
+      "text": "Velora Streaming Services Ltd"
+    },
+    {
+      "start": 280,
+      "end": 286,
+      "type": "ORG",
+      "text": "Velora"
+    },
+    {
+      "start": 355,
+      "end": 382,
+      "type": "LOC",
+      "text": "16 Sir John Rogerson's Quay"
+    },
+    {
+      "start": 384,
+      "end": 390,
+      "type": "LOC",
+      "text": "Dublin"
+    },
+    {
+      "start": 403,
+      "end": 409,
+      "type": "ORG",
+      "text": "Velora"
+    },
+    {
+      "start": 492,
+      "end": 506,
+      "type": "PERSON",
+      "text": "Sinéad Brennan"
+    },
+    {
+      "start": 594,
+      "end": 606,
+      "type": "PERSON",
+      "text": "Théo Roussel"
+    },
+    {
+      "start": 608,
+      "end": 635,
+      "type": "EMAIL",
+      "text": "t.roussel@velora.example.ie"
+    },
+    {
+      "start": 637,
+      "end": 652,
+      "type": "PHONE",
+      "text": "+353 1 555 0011"
+    },
+    {
+      "start": 710,
+      "end": 720,
+      "type": "ORG",
+      "text": "Apple Inc."
+    },
+    {
+      "start": 723,
+      "end": 728,
+      "type": "ORG",
+      "text": "Apple"
+    },
+    {
+      "start": 834,
+      "end": 839,
+      "type": "ORG",
+      "text": "Apple"
+    },
+    {
+      "start": 956,
+      "end": 962,
+      "type": "ORG",
+      "text": "Velora"
+    },
+    {
+      "start": 1011,
+      "end": 1017,
+      "type": "ORG",
+      "text": "Velora"
+    },
+    {
+      "start": 1087,
+      "end": 1092,
+      "type": "ORG",
+      "text": "Apple"
+    },
+    {
+      "start": 1254,
+      "end": 1260,
+      "type": "ORG",
+      "text": "Velora"
+    },
+    {
+      "start": 1366,
+      "end": 1372,
+      "type": "ORG",
+      "text": "Velora"
+    },
+    {
+      "start": 1515,
+      "end": 1521,
+      "type": "ORG",
+      "text": "Velora"
+    },
+    {
+      "start": 1576,
+      "end": 1582,
+      "type": "ORG",
+      "text": "Velora"
+    },
+    {
+      "start": 1606,
+      "end": 1620,
+      "type": "PERSON",
+      "text": "Hideo Nakamura"
+    },
+    {
+      "start": 1646,
+      "end": 1666,
+      "type": "PERSON",
+      "text": "Wiktoria Lewandowska"
+    },
+    {
+      "start": 1712,
+      "end": 1718,
+      "type": "ORG",
+      "text": "Velora"
+    },
+    {
+      "start": 1910,
+      "end": 1946,
+      "type": "EMAIL",
+      "text": "e.garnier@garnier-vasseur.example.fr"
+    },
+    {
+      "start": 1949,
+      "end": 1966,
+      "type": "PHONE",
+      "text": "+33 1 56 90 22 14"
+    }
+  ],
+  "notes": "DMA complaint to DG COMP. SHOULD redact: complainant + short forms, complainant HQ address, complainant CEO and policy contact + contact info, counsel + firm + contact, complainant's named product manager and engineer (witness affidavits), Apple Inc. and 'Apple' (a DMA-designated gatekeeper that IS in the known_entities whitelist with redact:true — it's a real party here, so Jude should still redact it). SHOULD NOT redact: European Commission, DG Competition, DMA, Regulation 1/2003, Article references, 'Irish' (jurisdictional descriptor), 'iOS' (Apple's platform; arguably Apple-adjacent but a generic platform name; conservative call: leave it)."
+}

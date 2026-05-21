@@ -1,0 +1,165 @@
+{
+  "id": "doc_015_corporate_restructuring_en",
+  "title": "Halcyon Industries — restructuring opinion",
+  "language": "en",
+  "text": "LEGAL OPINION — CORPORATE RESTRUCTURING\nRe: Internal reorganisation of the Halcyon Industries group\n\nAddressed to: The Board of Directors, Halcyon Industries Holdings Ltd\nIssued by: Pemberton Cross LLP, 10 Old Bailey, London EC4M 7NG\nDate: 21 May 2026\nOur ref: PC-2026-HII-RESTR\n\n1. Instructions\n\nWe were instructed by Halcyon Industries Holdings Ltd (\"HIH\"), through its CFO Mr. Reginald Caulfield, to advise on the proposed migration of the group's Jersey-incorporated treasury vehicle, Halcyon Treasury Ltd, to an Irish private limited company.\n\n2. Steps\n\nThe reorganisation proceeds as follows:\n\n(a) On 1 July 2026, Halcyon Treasury Ltd will be re-domiciled to Ireland under Part 17 of the Irish Companies Act 2014, becoming Halcyon Treasury Designated Activity Company (\"HTreas DAC\");\n\n(b) On 15 July 2026, HIH will transfer its 100% shareholding in HTreas DAC to a newly-formed Dutch intermediate holding company, Halcyon Treasury Holdings BV, registered office Strawinskylaan 3127, 1077 ZX Amsterdam;\n\n(c) Halcyon Treasury Holdings BV will be capitalised by way of a EUR 480 million equity injection from HIH funded through a debt-push-down structure.\n\n3. Stamp-duty and consents\n\nStamp duty considerations under the UK Stamp Act 1891 are addressed at paragraph 14 below. Lender consent has been obtained from the syndicate led by Standard Chartered (relationship banker: Mr. Trevor Akinyemi, t.akinyemi@example-sc-bank.com).\n\n4. Conclusion\n\nIn our opinion, subject to the assumptions in Annex B, the transaction is enforceable as a matter of English, Irish, Dutch and Jersey law.\n\nSigned by:\nHugo Pemberton, Senior Partner (h.pemberton@pemberton-cross.example.uk, +44 20 7000 4242)",
+  "gold_spans": [
+    {
+      "start": 75,
+      "end": 93,
+      "type": "ORG",
+      "text": "Halcyon Industries"
+    },
+    {
+      "start": 139,
+      "end": 170,
+      "type": "ORG",
+      "text": "Halcyon Industries Holdings Ltd"
+    },
+    {
+      "start": 182,
+      "end": 201,
+      "type": "ORG",
+      "text": "Pemberton Cross LLP"
+    },
+    {
+      "start": 203,
+      "end": 216,
+      "type": "LOC",
+      "text": "10 Old Bailey"
+    },
+    {
+      "start": 218,
+      "end": 233,
+      "type": "LOC",
+      "text": "London EC4M 7NG"
+    },
+    {
+      "start": 261,
+      "end": 278,
+      "type": "CASE_REF",
+      "text": "PC-2026-HII-RESTR"
+    },
+    {
+      "start": 319,
+      "end": 350,
+      "type": "ORG",
+      "text": "Halcyon Industries Holdings Ltd"
+    },
+    {
+      "start": 353,
+      "end": 356,
+      "type": "ORG",
+      "text": "HIH"
+    },
+    {
+      "start": 380,
+      "end": 398,
+      "type": "PERSON",
+      "text": "Reginald Caulfield"
+    },
+    {
+      "start": 489,
+      "end": 509,
+      "type": "ORG",
+      "text": "Halcyon Treasury Ltd"
+    },
+    {
+      "start": 620,
+      "end": 640,
+      "type": "ORG",
+      "text": "Halcyon Treasury Ltd"
+    },
+    {
+      "start": 729,
+      "end": 773,
+      "type": "ORG",
+      "text": "Halcyon Treasury Designated Activity Company"
+    },
+    {
+      "start": 776,
+      "end": 786,
+      "type": "ORG",
+      "text": "HTreas DAC"
+    },
+    {
+      "start": 812,
+      "end": 815,
+      "type": "ORG",
+      "text": "HIH"
+    },
+    {
+      "start": 855,
+      "end": 865,
+      "type": "ORG",
+      "text": "HTreas DAC"
+    },
+    {
+      "start": 920,
+      "end": 948,
+      "type": "ORG",
+      "text": "Halcyon Treasury Holdings BV"
+    },
+    {
+      "start": 968,
+      "end": 987,
+      "type": "LOC",
+      "text": "Strawinskylaan 3127"
+    },
+    {
+      "start": 997,
+      "end": 1006,
+      "type": "LOC",
+      "text": "Amsterdam"
+    },
+    {
+      "start": 1013,
+      "end": 1041,
+      "type": "ORG",
+      "text": "Halcyon Treasury Holdings BV"
+    },
+    {
+      "start": 1112,
+      "end": 1115,
+      "type": "ORG",
+      "text": "HIH"
+    },
+    {
+      "start": 1338,
+      "end": 1356,
+      "type": "ORG",
+      "text": "Standard Chartered"
+    },
+    {
+      "start": 1383,
+      "end": 1398,
+      "type": "PERSON",
+      "text": "Trevor Akinyemi"
+    },
+    {
+      "start": 1400,
+      "end": 1430,
+      "type": "EMAIL",
+      "text": "t.akinyemi@example-sc-bank.com"
+    },
+    {
+      "start": 1600,
+      "end": 1614,
+      "type": "PERSON",
+      "text": "Hugo Pemberton"
+    },
+    {
+      "start": 1632,
+      "end": 1670,
+      "type": "EMAIL",
+      "text": "h.pemberton@pemberton-cross.example.uk"
+    },
+    {
+      "start": 1672,
+      "end": 1688,
+      "type": "PHONE",
+      "text": "+44 20 7000 4242"
+    }
+  ],
+  "notes": "Cross-border corporate-restructuring opinion. SHOULD redact: client group + holding + all subsidiaries (Jersey treasury, Irish DAC, Dutch holdco) + short forms, issuing law firm + address, addressee CFO, lender (Standard Chartered = party-adjacent, named relationship bank) + relationship banker, partner signatory + contact, internal matter ref, Amsterdam registered-office address. SHOULD NOT redact: 'Jersey', 'Ireland', 'Dutch', 'English', 'Irish Companies Act 2014', 'UK Stamp Act 1891' (jurisdictions and statutes)."
+}

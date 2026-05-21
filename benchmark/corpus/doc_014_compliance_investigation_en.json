@@ -1,0 +1,129 @@
+{
+  "id": "doc_014_compliance_investigation_en",
+  "title": "Alcyone — internal FCPA / loi Sapin investigation",
+  "language": "en",
+  "text": "INTERNAL COMPLIANCE INVESTIGATION — SUMMARY OF FINDINGS\nProject Lighthouse — Reference: ALCYONE-IC-2026-04\n\nInvestigators: Sarah Whitcombe (Head of Internal Audit), Dr. Bastien Levaillant (Outside Counsel, Levaillant Partners)\nPeriod reviewed: 1 January 2024 to 31 March 2026\nSubject: Allegations of facilitation payments in the Casablanca branch of Alcyone Pharmaceuticals SA\n\n1. Mandate\n\nAlcyone Pharmaceuticals SA (\"Alcyone\") commissioned this review following an anonymous hotline report received on 12 February 2026 alleging that the head of the Casablanca branch, Mr. Hicham Bensalem, had authorised cash payments of approximately EUR 90,000 in aggregate to local customs officials to expedite shipment of cold-chain pharmaceutical products.\n\n2. Methodology\n\nWe reviewed 2,418 expense entries, 412 vendor master records, and 87 emails identified by keyword search. Interviews were conducted (in person or by video) with 11 employees, including Ms. Fatima El-Idrissi (Finance Manager, Casablanca), Mr. Omar Belhaj (Logistics Lead), and former branch controller Ms. Joëlle Dupont (now resident in Marseille).\n\n3. Findings\n\nWe find substantial corroboration of the hotline allegation. Twelve expense entries between March 2024 and November 2025 follow a recurring pattern: cash withdrawals of MAD 80,000–95,000 from the branch petty-cash account at Banque Populaire (account holder Alcyone Maghreb SARL, IBAN MA64 0123 4567 8901 2345 6789 01), each followed within 48 hours by customs clearance of consignments that had been administratively delayed.\n\n4. Reporting obligations\n\nWe recommend self-reporting to the U.S. Department of Justice under the FCPA Corporate Enforcement Policy, and to the French Parquet National Financier under the loi Sapin II. The board's Audit & Risk Committee should convene by 5 June 2026.\n\nContact: bastien.levaillant@example-lev-part.fr / +33 1 87 23 99 44.",
+  "gold_spans": [
+    {
+      "start": 88,
+      "end": 106,
+      "type": "CASE_REF",
+      "text": "ALCYONE-IC-2026-04"
+    },
+    {
+      "start": 123,
+      "end": 138,
+      "type": "PERSON",
+      "text": "Sarah Whitcombe"
+    },
+    {
+      "start": 169,
+      "end": 187,
+      "type": "PERSON",
+      "text": "Bastien Levaillant"
+    },
+    {
+      "start": 206,
+      "end": 225,
+      "type": "ORG",
+      "text": "Levaillant Partners"
+    },
+    {
+      "start": 329,
+      "end": 339,
+      "type": "LOC",
+      "text": "Casablanca"
+    },
+    {
+      "start": 350,
+      "end": 376,
+      "type": "ORG",
+      "text": "Alcyone Pharmaceuticals SA"
+    },
+    {
+      "start": 390,
+      "end": 416,
+      "type": "ORG",
+      "text": "Alcyone Pharmaceuticals SA"
+    },
+    {
+      "start": 419,
+      "end": 426,
+      "type": "ORG",
+      "text": "Alcyone"
+    },
+    {
+      "start": 551,
+      "end": 561,
+      "type": "LOC",
+      "text": "Casablanca"
+    },
+    {
+      "start": 574,
+      "end": 589,
+      "type": "PERSON",
+      "text": "Hicham Bensalem"
+    },
+    {
+      "start": 954,
+      "end": 971,
+      "type": "PERSON",
+      "text": "Fatima El-Idrissi"
+    },
+    {
+      "start": 990,
+      "end": 1000,
+      "type": "LOC",
+      "text": "Casablanca"
+    },
+    {
+      "start": 1007,
+      "end": 1018,
+      "type": "PERSON",
+      "text": "Omar Belhaj"
+    },
+    {
+      "start": 1070,
+      "end": 1083,
+      "type": "PERSON",
+      "text": "Joëlle Dupont"
+    },
+    {
+      "start": 1101,
+      "end": 1110,
+      "type": "LOC",
+      "text": "Marseille"
+    },
+    {
+      "start": 1352,
+      "end": 1368,
+      "type": "ORG",
+      "text": "Banque Populaire"
+    },
+    {
+      "start": 1385,
+      "end": 1405,
+      "type": "ORG",
+      "text": "Alcyone Maghreb SARL"
+    },
+    {
+      "start": 1412,
+      "end": 1444,
+      "type": "IBAN",
+      "text": "MA64 0123 4567 8901 2345 6789 01"
+    },
+    {
+      "start": 1833,
+      "end": 1871,
+      "type": "EMAIL",
+      "text": "bastien.levaillant@example-lev-part.fr"
+    },
+    {
+      "start": 1874,
+      "end": 1891,
+      "type": "PHONE",
+      "text": "+33 1 87 23 99 44"
+    }
+  ],
+  "notes": "Internal anti-bribery investigation summary. SHOULD redact: client + subsidiary entity + all short forms, every named individual (investigators, suspect manager, interviewees, former employee), branch banking IBAN + bank, outside counsel firm + contact, internal investigation ref, cities (Casablanca = subsidiary's location, Marseille = ex-employee's residence). SHOULD NOT redact: U.S. Department of Justice (regulator), FCPA, French Parquet National Financier (public prosecutor), loi Sapin II (statute)."
+}

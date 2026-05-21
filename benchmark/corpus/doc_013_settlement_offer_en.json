@@ -1,0 +1,135 @@
+{
+  "id": "doc_013_settlement_offer_en",
+  "title": "Crestwood / Tidewater — without-prejudice settlement offer",
+  "language": "en",
+  "text": "By email only.\n\nFrom: Maximilian Voss, Partner, Voss Lambrechts Avocats\nTo: Imogen Ashworth, Partner, Ashworth & Holm Solicitors\nCc: client teams\nDate: 21 May 2026\nRe: Crestwood Marine Insurance Co. / Tidewater Logistics Ltd — without prejudice settlement proposal\n\nDear Imogen,\n\nI write further to our call of Monday on the long-running coverage dispute between our respective clients arising out of the loss of the M/V Aurelia in the Bay of Biscay (the underlying matter is your firm's ref AHS-2024-117).\n\nOn instructions from Crestwood Marine Insurance Co., I am authorised to make the following without-prejudice offer in full and final settlement of all claims:\n\n(a) Crestwood will pay EUR 14,750,000 to Tidewater Logistics Ltd within 30 days of execution of a mutually acceptable settlement deed;\n(b) Each party will bear its own costs;\n(c) The settlement will include the cross-claims by Mr. Diego Ferreira (the master of the vessel at the time of the casualty) and by Ms. Lucia Marchetti, the cargo surveyor instructed by Tidewater.\n\nPayment, if accepted, will be made to Tidewater's account at Banco Santander, IBAN ES79 2100 0813 6101 2345 6789, by reference WP-CREST-TLW-2026.\n\nThis offer remains open until close of business on 4 June 2026, after which we reserve all rights, including to issue proceedings before the Commercial Court of London under our coverage's English-law and jurisdiction clause.\n\nBest regards,\nMaximilian Voss\nm.voss@voss-lambrechts.example.lu\n+352 27 86 1199",
+  "gold_spans": [
+    {
+      "start": 22,
+      "end": 37,
+      "type": "PERSON",
+      "text": "Maximilian Voss"
+    },
+    {
+      "start": 48,
+      "end": 71,
+      "type": "ORG",
+      "text": "Voss Lambrechts Avocats"
+    },
+    {
+      "start": 76,
+      "end": 91,
+      "type": "PERSON",
+      "text": "Imogen Ashworth"
+    },
+    {
+      "start": 102,
+      "end": 128,
+      "type": "ORG",
+      "text": "Ashworth & Holm Solicitors"
+    },
+    {
+      "start": 168,
+      "end": 198,
+      "type": "ORG",
+      "text": "Crestwood Marine Insurance Co."
+    },
+    {
+      "start": 201,
+      "end": 224,
+      "type": "ORG",
+      "text": "Tidewater Logistics Ltd"
+    },
+    {
+      "start": 417,
+      "end": 428,
+      "type": "ORG",
+      "text": "M/V Aurelia"
+    },
+    {
+      "start": 492,
+      "end": 504,
+      "type": "CASE_REF",
+      "text": "AHS-2024-117"
+    },
+    {
+      "start": 529,
+      "end": 559,
+      "type": "ORG",
+      "text": "Crestwood Marine Insurance Co."
+    },
+    {
+      "start": 672,
+      "end": 681,
+      "type": "ORG",
+      "text": "Crestwood"
+    },
+    {
+      "start": 709,
+      "end": 732,
+      "type": "ORG",
+      "text": "Tidewater Logistics Ltd"
+    },
+    {
+      "start": 899,
+      "end": 913,
+      "type": "PERSON",
+      "text": "Diego Ferreira"
+    },
+    {
+      "start": 980,
+      "end": 995,
+      "type": "PERSON",
+      "text": "Lucia Marchetti"
+    },
+    {
+      "start": 1030,
+      "end": 1039,
+      "type": "ORG",
+      "text": "Tidewater"
+    },
+    {
+      "start": 1080,
+      "end": 1089,
+      "type": "ORG",
+      "text": "Tidewater"
+    },
+    {
+      "start": 1103,
+      "end": 1118,
+      "type": "ORG",
+      "text": "Banco Santander"
+    },
+    {
+      "start": 1125,
+      "end": 1154,
+      "type": "IBAN",
+      "text": "ES79 2100 0813 6101 2345 6789"
+    },
+    {
+      "start": 1169,
+      "end": 1186,
+      "type": "CASE_REF",
+      "text": "WP-CREST-TLW-2026"
+    },
+    {
+      "start": 1430,
+      "end": 1445,
+      "type": "PERSON",
+      "text": "Maximilian Voss"
+    },
+    {
+      "start": 1446,
+      "end": 1479,
+      "type": "EMAIL",
+      "text": "m.voss@voss-lambrechts.example.lu"
+    },
+    {
+      "start": 1480,
+      "end": 1495,
+      "type": "PHONE",
+      "text": "+352 27 86 1199"
+    }
+  ],
+  "notes": "Counsel-to-counsel settlement letter. SHOULD redact: both lawyers + their firms + contact info, both client parties + short forms, vessel name (uniquely identifies the matter), individual witnesses (vessel master, surveyor), opposing-firm internal reference, payment IBAN + reference. SHOULD NOT redact: 'Bay of Biscay' (geographical, not pinning a party), 'Commercial Court of London' (court name), 'English law' (jurisdiction descriptor)."
+}

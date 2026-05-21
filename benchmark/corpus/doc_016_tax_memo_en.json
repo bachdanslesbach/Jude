@@ -1,0 +1,147 @@
+{
+  "id": "doc_016_tax_memo_en",
+  "title": "Helix Biotech — cross-border royalty tax memo",
+  "language": "en",
+  "text": "TAX STRUCTURING MEMORANDUM — DRAFT\nPrivileged & Confidential\nProject Codename: GINKGO\n\nTo: Vanessa Krüger (CFO), Helix Biotech Group AG\nFrom: Dr. Akira Watanabe, Hamilton Reeves Tax LLP\nDate: 21 May 2026\nMatter ID: HRT-2026-GINKGO-01\n\nExecutive summary\n\nThis memo outlines a tax-efficient route for routing royalty income from Helix Biotech Group AG's US-resident subsidiary, Helix Biotech Inc., through a Luxembourg principal company to the Swiss parent. Annual royalty stream: USD 220 million.\n\nProposed structure\n\n1. Establish Helix Royalty SCSp, a Luxembourg special limited partnership, with Helix Biotech Group AG as the limited partner (99.99%) and a Luxembourg-resident GP, Helix GP Sarl, as the unlimited partner (0.01%).\n\n2. License the patent portfolio (currently held by the Swiss parent in Zug) to Helix Royalty SCSp for an upfront fee of USD 35 million. The license is sub-licensable to Helix Biotech Inc. (Cambridge, Massachusetts).\n\n3. Royalty flow: Helix Biotech Inc. → Helix Royalty SCSp → Helix Biotech Group AG. Withholding-tax leakage: 0% under the US-Luxembourg treaty and the Lux-Swiss treaty (subject to the LOB clauses).\n\nBEPS / Pillar Two considerations\n\nHelix Biotech Group AG is in scope for Pillar Two (consolidated revenue ~EUR 1.4bn). The Luxembourg sub-jurisdictional top-up tax (QDMTT) will apply and is expected to neutralise any GILTI-style attribution from the Swiss tax administration. We are coordinating with the OECD secretariat's guidance under the GloBE Model Rules.\n\nBanking\nInitial capitalisation will route through BCEE: IBAN LU93 0019 4001 0000 4000.\n\nPlease call me on +41 44 555 6677 with any questions.\n\nAkira Watanabe\na.watanabe@hamilton-reeves.example.ch",
+  "gold_spans": [
+    {
+      "start": 91,
+      "end": 105,
+      "type": "PERSON",
+      "text": "Vanessa Krüger"
+    },
+    {
+      "start": 113,
+      "end": 135,
+      "type": "ORG",
+      "text": "Helix Biotech Group AG"
+    },
+    {
+      "start": 146,
+      "end": 160,
+      "type": "PERSON",
+      "text": "Akira Watanabe"
+    },
+    {
+      "start": 162,
+      "end": 185,
+      "type": "ORG",
+      "text": "Hamilton Reeves Tax LLP"
+    },
+    {
+      "start": 215,
+      "end": 233,
+      "type": "CASE_REF",
+      "text": "HRT-2026-GINKGO-01"
+    },
+    {
+      "start": 327,
+      "end": 349,
+      "type": "ORG",
+      "text": "Helix Biotech Group AG"
+    },
+    {
+      "start": 376,
+      "end": 394,
+      "type": "ORG",
+      "text": "Helix Biotech Inc."
+    },
+    {
+      "start": 530,
+      "end": 548,
+      "type": "ORG",
+      "text": "Helix Royalty SCSp"
+    },
+    {
+      "start": 597,
+      "end": 619,
+      "type": "ORG",
+      "text": "Helix Biotech Group AG"
+    },
+    {
+      "start": 682,
+      "end": 695,
+      "type": "ORG",
+      "text": "Helix GP Sarl"
+    },
+    {
+      "start": 803,
+      "end": 806,
+      "type": "LOC",
+      "text": "Zug"
+    },
+    {
+      "start": 811,
+      "end": 829,
+      "type": "ORG",
+      "text": "Helix Royalty SCSp"
+    },
+    {
+      "start": 901,
+      "end": 919,
+      "type": "ORG",
+      "text": "Helix Biotech Inc."
+    },
+    {
+      "start": 921,
+      "end": 930,
+      "type": "LOC",
+      "text": "Cambridge"
+    },
+    {
+      "start": 966,
+      "end": 984,
+      "type": "ORG",
+      "text": "Helix Biotech Inc."
+    },
+    {
+      "start": 987,
+      "end": 1005,
+      "type": "ORG",
+      "text": "Helix Royalty SCSp"
+    },
+    {
+      "start": 1008,
+      "end": 1030,
+      "type": "ORG",
+      "text": "Helix Biotech Group AG"
+    },
+    {
+      "start": 1181,
+      "end": 1203,
+      "type": "ORG",
+      "text": "Helix Biotech Group AG"
+    },
+    {
+      "start": 1560,
+      "end": 1564,
+      "type": "ORG",
+      "text": "BCEE"
+    },
+    {
+      "start": 1571,
+      "end": 1595,
+      "type": "IBAN",
+      "text": "LU93 0019 4001 0000 4000"
+    },
+    {
+      "start": 1616,
+      "end": 1631,
+      "type": "PHONE",
+      "text": "+41 44 555 6677"
+    },
+    {
+      "start": 1653,
+      "end": 1667,
+      "type": "PERSON",
+      "text": "Akira Watanabe"
+    },
+    {
+      "start": 1668,
+      "end": 1705,
+      "type": "EMAIL",
+      "text": "a.watanabe@hamilton-reeves.example.ch"
+    }
+  ],
+  "notes": "Cross-border tax structuring memo. SHOULD redact: client CFO + group + every group entity (US sub, Lux SCSp, Lux GP) + short forms, advising tax firm + contact, internal matter ref, party-locating cities (Zug = Swiss parent's location, Cambridge = US sub's location), Luxembourg bank (BCEE) and IBAN. SHOULD NOT redact: Pillar Two, GloBE, BEPS (OECD frameworks), OECD secretariat, GILTI (US tax concept), 'Swiss tax administration' (regulator), tax-treaty references, Luxembourg/Swiss/US as jurisdictional descriptors."
+}

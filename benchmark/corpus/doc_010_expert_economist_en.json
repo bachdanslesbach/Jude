@@ -1,0 +1,117 @@
+{
+  "id": "doc_010_expert_economist_en",
+  "title": "Brightline / Verdant — economist expert report",
+  "language": "en",
+  "text": "EXPERT REPORT OF PROFESSOR EMIL HAUKSSON\nMarket definition and competitive effects in Case M.10987 — Brightline / Verdant Holdings\n\nPrepared at the request of: Counsel for Brightline Industries plc\nSubmitted to: DG Competition, European Commission\nDate: 21 May 2026\n\nI. Qualifications\n\nI, Emil Hauksson, am Professor of Industrial Economics at the University of Reykjavík. My CV is at Annex A. I have previously testified before the Bundeskartellamt, the CMA, and the EU General Court. I am instructed by Brightline's counsel, Ms. Yuki Tanaka of Hartford & Mead LLP.\n\nII. Assignment\n\nI was asked to assess (i) the relevant product market for industrial polymer adhesives in the EEA, and (ii) whether the proposed acquisition of Verdant Holdings BV by Brightline Industries plc raises competition concerns in that market.\n\nIII. Data sources\n\nI rely principally on (a) confidential transaction data produced by Brightline, (b) the Verdant Holdings sales ledger 2021–2025 produced by Verdant under the confidentiality undertaking, (c) Eurostat trade statistics, and (d) a market-research report by IHS Markit dated October 2025.\n\nIV. Conclusions\n\nI find that the relevant market is industrial polymer adhesives sold to OEM automotive customers within the EEA. On 2024 figures, Brightline's share is [REDACTED in published version; ~14% combined]. The merged entity faces strong remaining competitors, including 3M, Henkel, and two Asian entrants. The Herfindahl-Hirschman Index post-merger is approximately 1,450 — below the Commission's safe-harbour threshold of 2,000 for non-coordinated effects.\n\nI accordingly find no significant impediment to effective competition arising from the transaction.\n\nContact: emil.hauksson@example-uni-rey.is / +354 555 7821.",
+  "gold_spans": [
+    {
+      "start": 91,
+      "end": 98,
+      "type": "CASE_REF",
+      "text": "M.10987"
+    },
+    {
+      "start": 101,
+      "end": 130,
+      "type": "ORG",
+      "text": "Brightline / Verdant Holdings"
+    },
+    {
+      "start": 172,
+      "end": 197,
+      "type": "ORG",
+      "text": "Brightline Industries plc"
+    },
+    {
+      "start": 289,
+      "end": 302,
+      "type": "PERSON",
+      "text": "Emil Hauksson"
+    },
+    {
+      "start": 348,
+      "end": 371,
+      "type": "ORG",
+      "text": "University of Reykjavík"
+    },
+    {
+      "start": 505,
+      "end": 515,
+      "type": "ORG",
+      "text": "Brightline"
+    },
+    {
+      "start": 531,
+      "end": 542,
+      "type": "PERSON",
+      "text": "Yuki Tanaka"
+    },
+    {
+      "start": 546,
+      "end": 565,
+      "type": "ORG",
+      "text": "Hartford & Mead LLP"
+    },
+    {
+      "start": 728,
+      "end": 747,
+      "type": "ORG",
+      "text": "Verdant Holdings BV"
+    },
+    {
+      "start": 751,
+      "end": 776,
+      "type": "ORG",
+      "text": "Brightline Industries plc"
+    },
+    {
+      "start": 909,
+      "end": 919,
+      "type": "ORG",
+      "text": "Brightline"
+    },
+    {
+      "start": 929,
+      "end": 945,
+      "type": "ORG",
+      "text": "Verdant Holdings"
+    },
+    {
+      "start": 981,
+      "end": 988,
+      "type": "ORG",
+      "text": "Verdant"
+    },
+    {
+      "start": 1274,
+      "end": 1284,
+      "type": "ORG",
+      "text": "Brightline"
+    },
+    {
+      "start": 1408,
+      "end": 1410,
+      "type": "ORG",
+      "text": "3M"
+    },
+    {
+      "start": 1412,
+      "end": 1418,
+      "type": "ORG",
+      "text": "Henkel"
+    },
+    {
+      "start": 1707,
+      "end": 1739,
+      "type": "EMAIL",
+      "text": "emil.hauksson@example-uni-rey.is"
+    },
+    {
+      "start": 1742,
+      "end": 1755,
+      "type": "PHONE",
+      "text": "+354 555 7821"
+    }
+  ],
+  "notes": "Economist report for an EU merger case. SHOULD redact: expert name + contact + affiliation, both parties + short forms, the M.xxxxx case ref (party-specific Commission case number), instructing counsel name + firm, named third-party competitors (3M, Henkel — they're undertakings, not regulators). SHOULD NOT redact: DG Competition, European Commission, Bundeskartellamt, CMA, EU General Court, EEA, Eurostat — all public bodies/datasets. IHS Markit is a market-research provider; arguably PII-adjacent but commonly cited, so we DO redact it as a named commercial entity that could identify the matter."
+}

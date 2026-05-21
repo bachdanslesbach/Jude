@@ -1,0 +1,111 @@
+{
+  "id": "doc_018_cease_and_desist_en",
+  "title": "Northwind / Pinegrove — IP cease-and-desist",
+  "language": "en",
+  "text": "CEASE AND DESIST — TRADE MARK INFRINGEMENT\n\nFrom: Margaret Holloway, Partner, Holloway IP Partners\n        margaret.holloway@hollowayip.example.com / +1 212 555 7799\nTo: The CEO and General Counsel, Pinegrove Coffee Roasters LLC\n       1188 Cascade Way, Portland, OR 97209\n\nBy email and certified mail\nDate: 21 May 2026\nOur reference: HIP-NOTUSE-2026-0098\n\nDear Sir/Madam,\n\nWe act for Northwind Coffee Company Inc. (\"Northwind\"), proprietor of US Trademark Registration No. 5,123,456 for the word mark \"NORTHWIND\" in International Class 30, registered 4 August 2018 and in continuous use since 2009.\n\nIt has come to our client's attention that Pinegrove Coffee Roasters LLC has, since approximately February 2026, been marketing a single-origin espresso blend under the name \"NORTHWIND RESERVE\" through its retail outlets in Portland, Seattle and online via your website pinegrove-coffee.example.com. We enclose at Annex A photographs and online listings evidencing this use.\n\nYour conduct constitutes (i) infringement of the registered mark under 15 U.S.C. § 1114, (ii) false designation of origin under § 1125(a), and (iii) unfair competition under Oregon common law.\n\nWe accordingly demand that you:\n\n1. Immediately cease all use of \"NORTHWIND\" or any confusingly similar mark in connection with coffee or related goods;\n2. Withdraw all infringing inventory by 4 June 2026;\n3. Provide a sworn accounting of all sales of the \"NORTHWIND RESERVE\" product to date.\n\nShould you fail to comply by the stated deadline, our client will file suit in the United States District Court for the District of Oregon, seeking injunctive relief, treble damages, and attorneys' fees.\n\nThis letter is sent without prejudice to all rights of Northwind, including the right to commence proceedings without further notice.\n\nYours faithfully,\nMargaret Holloway\nHolloway IP Partners",
+  "gold_spans": [
+    {
+      "start": 50,
+      "end": 67,
+      "type": "PERSON",
+      "text": "Margaret Holloway"
+    },
+    {
+      "start": 78,
+      "end": 98,
+      "type": "ORG",
+      "text": "Holloway IP Partners"
+    },
+    {
+      "start": 107,
+      "end": 147,
+      "type": "EMAIL",
+      "text": "margaret.holloway@hollowayip.example.com"
+    },
+    {
+      "start": 150,
+      "end": 165,
+      "type": "PHONE",
+      "text": "+1 212 555 7799"
+    },
+    {
+      "start": 199,
+      "end": 228,
+      "type": "ORG",
+      "text": "Pinegrove Coffee Roasters LLC"
+    },
+    {
+      "start": 236,
+      "end": 252,
+      "type": "LOC",
+      "text": "1188 Cascade Way"
+    },
+    {
+      "start": 254,
+      "end": 262,
+      "type": "LOC",
+      "text": "Portland"
+    },
+    {
+      "start": 335,
+      "end": 355,
+      "type": "CASE_REF",
+      "text": "HIP-NOTUSE-2026-0098"
+    },
+    {
+      "start": 385,
+      "end": 414,
+      "type": "ORG",
+      "text": "Northwind Coffee Company Inc."
+    },
+    {
+      "start": 417,
+      "end": 426,
+      "type": "ORG",
+      "text": "Northwind"
+    },
+    {
+      "start": 644,
+      "end": 673,
+      "type": "ORG",
+      "text": "Pinegrove Coffee Roasters LLC"
+    },
+    {
+      "start": 825,
+      "end": 833,
+      "type": "LOC",
+      "text": "Portland"
+    },
+    {
+      "start": 835,
+      "end": 842,
+      "type": "LOC",
+      "text": "Seattle"
+    },
+    {
+      "start": 871,
+      "end": 899,
+      "type": "URL",
+      "text": "pinegrove-coffee.example.com"
+    },
+    {
+      "start": 1725,
+      "end": 1734,
+      "type": "ORG",
+      "text": "Northwind"
+    },
+    {
+      "start": 1823,
+      "end": 1840,
+      "type": "PERSON",
+      "text": "Margaret Holloway"
+    },
+    {
+      "start": 1841,
+      "end": 1861,
+      "type": "ORG",
+      "text": "Holloway IP Partners"
+    }
+  ],
+  "notes": "Trade-mark cease-and-desist letter. SHOULD redact: sending lawyer + firm + contact, addressee party + HQ address, addressee retail-city refs (Portland, Seattle), client party + short forms, infringing-product website URL, internal matter ref. SHOULD NOT redact: 'Oregon' (state descriptor for the choice-of-law clause), 15 U.S.C. § 1114 / § 1125 (statutes), 'United States District Court for the District of Oregon' (a court), 'NORTHWIND RESERVE' (the disputed mark — note: this names the infringing brand variant. Conservative call: leave it; it's the subject-matter of the dispute, not the party identifier. Borderline.)"
+}

@@ -1,0 +1,123 @@
+{
+  "id": "doc_006_employment_dispute_en",
+  "title": "Harrington v. Northbridge — wrongful dismissal memo",
+  "language": "en",
+  "text": "MEMORANDUM — PRIVILEGED & CONFIDENTIAL\nRe: Harrington v. Northbridge Analytics Ltd — wrongful dismissal claim\n\nPrepared by: Eleanor Whitfield, Counsel for the Claimant\nDate: 21 May 2026\n\n1. Background\n\nOur client, Mr. Daniel Harrington, was employed as Senior Quantitative Analyst by Northbridge Analytics Ltd (HQ at 14 Cornhill, London EC3V 3ND) from 3 February 2019 until his summary dismissal on 11 March 2026. Mr. Harrington reported to the firm's CTO, Ms. Priya Subramanian, and previously to former CTO Marcus Goldberg, who left Northbridge in late 2024.\n\n2. The dismissal\n\nOn 11 March 2026 Mr. Harrington received a one-line email from HR (sent by Ms. Olivia Tran, head of People Ops, olivia.tran@northbridge-analytics.co.uk) terminating his employment for \"irreconcilable performance differences\", with no PIP, no warning, and no right of appeal. We say this is a plain breach of the contractual disciplinary procedure and an unfair dismissal under the Employment Rights Act 1996.\n\n3. Comparators\n\nTwo colleagues recently raised parallel grievances: Mr. Karim El-Sayed (now at a competitor) and Ms. Hannah Vogel. Both have confirmed they will give witness statements. We hold their contact details on file.\n\n4. Next steps\n\nWe propose to file the ET1 next week under tribunal reference NBA-2026-014. The settlement window before issue closes on 6 June 2026. Please call me on +44 20 7946 2231 or write to e.whitfield@example-uk-law.co.uk.\n\nThe Information Commissioner's Office has not been involved; no GDPR complaint has been lodged.",
+  "gold_spans": [
+    {
+      "start": 43,
+      "end": 53,
+      "type": "PERSON",
+      "text": "Harrington"
+    },
+    {
+      "start": 57,
+      "end": 82,
+      "type": "ORG",
+      "text": "Northbridge Analytics Ltd"
+    },
+    {
+      "start": 124,
+      "end": 141,
+      "type": "PERSON",
+      "text": "Eleanor Whitfield"
+    },
+    {
+      "start": 218,
+      "end": 235,
+      "type": "PERSON",
+      "text": "Daniel Harrington"
+    },
+    {
+      "start": 284,
+      "end": 309,
+      "type": "ORG",
+      "text": "Northbridge Analytics Ltd"
+    },
+    {
+      "start": 317,
+      "end": 328,
+      "type": "LOC",
+      "text": "14 Cornhill"
+    },
+    {
+      "start": 330,
+      "end": 345,
+      "type": "LOC",
+      "text": "London EC3V 3ND"
+    },
+    {
+      "start": 414,
+      "end": 428,
+      "type": "PERSON",
+      "text": "Mr. Harrington"
+    },
+    {
+      "start": 461,
+      "end": 478,
+      "type": "PERSON",
+      "text": "Priya Subramanian"
+    },
+    {
+      "start": 509,
+      "end": 524,
+      "type": "PERSON",
+      "text": "Marcus Goldberg"
+    },
+    {
+      "start": 535,
+      "end": 546,
+      "type": "ORG",
+      "text": "Northbridge"
+    },
+    {
+      "start": 597,
+      "end": 611,
+      "type": "PERSON",
+      "text": "Mr. Harrington"
+    },
+    {
+      "start": 659,
+      "end": 670,
+      "type": "PERSON",
+      "text": "Olivia Tran"
+    },
+    {
+      "start": 692,
+      "end": 731,
+      "type": "EMAIL",
+      "text": "olivia.tran@northbridge-analytics.co.uk"
+    },
+    {
+      "start": 1062,
+      "end": 1076,
+      "type": "PERSON",
+      "text": "Karim El-Sayed"
+    },
+    {
+      "start": 1107,
+      "end": 1119,
+      "type": "PERSON",
+      "text": "Hannah Vogel"
+    },
+    {
+      "start": 1293,
+      "end": 1305,
+      "type": "CASE_REF",
+      "text": "NBA-2026-014"
+    },
+    {
+      "start": 1383,
+      "end": 1399,
+      "type": "PHONE",
+      "text": "+44 20 7946 2231"
+    },
+    {
+      "start": 1412,
+      "end": 1444,
+      "type": "EMAIL",
+      "text": "e.whitfield@example-uk-law.co.uk"
+    }
+  ],
+  "notes": "Internal counsel memo on a wrongful dismissal claim. SHOULD redact: claimant, employer, all named individuals (current/former execs, HR contact, comparator witnesses), office address, internal tribunal reference, counsel contact info. SHOULD NOT redact: Employment Rights Act 1996 (statute), Information Commissioner's Office (UK DPA, regulator), GDPR (regulation). 'CTO' is a role label."
+}

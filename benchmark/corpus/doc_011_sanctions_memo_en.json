@@ -1,0 +1,117 @@
+{
+  "id": "doc_011_sanctions_memo_en",
+  "title": "Faraday Energy — sanctions screening memo",
+  "language": "en",
+  "text": "INTERNAL MEMO — CONFIDENTIAL\nSubject: Sanctions screening hit — counterparty Severnaya Logistika OOO\n\nTo: General Counsel, Faraday Energy SE\nFrom: Aisha Ndiaye, Head of Trade Compliance\nDate: 21 May 2026\nInternal ref: FE-COMP-2026-088\n\n1. Background\n\nIn connection with the proposed crude charter under master agreement with Severnaya Logistika OOO (registered in Murmansk, beneficial owner Mr. Vsevolod Kuznetsov), our screening tool flagged a 92% name match against the OFAC SDN list updated 14 May 2026. The flagged entry relates to \"Severnaya Logistics LLC\" with an associated address in Saint Petersburg.\n\n2. Diligence performed\n\nWe obtained the counterparty's certificate of incorporation, current TIN, and a sworn ownership statement from Mr. Kuznetsov. We separately ran the entity through the EU Consolidated Sanctions List, the UK OFSI list, and the Swiss SECO list. No exact match was found on EU or UK lists. The SECO list returned a single low-confidence hit.\n\n3. Legal analysis\n\nOutside counsel — Mr. Ronan Fitzgerald of Fitzgerald Maloney & Partners, Dublin — advises that the SDN flag is likely a false positive based on common Russian-language naming conventions. However, he recommends we obtain an OFAC interpretive guidance letter before any payment instruction is issued.\n\n4. Recommendation\n\nDefer the transaction pending OFAC clearance. Suspend the wire instruction (intended IBAN: NL91 ABNA 0417 1643 00, beneficiary Severnaya Logistika OOO) until clearance is received. Notify our relationship bank, ING, in writing.\n\nContact: a.ndiaye@faraday-energy.example.eu, +49 40 5559 6677.",
+  "gold_spans": [
+    {
+      "start": 77,
+      "end": 100,
+      "type": "ORG",
+      "text": "Severnaya Logistika OOO"
+    },
+    {
+      "start": 123,
+      "end": 140,
+      "type": "ORG",
+      "text": "Faraday Energy SE"
+    },
+    {
+      "start": 147,
+      "end": 159,
+      "type": "PERSON",
+      "text": "Aisha Ndiaye"
+    },
+    {
+      "start": 218,
+      "end": 234,
+      "type": "CASE_REF",
+      "text": "FE-COMP-2026-088"
+    },
+    {
+      "start": 325,
+      "end": 348,
+      "type": "ORG",
+      "text": "Severnaya Logistika OOO"
+    },
+    {
+      "start": 364,
+      "end": 372,
+      "type": "LOC",
+      "text": "Murmansk"
+    },
+    {
+      "start": 395,
+      "end": 413,
+      "type": "PERSON",
+      "text": "Vsevolod Kuznetsov"
+    },
+    {
+      "start": 537,
+      "end": 560,
+      "type": "ORG",
+      "text": "Severnaya Logistics LLC"
+    },
+    {
+      "start": 592,
+      "end": 608,
+      "type": "LOC",
+      "text": "Saint Petersburg"
+    },
+    {
+      "start": 746,
+      "end": 759,
+      "type": "PERSON",
+      "text": "Mr. Kuznetsov"
+    },
+    {
+      "start": 1015,
+      "end": 1031,
+      "type": "PERSON",
+      "text": "Ronan Fitzgerald"
+    },
+    {
+      "start": 1035,
+      "end": 1064,
+      "type": "ORG",
+      "text": "Fitzgerald Maloney & Partners"
+    },
+    {
+      "start": 1066,
+      "end": 1072,
+      "type": "LOC",
+      "text": "Dublin"
+    },
+    {
+      "start": 1404,
+      "end": 1426,
+      "type": "IBAN",
+      "text": "NL91 ABNA 0417 1643 00"
+    },
+    {
+      "start": 1440,
+      "end": 1463,
+      "type": "ORG",
+      "text": "Severnaya Logistika OOO"
+    },
+    {
+      "start": 1524,
+      "end": 1527,
+      "type": "ORG",
+      "text": "ING"
+    },
+    {
+      "start": 1551,
+      "end": 1585,
+      "type": "EMAIL",
+      "text": "a.ndiaye@faraday-energy.example.eu"
+    },
+    {
+      "start": 1587,
+      "end": 1603,
+      "type": "PHONE",
+      "text": "+49 40 5559 6677"
+    }
+  ],
+  "notes": "Internal compliance memo on a sanctions hit. SHOULD redact: own client (Faraday Energy SE), counterparty + near-match alias, all named individuals (compliance officer, UBO, outside counsel), city refs locating parties, outside firm, relationship bank (ING is the client's bank here = party-adjacent), internal ref, intended IBAN. SHOULD NOT redact: OFAC, SDN list, EU Consolidated Sanctions List, UK OFSI, SECO — all official sanctions instruments / regulators."
+}

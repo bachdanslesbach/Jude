@@ -1,55 +1,221 @@
 """Benchmark orchestrator.
 
-Runs every registered runner against every gold document in
-`benchmark/corpus/`, computes per-runner aggregate F1, and prints a
-markdown table to stdout. With `--report path.md` it also writes the
-full report (per-document breakdown + per-type breakdown) to disk so
-we can commit the latest score next to the code.
+Runs registered runners against every gold document in
+`benchmark/corpus/`, computes per-runner aggregate F1 plus the
+secondary metrics (type-agnostic F1, public-body over-redaction,
+sentence-level F1, throughput, peak memory) and prints a markdown
+table. Reports can be written to JSON and merged later, so heavy
+external models can each run in their own process:
 
-    python -m benchmark.run                    # print summary
-    python -m benchmark.run --report docs/benchmark.md   # write full report
+    python -m benchmark.run                          # Jude runners, summary
+    python -m benchmark.run --report docs/benchmark.md
+    python -m benchmark.run --list                   # registered runners
+    python -m benchmark.run --runners pplx-pii-masking --json out/pplx.json
+    python -m benchmark.run --render out/*.json --report docs/benchmark-pii-models.md
 """
 
 from __future__ import annotations
 
 import argparse
+import json
+import resource
+import sys
+import time
+from collections.abc import Callable
 from pathlib import Path
 
 from .evaluate import score_corpus
-from .schema import CorpusReport, GoldDocument
+from .negative import over_redaction, public_mentions
+from .schema import CorpusReport, GoldDocument, Score
+from .sentence_eval import (
+    score_sentences,
+    sentence_flags_from_spans,
+    sentence_gold_labels,
+    split_sentences,
+)
+from .serialize import report_from_dict, report_to_dict
 
 CORPUS_DIR = Path(__file__).parent / "corpus"
 
+DEFAULT_RUNNERS = ("jude-full", "jude-no-public-filter", "spacy-only", "regex-only")
+
 
 def _load_corpus() -> list[GoldDocument]:
-    docs = []
-    for p in sorted(CORPUS_DIR.glob("doc_*.json")):
-        docs.append(GoldDocument.from_json(p))
-    return docs
+    return [GoldDocument.from_json(p) for p in sorted(CORPUS_DIR.glob("doc_*.json"))]
 
 
-def _all_runners():
-    from .runners.jude_full import JudeFullRunner
-    from .runners.jude_no_filter import JudeNoFilterRunner
-    from .runners.regex_only import RegexOnlyRunner
-    from .runners.spacy_only import SpacyOnlyRunner
+def _registry() -> dict[str, Callable[[], object]]:
+    """name → zero-arg factory. Imports are deferred so listing runners
+    does not load any model."""
 
-    return [
-        JudeFullRunner(),
-        JudeNoFilterRunner(),
-        SpacyOnlyRunner(),
-        RegexOnlyRunner(),
-    ]
+    def jude_full():
+        from .runners.jude_full import JudeFullRunner
+        return JudeFullRunner()
+
+    def jude_no_filter():
+        from .runners.jude_no_filter import JudeNoFilterRunner
+        return JudeNoFilterRunner()
+
+    def spacy_only():
+        from .runners.spacy_only import SpacyOnlyRunner
+        return SpacyOnlyRunner()
+
+    def regex_only():
+        from .runners.regex_only import RegexOnlyRunner
+        return RegexOnlyRunner()
+
+    def gliner_base():
+        from .runners.nvidia_gliner_pii import gliner_base_jude_labels
+        return gliner_base_jude_labels()
+
+    def nvidia_native():
+        from .runners.nvidia_gliner_pii import nvidia_native
+        return nvidia_native(threshold=0.5)
+
+    def nvidia_native_t03():
+        from .runners.nvidia_gliner_pii import nvidia_native
+        return nvidia_native(threshold=0.3)
+
+    def nvidia_jude():
+        from .runners.nvidia_gliner_pii import nvidia_jude_labels
+        return nvidia_jude_labels()
+
+    def pplx():
+        from .runners.pplx_pii import PplxPiiRunner
+        return PplxPiiRunner()
+
+    def roblox():
+        from .runners.roblox_pii import RobloxPiiRunner
+        return RobloxPiiRunner()
+
+    return {
+        "jude-full": jude_full,
+        "jude-no-public-filter": jude_no_filter,
+        "spacy-only": spacy_only,
+        "regex-only": regex_only,
+        "gliner-large-v2.1-jude-labels": gliner_base,
+        "nvidia-gliner-pii-native": nvidia_native,
+        "nvidia-gliner-pii-native-t03": nvidia_native_t03,
+        "nvidia-gliner-pii-jude-labels": nvidia_jude,
+        "pplx-pii-masking": pplx,
+        "roblox-pii-classifier": roblox,
+    }
+
+
+# --- execution -------------------------------------------------------------
+
+
+def _peak_rss_mb() -> float:
+    ru = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+    return ru / (1024 * 1024) if sys.platform == "darwin" else ru / 1024
+
+
+def run_one(name: str, factory: Callable[[], object], docs: list[GoldDocument]) -> CorpusReport:
+    t0 = time.perf_counter()
+    runner = factory()
+    load_seconds = time.perf_counter() - t0
+
+    sents_per_doc = [split_sentences(d.text) for d in docs]
+    gold_flags = [sentence_gold_labels(s, d.gold_spans) for s, d in zip(sents_per_doc, docs)]
+
+    if getattr(runner, "sentence_level_only", False):
+        t0 = time.perf_counter()
+        pred_flags = []
+        for d, sents in zip(docs, sents_per_doc):
+            got_sents, flags = runner.predict_sentences(d.text)  # type: ignore[attr-defined]
+            assert got_sents == sents, "runner must use benchmark.sentence_eval.split_sentences"
+            pred_flags.append(flags)
+        seconds = time.perf_counter() - t0
+        report = CorpusReport(
+            runner_name=getattr(runner, "name", name),
+            per_doc=[],
+            aggregate=Score(0.0, 0.0, 0.0, 0, 0, 0),
+        )
+        report.meta["span_level"] = False
+    else:
+        t0 = time.perf_counter()
+        report = score_corpus(runner, docs)
+        seconds = time.perf_counter() - t0
+        pred_flags = [
+            sentence_flags_from_spans(s, dr.pred_spans)
+            for s, dr in zip(sents_per_doc, report.per_doc)
+        ]
+        hits = total = 0
+        for d, dr in zip(docs, report.per_doc):
+            h, t = over_redaction(dr.pred_spans, public_mentions(d.text, d.gold_spans))
+            hits += h
+            total += t
+        report.meta["span_level"] = True
+        report.meta["public_body_over_redaction"] = {
+            "hits": hits, "total": total, "rate": (hits / total) if total else 0.0,
+        }
+
+    flat_pred = [f for fs in pred_flags for f in fs]
+    flat_gold = [f for fs in gold_flags for f in fs]
+    ss = score_sentences(flat_pred, flat_gold)
+    report.meta["sentence_level"] = {
+        "precision": ss.precision, "recall": ss.recall, "f1": ss.f1,
+        "tp": ss.tp, "fp": ss.fp, "fn": ss.fn, "n_sentences": len(flat_gold),
+    }
+
+    chars = sum(len(d.text) for d in docs)
+    report.meta.update({
+        "n_docs": len(docs),
+        "load_seconds": load_seconds,
+        "seconds": seconds,
+        "chars_per_sec": (chars / seconds) if seconds else None,
+        "peak_rss_mb": _peak_rss_mb(),
+        "device": getattr(runner, "device", "cpu"),
+    })
+    extra = getattr(runner, "extra_meta", None)
+    if callable(extra):
+        report.meta.update(extra())
+    return report
+
+
+# --- rendering -------------------------------------------------------------
+
+
+def _f(x: float | None, nd: int = 3) -> str:
+    return "—" if x is None else f"{x:.{nd}f}"
 
 
 def _render_summary_table(reports: list[CorpusReport]) -> str:
+    out = [
+        "| Runner | Precision | Recall | **F1** | F1 (any type) | Public-body over-redaction | Sentence F1 | chars/s | Peak RSS |",
+        "|---|---|---|---|---|---|---|---|---|",
+    ]
+    for r in reports:
+        m = r.meta
+        a = r.aggregate
+        span_level = m.get("span_level", True)
+        pb = m.get("public_body_over_redaction")
+        pb_s = f"{pb['hits']}/{pb['total']} ({pb['rate']:.0%})" if pb else "—"
+        sl = m.get("sentence_level")
+        rss = m.get("peak_rss_mb")
+        cps = m.get("chars_per_sec")
+        out.append(
+            f"| `{r.runner_name}` | "
+            + (f"{a.precision:.3f} | {a.recall:.3f} | **{a.f1:.3f}** | " if span_level else "— | — | — | ")
+            + (f"{r.aggregate_any_type.f1:.3f} | " if (span_level and r.aggregate_any_type) else "— | ")
+            + f"{pb_s} | "
+            + (f"{sl['f1']:.3f} | " if sl else "— | ")
+            + (f"{cps:,.0f} | " if cps else "— | ")
+            + (f"{rss:,.0f} MB |" if rss else "— |")
+        )
+    return "\n".join(out)
+
+
+def _render_sentence_table(reports: list[CorpusReport]) -> str:
     out = ["| Runner | Precision | Recall | F1 | TP | FP | FN |",
            "|---|---|---|---|---|---|---|"]
     for r in reports:
-        a = r.aggregate
+        sl = r.meta.get("sentence_level")
+        if not sl:
+            continue
         out.append(
-            f"| `{r.runner_name}` | {a.precision:.3f} | {a.recall:.3f} | "
-            f"**{a.f1:.3f}** | {a.tp} | {a.fp} | {a.fn} |"
+            f"| `{r.runner_name}` | {sl['precision']:.3f} | {sl['recall']:.3f} | "
+            f"**{sl['f1']:.3f}** | {sl['tp']} | {sl['fp']} | {sl['fn']} |"
         )
     return "\n".join(out)
 
@@ -67,9 +233,7 @@ def _render_per_type_table(report: CorpusReport) -> str:
 
 
 def _render_per_doc_table(reports: list[CorpusReport]) -> str:
-    """Per-document F1 across runners — shows where each runner under- or
-    over-performs the average."""
-
+    reports = [r for r in reports if r.meta.get("span_level", True)]
     docs = sorted({d.doc_id for r in reports for d in r.per_doc})
     headers = ["Document"] + [r.runner_name for r in reports]
     lines = ["| " + " | ".join(headers) + " |",
@@ -84,16 +248,64 @@ def _render_per_doc_table(reports: list[CorpusReport]) -> str:
     return "\n".join(lines)
 
 
-def _full_report(reports: list[CorpusReport]) -> str:
+def _render_notes(reports: list[CorpusReport]) -> str:
+    lines: list[str] = []
+    for r in reports:
+        m = r.meta
+        bits: list[str] = []
+        if m.get("model"):
+            rev = (m.get("revision") or "")[:8]
+            bits.append(f"model `{m['model']}`" + (f" @ `{rev}`" if rev else ""))
+        if m.get("device"):
+            bits.append(f"device {m['device']}")
+        if m.get("load_seconds") is not None:
+            bits.append(f"load {m['load_seconds']:.1f} s")
+        if m.get("threshold") is not None:
+            bits.append(f"threshold {m['threshold']}")
+        if m.get("out_of_schema"):
+            bits.append("out-of-schema predictions dropped: " + ", ".join(
+                f"{k}×{v}" for k, v in sorted(m["out_of_schema"].items())
+            ))
+        if m.get("mean_document_sensitivity") is not None:
+            bits.append(f"mean document sensitivity {m['mean_document_sensitivity']:.2f}")
+        lines.append(f"- **`{r.runner_name}`** — " + "; ".join(bits) + ".")
+        for n in m.get("notes", []):
+            lines.append(f"  - {n}")
+    return "\n".join(lines)
+
+
+def _full_report(reports: list[CorpusReport], title: str, prelude: str | None = None) -> str:
+    n_docs = next((r.meta.get("n_docs") for r in reports if r.meta.get("n_docs")), None)
+    n_docs = n_docs or max((len(r.per_doc) for r in reports), default=0)
     parts = [
-        "# Jude redaction benchmark",
+        # Jekyll front matter so GitHub Pages renders the page through
+        # the site layout instead of serving raw markdown.
+        "---",
+        f"title: {title}",
+        "layout: default",
+        "---",
         "",
-        "Span-level F1 across the 5-document gold corpus in "
-        "`benchmark/corpus/`. Lenient overlap matching, type-strict.",
+        f"# {title}",
+        "",
+        *([prelude.rstrip(), ""] if prelude else []),
+        f"Span-level F1 across the {n_docs}-document gold corpus in "
+        "`benchmark/corpus/`. Lenient overlap matching, type-strict "
+        "(the *any type* column drops the type constraint). "
+        "*Public-body over-redaction*: share of whitelisted institution / "
+        "statute mentions (not covered by gold) that the runner redacted — "
+        "lower is better. *Sentence F1*: every runner projected onto a "
+        "sentence grid (positive iff it flags any character of the "
+        "sentence), the only level at which message classifiers can be "
+        "compared. Throughput and peak RSS measured on this machine, one "
+        "runner per process.",
         "",
         "## Aggregate",
         "",
         _render_summary_table(reports),
+        "",
+        "## Sentence level",
+        "",
+        _render_sentence_table(reports),
         "",
         "## Per document (F1)",
         "",
@@ -103,33 +315,75 @@ def _full_report(reports: list[CorpusReport]) -> str:
         "",
     ]
     for r in reports:
-        parts.append(_render_per_type_table(r))
-        parts.append("")
+        if r.meta.get("span_level", True):
+            parts.append(_render_per_type_table(r))
+            parts.append("")
+    parts += ["## Runner notes", "", _render_notes(reports), ""]
     return "\n".join(parts)
 
 
-def main():
-    parser = argparse.ArgumentParser()
+# --- CLI ---------------------------------------------------------------------
+
+
+def main(argv: list[str] | None = None) -> None:
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--runners", default=None,
+                        help="Comma-separated runner names (default: Jude runners)")
+    parser.add_argument("--list", action="store_true", help="List registered runners and exit")
+    parser.add_argument("--json", type=Path, default=None,
+                        help="Write the reports of this run to a JSON file")
+    parser.add_argument("--render", nargs="*", type=Path, default=None,
+                        help="Render a report from previously written JSON files instead of running")
     parser.add_argument("--report", type=Path, default=None,
                         help="Write the full markdown report to this path")
-    args = parser.parse_args()
+    parser.add_argument("--title", default="Jude redaction benchmark")
+    parser.add_argument("--prelude", type=Path, default=None,
+                        help="Markdown file inserted after the title (methodology, systems, …)")
+    parser.add_argument("--postlude", type=Path, default=None,
+                        help="Markdown file appended after the tables (analysis, conclusions)")
+    args = parser.parse_args(argv)
 
-    docs = _load_corpus()
-    if not docs:
-        raise SystemExit(f"No documents found in {CORPUS_DIR}")
-    print(f"Loaded {len(docs)} documents from {CORPUS_DIR}")
+    registry = _registry()
+    if args.list:
+        for name in registry:
+            print(name)
+        return
 
-    runners = _all_runners()
-    reports = []
-    for r in runners:
-        print(f"  Running {r.name} ...")
-        reports.append(score_corpus(r, docs))
+    if args.render is not None:
+        reports: list[CorpusReport] = []
+        for p in args.render:
+            data = json.loads(p.read_text(encoding="utf-8"))
+            reports.extend(report_from_dict(d) for d in (data if isinstance(data, list) else [data]))
+    else:
+        docs = _load_corpus()
+        if not docs:
+            raise SystemExit(f"No documents found in {CORPUS_DIR}")
+        print(f"Loaded {len(docs)} documents from {CORPUS_DIR}")
+        names = [n.strip() for n in args.runners.split(",")] if args.runners else list(DEFAULT_RUNNERS)
+        unknown = [n for n in names if n not in registry]
+        if unknown:
+            raise SystemExit(f"Unknown runner(s): {unknown}. See --list.")
+        reports = []
+        for n in names:
+            print(f"  Running {n} ...", flush=True)
+            reports.append(run_one(n, registry[n], docs))
+        if args.json:
+            args.json.parent.mkdir(parents=True, exist_ok=True)
+            args.json.write_text(
+                json.dumps([report_to_dict(r) for r in reports], indent=1, ensure_ascii=False),
+                encoding="utf-8",
+            )
+            print(f"JSON written to {args.json}")
 
     print()
     print(_render_summary_table(reports))
 
     if args.report:
-        args.report.write_text(_full_report(reports), encoding="utf-8")
+        prelude = args.prelude.read_text(encoding="utf-8") if args.prelude else None
+        body = _full_report(reports, args.title, prelude)
+        if args.postlude:
+            body += "\n" + args.postlude.read_text(encoding="utf-8").rstrip() + "\n"
+        args.report.write_text(body, encoding="utf-8")
         print(f"\nFull report written to {args.report}")
 
 

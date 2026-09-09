@@ -26,7 +26,8 @@ OpenAI, Google Vertex, Mistral, or any other provider is a small
 > before sending.
 
 [Install →](installation.html) · [Architecture →](architecture.html) ·
-[Threat model →](threat-model.html) · [FAQ →](faq.html) ·
+[Threat model →](threat-model.html) · [Benchmark →](benchmark-pii-models.html) ·
+[FAQ →](faq.html) ·
 [Source on GitHub →](https://github.com/bachdanslesbach/Jude)
 
 ---

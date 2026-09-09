@@ -1,0 +1,5772 @@
+[
+ {
+  "runner_name": "jude-no-public-filter",
+  "aggregate": {
+   "precision": 0.7623762376237624,
+   "recall": 0.9600997506234414,
+   "f1": 0.8498896247240618,
+   "tp": 385,
+   "fp": 120,
+   "fn": 16,
+   "by_type": {
+    "ORG": {
+     "precision": 0.6680497925311203,
+     "recall": 0.930635838150289,
+     "f1": 0.7777777777777777,
+     "tp": 161,
+     "fp": 80,
+     "fn": 12
+    },
+    "LOC": {
+     "precision": 0.6395348837209303,
+     "recall": 0.9821428571428571,
+     "f1": 0.7746478873239436,
+     "tp": 55,
+     "fp": 31,
+     "fn": 1
+    },
+    "PERSON": {
+     "precision": 0.925531914893617,
+     "recall": 0.9775280898876404,
+     "f1": 0.9508196721311475,
+     "tp": 87,
+     "fp": 7,
+     "fn": 2
+    },
+    "EMAIL": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "tp": 30,
+     "fp": 0,
+     "fn": 0
+    },
+    "PHONE": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "tp": 22,
+     "fp": 0,
+     "fn": 0
+    },
+    "IBAN": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "tp": 12,
+     "fp": 0,
+     "fn": 0
+    },
+    "CASE_REF": {
+     "precision": 0.9,
+     "recall": 1.0,
+     "f1": 0.9473684210526316,
+     "tp": 18,
+     "fp": 2,
+     "fn": 0
+    },
+    "URL": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "tp": 0,
+     "fp": 0,
+     "fn": 1
+    }
+   }
+  },
+  "aggregate_any_type": {
+   "precision": 0.7663366336633664,
+   "recall": 0.9650872817955112,
+   "f1": 0.8543046357615894,
+   "tp": 387,
+   "fp": 118,
+   "fn": 14,
+   "by_type": {
+    "ORG": {
+     "precision": 0.6736401673640168,
+     "recall": 0.930635838150289,
+     "f1": 0.7815533980582524,
+     "tp": 161,
+     "fp": 78,
+     "fn": 12
+    },
+    "LOC": {
+     "precision": 0.6436781609195402,
+     "recall": 1.0,
+     "f1": 0.7832167832167831,
+     "tp": 56,
+     "fp": 31,
+     "fn": 0
+    },
+    "PERSON": {
+     "precision": 0.9263157894736842,
+     "recall": 0.9887640449438202,
+     "f1": 0.9565217391304348,
+     "tp": 88,
+     "fp": 7,
+     "fn": 1
+    },
+    "EMAIL": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "tp": 30,
+     "fp": 0,
+     "fn": 0
+    },
+    "PHONE": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "tp": 22,
+     "fp": 0,
+     "fn": 0
+    },
+    "IBAN": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "tp": 12,
+     "fp": 0,
+     "fn": 0
+    },
+    "CASE_REF": {
+     "precision": 0.9,
+     "recall": 1.0,
+     "f1": 0.9473684210526316,
+     "tp": 18,
+     "fp": 2,
+     "fn": 0
+    },
+    "URL": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "tp": 0,
+     "fp": 0,
+     "fn": 1
+    }
+   }
+  },
+  "meta": {
+   "span_level": true,
+   "public_body_over_redaction": {
+    "hits": 82,
+    "total": 95,
+    "rate": 0.8631578947368421
+   },
+   "sentence_level": {
+    "precision": 0.7804878048780488,
+    "recall": 0.9491525423728814,
+    "f1": 0.8565965583173997,
+    "tp": 224,
+    "fp": 63,
+    "fn": 12,
+    "n_sentences": 519
+   },
+   "n_docs": 20,
+   "load_seconds": 0.0020567500014294637,
+   "seconds": 64.08076420900034,
+   "chars_per_sec": 470.8745342297583,
+   "peak_rss_mb": 3442.765625,
+   "device": "cpu"
+  },
+  "per_doc": [
+   {
+    "doc_id": "doc_001_term_sheet_en",
+    "score": {
+     "precision": 0.875,
+     "recall": 1.0,
+     "f1": 0.9333333333333333,
+     "tp": 14,
+     "fp": 2,
+     "fn": 0,
+     "by_type": {
+      "ORG": {
+       "precision": 0.8,
+       "recall": 1.0,
+       "f1": 0.888888888888889,
+       "tp": 4,
+       "fp": 1,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.75,
+       "recall": 1.0,
+       "f1": 0.8571428571428571,
+       "tp": 3,
+       "fp": 1,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.875,
+     "recall": 1.0,
+     "f1": 0.9333333333333333,
+     "tp": 14,
+     "fp": 2,
+     "fn": 0,
+     "by_type": {
+      "ORG": {
+       "precision": 0.8,
+       "recall": 1.0,
+       "f1": 0.888888888888889,
+       "tp": 4,
+       "fp": 1,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.75,
+       "recall": 1.0,
+       "f1": 0.8571428571428571,
+       "tp": 3,
+       "fp": 1,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 114,
+      "end": 131,
+      "type": "ORG",
+      "text": "Acme Solutions SA"
+     },
+     {
+      "start": 176,
+      "end": 184,
+      "type": "LOC",
+      "text": "Brussels"
+     },
+     {
+      "start": 198,
+      "end": 216,
+      "type": "ORG",
+      "text": "Lumen Reality SARL"
+     },
+     {
+      "start": 220,
+      "end": 226,
+      "type": "LOC",
+      "text": "French"
+     },
+     {
+      "start": 263,
+      "end": 279,
+      "type": "LOC",
+      "text": "22 rue de Rivoli"
+     },
+     {
+      "start": 287,
+      "end": 292,
+      "type": "LOC",
+      "text": "Paris"
+     },
+     {
+      "start": 323,
+      "end": 343,
+      "type": "PERSON",
+      "text": "Maître Sophie Martin"
+     },
+     {
+      "start": 345,
+      "end": 373,
+      "type": "EMAIL",
+      "text": "sophie.martin@example-law.eu"
+     },
+     {
+      "start": 375,
+      "end": 392,
+      "type": "PHONE",
+      "text": "+33 1 44 55 66 77"
+     },
+     {
+      "start": 419,
+      "end": 429,
+      "type": "PERSON",
+      "text": "James Chen"
+     },
+     {
+      "start": 431,
+      "end": 456,
+      "type": "EMAIL",
+      "text": "j.chen@example-cabinet.fr"
+     },
+     {
+      "start": 498,
+      "end": 516,
+      "type": "ORG",
+      "text": "Lumen Reality SARL"
+     },
+     {
+      "start": 705,
+      "end": 724,
+      "type": "ORG",
+      "text": "European Commission"
+     },
+     {
+      "start": 765,
+      "end": 776,
+      "type": "ORG",
+      "text": "BNP Paribas"
+     },
+     {
+      "start": 783,
+      "end": 816,
+      "type": "IBAN",
+      "text": "FR76 3000 4000 5000 0123 4567 890"
+     },
+     {
+      "start": 858,
+      "end": 871,
+      "type": "CASE_REF",
+      "text": "Case T-203/24"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_002_credit_facility_en",
+    "score": {
+     "precision": 0.7777777777777778,
+     "recall": 1.0,
+     "f1": 0.8750000000000001,
+     "tp": 14,
+     "fp": 4,
+     "fn": 0,
+     "by_type": {
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.5714285714285714,
+       "recall": 1.0,
+       "f1": 0.7272727272727273,
+       "tp": 4,
+       "fp": 3,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 1,
+       "fn": 0
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.7777777777777778,
+     "recall": 1.0,
+     "f1": 0.8750000000000001,
+     "tp": 14,
+     "fp": 4,
+     "fn": 0,
+     "by_type": {
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.5714285714285714,
+       "recall": 1.0,
+       "f1": 0.7272727272727273,
+       "tp": 4,
+       "fp": 3,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 1,
+       "fn": 0
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 50,
+      "end": 68,
+      "type": "PERSON",
+      "text": "Christian Hartmann"
+     },
+     {
+      "start": 70,
+      "end": 93,
+      "type": "EMAIL",
+      "text": "c.hartmann@ubs-legal.ch"
+     },
+     {
+      "start": 95,
+      "end": 110,
+      "type": "PHONE",
+      "text": "+41 44 234 5678"
+     },
+     {
+      "start": 118,
+      "end": 137,
+      "type": "PERSON",
+      "text": "Anne-Sophie Lefèvre"
+     },
+     {
+      "start": 165,
+      "end": 186,
+      "type": "ORG",
+      "text": "Pioneer Industries SA"
+     },
+     {
+      "start": 189,
+      "end": 192,
+      "type": "ORG",
+      "text": "UBS"
+     },
+     {
+      "start": 224,
+      "end": 233,
+      "type": "PERSON",
+      "text": "Christian"
+     },
+     {
+      "start": 236,
+      "end": 257,
+      "type": "ORG",
+      "text": "Pioneer Industries SA"
+     },
+     {
+      "start": 261,
+      "end": 271,
+      "type": "LOC",
+      "text": "Luxembourg"
+     },
+     {
+      "start": 364,
+      "end": 367,
+      "type": "ORG",
+      "text": "UBS"
+     },
+     {
+      "start": 497,
+      "end": 521,
+      "type": "IBAN",
+      "text": "LU60 0030 1234 5678 9000"
+     },
+     {
+      "start": 528,
+      "end": 544,
+      "type": "ORG",
+      "text": "Bundeskartellamt"
+     },
+     {
+      "start": 553,
+      "end": 579,
+      "type": "ORG",
+      "text": "Autorité de la concurrence"
+     },
+     {
+      "start": 604,
+      "end": 630,
+      "type": "ORG",
+      "text": "European Banking Authority"
+     },
+     {
+      "start": 788,
+      "end": 802,
+      "type": "CASE_REF",
+      "text": "M-2026-PIO-001"
+     },
+     {
+      "start": 823,
+      "end": 840,
+      "type": "PHONE",
+      "text": "+33 1 53 89 76 21"
+     },
+     {
+      "start": 879,
+      "end": 898,
+      "type": "PERSON",
+      "text": "Anne-Sophie Lefèvre"
+     },
+     {
+      "start": 899,
+      "end": 931,
+      "type": "EMAIL",
+      "text": "a.lefevre@example-swiss-legal.ch"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_003_solaris_jv_fr",
+    "score": {
+     "precision": 0.7037037037037037,
+     "recall": 1.0,
+     "f1": 0.8260869565217391,
+     "tp": 19,
+     "fp": 8,
+     "fn": 0,
+     "by_type": {
+      "ORG": {
+       "precision": 0.5833333333333334,
+       "recall": 1.0,
+       "f1": 0.7368421052631579,
+       "tp": 7,
+       "fp": 5,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.6666666666666666,
+       "recall": 1.0,
+       "f1": 0.8,
+       "tp": 4,
+       "fp": 2,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 0.8,
+       "recall": 1.0,
+       "f1": 0.888888888888889,
+       "tp": 4,
+       "fp": 1,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.7037037037037037,
+     "recall": 1.0,
+     "f1": 0.8260869565217391,
+     "tp": 19,
+     "fp": 8,
+     "fn": 0,
+     "by_type": {
+      "ORG": {
+       "precision": 0.5833333333333334,
+       "recall": 1.0,
+       "f1": 0.7368421052631579,
+       "tp": 7,
+       "fp": 5,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.6666666666666666,
+       "recall": 1.0,
+       "f1": 0.8,
+       "tp": 4,
+       "fp": 2,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 0.8,
+       "recall": 1.0,
+       "f1": 0.888888888888889,
+       "tp": 4,
+       "fp": 1,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 22,
+      "end": 38,
+      "type": "ORG",
+      "text": "TotalEnergies SE"
+     },
+     {
+      "start": 41,
+      "end": 66,
+      "type": "ORG",
+      "text": "Mediterranean Solar Group"
+     },
+     {
+      "start": 68,
+      "end": 77,
+      "type": "LOC",
+      "text": "Bruxelles"
+     },
+     {
+      "start": 100,
+      "end": 113,
+      "type": "PERSON",
+      "text": "Pierre Dubois"
+     },
+     {
+      "start": 115,
+      "end": 145,
+      "type": "EMAIL",
+      "text": "p.dubois@example-cabinet-fr.fr"
+     },
+     {
+      "start": 147,
+      "end": 164,
+      "type": "PHONE",
+      "text": "+33 1 53 89 76 21"
+     },
+     {
+      "start": 171,
+      "end": 186,
+      "type": "PERSON",
+      "text": "Maria Rodríguez"
+     },
+     {
+      "start": 227,
+      "end": 242,
+      "type": "LOC",
+      "text": "Afrique du Nord"
+     },
+     {
+      "start": 249,
+      "end": 255,
+      "type": "PERSON",
+      "text": "Pierre"
+     },
+     {
+      "start": 258,
+      "end": 274,
+      "type": "ORG",
+      "text": "TotalEnergies SE"
+     },
+     {
+      "start": 278,
+      "end": 303,
+      "type": "ORG",
+      "text": "Mediterranean Solar Group"
+     },
+     {
+      "start": 351,
+      "end": 364,
+      "type": "ORG",
+      "text": "TotalEnergies"
+     },
+     {
+      "start": 465,
+      "end": 490,
+      "type": "ORG",
+      "text": "Mediterranean Solar Group"
+     },
+     {
+      "start": 503,
+      "end": 513,
+      "type": "LOC",
+      "text": "Casablanca"
+     },
+     {
+      "start": 518,
+      "end": 554,
+      "type": "ORG",
+      "text": "Autorité de la concurrence française"
+     },
+     {
+      "start": 574,
+      "end": 595,
+      "type": "ORG",
+      "text": "Commission européenne"
+     },
+     {
+      "start": 650,
+      "end": 652,
+      "type": "ORG",
+      "text": "EC"
+     },
+     {
+      "start": 680,
+      "end": 685,
+      "type": "ORG",
+      "text": "ADEME"
+     },
+     {
+      "start": 692,
+      "end": 695,
+      "type": "ORG",
+      "text": "BEI"
+     },
+     {
+      "start": 792,
+      "end": 795,
+      "type": "ORG",
+      "text": "BIL"
+     },
+     {
+      "start": 803,
+      "end": 827,
+      "type": "IBAN",
+      "text": "LU28 0019 4006 4475 0000"
+     },
+     {
+      "start": 878,
+      "end": 888,
+      "type": "LOC",
+      "text": "Casablanca"
+     },
+     {
+      "start": 955,
+      "end": 970,
+      "type": "PERSON",
+      "text": "Maria Rodríguez"
+     },
+     {
+      "start": 975,
+      "end": 994,
+      "type": "LOC",
+      "text": "boulevard Haussmann"
+     },
+     {
+      "start": 1002,
+      "end": 1007,
+      "type": "LOC",
+      "text": "Paris"
+     },
+     {
+      "start": 1023,
+      "end": 1038,
+      "type": "PERSON",
+      "text": "Maria Rodríguez"
+     },
+     {
+      "start": 1040,
+      "end": 1070,
+      "type": "EMAIL",
+      "text": "m.rodriguez@example-cabinet.fr"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_004_brussels_letter_nl",
+    "score": {
+     "precision": 0.7142857142857143,
+     "recall": 1.0,
+     "f1": 0.8333333333333333,
+     "tp": 10,
+     "fp": 4,
+     "fn": 0,
+     "by_type": {
+      "ORG": {
+       "precision": 0.3333333333333333,
+       "recall": 1.0,
+       "f1": 0.5,
+       "tp": 2,
+       "fp": 4,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.7142857142857143,
+     "recall": 1.0,
+     "f1": 0.8333333333333333,
+     "tp": 10,
+     "fp": 4,
+     "fn": 0,
+     "by_type": {
+      "ORG": {
+       "precision": 0.3333333333333333,
+       "recall": 1.0,
+       "f1": 0.5,
+       "tp": 2,
+       "fp": 4,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 90,
+      "end": 112,
+      "type": "ORG",
+      "text": "Vermeer Logistics BVBA"
+     },
+     {
+      "start": 131,
+      "end": 149,
+      "type": "ORG",
+      "text": "De Smet & Zonen NV"
+     },
+     {
+      "start": 187,
+      "end": 219,
+      "type": "ORG",
+      "text": "Belgische Mededingingsautoriteit"
+     },
+     {
+      "start": 234,
+      "end": 243,
+      "type": "ORG",
+      "text": "C2026-001"
+     },
+     {
+      "start": 270,
+      "end": 288,
+      "type": "PERSON",
+      "text": "Maître Jan Peeters"
+     },
+     {
+      "start": 290,
+      "end": 319,
+      "type": "EMAIL",
+      "text": "j.peeters@example-be-legal.be"
+     },
+     {
+      "start": 321,
+      "end": 335,
+      "type": "PHONE",
+      "text": "+32 2 555 0123"
+     },
+     {
+      "start": 353,
+      "end": 365,
+      "type": "LOC",
+      "text": "Wetstraat 16"
+     },
+     {
+      "start": 372,
+      "end": 379,
+      "type": "LOC",
+      "text": "Brussel"
+     },
+     {
+      "start": 404,
+      "end": 417,
+      "type": "CASE_REF",
+      "text": "Case C-403/19"
+     },
+     {
+      "start": 468,
+      "end": 486,
+      "type": "ORG",
+      "text": "Europese Commissie"
+     },
+     {
+      "start": 522,
+      "end": 537,
+      "type": "ORG",
+      "text": "Digital Markets"
+     },
+     {
+      "start": 586,
+      "end": 605,
+      "type": "IBAN",
+      "text": "BE68 5390 0754 7034"
+     },
+     {
+      "start": 632,
+      "end": 643,
+      "type": "PERSON",
+      "text": "Jan Peeters"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_005_supply_agreement_en",
+    "score": {
+     "precision": 0.6190476190476191,
+     "recall": 1.0,
+     "f1": 0.7647058823529412,
+     "tp": 13,
+     "fp": 8,
+     "fn": 0,
+     "by_type": {
+      "ORG": {
+       "precision": 0.4166666666666667,
+       "recall": 1.0,
+       "f1": 0.5882352941176471,
+       "tp": 5,
+       "fp": 7,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.6666666666666666,
+       "recall": 1.0,
+       "f1": 0.8,
+       "tp": 2,
+       "fp": 1,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.6190476190476191,
+     "recall": 1.0,
+     "f1": 0.7647058823529412,
+     "tp": 13,
+     "fp": 8,
+     "fn": 0,
+     "by_type": {
+      "ORG": {
+       "precision": 0.4166666666666667,
+       "recall": 1.0,
+       "f1": 0.5882352941176471,
+       "tp": 5,
+       "fp": 7,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.6666666666666666,
+       "recall": 1.0,
+       "f1": 0.8,
+       "tp": 2,
+       "fp": 1,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 60,
+      "end": 84,
+      "type": "ORG",
+      "text": "Acme Mining Holdings Ltd"
+     },
+     {
+      "start": 88,
+      "end": 94,
+      "type": "LOC",
+      "text": "Cayman"
+     },
+     {
+      "start": 125,
+      "end": 151,
+      "type": "ORG",
+      "text": "Bavarian Steel Holdings AG"
+     },
+     {
+      "start": 153,
+      "end": 159,
+      "type": "LOC",
+      "text": "Munich"
+     },
+     {
+      "start": 173,
+      "end": 189,
+      "type": "PERSON",
+      "text": "Dr. Markus Weber"
+     },
+     {
+      "start": 191,
+      "end": 212,
+      "type": "EMAIL",
+      "text": "m.weber@example-de.de"
+     },
+     {
+      "start": 214,
+      "end": 230,
+      "type": "PHONE",
+      "text": "+49 89 1234 5678"
+     },
+     {
+      "start": 238,
+      "end": 262,
+      "type": "ORG",
+      "text": "Acme Mining Holdings Ltd"
+     },
+     {
+      "start": 266,
+      "end": 280,
+      "type": "PERSON",
+      "text": "Lars Andersson"
+     },
+     {
+      "start": 282,
+      "end": 319,
+      "type": "EMAIL",
+      "text": "l.andersson@example-svensk-juridik.se"
+     },
+     {
+      "start": 327,
+      "end": 353,
+      "type": "ORG",
+      "text": "Bavarian Steel Holdings AG"
+     },
+     {
+      "start": 594,
+      "end": 610,
+      "type": "ORG",
+      "text": "Bundeskartellamt"
+     },
+     {
+      "start": 634,
+      "end": 645,
+      "type": "ORG",
+      "text": "Swiss COMCO"
+     },
+     {
+      "start": 742,
+      "end": 744,
+      "type": "ORG",
+      "text": "EU"
+     },
+     {
+      "start": 822,
+      "end": 826,
+      "type": "ORG",
+      "text": "OFAC"
+     },
+     {
+      "start": 828,
+      "end": 830,
+      "type": "ORG",
+      "text": "EU"
+     },
+     {
+      "start": 862,
+      "end": 864,
+      "type": "ORG",
+      "text": "EU"
+     },
+     {
+      "start": 881,
+      "end": 885,
+      "type": "ORG",
+      "text": "SECO"
+     },
+     {
+      "start": 933,
+      "end": 957,
+      "type": "ORG",
+      "text": "Acme Mining Holdings Ltd"
+     },
+     {
+      "start": 964,
+      "end": 997,
+      "type": "IBAN",
+      "text": "DE89 3704 0044 0532 0130 00\nSWIFT"
+     },
+     {
+      "start": 1026,
+      "end": 1033,
+      "type": "LOC",
+      "text": "Hamburg"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_006_employment_dispute_en",
+    "score": {
+     "precision": 0.95,
+     "recall": 1.0,
+     "f1": 0.9743589743589743,
+     "tp": 19,
+     "fp": 1,
+     "fn": 0,
+     "by_type": {
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 10,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.75,
+       "recall": 1.0,
+       "f1": 0.8571428571428571,
+       "tp": 3,
+       "fp": 1,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.95,
+     "recall": 1.0,
+     "f1": 0.9743589743589743,
+     "tp": 19,
+     "fp": 1,
+     "fn": 0,
+     "by_type": {
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 10,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.75,
+       "recall": 1.0,
+       "f1": 0.8571428571428571,
+       "tp": 3,
+       "fp": 1,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 43,
+      "end": 53,
+      "type": "PERSON",
+      "text": "Harrington"
+     },
+     {
+      "start": 57,
+      "end": 82,
+      "type": "ORG",
+      "text": "Northbridge Analytics Ltd"
+     },
+     {
+      "start": 124,
+      "end": 141,
+      "type": "PERSON",
+      "text": "Eleanor Whitfield"
+     },
+     {
+      "start": 218,
+      "end": 235,
+      "type": "PERSON",
+      "text": "Daniel Harrington"
+     },
+     {
+      "start": 284,
+      "end": 309,
+      "type": "ORG",
+      "text": "Northbridge Analytics Ltd"
+     },
+     {
+      "start": 317,
+      "end": 328,
+      "type": "LOC",
+      "text": "14 Cornhill"
+     },
+     {
+      "start": 330,
+      "end": 336,
+      "type": "LOC",
+      "text": "London"
+     },
+     {
+      "start": 418,
+      "end": 428,
+      "type": "PERSON",
+      "text": "Harrington"
+     },
+     {
+      "start": 461,
+      "end": 478,
+      "type": "PERSON",
+      "text": "Priya Subramanian"
+     },
+     {
+      "start": 509,
+      "end": 524,
+      "type": "PERSON",
+      "text": "Marcus Goldberg"
+     },
+     {
+      "start": 535,
+      "end": 546,
+      "type": "ORG",
+      "text": "Northbridge"
+     },
+     {
+      "start": 601,
+      "end": 611,
+      "type": "PERSON",
+      "text": "Harrington"
+     },
+     {
+      "start": 659,
+      "end": 670,
+      "type": "PERSON",
+      "text": "Olivia Tran"
+     },
+     {
+      "start": 692,
+      "end": 731,
+      "type": "EMAIL",
+      "text": "olivia.tran@northbridge-analytics.co.uk"
+     },
+     {
+      "start": 1062,
+      "end": 1076,
+      "type": "PERSON",
+      "text": "Karim El-Sayed"
+     },
+     {
+      "start": 1107,
+      "end": 1119,
+      "type": "PERSON",
+      "text": "Hannah Vogel"
+     },
+     {
+      "start": 1293,
+      "end": 1305,
+      "type": "CASE_REF",
+      "text": "NBA-2026-014"
+     },
+     {
+      "start": 1383,
+      "end": 1399,
+      "type": "PHONE",
+      "text": "+44 20 7946 2231"
+     },
+     {
+      "start": 1412,
+      "end": 1444,
+      "type": "EMAIL",
+      "text": "e.whitfield@example-uk-law.co.uk"
+     },
+     {
+      "start": 1451,
+      "end": 1484,
+      "type": "ORG",
+      "text": "Information Commissioner's Office"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_007_patent_litigation_en",
+    "score": {
+     "precision": 0.8,
+     "recall": 0.8,
+     "f1": 0.8000000000000002,
+     "tp": 24,
+     "fp": 6,
+     "fn": 6,
+     "by_type": {
+      "ORG": {
+       "precision": 0.8333333333333334,
+       "recall": 0.625,
+       "f1": 0.7142857142857143,
+       "tp": 10,
+       "fp": 2,
+       "fn": 6
+      },
+      "CASE_REF": {
+       "precision": 0.6666666666666666,
+       "recall": 1.0,
+       "f1": 0.8,
+       "tp": 2,
+       "fp": 1,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.5,
+       "recall": 1.0,
+       "f1": 0.6666666666666666,
+       "tp": 3,
+       "fp": 3,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 7,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.8,
+     "recall": 0.8,
+     "f1": 0.8000000000000002,
+     "tp": 24,
+     "fp": 6,
+     "fn": 6,
+     "by_type": {
+      "ORG": {
+       "precision": 0.8333333333333334,
+       "recall": 0.625,
+       "f1": 0.7142857142857143,
+       "tp": 10,
+       "fp": 2,
+       "fn": 6
+      },
+      "CASE_REF": {
+       "precision": 0.6666666666666666,
+       "recall": 1.0,
+       "f1": 0.8,
+       "tp": 2,
+       "fp": 1,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.5,
+       "recall": 1.0,
+       "f1": 0.6666666666666666,
+       "tp": 3,
+       "fp": 3,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 7,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 7,
+      "end": 64,
+      "type": "ORG",
+      "text": "UNITED STATES DISTRICT COURT FOR THE DISTRICT OF DELAWARE"
+     },
+     {
+      "start": 66,
+      "end": 87,
+      "type": "ORG",
+      "text": "Helios Photonics Inc."
+     },
+     {
+      "start": 103,
+      "end": 130,
+      "type": "ORG",
+      "text": "Lumen Optical Systems Corp."
+     },
+     {
+      "start": 161,
+      "end": 178,
+      "type": "CASE_REF",
+      "text": "1:26-cv-00489-RGA"
+     },
+     {
+      "start": 249,
+      "end": 270,
+      "type": "ORG",
+      "text": "Helios Photonics Inc."
+     },
+     {
+      "start": 285,
+      "end": 293,
+      "type": "LOC",
+      "text": "Delaware"
+     },
+     {
+      "start": 346,
+      "end": 367,
+      "type": "LOC",
+      "text": "2200 Greenfield Drive"
+     },
+     {
+      "start": 369,
+      "end": 377,
+      "type": "LOC",
+      "text": "San Jose"
+     },
+     {
+      "start": 379,
+      "end": 389,
+      "type": "LOC",
+      "text": "California"
+     },
+     {
+      "start": 424,
+      "end": 451,
+      "type": "ORG",
+      "text": "Lumen Optical Systems Corp."
+     },
+     {
+      "start": 454,
+      "end": 459,
+      "type": "ORG",
+      "text": "Lumen"
+     },
+     {
+      "start": 465,
+      "end": 471,
+      "type": "LOC",
+      "text": "Cayman"
+     },
+     {
+      "start": 511,
+      "end": 524,
+      "type": "LOC",
+      "text": "Austin, Texas"
+     },
+     {
+      "start": 674,
+      "end": 697,
+      "type": "PERSON",
+      "text": "Dr. Anika Krishnamurthy"
+     },
+     {
+      "start": 732,
+      "end": 745,
+      "type": "PERSON",
+      "text": "Krishnamurthy"
+     },
+     {
+      "start": 805,
+      "end": 817,
+      "type": "CASE_REF",
+      "text": "HEL-NB-00231"
+     },
+     {
+      "start": 869,
+      "end": 874,
+      "type": "ORG",
+      "text": "Lumen"
+     },
+     {
+      "start": 902,
+      "end": 907,
+      "type": "ORG",
+      "text": "Lumen"
+     },
+     {
+      "start": 959,
+      "end": 974,
+      "type": "PERSON",
+      "text": "Jonas Sandström"
+     },
+     {
+      "start": 1011,
+      "end": 1020,
+      "type": "PERSON",
+      "text": "Sandström"
+     },
+     {
+      "start": 1071,
+      "end": 1076,
+      "type": "ORG",
+      "text": "Lumen"
+     },
+     {
+      "start": 1153,
+      "end": 1162,
+      "type": "PERSON",
+      "text": "Sandström"
+     },
+     {
+      "start": 1273,
+      "end": 1284,
+      "type": "PERSON",
+      "text": "Rebecca Lin"
+     },
+     {
+      "start": 1286,
+      "end": 1314,
+      "type": "EMAIL",
+      "text": "rlin@example-patent-firm.com"
+     },
+     {
+      "start": 1316,
+      "end": 1331,
+      "type": "PHONE",
+      "text": "+1 415 555 0188"
+     },
+     {
+      "start": 1350,
+      "end": 1367,
+      "type": "PERSON",
+      "text": "Dr. Stefan Müller"
+     },
+     {
+      "start": 1393,
+      "end": 1398,
+      "type": "ORG",
+      "text": "Lumen"
+     },
+     {
+      "start": 1417,
+      "end": 1436,
+      "type": "ORG",
+      "text": "Wilkerson Stone LLP"
+     },
+     {
+      "start": 1442,
+      "end": 1447,
+      "type": "ORG",
+      "text": "USPTO"
+     },
+     {
+      "start": 1477,
+      "end": 1490,
+      "type": "CASE_REF",
+      "text": "IPR2025-00712"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_008_regulatory_submission_en",
+    "score": {
+     "precision": 0.7575757575757576,
+     "recall": 0.9615384615384616,
+     "f1": 0.8474576271186441,
+     "tp": 25,
+     "fp": 8,
+     "fn": 1,
+     "by_type": {
+      "ORG": {
+       "precision": 0.7142857142857143,
+       "recall": 1.0,
+       "f1": 0.8333333333333333,
+       "tp": 15,
+       "fp": 6,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 0.5,
+       "recall": 0.6666666666666666,
+       "f1": 0.5714285714285715,
+       "tp": 2,
+       "fp": 2,
+       "fn": 1
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.7878787878787878,
+     "recall": 1.0,
+     "f1": 0.8813559322033898,
+     "tp": 26,
+     "fp": 7,
+     "fn": 0,
+     "by_type": {
+      "ORG": {
+       "precision": 0.75,
+       "recall": 1.0,
+       "f1": 0.8571428571428571,
+       "tp": 15,
+       "fp": 5,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 0.6,
+       "recall": 1.0,
+       "f1": 0.7499999999999999,
+       "tp": 3,
+       "fp": 2,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 18,
+      "end": 34,
+      "type": "ORG",
+      "text": "BUNDESKARTELLAMT"
+     },
+     {
+      "start": 45,
+      "end": 54,
+      "type": "CASE_REF",
+      "text": "B6-127/26"
+     },
+     {
+      "start": 81,
+      "end": 99,
+      "type": "ORG",
+      "text": "MeridianMedia GmbH"
+     },
+     {
+      "start": 103,
+      "end": 126,
+      "type": "ORG",
+      "text": "Polaris Broadcasting AG"
+     },
+     {
+      "start": 138,
+      "end": 160,
+      "type": "PERSON",
+      "text": "Dr. Friedrich Albrecht"
+     },
+     {
+      "start": 184,
+      "end": 207,
+      "type": "ORG",
+      "text": "Polaris Broadcasting AG"
+     },
+     {
+      "start": 235,
+      "end": 267,
+      "type": "EMAIL",
+      "text": "f.albrecht@example-de-kartell.de"
+     },
+     {
+      "start": 270,
+      "end": 286,
+      "type": "PHONE",
+      "text": "+49 30 2576 4400"
+     },
+     {
+      "start": 308,
+      "end": 331,
+      "type": "ORG",
+      "text": "Polaris Broadcasting AG"
+     },
+     {
+      "start": 334,
+      "end": 341,
+      "type": "ORG",
+      "text": "Polaris"
+     },
+     {
+      "start": 347,
+      "end": 353,
+      "type": "LOC",
+      "text": "Berlin"
+     },
+     {
+      "start": 388,
+      "end": 412,
+      "type": "LOC",
+      "text": "Karl-Liebknecht-Straße 8"
+     },
+     {
+      "start": 420,
+      "end": 426,
+      "type": "LOC",
+      "text": "Berlin"
+     },
+     {
+      "start": 478,
+      "end": 496,
+      "type": "ORG",
+      "text": "MeridianMedia GmbH"
+     },
+     {
+      "start": 499,
+      "end": 512,
+      "type": "ORG",
+      "text": "MeridianMedia"
+     },
+     {
+      "start": 518,
+      "end": 525,
+      "type": "LOC",
+      "text": "Hamburg"
+     },
+     {
+      "start": 571,
+      "end": 585,
+      "type": "ORG",
+      "text": "Henkel-Vorwerk"
+     },
+     {
+      "start": 616,
+      "end": 629,
+      "type": "ORG",
+      "text": "MeridianMedia"
+     },
+     {
+      "start": 694,
+      "end": 705,
+      "type": "ORG",
+      "text": "MeridianFM+"
+     },
+     {
+      "start": 773,
+      "end": 791,
+      "type": "PERSON",
+      "text": "Ms. Renate Hofmann"
+     },
+     {
+      "start": 914,
+      "end": 921,
+      "type": "ORG",
+      "text": "Polaris"
+     },
+     {
+      "start": 926,
+      "end": 939,
+      "type": "ORG",
+      "text": "MeridianMedia"
+     },
+     {
+      "start": 988,
+      "end": 995,
+      "type": "ORG",
+      "text": "Polaris"
+     },
+     {
+      "start": 1026,
+      "end": 1039,
+      "type": "ORG",
+      "text": "MeridianMedia"
+     },
+     {
+      "start": 1138,
+      "end": 1145,
+      "type": "ORG",
+      "text": "Polaris"
+     },
+     {
+      "start": 1247,
+      "end": 1249,
+      "type": "ORG",
+      "text": "EU"
+     },
+     {
+      "start": 1270,
+      "end": 1272,
+      "type": "ORG",
+      "text": "EU"
+     },
+     {
+      "start": 1356,
+      "end": 1382,
+      "type": "ORG",
+      "text": "Autorité de la concurrence"
+     },
+     {
+      "start": 1391,
+      "end": 1394,
+      "type": "ORG",
+      "text": "ACM"
+     },
+     {
+      "start": 1465,
+      "end": 1471,
+      "type": "PERSON",
+      "text": "Escrow"
+     },
+     {
+      "start": 1492,
+      "end": 1498,
+      "type": "PERSON",
+      "text": "escrow"
+     },
+     {
+      "start": 1510,
+      "end": 1523,
+      "type": "ORG",
+      "text": "Deutsche Bank"
+     },
+     {
+      "start": 1535,
+      "end": 1562,
+      "type": "IBAN",
+      "text": "DE12 5001 0517 5407 3249 31"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_009_witness_statement_en",
+    "score": {
+     "precision": 0.8571428571428571,
+     "recall": 1.0,
+     "f1": 0.923076923076923,
+     "tp": 24,
+     "fp": 4,
+     "fn": 0,
+     "by_type": {
+      "PERSON": {
+       "precision": 0.9285714285714286,
+       "recall": 1.0,
+       "f1": 0.962962962962963,
+       "tp": 13,
+       "fp": 1,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.4,
+       "recall": 1.0,
+       "f1": 0.5714285714285715,
+       "tp": 2,
+       "fp": 3,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 5,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.8571428571428571,
+     "recall": 1.0,
+     "f1": 0.923076923076923,
+     "tp": 24,
+     "fp": 4,
+     "fn": 0,
+     "by_type": {
+      "PERSON": {
+       "precision": 0.9285714285714286,
+       "recall": 1.0,
+       "f1": 0.962962962962963,
+       "tp": 13,
+       "fp": 1,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.4,
+       "recall": 1.0,
+       "f1": 0.5714285714285715,
+       "tp": 2,
+       "fp": 3,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 5,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 25,
+      "end": 44,
+      "type": "PERSON",
+      "text": "CARMEN ORTIZ-VALDEZ"
+     },
+     {
+      "start": 49,
+      "end": 68,
+      "type": "PERSON",
+      "text": "Carmen Ortiz-Valdez"
+     },
+     {
+      "start": 73,
+      "end": 86,
+      "type": "LOC",
+      "text": "47 Elm Street"
+     },
+     {
+      "start": 88,
+      "end": 94,
+      "type": "LOC",
+      "text": "Apt 3B"
+     },
+     {
+      "start": 96,
+      "end": 102,
+      "type": "LOC",
+      "text": "Boston"
+     },
+     {
+      "start": 104,
+      "end": 117,
+      "type": "LOC",
+      "text": "Massachusetts"
+     },
+     {
+      "start": 216,
+      "end": 241,
+      "type": "ORG",
+      "text": "Cascadia Technologies LLC"
+     },
+     {
+      "start": 351,
+      "end": 361,
+      "type": "PERSON",
+      "text": "Wesley Tan"
+     },
+     {
+      "start": 398,
+      "end": 401,
+      "type": "PERSON",
+      "text": "Tan"
+     },
+     {
+      "start": 427,
+      "end": 443,
+      "type": "PERSON",
+      "text": "Patricia Almgren"
+     },
+     {
+      "start": 497,
+      "end": 500,
+      "type": "PERSON",
+      "text": "Tan"
+     },
+     {
+      "start": 549,
+      "end": 564,
+      "type": "PERSON",
+      "text": "Devlin O'Connor"
+     },
+     {
+      "start": 590,
+      "end": 593,
+      "type": "PERSON",
+      "text": "Tan"
+     },
+     {
+      "start": 658,
+      "end": 681,
+      "type": "ORG",
+      "text": "Vertex Microsystems LLP"
+     },
+     {
+      "start": 763,
+      "end": 786,
+      "type": "ORG",
+      "text": "Vertex Microsystems LLP"
+     },
+     {
+      "start": 828,
+      "end": 831,
+      "type": "PERSON",
+      "text": "Tan"
+     },
+     {
+      "start": 854,
+      "end": 871,
+      "type": "PERSON",
+      "text": "Aleksander Petrov"
+     },
+     {
+      "start": 877,
+      "end": 883,
+      "type": "PERSON",
+      "text": "Petrov"
+     },
+     {
+      "start": 939,
+      "end": 947,
+      "type": "LOC",
+      "text": "Delaware"
+     },
+     {
+      "start": 1220,
+      "end": 1223,
+      "type": "PERSON",
+      "text": "Tan"
+     },
+     {
+      "start": 1259,
+      "end": 1287,
+      "type": "EMAIL",
+      "text": "wesley.tan@cascadia-tech.com"
+     },
+     {
+      "start": 1309,
+      "end": 1322,
+      "type": "PERSON",
+      "text": "Hilda Brennan"
+     },
+     {
+      "start": 1326,
+      "end": 1344,
+      "type": "ORG",
+      "text": "Brennan & Park LLP"
+     },
+     {
+      "start": 1398,
+      "end": 1407,
+      "type": "CASE_REF",
+      "text": "CT-WB-026"
+     },
+     {
+      "start": 1411,
+      "end": 1419,
+      "type": "ORG",
+      "text": "Cascadia"
+     },
+     {
+      "start": 1448,
+      "end": 1467,
+      "type": "PERSON",
+      "text": "Carmen Ortiz-Valdez"
+     },
+     {
+      "start": 1501,
+      "end": 1532,
+      "type": "EMAIL",
+      "text": "c.ortiz.valdez@example-mail.com"
+     },
+     {
+      "start": 1535,
+      "end": 1550,
+      "type": "PHONE",
+      "text": "+1 617 555 0142"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_010_expert_economist_en",
+    "score": {
+     "precision": 0.6206896551724138,
+     "recall": 1.0,
+     "f1": 0.7659574468085107,
+     "tp": 18,
+     "fp": 11,
+     "fn": 0,
+     "by_type": {
+      "PERSON": {
+       "precision": 0.6666666666666666,
+       "recall": 1.0,
+       "f1": 0.8,
+       "tp": 2,
+       "fp": 1,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.5652173913043478,
+       "recall": 1.0,
+       "f1": 0.7222222222222222,
+       "tp": 13,
+       "fp": 10,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.6206896551724138,
+     "recall": 1.0,
+     "f1": 0.7659574468085107,
+     "tp": 18,
+     "fp": 11,
+     "fn": 0,
+     "by_type": {
+      "PERSON": {
+       "precision": 0.6666666666666666,
+       "recall": 1.0,
+       "f1": 0.8,
+       "tp": 2,
+       "fp": 1,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.5652173913043478,
+       "recall": 1.0,
+       "f1": 0.7222222222222222,
+       "tp": 13,
+       "fp": 10,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 27,
+      "end": 40,
+      "type": "PERSON",
+      "text": "EMIL HAUKSSON"
+     },
+     {
+      "start": 86,
+      "end": 98,
+      "type": "CASE_REF",
+      "text": "Case M.10987"
+     },
+     {
+      "start": 101,
+      "end": 130,
+      "type": "ORG",
+      "text": "Brightline / Verdant Holdings"
+     },
+     {
+      "start": 172,
+      "end": 197,
+      "type": "ORG",
+      "text": "Brightline Industries plc"
+     },
+     {
+      "start": 212,
+      "end": 226,
+      "type": "ORG",
+      "text": "DG Competition"
+     },
+     {
+      "start": 228,
+      "end": 247,
+      "type": "ORG",
+      "text": "European Commission"
+     },
+     {
+      "start": 289,
+      "end": 302,
+      "type": "PERSON",
+      "text": "Emil Hauksson"
+     },
+     {
+      "start": 344,
+      "end": 371,
+      "type": "ORG",
+      "text": "the University of Reykjavík"
+     },
+     {
+      "start": 433,
+      "end": 449,
+      "type": "ORG",
+      "text": "Bundeskartellamt"
+     },
+     {
+      "start": 455,
+      "end": 458,
+      "type": "ORG",
+      "text": "CMA"
+     },
+     {
+      "start": 468,
+      "end": 484,
+      "type": "ORG",
+      "text": "EU General Court"
+     },
+     {
+      "start": 505,
+      "end": 515,
+      "type": "ORG",
+      "text": "Brightline"
+     },
+     {
+      "start": 527,
+      "end": 542,
+      "type": "PERSON",
+      "text": "Ms. Yuki Tanaka"
+     },
+     {
+      "start": 546,
+      "end": 565,
+      "type": "ORG",
+      "text": "Hartford & Mead LLP"
+     },
+     {
+      "start": 678,
+      "end": 681,
+      "type": "ORG",
+      "text": "EEA"
+     },
+     {
+      "start": 728,
+      "end": 747,
+      "type": "ORG",
+      "text": "Verdant Holdings BV"
+     },
+     {
+      "start": 751,
+      "end": 776,
+      "type": "ORG",
+      "text": "Brightline Industries plc"
+     },
+     {
+      "start": 909,
+      "end": 919,
+      "type": "ORG",
+      "text": "Brightline"
+     },
+     {
+      "start": 929,
+      "end": 945,
+      "type": "ORG",
+      "text": "Verdant Holdings"
+     },
+     {
+      "start": 981,
+      "end": 988,
+      "type": "ORG",
+      "text": "Verdant"
+     },
+     {
+      "start": 1032,
+      "end": 1040,
+      "type": "ORG",
+      "text": "Eurostat"
+     },
+     {
+      "start": 1095,
+      "end": 1105,
+      "type": "ORG",
+      "text": "IHS Markit"
+     },
+     {
+      "start": 1252,
+      "end": 1255,
+      "type": "ORG",
+      "text": "EEA"
+     },
+     {
+      "start": 1274,
+      "end": 1284,
+      "type": "ORG",
+      "text": "Brightline"
+     },
+     {
+      "start": 1408,
+      "end": 1410,
+      "type": "ORG",
+      "text": "3M"
+     },
+     {
+      "start": 1412,
+      "end": 1418,
+      "type": "ORG",
+      "text": "Henkel"
+     },
+     {
+      "start": 1522,
+      "end": 1532,
+      "type": "ORG",
+      "text": "Commission"
+     },
+     {
+      "start": 1707,
+      "end": 1739,
+      "type": "EMAIL",
+      "text": "emil.hauksson@example-uni-rey.is"
+     },
+     {
+      "start": 1742,
+      "end": 1755,
+      "type": "PHONE",
+      "text": "+354 555 7821"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_011_sanctions_memo_en",
+    "score": {
+     "precision": 0.6,
+     "recall": 1.0,
+     "f1": 0.7499999999999999,
+     "tp": 18,
+     "fp": 12,
+     "fn": 0,
+     "by_type": {
+      "ORG": {
+       "precision": 0.4375,
+       "recall": 1.0,
+       "f1": 0.6086956521739131,
+       "tp": 7,
+       "fp": 9,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 0.8,
+       "recall": 1.0,
+       "f1": 0.888888888888889,
+       "tp": 4,
+       "fp": 1,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.6,
+       "recall": 1.0,
+       "f1": 0.7499999999999999,
+       "tp": 3,
+       "fp": 2,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.6,
+     "recall": 1.0,
+     "f1": 0.7499999999999999,
+     "tp": 18,
+     "fp": 12,
+     "fn": 0,
+     "by_type": {
+      "ORG": {
+       "precision": 0.4375,
+       "recall": 1.0,
+       "f1": 0.6086956521739131,
+       "tp": 7,
+       "fp": 9,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 0.8,
+       "recall": 1.0,
+       "f1": 0.888888888888889,
+       "tp": 4,
+       "fp": 1,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.6,
+       "recall": 1.0,
+       "f1": 0.7499999999999999,
+       "tp": 3,
+       "fp": 2,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 77,
+      "end": 100,
+      "type": "ORG",
+      "text": "Severnaya Logistika OOO"
+     },
+     {
+      "start": 106,
+      "end": 121,
+      "type": "PERSON",
+      "text": "General Counsel"
+     },
+     {
+      "start": 123,
+      "end": 140,
+      "type": "ORG",
+      "text": "Faraday Energy SE"
+     },
+     {
+      "start": 147,
+      "end": 159,
+      "type": "PERSON",
+      "text": "Aisha Ndiaye"
+     },
+     {
+      "start": 218,
+      "end": 234,
+      "type": "CASE_REF",
+      "text": "FE-COMP-2026-088"
+     },
+     {
+      "start": 325,
+      "end": 348,
+      "type": "ORG",
+      "text": "Severnaya Logistika OOO"
+     },
+     {
+      "start": 364,
+      "end": 372,
+      "type": "LOC",
+      "text": "Murmansk"
+     },
+     {
+      "start": 395,
+      "end": 413,
+      "type": "PERSON",
+      "text": "Vsevolod Kuznetsov"
+     },
+     {
+      "start": 472,
+      "end": 476,
+      "type": "ORG",
+      "text": "OFAC"
+     },
+     {
+      "start": 477,
+      "end": 480,
+      "type": "ORG",
+      "text": "SDN"
+     },
+     {
+      "start": 537,
+      "end": 560,
+      "type": "ORG",
+      "text": "Severnaya Logistics LLC"
+     },
+     {
+      "start": 592,
+      "end": 608,
+      "type": "LOC",
+      "text": "Saint Petersburg"
+     },
+     {
+      "start": 750,
+      "end": 759,
+      "type": "PERSON",
+      "text": "Kuznetsov"
+     },
+     {
+      "start": 802,
+      "end": 804,
+      "type": "ORG",
+      "text": "EU"
+     },
+     {
+      "start": 838,
+      "end": 840,
+      "type": "LOC",
+      "text": "UK"
+     },
+     {
+      "start": 866,
+      "end": 870,
+      "type": "ORG",
+      "text": "SECO"
+     },
+     {
+      "start": 905,
+      "end": 907,
+      "type": "ORG",
+      "text": "EU"
+     },
+     {
+      "start": 911,
+      "end": 913,
+      "type": "LOC",
+      "text": "UK"
+     },
+     {
+      "start": 925,
+      "end": 929,
+      "type": "ORG",
+      "text": "SECO"
+     },
+     {
+      "start": 1015,
+      "end": 1031,
+      "type": "PERSON",
+      "text": "Ronan Fitzgerald"
+     },
+     {
+      "start": 1035,
+      "end": 1064,
+      "type": "ORG",
+      "text": "Fitzgerald Maloney & Partners"
+     },
+     {
+      "start": 1066,
+      "end": 1072,
+      "type": "LOC",
+      "text": "Dublin"
+     },
+     {
+      "start": 1092,
+      "end": 1095,
+      "type": "ORG",
+      "text": "SDN"
+     },
+     {
+      "start": 1217,
+      "end": 1221,
+      "type": "ORG",
+      "text": "OFAC"
+     },
+     {
+      "start": 1343,
+      "end": 1347,
+      "type": "ORG",
+      "text": "OFAC"
+     },
+     {
+      "start": 1404,
+      "end": 1426,
+      "type": "IBAN",
+      "text": "NL91 ABNA 0417 1643 00"
+     },
+     {
+      "start": 1440,
+      "end": 1463,
+      "type": "ORG",
+      "text": "Severnaya Logistika OOO"
+     },
+     {
+      "start": 1524,
+      "end": 1527,
+      "type": "ORG",
+      "text": "ING"
+     },
+     {
+      "start": 1551,
+      "end": 1585,
+      "type": "EMAIL",
+      "text": "a.ndiaye@faraday-energy.example.eu"
+     },
+     {
+      "start": 1587,
+      "end": 1603,
+      "type": "PHONE",
+      "text": "+49 40 5559 6677"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_012_engagement_letter_en",
+    "score": {
+     "precision": 0.7692307692307693,
+     "recall": 0.9523809523809523,
+     "f1": 0.8510638297872339,
+     "tp": 20,
+     "fp": 6,
+     "fn": 1,
+     "by_type": {
+      "ORG": {
+       "precision": 0.7777777777777778,
+       "recall": 0.875,
+       "f1": 0.823529411764706,
+       "tp": 7,
+       "fp": 2,
+       "fn": 1
+      },
+      "LOC": {
+       "precision": 0.5555555555555556,
+       "recall": 1.0,
+       "f1": 0.7142857142857143,
+       "tp": 5,
+       "fp": 4,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.7692307692307693,
+     "recall": 0.9523809523809523,
+     "f1": 0.8510638297872339,
+     "tp": 20,
+     "fp": 6,
+     "fn": 1,
+     "by_type": {
+      "ORG": {
+       "precision": 0.7777777777777778,
+       "recall": 0.875,
+       "f1": 0.823529411764706,
+       "tp": 7,
+       "fp": 2,
+       "fn": 1
+      },
+      "LOC": {
+       "precision": 0.5555555555555556,
+       "recall": 1.0,
+       "f1": 0.7142857142857143,
+       "tp": 5,
+       "fp": 4,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 38,
+      "end": 66,
+      "type": "ORG",
+      "text": "BluePine Capital Partners LP"
+     },
+     {
+      "start": 84,
+      "end": 102,
+      "type": "LOC",
+      "text": "540 Madison Avenue"
+     },
+     {
+      "start": 116,
+      "end": 124,
+      "type": "LOC",
+      "text": "New York"
+     },
+     {
+      "start": 157,
+      "end": 178,
+      "type": "ORG",
+      "text": "Reinhart Voss & Klein"
+     },
+     {
+      "start": 180,
+      "end": 197,
+      "type": "LOC",
+      "text": "Avenue Louise 250"
+     },
+     {
+      "start": 199,
+      "end": 212,
+      "type": "LOC",
+      "text": "1050 Brussels"
+     },
+     {
+      "start": 215,
+      "end": 218,
+      "type": "ORG",
+      "text": "RVK"
+     },
+     {
+      "start": 266,
+      "end": 282,
+      "type": "CASE_REF",
+      "text": "RVK-2026-BPC-014"
+     },
+     {
+      "start": 338,
+      "end": 340,
+      "type": "ORG",
+      "text": "EU"
+     },
+     {
+      "start": 392,
+      "end": 412,
+      "type": "ORG",
+      "text": "NordVent Holdings AS"
+     },
+     {
+      "start": 414,
+      "end": 418,
+      "type": "LOC",
+      "text": "Oslo"
+     },
+     {
+      "start": 498,
+      "end": 504,
+      "type": "LOC",
+      "text": "France"
+     },
+     {
+      "start": 506,
+      "end": 513,
+      "type": "LOC",
+      "text": "Germany"
+     },
+     {
+      "start": 518,
+      "end": 523,
+      "type": "LOC",
+      "text": "Italy"
+     },
+     {
+      "start": 570,
+      "end": 576,
+      "type": "LOC",
+      "text": "Norway"
+     },
+     {
+      "start": 631,
+      "end": 649,
+      "type": "PERSON",
+      "text": "Charlotte Beaumont"
+     },
+     {
+      "start": 651,
+      "end": 680,
+      "type": "EMAIL",
+      "text": "c.beaumont@rvk-law.example.be"
+     },
+     {
+      "start": 694,
+      "end": 708,
+      "type": "PHONE",
+      "text": "+32 2 555 4470"
+     },
+     {
+      "start": 766,
+      "end": 783,
+      "type": "PERSON",
+      "text": "Dr. Henrik Olsson"
+     },
+     {
+      "start": 884,
+      "end": 892,
+      "type": "ORG",
+      "text": "Partners"
+     },
+     {
+      "start": 1061,
+      "end": 1064,
+      "type": "ORG",
+      "text": "RVK"
+     },
+     {
+      "start": 1088,
+      "end": 1107,
+      "type": "IBAN",
+      "text": "BE63 0689 9999 9999"
+     },
+     {
+      "start": 1500,
+      "end": 1511,
+      "type": "PERSON",
+      "text": "Vivian Park"
+     },
+     {
+      "start": 1531,
+      "end": 1559,
+      "type": "ORG",
+      "text": "BluePine Capital Partners LP"
+     },
+     {
+      "start": 1564,
+      "end": 1567,
+      "type": "ORG",
+      "text": "RVK"
+     },
+     {
+      "start": 1569,
+      "end": 1587,
+      "type": "PERSON",
+      "text": "Charlotte Beaumont"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_013_settlement_offer_en",
+    "score": {
+     "precision": 0.8695652173913043,
+     "recall": 0.9523809523809523,
+     "f1": 0.909090909090909,
+     "tp": 20,
+     "fp": 3,
+     "fn": 1,
+     "by_type": {
+      "PERSON": {
+       "precision": 0.8333333333333334,
+       "recall": 1.0,
+       "f1": 0.9090909090909091,
+       "tp": 5,
+       "fp": 1,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.9090909090909091,
+       "recall": 0.9090909090909091,
+       "f1": 0.9090909090909091,
+       "tp": 10,
+       "fp": 1,
+       "fn": 1
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 1,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.8695652173913043,
+     "recall": 0.9523809523809523,
+     "f1": 0.909090909090909,
+     "tp": 20,
+     "fp": 3,
+     "fn": 1,
+     "by_type": {
+      "PERSON": {
+       "precision": 0.8333333333333334,
+       "recall": 1.0,
+       "f1": 0.9090909090909091,
+       "tp": 5,
+       "fp": 1,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.9090909090909091,
+       "recall": 0.9090909090909091,
+       "f1": 0.9090909090909091,
+       "tp": 10,
+       "fp": 1,
+       "fn": 1
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 1,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 22,
+      "end": 37,
+      "type": "PERSON",
+      "text": "Maximilian Voss"
+     },
+     {
+      "start": 48,
+      "end": 71,
+      "type": "ORG",
+      "text": "Voss Lambrechts Avocats"
+     },
+     {
+      "start": 76,
+      "end": 91,
+      "type": "PERSON",
+      "text": "Imogen Ashworth"
+     },
+     {
+      "start": 102,
+      "end": 128,
+      "type": "ORG",
+      "text": "Ashworth & Holm Solicitors"
+     },
+     {
+      "start": 168,
+      "end": 198,
+      "type": "ORG",
+      "text": "Crestwood Marine Insurance Co."
+     },
+     {
+      "start": 201,
+      "end": 224,
+      "type": "ORG",
+      "text": "Tidewater Logistics Ltd"
+     },
+     {
+      "start": 271,
+      "end": 277,
+      "type": "PERSON",
+      "text": "Imogen"
+     },
+     {
+      "start": 432,
+      "end": 449,
+      "type": "LOC",
+      "text": "the Bay of Biscay"
+     },
+     {
+      "start": 492,
+      "end": 504,
+      "type": "CASE_REF",
+      "text": "AHS-2024-117"
+     },
+     {
+      "start": 529,
+      "end": 559,
+      "type": "ORG",
+      "text": "Crestwood Marine Insurance Co."
+     },
+     {
+      "start": 672,
+      "end": 681,
+      "type": "ORG",
+      "text": "Crestwood"
+     },
+     {
+      "start": 709,
+      "end": 732,
+      "type": "ORG",
+      "text": "Tidewater Logistics Ltd"
+     },
+     {
+      "start": 899,
+      "end": 913,
+      "type": "PERSON",
+      "text": "Diego Ferreira"
+     },
+     {
+      "start": 980,
+      "end": 995,
+      "type": "PERSON",
+      "text": "Lucia Marchetti"
+     },
+     {
+      "start": 1030,
+      "end": 1039,
+      "type": "ORG",
+      "text": "Tidewater"
+     },
+     {
+      "start": 1080,
+      "end": 1089,
+      "type": "ORG",
+      "text": "Tidewater"
+     },
+     {
+      "start": 1103,
+      "end": 1118,
+      "type": "ORG",
+      "text": "Banco Santander"
+     },
+     {
+      "start": 1125,
+      "end": 1154,
+      "type": "IBAN",
+      "text": "ES79 2100 0813 6101 2345 6789"
+     },
+     {
+      "start": 1169,
+      "end": 1186,
+      "type": "CASE_REF",
+      "text": "WP-CREST-TLW-2026"
+     },
+     {
+      "start": 1330,
+      "end": 1356,
+      "type": "ORG",
+      "text": "Commercial Court of London"
+     },
+     {
+      "start": 1430,
+      "end": 1445,
+      "type": "PERSON",
+      "text": "Maximilian Voss"
+     },
+     {
+      "start": 1446,
+      "end": 1479,
+      "type": "EMAIL",
+      "text": "m.voss@voss-lambrechts.example.lu"
+     },
+     {
+      "start": 1480,
+      "end": 1495,
+      "type": "PHONE",
+      "text": "+352 27 86 1199"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_014_compliance_investigation_en",
+    "score": {
+     "precision": 0.8333333333333334,
+     "recall": 1.0,
+     "f1": 0.9090909090909091,
+     "tp": 20,
+     "fp": 4,
+     "fn": 0,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 6,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.6666666666666666,
+       "recall": 1.0,
+       "f1": 0.8,
+       "tp": 6,
+       "fp": 3,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.8,
+       "recall": 1.0,
+       "f1": 0.888888888888889,
+       "tp": 4,
+       "fp": 1,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.8333333333333334,
+     "recall": 1.0,
+     "f1": 0.9090909090909091,
+     "tp": 20,
+     "fp": 4,
+     "fn": 0,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 6,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.6666666666666666,
+       "recall": 1.0,
+       "f1": 0.8,
+       "tp": 6,
+       "fp": 3,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.8,
+       "recall": 1.0,
+       "f1": 0.888888888888889,
+       "tp": 4,
+       "fp": 1,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 88,
+      "end": 106,
+      "type": "CASE_REF",
+      "text": "ALCYONE-IC-2026-04"
+     },
+     {
+      "start": 123,
+      "end": 138,
+      "type": "PERSON",
+      "text": "Sarah Whitcombe"
+     },
+     {
+      "start": 165,
+      "end": 187,
+      "type": "PERSON",
+      "text": "Dr. Bastien Levaillant"
+     },
+     {
+      "start": 206,
+      "end": 225,
+      "type": "ORG",
+      "text": "Levaillant Partners"
+     },
+     {
+      "start": 329,
+      "end": 339,
+      "type": "LOC",
+      "text": "Casablanca"
+     },
+     {
+      "start": 350,
+      "end": 376,
+      "type": "ORG",
+      "text": "Alcyone Pharmaceuticals SA"
+     },
+     {
+      "start": 390,
+      "end": 416,
+      "type": "ORG",
+      "text": "Alcyone Pharmaceuticals SA"
+     },
+     {
+      "start": 419,
+      "end": 426,
+      "type": "ORG",
+      "text": "Alcyone"
+     },
+     {
+      "start": 551,
+      "end": 561,
+      "type": "LOC",
+      "text": "Casablanca"
+     },
+     {
+      "start": 574,
+      "end": 589,
+      "type": "PERSON",
+      "text": "Hicham Bensalem"
+     },
+     {
+      "start": 954,
+      "end": 971,
+      "type": "PERSON",
+      "text": "Fatima El-Idrissi"
+     },
+     {
+      "start": 990,
+      "end": 1000,
+      "type": "LOC",
+      "text": "Casablanca"
+     },
+     {
+      "start": 1007,
+      "end": 1018,
+      "type": "PERSON",
+      "text": "Omar Belhaj"
+     },
+     {
+      "start": 1070,
+      "end": 1083,
+      "type": "PERSON",
+      "text": "Joëlle Dupont"
+     },
+     {
+      "start": 1101,
+      "end": 1110,
+      "type": "LOC",
+      "text": "Marseille"
+     },
+     {
+      "start": 1352,
+      "end": 1368,
+      "type": "ORG",
+      "text": "Banque Populaire"
+     },
+     {
+      "start": 1385,
+      "end": 1405,
+      "type": "ORG",
+      "text": "Alcyone Maghreb SARL"
+     },
+     {
+      "start": 1412,
+      "end": 1444,
+      "type": "IBAN",
+      "text": "MA64 0123 4567 8901 2345 6789 01"
+     },
+     {
+      "start": 1616,
+      "end": 1620,
+      "type": "LOC",
+      "text": "U.S."
+     },
+     {
+      "start": 1621,
+      "end": 1642,
+      "type": "ORG",
+      "text": "Department of Justice"
+     },
+     {
+      "start": 1706,
+      "end": 1732,
+      "type": "ORG",
+      "text": "Parquet National Financier"
+     },
+     {
+      "start": 1769,
+      "end": 1791,
+      "type": "ORG",
+      "text": "Audit & Risk Committee"
+     },
+     {
+      "start": 1833,
+      "end": 1871,
+      "type": "EMAIL",
+      "text": "bastien.levaillant@example-lev-part.fr"
+     },
+     {
+      "start": 1874,
+      "end": 1891,
+      "type": "PHONE",
+      "text": "+33 1 87 23 99 44"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_015_corporate_restructuring_en",
+    "score": {
+     "precision": 0.8064516129032258,
+     "recall": 0.9615384615384616,
+     "f1": 0.8771929824561403,
+     "tp": 25,
+     "fp": 6,
+     "fn": 1,
+     "by_type": {
+      "ORG": {
+       "precision": 0.8823529411764706,
+       "recall": 1.0,
+       "f1": 0.9375,
+       "tp": 15,
+       "fp": 2,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.42857142857142855,
+       "recall": 0.75,
+       "f1": 0.5454545454545454,
+       "tp": 3,
+       "fp": 4,
+       "fn": 1
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.8387096774193549,
+     "recall": 1.0,
+     "f1": 0.9122807017543859,
+     "tp": 26,
+     "fp": 5,
+     "fn": 0,
+     "by_type": {
+      "ORG": {
+       "precision": 0.9375,
+       "recall": 1.0,
+       "f1": 0.967741935483871,
+       "tp": 15,
+       "fp": 1,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.5,
+       "recall": 1.0,
+       "f1": 0.6666666666666666,
+       "tp": 4,
+       "fp": 4,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 75,
+      "end": 93,
+      "type": "ORG",
+      "text": "Halcyon Industries"
+     },
+     {
+      "start": 115,
+      "end": 137,
+      "type": "ORG",
+      "text": "The Board of Directors"
+     },
+     {
+      "start": 139,
+      "end": 170,
+      "type": "ORG",
+      "text": "Halcyon Industries Holdings Ltd"
+     },
+     {
+      "start": 182,
+      "end": 201,
+      "type": "ORG",
+      "text": "Pemberton Cross LLP"
+     },
+     {
+      "start": 206,
+      "end": 216,
+      "type": "ORG",
+      "text": "Old Bailey"
+     },
+     {
+      "start": 218,
+      "end": 224,
+      "type": "LOC",
+      "text": "London"
+     },
+     {
+      "start": 225,
+      "end": 233,
+      "type": "LOC",
+      "text": "EC4M 7NG"
+     },
+     {
+      "start": 261,
+      "end": 278,
+      "type": "CASE_REF",
+      "text": "PC-2026-HII-RESTR"
+     },
+     {
+      "start": 319,
+      "end": 350,
+      "type": "ORG",
+      "text": "Halcyon Industries Holdings Ltd"
+     },
+     {
+      "start": 353,
+      "end": 356,
+      "type": "ORG",
+      "text": "HIH"
+     },
+     {
+      "start": 380,
+      "end": 398,
+      "type": "PERSON",
+      "text": "Reginald Caulfield"
+     },
+     {
+      "start": 451,
+      "end": 457,
+      "type": "LOC",
+      "text": "Jersey"
+     },
+     {
+      "start": 489,
+      "end": 509,
+      "type": "ORG",
+      "text": "Halcyon Treasury Ltd"
+     },
+     {
+      "start": 620,
+      "end": 640,
+      "type": "ORG",
+      "text": "Halcyon Treasury Ltd"
+     },
+     {
+      "start": 665,
+      "end": 672,
+      "type": "LOC",
+      "text": "Ireland"
+     },
+     {
+      "start": 729,
+      "end": 773,
+      "type": "ORG",
+      "text": "Halcyon Treasury Designated Activity Company"
+     },
+     {
+      "start": 776,
+      "end": 786,
+      "type": "ORG",
+      "text": "HTreas DAC"
+     },
+     {
+      "start": 812,
+      "end": 815,
+      "type": "ORG",
+      "text": "HIH"
+     },
+     {
+      "start": 855,
+      "end": 865,
+      "type": "ORG",
+      "text": "HTreas DAC"
+     },
+     {
+      "start": 920,
+      "end": 948,
+      "type": "ORG",
+      "text": "Halcyon Treasury Holdings BV"
+     },
+     {
+      "start": 968,
+      "end": 987,
+      "type": "LOC",
+      "text": "Strawinskylaan 3127"
+     },
+     {
+      "start": 997,
+      "end": 1006,
+      "type": "LOC",
+      "text": "Amsterdam"
+     },
+     {
+      "start": 1013,
+      "end": 1041,
+      "type": "ORG",
+      "text": "Halcyon Treasury Holdings BV"
+     },
+     {
+      "start": 1112,
+      "end": 1115,
+      "type": "ORG",
+      "text": "HIH"
+     },
+     {
+      "start": 1338,
+      "end": 1356,
+      "type": "ORG",
+      "text": "Standard Chartered"
+     },
+     {
+      "start": 1383,
+      "end": 1398,
+      "type": "PERSON",
+      "text": "Trevor Akinyemi"
+     },
+     {
+      "start": 1400,
+      "end": 1430,
+      "type": "EMAIL",
+      "text": "t.akinyemi@example-sc-bank.com"
+     },
+     {
+      "start": 1576,
+      "end": 1582,
+      "type": "LOC",
+      "text": "Jersey"
+     },
+     {
+      "start": 1600,
+      "end": 1614,
+      "type": "PERSON",
+      "text": "Hugo Pemberton"
+     },
+     {
+      "start": 1632,
+      "end": 1670,
+      "type": "EMAIL",
+      "text": "h.pemberton@pemberton-cross.example.uk"
+     },
+     {
+      "start": 1672,
+      "end": 1688,
+      "type": "PHONE",
+      "text": "+44 20 7000 4242"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_016_tax_memo_en",
+    "score": {
+     "precision": 0.7,
+     "recall": 0.9130434782608695,
+     "f1": 0.7924528301886793,
+     "tp": 21,
+     "fp": 9,
+     "fn": 2,
+     "by_type": {
+      "ORG": {
+       "precision": 0.8125,
+       "recall": 0.9285714285714286,
+       "f1": 0.8666666666666666,
+       "tp": 13,
+       "fp": 3,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 0.6666666666666666,
+       "f1": 0.8,
+       "tp": 2,
+       "fp": 0,
+       "fn": 1
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.25,
+       "recall": 1.0,
+       "f1": 0.4,
+       "tp": 2,
+       "fp": 6,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.7,
+     "recall": 0.9130434782608695,
+     "f1": 0.7924528301886793,
+     "tp": 21,
+     "fp": 9,
+     "fn": 2,
+     "by_type": {
+      "ORG": {
+       "precision": 0.8125,
+       "recall": 0.9285714285714286,
+       "f1": 0.8666666666666666,
+       "tp": 13,
+       "fp": 3,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 0.6666666666666666,
+       "f1": 0.8,
+       "tp": 2,
+       "fp": 0,
+       "fn": 1
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.25,
+       "recall": 1.0,
+       "f1": 0.4,
+       "tp": 2,
+       "fp": 6,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 79,
+      "end": 85,
+      "type": "ORG",
+      "text": "GINKGO"
+     },
+     {
+      "start": 91,
+      "end": 105,
+      "type": "PERSON",
+      "text": "Vanessa Krüger"
+     },
+     {
+      "start": 113,
+      "end": 135,
+      "type": "ORG",
+      "text": "Helix Biotech Group AG"
+     },
+     {
+      "start": 142,
+      "end": 160,
+      "type": "PERSON",
+      "text": "Dr. Akira Watanabe"
+     },
+     {
+      "start": 162,
+      "end": 185,
+      "type": "ORG",
+      "text": "Hamilton Reeves Tax LLP"
+     },
+     {
+      "start": 215,
+      "end": 233,
+      "type": "CASE_REF",
+      "text": "HRT-2026-GINKGO-01"
+     },
+     {
+      "start": 327,
+      "end": 349,
+      "type": "ORG",
+      "text": "Helix Biotech Group AG"
+     },
+     {
+      "start": 376,
+      "end": 394,
+      "type": "ORG",
+      "text": "Helix Biotech Inc."
+     },
+     {
+      "start": 406,
+      "end": 416,
+      "type": "LOC",
+      "text": "Luxembourg"
+     },
+     {
+      "start": 530,
+      "end": 548,
+      "type": "ORG",
+      "text": "Helix Royalty SCSp"
+     },
+     {
+      "start": 552,
+      "end": 562,
+      "type": "LOC",
+      "text": "Luxembourg"
+     },
+     {
+      "start": 597,
+      "end": 619,
+      "type": "ORG",
+      "text": "Helix Biotech Group AG"
+     },
+     {
+      "start": 658,
+      "end": 668,
+      "type": "LOC",
+      "text": "Luxembourg"
+     },
+     {
+      "start": 682,
+      "end": 695,
+      "type": "ORG",
+      "text": "Helix GP Sarl"
+     },
+     {
+      "start": 803,
+      "end": 806,
+      "type": "LOC",
+      "text": "Zug"
+     },
+     {
+      "start": 811,
+      "end": 829,
+      "type": "ORG",
+      "text": "Helix Royalty SCSp"
+     },
+     {
+      "start": 901,
+      "end": 919,
+      "type": "ORG",
+      "text": "Helix Biotech Inc."
+     },
+     {
+      "start": 921,
+      "end": 930,
+      "type": "LOC",
+      "text": "Cambridge"
+     },
+     {
+      "start": 932,
+      "end": 945,
+      "type": "LOC",
+      "text": "Massachusetts"
+     },
+     {
+      "start": 966,
+      "end": 984,
+      "type": "ORG",
+      "text": "Helix Biotech Inc."
+     },
+     {
+      "start": 987,
+      "end": 1005,
+      "type": "ORG",
+      "text": "Helix Royalty SCSp"
+     },
+     {
+      "start": 1008,
+      "end": 1030,
+      "type": "ORG",
+      "text": "Helix Biotech Group AG"
+     },
+     {
+      "start": 1073,
+      "end": 1083,
+      "type": "LOC",
+      "text": "Luxembourg"
+     },
+     {
+      "start": 1181,
+      "end": 1203,
+      "type": "ORG",
+      "text": "Helix Biotech Group AG"
+     },
+     {
+      "start": 1270,
+      "end": 1280,
+      "type": "LOC",
+      "text": "Luxembourg"
+     },
+     {
+      "start": 1397,
+      "end": 1421,
+      "type": "ORG",
+      "text": "Swiss tax administration"
+     },
+     {
+      "start": 1452,
+      "end": 1468,
+      "type": "ORG",
+      "text": "OECD secretariat"
+     },
+     {
+      "start": 1571,
+      "end": 1595,
+      "type": "IBAN",
+      "text": "LU93 0019 4001 0000 4000"
+     },
+     {
+      "start": 1616,
+      "end": 1631,
+      "type": "PHONE",
+      "text": "+41 44 555 6677"
+     },
+     {
+      "start": 1668,
+      "end": 1705,
+      "type": "EMAIL",
+      "text": "a.watanabe@hamilton-reeves.example.ch"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_017_data_breach_notification_en",
+    "score": {
+     "precision": 0.7894736842105263,
+     "recall": 1.0,
+     "f1": 0.8823529411764706,
+     "tp": 15,
+     "fp": 4,
+     "fn": 0,
+     "by_type": {
+      "ORG": {
+       "precision": 0.5714285714285714,
+       "recall": 1.0,
+       "f1": 0.7272727272727273,
+       "tp": 4,
+       "fp": 3,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.75,
+       "recall": 1.0,
+       "f1": 0.8571428571428571,
+       "tp": 3,
+       "fp": 1,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.7894736842105263,
+     "recall": 1.0,
+     "f1": 0.8823529411764706,
+     "tp": 15,
+     "fp": 4,
+     "fn": 0,
+     "by_type": {
+      "ORG": {
+       "precision": 0.5714285714285714,
+       "recall": 1.0,
+       "f1": 0.7272727272727273,
+       "tp": 4,
+       "fp": 3,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.75,
+       "recall": 1.0,
+       "f1": 0.8571428571428571,
+       "tp": 3,
+       "fp": 1,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 73,
+      "end": 100,
+      "type": "ORG",
+      "text": "Autoriteit Persoonsgegevens"
+     },
+     {
+      "start": 220,
+      "end": 246,
+      "type": "ORG",
+      "text": "Stedelijk Verzekeringen NV"
+     },
+     {
+      "start": 266,
+      "end": 278,
+      "type": "LOC",
+      "text": "Beursplein 5"
+     },
+     {
+      "start": 288,
+      "end": 297,
+      "type": "LOC",
+      "text": "Amsterdam"
+     },
+     {
+      "start": 307,
+      "end": 327,
+      "type": "PERSON",
+      "text": "Roeland van der Meer"
+     },
+     {
+      "start": 329,
+      "end": 367,
+      "type": "EMAIL",
+      "text": "r.vandermeer@stedelijk-verz.example.nl"
+     },
+     {
+      "start": 369,
+      "end": 384,
+      "type": "PHONE",
+      "text": "+31 20 555 0099"
+     },
+     {
+      "start": 397,
+      "end": 415,
+      "type": "CASE_REF",
+      "text": "SV-DPO-IR-2026-007"
+     },
+     {
+      "start": 528,
+      "end": 554,
+      "type": "ORG",
+      "text": "Stedelijk Verzekeringen NV"
+     },
+     {
+      "start": 727,
+      "end": 742,
+      "type": "PERSON",
+      "text": "Lennart Voskamp"
+     },
+     {
+      "start": 746,
+      "end": 760,
+      "type": "ORG",
+      "text": "Voskamp ICT BV"
+     },
+     {
+      "start": 1420,
+      "end": 1436,
+      "type": "PERSON",
+      "text": "Jasmijn Beekhuis"
+     },
+     {
+      "start": 1477,
+      "end": 1517,
+      "type": "ORG",
+      "text": "Autorité de protection des données (APD)"
+     },
+     {
+      "start": 1527,
+      "end": 1560,
+      "type": "ORG",
+      "text": "Information Commissioner's Office"
+     },
+     {
+      "start": 1607,
+      "end": 1609,
+      "type": "LOC",
+      "text": "UK"
+     },
+     {
+      "start": 1685,
+      "end": 1699,
+      "type": "PERSON",
+      "text": "Anne Vermeulen"
+     },
+     {
+      "start": 1703,
+      "end": 1723,
+      "type": "ORG",
+      "text": "Vermeulen & Partners"
+     },
+     {
+      "start": 1725,
+      "end": 1733,
+      "type": "LOC",
+      "text": "Brussels"
+     },
+     {
+      "start": 1735,
+      "end": 1776,
+      "type": "EMAIL",
+      "text": "a.vermeulen@vermeulen-partners.example.be"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_018_cease_and_desist_en",
+    "score": {
+     "precision": 0.8421052631578947,
+     "recall": 0.9411764705882353,
+     "f1": 0.8888888888888888,
+     "tp": 16,
+     "fp": 3,
+     "fn": 1,
+     "by_type": {
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.7777777777777778,
+       "recall": 1.0,
+       "f1": 0.8750000000000001,
+       "tp": 7,
+       "fp": 2,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.8,
+       "recall": 1.0,
+       "f1": 0.888888888888889,
+       "tp": 4,
+       "fp": 1,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.8421052631578947,
+     "recall": 0.9411764705882353,
+     "f1": 0.8888888888888888,
+     "tp": 16,
+     "fp": 3,
+     "fn": 1,
+     "by_type": {
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.7777777777777778,
+       "recall": 1.0,
+       "f1": 0.8750000000000001,
+       "tp": 7,
+       "fp": 2,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.8,
+       "recall": 1.0,
+       "f1": 0.888888888888889,
+       "tp": 4,
+       "fp": 1,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 50,
+      "end": 67,
+      "type": "PERSON",
+      "text": "Margaret Holloway"
+     },
+     {
+      "start": 78,
+      "end": 98,
+      "type": "ORG",
+      "text": "Holloway IP Partners"
+     },
+     {
+      "start": 107,
+      "end": 147,
+      "type": "EMAIL",
+      "text": "margaret.holloway@hollowayip.example.com"
+     },
+     {
+      "start": 150,
+      "end": 165,
+      "type": "PHONE",
+      "text": "+1 212 555 7799"
+     },
+     {
+      "start": 199,
+      "end": 228,
+      "type": "ORG",
+      "text": "Pinegrove Coffee Roasters LLC"
+     },
+     {
+      "start": 236,
+      "end": 252,
+      "type": "LOC",
+      "text": "1188 Cascade Way"
+     },
+     {
+      "start": 254,
+      "end": 262,
+      "type": "LOC",
+      "text": "Portland"
+     },
+     {
+      "start": 335,
+      "end": 355,
+      "type": "CASE_REF",
+      "text": "HIP-NOTUSE-2026-0098"
+     },
+     {
+      "start": 385,
+      "end": 414,
+      "type": "ORG",
+      "text": "Northwind Coffee Company Inc."
+     },
+     {
+      "start": 417,
+      "end": 426,
+      "type": "ORG",
+      "text": "Northwind"
+     },
+     {
+      "start": 503,
+      "end": 512,
+      "type": "ORG",
+      "text": "NORTHWIND"
+     },
+     {
+      "start": 644,
+      "end": 673,
+      "type": "ORG",
+      "text": "Pinegrove Coffee Roasters LLC"
+     },
+     {
+      "start": 825,
+      "end": 833,
+      "type": "LOC",
+      "text": "Portland"
+     },
+     {
+      "start": 835,
+      "end": 842,
+      "type": "LOC",
+      "text": "Seattle"
+     },
+     {
+      "start": 1151,
+      "end": 1157,
+      "type": "LOC",
+      "text": "Oregon"
+     },
+     {
+      "start": 1548,
+      "end": 1603,
+      "type": "ORG",
+      "text": "United States District Court for the District of Oregon"
+     },
+     {
+      "start": 1725,
+      "end": 1734,
+      "type": "ORG",
+      "text": "Northwind"
+     },
+     {
+      "start": 1823,
+      "end": 1840,
+      "type": "PERSON",
+      "text": "Margaret Holloway"
+     },
+     {
+      "start": 1841,
+      "end": 1861,
+      "type": "ORG",
+      "text": "Holloway IP Partners"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_019_antitrust_complaint_en",
+    "score": {
+     "precision": 0.6756756756756757,
+     "recall": 0.9259259259259259,
+     "f1": 0.7812500000000001,
+     "tp": 25,
+     "fp": 12,
+     "fn": 2,
+     "by_type": {
+      "ORG": {
+       "precision": 0.56,
+       "recall": 0.875,
+       "f1": 0.6829268292682927,
+       "tp": 14,
+       "fp": 11,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 5,
+       "fp": 0,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.6666666666666666,
+       "recall": 1.0,
+       "f1": 0.8,
+       "tp": 2,
+       "fp": 1,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.6756756756756757,
+     "recall": 0.9259259259259259,
+     "f1": 0.7812500000000001,
+     "tp": 25,
+     "fp": 12,
+     "fn": 2,
+     "by_type": {
+      "ORG": {
+       "precision": 0.56,
+       "recall": 0.875,
+       "f1": 0.6829268292682927,
+       "tp": 14,
+       "fp": 11,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 5,
+       "fp": 0,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.6666666666666666,
+       "recall": 1.0,
+       "f1": 0.8,
+       "tp": 2,
+       "fp": 1,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 64,
+      "end": 83,
+      "type": "ORG",
+      "text": "European Commission"
+     },
+     {
+      "start": 85,
+      "end": 99,
+      "type": "ORG",
+      "text": "DG Competition"
+     },
+     {
+      "start": 114,
+      "end": 143,
+      "type": "ORG",
+      "text": "Velora Streaming Services Ltd"
+     },
+     {
+      "start": 171,
+      "end": 193,
+      "type": "PERSON",
+      "text": "Maître Étienne Garnier"
+     },
+     {
+      "start": 195,
+      "end": 214,
+      "type": "ORG",
+      "text": "Garnier Vasseur SCP"
+     },
+     {
+      "start": 248,
+      "end": 277,
+      "type": "ORG",
+      "text": "Velora Streaming Services Ltd"
+     },
+     {
+      "start": 280,
+      "end": 286,
+      "type": "ORG",
+      "text": "Velora"
+     },
+     {
+      "start": 355,
+      "end": 382,
+      "type": "LOC",
+      "text": "16 Sir John Rogerson's Quay"
+     },
+     {
+      "start": 384,
+      "end": 392,
+      "type": "LOC",
+      "text": "Dublin 2"
+     },
+     {
+      "start": 394,
+      "end": 401,
+      "type": "LOC",
+      "text": "Ireland"
+     },
+     {
+      "start": 403,
+      "end": 409,
+      "type": "ORG",
+      "text": "Velora"
+     },
+     {
+      "start": 472,
+      "end": 475,
+      "type": "ORG",
+      "text": "EEA"
+     },
+     {
+      "start": 488,
+      "end": 506,
+      "type": "PERSON",
+      "text": "Ms. Sinéad Brennan"
+     },
+     {
+      "start": 590,
+      "end": 606,
+      "type": "PERSON",
+      "text": "Mr. Théo Roussel"
+     },
+     {
+      "start": 608,
+      "end": 635,
+      "type": "EMAIL",
+      "text": "t.roussel@velora.example.ie"
+     },
+     {
+      "start": 637,
+      "end": 652,
+      "type": "PHONE",
+      "text": "+353 1 555 0011"
+     },
+     {
+      "start": 710,
+      "end": 720,
+      "type": "ORG",
+      "text": "Apple Inc."
+     },
+     {
+      "start": 723,
+      "end": 728,
+      "type": "ORG",
+      "text": "Apple"
+     },
+     {
+      "start": 750,
+      "end": 753,
+      "type": "ORG",
+      "text": "DMA"
+     },
+     {
+      "start": 780,
+      "end": 793,
+      "type": "ORG",
+      "text": "the App Store"
+     },
+     {
+      "start": 834,
+      "end": 839,
+      "type": "ORG",
+      "text": "Apple"
+     },
+     {
+      "start": 1011,
+      "end": 1017,
+      "type": "ORG",
+      "text": "Velora"
+     },
+     {
+      "start": 1066,
+      "end": 1069,
+      "type": "ORG",
+      "text": "DMA"
+     },
+     {
+      "start": 1087,
+      "end": 1092,
+      "type": "ORG",
+      "text": "Apple"
+     },
+     {
+      "start": 1202,
+      "end": 1205,
+      "type": "ORG",
+      "text": "DMA"
+     },
+     {
+      "start": 1332,
+      "end": 1335,
+      "type": "ORG",
+      "text": "DMA"
+     },
+     {
+      "start": 1366,
+      "end": 1372,
+      "type": "ORG",
+      "text": "Velora"
+     },
+     {
+      "start": 1515,
+      "end": 1521,
+      "type": "ORG",
+      "text": "Velora"
+     },
+     {
+      "start": 1576,
+      "end": 1582,
+      "type": "ORG",
+      "text": "Velora"
+     },
+     {
+      "start": 1606,
+      "end": 1620,
+      "type": "PERSON",
+      "text": "Hideo Nakamura"
+     },
+     {
+      "start": 1646,
+      "end": 1666,
+      "type": "PERSON",
+      "text": "Wiktoria Lewandowska"
+     },
+     {
+      "start": 1712,
+      "end": 1718,
+      "type": "ORG",
+      "text": "Velora"
+     },
+     {
+      "start": 1750,
+      "end": 1760,
+      "type": "ORG",
+      "text": "Commission"
+     },
+     {
+      "start": 1806,
+      "end": 1809,
+      "type": "ORG",
+      "text": "DMA"
+     },
+     {
+      "start": 1887,
+      "end": 1890,
+      "type": "ORG",
+      "text": "DMA"
+     },
+     {
+      "start": 1910,
+      "end": 1946,
+      "type": "EMAIL",
+      "text": "e.garnier@garnier-vasseur.example.fr"
+     },
+     {
+      "start": 1949,
+      "end": 1966,
+      "type": "PHONE",
+      "text": "+33 1 56 90 22 14"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_020_insolvency_update_en",
+    "score": {
+     "precision": 0.8333333333333334,
+     "recall": 0.9615384615384616,
+     "f1": 0.8928571428571429,
+     "tp": 25,
+     "fp": 5,
+     "fn": 1,
+     "by_type": {
+      "ORG": {
+       "precision": 0.6666666666666666,
+       "recall": 0.9090909090909091,
+       "f1": 0.7692307692307692,
+       "tp": 10,
+       "fp": 5,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 6,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.8333333333333334,
+     "recall": 0.9615384615384616,
+     "f1": 0.8928571428571429,
+     "tp": 25,
+     "fp": 5,
+     "fn": 1,
+     "by_type": {
+      "ORG": {
+       "precision": 0.6666666666666666,
+       "recall": 0.9090909090909091,
+       "f1": 0.7692307692307692,
+       "tp": 10,
+       "fp": 5,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 6,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 50,
+      "end": 75,
+      "type": "ORG",
+      "text": "Avenir Retail Holdings SA"
+     },
+     {
+      "start": 101,
+      "end": 121,
+      "type": "ORG",
+      "text": "Creditors' Committee"
+     },
+     {
+      "start": 158,
+      "end": 174,
+      "type": "PERSON",
+      "text": "Théodore Lacombe"
+     },
+     {
+      "start": 176,
+      "end": 205,
+      "type": "ORG",
+      "text": "Lacombe Restructuring Avocats"
+     },
+     {
+      "start": 241,
+      "end": 263,
+      "type": "CASE_REF",
+      "text": "T.Comm.Bxl 2025/A/4408"
+     },
+     {
+      "start": 288,
+      "end": 313,
+      "type": "ORG",
+      "text": "Avenir Retail Holdings SA"
+     },
+     {
+      "start": 316,
+      "end": 322,
+      "type": "ORG",
+      "text": "Avenir"
+     },
+     {
+      "start": 370,
+      "end": 419,
+      "type": "ORG",
+      "text": "Tribunal de l'entreprise francophone de Bruxelles"
+     },
+     {
+      "start": 765,
+      "end": 769,
+      "type": "LOC",
+      "text": "Lyon"
+     },
+     {
+      "start": 811,
+      "end": 833,
+      "type": "LOC",
+      "text": "84 avenue Tony Garnier"
+     },
+     {
+      "start": 841,
+      "end": 845,
+      "type": "LOC",
+      "text": "Lyon"
+     },
+     {
+      "start": 896,
+      "end": 923,
+      "type": "ORG",
+      "text": "LogiSud Investissements SAS"
+     },
+     {
+      "start": 973,
+      "end": 976,
+      "type": "ORG",
+      "text": "KBC"
+     },
+     {
+      "start": 1030,
+      "end": 1037,
+      "type": "ORG",
+      "text": "Belfius"
+     },
+     {
+      "start": 1044,
+      "end": 1063,
+      "type": "IBAN",
+      "text": "BE74 0682 7777 0001"
+     },
+     {
+      "start": 1129,
+      "end": 1135,
+      "type": "ORG",
+      "text": "Avenir"
+     },
+     {
+      "start": 1202,
+      "end": 1220,
+      "type": "PERSON",
+      "text": "Alexandra Petrescu"
+     },
+     {
+      "start": 1222,
+      "end": 1258,
+      "type": "EMAIL",
+      "text": "a.petrescu@strategicbuyer.example.eu"
+     },
+     {
+      "start": 1303,
+      "end": 1318,
+      "type": "PERSON",
+      "text": "Eitan Bar-Levav"
+     },
+     {
+      "start": 1366,
+      "end": 1390,
+      "type": "ORG",
+      "text": "the Belgian SPF Finances"
+     },
+     {
+      "start": 1415,
+      "end": 1441,
+      "type": "ORG",
+      "text": "Belgian Court of Cassation"
+     },
+     {
+      "start": 1538,
+      "end": 1544,
+      "type": "ORG",
+      "text": "Avenir"
+     },
+     {
+      "start": 1727,
+      "end": 1744,
+      "type": "PERSON",
+      "text": "Ingrid Vanderbeke"
+     },
+     {
+      "start": 1802,
+      "end": 1822,
+      "type": "ORG",
+      "text": "creditors' committee"
+     },
+     {
+      "start": 1846,
+      "end": 1854,
+      "type": "LOC",
+      "text": "Brussels"
+     },
+     {
+      "start": 1866,
+      "end": 1895,
+      "type": "ORG",
+      "text": "Lacombe Restructuring Avocats"
+     },
+     {
+      "start": 1897,
+      "end": 1919,
+      "type": "LOC",
+      "text": "Boulevard du Régent 47"
+     },
+     {
+      "start": 1926,
+      "end": 1934,
+      "type": "LOC",
+      "text": "Brussels"
+     },
+     {
+      "start": 1946,
+      "end": 1988,
+      "type": "EMAIL",
+      "text": "t.lacombe@lacombe-restructuring.example.be"
+     },
+     {
+      "start": 1991,
+      "end": 2005,
+      "type": "PHONE",
+      "text": "+32 2 555 8800"
+     }
+    ]
+   }
+  ]
+ }
+]

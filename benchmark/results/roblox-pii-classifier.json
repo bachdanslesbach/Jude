@@ -1,0 +1,44 @@
+[
+ {
+  "runner_name": "roblox-pii-classifier",
+  "aggregate": {
+   "precision": 0.0,
+   "recall": 0.0,
+   "f1": 0.0,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "by_type": {}
+  },
+  "aggregate_any_type": null,
+  "meta": {
+   "span_level": false,
+   "sentence_level": {
+    "precision": 0.9675324675324676,
+    "recall": 0.6313559322033898,
+    "f1": 0.764102564102564,
+    "tp": 149,
+    "fp": 5,
+    "fn": 87,
+    "n_sentences": 519
+   },
+   "n_docs": 20,
+   "load_seconds": 9.293589167000391,
+   "seconds": 13.156626458001483,
+   "chars_per_sec": 2293.445063316291,
+   "peak_rss_mb": 946.390625,
+   "device": "mps",
+   "model": "roblox/roblox-pii-classifier",
+   "revision": "253c2057916145e1862087783858d52a7daeb716",
+   "params_m": 560,
+   "licence": "Apache-2.0",
+   "threshold": 0.2691,
+   "mean_max_prob": 0.2830956446599401,
+   "notes": [
+    "Message-level classifier (asking-for / giving PII); no spans. Scored on the sentence grid only.",
+    "Trained on chat; the model card itself reports 45.5% F1 on the Kaggle PII essay dataset."
+   ]
+  },
+  "per_doc": []
+ }
+]

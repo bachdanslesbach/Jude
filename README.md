@@ -125,6 +125,40 @@ jude rehydrate path/to/llm-output.txt --matter "matter-2026-001"
 pytest
 ```
 
+## Benchmark
+
+`benchmark/` holds a 20-document, 401-span gold corpus of synthetic
+legal documents (term sheets, pleadings, witness statements, regulatory
+submissions; EN / FR / NL) and a harness that scores any span-level or
+message-level PII system against it: span F1 (type-strict and
+type-agnostic), *public-body over-redaction* (how often a system
+redacts the European Commission, the DMA, a court…), sentence-level F1,
+throughput and peak memory.
+
+| System | Span F1 | Public bodies redacted |
+|---|---|---|
+| Jude (`jude-full`) | **0.927** | 7 % |
+| `nvidia/gliner-PII` (native labels) | 0.698 | 18 % |
+| `perplexity-ai/pplx-pii-masking` | 0.532 | 3 % |
+| `roblox/roblox-pii-classifier` | — (sentence-level 0.764) | — |
+
+Generic PII taxonomies have no label for organisations-as-parties or
+case references — 48 % of what a legal document must hide. Protocol,
+full tables and failure taxonomy:
+[docs/benchmark-pii-models.md](docs/benchmark-pii-models.md);
+Jude-only ablations: [docs/benchmark.md](docs/benchmark.md).
+
+```bash
+python -m benchmark.run --list                                   # registered runners
+python -m benchmark.run --runners pplx-pii-masking --json benchmark/results/pplx-pii-masking.json
+python -m benchmark.run --render benchmark/results/*.json --report docs/benchmark-pii-models.md \
+    --prelude benchmark/report_prelude.md --postlude benchmark/report_postlude.md
+python -m benchmark.analyze benchmark/results/pplx-pii-masking.json   # FN / FP / confusions
+```
+
+External models run one per process (they do not fit next to Jude's
+own stack in 8 GB); their revisions are pinned in `benchmark/runners/`.
+
 ## Roadmap
 
 - v0.1: plain text + DOCX, strict / smart modes, Streamlit UI, first cloud LLM client (Anthropic), French + English NER.

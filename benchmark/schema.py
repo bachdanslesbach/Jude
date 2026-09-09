@@ -21,7 +21,7 @@ class GoldSpan:
     type: str
     text: str
 
-    def overlaps(self, other: "Span") -> bool:  # noqa: F821
+    def overlaps(self, other: Span) -> bool:  # noqa: F821
         return not (self.end <= other.start or other.end <= self.start)
 
 
@@ -32,7 +32,7 @@ class PredSpan:
     type: str
     text: str
 
-    def overlaps(self, other: "Span") -> bool:  # noqa: F821
+    def overlaps(self, other: Span) -> bool:  # noqa: F821
         return not (self.end <= other.start or other.end <= self.start)
 
 
@@ -46,7 +46,7 @@ class GoldDocument:
     notes: str = ""
 
     @classmethod
-    def from_json(cls, path: Path | str) -> "GoldDocument":
+    def from_json(cls, path: Path | str) -> GoldDocument:
         data = json.loads(Path(path).read_text(encoding="utf-8"))
         spans = tuple(
             GoldSpan(
@@ -94,6 +94,10 @@ class DocumentResult:
     runner_name: str
     score: Score
     pred_spans: list[PredSpan]
+    # Same matching with the type constraint dropped — "did it redact
+    # the right characters", independent of label taxonomy. Needed to
+    # compare systems whose label sets differ from Jude's.
+    score_any_type: Score | None = None
 
 
 @dataclass
@@ -101,3 +105,7 @@ class CorpusReport:
     runner_name: str
     per_doc: list[DocumentResult]
     aggregate: Score
+    aggregate_any_type: Score | None = None
+    # Free-form: timing, memory, negative-class metric, sentence-level
+    # score, out-of-schema prediction counts. Serialised verbatim.
+    meta: dict = field(default_factory=dict)

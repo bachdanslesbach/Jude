@@ -1,15 +1,29 @@
+---
+title: Jude redaction benchmark
+layout: default
+---
+
 # Jude redaction benchmark
 
-Span-level F1 across the 5-document gold corpus in `benchmark/corpus/`. Lenient overlap matching, type-strict.
+Span-level F1 across the 20-document gold corpus in `benchmark/corpus/`. Lenient overlap matching, type-strict (the *any type* column drops the type constraint). *Public-body over-redaction*: share of whitelisted institution / statute mentions (not covered by gold) that the runner redacted — lower is better. *Sentence F1*: every runner projected onto a sentence grid (positive iff it flags any character of the sentence), the only level at which message classifiers can be compared. Throughput and peak RSS measured on this machine, one runner per process.
 
 ## Aggregate
 
+| Runner | Precision | Recall | **F1** | F1 (any type) | Public-body over-redaction | Sentence F1 | chars/s | Peak RSS |
+|---|---|---|---|---|---|---|---|---|
+| `jude-full` | 0.892 | 0.965 | **0.927** | 0.932 | 7/95 (7%) | 0.903 | 464 | 3,428 MB |
+| `jude-no-public-filter` | 0.762 | 0.960 | **0.850** | 0.854 | 82/95 (86%) | 0.857 | 471 | 3,443 MB |
+| `spacy-only` | 0.737 | 0.706 | **0.721** | 0.736 | 66/95 (69%) | 0.795 | 2,355 | 3,129 MB |
+| `regex-only` | 0.920 | 0.200 | **0.328** | 0.328 | 0/95 (0%) | 0.408 | 3,291,201 | 34 MB |
+
+## Sentence level
+
 | Runner | Precision | Recall | F1 | TP | FP | FN |
 |---|---|---|---|---|---|---|
-| `jude-full` | 0.892 | 0.965 | **0.927** | 387 | 47 | 14 |
-| `jude-no-public-filter` | 0.762 | 0.960 | **0.850** | 385 | 120 | 16 |
-| `spacy-only` | 0.737 | 0.706 | **0.721** | 283 | 101 | 118 |
-| `regex-only` | 0.920 | 0.200 | **0.328** | 80 | 7 | 321 |
+| `jude-full` | 0.862 | 0.949 | **0.903** | 224 | 36 | 12 |
+| `jude-no-public-filter` | 0.780 | 0.949 | **0.857** | 224 | 63 | 12 |
+| `spacy-only` | 0.793 | 0.797 | **0.795** | 188 | 49 | 48 |
+| `regex-only` | 0.968 | 0.258 | **0.408** | 61 | 2 | 175 |
 
 ## Per document (F1)
 
@@ -85,3 +99,10 @@ Span-level F1 across the 5-document gold corpus in `benchmark/corpus/`. Lenient 
 | PERSON | 0.000 | 0.000 | 0.000 | 0 | 0 | 89 |
 | PHONE | 1.000 | 1.000 | 1.000 | 22 | 0 | 0 |
 | URL | 0.000 | 0.000 | 0.000 | 0 | 0 | 1 |
+
+## Runner notes
+
+- **`jude-full`** — device cpu; load 0.0 s.
+- **`jude-no-public-filter`** — device cpu; load 0.0 s.
+- **`spacy-only`** — device cpu; load 0.1 s.
+- **`regex-only`** — device cpu; load 0.1 s.

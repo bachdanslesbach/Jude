@@ -46,7 +46,7 @@ def analyze(report, docs, *, only_type: str | None, limit: int, type_strict: boo
         for pi, p in enumerate(preds):
             if pi not in pm and (only_type is None or p.type == only_type):
                 fps[p.type].append(f"{dr.doc_id[:7]} {p.text!r}")
-        for m in public_mentions(doc.text, golds):
+        for m in public_mentions(doc.text, golds, explicit=doc.public_spans):
             if any(not (m.end <= p.start or p.end <= m.start) for p in preds):
                 public_hits.append(f"{dr.doc_id[:7]} {m.text!r} ({m.canonical})")
 

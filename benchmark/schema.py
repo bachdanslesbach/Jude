@@ -44,6 +44,10 @@ class GoldDocument:
     text: str
     gold_spans: tuple[GoldSpan, ...]
     notes: str = ""
+    # Mentions the annotator explicitly confirmed must NOT be redacted
+    # (type "PUBLIC"). Feed the public-body over-redaction metric; never
+    # scored as gold. Absent from older corpus files.
+    public_spans: tuple[GoldSpan, ...] = ()
 
     @classmethod
     def from_json(cls, path: Path | str) -> GoldDocument:
@@ -64,6 +68,15 @@ class GoldDocument:
             text=str(data["text"]),
             gold_spans=spans,
             notes=str(data.get("notes", "")),
+            public_spans=tuple(
+                GoldSpan(
+                    start=int(s["start"]),
+                    end=int(s["end"]),
+                    type=str(s.get("type", "PUBLIC")),
+                    text=str(s["text"]),
+                )
+                for s in data.get("public_spans", [])
+            ),
         )
 
 

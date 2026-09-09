@@ -80,19 +80,30 @@ def _alias_patterns() -> tuple[tuple[re.Pattern[str], str], ...]:
 def public_mentions(
     text: str,
     gold_spans: Iterable[GoldSpan],
+    explicit: Iterable[GoldSpan] = (),
 ) -> list[PublicMention]:
-    """Whitelisted public-body mentions in `text` that no gold span covers.
+    """Whitelisted public-body mentions in `text` that no gold span covers,
+    plus any `explicit` mentions the annotator marked as public.
 
     Overlapping alias hits are resolved longest-first so "European
     Commission" is reported once, not additionally as "Commission".
+    Explicit mentions take precedence over whitelist hits they overlap.
     """
 
     golds = list(gold_spans)
-    candidates: list[PublicMention] = []
+    candidates: list[PublicMention] = [
+        PublicMention(s.start, s.end, s.text, "(annotator)") for s in explicit
+    ]
+    n_explicit = len(candidates)
     for pat, canonical in _alias_patterns():
         for m in pat.finditer(text):
             candidates.append(PublicMention(m.start(), m.end(), m.group(0), canonical))
-    candidates.sort(key=lambda c: (-(c.end - c.start), c.start))
+    # Stable sort keeps explicit mentions ahead of equal-length hits.
+    explicit_set = set(range(n_explicit))
+    candidates = [c for i, c in sorted(
+        enumerate(candidates),
+        key=lambda ic: (ic[0] not in explicit_set, -(ic[1].end - ic[1].start), ic[1].start),
+    )]
     kept: list[PublicMention] = []
     for c in candidates:
         if any(_overlaps(c, k) for k in kept):

@@ -142,7 +142,10 @@ def run_one(name: str, factory: Callable[[], object], docs: list[GoldDocument]) 
         ]
         hits = total = 0
         for d, dr in zip(docs, report.per_doc):
-            h, t = over_redaction(dr.pred_spans, public_mentions(d.text, d.gold_spans))
+            h, t = over_redaction(
+                dr.pred_spans,
+                public_mentions(d.text, d.gold_spans, explicit=d.public_spans),
+            )
             hits += h
             total += t
         report.meta["span_level"] = True

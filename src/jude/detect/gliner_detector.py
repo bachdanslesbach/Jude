@@ -28,6 +28,7 @@ from __future__ import annotations
 from functools import lru_cache
 
 from ..types import Detection, DetectionSource, EntityType
+from .chunking import DEFAULT_MAX_WORDS, chunk_text
 
 # Label → EntityType map. Each label is a natural-language phrase that
 # GLiNER scores against every token span; the cost grows roughly
@@ -72,37 +73,54 @@ class GlinerDetector:
         self,
         model_name: str = "urchade/gliner_large-v2.1",
         threshold: float = _DEFAULT_THRESHOLD,
+        max_words: int = DEFAULT_MAX_WORDS,
     ):
         self.model = _load(model_name)
         self.labels = list(_LABELS_TO_TYPE.keys())
         self.threshold = threshold
+        self.max_words = max_words
 
     def detect(self, text: str) -> list[Detection]:
         if not text.strip():
             return []
-        # GLiNER processes the full document in one pass (no chunking
-        # needed up to its context window). The threshold filters out
-        # low-confidence spans before they hit Jude's overlap resolver.
-        spans = self.model.predict_entities(
-            text, self.labels, threshold=self.threshold
-        )
+        # GLiNER tokenises with truncation=True at the model's max_len
+        # (384 word-tokens for the large checkpoints) and silently drops
+        # everything past it, so the document is windowed on paragraph
+        # boundaries and offsets are shifted back. The threshold filters
+        # out low-confidence spans before they hit the overlap resolver.
         out: list[Detection] = []
-        for s in spans:
-            label = (s.get("label") or "").lower()
-            etype = _LABELS_TO_TYPE.get(label)
-            if etype is None:
-                continue
-            surface = (s.get("text") or "").strip()
-            if not surface:
-                continue
-            out.append(
-                Detection(
-                    text=surface,
-                    start=int(s["start"]),
-                    end=int(s["end"]),
-                    entity_type=etype,
-                    source=DetectionSource.GLINER,
-                    confidence=float(s.get("score", 0.8)),
-                )
+        seen: set[tuple[int, int, EntityType]] = set()
+        for offset, chunk in chunk_text(text, self.max_words):
+            spans = self.model.predict_entities(
+                chunk, self.labels, threshold=self.threshold
             )
+            for s in spans:
+                label = (s.get("label") or "").lower()
+                etype = _LABELS_TO_TYPE.get(label)
+                if etype is None:
+                    continue
+                start = offset + int(s["start"])
+                end = offset + int(s["end"])
+                # Trim whitespace at the edges and keep offsets honest:
+                # `text[start:end]` must equal the reported surface.
+                while start < end and text[start].isspace():
+                    start += 1
+                while end > start and text[end - 1].isspace():
+                    end -= 1
+                if start >= end:
+                    continue
+                key = (start, end, etype)
+                if key in seen:
+                    continue
+                seen.add(key)
+                out.append(
+                    Detection(
+                        text=text[start:end],
+                        start=start,
+                        end=end,
+                        entity_type=etype,
+                        source=DetectionSource.GLINER,
+                        confidence=float(s.get("score", 0.8)),
+                    )
+                )
         return out

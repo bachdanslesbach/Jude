@@ -29,6 +29,8 @@ from __future__ import annotations
 import re
 from collections.abc import Iterable
 
+from jude.detect.chunking import chunk_text as _chunk_text
+
 from ..schema import PredSpan
 
 NVIDIA_MODEL_ID = "nvidia/gliner-PII"
@@ -97,54 +99,8 @@ def merge_adjacent(preds: list[PredSpan], text: str) -> list[PredSpan]:
     return out
 
 
-_WORD_RE = re.compile(r"\S+")
-
-
-def chunk_text(text: str, max_words: int = 200) -> list[tuple[int, str]]:
-    """Split `text` into (offset, chunk) pairs of at most `max_words`
-    whitespace-delimited tokens, preferring paragraph boundaries. An
-    oversized paragraph is windowed by word count. Every chunk satisfies
-    `text[offset:offset + len(chunk)] == chunk`."""
-
-    paragraphs: list[tuple[int, int]] = []
-    pos = 0
-    for m in re.finditer(r"\n+", text):
-        if m.start() > pos:
-            paragraphs.append((pos, m.start()))
-        pos = m.end()
-    if pos < len(text):
-        paragraphs.append((pos, len(text)))
-
-    chunks: list[tuple[int, str]] = []
-    cur_start: int | None = None
-    cur_end = 0
-    cur_words = 0
-    for p_start, p_end in paragraphs:
-        words = [w for w in _WORD_RE.finditer(text, p_start, p_end)]
-        if not words:
-            continue
-        if len(words) > max_words:
-            # Oversized paragraph: flush what we have, then window it.
-            if cur_start is not None:
-                chunks.append((cur_start, text[cur_start:cur_end]))
-                cur_start = None
-                cur_words = 0
-            for i in range(0, len(words), max_words):
-                w0 = words[i]
-                w1 = words[min(i + max_words, len(words)) - 1]
-                chunks.append((w0.start(), text[w0.start():w1.end()]))
-            continue
-        if cur_start is not None and cur_words + len(words) > max_words:
-            chunks.append((cur_start, text[cur_start:cur_end]))
-            cur_start = None
-            cur_words = 0
-        if cur_start is None:
-            cur_start = words[0].start()
-        cur_end = words[-1].end()
-        cur_words += len(words)
-    if cur_start is not None:
-        chunks.append((cur_start, text[cur_start:cur_end]))
-    return chunks
+# One implementation, shared with Jude's own GLiNER detector.
+chunk_text = _chunk_text
 
 
 class GlinerLabelRunner:

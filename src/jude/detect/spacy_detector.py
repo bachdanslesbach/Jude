@@ -126,6 +126,49 @@ _LEGAL_HEADERS = frozenset({
     "coentreprise", "joint venture", "joint-venture",
     # Legal-term phrases without intrinsic entity meaning
     "regulation", "directive", "treaty",
+    # Litigation roles and defined terms — never identifiers on their own
+    "claimant", "claimants", "defendant", "defendants", "respondent",
+    "respondents", "applicant", "applicants", "plaintiff", "plaintiffs",
+    "appellant", "appellee", "petitioner", "intervener", "witness",
+    "undersigned", "counterparty", "target", "company", "group",
+    "escrow", "escrow agent", "trustee", "receiver", "liquidator",
+    "court", "district court", "tribunal", "the court",
+    "demandeur", "demanderesse", "défendeur", "défenderesse", "requérant",
+    "requérante", "partie", "parties",
+    "eiser", "verweerder", "partij", "partijen",
+})
+
+# Determiners and possessives that turn a role into a phrase spaCy or
+# GLiNER then label as an entity: "the Client", "our client", "its
+# counsel". Stripped before the stop-list lookup.
+_ROLE_PREFIXES = (
+    "the ", "our ", "its ", "your ", "their ", "his ", "her ", "my ", "a ", "an ",
+    "le ", "la ", "les ", "notre ", "nos ", "votre ", "vos ", "leur ", "leurs ",
+    "de ", "het ", "onze ", "uw ", "hun ",
+)
+
+# "Counsel for the Claimant", "attorneys for Defendant", "conseil de la
+# partie" — a role, whoever fills it.
+_COUNSEL_FOR_RE = re.compile(
+    r"^(?:counsel|attorneys?|solicitors?|lawyers?|advocates?|avocats?|conseils?|"
+    r"advocaten?|raadsman|raadslieden)\s+(?:for|of|to|pour|de|van|voor)\s+"
+    r"(?:the\s+|la\s+|le\s+|les\s+|de\s+|het\s+)?\w+$"
+)
+
+# Single-token demonyms and language adjectives that NER models label
+# as LOC / NORP. Never identifiers.
+_DEMONYMS = frozenset({
+    "dutch", "french", "belgian", "german", "british", "english", "american",
+    "swiss", "italian", "spanish", "luxembourgish", "irish", "european",
+    "norwegian", "swedish", "danish", "finnish", "austrian", "polish",
+    "portuguese", "greek", "japanese", "chinese", "indian", "canadian",
+    "australian", "flemish", "walloon",
+    "belge", "belges", "français", "française", "allemand", "allemande",
+    "néerlandais", "néerlandaise", "suisse", "italien", "italienne",
+    "espagnol", "espagnole", "européen", "européenne", "britannique",
+    "américain", "américaine", "luxembourgeois", "luxembourgeoise",
+    "belgisch", "belgische", "frans", "franse", "duits", "duitse",
+    "nederlands", "nederlandse", "europees", "europese", "brits", "britse",
 })
 
 
@@ -198,7 +241,15 @@ def _normalize_span(
     # Reject common legal-document section labels and role headers that
     # spaCy mislabels as ORG when they appear capitalised at line start.
     normalised_label = re.sub(r"[^\w\s]", "", s).strip().lower()
-    if normalised_label in _LEGAL_HEADERS:
+    normalised_label = re.sub(r"\s+", " ", normalised_label)
+    if normalised_label in _LEGAL_HEADERS or normalised_label in _DEMONYMS:
+        return None
+    for pre in _ROLE_PREFIXES:
+        if normalised_label.startswith(pre):
+            rest = normalised_label[len(pre):].strip()
+            if rest in _LEGAL_HEADERS or rest in _DEMONYMS:
+                return None
+    if _COUNSEL_FOR_RE.match(normalised_label):
         return None
     # Drop everything past the first newline — spaCy frequently fuses
     # consecutive header lines like "Maître X\nDe:" into one entity.

@@ -29,6 +29,12 @@ from functools import lru_cache
 
 from ..types import Detection, DetectionSource, EntityType
 from .chunking import DEFAULT_MAX_WORDS, chunk_text
+from .language import detect_language
+from .spacy_detector import _normalize_span
+
+# Types that go through the spaCy-style shape filter. CASE_REF and the
+# deterministic types are left alone.
+_SHAPE_FILTERED = frozenset({EntityType.PERSON, EntityType.ORG, EntityType.LOC})
 
 # Label → EntityType map. Each label is a natural-language phrase that
 # GLiNER scores against every token span; the cost grows roughly
@@ -74,8 +80,9 @@ class GlinerDetector:
         model_name: str = "urchade/gliner_large-v2.1",
         threshold: float = _DEFAULT_THRESHOLD,
         max_words: int = DEFAULT_MAX_WORDS,
+        model=None,  # noqa: ANN001 — injectable for tests
     ):
-        self.model = _load(model_name)
+        self.model = model if model is not None else _load(model_name)
         self.labels = list(_LABELS_TO_TYPE.keys())
         self.threshold = threshold
         self.max_words = max_words
@@ -91,6 +98,7 @@ class GlinerDetector:
         out: list[Detection] = []
         seen: set[tuple[int, int, EntityType]] = set()
         for offset, chunk in chunk_text(text, self.max_words):
+            lang = detect_language(chunk, supported=("en", "fr", "nl")) or "en"
             spans = self.model.predict_entities(
                 chunk, self.labels, threshold=self.threshold
             )
@@ -99,8 +107,20 @@ class GlinerDetector:
                 etype = _LABELS_TO_TYPE.get(label)
                 if etype is None:
                     continue
-                start = offset + int(s["start"])
-                end = offset + int(s["end"])
+                rel_start, rel_end = int(s["start"]), int(s["end"])
+                if etype in _SHAPE_FILTERED:
+                    # Same noise filter as the spaCy layer: role phrases
+                    # ("the Firm", "our client"), section labels,
+                    # demonyms, salutation prefixes, date-bearing spans.
+                    # Case references are exempt — they contain years.
+                    norm = _normalize_span(
+                        chunk[rel_start:rel_end], rel_start, rel_end, lang
+                    )
+                    if norm is None:
+                        continue
+                    _, rel_start, rel_end = norm
+                start = offset + rel_start
+                end = offset + rel_end
                 # Trim whitespace at the edges and keep offsets honest:
                 # `text[start:end]` must equal the reported surface.
                 while start < end and text[start].isspace():

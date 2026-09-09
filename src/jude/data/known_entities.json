@@ -1989,6 +1989,276 @@
       "type": "ORG",
       "context": "Belgian federal tax administration",
       "redact": false
+    },
+    {
+      "canonical": "United States",
+      "aliases": [
+        "US",
+        "USA",
+        "U.S.",
+        "U.S.A.",
+        "United States of America",
+        "America",
+        "États-Unis",
+        "Etats-Unis",
+        "Verenigde Staten"
+      ],
+      "type": "LOC",
+      "context": "Jurisdiction; federal antitrust enforced by DOJ Antitrust Division and FTC",
+      "redact": false
+    },
+    {
+      "canonical": "France",
+      "aliases": [
+        "République française",
+        "Republique francaise",
+        "Frankrijk"
+      ],
+      "type": "LOC",
+      "context": "EU member state; competition authority Autorité de la concurrence",
+      "redact": false
+    },
+    {
+      "canonical": "Germany",
+      "aliases": [
+        "Deutschland",
+        "Federal Republic of Germany",
+        "Allemagne",
+        "Duitsland",
+        "Bundesrepublik Deutschland"
+      ],
+      "type": "LOC",
+      "context": "EU member state; competition authority Bundeskartellamt",
+      "redact": false
+    },
+    {
+      "canonical": "Italy",
+      "aliases": [
+        "Italia",
+        "Italie",
+        "Italië"
+      ],
+      "type": "LOC",
+      "context": "EU member state; competition authority AGCM",
+      "redact": false
+    },
+    {
+      "canonical": "Spain",
+      "aliases": [
+        "España",
+        "Espagne",
+        "Spanje"
+      ],
+      "type": "LOC",
+      "context": "EU member state; competition authority CNMC",
+      "redact": false
+    },
+    {
+      "canonical": "Norway",
+      "aliases": [
+        "Norge",
+        "Norvège",
+        "Noorwegen"
+      ],
+      "type": "LOC",
+      "context": "EEA state (non-EU); competition authority Konkurransetilsynet",
+      "redact": false
+    },
+    {
+      "canonical": "Sweden",
+      "aliases": [
+        "Sverige",
+        "Suède",
+        "Zweden"
+      ],
+      "type": "LOC",
+      "context": "EU member state; competition authority Konkurrensverket",
+      "redact": false
+    },
+    {
+      "canonical": "Denmark",
+      "aliases": [
+        "Danmark",
+        "Danemark",
+        "Denemarken"
+      ],
+      "type": "LOC",
+      "context": "EU member state; competition authority Konkurrence- og Forbrugerstyrelsen",
+      "redact": false
+    },
+    {
+      "canonical": "Austria",
+      "aliases": [
+        "Österreich",
+        "Autriche",
+        "Oostenrijk"
+      ],
+      "type": "LOC",
+      "context": "EU member state; competition authority BWB",
+      "redact": false
+    },
+    {
+      "canonical": "Poland",
+      "aliases": [
+        "Polska",
+        "Pologne",
+        "Polen"
+      ],
+      "type": "LOC",
+      "context": "EU member state; competition authority UOKiK",
+      "redact": false
+    },
+    {
+      "canonical": "Portugal",
+      "aliases": [],
+      "type": "LOC",
+      "context": "EU member state; competition authority AdC",
+      "redact": false
+    },
+    {
+      "canonical": "Finland",
+      "aliases": [
+        "Suomi",
+        "Finlande"
+      ],
+      "type": "LOC",
+      "context": "EU member state; competition authority KKV",
+      "redact": false
+    },
+    {
+      "canonical": "Belgium",
+      "aliases": [
+        "Belgique",
+        "België",
+        "Belgie",
+        "Kingdom of Belgium",
+        "Royaume de Belgique",
+        "Koninkrijk België"
+      ],
+      "type": "LOC",
+      "context": "EU member state; competition authority BMA/ABC; seat of the EU institutions",
+      "redact": false
+    },
+    {
+      "canonical": "Department of Justice",
+      "aliases": [
+        "DOJ",
+        "U.S. Department of Justice",
+        "US Department of Justice",
+        "United States Department of Justice",
+        "DOJ Antitrust Division",
+        "Antitrust Division"
+      ],
+      "type": "ORG",
+      "context": "US federal prosecutor; its Antitrust Division enforces the Sherman and Clayton Acts",
+      "redact": false
+    },
+    {
+      "canonical": "Securities and Exchange Commission",
+      "aliases": [
+        "SEC",
+        "U.S. Securities and Exchange Commission"
+      ],
+      "type": "ORG",
+      "context": "US federal securities regulator",
+      "redact": false
+    },
+    {
+      "canonical": "Parquet National Financier",
+      "aliases": [
+        "PNF",
+        "parquet national financier",
+        "National Financial Prosecutor's Office"
+      ],
+      "type": "ORG",
+      "context": "French national prosecutor for financial and economic crime (corruption, tax fraud, market abuse)",
+      "redact": false
+    },
+    {
+      "canonical": "Commercial Court of London",
+      "aliases": [
+        "Commercial Court",
+        "London Commercial Court",
+        "Business and Property Courts",
+        "King's Bench Division",
+        "Queen's Bench Division",
+        "High Court of Justice",
+        "High Court",
+        "English High Court"
+      ],
+      "type": "ORG",
+      "context": "Specialist court of the King's Bench Division, High Court of England and Wales",
+      "redact": false
+    },
+    {
+      "canonical": "United States District Court",
+      "aliases": [
+        "U.S. District Court",
+        "US District Court",
+        "Federal District Court",
+        "District Court"
+      ],
+      "type": "ORG",
+      "context": "US federal trial court; districts named e.g. 'District of Delaware', 'Northern District of California'",
+      "redact": false
+    },
+    {
+      "canonical": "Eurostat",
+      "aliases": [
+        "Statistical Office of the European Union"
+      ],
+      "type": "ORG",
+      "context": "EU statistical office (Commission DG)",
+      "redact": false
+    },
+    {
+      "canonical": "Pillar Two",
+      "aliases": [
+        "OECD Pillar Two",
+        "GloBE rules",
+        "GloBE",
+        "Global Minimum Tax",
+        "global minimum tax",
+        "Pillar 2"
+      ],
+      "type": "ORG",
+      "context": "OECD/G20 global minimum corporate tax framework (15 % minimum, Directive (EU) 2022/2523)",
+      "redact": false
+    },
+    {
+      "canonical": "Data protection authority",
+      "aliases": [
+        "DPA",
+        "data protection authorities",
+        "DPAs",
+        "supervisory authority",
+        "supervisory authorities",
+        "autorité de contrôle",
+        "toezichthoudende autoriteit"
+      ],
+      "type": "ORG",
+      "context": "Generic term for national GDPR supervisory authorities (Art. 51 GDPR)",
+      "redact": false
+    },
+    {
+      "canonical": "IHS Markit",
+      "aliases": [
+        "S&P Global Commodity Insights",
+        "S&P Global Platts"
+      ],
+      "type": "ORG",
+      "context": "Market data and price-reporting provider; source of published price assessments",
+      "redact": false
+    },
+    {
+      "canonical": "Oregon",
+      "aliases": [
+        "District of Oregon",
+        "State of Oregon"
+      ],
+      "type": "ORG",
+      "context": "US state; federal District of Oregon",
+      "redact": false
     }
   ]
 }

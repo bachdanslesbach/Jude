@@ -69,6 +69,33 @@ def _no_redact_names() -> set[str]:
     return names
 
 
+# Nationality adjectives NER models glue onto institution names
+# ("Belgian SPF Finances", "Autorité de la concurrence française").
+# Stripped at either end before alias lookup. Accent-free variants
+# included because `normalize_surface` may fold diacritics.
+_DEMONYM_TOKENS = frozenset({
+    "belgian", "french", "german", "dutch", "swiss", "british", "european",
+    "italian", "spanish", "american", "luxembourg", "luxembourgish", "irish",
+    "us", "uk", "eu",
+    "belge", "belges", "française", "francaise", "français", "francais",
+    "allemande", "allemand", "néerlandaise", "neerlandaise", "néerlandais",
+    "neerlandais", "suisse", "européenne", "europeenne", "européen", "europeen",
+    "italienne", "italien", "espagnole", "espagnol", "britannique",
+    "américaine", "americaine", "américain", "americain",
+    "belgische", "belgisch", "franse", "frans", "duitse", "duits",
+    "nederlandse", "nederlands", "europese", "europees", "britse", "brits",
+})
+
+
+def _strip_demonyms(norm: str) -> str:
+    tokens = norm.split()
+    while tokens and tokens[0] in _DEMONYM_TOKENS:
+        tokens.pop(0)
+    while tokens and tokens[-1] in _DEMONYM_TOKENS:
+        tokens.pop()
+    return " ".join(tokens)
+
+
 def is_public_no_redact(text: str, entity_type: EntityType) -> bool:
     """True if `text` matches a bundled public-knowledge entity that is
     flagged as `redact: false`. Lookup strategy:
@@ -79,6 +106,9 @@ def is_public_no_redact(text: str, entity_type: EntityType) -> bool:
          institutional names as PERSON or LOC. The bundled redact=false
          entries are heavyweight institutions / regulations that no
          real person or place would plausibly share a name with.
+      4. Steps 1–3 again with nationality adjectives stripped from
+         either end ("Belgian SPF Finances", "Autorité de la
+         concurrence française"). A demonym alone never matches.
     """
 
     norm = normalize_surface(text)
@@ -86,15 +116,26 @@ def is_public_no_redact(text: str, entity_type: EntityType) -> bool:
         return False
     idx = _no_redact_index()
     names = _no_redact_names()
-    if (norm, entity_type.value) in idx:
+
+    def _lookup(n: str) -> bool:
+        if (n, entity_type.value) in idx:
+            return True
+        for art in _LEADING_ARTICLES:
+            if n.startswith(art):
+                stripped = n[len(art):].strip()
+                if stripped and (stripped, entity_type.value) in idx:
+                    return True
+                if stripped and stripped in names:
+                    return True
+        return n in names
+
+    if _lookup(norm):
         return True
-    for art in _LEADING_ARTICLES:
-        if norm.startswith(art):
-            stripped = norm[len(art):].strip()
-            if stripped and (stripped, entity_type.value) in idx:
-                return True
-            if stripped and stripped in names:
-                return True
-    if norm in names:
-        return True
+    without_demonyms = _strip_demonyms(norm)
+    if without_demonyms and without_demonyms != norm:
+        for art in _LEADING_ARTICLES:
+            if without_demonyms.startswith(art):
+                without_demonyms = without_demonyms[len(art):].strip()
+                break
+        return _lookup(without_demonyms)
     return False

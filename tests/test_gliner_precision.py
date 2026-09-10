@@ -140,6 +140,18 @@ class TestStopListAdditions:
                   "Commercial Court of London", "Dutch Bakery BV"):
             assert _normalize_span(s, 0, len(s), "en") is not None, s
 
+    def test_first_names_that_look_like_month_abbreviations_are_kept(self):
+        # 'Jan' is January to the month rule and the most common Flemish
+        # first name. A month only makes a span a date when it stands
+        # alone or comes with a number.
+        from jude.detect.spacy_detector import _normalize_span
+
+        for s, lang in (("Jan Peeters", "nl"), ("Jan Peeters", "en"), ("Maître Jan Peeters", "nl"),
+                        ("June Whitfield", "en"), ("Mai Nguyen", "fr"), ("Augustus Baker", "en")):
+            assert _normalize_span(s, 0, len(s), lang) is not None, s
+        for s in ("May", "March", "12 Jan", "Jan 12", "juin 2026", "3 mai"):
+            assert _normalize_span(s, 0, len(s), "en") is None, s
+
 
 class TestPublicKnowledgeAdditions:
     def test_jurisdictions_courts_prosecutors_are_public(self):

@@ -58,6 +58,25 @@ class TestLegalFormSuffix:
             assert name in orgs, orgs
 
 
+class TestPersonOfCompany:
+    def test_person_of_company_yields_the_company_not_the_person(self):
+        text = ("to my attorney, Ms. Hilda Brennan of Brennan & Park LLP. I am instructed by "
+                "Brightline's counsel, Ms. Yuki Tanaka of Hartford & Mead LLP, and by a contractor, "
+                "Mr. Lennart Voskamp of Voskamp ICT BV.")
+        dets = _detect(text)
+        orgs = _of(dets, EntityType.ORG)
+        assert set(orgs) == {"Brennan & Park LLP", "Hartford & Mead LLP", "Voskamp ICT BV"}, orgs
+        persons = _of(dets, EntityType.PERSON)
+        for p in ("Hilda Brennan", "Yuki Tanaka", "Lennart Voskamp"):
+            assert p in persons, persons
+
+    def test_of_inside_an_institution_name_is_kept(self):
+        text = "Bank of Ireland plc, Société Générale de Belgique SA and Banque de Luxembourg SA."
+        orgs = _of(_detect(text), EntityType.ORG)
+        for name in ("Bank of Ireland plc", "Société Générale de Belgique SA", "Banque de Luxembourg SA"):
+            assert name in orgs, orgs
+
+
 class TestDefinedAlias:
     def test_short_name_in_parentheses_after_a_company(self):
         text = 'Plaintiff Helios Photonics Inc. ("Helios"), a Delaware corporation, sued.'
@@ -108,6 +127,12 @@ class TestHonorific:
         text = "Mr. President and Mr. Chairman opened the session."
         assert _of(_detect(text), EntityType.PERSON) == []
 
+    def test_sir_in_a_street_name_is_an_address_not_a_person(self):
+        text = "headquartered at 16 Sir John Rogerson's Quay, Dublin 2, Ireland."
+        dets = _detect(text)
+        assert _of(dets, EntityType.PERSON) == []
+        assert "16 Sir John Rogerson's Quay" in _of(dets, EntityType.LOC)
+
 
 class TestVesselDomainFamily:
     def test_vessel(self):
@@ -122,6 +147,10 @@ class TestVesselDomainFamily:
         assert "pinegrove-coffee.example.com" in urls
         assert "www.acme-legal.be" in urls
         assert len(urls) == 2
+
+    def test_domain_at_the_end_of_a_sentence(self):
+        text = "online via your website pinegrove-coffee.example.com. We enclose photographs."
+        assert _of(_detect(text), EntityType.URL) == ["pinegrove-coffee.example.com"]
 
     def test_domain_inside_an_email_is_not_a_separate_url(self):
         text = "Write to sophie.martin@example-law.eu today."
@@ -184,6 +213,14 @@ class TestKnownEntities:
         assert "Apple" in names
         assert not any(n.lower() in ("apple a", "ubs") for n in names if n != "Apple")
         assert "SUBSTANCE" not in names
+
+
+class TestWhitelistAdditions:
+    def test_pillar_two_vocabulary_is_public(self):
+        from jude.public_knowledge import is_public_no_redact
+
+        for s in ("QDMTT", "IIR", "UTPR", "GloBE", "Pillar Two"):
+            assert is_public_no_redact(s, EntityType.ORG), s
 
 
 class TestPipelineIntegration:

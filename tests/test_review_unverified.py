@@ -29,9 +29,13 @@ def _terms(text: str, dets=()):  # noqa: ANN001
 
 class TestUnverifiedTerms:
     def test_undetected_capitalised_name_is_listed_with_context_and_count(self):
+        import re
+
         text = ("Acme Solutions SA engaged Northbridge to advise. The report by Northbridge "
                 "was delivered to Acme Solutions SA.")
-        terms = _terms(text, [_span(text, "Acme Solutions SA")] * 1)
+        dets = [PredSpan(m.start(), m.end(), "ORG", m.group())
+                for m in re.finditer("Acme Solutions SA", text)]
+        terms = _terms(text, dets)
         names = {t.text: t for t in terms}
         assert "Northbridge" in names
         assert names["Northbridge"].count == 2
@@ -79,6 +83,10 @@ class TestUnverifiedTerms:
     def test_months_currencies_and_section_words_are_noise(self):
         text = "On 12 March 2026 the fee of EUR 40,000 under Clause 7 and Annex B was paid in Q2."
         assert _terms(text) == []
+
+    def test_bare_domains_are_listed_even_though_lowercase(self):
+        text = "Orders are placed online via pinegrove-coffee.example.com. Nothing else."
+        assert [t.text for t in _terms(text)] == ["pinegrove-coffee.example.com"]
 
     def test_accepts_detection_objects(self):
         from jude.types import Detection, DetectionSource, EntityType

@@ -60,6 +60,18 @@ class TestExport:
         back = ingest_docx(out, language="en")
         assert [s.text for s in back.public_spans] == ["Tribunal de l'entreprise"]
 
+    def test_corpus_gold_spans_never_overlap(self):
+        # Word cannot highlight two colours at one place, and the scorer
+        # matches one-to-one: an overlapping gold pair is an annotation
+        # error (doc_012 had 'RVK' inside 'RVK-2026-BPC-014').
+        from benchmark.run import CORPUS_DIR
+
+        for p in sorted(CORPUS_DIR.glob("doc_*.json")):
+            gold = GoldDocument.from_json(p)
+            ss = sorted(gold.gold_spans, key=lambda s: s.start)
+            for a, b in zip(ss, ss[1:]):
+                assert b.start >= a.end, (gold.id, a.text, b.text)
+
     def test_export_every_corpus_document_round_trips(self, tmp_path: Path):
         from benchmark.docx_gold import export_docx, ingest_docx
         from benchmark.run import CORPUS_DIR

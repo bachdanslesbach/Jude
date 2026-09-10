@@ -280,7 +280,13 @@ def _normalize_span(
     if _YEAR_RE.search(s):
         return None
     lower_tokens = [t.strip(_PUNCT_STRIP).lower() for t in tokens]
-    if any(t in _MONTHS for t in lower_tokens):
+    # A month name makes the span a date only when it stands alone
+    # ("May", "March") or comes with a number ("12 Jan", "3 mai"). Next
+    # to a capitalised surname it is a first name: Jan Peeters, June
+    # Whitfield, Mai Nguyen, Augustus Baker.
+    if any(t in _MONTHS for t in lower_tokens) and (
+        len(lower_tokens) == 1 or any(ch.isdigit() for ch in s)
+    ):
         return None
 
     # All-stopword spans ("Notre", "conteste les pratiques") are noise.

@@ -289,16 +289,116 @@ def prefill_docx(
     doc.save(str(target))
 
 
+# --- reviewing existing gold ---------------------------------------------
+
+
+def export_docx(corpus_json: Path | str, target: Path | str) -> None:
+    """Write a corpus document as a .docx with its gold spans highlighted
+    and every public mention (whitelist hits + annotator-marked) in grey,
+    ready for review in Word. `ingest --force` writes it back."""
+
+    from .negative import public_mentions
+    from .schema import GoldDocument
+
+    gold = GoldDocument.from_json(corpus_json)
+    doc = Document()
+    doc.core_properties.title = gold.title
+    for para in gold.text.split(PARAGRAPH_SEP):
+        doc.add_paragraph(para)
+    target = Path(target)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    doc.save(str(target))
+    if DocxAdapter.read(target).text != gold.text:
+        raise ValueError(f"{gold.id}: text does not survive the .docx round trip")
+    public = public_mentions(gold.text, gold.gold_spans, explicit=gold.public_spans)
+    prefill_docx(target, target, gold.gold_spans, public=public)
+
+
+@dataclass
+class SpanDiff:
+    added: list[GoldSpan]
+    removed: list[GoldSpan]
+    retyped: list[tuple[GoldSpan, GoldSpan]]  # (before, after)
+
+    @property
+    def empty(self) -> bool:
+        return not (self.added or self.removed or self.retyped)
+
+
+def diff_spans(before: Iterable[GoldSpan], after: Iterable[GoldSpan], by_text: bool = False) -> SpanDiff:
+    """What a review changed. Keyed by offsets, or by surface text when the
+    reviewer also edited the prose (offsets are then meaningless)."""
+
+    def key(s: GoldSpan):  # noqa: ANN202
+        return s.text if by_text else (s.start, s.end)
+
+    b: dict = {}
+    for s in before:
+        b.setdefault(key(s), []).append(s)
+    a: dict = {}
+    for s in after:
+        a.setdefault(key(s), []).append(s)
+    added: list[GoldSpan] = []
+    removed: list[GoldSpan] = []
+    retyped: list[tuple[GoldSpan, GoldSpan]] = []
+    for k, xs in a.items():
+        ys = b.get(k, [])
+        for i, s in enumerate(xs):
+            if i < len(ys):
+                if ys[i].type != s.type:
+                    retyped.append((ys[i], s))
+            else:
+                added.append(s)
+    for k, ys in b.items():
+        xs = a.get(k, [])
+        removed.extend(ys[len(xs):])
+    return SpanDiff(
+        added=sorted(added, key=lambda s: s.start),
+        removed=sorted(removed, key=lambda s: s.start),
+        retyped=sorted(retyped, key=lambda p: p[1].start),
+    )
+
+
+def _print_diff(d: SpanDiff) -> None:
+    for s in d.added:
+        print(f"  + {s.type} {s.text!r}")
+    for s in d.removed:
+        print(f"  - {s.type} {s.text!r}")
+    for o, s in d.retyped:
+        print(f"  ~ {o.type}→{s.type} {s.text!r}")
+    if d.empty:
+        print("  (no span changes)")
+
+
 # --- CLI --------------------------------------------------------------------
 
 
 def _cmd_ingest(args: argparse.Namespace) -> None:
+    from .schema import GoldDocument
+
     result = ingest_docx(args.docx, language=args.language)
-    title = args.title or Document(str(args.docx)).core_properties.title or Path(args.docx).stem
-    d = to_corpus_dict(result, doc_id=args.id, title=title, notes=args.notes)
     out = Path(args.out) / f"{args.id}.json"
-    if out.exists() and not args.force:
-        raise SystemExit(f"{out} exists; pass --force to overwrite")
+    existing = GoldDocument.from_json(out) if out.exists() else None
+
+    title = args.title or (existing.title if existing else None) \
+        or Document(str(args.docx)).core_properties.title or Path(args.docx).stem
+    notes = args.notes if args.notes is not None else (existing.notes if existing else "")
+    d = to_corpus_dict(result, doc_id=args.id, title=title, notes=notes)
+
+    if existing is not None:
+        text_changed = existing.text != result.text
+        if text_changed:
+            print(f"text changed: {len(existing.text)} → {len(result.text)} chars "
+                  "(diff keyed by surface text)")
+        print("gold spans:")
+        _print_diff(diff_spans(existing.gold_spans, result.gold_spans, by_text=text_changed))
+        pd = diff_spans(existing.public_spans, result.public_spans, by_text=text_changed)
+        if not pd.empty:
+            print("public spans:")
+            _print_diff(pd)
+        if not args.force:
+            raise SystemExit(f"{out} exists; pass --force to overwrite")
+
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(d, indent=1, ensure_ascii=False), encoding="utf-8")
     by_type: dict[str, int] = {}
@@ -309,6 +409,27 @@ def _cmd_ingest(args: argparse.Namespace) -> None:
           f"{dict(sorted(by_type.items()))}, {len(result.public_spans)} public spans")
     for w in result.warnings:
         print(f"  warning: {w}")
+
+
+def _cmd_export(args: argparse.Namespace) -> None:
+    corpus = Path(args.corpus)
+    if args.all:
+        sources = sorted(corpus.glob("doc_*.json"))
+    else:
+        sources = []
+        for ref in args.docs:
+            p = Path(ref)
+            if not p.exists():
+                p = corpus / f"{ref}.json"
+            if not p.exists():
+                raise SystemExit(f"No such corpus document: {ref}")
+            sources.append(p)
+    if not sources:
+        raise SystemExit("Nothing to export: give document ids or --all")
+    for src in sources:
+        target = Path(args.out) / f"{src.stem}.docx"
+        export_docx(src, target)
+        print(f"{target}")
 
 
 def _cmd_prefill(args: argparse.Namespace) -> None:
@@ -331,10 +452,17 @@ def main(argv: list[str] | None = None) -> None:
     ing.add_argument("--id", required=True, help="document id, e.g. doc_021_share_purchase_en")
     ing.add_argument("--title", default=None)
     ing.add_argument("--language", default=None, help="en / fr / nl (auto-detected if omitted)")
-    ing.add_argument("--notes", default="")
+    ing.add_argument("--notes", default=None, help="kept from the existing JSON when re-ingesting")
     ing.add_argument("--out", type=Path, default=Path(__file__).parent / "corpus")
-    ing.add_argument("--force", action="store_true")
+    ing.add_argument("--force", action="store_true", help="overwrite an existing corpus document")
     ing.set_defaults(func=_cmd_ingest)
+
+    exp = sub.add_parser("export", help="corpus JSON → highlighted .docx for review in Word")
+    exp.add_argument("docs", nargs="*", help="document ids (doc_001_term_sheet_en) or JSON paths")
+    exp.add_argument("--all", action="store_true", help="export every corpus document")
+    exp.add_argument("--corpus", type=Path, default=Path(__file__).parent / "corpus")
+    exp.add_argument("--out", type=Path, default=Path("review"))
+    exp.set_defaults(func=_cmd_export)
 
     pre = sub.add_parser("prefill", help="write Jude's detections into a copy as highlights")
     pre.add_argument("docx", type=Path)

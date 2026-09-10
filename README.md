@@ -117,6 +117,7 @@ jude redact path/to/file.pdf  --matter "matter-2026-001"   # outputs .txt
 jude entities --matter "matter-2026-001"
 jude enrich   --matter "matter-2026-001"                   # auto-fill public context
 jude rehydrate path/to/llm-output.txt --matter "matter-2026-001"
+jude review   path/to/brief.docx --matter "matter-2026-001"  # what was NOT redacted and is not public — one confirmation pass
 ```
 
 ## Tests
@@ -137,7 +138,7 @@ throughput and peak memory.
 
 | System | Span F1 | Recall | Public bodies redacted |
 |---|---|---|---|
-| Jude (`jude-full`) | **0.945** | 0.970 | 3 % |
+| Jude (`jude-full`) | **0.963** | 0.998 | 3 % |
 | `nvidia/gliner-PII` (native labels) | 0.724 | 0.675 | 22 % |
 | `perplexity-ai/pplx-pii-masking` | 0.533 | 0.383 | 3 % |
 | `roblox/roblox-pii-classifier` | — (sentence-level 0.764) | — | — |

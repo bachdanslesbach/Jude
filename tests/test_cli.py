@@ -133,3 +133,28 @@ def test_export_writes_valid_json(cli, tmp_path):
     assert data["matter"]["id"] == matter_id
     assert data["matter"]["name"] == "exp"
     assert any(e["canonical"] == "Acme Corp" for e in data["entities"])
+
+
+def test_review_lists_what_was_not_redacted(cli, tmp_path):
+    """`jude review` is the fail-closed half of redaction: capitalised or
+    identifier-like terms that survived redaction and are not known as
+    public, in context. A bare codename word is exactly such a term —
+    the neural layers drop it on purpose until the policy is settled."""
+
+    create_result = _run(cli, "matter", "create", "review-matter")
+    matter_id = create_result.stdout.split()[2]
+    src = tmp_path / "memo.txt"
+    src.write_text(
+        "Acme Solutions SA sued in Delaware. The court asked Helios to reply; "
+        "Helios declined.",
+        encoding="utf-8",
+    )
+    result = _run(cli, "review", str(src), "--matter", matter_id)
+    assert "unverified" in result.stdout
+    # One line per listed term: "  <term> ×<count>   <context>". The
+    # context quotes the raw text, so only the term column is asserted.
+    listed = [line.strip().split(" ×")[0] for line in result.stdout.splitlines()
+              if " ×" in line]
+    assert "Helios" in listed, result.stdout
+    assert "Acme Solutions SA" not in listed  # redacted, hence not listed
+    assert "Delaware" not in listed  # public jurisdiction

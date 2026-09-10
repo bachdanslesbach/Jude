@@ -614,8 +614,9 @@ def _render_unverified_terms(matter: Matter, conv: Conversation, pending: dict) 
     term makes it an entity of the matter and re-runs redaction on
     this turn, so the lawyer signs off on a list, not on a document."""
 
-    from ..review import unverified_terms
-    from ..types import EntityType
+    # Absolute imports: Streamlit runs this file as a script, not a module.
+    from jude.review import unverified_terms
+    from jude.types import EntityType
 
     terms = unverified_terms(pending["raw_text"], pending.get("detections") or [])
     if not terms:

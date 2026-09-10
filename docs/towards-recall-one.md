@@ -27,11 +27,15 @@ guarantee is the process, the model is what makes the process cheap.
 That is how conflict checks and KYC work; anonymisation is no
 different.
 
-## Where the misses are today
+## Where the misses were — and are
 
 Jude v0.7.9 on the 20-document corpus: recall 0.970, twelve misses
-out of 401 identifiers. Every one belongs to a class, and every class
-has a remedy:
+out of 400 identifiers. Every one belonged to a class, and every class
+had a remedy. Levers 1 and 3 below shipped in v0.7.10 and closed all
+but one: **recall 0.998**, F1 0.963. The survivor — *Luxembourg* as a
+place of business in doc_002 — is a conflict between the annotation
+and the whitelist (jurisdiction), not a detection failure, and goes
+to the corpus review.
 
 | Miss | Class | Remedy |
 |---|---|---|
@@ -48,7 +52,7 @@ entries and one policy call.
 
 ## Levers, in order of expected yield
 
-1. **Deterministic long-tail rules.** Legal-form suffix (any capitalised
+1. **Deterministic long-tail rules** *(shipped in v0.7.10)*. Legal-form suffix (any capitalised
    phrase followed by `SA`, `NV`, `SARL`, `BV`, `GmbH`, `Ltd`, `plc`,
    `Inc.` … is an organisation); `Project <Name>` and bare codenames
    in a defined-terms clause; honorific + capitalised token (`Mr.
@@ -62,12 +66,15 @@ entries and one policy call.
    a matter; extend to surname-only, initials, possessives (`Martin's`),
    acronyms, and the pseudonym dictionary across all documents of the
    matter.
-3. **The unverified-token report.** After redaction, list every
-   capitalised token or phrase that was *not* redacted and is *not*
-   whitelisted, in context, for a single confirmation pass. On a
-   20-page brief that is a few dozen items, seconds each. This is the
-   step that turns 0.97 into a process guarantee: the model finds what
-   it can, the report shows the lawyer exactly what it did not decide.
+3. **The unverified-term report** *(shipped in v0.7.10: `jude review`,
+   and the review panel in the UI with one-click redaction)*. After
+   redaction, list every capitalised phrase, identifier-shaped token
+   or bare domain that was *not* redacted and is *not* whitelisted, in
+   context, for a single confirmation pass. On the corpus that is six
+   items per document; on a 20-page brief a few dozen, seconds each.
+   This is the step that turns 0.97 into a process guarantee: the
+   model finds what it can, the report shows the lawyer exactly what
+   it did not decide.
 4. **Adversarial re-identification check, locally.** Feed the redacted
    text to a local model (Ollama, nothing leaves the machine) with one
    question: *who are the parties, and what in this text would let you

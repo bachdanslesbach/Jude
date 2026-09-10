@@ -213,3 +213,28 @@ def test_risk_panel_assesses_pasted_redacted_text(isolated_jude_home):
     # with a public-knowledge tag (covered in test_risk.py).
     assert "MEDIUM" in rendered
     assert "(3)" in rendered  # the score badge
+
+
+def test_review_panel_lists_unverified_terms(isolated_jude_home):
+    """Preparing a turn shows the review panel; anything capitalised that
+    Jude neither redacted nor knows as public is listed for a one-pass
+    confirmation (docs/towards-recall-one.md, lever 3)."""
+
+    at = AppTest.from_file(APP_PATH).run(timeout=60)
+    [t for t in at.text_input if t.label == "Name"][0].set_value("review-ui")
+    at = at.run(timeout=30)
+    [b for b in at.button if b.label == "Create"][0].click()
+    at = at.run(timeout=30)
+    new_conv = [b for b in at.button if "new conversation" in b.label.lower()]
+    if new_conv:
+        new_conv[0].click()
+        at = at.run(timeout=30)
+    assert at.chat_input, "expected a chat input once a matter exists"
+    at.chat_input[0].set_value(
+        "Acme Solutions SA sued in Delaware. The court asked Helios to reply; Helios declined."
+    ).run(timeout=240)
+    assert not at.exception, f"app raised: {at.exception}"
+    labels = [e.label for e in at.expander]
+    assert any("unverified term" in lbl.lower() for lbl in labels), labels
+    checkbox_labels = [c.label for c in at.checkbox]
+    assert "Helios" in checkbox_labels, checkbox_labels

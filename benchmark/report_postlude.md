@@ -86,6 +86,19 @@ the bottleneck — a lawyer's review of the redaction is.
 
 ## What Jude takes from this
 
+* **Long-tail rules and the review report** (v0.7.10). Deterministic
+  rules for what statistical NER predictably misses — legal-form
+  suffixes, short names defined in parentheses, honorific + name,
+  vessels, street addresses, bare domains, a family behind a trust —
+  plus the bundled banks and public companies as a detector. Recall
+  0.970 → **0.998**, F1 0.945 → 0.963, no new false positives; the one
+  remaining miss is an annotation-policy conflict (*Luxembourg* as a
+  place of business, which the whitelist treats as a jurisdiction — so
+  the review report, which honours the whitelist, cannot surface it
+  either: hence "0/1" in the *misses surfaced* column). And the
+  fail-closed half: `jude review` and the review panel list every
+  capitalised or identifier-shaped term that is neither redacted nor
+  public — six items per corpus document.
 * **GLiNER truncates at 384 word-tokens** (`predict_entities`,
   `truncation=True`), found while writing the runners. Two of the
   corpus documents are near the limit; a real pleading is far past it.

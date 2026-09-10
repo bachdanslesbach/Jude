@@ -87,25 +87,25 @@ Span-level F1 across the 20-document gold corpus in `benchmark/corpus/`. Lenient
 
 ## Aggregate
 
-| Runner | Precision | Recall | **F1** | F1 (any type) | Public-body over-redaction | Sentence F1 | chars/s | Peak RSS |
-|---|---|---|---|---|---|---|---|---|
-| `jude-full` | 0.922 | 0.970 | **0.945** | 0.950 | 3/117 (3%) | 0.922 | 426 | 3,423 MB |
-| `jude-no-public-filter` | 0.756 | 0.968 | **0.849** | 0.853 | 95/117 (81%) | 0.854 | 453 | 3,360 MB |
-| `spacy-only` | 0.745 | 0.708 | **0.726** | 0.741 | 79/117 (68%) | 0.797 | 2,079 | 1,926 MB |
-| `regex-only` | 0.920 | 0.200 | **0.329** | 0.329 | 0/117 (0%) | 0.408 | 3,422,560 | 34 MB |
-| `gliner-large-v2.1-jude-labels` | 0.713 | 0.610 | **0.658** | 0.709 | 64/117 (55%) | 0.763 | 2,660 | 1,694 MB |
-| `nvidia-gliner-pii-native` | 0.780 | 0.675 | **0.724** | 0.812 | 26/117 (22%) | 0.843 | 2,475 | 3,433 MB |
-| `nvidia-gliner-pii-native-t03` | 0.766 | 0.695 | **0.729** | 0.818 | 30/117 (26%) | 0.843 | 2,487 | 3,634 MB |
-| `nvidia-gliner-pii-jude-labels` | 0.797 | 0.608 | **0.689** | 0.698 | 48/117 (41%) | 0.775 | 2,906 | 3,432 MB |
-| `pplx-pii-masking` | 0.879 | 0.383 | **0.533** | 0.578 | 3/117 (3%) | 0.711 | 2,542 | 749 MB |
-| `roblox-pii-classifier` | — | — | — | — | — | 0.764 | 2,293 | 946 MB |
+| Runner | Precision | Recall | **F1** | F1 (any type) | Public-body over-redaction | Misses surfaced by review | Review items / doc | Sentence F1 | chars/s | Peak RSS |
+|---|---|---|---|---|---|---|---|---|---|---|
+| `jude-full` | 0.930 | 0.998 | **0.963** | 0.963 | 3/119 (3%) | 0/1 | 6 | 0.928 | 472 | 3,576 MB |
+| `jude-no-public-filter` | 0.756 | 0.970 | **0.850** | 0.852 | 96/119 (81%) | 6/12 | 5 | 0.859 | 398 | 3,252 MB |
+| `spacy-only` | 0.745 | 0.708 | **0.726** | 0.741 | 79/119 (66%) | 55/117 | 9 | 0.797 | 2,079 | 1,926 MB |
+| `regex-only` | 0.920 | 0.200 | **0.329** | 0.329 | 0/119 (0%) | 314/320 | 19 | 0.408 | 3,422,560 | 34 MB |
+| `gliner-large-v2.1-jude-labels` | 0.713 | 0.610 | **0.658** | 0.709 | 64/119 (54%) | 93/156 | 10 | 0.763 | 2,660 | 1,694 MB |
+| `nvidia-gliner-pii-native` | 0.780 | 0.675 | **0.724** | 0.812 | 26/119 (22%) | 82/130 | 10 | 0.843 | 2,475 | 3,433 MB |
+| `nvidia-gliner-pii-native-t03` | 0.766 | 0.695 | **0.729** | 0.818 | 30/119 (25%) | 75/122 | 9 | 0.843 | 2,487 | 3,634 MB |
+| `nvidia-gliner-pii-jude-labels` | 0.797 | 0.608 | **0.689** | 0.698 | 48/119 (40%) | 93/157 | 10 | 0.775 | 2,906 | 3,432 MB |
+| `pplx-pii-masking` | 0.879 | 0.383 | **0.533** | 0.578 | 3/119 (3%) | 203/247 | 13 | 0.711 | 2,542 | 749 MB |
+| `roblox-pii-classifier` | — | — | — | — | — | — | — | 0.764 | 2,293 | 946 MB |
 
 ## Sentence level
 
 | Runner | Precision | Recall | F1 | TP | FP | FN |
 |---|---|---|---|---|---|---|
-| `jude-full` | 0.893 | 0.953 | **0.922** | 225 | 27 | 11 |
-| `jude-no-public-filter` | 0.773 | 0.953 | **0.854** | 225 | 66 | 11 |
+| `jude-full` | 0.904 | 0.953 | **0.928** | 225 | 24 | 11 |
+| `jude-no-public-filter` | 0.781 | 0.953 | **0.859** | 225 | 63 | 11 |
 | `spacy-only` | 0.797 | 0.797 | **0.797** | 188 | 48 | 48 |
 | `regex-only` | 0.968 | 0.258 | **0.408** | 61 | 2 | 175 |
 | `gliner-large-v2.1-jude-labels` | 0.750 | 0.775 | **0.763** | 183 | 61 | 53 |
@@ -125,19 +125,19 @@ Span-level F1 across the 20-document gold corpus in `benchmark/corpus/`. Lenient
 | doc_004_brussels_letter_nl | 0.952 | 0.833 | 0.500 | 0.571 | 0.700 | 0.842 | 0.800 | 0.778 | 0.588 |
 | doc_005_supply_agreement_en | 1.000 | 0.765 | 0.643 | 0.471 | 0.667 | 0.759 | 0.759 | 0.750 | 0.526 |
 | doc_006_employment_dispute_en | 1.000 | 0.974 | 0.824 | 0.348 | 0.606 | 0.842 | 0.842 | 0.706 | 0.848 |
-| doc_007_patent_litigation_en | 0.857 | 0.787 | 0.679 | 0.229 | 0.778 | 0.815 | 0.877 | 0.735 | 0.450 |
-| doc_008_regulatory_submission_en | 0.962 | 0.877 | 0.808 | 0.267 | 0.636 | 0.714 | 0.714 | 0.698 | 0.323 |
-| doc_009_witness_statement_en | 0.960 | 0.923 | 0.826 | 0.286 | 0.651 | 0.783 | 0.766 | 0.667 | 0.579 |
-| doc_010_expert_economist_en | 0.973 | 0.766 | 0.714 | 0.200 | 0.500 | 0.600 | 0.645 | 0.500 | 0.261 |
+| doc_007_patent_litigation_en | 0.984 | 0.806 | 0.679 | 0.229 | 0.778 | 0.815 | 0.877 | 0.735 | 0.450 |
+| doc_008_regulatory_submission_en | 1.000 | 0.912 | 0.808 | 0.267 | 0.636 | 0.714 | 0.714 | 0.698 | 0.323 |
+| doc_009_witness_statement_en | 0.960 | 0.902 | 0.826 | 0.286 | 0.651 | 0.783 | 0.766 | 0.667 | 0.579 |
+| doc_010_expert_economist_en | 0.973 | 0.739 | 0.714 | 0.200 | 0.500 | 0.600 | 0.645 | 0.500 | 0.261 |
 | doc_011_sanctions_memo_en | 1.000 | 0.766 | 0.683 | 0.348 | 0.649 | 0.765 | 0.800 | 0.765 | 0.480 |
 | doc_012_engagement_letter_en | 0.976 | 0.870 | 0.667 | 0.333 | 0.769 | 0.634 | 0.634 | 0.632 | 0.581 |
-| doc_013_settlement_offer_en | 0.930 | 0.909 | 0.737 | 0.370 | 0.703 | 0.700 | 0.683 | 0.789 | 0.500 |
+| doc_013_settlement_offer_en | 0.955 | 0.933 | 0.737 | 0.370 | 0.703 | 0.700 | 0.683 | 0.789 | 0.500 |
 | doc_014_compliance_investigation_en | 0.976 | 0.909 | 0.769 | 0.320 | 0.667 | 0.811 | 0.769 | 0.757 | 0.621 |
-| doc_015_corporate_restructuring_en | 0.926 | 0.862 | 0.784 | 0.267 | 0.651 | 0.667 | 0.652 | 0.698 | 0.471 |
-| doc_016_tax_memo_en | 0.880 | 0.800 | 0.739 | 0.296 | 0.622 | 0.667 | 0.682 | 0.698 | 0.414 |
-| doc_017_data_breach_notification_en | 0.909 | 0.789 | 0.621 | 0.400 | 0.647 | 0.710 | 0.667 | 0.759 | 0.609 |
-| doc_018_cease_and_desist_en | 0.865 | 0.821 | 0.765 | 0.286 | 0.727 | 0.581 | 0.581 | 0.667 | 0.522 |
-| doc_019_antitrust_complaint_en | 0.982 | 0.800 | 0.706 | 0.258 | 0.643 | 0.696 | 0.723 | 0.640 | 0.474 |
+| doc_015_corporate_restructuring_en | 0.963 | 0.897 | 0.784 | 0.267 | 0.651 | 0.667 | 0.652 | 0.698 | 0.471 |
+| doc_016_tax_memo_en | 0.902 | 0.807 | 0.739 | 0.296 | 0.622 | 0.667 | 0.682 | 0.698 | 0.414 |
+| doc_017_data_breach_notification_en | 0.909 | 0.757 | 0.621 | 0.400 | 0.647 | 0.710 | 0.667 | 0.759 | 0.609 |
+| doc_018_cease_and_desist_en | 0.895 | 0.821 | 0.765 | 0.286 | 0.727 | 0.581 | 0.581 | 0.667 | 0.522 |
+| doc_019_antitrust_complaint_en | 0.982 | 0.769 | 0.706 | 0.258 | 0.643 | 0.696 | 0.723 | 0.640 | 0.474 |
 | doc_020_insolvency_update_en | 0.963 | 0.909 | 0.792 | 0.267 | 0.711 | 0.723 | 0.723 | 0.756 | 0.556 |
 
 ## Per entity type
@@ -148,11 +148,11 @@ Span-level F1 across the 20-document gold corpus in `benchmark/corpus/`. Lenient
 | CASE_REF | 0.900 | 1.000 | 0.947 | 18 | 2 | 0 |
 | EMAIL | 1.000 | 1.000 | 1.000 | 30 | 0 | 0 |
 | IBAN | 1.000 | 1.000 | 1.000 | 12 | 0 | 0 |
-| LOC | 0.885 | 0.964 | 0.923 | 54 | 7 | 2 |
-| ORG | 0.891 | 0.953 | 0.921 | 164 | 20 | 8 |
-| PERSON | 0.957 | 0.989 | 0.972 | 88 | 4 | 1 |
+| LOC | 0.902 | 0.982 | 0.940 | 55 | 6 | 1 |
+| ORG | 0.905 | 1.000 | 0.950 | 172 | 18 | 0 |
+| PERSON | 0.957 | 1.000 | 0.978 | 89 | 4 | 0 |
 | PHONE | 1.000 | 1.000 | 1.000 | 22 | 0 | 0 |
-| URL | 0.000 | 0.000 | 0.000 | 0 | 0 | 1 |
+| URL | 1.000 | 1.000 | 1.000 | 1 | 0 | 0 |
 
 ### jude-no-public-filter — per type
 | Type | Precision | Recall | F1 | TP | FP | FN |
@@ -161,8 +161,8 @@ Span-level F1 across the 20-document gold corpus in `benchmark/corpus/`. Lenient
 | EMAIL | 1.000 | 1.000 | 1.000 | 30 | 0 | 0 |
 | IBAN | 1.000 | 1.000 | 1.000 | 12 | 0 | 0 |
 | LOC | 0.618 | 0.982 | 0.759 | 55 | 34 | 1 |
-| ORG | 0.656 | 0.942 | 0.773 | 162 | 85 | 10 |
-| PERSON | 0.957 | 0.989 | 0.972 | 88 | 4 | 1 |
+| ORG | 0.663 | 0.959 | 0.784 | 165 | 84 | 7 |
+| PERSON | 0.945 | 0.966 | 0.956 | 86 | 5 | 3 |
 | PHONE | 1.000 | 1.000 | 1.000 | 22 | 0 | 0 |
 | URL | 0.000 | 0.000 | 0.000 | 0 | 0 | 1 |
 
@@ -356,6 +356,19 @@ the bottleneck — a lawyer's review of the redaction is.
 
 ## What Jude takes from this
 
+* **Long-tail rules and the review report** (v0.7.10). Deterministic
+  rules for what statistical NER predictably misses — legal-form
+  suffixes, short names defined in parentheses, honorific + name,
+  vessels, street addresses, bare domains, a family behind a trust —
+  plus the bundled banks and public companies as a detector. Recall
+  0.970 → **0.998**, F1 0.945 → 0.963, no new false positives; the one
+  remaining miss is an annotation-policy conflict (*Luxembourg* as a
+  place of business, which the whitelist treats as a jurisdiction — so
+  the review report, which honours the whitelist, cannot surface it
+  either: hence "0/1" in the *misses surfaced* column). And the
+  fail-closed half: `jude review` and the review panel list every
+  capitalised or identifier-shaped term that is neither redacted nor
+  public — six items per corpus document.
 * **GLiNER truncates at 384 word-tokens** (`predict_entities`,
   `truncation=True`), found while writing the runners. Two of the
   corpus documents are near the limit; a real pleading is far past it.

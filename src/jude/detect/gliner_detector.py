@@ -67,9 +67,23 @@ _DEFAULT_THRESHOLD = 0.5
 
 @lru_cache(maxsize=2)
 def _load(model_name: str):  # type: ignore[no-untyped-def]
+    """Load a GLiNER checkpoint, from the local cache when offline.
+
+    `from_pretrained` asks the Hub for the latest revision even when
+    the files are already cached; on a train or behind a firewall that
+    raises a connection error and takes the whole pipeline down. Fall
+    back to the cached copy — a redaction tool must work offline.
+    """
+
     from gliner import GLiNER
 
-    return GLiNER.from_pretrained(model_name)
+    try:
+        return GLiNER.from_pretrained(model_name)
+    except Exception as first:  # noqa: BLE001 — hub / network errors vary by library version
+        try:
+            return GLiNER.from_pretrained(model_name, local_files_only=True)
+        except Exception:  # noqa: BLE001
+            raise first from None
 
 
 class GlinerDetector:

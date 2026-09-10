@@ -26,6 +26,8 @@ class Mode(StrEnum):
 
 class DetectionSource(StrEnum):
     REGEX = "regex"
+    PATTERN = "pattern"  # deterministic long-tail rules (legal forms, aliases, addresses …)
+    KNOWN = "known"  # bundled public companies / banks flagged redact: true
     SPACY = "spacy"
     GLINER = "gliner"
     PRIVACY_FILTER = "privacy_filter"

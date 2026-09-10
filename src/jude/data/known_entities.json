@@ -2259,6 +2259,360 @@
       "type": "ORG",
       "context": "US state; federal District of Oregon",
       "redact": false
+    },
+    {
+      "canonical": "BCEE",
+      "aliases": [
+        "Banque et Caisse d'Épargne de l'État",
+        "Spuerkeess",
+        "Banque et Caisse d'Epargne de l'Etat"
+      ],
+      "type": "ORG",
+      "context": "Luxembourg state-owned savings bank",
+      "redact": true
+    },
+    {
+      "canonical": "BIL",
+      "aliases": [
+        "Banque Internationale à Luxembourg",
+        "Banque Internationale a Luxembourg"
+      ],
+      "type": "ORG",
+      "context": "Luxembourg bank",
+      "redact": true
+    },
+    {
+      "canonical": "BGL BNP Paribas",
+      "aliases": [
+        "BGL"
+      ],
+      "type": "ORG",
+      "context": "Luxembourg subsidiary of BNP Paribas",
+      "redact": true
+    },
+    {
+      "canonical": "BNP Paribas",
+      "aliases": [
+        "BNPP",
+        "BNP Paribas Fortis",
+        "Fortis"
+      ],
+      "type": "ORG",
+      "context": "French bank; Belgian retail arm BNP Paribas Fortis",
+      "redact": true
+    },
+    {
+      "canonical": "KBC",
+      "aliases": [
+        "KBC Bank",
+        "KBC Group",
+        "KBC Groep",
+        "CBC"
+      ],
+      "type": "ORG",
+      "context": "Belgian bank-insurer",
+      "redact": true
+    },
+    {
+      "canonical": "Belfius",
+      "aliases": [
+        "Belfius Bank",
+        "Belfius Banque"
+      ],
+      "type": "ORG",
+      "context": "Belgian state-owned bank",
+      "redact": true
+    },
+    {
+      "canonical": "ING",
+      "aliases": [
+        "ING Bank",
+        "ING Belgium",
+        "ING België",
+        "ING Belgique",
+        "ING Groep"
+      ],
+      "type": "ORG",
+      "context": "Dutch bank",
+      "redact": true
+    },
+    {
+      "canonical": "Argenta",
+      "aliases": [
+        "Argenta Bank"
+      ],
+      "type": "ORG",
+      "context": "Belgian bank",
+      "redact": true
+    },
+    {
+      "canonical": "Crelan",
+      "aliases": [],
+      "type": "ORG",
+      "context": "Belgian cooperative bank",
+      "redact": true
+    },
+    {
+      "canonical": "Degroof Petercam",
+      "aliases": [
+        "Banque Degroof Petercam",
+        "Bank Degroof Petercam"
+      ],
+      "type": "ORG",
+      "context": "Belgian private bank",
+      "redact": true
+    },
+    {
+      "canonical": "Deutsche Bank",
+      "aliases": [],
+      "type": "ORG",
+      "context": "German bank",
+      "redact": true
+    },
+    {
+      "canonical": "Commerzbank",
+      "aliases": [],
+      "type": "ORG",
+      "context": "German bank",
+      "redact": true
+    },
+    {
+      "canonical": "Société Générale",
+      "aliases": [
+        "Societe Generale",
+        "SocGen"
+      ],
+      "type": "ORG",
+      "context": "French bank",
+      "redact": true
+    },
+    {
+      "canonical": "Crédit Agricole",
+      "aliases": [
+        "Credit Agricole",
+        "CACIB",
+        "Crédit Agricole CIB"
+      ],
+      "type": "ORG",
+      "context": "French bank",
+      "redact": true
+    },
+    {
+      "canonical": "Natixis",
+      "aliases": [
+        "BPCE",
+        "Groupe BPCE"
+      ],
+      "type": "ORG",
+      "context": "French bank",
+      "redact": true
+    },
+    {
+      "canonical": "ABN AMRO",
+      "aliases": [
+        "ABN AMRO Bank"
+      ],
+      "type": "ORG",
+      "context": "Dutch bank",
+      "redact": true
+    },
+    {
+      "canonical": "Rabobank",
+      "aliases": [],
+      "type": "ORG",
+      "context": "Dutch cooperative bank",
+      "redact": true
+    },
+    {
+      "canonical": "Barclays",
+      "aliases": [
+        "Barclays Bank"
+      ],
+      "type": "ORG",
+      "context": "UK bank",
+      "redact": true
+    },
+    {
+      "canonical": "HSBC",
+      "aliases": [
+        "HSBC Bank",
+        "HSBC Holdings"
+      ],
+      "type": "ORG",
+      "context": "UK bank",
+      "redact": true
+    },
+    {
+      "canonical": "Lloyds",
+      "aliases": [
+        "Lloyds Bank",
+        "Lloyds Banking Group"
+      ],
+      "type": "ORG",
+      "context": "UK bank",
+      "redact": true
+    },
+    {
+      "canonical": "NatWest",
+      "aliases": [
+        "NatWest Group",
+        "Royal Bank of Scotland",
+        "RBS"
+      ],
+      "type": "ORG",
+      "context": "UK bank",
+      "redact": true
+    },
+    {
+      "canonical": "UBS",
+      "aliases": [
+        "UBS AG",
+        "UBS Group",
+        "Credit Suisse"
+      ],
+      "type": "ORG",
+      "context": "Swiss bank; absorbed Credit Suisse in 2023",
+      "redact": true
+    },
+    {
+      "canonical": "Julius Baer",
+      "aliases": [
+        "Julius Bär"
+      ],
+      "type": "ORG",
+      "context": "Swiss private bank",
+      "redact": true
+    },
+    {
+      "canonical": "Pictet",
+      "aliases": [
+        "Banque Pictet"
+      ],
+      "type": "ORG",
+      "context": "Swiss private bank",
+      "redact": true
+    },
+    {
+      "canonical": "Lombard Odier",
+      "aliases": [],
+      "type": "ORG",
+      "context": "Swiss private bank",
+      "redact": true
+    },
+    {
+      "canonical": "UniCredit",
+      "aliases": [],
+      "type": "ORG",
+      "context": "Italian bank",
+      "redact": true
+    },
+    {
+      "canonical": "Intesa Sanpaolo",
+      "aliases": [
+        "Intesa"
+      ],
+      "type": "ORG",
+      "context": "Italian bank",
+      "redact": true
+    },
+    {
+      "canonical": "Santander",
+      "aliases": [
+        "Banco Santander"
+      ],
+      "type": "ORG",
+      "context": "Spanish bank",
+      "redact": true
+    },
+    {
+      "canonical": "BBVA",
+      "aliases": [
+        "Banco Bilbao Vizcaya Argentaria"
+      ],
+      "type": "ORG",
+      "context": "Spanish bank",
+      "redact": true
+    },
+    {
+      "canonical": "Nordea",
+      "aliases": [
+        "Nordea Bank"
+      ],
+      "type": "ORG",
+      "context": "Nordic bank",
+      "redact": true
+    },
+    {
+      "canonical": "SEB",
+      "aliases": [
+        "Skandinaviska Enskilda Banken"
+      ],
+      "type": "ORG",
+      "context": "Swedish bank",
+      "redact": true
+    },
+    {
+      "canonical": "Danske Bank",
+      "aliases": [],
+      "type": "ORG",
+      "context": "Danish bank",
+      "redact": true
+    },
+    {
+      "canonical": "DNB",
+      "aliases": [
+        "DNB Bank"
+      ],
+      "type": "ORG",
+      "context": "Norwegian bank",
+      "redact": true
+    },
+    {
+      "canonical": "Goldman Sachs",
+      "aliases": [
+        "Goldman"
+      ],
+      "type": "ORG",
+      "context": "US investment bank",
+      "redact": true
+    },
+    {
+      "canonical": "JPMorgan",
+      "aliases": [
+        "JPMorgan Chase",
+        "J.P. Morgan",
+        "JP Morgan"
+      ],
+      "type": "ORG",
+      "context": "US bank",
+      "redact": true
+    },
+    {
+      "canonical": "Morgan Stanley",
+      "aliases": [],
+      "type": "ORG",
+      "context": "US investment bank",
+      "redact": true
+    },
+    {
+      "canonical": "Citigroup",
+      "aliases": [
+        "Citi",
+        "Citibank"
+      ],
+      "type": "ORG",
+      "context": "US bank",
+      "redact": true
+    },
+    {
+      "canonical": "Bank of America",
+      "aliases": [
+        "BofA",
+        "Merrill Lynch"
+      ],
+      "type": "ORG",
+      "context": "US bank",
+      "redact": true
     }
   ]
 }

@@ -120,8 +120,6 @@ _LEGAL_HEADERS = frozenset({
     # Adjective + entity-class combinations spaCy fuses badly
     "société anonyme", "belgian société", "french société",
     "luxembourg société", "société à responsabilité limitée",
-    # Project-codename-style ALL CAPS ORG-fusions
-    "aurora", "atlas", "helios", "eclipse", "solaris",
     # Misc nouns spaCy flags as ORG/LOC for no good reason
     "coentreprise", "joint venture", "joint-venture",
     # Legal-term phrases without intrinsic entity meaning
@@ -137,6 +135,15 @@ _LEGAL_HEADERS = frozenset({
     "requérante", "partie", "parties",
     "eiser", "verweerder", "partij", "partijen",
 })
+
+# Bare deal-codename words the neural detectors label as ORG in titles
+# ("Project Aurora — term sheet"). Whether codenames must be redacted
+# is an open annotation-policy question; until it is settled they are
+# dropped HERE ONLY. A short name the drafter defines in parentheses
+# ('Helios Photonics Inc. ("Helios")') is an identifier regardless and
+# is caught by the defined-alias rule in `patterns.py`, then propagated
+# by the dictionary.
+_CODENAME_WORDS = frozenset({"aurora", "atlas", "helios", "eclipse", "solaris"})
 
 # Determiners and possessives that turn a role into a phrase spaCy or
 # GLiNER then label as an entity: "the Client", "our client", "its
@@ -242,7 +249,11 @@ def _normalize_span(
     # spaCy mislabels as ORG when they appear capitalised at line start.
     normalised_label = re.sub(r"[^\w\s]", "", s).strip().lower()
     normalised_label = re.sub(r"\s+", " ", normalised_label)
-    if normalised_label in _LEGAL_HEADERS or normalised_label in _DEMONYMS:
+    if (
+        normalised_label in _LEGAL_HEADERS
+        or normalised_label in _DEMONYMS
+        or normalised_label in _CODENAME_WORDS
+    ):
         return None
     for pre in _ROLE_PREFIXES:
         if normalised_label.startswith(pre):

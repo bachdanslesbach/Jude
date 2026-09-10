@@ -5,11 +5,14 @@ from typing import Iterable
 from ..store import Store
 from ..types import Detection, DetectionSource
 from .dictionary_detector import DictionaryDetector
+from .patterns import KnownEntityDetector, PatternDetector
 from .regex_rules import RegexDetector
 from .spacy_detector import SpacyDetector
 
 __all__ = [
     "DictionaryDetector",
+    "KnownEntityDetector",
+    "PatternDetector",
     "RegexDetector",
     "SpacyDetector",
     "DetectionPipeline",
@@ -20,9 +23,11 @@ _SOURCE_PRIORITY = {
     DetectionSource.USER: 0,
     DetectionSource.DICTIONARY: 1,
     DetectionSource.REGEX: 2,
-    DetectionSource.PRIVACY_FILTER: 3,
-    DetectionSource.GLINER: 4,
-    DetectionSource.SPACY: 5,
+    DetectionSource.PATTERN: 3,
+    DetectionSource.KNOWN: 4,
+    DetectionSource.PRIVACY_FILTER: 5,
+    DetectionSource.GLINER: 6,
+    DetectionSource.SPACY: 7,
 }
 
 
@@ -31,7 +36,8 @@ class DetectionPipeline:
 
     Resolution policy:
       1. Higher-priority source wins
-         (user > dictionary > regex > privacy_filter > gliner > spacy).
+         (user > dictionary > regex > pattern > known > privacy_filter
+         > gliner > spacy) — deterministic layers outrank neural ones.
       2. Within the same source, the longer span wins.
       3. Ties are broken by leftmost start position.
     """
@@ -47,6 +53,8 @@ class DetectionPipeline:
         self.store = store
         self.matter_id = matter_id
         self.regex = RegexDetector()
+        self.patterns = PatternDetector()
+        self.known = KnownEntityDetector()
         self.spacy = SpacyDetector(languages=languages)
         self.dictionary = DictionaryDetector(store=store, matter_id=matter_id)
         # GLiNER auto-detect: when use_gliner is None (the default) we
@@ -73,6 +81,8 @@ class DetectionPipeline:
     def detect(self, text: str) -> list[Detection]:
         candidates: list[Detection] = []
         candidates.extend(self.regex.detect(text))
+        candidates.extend(self.patterns.detect(text))
+        candidates.extend(self.known.detect(text))
         candidates.extend(self.spacy.detect(text))
         candidates.extend(self.dictionary.detect(text))
         if self.gliner is not None:

@@ -2219,7 +2219,14 @@
         "GloBE",
         "Global Minimum Tax",
         "global minimum tax",
-        "Pillar 2"
+        "Pillar 2",
+        "QDMTT",
+        "Qualified Domestic Minimum Top-up Tax",
+        "IIR",
+        "Income Inclusion Rule",
+        "UTPR",
+        "Undertaxed Profits Rule",
+        "top-up tax"
       ],
       "type": "ORG",
       "context": "OECD/G20 global minimum corporate tax framework (15 % minimum, Directive (EU) 2022/2523)",

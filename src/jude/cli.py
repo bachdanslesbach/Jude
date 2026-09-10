@@ -14,7 +14,7 @@ from .adapters.docx import PARAGRAPH_SEP
 from .context import fill_missing_context
 from .detect import DetectionPipeline
 from .paths import default_db_path
-from .redact import redact
+from .redact import redact, redact_two_pass
 from .rehydrate import rehydrate
 from .store import Store
 from .types import Mode
@@ -207,6 +207,62 @@ def _redact_one(
         TextAdapter.write(target, result.redacted_text)
 
     rprint(f"[green]Redacted {len(result.entities_used)} entities[/green] → {target}")
+
+
+def _read_text(path: Path, ocr: bool = False) -> str:
+    suffix = path.suffix.lower()
+    if suffix == ".docx":
+        return DocxAdapter.read(path).text
+    if suffix == ".xlsx":
+        return XlsxAdapter.read(path).text
+    if suffix == ".pdf":
+        return PdfAdapter.read(path, enable_ocr=ocr).text
+    return TextAdapter.read(path)
+
+
+@app.command()
+def review(
+    path: Path = typer.Argument(
+        ..., exists=True, readable=True, help="A .txt / .docx / .pdf / .xlsx file."
+    ),
+    matter: str = typer.Option(..., help="Matter id."),
+    ocr: bool = typer.Option(False, "--ocr", help="OCR an image-only PDF first."),
+) -> None:
+    """List what Jude did NOT redact and does not know as public.
+
+    Every capitalised phrase and identifier-like token left in the
+    redacted text, in context, for one confirmation pass — the
+    fail-closed half of "no misses". Detected entities are recorded in
+    the matter's dictionary (as with `redact`); no file is written.
+    """
+
+    from rich.markup import escape
+
+    from .review import unverified_terms
+
+    with Store(default_db_path()) as store:
+        m = store.get_matter(matter)
+        if m is None:
+            rprint(f"[red]Unknown matter: {matter}[/red]")
+            raise typer.Exit(1)
+        text = _read_text(path, ocr=ocr)
+        pipeline = DetectionPipeline(store=store, matter_id=matter)
+        result = redact_two_pass(text, pipeline, store, matter, m.mode)
+        terms = unverified_terms(text, result.detections)
+
+    rprint(
+        f"[green]{len(result.detections)} spans redacted[/green] · "
+        f"[yellow]{len(terms)} unverified term{'s' if len(terms) != 1 else ''}[/yellow]"
+    )
+    if not terms:
+        rprint("[green]✓ Nothing left that looks like an identifier.[/green]")
+        return
+    rprint(
+        "[dim]Capitalised or identifier-like, neither redacted nor known as public. "
+        "Add what identifies a party with `jude entities` / the UI, then re-run.[/dim]"
+    )
+    for t in terms:
+        rprint(f"  [bold]{escape(t.text)}[/bold] ×{t.count}   [dim]{escape(t.context)}[/dim]")
 
 
 @app.command()

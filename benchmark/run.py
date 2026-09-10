@@ -24,7 +24,7 @@ import time
 from collections.abc import Callable
 from pathlib import Path
 
-from .evaluate import aggregate_scores, score, score_corpus
+from .evaluate import aggregate_scores, match_spans, score, score_corpus
 from .negative import over_redaction, public_mentions
 from .schema import CorpusReport, DocumentResult, GoldDocument, Score
 from .sentence_eval import (
@@ -147,6 +147,31 @@ def _attach_span_metrics(report: CorpusReport, docs: list[GoldDocument]) -> None
         "hits": hits, "total": total, "rate": (hits / total) if total else 0.0,
     }
     _attach_sentence_metrics(report, pred_flags, gold_flags)
+    _attach_review_metric(report, docs)
+
+
+def _attach_review_metric(report: CorpusReport, docs: list[GoldDocument]) -> None:
+    """How many of this runner's misses the unverified-term report
+    would put in front of the reviewer, and at what cost in items."""
+
+    from jude.review import unverified_terms
+
+    misses = surfaced = items = 0
+    for d, dr in zip(docs, report.per_doc):
+        golds = list(d.gold_spans)
+        _, gm = match_spans(list(dr.pred_spans), golds)
+        missed = [g for i, g in enumerate(golds) if i not in gm]
+        terms = unverified_terms(d.text, dr.pred_spans, lang=d.language)
+        items += len(terms)
+        occ = [(s, e) for t in terms for s, e in t.occurrences]
+        misses += len(missed)
+        surfaced += sum(1 for g in missed if any(s < g.end and e > g.start for s, e in occ))
+    report.meta["review"] = {
+        "misses": misses,
+        "misses_surfaced": surfaced,
+        "items": items,
+        "items_per_doc": (items / len(docs)) if docs else 0.0,
+    }
 
 
 def rescore(report: CorpusReport, docs: list[GoldDocument]) -> CorpusReport:
@@ -244,8 +269,8 @@ def _f(x: float | None, nd: int = 3) -> str:
 
 def _render_summary_table(reports: list[CorpusReport]) -> str:
     out = [
-        "| Runner | Precision | Recall | **F1** | F1 (any type) | Public-body over-redaction | Sentence F1 | chars/s | Peak RSS |",
-        "|---|---|---|---|---|---|---|---|---|",
+        "| Runner | Precision | Recall | **F1** | F1 (any type) | Public-body over-redaction | Misses surfaced by review | Review items / doc | Sentence F1 | chars/s | Peak RSS |",
+        "|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     for r in reports:
         m = r.meta
@@ -253,6 +278,9 @@ def _render_summary_table(reports: list[CorpusReport]) -> str:
         span_level = m.get("span_level", True)
         pb = m.get("public_body_over_redaction")
         pb_s = f"{pb['hits']}/{pb['total']} ({pb['rate']:.0%})" if pb else "—"
+        rv = m.get("review")
+        rv_s = f"{rv['misses_surfaced']}/{rv['misses']}" if rv else "—"
+        rv_items = f"{rv['items_per_doc']:.0f}" if rv else "—"
         sl = m.get("sentence_level")
         rss = m.get("peak_rss_mb")
         cps = m.get("chars_per_sec")
@@ -260,7 +288,7 @@ def _render_summary_table(reports: list[CorpusReport]) -> str:
             f"| `{r.runner_name}` | "
             + (f"{a.precision:.3f} | {a.recall:.3f} | **{a.f1:.3f}** | " if span_level else "— | — | — | ")
             + (f"{r.aggregate_any_type.f1:.3f} | " if (span_level and r.aggregate_any_type) else "— | ")
-            + f"{pb_s} | "
+            + f"{pb_s} | {rv_s} | {rv_items} | "
             + (f"{sl['f1']:.3f} | " if sl else "— | ")
             + (f"{cps:,.0f} | " if cps else "— | ")
             + (f"{rss:,.0f} MB |" if rss else "— |")

@@ -547,6 +547,8 @@ def _render_review_panel(
                 )
                 st.markdown(f"- `{pseudo}` ← **{canonical}**  _{etype}_")
 
+    _render_unverified_terms(matter, conv, pending)
+
     # Rough token estimate — character-based heuristic, accurate to
     # within ~25% for Latin-script English/French text. Lets the user
     # gauge cost before they approve.
@@ -603,6 +605,75 @@ def _render_review_panel(
             st.error(str(e))
         except Exception as e:  # noqa: BLE001
             st.error(f"Send failed: {e}")
+
+
+def _render_unverified_terms(matter: Matter, conv: Conversation, pending: dict) -> None:
+    """The fail-closed half of the review (docs/towards-recall-one.md,
+    lever 3): every capitalised phrase or identifier-like token that
+    Jude neither redacted nor knows as public, in context. Ticking a
+    term makes it an entity of the matter and re-runs redaction on
+    this turn, so the lawyer signs off on a list, not on a document."""
+
+    from ..review import unverified_terms
+    from ..types import EntityType
+
+    terms = unverified_terms(pending["raw_text"], pending.get("detections") or [])
+    if not terms:
+        st.caption(
+            "✓ No unverified terms — every capitalised or identifier-like "
+            "term is either redacted or known to be public."
+        )
+        return
+
+    label = f"⚠️ {len(terms)} unverified term{'s' if len(terms) > 1 else ''} — Jude did not decide on these"
+    with st.expander(label, expanded=True):
+        st.caption(
+            "Capitalised or identifier-like, neither redacted nor known as "
+            "public. Tick what identifies a person, a company, a place or a "
+            "matter, pick its type, then re-redact. Everything else can stay."
+        )
+        chosen: list[tuple[str, str]] = []
+        for i, t in enumerate(terms[:80]):
+            c1, c2, c3 = st.columns([2, 5, 2])
+            tick = c1.checkbox(
+                t.text if len(t.text) <= 32 else t.text[:29] + "…",
+                key=f"unv_{conv.id}_{i}",
+                help=t.text,
+            )
+            c2.caption(f"×{t.count} · {t.context}")
+            etype = c3.selectbox(
+                "type",
+                ["ORG", "PERSON", "LOC", "CASE_REF"],
+                key=f"unvt_{conv.id}_{i}",
+                label_visibility="collapsed",
+            )
+            if tick:
+                chosen.append((t.text, etype))
+        if len(terms) > 80:
+            st.caption(f"… and {len(terms) - 80} more; redact these first and re-check.")
+        if st.button(
+            "Redact selected & re-check",
+            key=f"unv_apply_{conv.id}",
+            disabled=not chosen,
+        ):
+            store = _store()
+            for surface, etype in chosen:
+                et = EntityType(etype)
+                if not store.find_entity_by_surface_or_alias(matter.id, surface, et):
+                    store.create_entity(matter.id, surface, et)
+            try:
+                prepared = prepare_turn(
+                    conversation=conv,
+                    user_text=pending["raw_text"],
+                    attachments=[],
+                    store=store,
+                    mode=matter.mode,
+                )
+            except Exception as e:  # noqa: BLE001
+                st.error(f"Re-redaction failed: {e}")
+                return
+            st.session_state[_pending_key(conv)] = prepared.model_dump()
+            st.rerun()
 
 
 def render_conversation(matter: Matter, conv: Conversation) -> None:

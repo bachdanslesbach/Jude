@@ -62,6 +62,28 @@ _LEADING_NOISE = frozenset({
     "into", "onto", "per", "see", "cf", "also", "including", "namely", "notably", "against",
     "le", "la", "les", "de", "du", "des", "et", "pour", "par", "entre", "avec", "chez",
     "de", "het", "een", "en", "voor", "door", "tussen", "met", "bij",
+    # honorifics: "Ms. Hilda Brennan of Brennan & Park LLP" starts at "Ms."
+    "mr", "mrs", "ms", "mx", "dr", "prof", "professor", "maître", "maitre", "me", "m",
+    "mme", "mlle", "dhr", "mevr", "mw", "herr", "frau", "sir", "dame", "lord", "lady",
+})
+
+_CONNECTOR_WORDS = frozenset({
+    "de", "du", "des", "d'", "la", "le", "les", "of", "and", "van", "der", "den", "en", "et",
+    "the", "y", "di", "da", "&",
+})
+
+# "of" / "de" glue a person to their firm — "Hilda Brennan of Brennan &
+# Park LLP" — unless what precedes is an institution noun: "Bank of
+# Ireland plc", "Société Générale de Belgique SA", "Banque de Luxembourg".
+_GENITIVE_CONNECTORS = frozenset({"of", "de", "du", "des", "d'"})
+_INSTITUTION_NOUNS = frozenset({
+    "bank", "banque", "banca", "banco", "caja", "société", "societe", "compagnie", "company",
+    "caisse", "groupe", "group", "institut", "institute", "université", "university",
+    "chambre", "chamber", "bureau", "office", "cabinet", "fonds", "fund", "association",
+    "fédération", "federation", "conseil", "council", "maison", "house", "centre", "center",
+    "agence", "agency", "crédit", "credit", "board", "college", "school", "academy",
+    "society", "trust", "church", "order", "port", "city", "ville", "union", "ordre",
+    "état", "etat", "state", "republic", "kingdom", "royaume", "koninkrijk",
 })
 
 
@@ -71,13 +93,13 @@ def _strip_leading_noise(phrase: str) -> str:
         tokens.pop(0)
     while tokens and tokens[0].lower() in _CONNECTOR_WORDS:
         tokens.pop(0)
+    # Cut at a genitive connector that no institution noun precedes.
+    for i, tok in enumerate(tokens):
+        if tok.lower() in _GENITIVE_CONNECTORS and not any(
+            t.lower() in _INSTITUTION_NOUNS for t in tokens[:i]
+        ):
+            return _strip_leading_noise(" ".join(tokens[i + 1:]))
     return " ".join(tokens)
-
-
-_CONNECTOR_WORDS = frozenset({
-    "de", "du", "des", "d'", "la", "le", "les", "of", "and", "van", "der", "den", "en", "et",
-    "the", "y", "di", "da", "&",
-})
 
 
 def _is_name_worthy(phrase: str, suffix: str) -> bool:
@@ -123,9 +145,11 @@ _DEFINED_TERMS = frozenset({
 
 # --- honorific + name ---------------------------------------------------------
 
+# No Sir / Dame / Lord / Lady: they name streets and public figures
+# ("16 Sir John Rogerson's Quay") more often than parties.
 _HONORIFIC = (
     r"Mr\.?|Mrs\.?|Ms\.?|Mx\.?|Dr\.?|Prof\.?|Professor|Maître|Maitre|Me\.?|M\.|Mme\.?|Mlle\.?|"
-    r"Dhr\.?|Mevr\.?|Mw\.?|Herr|Frau|Sir|Dame|Lord|Lady|Judge|Justice|Hon\.?|Rev\.?|"
+    r"Dhr\.?|Mevr\.?|Mw\.?|Herr|Frau|Judge|Justice|Hon\.?|Rev\.?|"
     r"Capt\.?|Captain|Col\.?|Gen\.?|Ing\.?|Ir\."
 )
 _NAME_TOKEN = rf"{_CAP}(?:['’]{_CAP})?[\w-]+"
@@ -152,8 +176,9 @@ _TLDS = (
     "com|net|org|eu|be|fr|nl|lu|de|ch|uk|co\\.uk|io|law|legal|info|biz|ai|it|es|pt|at|pl|se|"
     "dk|no|fi|ie|us|ca|jp|cn|in|au|sg|hk|edu|gov|int|lu|li|mc"
 )
+# A trailing full stop is the sentence's, not the domain's.
 _DOMAIN_RE = re.compile(
-    rf"(?<![\w@.\-/])((?:[a-z0-9](?:[a-z0-9-]{{0,61}}[a-z0-9])?\.)+(?:{_TLDS}))(?![\w.\-]|@)",
+    rf"(?<![\w@.\-/])((?:[a-z0-9](?:[a-z0-9-]{{0,61}}[a-z0-9])?\.)+(?:{_TLDS}))(?![\w-]|\.\w|@)",
     re.IGNORECASE,
 )
 
@@ -201,7 +226,7 @@ _EN_STREET_WORDS = (
 )
 _EN_ADDRESS_RE = re.compile(
     rf"(?<![\w-])(\d{{1,5}}[A-Z]?\s+(?:(?:Old|New|Upper|Lower|Great|Little|North|South|East|"
-    rf"West|Saint|St\.)\s+)?(?:{_CAP}[\w'’-]+\s+){{0,2}}(?:{_EN_STREET_WORDS}))"
+    rf"West|Saint|St\.)\s+)?(?:{_CAP}[\w'’-]+\s+){{0,3}}(?:{_EN_STREET_WORDS}))"
     rf"(?=[,;\n)]|\s+[A-Z]{{1,2}}\d|\.(?!\w)|$)"
 )
 

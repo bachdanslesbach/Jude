@@ -42,3 +42,4 @@ matters/
 
 # Claude Code worktrees and per-project session state — not tracked
 .claude/
+review/

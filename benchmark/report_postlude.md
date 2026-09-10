@@ -5,19 +5,19 @@ benchmark/results/*.json`; the counts are exact for this corpus.
 
 ### 1. Generic PII taxonomies have no word for half of what a legal document must hide
 
-ORG (173 spans) and CASE_REF (18) together are 191 of the 401 gold
+ORG (172 spans) and CASE_REF (18) together are 190 of the 400 gold
 spans — 48 %. `pplx-pii-masking` has no organisation label: ORG recall
-is **0.000** by construction. NVIDIA's `company_name` fires on 43 % of
+is **0.000** by construction. NVIDIA's `company_name` fires on 54 % of
 ORG spans — with perfect precision when it does — and misses the rest:
 short names (`UBS`, `BIL`, `BNP Paribas`), trading names
 (`TotalEnergies` without its `SE`), codenames (`Helios`, `Northbridge`),
 a bank named only by acronym (`BCEE`). Neither system has a notion of a
 case reference; `pplx` files 7 of the 18 under `account_number`.
 
-Seven of the twenty documents score below 0.5 for `pplx` (an eighth at
-exactly 0.500); the antitrust complaint, the regulatory submission and
-the expert-economist report — the documents densest in company names —
-are the worst (0.474, 0.323, 0.261).
+Seven of the twenty documents score below 0.5 for `pplx`; the
+antitrust complaint, the regulatory submission and the expert-economist
+report — the documents densest in company names — are the worst
+(0.474, 0.323, 0.261).
 
 ### 2. Address ≠ location
 
@@ -31,8 +31,8 @@ the seat of the only listed brewer in a small country is the brewer.
 
 NVIDIA's model labels the local part of an e-mail address as
 `first_name` / `last_name` — *sophie*, *martin*, *chen*, *hartmann* — so
-18 of 30 e-mails are lost (EMAIL recall 0.400) and 35 spurious PERSON
-spans appear. Its type-agnostic F1 (0.780 against 0.698 strict) shows
+22 of 30 e-mails are lost (EMAIL recall 0.267) and 38 spurious PERSON
+spans appear. Its type-agnostic F1 (0.812 against 0.724 strict) shows
 that a third of its gap is label confusion, not blindness. `pplx` has
 the mirror problem: five phone numbers were fused into the preceding
 e-mail span (`sophie.martin@example-law.eu, +33 1 44 55 66 77` as one
@@ -40,17 +40,15 @@ e-mail span (`sophie.martin@example-law.eu, +33 1 44 55 66 77` as one
 
 ### 4. Over-redaction of the public sphere
 
-Share of the 95 public-body mentions redacted: base GLiNER **51 %**,
-NVIDIA with Jude's labels 36 %, NVIDIA native 18 %, Jude without its
-whitelist 86 %, Jude 7 %, `pplx` 3 %. NVIDIA's native run classifies
+Share of the 117 public-body mentions redacted: base GLiNER **55 %**,
+NVIDIA with Jude's labels 41 %, NVIDIA native 22 %, Jude without its
+whitelist 81 %, Jude 3 %, `pplx` 3 %. NVIDIA's native run classifies
 *Bundeskartellamt* as an identification number three times and redacts
 *UK*, *Cayman*, *Ireland*, *Luxembourg* as countries. `pplx`'s 3 % is
 the flip side of §1–2: it barely redacts places or organisations at
-all, public or private. Jude's seven residual hits are alias-
-normalisation gaps (`Autorité de la concurrence française`, `Belgian
-SPF Finances`) and long spans that swallow a whitelisted word
-(`UNITED STATES DISTRICT COURT FOR THE DISTRICT OF DELAWARE`) — fixable,
-and on the list.
+all, public or private. Jude's three residual hits are whitelisted
+words swallowed by a longer span (*Delaware* inside `THE DISTRICT OF
+DELAWARE`, *OECD* inside a guideline title) and one US state.
 
 ### 5. The honorific-only reference
 
@@ -69,11 +67,11 @@ was trained on. Relatedly, `pplx`'s document-sensitivity head averages
 
 ### 7. PII fine-tuning transfers — and shows where the ceiling is
 
-Same checkpoint family, same labels, same threshold: NVIDIA's
-fine-tune against the base GLiNER on Jude's legal labels moves PERSON
-0.720 → 0.861, CASE_REF 0.500 → 0.714, ORG 0.608 → 0.628, and public-
-body over-redaction 51 % → 36 %. Synthetic-PII training helps on legal
-text it never saw. It also says what is missing: not architecture, but
+Same checkpoint family, same labels, same threshold, same windows:
+NVIDIA's fine-tune against the base GLiNER on Jude's legal labels moves
+PERSON 0.810 → 0.874, CASE_REF 0.560 → 0.759, ORG 0.687 → 0.703, and
+public-body over-redaction 55 % → 41 %. Synthetic-PII training helps on
+legal text it never saw. It also says what is missing: not architecture, but
 *legal* training data and a label set with parties and public bodies
 as first-class, opposite categories.
 
@@ -82,29 +80,45 @@ as first-class, opposite categories.
 All three external models run at 2.3–2.9 k chars/s on an M2 laptop
 (MPS): a twenty-page brief in about twenty seconds. `pplx` is the
 lightest to deploy (749 MB resident, bf16, MIT). Jude's shipped stack
-is five times slower (464 chars/s: transformer spaCy and GLiNER on CPU,
-two passes) and nothing in it has been optimised yet. None of this is
+is six times slower (426 chars/s: transformer spaCy and GLiNER on CPU,
+two passes, windowed) and nothing in it has been optimised yet. None of this is
 the bottleneck — a lawyer's review of the redaction is.
 
 ## What Jude takes from this
 
 * **GLiNER truncates at 384 word-tokens** (`predict_entities`,
-  `truncation=True`), found while writing the runners. Jude's own
-  detector needs the chunking the benchmark runner has. Two of the
+  `truncation=True`), found while writing the runners. Two of the
   corpus documents are near the limit; a real pleading is far past it.
-* **Whitelist matching**: strip demonym prefixes and adjectival
-  suffixes before alias lookup; add courts, prosecutors and statistical
-  agencies (`Commercial Court of London`, `Department of Justice`,
-  `Parquet National Financier`, `Eurostat`). Worth ~7 false positives.
-* **Annotation policy on codenames** (`Helios` ×6 is Jude's largest
-  residual miss, and it is deliberate — `helios` sits in the
+  Fixed in v0.7.9: Jude's detector now windows the text on paragraph
+  boundaries (`jude.detect.chunking`), the same code the GLiNER runners
+  above use.
+* **The GLiNER layer had no shape filter.** Chunking exposed it: on a
+  short window GLiNER labels `the Firm`, `our client`, `Counsel for the
+  Claimant` as organisations, and nothing dropped them. v0.7.9 runs
+  GLiNER's PERSON / ORG / LOC output through the same normaliser as
+  the spaCy layer, balances the windows, and extends the stop-list
+  (litigation roles, defined terms, demonyms). Precision 0.892 → 0.922.
+* **Whitelist matching** (v0.7.9): nationality adjectives stripped
+  before alias lookup (`Belgian SPF Finances`, `Autorité de la
+  concurrence française`); courts, prosecutors, statistical agencies
+  and US/EU jurisdictions added (`Commercial Court of London`,
+  `Department of Justice`, `Parquet National Financier`, `Eurostat`,
+  `United States`, `France` …). Public-body over-redaction 7 % → 3 %.
+* **A month is not a first name.** The shape filter rejected any span
+  containing a month token — including *Jan Peeters*, since `jan` is
+  January. Found because the filter now also applies to GLiNER; fixed.
+* **Annotation policy on codenames** (`Helios` ×6 is half of Jude's
+  remaining misses, and it is deliberate — `helios` sits in the
   header-stopword list). Deal codenames are confidential and should
   probably be redacted; that is a policy call, not a bug.
-* **`nvidia/gliner-PII` as an opt-in detector**: +0.05 F1 over the base
+* **`nvidia/gliner-PII` as an opt-in detector**: +0.03 F1 over the base
   checkpoint on Jude's labels in isolation. Its licence (NVIDIA Open
   Model License) is not MIT-compatible for redistribution but fine as a
   runtime download. Needs an in-pipeline ablation before it earns a
   flag.
+
+Where the remaining misses are and what closes them:
+[Towards zero misses](towards-recall-one.html).
 
 ## What a legal-anonymisation model would need
 
@@ -133,8 +147,9 @@ For anyone minded to train one:
 
 ## Limitations of this benchmark
 
-* Twenty synthetic documents, 401 spans, one annotation policy, two
-  non-English documents. The numbers are indicative; the *ranking* is
+* Twenty synthetic documents, 400 spans, one annotation policy, two
+  non-English documents, not yet reviewed by a lawyer (the Word
+  protocol exists for that). The numbers are indicative; the *ranking* is
   robust — the gaps are 20 to 40 points, not 2.
 * Where a mapping choice was ambiguous it was made in the external
   model's favour: dates and demographic labels are dropped rather than

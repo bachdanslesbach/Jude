@@ -42,13 +42,16 @@ Model revisions are pinned in the runner sources and listed under
 ## Protocol
 
 * **Corpus.** The 20 gold-annotated documents in `benchmark/corpus/`
-  (401 spans): term sheets, credit facilities, witness statements,
+  (400 spans): term sheets, credit facilities, witness statements,
   regulatory submissions, sanctions memos, engagement letters, patent
   and antitrust pleadings, insolvency updates — 18 in English, one
   French, one Dutch. All synthetic: professional secrecy rules out
   real files. Annotation policy: redact anything that identifies a
   party, adviser, witness or matter; leave public institutions,
-  statutes, courts and jurisdictions in place.
+  statutes, courts and jurisdictions in place. New documents are
+  annotated in Word with one highlight colour per type
+  ([protocol](annotation-protocol.html)); Jude pre-highlights, the
+  reviewer corrects.
 * **Matching.** Lenient overlap (≥ 1 character), one-to-one, largest
   overlap first. *Type-strict* requires the predicted type to equal
   the gold type after mapping the system's labels onto Jude's schema;
@@ -60,9 +63,9 @@ Model revisions are pinned in the runner sources and listed under
   dropped and counted, not scored as false positives. NVIDIA's
   `first_name` / `last_name` predictions are merged when adjacent.
 * **Public-body over-redaction.** Occurrences in the corpus of the
-  190 whitelisted institutions, statutes and jurisdictions (with their
+  213 whitelisted institutions, statutes and jurisdictions (with their
   aliases, ignoring demonyms and legal-form suffixes) that no gold span
-  covers: 95 mentions. The column reports how many of them each system
+  covers: 117 mentions. The column reports how many of them each system
   redacted.
 * **Sentence level.** Every document split into sentences; a sentence
   is positive iff it overlaps a gold span; a system flags it iff it

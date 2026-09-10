@@ -2,36 +2,36 @@
  {
   "runner_name": "jude-full",
   "aggregate": {
-   "precision": 0.8917050691244239,
-   "recall": 0.9650872817955112,
-   "f1": 0.9269461077844311,
-   "tp": 387,
-   "fp": 47,
-   "fn": 14,
+   "precision": 0.9216152019002375,
+   "recall": 0.97,
+   "f1": 0.9451887941534713,
+   "tp": 388,
+   "fp": 33,
+   "fn": 12,
    "by_type": {
     "ORG": {
-     "precision": 0.8586387434554974,
-     "recall": 0.9479768786127167,
-     "f1": 0.9010989010989011,
+     "precision": 0.8913043478260869,
+     "recall": 0.9534883720930233,
+     "f1": 0.9213483146067417,
      "tp": 164,
-     "fp": 27,
-     "fn": 9
+     "fp": 20,
+     "fn": 8
     },
     "LOC": {
-     "precision": 0.8307692307692308,
+     "precision": 0.8852459016393442,
      "recall": 0.9642857142857143,
-     "f1": 0.8925619834710744,
+     "f1": 0.923076923076923,
      "tp": 54,
-     "fp": 11,
+     "fp": 7,
      "fn": 2
     },
     "PERSON": {
-     "precision": 0.925531914893617,
-     "recall": 0.9775280898876404,
-     "f1": 0.9508196721311475,
-     "tp": 87,
-     "fp": 7,
-     "fn": 2
+     "precision": 0.9565217391304348,
+     "recall": 0.9887640449438202,
+     "f1": 0.9723756906077348,
+     "tp": 88,
+     "fp": 4,
+     "fn": 1
     },
     "EMAIL": {
      "precision": 1.0,
@@ -76,36 +76,36 @@
    }
   },
   "aggregate_any_type": {
-   "precision": 0.8963133640552995,
-   "recall": 0.970074812967581,
-   "f1": 0.9317365269461078,
-   "tp": 389,
-   "fp": 45,
-   "fn": 12,
+   "precision": 0.9263657957244655,
+   "recall": 0.975,
+   "f1": 0.9500609013398293,
+   "tp": 390,
+   "fp": 31,
+   "fn": 10,
    "by_type": {
     "ORG": {
-     "precision": 0.8677248677248677,
-     "recall": 0.9479768786127167,
-     "f1": 0.9060773480662984,
+     "precision": 0.9010989010989011,
+     "recall": 0.9534883720930233,
+     "f1": 0.9265536723163842,
      "tp": 164,
-     "fp": 25,
-     "fn": 9
+     "fp": 18,
+     "fn": 8
     },
     "LOC": {
-     "precision": 0.8333333333333334,
+     "precision": 0.8870967741935484,
      "recall": 0.9821428571428571,
-     "f1": 0.9016393442622951,
+     "f1": 0.9322033898305085,
      "tp": 55,
-     "fp": 11,
+     "fp": 7,
      "fn": 1
     },
     "PERSON": {
-     "precision": 0.9263157894736842,
-     "recall": 0.9887640449438202,
-     "f1": 0.9565217391304348,
-     "tp": 88,
-     "fp": 7,
-     "fn": 1
+     "precision": 0.956989247311828,
+     "recall": 1.0,
+     "f1": 0.978021978021978,
+     "tp": 89,
+     "fp": 4,
+     "fn": 0
     },
     "EMAIL": {
      "precision": 1.0,
@@ -152,24 +152,24 @@
   "meta": {
    "span_level": true,
    "public_body_over_redaction": {
-    "hits": 7,
-    "total": 95,
-    "rate": 0.07368421052631578
+    "hits": 3,
+    "total": 117,
+    "rate": 0.02564102564102564
    },
    "sentence_level": {
-    "precision": 0.8615384615384616,
-    "recall": 0.9491525423728814,
-    "f1": 0.903225806451613,
-    "tp": 224,
-    "fp": 36,
-    "fn": 12,
+    "precision": 0.8928571428571429,
+    "recall": 0.9533898305084746,
+    "f1": 0.9221311475409837,
+    "tp": 225,
+    "fp": 27,
+    "fn": 11,
     "n_sentences": 519
    },
    "n_docs": 20,
-   "load_seconds": 0.0006273330000112765,
-   "seconds": 65.07108549999975,
-   "chars_per_sec": 463.7082625584925,
-   "peak_rss_mb": 3428.375,
+   "load_seconds": 0.0019681670019053854,
+   "seconds": 70.7779180419966,
+   "chars_per_sec": 426.31940631675593,
+   "peak_rss_mb": 3422.734375,
    "device": "cpu"
   },
   "per_doc": [
@@ -618,19 +618,19 @@
    {
     "doc_id": "doc_003_solaris_jv_fr",
     "score": {
-     "precision": 0.8260869565217391,
+     "precision": 0.8636363636363636,
      "recall": 1.0,
-     "f1": 0.9047619047619047,
+     "f1": 0.9268292682926829,
      "tp": 19,
-     "fp": 4,
+     "fp": 3,
      "fn": 0,
      "by_type": {
       "ORG": {
-       "precision": 0.875,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.9333333333333333,
+       "f1": 1.0,
        "tp": 7,
-       "fp": 1,
+       "fp": 0,
        "fn": 0
       },
       "LOC": {
@@ -676,19 +676,19 @@
      }
     },
     "score_any_type": {
-     "precision": 0.8260869565217391,
+     "precision": 0.8636363636363636,
      "recall": 1.0,
-     "f1": 0.9047619047619047,
+     "f1": 0.9268292682926829,
      "tp": 19,
-     "fp": 4,
+     "fp": 3,
      "fn": 0,
      "by_type": {
       "ORG": {
-       "precision": 0.875,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.9333333333333333,
+       "f1": 1.0,
        "tp": 7,
-       "fp": 1,
+       "fp": 0,
        "fn": 0
       },
       "LOC": {
@@ -817,12 +817,6 @@
       "end": 513,
       "type": "LOC",
       "text": "Casablanca"
-     },
-     {
-      "start": 518,
-      "end": 554,
-      "type": "ORG",
-      "text": "Autorité de la concurrence française"
      },
      {
       "start": 792,
@@ -1521,12 +1515,20 @@
      "fp": 2,
      "fn": 6,
      "by_type": {
-      "ORG": {
-       "precision": 0.9090909090909091,
-       "recall": 0.625,
-       "f1": 0.7407407407407406,
-       "tp": 10,
+      "LOC": {
+       "precision": 0.75,
+       "recall": 1.0,
+       "f1": 0.8571428571428571,
+       "tp": 3,
        "fp": 1,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 1.0,
+       "recall": 0.625,
+       "f1": 0.7692307692307693,
+       "tp": 10,
+       "fp": 0,
        "fn": 6
       },
       "CASE_REF": {
@@ -1535,14 +1537,6 @@
        "f1": 0.8,
        "tp": 2,
        "fp": 1,
-       "fn": 0
-      },
-      "LOC": {
-       "precision": 1.0,
-       "recall": 1.0,
-       "f1": 1.0,
-       "tp": 3,
-       "fp": 0,
        "fn": 0
       },
       "PERSON": {
@@ -1579,12 +1573,20 @@
      "fp": 2,
      "fn": 6,
      "by_type": {
-      "ORG": {
-       "precision": 0.9090909090909091,
-       "recall": 0.625,
-       "f1": 0.7407407407407406,
-       "tp": 10,
+      "LOC": {
+       "precision": 0.75,
+       "recall": 1.0,
+       "f1": 0.8571428571428571,
+       "tp": 3,
        "fp": 1,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 1.0,
+       "recall": 0.625,
+       "f1": 0.7692307692307693,
+       "tp": 10,
+       "fp": 0,
        "fn": 6
       },
       "CASE_REF": {
@@ -1593,14 +1595,6 @@
        "f1": 0.8,
        "tp": 2,
        "fp": 1,
-       "fn": 0
-      },
-      "LOC": {
-       "precision": 1.0,
-       "recall": 1.0,
-       "f1": 1.0,
-       "tp": 3,
-       "fp": 0,
        "fn": 0
       },
       "PERSON": {
@@ -1631,22 +1625,22 @@
     },
     "pred_spans": [
      {
-      "start": 7,
+      "start": 40,
       "end": 64,
-      "type": "ORG",
-      "text": "UNITED STATES DISTRICT COURT FOR THE DISTRICT OF DELAWARE"
+      "type": "LOC",
+      "text": "THE DISTRICT OF DELAWARE"
      },
      {
       "start": 66,
-      "end": 87,
+      "end": 86,
       "type": "ORG",
-      "text": "Helios Photonics Inc."
+      "text": "Helios Photonics Inc"
      },
      {
       "start": 103,
-      "end": 130,
+      "end": 129,
       "type": "ORG",
-      "text": "Lumen Optical Systems Corp."
+      "text": "Lumen Optical Systems Corp"
      },
      {
       "start": 161,
@@ -1656,9 +1650,9 @@
      },
      {
       "start": 249,
-      "end": 270,
+      "end": 269,
       "type": "ORG",
-      "text": "Helios Photonics Inc."
+      "text": "Helios Photonics Inc"
      },
      {
       "start": 346,
@@ -1674,9 +1668,9 @@
      },
      {
       "start": 424,
-      "end": 451,
+      "end": 450,
       "type": "ORG",
-      "text": "Lumen Optical Systems Corp."
+      "text": "Lumen Optical Systems Corp"
      },
      {
       "start": 454,
@@ -1791,11 +1785,11 @@
    {
     "doc_id": "doc_008_regulatory_submission_en",
     "score": {
-     "precision": 0.8928571428571429,
+     "precision": 0.9615384615384616,
      "recall": 0.9615384615384616,
-     "f1": 0.9259259259259259,
+     "f1": 0.9615384615384616,
      "tp": 25,
-     "fp": 3,
+     "fp": 1,
      "fn": 1,
      "by_type": {
       "CASE_REF": {
@@ -1815,11 +1809,11 @@
        "fn": 0
       },
       "PERSON": {
-       "precision": 0.5,
+       "precision": 1.0,
        "recall": 0.6666666666666666,
-       "f1": 0.5714285714285715,
+       "f1": 0.8,
        "tp": 2,
-       "fp": 2,
+       "fp": 0,
        "fn": 1
       },
       "EMAIL": {
@@ -1857,11 +1851,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.9285714285714286,
+     "precision": 1.0,
      "recall": 1.0,
-     "f1": 0.962962962962963,
+     "f1": 1.0,
      "tp": 26,
-     "fp": 2,
+     "fp": 0,
      "fn": 0,
      "by_type": {
       "CASE_REF": {
@@ -1881,11 +1875,11 @@
        "fn": 0
       },
       "PERSON": {
-       "precision": 0.6,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.7499999999999999,
+       "f1": 1.0,
        "tp": 3,
-       "fp": 2,
+       "fp": 0,
        "fn": 0
       },
       "EMAIL": {
@@ -2032,10 +2026,10 @@
       "text": "MeridianFM+"
      },
      {
-      "start": 773,
+      "start": 777,
       "end": 791,
       "type": "PERSON",
-      "text": "Ms. Renate Hofmann"
+      "text": "Renate Hofmann"
      },
      {
       "start": 914,
@@ -2066,18 +2060,6 @@
       "end": 1145,
       "type": "ORG",
       "text": "Polaris"
-     },
-     {
-      "start": 1465,
-      "end": 1471,
-      "type": "PERSON",
-      "text": "Escrow"
-     },
-     {
-      "start": 1492,
-      "end": 1498,
-      "type": "PERSON",
-      "text": "escrow"
      },
      {
       "start": 1510,
@@ -2373,11 +2355,11 @@
    {
     "doc_id": "doc_010_expert_economist_en",
     "score": {
-     "precision": 0.8571428571428571,
+     "precision": 0.9473684210526315,
      "recall": 1.0,
-     "f1": 0.923076923076923,
+     "f1": 0.972972972972973,
      "tp": 18,
-     "fp": 3,
+     "fp": 1,
      "fn": 0,
      "by_type": {
       "PERSON": {
@@ -2397,11 +2379,11 @@
        "fn": 0
       },
       "ORG": {
-       "precision": 0.8666666666666667,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.9285714285714286,
+       "f1": 1.0,
        "tp": 13,
-       "fp": 2,
+       "fp": 0,
        "fn": 0
       },
       "EMAIL": {
@@ -2423,11 +2405,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.8571428571428571,
+     "precision": 0.9473684210526315,
      "recall": 1.0,
-     "f1": 0.923076923076923,
+     "f1": 0.972972972972973,
      "tp": 18,
-     "fp": 3,
+     "fp": 1,
      "fn": 0,
      "by_type": {
       "PERSON": {
@@ -2447,11 +2429,11 @@
        "fn": 0
       },
       "ORG": {
-       "precision": 0.8666666666666667,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.9285714285714286,
+       "f1": 1.0,
        "tp": 13,
-       "fp": 2,
+       "fp": 0,
        "fn": 0
       },
       "EMAIL": {
@@ -2516,10 +2498,10 @@
       "text": "Brightline"
      },
      {
-      "start": 527,
+      "start": 531,
       "end": 542,
       "type": "PERSON",
-      "text": "Ms. Yuki Tanaka"
+      "text": "Yuki Tanaka"
      },
      {
       "start": 546,
@@ -2558,18 +2540,6 @@
       "text": "Verdant"
      },
      {
-      "start": 1032,
-      "end": 1040,
-      "type": "ORG",
-      "text": "Eurostat"
-     },
-     {
-      "start": 1095,
-      "end": 1105,
-      "type": "ORG",
-      "text": "IHS Markit"
-     },
-     {
       "start": 1274,
       "end": 1284,
       "type": "ORG",
@@ -2604,11 +2574,11 @@
    {
     "doc_id": "doc_011_sanctions_memo_en",
     "score": {
-     "precision": 0.9473684210526315,
+     "precision": 1.0,
      "recall": 1.0,
-     "f1": 0.972972972972973,
+     "f1": 1.0,
      "tp": 18,
-     "fp": 1,
+     "fp": 0,
      "fn": 0,
      "by_type": {
       "ORG": {
@@ -2620,11 +2590,11 @@
        "fn": 0
       },
       "PERSON": {
-       "precision": 0.8,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.888888888888889,
+       "f1": 1.0,
        "tp": 4,
-       "fp": 1,
+       "fp": 0,
        "fn": 0
       },
       "CASE_REF": {
@@ -2670,11 +2640,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.9473684210526315,
+     "precision": 1.0,
      "recall": 1.0,
-     "f1": 0.972972972972973,
+     "f1": 1.0,
      "tp": 18,
-     "fp": 1,
+     "fp": 0,
      "fn": 0,
      "by_type": {
       "ORG": {
@@ -2686,11 +2656,11 @@
        "fn": 0
       },
       "PERSON": {
-       "precision": 0.8,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.888888888888889,
+       "f1": 1.0,
        "tp": 4,
-       "fp": 1,
+       "fp": 0,
        "fn": 0
       },
       "CASE_REF": {
@@ -2741,12 +2711,6 @@
       "end": 100,
       "type": "ORG",
       "text": "Severnaya Logistika OOO"
-     },
-     {
-      "start": 106,
-      "end": 121,
-      "type": "PERSON",
-      "text": "General Counsel"
      },
      {
       "start": 123,
@@ -2855,27 +2819,27 @@
    {
     "doc_id": "doc_012_engagement_letter_en",
     "score": {
-     "precision": 0.8,
-     "recall": 0.9523809523809523,
-     "f1": 0.8695652173913043,
+     "precision": 0.9523809523809523,
+     "recall": 1.0,
+     "f1": 0.975609756097561,
      "tp": 20,
-     "fp": 5,
-     "fn": 1,
+     "fp": 1,
+     "fn": 0,
      "by_type": {
       "ORG": {
        "precision": 0.875,
-       "recall": 0.875,
-       "f1": 0.875,
+       "recall": 1.0,
+       "f1": 0.9333333333333333,
        "tp": 7,
        "fp": 1,
-       "fn": 1
+       "fn": 0
       },
       "LOC": {
-       "precision": 0.5555555555555556,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.7142857142857143,
+       "f1": 1.0,
        "tp": 5,
-       "fp": 4,
+       "fp": 0,
        "fn": 0
       },
       "CASE_REF": {
@@ -2921,27 +2885,27 @@
      }
     },
     "score_any_type": {
-     "precision": 0.8,
-     "recall": 0.9523809523809523,
-     "f1": 0.8695652173913043,
+     "precision": 0.9523809523809523,
+     "recall": 1.0,
+     "f1": 0.975609756097561,
      "tp": 20,
-     "fp": 5,
-     "fn": 1,
+     "fp": 1,
+     "fn": 0,
      "by_type": {
       "ORG": {
        "precision": 0.875,
-       "recall": 0.875,
-       "f1": 0.875,
+       "recall": 1.0,
+       "f1": 0.9333333333333333,
        "tp": 7,
        "fp": 1,
-       "fn": 1
+       "fn": 0
       },
       "LOC": {
-       "precision": 0.5555555555555556,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.7142857142857143,
+       "f1": 1.0,
        "tp": 5,
-       "fp": 4,
+       "fp": 0,
        "fn": 0
       },
       "CASE_REF": {
@@ -3048,34 +3012,10 @@
       "text": "Oslo"
      },
      {
-      "start": 498,
-      "end": 504,
-      "type": "LOC",
-      "text": "France"
-     },
-     {
-      "start": 506,
-      "end": 513,
-      "type": "LOC",
-      "text": "Germany"
-     },
-     {
-      "start": 518,
-      "end": 523,
-      "type": "LOC",
-      "text": "Italy"
-     },
-     {
-      "start": 570,
-      "end": 576,
-      "type": "LOC",
-      "text": "Norway"
-     },
-     {
-      "start": 631,
+      "start": 624,
       "end": 649,
       "type": "PERSON",
-      "text": "Charlotte Beaumont"
+      "text": "Maître Charlotte Beaumont"
      },
      {
       "start": 651,
@@ -3142,11 +3082,11 @@
    {
     "doc_id": "doc_013_settlement_offer_en",
     "score": {
-     "precision": 0.8695652173913043,
+     "precision": 0.9090909090909091,
      "recall": 0.9523809523809523,
-     "f1": 0.909090909090909,
+     "f1": 0.9302325581395349,
      "tp": 20,
-     "fp": 3,
+     "fp": 2,
      "fn": 1,
      "by_type": {
       "PERSON": {
@@ -3158,11 +3098,11 @@
        "fn": 0
       },
       "ORG": {
-       "precision": 0.9090909090909091,
+       "precision": 1.0,
        "recall": 0.9090909090909091,
-       "f1": 0.9090909090909091,
+       "f1": 0.9523809523809523,
        "tp": 10,
-       "fp": 1,
+       "fp": 0,
        "fn": 1
       },
       "LOC": {
@@ -3208,11 +3148,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.8695652173913043,
+     "precision": 0.9090909090909091,
      "recall": 0.9523809523809523,
-     "f1": 0.909090909090909,
+     "f1": 0.9302325581395349,
      "tp": 20,
-     "fp": 3,
+     "fp": 2,
      "fn": 1,
      "by_type": {
       "PERSON": {
@@ -3224,11 +3164,11 @@
        "fn": 0
       },
       "ORG": {
-       "precision": 0.9090909090909091,
+       "precision": 1.0,
        "recall": 0.9090909090909091,
-       "f1": 0.9090909090909091,
+       "f1": 0.9523809523809523,
        "tp": 10,
-       "fp": 1,
+       "fp": 0,
        "fn": 1
       },
       "LOC": {
@@ -3300,9 +3240,9 @@
      },
      {
       "start": 168,
-      "end": 198,
+      "end": 197,
       "type": "ORG",
-      "text": "Crestwood Marine Insurance Co."
+      "text": "Crestwood Marine Insurance Co"
      },
      {
       "start": 201,
@@ -3330,9 +3270,9 @@
      },
      {
       "start": 529,
-      "end": 559,
+      "end": 558,
       "type": "ORG",
-      "text": "Crestwood Marine Insurance Co."
+      "text": "Crestwood Marine Insurance Co"
      },
      {
       "start": 672,
@@ -3389,12 +3329,6 @@
       "text": "WP-CREST-TLW-2026"
      },
      {
-      "start": 1330,
-      "end": 1356,
-      "type": "ORG",
-      "text": "Commercial Court of London"
-     },
-     {
       "start": 1430,
       "end": 1445,
       "type": "PERSON",
@@ -3417,11 +3351,11 @@
    {
     "doc_id": "doc_014_compliance_investigation_en",
     "score": {
-     "precision": 0.8333333333333334,
+     "precision": 0.9523809523809523,
      "recall": 1.0,
-     "f1": 0.9090909090909091,
+     "f1": 0.975609756097561,
      "tp": 20,
-     "fp": 4,
+     "fp": 1,
      "fn": 0,
      "by_type": {
       "CASE_REF": {
@@ -3441,19 +3375,19 @@
        "fn": 0
       },
       "ORG": {
-       "precision": 0.6666666666666666,
+       "precision": 0.8571428571428571,
        "recall": 1.0,
-       "f1": 0.8,
+       "f1": 0.923076923076923,
        "tp": 6,
-       "fp": 3,
+       "fp": 1,
        "fn": 0
       },
       "LOC": {
-       "precision": 0.8,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.888888888888889,
+       "f1": 1.0,
        "tp": 4,
-       "fp": 1,
+       "fp": 0,
        "fn": 0
       },
       "IBAN": {
@@ -3483,11 +3417,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.8333333333333334,
+     "precision": 0.9523809523809523,
      "recall": 1.0,
-     "f1": 0.9090909090909091,
+     "f1": 0.975609756097561,
      "tp": 20,
-     "fp": 4,
+     "fp": 1,
      "fn": 0,
      "by_type": {
       "CASE_REF": {
@@ -3507,19 +3441,19 @@
        "fn": 0
       },
       "ORG": {
-       "precision": 0.6666666666666666,
+       "precision": 0.8571428571428571,
        "recall": 1.0,
-       "f1": 0.8,
+       "f1": 0.923076923076923,
        "tp": 6,
-       "fp": 3,
+       "fp": 1,
        "fn": 0
       },
       "LOC": {
-       "precision": 0.8,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.888888888888889,
+       "f1": 1.0,
        "tp": 4,
-       "fp": 1,
+       "fp": 0,
        "fn": 0
       },
       "IBAN": {
@@ -3656,24 +3590,6 @@
       "end": 1444,
       "type": "IBAN",
       "text": "MA64 0123 4567 8901 2345 6789 01"
-     },
-     {
-      "start": 1616,
-      "end": 1620,
-      "type": "LOC",
-      "text": "U.S."
-     },
-     {
-      "start": 1621,
-      "end": 1642,
-      "type": "ORG",
-      "text": "Department of Justice"
-     },
-     {
-      "start": 1706,
-      "end": 1732,
-      "type": "ORG",
-      "text": "Parquet National Financier"
      },
      {
       "start": 1769,
@@ -3987,28 +3903,28 @@
    {
     "doc_id": "doc_016_tax_memo_en",
     "score": {
-     "precision": 0.875,
-     "recall": 0.9130434782608695,
-     "f1": 0.8936170212765957,
-     "tp": 21,
-     "fp": 3,
-     "fn": 2,
+     "precision": 0.8148148148148148,
+     "recall": 0.9565217391304348,
+     "f1": 0.8800000000000001,
+     "tp": 22,
+     "fp": 5,
+     "fn": 1,
      "by_type": {
       "ORG": {
-       "precision": 0.8125,
+       "precision": 0.7222222222222222,
        "recall": 0.9285714285714286,
-       "f1": 0.8666666666666666,
+       "f1": 0.8125000000000001,
        "tp": 13,
-       "fp": 3,
+       "fp": 5,
        "fn": 1
       },
       "PERSON": {
        "precision": 1.0,
-       "recall": 0.6666666666666666,
-       "f1": 0.8,
-       "tp": 2,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
        "fp": 0,
-       "fn": 1
+       "fn": 0
       },
       "CASE_REF": {
        "precision": 1.0,
@@ -4053,28 +3969,28 @@
      }
     },
     "score_any_type": {
-     "precision": 0.875,
-     "recall": 0.9130434782608695,
-     "f1": 0.8936170212765957,
-     "tp": 21,
-     "fp": 3,
-     "fn": 2,
+     "precision": 0.8148148148148148,
+     "recall": 0.9565217391304348,
+     "f1": 0.8800000000000001,
+     "tp": 22,
+     "fp": 5,
+     "fn": 1,
      "by_type": {
       "ORG": {
-       "precision": 0.8125,
+       "precision": 0.7222222222222222,
        "recall": 0.9285714285714286,
-       "f1": 0.8666666666666666,
+       "f1": 0.8125000000000001,
        "tp": 13,
-       "fp": 3,
+       "fp": 5,
        "fn": 1
       },
       "PERSON": {
        "precision": 1.0,
-       "recall": 0.6666666666666666,
-       "f1": 0.8,
-       "tp": 2,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
        "fp": 0,
-       "fn": 1
+       "fn": 0
       },
       "CASE_REF": {
        "precision": 1.0,
@@ -4163,9 +4079,15 @@
      },
      {
       "start": 376,
-      "end": 394,
+      "end": 393,
       "type": "ORG",
-      "text": "Helix Biotech Inc."
+      "text": "Helix Biotech Inc"
+     },
+     {
+      "start": 442,
+      "end": 454,
+      "type": "ORG",
+      "text": "Swiss parent"
      },
      {
       "start": 530,
@@ -4186,6 +4108,12 @@
       "text": "Helix GP Sarl"
      },
      {
+      "start": 787,
+      "end": 799,
+      "type": "ORG",
+      "text": "Swiss parent"
+     },
+     {
       "start": 803,
       "end": 806,
       "type": "LOC",
@@ -4199,21 +4127,21 @@
      },
      {
       "start": 901,
-      "end": 919,
+      "end": 918,
       "type": "ORG",
-      "text": "Helix Biotech Inc."
+      "text": "Helix Biotech Inc"
      },
      {
       "start": 921,
-      "end": 930,
+      "end": 945,
       "type": "LOC",
-      "text": "Cambridge"
+      "text": "Cambridge, Massachusetts"
      },
      {
       "start": 966,
-      "end": 984,
+      "end": 983,
       "type": "ORG",
-      "text": "Helix Biotech Inc."
+      "text": "Helix Biotech Inc"
      },
      {
       "start": 987,
@@ -4258,6 +4186,12 @@
       "text": "+41 44 555 6677"
      },
      {
+      "start": 1653,
+      "end": 1667,
+      "type": "PERSON",
+      "text": "Akira Watanabe"
+     },
+     {
       "start": 1668,
       "end": 1705,
       "type": "EMAIL",
@@ -4268,27 +4202,27 @@
    {
     "doc_id": "doc_017_data_breach_notification_en",
     "score": {
-     "precision": 0.9375,
+     "precision": 0.8333333333333334,
      "recall": 1.0,
-     "f1": 0.967741935483871,
+     "f1": 0.9090909090909091,
      "tp": 15,
-     "fp": 1,
+     "fp": 3,
      "fn": 0,
      "by_type": {
       "ORG": {
-       "precision": 0.8,
+       "precision": 0.6666666666666666,
        "recall": 1.0,
-       "f1": 0.888888888888889,
+       "f1": 0.8,
        "tp": 4,
-       "fp": 1,
+       "fp": 2,
        "fn": 0
       },
       "LOC": {
-       "precision": 1.0,
+       "precision": 0.75,
        "recall": 1.0,
-       "f1": 1.0,
+       "f1": 0.8571428571428571,
        "tp": 3,
-       "fp": 0,
+       "fp": 1,
        "fn": 0
       },
       "PERSON": {
@@ -4326,27 +4260,27 @@
      }
     },
     "score_any_type": {
-     "precision": 0.9375,
+     "precision": 0.8333333333333334,
      "recall": 1.0,
-     "f1": 0.967741935483871,
+     "f1": 0.9090909090909091,
      "tp": 15,
-     "fp": 1,
+     "fp": 3,
      "fn": 0,
      "by_type": {
       "ORG": {
-       "precision": 0.8,
+       "precision": 0.6666666666666666,
        "recall": 1.0,
-       "f1": 0.888888888888889,
+       "f1": 0.8,
        "tp": 4,
-       "fp": 1,
+       "fp": 2,
        "fn": 0
       },
       "LOC": {
-       "precision": 1.0,
+       "precision": 0.75,
        "recall": 1.0,
-       "f1": 1.0,
+       "f1": 0.8571428571428571,
        "tp": 3,
-       "fp": 0,
+       "fp": 1,
        "fn": 0
       },
       "PERSON": {
@@ -4445,16 +4379,28 @@
       "text": "Voskamp ICT BV"
      },
      {
+      "start": 909,
+      "end": 940,
+      "type": "ORG",
+      "text": "retail life-insurance customers"
+     },
+     {
+      "start": 980,
+      "end": 994,
+      "type": "LOC",
+      "text": "postal address"
+     },
+     {
       "start": 1420,
       "end": 1436,
       "type": "PERSON",
       "text": "Jasmijn Beekhuis"
      },
      {
-      "start": 1477,
-      "end": 1517,
+      "start": 1442,
+      "end": 1471,
       "type": "ORG",
-      "text": "Autorité de protection des données (APD)"
+      "text": "Belgian counterpart authority"
      },
      {
       "start": 1685,
@@ -4485,11 +4431,11 @@
    {
     "doc_id": "doc_018_cease_and_desist_en",
     "score": {
-     "precision": 0.7272727272727273,
+     "precision": 0.8,
      "recall": 0.9411764705882353,
-     "f1": 0.8205128205128205,
+     "f1": 0.8648648648648648,
      "tp": 16,
-     "fp": 6,
+     "fp": 4,
      "fn": 1,
      "by_type": {
       "PERSON": {
@@ -4501,11 +4447,11 @@
        "fn": 0
       },
       "ORG": {
-       "precision": 0.5833333333333334,
+       "precision": 0.6363636363636364,
        "recall": 1.0,
-       "f1": 0.7368421052631579,
+       "f1": 0.7777777777777778,
        "tp": 7,
-       "fp": 5,
+       "fp": 4,
        "fn": 0
       },
       "EMAIL": {
@@ -4525,11 +4471,11 @@
        "fn": 0
       },
       "LOC": {
-       "precision": 0.8,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.888888888888889,
+       "f1": 1.0,
        "tp": 4,
-       "fp": 1,
+       "fp": 0,
        "fn": 0
       },
       "CASE_REF": {
@@ -4551,11 +4497,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.7272727272727273,
+     "precision": 0.8,
      "recall": 0.9411764705882353,
-     "f1": 0.8205128205128205,
+     "f1": 0.8648648648648648,
      "tp": 16,
-     "fp": 6,
+     "fp": 4,
      "fn": 1,
      "by_type": {
       "PERSON": {
@@ -4567,11 +4513,11 @@
        "fn": 0
       },
       "ORG": {
-       "precision": 0.5833333333333334,
+       "precision": 0.6363636363636364,
        "recall": 1.0,
-       "f1": 0.7368421052631579,
+       "f1": 0.7777777777777778,
        "tp": 7,
-       "fp": 5,
+       "fp": 4,
        "fn": 0
       },
       "EMAIL": {
@@ -4591,11 +4537,11 @@
        "fn": 0
       },
       "LOC": {
-       "precision": 0.8,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.888888888888889,
+       "f1": 1.0,
        "tp": 4,
-       "fp": 1,
+       "fp": 0,
        "fn": 0
       },
       "CASE_REF": {
@@ -4667,9 +4613,9 @@
      },
      {
       "start": 385,
-      "end": 414,
+      "end": 413,
       "type": "ORG",
-      "text": "Northwind Coffee Company Inc."
+      "text": "Northwind Coffee Company Inc"
      },
      {
       "start": 417,
@@ -4708,12 +4654,6 @@
       "text": "Seattle"
      },
      {
-      "start": 1151,
-      "end": 1157,
-      "type": "LOC",
-      "text": "Oregon"
-     },
-     {
       "start": 1237,
       "end": 1246,
       "type": "ORG",
@@ -4724,12 +4664,6 @@
       "end": 1437,
       "type": "ORG",
       "text": "NORTHWIND"
-     },
-     {
-      "start": 1548,
-      "end": 1603,
-      "type": "ORG",
-      "text": "United States District Court for the District of Oregon"
      },
      {
       "start": 1725,
@@ -4903,16 +4837,16 @@
       "text": "Velora"
      },
      {
-      "start": 488,
+      "start": 492,
       "end": 506,
       "type": "PERSON",
-      "text": "Ms. Sinéad Brennan"
+      "text": "Sinéad Brennan"
      },
      {
-      "start": 590,
+      "start": 594,
       "end": 606,
       "type": "PERSON",
-      "text": "Mr. Théo Roussel"
+      "text": "Théo Roussel"
      },
      {
       "start": 608,
@@ -4928,9 +4862,9 @@
      },
      {
       "start": 710,
-      "end": 720,
+      "end": 719,
       "type": "ORG",
-      "text": "Apple Inc."
+      "text": "Apple Inc"
      },
      {
       "start": 723,
@@ -5027,19 +4961,19 @@
    {
     "doc_id": "doc_020_insolvency_update_en",
     "score": {
-     "precision": 0.8666666666666667,
+     "precision": 0.9285714285714286,
      "recall": 1.0,
-     "f1": 0.9285714285714286,
+     "f1": 0.962962962962963,
      "tp": 26,
-     "fp": 4,
+     "fp": 2,
      "fn": 0,
      "by_type": {
       "ORG": {
-       "precision": 0.7333333333333333,
+       "precision": 0.8461538461538461,
        "recall": 1.0,
-       "f1": 0.846153846153846,
+       "f1": 0.9166666666666666,
        "tp": 11,
-       "fp": 4,
+       "fp": 2,
        "fn": 0
       },
       "PERSON": {
@@ -5093,19 +5027,19 @@
      }
     },
     "score_any_type": {
-     "precision": 0.8666666666666667,
+     "precision": 0.9285714285714286,
      "recall": 1.0,
-     "f1": 0.9285714285714286,
+     "f1": 0.962962962962963,
      "tp": 26,
-     "fp": 4,
+     "fp": 2,
      "fn": 0,
      "by_type": {
       "ORG": {
-       "precision": 0.7333333333333333,
+       "precision": 0.8461538461538461,
        "recall": 1.0,
-       "f1": 0.846153846153846,
+       "f1": 0.9166666666666666,
        "tp": 11,
-       "fp": 4,
+       "fp": 2,
        "fn": 0
       },
       "PERSON": {
@@ -5202,12 +5136,6 @@
       "text": "Avenir"
      },
      {
-      "start": 370,
-      "end": 419,
-      "type": "ORG",
-      "text": "Tribunal de l'entreprise francophone de Bruxelles"
-     },
-     {
       "start": 758,
       "end": 764,
       "type": "ORG",
@@ -5278,12 +5206,6 @@
       "end": 1318,
       "type": "PERSON",
       "text": "Eitan Bar-Levav"
-     },
-     {
-      "start": 1366,
-      "end": 1390,
-      "type": "ORG",
-      "text": "the Belgian SPF Finances"
      },
      {
       "start": 1538,

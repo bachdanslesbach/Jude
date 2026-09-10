@@ -24,9 +24,9 @@ import time
 from collections.abc import Callable
 from pathlib import Path
 
-from .evaluate import score_corpus
+from .evaluate import aggregate_scores, score, score_corpus
 from .negative import over_redaction, public_mentions
-from .schema import CorpusReport, GoldDocument, Score
+from .schema import CorpusReport, DocumentResult, GoldDocument, Score
 from .sentence_eval import (
     score_sentences,
     sentence_flags_from_spans,
@@ -110,15 +110,96 @@ def _peak_rss_mb() -> float:
     return ru / (1024 * 1024) if sys.platform == "darwin" else ru / 1024
 
 
+def _attach_sentence_metrics(
+    report: CorpusReport,
+    pred_flags: list[list[bool]],
+    gold_flags: list[list[bool]],
+) -> None:
+    flat_pred = [f for fs in pred_flags for f in fs]
+    flat_gold = [f for fs in gold_flags for f in fs]
+    ss = score_sentences(flat_pred, flat_gold)
+    report.meta["sentence_level"] = {
+        "precision": ss.precision, "recall": ss.recall, "f1": ss.f1,
+        "tp": ss.tp, "fp": ss.fp, "fn": ss.fn, "n_sentences": len(flat_gold),
+    }
+
+
+def _attach_span_metrics(report: CorpusReport, docs: list[GoldDocument]) -> None:
+    """Public-body over-redaction and the sentence grid, from the
+    report's stored predictions. `docs` must align with `report.per_doc`."""
+
+    sents_per_doc = [split_sentences(d.text) for d in docs]
+    gold_flags = [sentence_gold_labels(s, d.gold_spans) for s, d in zip(sents_per_doc, docs)]
+    pred_flags = [
+        sentence_flags_from_spans(s, dr.pred_spans)
+        for s, dr in zip(sents_per_doc, report.per_doc)
+    ]
+    hits = total = 0
+    for d, dr in zip(docs, report.per_doc):
+        h, t = over_redaction(
+            dr.pred_spans,
+            public_mentions(d.text, d.gold_spans, explicit=d.public_spans),
+        )
+        hits += h
+        total += t
+    report.meta["span_level"] = True
+    report.meta["public_body_over_redaction"] = {
+        "hits": hits, "total": total, "rate": (hits / total) if total else 0.0,
+    }
+    _attach_sentence_metrics(report, pred_flags, gold_flags)
+
+
+def rescore(report: CorpusReport, docs: list[GoldDocument]) -> CorpusReport:
+    """Re-score a report's stored predictions against the current gold.
+
+    Gold changes under review; predictions are what a run costs. Every
+    score (per document, aggregate, any-type, public-body, sentence
+    grid) is recomputed in place; timing and memory meta are kept.
+    Documents no longer in the corpus are dropped; corpus documents
+    the run never saw are listed in `meta["missing_docs"]` — those need
+    a re-run. Sentence-level-only reports are returned untouched.
+    """
+
+    if not report.meta.get("span_level", True):
+        return report
+    by_id = {d.id: d for d in docs}
+    per_doc: list[DocumentResult] = []
+    kept_docs: list[GoldDocument] = []
+    for dr in report.per_doc:
+        doc = by_id.get(dr.doc_id)
+        if doc is None:
+            continue
+        per_doc.append(DocumentResult(
+            doc_id=dr.doc_id,
+            runner_name=dr.runner_name,
+            score=score(dr.pred_spans, doc.gold_spans),
+            pred_spans=dr.pred_spans,
+            score_any_type=score(dr.pred_spans, doc.gold_spans, type_strict=False),
+        ))
+        kept_docs.append(doc)
+    report.per_doc = per_doc
+    report.aggregate = aggregate_scores(d.score for d in per_doc)
+    report.aggregate_any_type = aggregate_scores(
+        d.score_any_type for d in per_doc if d.score_any_type is not None
+    )
+    _attach_span_metrics(report, kept_docs)
+    seen = {d.doc_id for d in per_doc}
+    missing = [d.id for d in docs if d.id not in seen]
+    if missing:
+        report.meta["missing_docs"] = missing
+    else:
+        report.meta.pop("missing_docs", None)
+    return report
+
+
 def run_one(name: str, factory: Callable[[], object], docs: list[GoldDocument]) -> CorpusReport:
     t0 = time.perf_counter()
     runner = factory()
     load_seconds = time.perf_counter() - t0
 
-    sents_per_doc = [split_sentences(d.text) for d in docs]
-    gold_flags = [sentence_gold_labels(s, d.gold_spans) for s, d in zip(sents_per_doc, docs)]
-
     if getattr(runner, "sentence_level_only", False):
+        sents_per_doc = [split_sentences(d.text) for d in docs]
+        gold_flags = [sentence_gold_labels(s, d.gold_spans) for s, d in zip(sents_per_doc, docs)]
         t0 = time.perf_counter()
         pred_flags = []
         for d, sents in zip(docs, sents_per_doc):
@@ -132,34 +213,12 @@ def run_one(name: str, factory: Callable[[], object], docs: list[GoldDocument]) 
             aggregate=Score(0.0, 0.0, 0.0, 0, 0, 0),
         )
         report.meta["span_level"] = False
+        _attach_sentence_metrics(report, pred_flags, gold_flags)
     else:
         t0 = time.perf_counter()
         report = score_corpus(runner, docs)
         seconds = time.perf_counter() - t0
-        pred_flags = [
-            sentence_flags_from_spans(s, dr.pred_spans)
-            for s, dr in zip(sents_per_doc, report.per_doc)
-        ]
-        hits = total = 0
-        for d, dr in zip(docs, report.per_doc):
-            h, t = over_redaction(
-                dr.pred_spans,
-                public_mentions(d.text, d.gold_spans, explicit=d.public_spans),
-            )
-            hits += h
-            total += t
-        report.meta["span_level"] = True
-        report.meta["public_body_over_redaction"] = {
-            "hits": hits, "total": total, "rate": (hits / total) if total else 0.0,
-        }
-
-    flat_pred = [f for fs in pred_flags for f in fs]
-    flat_gold = [f for fs in gold_flags for f in fs]
-    ss = score_sentences(flat_pred, flat_gold)
-    report.meta["sentence_level"] = {
-        "precision": ss.precision, "recall": ss.recall, "f1": ss.f1,
-        "tp": ss.tp, "fp": ss.fp, "fn": ss.fn, "n_sentences": len(flat_gold),
-    }
+        _attach_span_metrics(report, docs)
 
     chars = sum(len(d.text) for d in docs)
     report.meta.update({
@@ -271,6 +330,9 @@ def _render_notes(reports: list[CorpusReport]) -> str:
             ))
         if m.get("mean_document_sensitivity") is not None:
             bits.append(f"mean document sensitivity {m['mean_document_sensitivity']:.2f}")
+        if m.get("missing_docs"):
+            bits.append(f"**not run on {len(m['missing_docs'])} corpus document(s)**: "
+                        + ", ".join(m["missing_docs"]))
         lines.append(f"- **`{r.runner_name}`** — " + "; ".join(bits) + ".")
         for n in m.get("notes", []):
             lines.append(f"  - {n}")
@@ -357,6 +419,16 @@ def main(argv: list[str] | None = None) -> None:
         for p in args.render:
             data = json.loads(p.read_text(encoding="utf-8"))
             reports.extend(report_from_dict(d) for d in (data if isinstance(data, list) else [data]))
+        # Stored predictions, current gold: a corpus review must not
+        # require re-running every model.
+        corpus = _load_corpus()
+        if corpus:
+            for r in reports:
+                rescore(r, corpus)
+                if r.meta.get("missing_docs"):
+                    print(f"  {r.runner_name}: not run on {len(r.meta['missing_docs'])} corpus "
+                          f"document(s) — {', '.join(r.meta['missing_docs'][:5])}"
+                          f"{' …' if len(r.meta['missing_docs']) > 5 else ''}; re-run to include them.")
     else:
         docs = _load_corpus()
         if not docs:

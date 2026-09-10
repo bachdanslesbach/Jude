@@ -251,6 +251,54 @@ class TestSentenceEval:
 
 
 # ---------------------------------------------------------------------------
+# Re-scoring stored predictions against the current gold
+# ---------------------------------------------------------------------------
+
+
+class TestRescore:
+    def test_rescore_uses_current_gold_and_keeps_timing_meta(self):
+        from benchmark.evaluate import score_corpus
+        from benchmark.run import rescore
+        from benchmark.schema import GoldDocument
+
+        text = "Acme SA sued Zeta NV before the European Commission."
+
+        class Runner:
+            name = "stub"
+
+            def predict(self, t):
+                return [_pred(t, "Acme SA", "ORG"), _pred(t, "European Commission", "ORG")]
+
+        stale_gold = GoldDocument(id="d1", title="t", language="en", text=text,
+                                  gold_spans=(_gold(text, "Acme SA", "ORG"),))
+        report = score_corpus(Runner(), [stale_gold])
+        report.meta.update({"seconds": 2.0, "chars_per_sec": 30.0, "span_level": True})
+        assert report.aggregate.fn == 0
+
+        # The reviewer added Zeta NV to the gold and confirmed the
+        # Commission as public: same predictions, new scores.
+        fresh_gold = GoldDocument(
+            id="d1", title="t", language="en", text=text,
+            gold_spans=(_gold(text, "Acme SA", "ORG"), _gold(text, "Zeta NV", "ORG")),
+            public_spans=(_gold(text, "European Commission", "PUBLIC"),),
+        )
+        rescored = rescore(report, [fresh_gold])
+        assert rescored.aggregate.fn == 1
+        assert rescored.aggregate.fp == 1
+        assert rescored.meta["seconds"] == 2.0
+        assert rescored.meta["public_body_over_redaction"]["hits"] == 1
+        assert rescored.meta["sentence_level"]["n_sentences"] == 1
+
+    def test_rescore_skips_sentence_level_only_reports(self):
+        from benchmark.run import rescore
+        from benchmark.schema import CorpusReport, Score
+
+        r = CorpusReport(runner_name="roblox", per_doc=[], aggregate=Score(0, 0, 0, 0, 0, 0))
+        r.meta["span_level"] = False
+        assert rescore(r, []) is r
+
+
+# ---------------------------------------------------------------------------
 # Report serialisation (so runners can execute in separate processes)
 # ---------------------------------------------------------------------------
 

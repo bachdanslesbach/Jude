@@ -146,7 +146,7 @@ For anyone minded to train one:
 2. **Legal synthetic data, multilingual, EU formats.** NVIDIA's
    data-designer approach works; the missing ingredient is the domain:
    term sheets, pleadings, board minutes, regulatory filings, in
-   EN / FR / NL / DE, with EU case numbers, ECLI, IBANs, VAT numbers,
+   EN / FR first (then DE / NL), with EU case numbers, ECLI, IBANs, VAT numbers,
    Belgian national register numbers.
 3. **Long context or built-in chunking** with consistent decisions
    across chunks — two pages is a short document here.

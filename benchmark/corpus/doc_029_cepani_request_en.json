@@ -1,0 +1,506 @@
+{
+ "id": "doc_029_cepani_request_en",
+ "title": "Tervelde / Valdorsa — request for arbitration (CEPANI)",
+ "language": "en",
+ "text": "REQUEST FOR ARBITRATION\nfiled with CEPANI (Belgian Centre for Arbitration and Mediation) under Article 3 of the CEPANI Rules of Arbitration\n\nTERVELDE AGENCIES NV v. VALDORSA CUCINE S.P.A.\n\nRef. RS/26/2853-AGY\n8 September 2026\n\nI. THE PARTIES\n\n1. The Claimant is Tervelde Agencies NV (\"Tervelde\"), a Belgian public limited company, enterprise number 0463.281.995, with registered office at Kerkedreef 31, 2930 Brasschaat, Belgium (website tervelde.example.be), represented by its managing director, Mr. Geert Van Ryckeghem.\n\n2. Counsel for the Claimant: Mr. Tijl Roelandt and Ms. Annelore Sioen, Roelandt Sioen Advocaten (the \"Firm\"), Amerikalei 156, 2000 Antwerp, Belgium, tel. +32 3 216 74 90, t.roelandt@roelandt-sioen.example.be.\n\n3. The Respondent is Valdorsa Cucine S.p.A. (\"VCS\"), an Italian joint-stock company, VAT number IT04182730269, with registered office at Via Molinetto 27, 31015 Conegliano (TV), Italy. Pre-arbitral counsel to VCS: Avv. Luca Ferrandini, Studio Legale Ferrandini e Associati, Via dei Mille 18, 31100 Treviso, Italy, tel. +39 0422 55 41 87, l.ferrandini@ferrandini-associati.example.it.\n\nII. THE ARBITRATION AGREEMENT\n\n4. The dispute arises under the Commercial Agency Agreement of 3 March 2014 (the \"Agreement\", Exhibit C-1) appointing the Claimant exclusive commercial agent of VCS for fitted kitchens in Belgium, Luxembourg and the Netherlands (the \"Territory\") at a 9% commission on net invoiced sales. Article 19 provides:\n\n\"Any dispute arising out of or in connection with this Agreement shall be finally settled under the CEPANI Rules of Arbitration by one or more arbitrators appointed in accordance with those Rules. The seat of the arbitration shall be Brussels and the language English.\"\n\nIII. THE FACTS\n\n5. Between 2014 and 2025 Tervelde grew the Respondent's dealer network in the Territory from six to forty-one points of sale and net invoiced sales from EUR 1,140,000 to EUR 5,870,000; its commissions averaged EUR 438,700 per year in 2021–2025.\n\n6. On 19 January 2026 VCS's chief executive, Mr. Ettore Pasqualotto, told Mr. Van Ryckeghem that the group would serve the Territory directly through a new Dutch subsidiary, Valdorsa Benelux BV, without any complaint about the Claimant's performance.\n\n7. By registered letter of 27 February 2026 VCS terminated the Agreement with three months' notice expiring on 31 May 2026; after twelve years, Article X.16 of the Code of Economic Law and Article 15 of Directive 86/653/EEC required six.\n\n8. On 16 March 2026 VCS's export manager, Ms. Chiara Sartorello, emailed the Claimant's managing director (Exhibit C-2): \"Dear Mr. Van Ryckeghem, Pasqualotto has decided that all Benelux dealers will be invoiced through the new company from 1 June. Please send me your open quotations and dealer list by Friday.\"\n\n9. From 14 April 2026 the Claimant was removed from the dealer locator on valdorsa.example.it; VCS issued no commission statements under Article X.12 of the Code of Economic Law after the first quarter of 2026.\n\n10. The Firm gave formal notice on 19 June 2026. Avv. Ferrandini replied on 21 July 2026 (ref. 3196/26/LF), denying any indemnity because Italian law governs and asserting that the Claimant waived arbitration by applying to the Belgian courts.\n\n11. The assertion is unfounded: on 2 July 2026 the President of the Enterprise Court of Brussels, on application by Tervelde Agencies NV (docket C/26/00743, Exhibit C-3), ordered VCS to resume the commission statements pending constitution of the tribunal, as Article 1683 of the Judicial Code allows notwithstanding an arbitration agreement.\n\nIV. LEGAL GROUNDS\n\n12. Although Article 18 of the Agreement designates Italian law, Tervelde has its principal place of business in Belgium and Article X.25 of the Code of Economic Law subjects its activity to Belgian law. The Court of Justice of the European Union held in Ingmar (C-381/98) and Unamar (C-184/12) that the indemnity rules of Directive 86/653/EEC and the Belgian provisions implementing them prevail as overriding mandatory rules over a chosen foreign law.\n\n13. Compensation in lieu of notice (Article X.16, §3): three months' commission on the twelve months preceding termination, EUR 111,725.\n\n14. Goodwill indemnity (Article X.18): the Claimant brought VCS new customers and substantially increased its business, which VCS still enjoys through its subsidiary; the statutory maximum of one year's average remuneration, EUR 438,700, is claimed within one year of termination.\n\n15. Additional compensation (Article X.19): the unamortised 2023 showroom investment made at the Respondent's request and the severance paid to two dedicated sales staff, EUR 187,250.\n\n16. Unpaid commissions (Articles X.8 to X.10) on orders transmitted before 31 May 2026 and on later Territory orders mainly due to the Claimant's efforts: provisionally EUR 96,340, subject to the book extract owed under Article X.13.\n\nV. RELIEF SOUGHT\n\n17. The Claimant requests the arbitral tribunal to declare that Belgian law applies; to order the Respondent to pay EUR 111,725, EUR 438,700 and EUR 187,250, to produce its 2026 Territory book extract and pay the commissions so established (provisionally EUR 96,340), with interest under the Law of 2 August 2002 on late payment in commercial transactions; and to order the Respondent to bear the costs of arbitration and representation.\n\nVI. TRIBUNAL AND COSTS\n\n18. The Claimant proposes a sole arbitrator appointed by CEPANI (Article 15 of the Rules).\n\n19. The registration fee under Schedule I to the Rules has been paid today from the Firm's third-party account with KBC, IBAN BE88 7342 6185 4741, reference RS/26/2853-AGY; the Claimant will pay its share of the advance on costs on the Secretariat's request, any refund going to the same account.\n\nFor the Claimant,\n\nTijl Roelandt\nAnnelore Sioen\nRoelandt Sioen Advocaten",
+ "gold_spans": [
+  {
+   "start": 141,
+   "end": 161,
+   "type": "ORG",
+   "text": "TERVELDE AGENCIES NV"
+  },
+  {
+   "start": 165,
+   "end": 187,
+   "type": "ORG",
+   "text": "VALDORSA CUCINE S.P.A."
+  },
+  {
+   "start": 194,
+   "end": 208,
+   "type": "CASE_REF",
+   "text": "RS/26/2853-AGY"
+  },
+  {
+   "start": 262,
+   "end": 282,
+   "type": "ORG",
+   "text": "Tervelde Agencies NV"
+  },
+  {
+   "start": 285,
+   "end": 293,
+   "type": "ORG",
+   "text": "Tervelde"
+  },
+  {
+   "start": 349,
+   "end": 361,
+   "type": "IBAN",
+   "text": "0463.281.995"
+  },
+  {
+   "start": 389,
+   "end": 419,
+   "type": "LOC",
+   "text": "Kerkedreef 31, 2930 Brasschaat"
+  },
+  {
+   "start": 438,
+   "end": 457,
+   "type": "URL",
+   "text": "tervelde.example.be"
+  },
+  {
+   "start": 502,
+   "end": 521,
+   "type": "PERSON",
+   "text": "Geert Van Ryckeghem"
+  },
+  {
+   "start": 557,
+   "end": 570,
+   "type": "PERSON",
+   "text": "Tijl Roelandt"
+  },
+  {
+   "start": 579,
+   "end": 593,
+   "type": "PERSON",
+   "text": "Annelore Sioen"
+  },
+  {
+   "start": 595,
+   "end": 619,
+   "type": "ORG",
+   "text": "Roelandt Sioen Advocaten"
+  },
+  {
+   "start": 634,
+   "end": 662,
+   "type": "LOC",
+   "text": "Amerikalei 156, 2000 Antwerp"
+  },
+  {
+   "start": 678,
+   "end": 693,
+   "type": "PHONE",
+   "text": "+32 3 216 74 90"
+  },
+  {
+   "start": 695,
+   "end": 731,
+   "type": "EMAIL",
+   "text": "t.roelandt@roelandt-sioen.example.be"
+  },
+  {
+   "start": 755,
+   "end": 777,
+   "type": "ORG",
+   "text": "Valdorsa Cucine S.p.A."
+  },
+  {
+   "start": 780,
+   "end": 783,
+   "type": "ORG",
+   "text": "VCS"
+  },
+  {
+   "start": 830,
+   "end": 843,
+   "type": "IBAN",
+   "text": "IT04182730269"
+  },
+  {
+   "start": 871,
+   "end": 910,
+   "type": "LOC",
+   "text": "Via Molinetto 27, 31015 Conegliano (TV)"
+  },
+  {
+   "start": 943,
+   "end": 946,
+   "type": "ORG",
+   "text": "VCS"
+  },
+  {
+   "start": 953,
+   "end": 968,
+   "type": "PERSON",
+   "text": "Luca Ferrandini"
+  },
+  {
+   "start": 970,
+   "end": 1006,
+   "type": "ORG",
+   "text": "Studio Legale Ferrandini e Associati"
+  },
+  {
+   "start": 1008,
+   "end": 1039,
+   "type": "LOC",
+   "text": "Via dei Mille 18, 31100 Treviso"
+  },
+  {
+   "start": 1053,
+   "end": 1070,
+   "type": "PHONE",
+   "text": "+39 0422 55 41 87"
+  },
+  {
+   "start": 1072,
+   "end": 1116,
+   "type": "EMAIL",
+   "text": "l.ferrandini@ferrandini-associati.example.it"
+  },
+  {
+   "start": 1311,
+   "end": 1314,
+   "type": "ORG",
+   "text": "VCS"
+  },
+  {
+   "start": 1772,
+   "end": 1780,
+   "type": "ORG",
+   "text": "Tervelde"
+  },
+  {
+   "start": 2015,
+   "end": 2018,
+   "type": "ORG",
+   "text": "VCS"
+  },
+  {
+   "start": 2042,
+   "end": 2060,
+   "type": "PERSON",
+   "text": "Ettore Pasqualotto"
+  },
+  {
+   "start": 2067,
+   "end": 2084,
+   "type": "PERSON",
+   "text": "Mr. Van Ryckeghem"
+  },
+  {
+   "start": 2167,
+   "end": 2186,
+   "type": "ORG",
+   "text": "Valdorsa Benelux BV"
+  },
+  {
+   "start": 2289,
+   "end": 2292,
+   "type": "ORG",
+   "text": "VCS"
+  },
+  {
+   "start": 2504,
+   "end": 2507,
+   "type": "ORG",
+   "text": "VCS"
+  },
+  {
+   "start": 2530,
+   "end": 2547,
+   "type": "PERSON",
+   "text": "Chiara Sartorello"
+  },
+  {
+   "start": 2611,
+   "end": 2628,
+   "type": "PERSON",
+   "text": "Mr. Van Ryckeghem"
+  },
+  {
+   "start": 2630,
+   "end": 2641,
+   "type": "PERSON",
+   "text": "Pasqualotto"
+  },
+  {
+   "start": 2872,
+   "end": 2891,
+   "type": "URL",
+   "text": "valdorsa.example.it"
+  },
+  {
+   "start": 2893,
+   "end": 2896,
+   "type": "ORG",
+   "text": "VCS"
+  },
+  {
+   "start": 3059,
+   "end": 3074,
+   "type": "PERSON",
+   "text": "Avv. Ferrandini"
+  },
+  {
+   "start": 3105,
+   "end": 3115,
+   "type": "CASE_REF",
+   "text": "3196/26/LF"
+  },
+  {
+   "start": 3371,
+   "end": 3391,
+   "type": "ORG",
+   "text": "Tervelde Agencies NV"
+  },
+  {
+   "start": 3400,
+   "end": 3410,
+   "type": "CASE_REF",
+   "text": "C/26/00743"
+  },
+  {
+   "start": 3434,
+   "end": 3437,
+   "type": "ORG",
+   "text": "VCS"
+  },
+  {
+   "start": 3683,
+   "end": 3691,
+   "type": "ORG",
+   "text": "Tervelde"
+  },
+  {
+   "start": 4271,
+   "end": 4274,
+   "type": "ORG",
+   "text": "VCS"
+  },
+  {
+   "start": 4337,
+   "end": 4340,
+   "type": "ORG",
+   "text": "VCS"
+  },
+  {
+   "start": 5602,
+   "end": 5605,
+   "type": "ORG",
+   "text": "KBC"
+  },
+  {
+   "start": 5612,
+   "end": 5631,
+   "type": "IBAN",
+   "text": "BE88 7342 6185 4741"
+  },
+  {
+   "start": 5643,
+   "end": 5657,
+   "type": "CASE_REF",
+   "text": "RS/26/2853-AGY"
+  },
+  {
+   "start": 5803,
+   "end": 5816,
+   "type": "PERSON",
+   "text": "Tijl Roelandt"
+  },
+  {
+   "start": 5817,
+   "end": 5831,
+   "type": "PERSON",
+   "text": "Annelore Sioen"
+  },
+  {
+   "start": 5832,
+   "end": 5856,
+   "type": "ORG",
+   "text": "Roelandt Sioen Advocaten"
+  }
+ ],
+ "public_spans": [
+  {
+   "start": 35,
+   "end": 41,
+   "type": "PUBLIC",
+   "text": "CEPANI"
+  },
+  {
+   "start": 43,
+   "end": 87,
+   "type": "PUBLIC",
+   "text": "Belgian Centre for Arbitration and Mediation"
+  },
+  {
+   "start": 112,
+   "end": 139,
+   "type": "PUBLIC",
+   "text": "CEPANI Rules of Arbitration"
+  },
+  {
+   "start": 421,
+   "end": 428,
+   "type": "PUBLIC",
+   "text": "Belgium"
+  },
+  {
+   "start": 664,
+   "end": 671,
+   "type": "PUBLIC",
+   "text": "Belgium"
+  },
+  {
+   "start": 912,
+   "end": 917,
+   "type": "PUBLIC",
+   "text": "Italy"
+  },
+  {
+   "start": 1041,
+   "end": 1046,
+   "type": "PUBLIC",
+   "text": "Italy"
+  },
+  {
+   "start": 1338,
+   "end": 1345,
+   "type": "PUBLIC",
+   "text": "Belgium"
+  },
+  {
+   "start": 1347,
+   "end": 1357,
+   "type": "PUBLIC",
+   "text": "Luxembourg"
+  },
+  {
+   "start": 1366,
+   "end": 1377,
+   "type": "PUBLIC",
+   "text": "Netherlands"
+  },
+  {
+   "start": 1560,
+   "end": 1587,
+   "type": "PUBLIC",
+   "text": "CEPANI Rules of Arbitration"
+  },
+  {
+   "start": 1694,
+   "end": 1702,
+   "type": "PUBLIC",
+   "text": "Brussels"
+  },
+  {
+   "start": 2409,
+   "end": 2429,
+   "type": "PUBLIC",
+   "text": "Code of Economic Law"
+  },
+  {
+   "start": 2448,
+   "end": 2468,
+   "type": "PUBLIC",
+   "text": "Directive 86/653/EEC"
+  },
+  {
+   "start": 2663,
+   "end": 2670,
+   "type": "PUBLIC",
+   "text": "Benelux"
+  },
+  {
+   "start": 2955,
+   "end": 2975,
+   "type": "PUBLIC",
+   "text": "Code of Economic Law"
+  },
+  {
+   "start": 3323,
+   "end": 3351,
+   "type": "PUBLIC",
+   "text": "Enterprise Court of Brussels"
+  },
+  {
+   "start": 3535,
+   "end": 3548,
+   "type": "PUBLIC",
+   "text": "Judicial Code"
+  },
+  {
+   "start": 3731,
+   "end": 3738,
+   "type": "PUBLIC",
+   "text": "Belgium"
+  },
+  {
+   "start": 3763,
+   "end": 3783,
+   "type": "PUBLIC",
+   "text": "Code of Economic Law"
+  },
+  {
+   "start": 3826,
+   "end": 3864,
+   "type": "PUBLIC",
+   "text": "Court of Justice of the European Union"
+  },
+  {
+   "start": 3873,
+   "end": 3879,
+   "type": "PUBLIC",
+   "text": "Ingmar"
+  },
+  {
+   "start": 3881,
+   "end": 3889,
+   "type": "PUBLIC",
+   "text": "C-381/98"
+  },
+  {
+   "start": 3895,
+   "end": 3901,
+   "type": "PUBLIC",
+   "text": "Unamar"
+  },
+  {
+   "start": 3903,
+   "end": 3911,
+   "type": "PUBLIC",
+   "text": "C-184/12"
+  },
+  {
+   "start": 3941,
+   "end": 3961,
+   "type": "PUBLIC",
+   "text": "Directive 86/653/EEC"
+  },
+  {
+   "start": 5223,
+   "end": 5243,
+   "type": "PUBLIC",
+   "text": "Law of 2 August 2002"
+  },
+  {
+   "start": 5451,
+   "end": 5457,
+   "type": "PUBLIC",
+   "text": "CEPANI"
+  }
+ ],
+ "notes": "Request for arbitration filed with CEPANI by a Belgian commercial agent against its Italian principal (goodwill indemnity and related claims under Book X of the Code of Economic Law and Directive 86/653/EEC). SHOULD redact: the Claimant (full name, all-caps header form, defined short name 'Tervelde'), the Respondent (full name, all-caps header form, defined acronym 'VCS'), the Respondent's new Dutch subsidiary, the Claimant's law firm and both counsel (parties clause and signature block), the Respondent's Italian counsel and firm (full name and later 'Avv. Ferrandini'), the Claimant's managing director (full name and later 'Mr. Van Ryckeghem', including inside the quoted email), the Respondent's chief executive (full name and surname-only 'Pasqualotto' inside the quoted email) and export manager, the bank named only by acronym (KBC) with the third-party-account IBAN, the four street addresses with postcodes and cities, both example.* emails, both phones, the Firm's internal reference (twice), the Italian counsel's reference, the summary-proceedings docket, the Claimant's enterprise number and the Respondent's VAT number (both typed CASE_REF for want of a registry-number type), and the two bare domains. SHOULD NOT redact: CEPANI and its full name, the CEPANI Rules of Arbitration, the Code of Economic Law and its Book X articles, the Judicial Code, Directive 86/653/EEC, the Enterprise Court of Brussels, the Court of Justice of the European Union and the two published judgments (Ingmar C-381/98, Unamar C-184/12), the Law of 2 August 2002, Brussels as seat of arbitration and of the court, the countries and Benelux as territory descriptors, amounts, dates, exhibit numbers, and role words such as 'the Claimant', 'the Respondent', 'the Firm', 'the Secretariat', 'the tribunal', 'Counsel for the Claimant'.",
+ "source": "agent-synthetic",
+ "split": "heldout",
+ "genre": "request for arbitration",
+ "traps": [
+  "address",
+  "honorific-only",
+  "surname-only",
+  "bare-domain",
+  "bank-acronym",
+  "acronym-defined",
+  "internal-docket",
+  "all-caps-header",
+  "adjacent-public",
+  "role-noise"
+ ]
+}

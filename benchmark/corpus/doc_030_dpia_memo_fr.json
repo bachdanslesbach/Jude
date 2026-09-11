@@ -2,7 +2,7 @@
  "id": "doc_030_dpia_memo_fr",
  "title": "Novaris Logistics — Mémo AIPD Projet Argus",
  "language": "fr",
- "text": "MÉMORANDUM — NOVARIS LOGISTICS SA\nAnalyse d'impact relative à la protection des données (article 35 RGPD) — Projet Argus\nConfidentiel — secret professionnel\n\nVandermeulen Delcourt & Associés\nAvenue Louise 480, 1050 Bruxelles\n\nBruxelles, le 11 septembre 2026\n\nÀ l'attention de : Mme Sophie Lambert, déléguée à la protection des données, Novaris Logistics SA (dpo@novaris-logistics.example.be, +32 3 555 08 41)\nCopie : M. Karim Benali, directeur des ressources humaines\nDe : Hélène Delcourt et Julien Peeters\nVos réf. : NLS-DPO-2026-011 — Nos réf. : VDA/2026/0417\n\nObjet : Projet Argus — outil fourni par Sentinel Workforce Analytics GmbH : AIPD et consultation préalable\n\nChère Madame,\n\nVous nous avez demandé si le déploiement à Willebroek de l'outil d'analyse de la productivité proposé par Sentinel Workforce Analytics GmbH (« SWA ») impose une analyse d'impact relative à la protection des données (« AIPD ») et, le cas échéant, une consultation préalable de l'Autorité de protection des données (APD). Le présent mémo ne se substitue pas à l'AIPD elle-même, que le responsable du traitement doit documenter.\n\n1. Description du traitement\n\n1.1. Selon la fiche technique transmise par Mme Lambert le 28 août 2026, l'outil, accessible aux chefs d'équipe via le domaine sentinelwatch.example.com, collecte les données des scanners portatifs, des badges d'accès et des terminaux de picking de l'entrepôt de Willebroek (Industrieweg 14, 2830 Willebroek). Il en déduit, pour chacun des 412 travailleurs, un score de productivité horaire, des périodes d'« inactivité » et des alertes adressées à la hiérarchie.\n\n1.2. SWA, dont le siège est à Munich, agit en qualité de sous-traitant au sens de l'article 28 RGPD. Elle recourt à deux sous-traitants ultérieurs : Cloudhaven Hosting Ltd (Dublin) pour l'hébergement et Pinecrest Support Services Inc. (Denver, États-Unis) pour le support de second niveau, qui implique un accès distant aux données en clair. Sa déléguée à la protection des données, Anneliese Roth, nous a confirmé le 3 septembre 2026 que cet accès n'est ni journalisé ni limité dans le temps.\n\n1.3. Novaris est le responsable du traitement. Les scores, interfacés avec la paie, influencent les primes variables et, selon M. Benali, pourraient à terme alimenter les procédures disciplinaires.\n\n2. Obligation de réaliser une AIPD\n\n2.1. L'article 35, paragraphe 3, RGPD vise l'évaluation systématique d'aspects personnels fondée sur un traitement automatisé produisant des effets significatifs. Le Comité européen de la protection des données (lignes directrices WP248 rev.01) retient notamment le suivi systématique, les données de personnes vulnérables — dont les travailleurs — et l'usage innovant de la technologie. La décision de l'APD du 16 janvier 2019 fixant la liste des traitements soumis à AIPD y ajoute la surveillance des travailleurs aux fins de contrôle de la productivité. Trois critères au moins sont réunis : l'AIPD est obligatoire.\n\n2.2. Le traitement doit en outre respecter la CCT n° 81 du 26 avril 2002 ainsi que l'article 9 de la loi du 30 juillet 2018, les durées d'absence pour raisons médicales constituant des données relatives à la santé. L'information et la consultation préalables du conseil d'entreprise sont requises.\n\n3. Transferts hors Union européenne\n\n3.1. L'accès distant depuis Denver constitue un transfert au sens du chapitre V RGPD. Pinecrest Support Services Inc. n'est pas certifiée au titre du cadre de protection des données UE–États-Unis reconnu par la décision d'adéquation de la Commission européenne du 10 juillet 2023. Le transfert repose donc sur les clauses contractuelles types (module 3), qui exigent, depuis l'arrêt de la Cour de justice de l'Union européenne du 16 juillet 2020 (C-311/18), une analyse d'impact du transfert. Le contrat communiqué n'en contient aucune et ne prévoit ni chiffrement ni pseudonymisation préalable à l'accès du support.\n\n3.2. Le contrat-cadre désigne le droit allemand et l'autorité bavaroise de contrôle (BayLDA). Cette clause ne prive pas l'APD de sa compétence à l'égard de Novaris, responsable du traitement établi en Belgique.\n\n4. Recommandations\n\n4.1. Suspendre le lancement d'Argus, prévu le 1er octobre 2026, jusqu'à la finalisation de l'AIPD et de la consultation du conseil d'entreprise.\n\n4.2. Renégocier avec SWA : (i) la suppression de l'accès en clair depuis Denver ou, à défaut, une pseudonymisation côté client avant tout ticket de support ; (ii) une journalisation intégrale des accès ; (iii) une clause étendant les obligations de l'article 28, paragraphe 4, RGPD à Cloudhaven Hosting Ltd et à Pinecrest Support Services Inc.\n\n4.3. Réduire la granularité : scores agrégés par équipe plutôt que par travailleur, suppression des alertes d'« inactivité » individuelles, exclusion des données de badge des calculs de performance.\n\n4.4. Si l'AIPD conclut malgré tout à un risque résiduel élevé — probable tant que les scores individuels alimentent les décisions de rémunération —, une consultation préalable de l'APD au titre de l'article 36 RGPD sera nécessaire ; l'APD dispose alors de huit semaines, prorogeables de six. Nous suggérons de suivre la trame d'AIPD publiée par la CNIL, que l'APD accepte en pratique.\n\nNos honoraires, conformément à la convention du 12 mai 2026, sont à régler sur le compte du Cabinet auprès de KBC (IBAN BE80 7344 4181 2777), avec la mention de notre référence VDA/2026/0417.\n\nNous restons à votre disposition pour une réunion avec M. Benali et la direction de Willebroek.\n\nNous vous prions d'agréer, chère Madame, l'expression de nos salutations distinguées.\n\nHélène Delcourt\nAvocate associée\nh.delcourt@vda-avocats.example.be — +32 2 555 14 80\n\nJulien Peeters\nAvocat\n\nVandermeulen Delcourt & Associés\nAvenue Louise 480, 1050 Bruxelles",
+ "text": "MÉMORANDUM — NOVARIS LOGISTICS SA\nAnalyse d'impact relative à la protection des données (article 35 RGPD) — Projet Argus\nConfidentiel — secret professionnel\n\nVandermeulen Fauconnier & Associés\nAvenue Louise 480, 1050 Bruxelles\n\nBruxelles, le 10 septembre 2026\n\nÀ l'attention de : Mme Sophie Lambert, déléguée à la protection des données, Novaris Logistics SA (dpo@novaris-logistics.example.be, +32 3 555 71 26)\nCopie : M. Karim Benali, directeur des ressources humaines\nDe : Hélène Fauconnier et Julien Daems\nVos réf. : NLS-DPO-2026-011 — Nos réf. : VFA/2026/0562\n\nObjet : Projet Argus — outil fourni par Sentinel Workforce Analytics GmbH : AIPD et consultation préalable\n\nChère Madame,\n\nVous nous avez demandé si le déploiement à Willebroek de l'outil d'analyse de la productivité proposé par Sentinel Workforce Analytics GmbH (« SWA ») impose une analyse d'impact relative à la protection des données (« AIPD ») et, le cas échéant, une consultation préalable de l'Autorité de protection des données (APD). Le présent mémo ne se substitue pas à l'AIPD elle-même, que le responsable du traitement doit documenter.\n\n1. Description du traitement\n\n1.1. Selon la fiche technique transmise par Mme Lambert le 28 août 2026, l'outil, accessible aux chefs d'équipe via le domaine sentinelwatch.example.com, collecte les données des scanners portatifs, des badges d'accès et des terminaux de picking de l'entrepôt de Willebroek (Ambachtsweg 27, 2830 Willebroek). Il en déduit, pour chacun des 412 travailleurs, un score de productivité horaire, des périodes d'« inactivité » et des alertes adressées à la hiérarchie.\n\n1.2. SWA, dont le siège est à Munich, agit en qualité de sous-traitant au sens de l'article 28 RGPD. Elle recourt à deux sous-traitants ultérieurs : Cloudhaven Hosting Ltd (Dublin) pour l'hébergement et Pinecrest Support Services Inc. (Denver, États-Unis) pour le support de second niveau, qui implique un accès distant aux données en clair. Sa déléguée à la protection des données, Anneliese Roth, nous a confirmé le 3 septembre 2026 que cet accès n'est ni journalisé ni limité dans le temps.\n\n1.3. Novaris est le responsable du traitement. Les scores, interfacés avec la paie, influencent les primes variables et, selon M. Benali, pourraient à terme alimenter les procédures disciplinaires.\n\n2. Obligation de réaliser une AIPD\n\n2.1. L'article 35, paragraphe 3, RGPD vise l'évaluation systématique d'aspects personnels fondée sur un traitement automatisé produisant des effets significatifs. Le Comité européen de la protection des données (lignes directrices WP248 rev.01) retient notamment le suivi systématique, les données de personnes vulnérables — dont les travailleurs — et l'usage innovant de la technologie. La décision de l'APD du 16 janvier 2019 fixant la liste des traitements soumis à AIPD y ajoute la surveillance des travailleurs aux fins de contrôle de la productivité. Trois critères au moins sont réunis : l'AIPD est obligatoire.\n\n2.2. Le traitement doit en outre respecter la CCT n° 81 du 26 avril 2002 ainsi que l'article 9 de la loi du 30 juillet 2018, les durées d'absence pour raisons médicales constituant des données relatives à la santé. L'information et la consultation préalables du conseil d'entreprise sont requises.\n\n3. Transferts hors Union européenne\n\n3.1. L'accès distant depuis Denver constitue un transfert au sens du chapitre V RGPD. Pinecrest Support Services Inc. n'est pas certifiée au titre du cadre de protection des données UE–États-Unis reconnu par la décision d'adéquation de la Commission européenne du 10 juillet 2023. Le transfert repose donc sur les clauses contractuelles types (module 3), qui exigent, depuis l'arrêt de la Cour de justice de l'Union européenne du 16 juillet 2020 (C-311/18), une analyse d'impact du transfert. Le contrat communiqué n'en contient aucune et ne prévoit ni chiffrement ni pseudonymisation préalable à l'accès du support.\n\n3.2. Le contrat-cadre désigne le droit allemand et l'autorité bavaroise de contrôle (BayLDA). Cette clause ne prive pas l'APD de sa compétence à l'égard de Novaris, responsable du traitement établi en Belgique.\n\n4. Recommandations\n\n4.1. Suspendre le lancement d'Argus, prévu le 1er octobre 2026, jusqu'à la finalisation de l'AIPD et de la consultation du conseil d'entreprise.\n\n4.2. Renégocier avec SWA : (i) la suppression de l'accès en clair depuis Denver ou, à défaut, une pseudonymisation côté client avant tout ticket de support ; (ii) une journalisation intégrale des accès ; (iii) une clause étendant les obligations de l'article 28, paragraphe 4, RGPD à Cloudhaven Hosting Ltd et à Pinecrest Support Services Inc.\n\n4.3. Réduire la granularité : scores agrégés par équipe plutôt que par travailleur, suppression des alertes d'« inactivité » individuelles, exclusion des données de badge des calculs de performance.\n\n4.4. Si l'AIPD conclut malgré tout à un risque résiduel élevé — probable tant que les scores individuels alimentent les décisions de rémunération —, une consultation préalable de l'APD au titre de l'article 36 RGPD sera nécessaire ; l'APD dispose alors de huit semaines, prorogeables de six. Nous suggérons de suivre la trame d'AIPD publiée par la CNIL, que l'APD accepte en pratique.\n\nNos honoraires, conformément à la convention du 12 mai 2026, sont à régler sur le compte du Cabinet auprès de KBC (IBAN BE80 7344 4181 2777), avec la mention de notre référence VFA/2026/0562.\n\nNous restons à votre disposition pour une réunion avec M. Benali et la direction de Willebroek.\n\nNous vous prions d'agréer, chère Madame, l'expression de nos salutations distinguées.\n\nHélène Fauconnier\nAvocate associée\nh.fauconnier@vfa-avocats.example.be — +32 2 555 14 80\n\nJulien Daems\nAvocat\n\nVandermeulen Fauconnier & Associés\nAvenue Louise 480, 1050 Bruxelles",
  "gold_spans": [
   {
    "start": 13,
@@ -18,313 +18,313 @@
   },
   {
    "start": 158,
-   "end": 190,
+   "end": 192,
    "type": "ORG",
-   "text": "Vandermeulen Delcourt & Associés"
+   "text": "Vandermeulen Fauconnier & Associés"
   },
   {
-   "start": 191,
-   "end": 208,
+   "start": 193,
+   "end": 210,
    "type": "LOC",
    "text": "Avenue Louise 480"
   },
   {
-   "start": 215,
-   "end": 224,
+   "start": 217,
+   "end": 226,
    "type": "LOC",
    "text": "Bruxelles"
   },
   {
-   "start": 226,
-   "end": 235,
+   "start": 228,
+   "end": 237,
    "type": "LOC",
    "text": "Bruxelles"
   },
   {
-   "start": 282,
-   "end": 296,
+   "start": 284,
+   "end": 298,
    "type": "PERSON",
    "text": "Sophie Lambert"
   },
   {
-   "start": 336,
-   "end": 356,
+   "start": 338,
+   "end": 358,
    "type": "ORG",
    "text": "Novaris Logistics SA"
   },
   {
-   "start": 358,
-   "end": 390,
+   "start": 360,
+   "end": 392,
    "type": "EMAIL",
    "text": "dpo@novaris-logistics.example.be"
   },
   {
-   "start": 392,
-   "end": 407,
+   "start": 394,
+   "end": 409,
    "type": "PHONE",
-   "text": "+32 3 555 08 41"
+   "text": "+32 3 555 71 26"
   },
   {
-   "start": 420,
-   "end": 432,
+   "start": 422,
+   "end": 434,
    "type": "PERSON",
    "text": "Karim Benali"
   },
   {
-   "start": 473,
-   "end": 488,
+   "start": 475,
+   "end": 492,
    "type": "PERSON",
-   "text": "Hélène Delcourt"
+   "text": "Hélène Fauconnier"
   },
   {
-   "start": 492,
-   "end": 506,
+   "start": 496,
+   "end": 508,
    "type": "PERSON",
-   "text": "Julien Peeters"
+   "text": "Julien Daems"
   },
   {
-   "start": 518,
-   "end": 534,
+   "start": 520,
+   "end": 536,
    "type": "CASE_REF",
    "text": "NLS-DPO-2026-011"
   },
   {
-   "start": 548,
-   "end": 561,
+   "start": 550,
+   "end": 563,
    "type": "CASE_REF",
-   "text": "VDA/2026/0417"
+   "text": "VFA/2026/0562"
   },
   {
-   "start": 571,
-   "end": 583,
+   "start": 573,
+   "end": 585,
    "type": "ORG",
    "text": "Projet Argus"
   },
   {
-   "start": 603,
-   "end": 636,
+   "start": 605,
+   "end": 638,
    "type": "ORG",
    "text": "Sentinel Workforce Analytics GmbH"
   },
   {
-   "start": 729,
-   "end": 739,
+   "start": 731,
+   "end": 741,
    "type": "LOC",
    "text": "Willebroek"
   },
   {
-   "start": 792,
-   "end": 825,
+   "start": 794,
+   "end": 827,
    "type": "ORG",
    "text": "Sentinel Workforce Analytics GmbH"
   },
   {
-   "start": 829,
-   "end": 832,
+   "start": 831,
+   "end": 834,
    "type": "ORG",
    "text": "SWA"
   },
   {
-   "start": 1187,
-   "end": 1198,
+   "start": 1189,
+   "end": 1200,
    "type": "PERSON",
    "text": "Mme Lambert"
   },
   {
-   "start": 1270,
-   "end": 1295,
+   "start": 1272,
+   "end": 1297,
    "type": "URL",
    "text": "sentinelwatch.example.com"
   },
   {
-   "start": 1406,
-   "end": 1416,
+   "start": 1408,
+   "end": 1418,
    "type": "LOC",
    "text": "Willebroek"
   },
   {
-   "start": 1418,
-   "end": 1433,
+   "start": 1420,
+   "end": 1434,
    "type": "LOC",
-   "text": "Industrieweg 14"
+   "text": "Ambachtsweg 27"
   },
   {
-   "start": 1440,
-   "end": 1450,
+   "start": 1441,
+   "end": 1451,
    "type": "LOC",
    "text": "Willebroek"
   },
   {
-   "start": 1613,
-   "end": 1616,
+   "start": 1614,
+   "end": 1617,
    "type": "ORG",
    "text": "SWA"
   },
   {
-   "start": 1638,
-   "end": 1644,
+   "start": 1639,
+   "end": 1645,
    "type": "LOC",
    "text": "Munich"
   },
   {
-   "start": 1757,
-   "end": 1779,
+   "start": 1758,
+   "end": 1780,
    "type": "ORG",
    "text": "Cloudhaven Hosting Ltd"
   },
   {
-   "start": 1781,
-   "end": 1787,
+   "start": 1782,
+   "end": 1788,
    "type": "LOC",
    "text": "Dublin"
   },
   {
-   "start": 1811,
-   "end": 1842,
+   "start": 1812,
+   "end": 1843,
    "type": "ORG",
    "text": "Pinecrest Support Services Inc."
   },
   {
-   "start": 1844,
-   "end": 1850,
+   "start": 1845,
+   "end": 1851,
    "type": "LOC",
    "text": "Denver"
   },
   {
-   "start": 1991,
-   "end": 2005,
+   "start": 1992,
+   "end": 2006,
    "type": "PERSON",
    "text": "Anneliese Roth"
   },
   {
-   "start": 2108,
-   "end": 2115,
+   "start": 2109,
+   "end": 2116,
    "type": "ORG",
    "text": "Novaris"
   },
   {
-   "start": 2230,
-   "end": 2239,
+   "start": 2231,
+   "end": 2240,
    "type": "PERSON",
    "text": "M. Benali"
   },
   {
-   "start": 3322,
-   "end": 3328,
+   "start": 3323,
+   "end": 3329,
    "type": "LOC",
    "text": "Denver"
   },
   {
-   "start": 3380,
-   "end": 3411,
+   "start": 3381,
+   "end": 3412,
    "type": "ORG",
    "text": "Pinecrest Support Services Inc."
   },
   {
-   "start": 4068,
-   "end": 4075,
+   "start": 4069,
+   "end": 4076,
    "type": "ORG",
    "text": "Novaris"
   },
   {
-   "start": 4174,
-   "end": 4179,
+   "start": 4175,
+   "end": 4180,
    "type": "ORG",
    "text": "Argus"
   },
   {
-   "start": 4311,
-   "end": 4314,
+   "start": 4312,
+   "end": 4315,
    "type": "ORG",
    "text": "SWA"
   },
   {
-   "start": 4363,
-   "end": 4369,
+   "start": 4364,
+   "end": 4370,
    "type": "LOC",
    "text": "Denver"
   },
   {
-   "start": 4574,
-   "end": 4596,
+   "start": 4575,
+   "end": 4597,
    "type": "ORG",
    "text": "Cloudhaven Hosting Ltd"
   },
   {
-   "start": 4602,
-   "end": 4633,
+   "start": 4603,
+   "end": 4634,
    "type": "ORG",
    "text": "Pinecrest Support Services Inc."
   },
   {
-   "start": 5331,
-   "end": 5334,
+   "start": 5332,
+   "end": 5335,
    "type": "ORG",
    "text": "KBC"
   },
   {
-   "start": 5341,
-   "end": 5360,
+   "start": 5342,
+   "end": 5361,
    "type": "IBAN",
    "text": "BE80 7344 4181 2777"
   },
   {
-   "start": 5398,
-   "end": 5411,
+   "start": 5399,
+   "end": 5412,
    "type": "CASE_REF",
-   "text": "VDA/2026/0417"
+   "text": "VFA/2026/0562"
   },
   {
-   "start": 5469,
-   "end": 5478,
+   "start": 5470,
+   "end": 5479,
    "type": "PERSON",
    "text": "M. Benali"
   },
   {
-   "start": 5498,
-   "end": 5508,
+   "start": 5499,
+   "end": 5509,
    "type": "LOC",
    "text": "Willebroek"
   },
   {
-   "start": 5598,
-   "end": 5613,
+   "start": 5599,
+   "end": 5616,
    "type": "PERSON",
-   "text": "Hélène Delcourt"
+   "text": "Hélène Fauconnier"
   },
   {
-   "start": 5631,
-   "end": 5664,
+   "start": 5634,
+   "end": 5669,
    "type": "EMAIL",
-   "text": "h.delcourt@vda-avocats.example.be"
+   "text": "h.fauconnier@vfa-avocats.example.be"
   },
   {
-   "start": 5667,
-   "end": 5682,
+   "start": 5672,
+   "end": 5687,
    "type": "PHONE",
    "text": "+32 2 555 14 80"
   },
   {
-   "start": 5684,
-   "end": 5698,
+   "start": 5689,
+   "end": 5701,
    "type": "PERSON",
-   "text": "Julien Peeters"
+   "text": "Julien Daems"
   },
   {
-   "start": 5707,
-   "end": 5739,
+   "start": 5710,
+   "end": 5744,
    "type": "ORG",
-   "text": "Vandermeulen Delcourt & Associés"
+   "text": "Vandermeulen Fauconnier & Associés"
   },
   {
-   "start": 5740,
-   "end": 5757,
+   "start": 5745,
+   "end": 5762,
    "type": "LOC",
    "text": "Avenue Louise 480"
   },
   {
-   "start": 5764,
-   "end": 5773,
+   "start": 5769,
+   "end": 5778,
    "type": "LOC",
    "text": "Bruxelles"
   }
@@ -337,127 +337,127 @@
    "text": "RGPD"
   },
   {
-   "start": 964,
-   "end": 998,
+   "start": 966,
+   "end": 1000,
    "type": "PUBLIC",
    "text": "Autorité de protection des données"
   },
   {
-   "start": 1000,
-   "end": 1003,
+   "start": 1002,
+   "end": 1005,
    "type": "PUBLIC",
    "text": "APD"
   },
   {
-   "start": 1703,
-   "end": 1707,
+   "start": 1704,
+   "end": 1708,
    "type": "PUBLIC",
    "text": "RGPD"
   },
   {
-   "start": 2371,
-   "end": 2375,
+   "start": 2372,
+   "end": 2376,
    "type": "PUBLIC",
    "text": "RGPD"
   },
   {
-   "start": 2504,
-   "end": 2548,
+   "start": 2505,
+   "end": 2549,
    "type": "PUBLIC",
    "text": "Comité européen de la protection des données"
   },
   {
-   "start": 2743,
-   "end": 2746,
+   "start": 2744,
+   "end": 2747,
    "type": "PUBLIC",
    "text": "APD"
   },
   {
-   "start": 3004,
-   "end": 3013,
+   "start": 3005,
+   "end": 3014,
    "type": "PUBLIC",
    "text": "CCT n° 81"
   },
   {
-   "start": 3059,
-   "end": 3081,
+   "start": 3060,
+   "end": 3082,
    "type": "PUBLIC",
    "text": "loi du 30 juillet 2018"
   },
   {
-   "start": 3374,
-   "end": 3378,
+   "start": 3375,
+   "end": 3379,
    "type": "PUBLIC",
    "text": "RGPD"
   },
   {
-   "start": 3533,
-   "end": 3554,
+   "start": 3534,
+   "end": 3555,
    "type": "PUBLIC",
    "text": "Commission européenne"
   },
   {
-   "start": 3683,
-   "end": 3720,
+   "start": 3684,
+   "end": 3721,
    "type": "PUBLIC",
    "text": "Cour de justice de l'Union européenne"
   },
   {
-   "start": 3741,
-   "end": 3749,
+   "start": 3742,
+   "end": 3750,
    "type": "PUBLIC",
    "text": "C-311/18"
   },
   {
-   "start": 3997,
-   "end": 4003,
+   "start": 3998,
+   "end": 4004,
    "type": "PUBLIC",
    "text": "BayLDA"
   },
   {
-   "start": 4034,
-   "end": 4037,
+   "start": 4035,
+   "end": 4038,
    "type": "PUBLIC",
    "text": "APD"
   },
   {
-   "start": 4567,
-   "end": 4571,
+   "start": 4568,
+   "end": 4572,
    "type": "PUBLIC",
    "text": "RGPD"
   },
   {
-   "start": 5016,
-   "end": 5019,
+   "start": 5017,
+   "end": 5020,
    "type": "PUBLIC",
    "text": "APD"
   },
   {
-   "start": 5045,
-   "end": 5049,
+   "start": 5046,
+   "end": 5050,
    "type": "PUBLIC",
    "text": "RGPD"
   },
   {
-   "start": 5070,
-   "end": 5073,
+   "start": 5071,
+   "end": 5074,
    "type": "PUBLIC",
    "text": "APD"
   },
   {
-   "start": 5183,
-   "end": 5187,
+   "start": 5184,
+   "end": 5188,
    "type": "PUBLIC",
    "text": "CNIL"
   },
   {
-   "start": 5195,
-   "end": 5198,
+   "start": 5196,
+   "end": 5199,
    "type": "PUBLIC",
    "text": "APD"
   }
  ],
- "notes": "Belgian law-firm memo to a client's DPO on a GDPR Article 35 DPIA for a vendor-supplied workforce-monitoring tool. SHOULD redact: the client (Novaris Logistics SA, all-caps header form, bare 'Novaris'), the project codename ('Projet Argus' and bare 'Argus'), the advising firm + its street address and office city (Bruxelles, three times), the firm's lawyers + e-mail + phone, the client's DPO (full name and 'Mme Lambert') + e-mail + phone, the HR director (full name and 'M. Benali'), the vendor with legal form + defined acronym 'SWA' + its seat (Munich) + its DPO (Anneliese Roth, no honorific), the bare tool domain sentinelwatch.example.com, both sub-processors + their cities (Dublin, Denver, the latter three times), the affected warehouse address (Industrieweg 14) and town (Willebroek), both internal references (NLS-DPO-2026-011, VDA/2026/0417 twice), the firm's bank named only by its acronym (KBC) and the IBAN. SHOULD NOT redact: Autorité de protection des données / APD, CNIL, BayLDA (all DPAs), Comité européen de la protection des données, Commission européenne, Cour de justice de l'Union européenne and case C-311/18, RGPD, loi du 30 juillet 2018, CCT n° 81, WP248 rev.01, États-Unis / Belgique / Union européenne (countries and jurisdictions), and role nouns ('le responsable du traitement', 'le sous-traitant', 'le Cabinet', 'la déléguée à la protection des données', 'le conseil d'entreprise', 'la hiérarchie'). Honorifics stay outside full-name spans (corpus convention) but are included in honorific-only mentions.",
+ "notes": "Belgian law-firm memo to a client's DPO on a GDPR Article 35 DPIA for a vendor-supplied workforce-monitoring tool. SHOULD redact: the client (Novaris Logistics SA, all-caps header form, bare 'Novaris'), the project codename ('Projet Argus' and bare 'Argus'), the advising firm + its street address and office city (Bruxelles, three times), the firm's lawyers + e-mail + phone, the client's DPO (full name and 'Mme Lambert') + e-mail + phone, the HR director (full name and 'M. Benali'), the vendor with legal form + defined acronym 'SWA' + its seat (Munich) + its DPO (Anneliese Roth, no honorific), the bare tool domain sentinelwatch.example.com, both sub-processors + their cities (Dublin, Denver, the latter three times), the affected warehouse address (Ambachtsweg 27) and town (Willebroek), both internal references (NLS-DPO-2026-011, VFA/2026/0562 twice), the firm's bank named only by its acronym (KBC) and the IBAN. SHOULD NOT redact: Autorité de protection des données / APD, CNIL, BayLDA (all DPAs), Comité européen de la protection des données, Commission européenne, Cour de justice de l'Union européenne and case C-311/18, RGPD, loi du 30 juillet 2018, CCT n° 81, WP248 rev.01, États-Unis / Belgique / Union européenne (countries and jurisdictions), and role nouns ('le responsable du traitement', 'le sous-traitant', 'le Cabinet', 'la déléguée à la protection des données', 'le conseil d'entreprise', 'la hiérarchie'). Honorifics stay outside full-name spans (corpus convention) but are included in honorific-only mentions.",
  "source": "agent-synthetic",
  "split": "heldout",
  "genre": "mémo RGPD / analyse d'impact",

@@ -120,6 +120,29 @@ exist at run time needs the runners re-run (`--render` says which).
 
 Commit the JSON, not the `.docx`: the corpus is the JSON.
 
+## Reviewing the synthetic batch (doc_021–035)
+
+Fifteen documents drafted by agents from a genre brief, one agent per
+document, each passing the programmatic bar in `benchmark/synth.py`
+(length, identifier density and variety, public mentions, declared
+long-tail traps, language, no whitelist conflicts). They are the
+`heldout` split: nothing in Jude was tuned on them. Their review copies
+are `review/doc_021_….docx` … `doc_035_….docx`, same legend.
+
+Read in this order:
+
+1. `benchmark/synth/review_notes.md` — an independent judge's realism,
+   consistency and language scores, with up to five concrete issues
+   per document and which to open first.
+2. `benchmark/synth/POLICY_QUESTIONS.md` — the six annotation rulings
+   the batch needs (codenames, published vs. live case references,
+   registry numbers, officials in a public capacity, honorifics,
+   cities). Decide once; the defaults applied are marked.
+3. The `.docx` files, as above. Rewrite freely — the text is expected
+   to change; offsets are recomputed at ingest.
+
+Then `ingest --force` per document and `--render` as for the rest.
+
 ## Notes
 
 * The extracted text is byte-for-byte what Jude's DOCX adapter

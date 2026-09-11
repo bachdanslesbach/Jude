@@ -15,7 +15,7 @@ Spec format (`benchmark/synth/specs/<id>.json`):
     {
       "id": "doc_021_board_minutes_en",
       "title": "Minutes of the board — Project Ganymede",
-      "language": "en",                 # en | fr | nl
+      "language": "en",                 # en | fr
       "genre": "board minutes",
       "split": "heldout",               # never used for tuning
       "text": "…450–900 words…",
@@ -42,7 +42,7 @@ from collections.abc import Iterable
 from pathlib import Path
 
 TYPES = ("PERSON", "ORG", "LOC", "EMAIL", "PHONE", "IBAN", "CASE_REF", "URL", "SECRET")
-LANGUAGES = ("en", "fr", "nl")
+LANGUAGES = ("en", "fr")  # corpus policy: English and French only
 TRAPS = (
     "codename",            # Project Ganymede — bare "Ganymede" later
     "vessel",              # M/V Aurelia
@@ -112,10 +112,115 @@ def build(spec: dict) -> dict:
     }
 
 
-def validate(spec: dict) -> list[str]:
-    """Programmatic quality bar. Empty list == acceptable."""
+# Real banks named by acronym may recur across documents (KBC finances
+# half of Flanders); everything else an agent invents must be unique.
+_ALLOWED_SHARED = frozenset({
+    "kbc", "cbc", "ing", "belfius", "bnp", "bnp paribas", "bnp paribas fortis",
+    "ubs", "bcee", "bil", "deutsche bank", "crédit agricole", "credit agricole",
+    "société générale", "societe generale", "rabobank", "abn amro", "hsbc",
+})
+_HONORIFIC_RE = re.compile(
+    r"^(?:Mr|Mrs|Ms|Mx|Dr|Prof|Me|M|Mme|Mlle|Maître|Monsieur|Madame|Dhr|Mevr|"
+    r"Meester|Avv|Herr|Frau|Sir|Dame)\.?\s+"
+)
+_YEAR_RE = re.compile(r"^(?:19|20)\d{2}$")
+
+
+def _last_token(surface: str) -> str | None:
+    s = _HONORIFIC_RE.sub("", surface.strip())
+    toks = [t for t in re.split(r"[\s'’-]+", s) if t]
+    if not toks:
+        return None
+    last = toks[-1]
+    return last if len(last) >= 4 and last[0].isupper() else None
+
+
+def _bounded(surface: str) -> re.Pattern[str]:
+    return re.compile(r"(?<!\w)" + re.escape(surface) + r"(?!\w)")
+
+
+def collisions(spec: dict, corpus_dir: Path | str) -> list[str]:
+    """Surfaces of `spec` already used by another corpus document.
+
+    Checked: exact PERSON/ORG/LOC surfaces (in the other document's
+    gold or text), surnames shared between PERSON spans, exact
+    identifiers, and 4+-digit runs (years excluded) shared between
+    case references — the "0417" fingerprint. Banks by acronym and
+    anything under `public` are allowed to recur.
+    """
 
     errs: list[str] = []
+    others = []
+    for p in sorted(Path(corpus_dir).glob("doc_*.json")):
+        d = json.loads(p.read_text(encoding="utf-8"))
+        if d.get("id") != spec.get("id"):
+            others.append(d)
+    for ent in spec.get("entities", []):
+        s, t = ent["surface"], ent["type"]
+        if s.lower() in _ALLOWED_SHARED:
+            continue
+        if t == "LOC" and not re.search(r"\d", s):
+            continue  # bare city / region names recur legitimately; addresses must not
+        pat = _bounded(s)
+        last = _last_token(s) if t == "PERSON" else None
+        runs = [r for r in re.findall(r"\d{4,}", s) if not _YEAR_RE.match(r)] if t == "CASE_REF" else []
+        for d in others:
+            golds = d.get("gold_spans", [])
+            if any(g["text"] == s for g in golds) or pat.search(d.get("text", "")):
+                errs.append(f"{t} {s!r} already used in {d['id']}")
+                break
+            if last and any(
+                g["type"] == "PERSON" and _last_token(g["text"]) == last for g in golds
+            ):
+                errs.append(f"surname {last!r} (in {s!r}) already used in {d['id']}")
+                break
+            hit = next(
+                (r for r in runs for g in golds if g["type"] == "CASE_REF" and r in g["text"]),
+                None,
+            )
+            if hit:
+                errs.append(f"reference fingerprint {hit!r} (in {s!r}) already used in {d['id']}")
+                break
+    return errs
+
+
+def sweep(corpus_dir: Path | str) -> list[str]:
+    """Cross-document reuse inside an existing corpus: surnames, ORG
+    surfaces and reference fingerprints present in ≥ 2 documents."""
+
+    import collections
+
+    by_surname: dict[str, set[str]] = collections.defaultdict(set)
+    by_org: dict[str, set[str]] = collections.defaultdict(set)
+    by_run: dict[str, set[str]] = collections.defaultdict(set)
+    for p in sorted(Path(corpus_dir).glob("doc_*.json")):
+        d = json.loads(p.read_text(encoding="utf-8"))
+        for g in d.get("gold_spans", []):
+            if g["type"] == "PERSON":
+                last = _last_token(g["text"])
+                if last:
+                    by_surname[last].add(d["id"])
+            elif g["type"] == "ORG" and g["text"].lower() not in _ALLOWED_SHARED:
+                by_org[g["text"]].add(d["id"])
+            elif g["type"] == "CASE_REF":
+                for r in re.findall(r"\d{4,}", g["text"]):
+                    if not _YEAR_RE.match(r):
+                        by_run[r].add(d["id"])
+    out = []
+    for label, table in (("surname", by_surname), ("ORG", by_org), ("reference run", by_run)):
+        for key, ids in sorted(table.items(), key=lambda kv: -len(kv[1])):
+            if len(ids) >= 2:
+                out.append(f"{label} {key!r} in {len(ids)} documents: {', '.join(sorted(ids))}")
+    return out
+
+
+def validate(spec: dict, corpus_dir: Path | str | None = None) -> list[str]:
+    """Programmatic quality bar. Empty list == acceptable. With
+    `corpus_dir`, also refuse names / numbers already used elsewhere."""
+
+    errs: list[str] = []
+    if corpus_dir is not None and "entities" in spec:
+        errs.extend(collisions(spec, corpus_dir))
     for key in ("id", "title", "language", "text", "entities"):
         if key not in spec:
             errs.append(f"missing field {key!r}")
@@ -211,18 +316,31 @@ def _load(path: Path) -> dict:
 def main(argv: list[str] | None = None) -> None:
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
+    corpus_default = Path(__file__).parent / "corpus"
     v = sub.add_parser("validate")
     v.add_argument("specs", nargs="+", type=Path)
+    v.add_argument("--corpus", type=Path, default=corpus_default,
+                   help="existing corpus to check name/number collisions against (default: benchmark/corpus)")
     b = sub.add_parser("build")
     b.add_argument("specs", nargs="+", type=Path)
-    b.add_argument("--out", type=Path, default=Path(__file__).parent / "corpus")
+    b.add_argument("--out", type=Path, default=corpus_default)
+    b.add_argument("--corpus", type=Path, default=corpus_default)
     b.add_argument("--force", action="store_true")
+    s = sub.add_parser("sweep", help="report names / numbers reused across corpus documents")
+    s.add_argument("--corpus", type=Path, default=corpus_default)
     args = p.parse_args(argv)
+
+    if args.cmd == "sweep":
+        findings = sweep(args.corpus)
+        for f in findings:
+            print(f)
+        print(f"{len(findings)} reuse(s) found" if findings else "no cross-document reuse")
+        return
 
     failed = 0
     for path in args.specs:
         spec = _load(path)
-        errs = validate(spec)
+        errs = validate(spec, corpus_dir=args.corpus if args.corpus.exists() else None)
         if errs:
             failed += 1
             print(f"✗ {path.name}")

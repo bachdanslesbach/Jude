@@ -77,6 +77,18 @@ class TestCollisions:
         spec["public"] = ["European Commission"]
         assert collisions(spec, tmp_path) == []
 
+    def test_bare_city_names_may_recur_but_street_addresses_may_not(self, tmp_path: Path):
+        from benchmark.synth import collisions
+
+        _corpus_doc(tmp_path / "doc_001_a_en.json", "doc_001_a_en",
+                    "Seat in Brussels, at Avenue Louise 250.",
+                    [("Brussels", "LOC"), ("Avenue Louise 250", "LOC")])
+        spec = _spec([("Brussels", "LOC"), ("Avenue Louise 250", "LOC")],
+                     "Seat in Brussels, at Avenue Louise 250.")
+        errs = collisions(spec, tmp_path)
+        assert not any("'Brussels'" in e for e in errs), errs
+        assert any("Avenue Louise 250" in e for e in errs), errs
+
     def test_own_document_is_not_a_collision(self, tmp_path: Path):
         from benchmark.synth import collisions
 

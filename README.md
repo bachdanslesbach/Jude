@@ -128,9 +128,11 @@ pytest
 
 ## Benchmark
 
-`benchmark/` holds a 20-document, 400-span gold corpus of synthetic
-legal documents (term sheets, pleadings, witness statements, regulatory
-submissions; EN / FR / NL) and a harness that scores any span-level or
+`benchmark/` holds a 34-document, 1,173-span gold corpus of synthetic
+legal documents (term sheets, pleadings, board minutes, Form CO, dawn-raid
+memos, settlements, data-room indexes…; EN / FR), split into a `dev` set
+Jude was tuned on and a `heldout` set it never saw, and a harness that
+scores any span-level or
 message-level PII system against it: span F1 (type-strict and
 type-agnostic), *public-body over-redaction* (how often a system
 redacts the European Commission, the DMA, a court…), sentence-level F1,

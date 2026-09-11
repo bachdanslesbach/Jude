@@ -41,15 +41,24 @@ Model revisions are pinned in the runner sources and listed under
 
 ## Protocol
 
-* **Corpus.** The 20 gold-annotated documents in `benchmark/corpus/`
-  (400 spans): term sheets, credit facilities, witness statements,
+* **Corpus.** 34 gold-annotated documents in `benchmark/corpus/`
+  (1,173 spans), English and French, in two splits. `dev` (19
+  documents: term sheets, credit facilities, witness statements,
   regulatory submissions, sanctions memos, engagement letters, patent
-  and antitrust pleadings, insolvency updates — 18 in English, one
-  French, one Dutch. All synthetic: professional secrecy rules out
-  real files. Annotation policy: redact anything that identifies a
-  party, adviser, witness or matter; leave public institutions,
-  statutes, courts and jurisdictions in place. New documents are
-  annotated in Word with one highlight colour per type
+  and antitrust pleadings, insolvency updates) is the set Jude's
+  whitelist and stop-lists were tuned on. `heldout` (15 documents:
+  board minutes, NDA, Form CO excerpt, dawn-raid memo, leniency
+  marker, RFI response, SPA excerpt, e-mail thread, arbitration
+  request, DPIA memo, due-diligence report, conclusions, settlement,
+  state-aid complaint, data-room index; 8 EN, 7 FR) was drafted by
+  agents against a programmatic quality bar
+  (`benchmark/synth.py`), judged for realism, and never consulted
+  while tuning — the honest number. All synthetic: professional
+  secrecy rules out real files. Annotation policy: redact anything
+  that identifies a party, adviser, witness or matter; leave public
+  institutions, statutes, courts and jurisdictions in place; open
+  rulings in `benchmark/synth/POLICY_QUESTIONS.md`. Documents are
+  reviewed in Word with one highlight colour per type
   ([protocol](annotation-protocol.html)); Jude pre-highlights, the
   reviewer corrects.
 * **Matching.** Lenient overlap (≥ 1 character), one-to-one, largest

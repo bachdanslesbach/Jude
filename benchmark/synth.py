@@ -346,7 +346,7 @@ def main(argv: list[str] | None = None) -> None:
     specs_default = Path(__file__).parent / "synth" / "specs"
     v.add_argument("--corpus", type=Path, default=corpus_default,
                    help="existing corpus to check name/number collisions against (default: benchmark/corpus)")
-    v.add_argument("--specs", type=Path, default=specs_default,
+    v.add_argument("--specs-dir", type=Path, default=specs_default,
                    help="sibling specs (not yet built) to check collisions against (default: benchmark/synth/specs)")
     b = sub.add_parser("build")
     b.add_argument("specs", nargs="+", type=Path)
@@ -368,7 +368,7 @@ def main(argv: list[str] | None = None) -> None:
     failed = 0
     for path in args.specs:
         spec = _load(path)
-        sd = args.specs if args.cmd == "validate" else args.specs_dir
+        sd = args.specs_dir
         errs = validate(
             spec,
             corpus_dir=args.corpus if args.corpus.exists() else None,

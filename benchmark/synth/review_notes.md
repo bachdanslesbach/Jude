@@ -167,3 +167,151 @@ Read first: **032, 022, 035, 024, 026** (substantive legal or structural fixes).
 **9. Legal substance.** Mostly sound (Art. 7:96 CCA, Art. IV.7 thresholds arithmetic in 026, Reference Rate margins and NoA paras 89–96 in 034, SCC module 3 and the 10 July 2023 DPF decision in 030, Altice in 028, eleven-month indemnity in 033). The three real slips: 032 omits art. X.35–X.40 CDE; 026 cites Intel for the wrong proposition; 022 cites Art. 6(1)(b) as the notification basis. 035's regulatory folder is internally contradictory.
 
 **10. Regenerate vs. fix.** Nothing must be regenerated for sensitivity; all fifteen pass (verify the invented BMA auditeur in 026 and the proposed arbitrator in 029 against real staff/arbitrator lists, and change "22 Bedford Row"). Consider regenerating **one of 029/032** with a different scenario (agency, franchise, or a supply dispute) — the batch currently carries the same German-supplier/Belgian-distributor termination twice under the same supplier name. Everything else is a Word-level fix.
+
+
+# Batch 2 (doc_036–045)
+
+Judged on the `text` field only, same rules as batch one: scores 1–5, language scored for FR only, word counts are whitespace tokens. "Sensitivity" = no real private individual, live matter or real private company as a party; `pass*` = passes once the flagged real-name collision (found by web check, see the section) is renamed in Word. Checksums, weekdays and cross-document reuse were verified by script against the ten specs and doc_001–035.
+
+## Summary table
+
+| id | genre | lang | words | realism | consistency | language | sensitivity |
+|---|---|---|---|---|---|---|---|
+| doc_036 | lettre de licenciement pour motif grave | fr | 890 | 4 | 5 | 5 | pass* (Tilkin) |
+| doc_037 | merger-control advice memo | en | 896 | 5 | 5 | — | pass |
+| doc_038 | conclusions devant la Chambre contentieuse (APD) | fr | 868 | 4 | 4 | 5 | pass |
+| doc_039 | extrait de contrat de franchise | fr | 900 | 4 | 5 | 5 | pass* (brand) |
+| doc_040 | internal investigation interview notes | en | 880 | 5 | 5 | — | pass |
+| doc_041 | shareholders' agreement excerpt | en | 893 | 4 | 4 | — | pass (rename Quillon) |
+| doc_042 | cartel settlement submission | en | 878 | 4 | 5 | — | pass |
+| doc_043 | lettre de mise en demeure | fr | 880 | 4 | 5 | 5 | pass* (Delfosse, Bastin) |
+| doc_044 | fil d'e-mails avocat–client | fr | 890 | 5 | 5 | 5 | pass (rename Sécurilex) |
+| doc_045 | escrow agreement excerpt | en | 889 | 3 | 4 | — | pass |
+
+Read first: **045, 043, 042, 036, 039, 041** (substantive legal fixes and confirmed real-name collisions). Then the batch-level rename/renumber pass (end).
+
+---
+
+## doc_036 — lettre de licenciement pour motif grave (fr)
+
+Art. 35 timing is right (knowledge Fri 4 Sept → congé Tue 8 Sept is the third jour ouvrable, Saturday counting); every dated weekday label is correct.
+
+1. **Sensitivity.** "Maître Sébastien Tilkin (Tilkin Avocats SRL, Rue des Brasseurs 12, 4000 Liège" — a real Liège firm (Bottin – Tilkin – Bodarwé, rue Saint-Pierre) and a Liège huissier Tilkin exist. Rename the worker's counsel and firm (and the e-mail domain), e.g. "Maître Sébastien Warnant, Warnant Avocats SRL".
+2. "Monsieur Damien Massart, gérant de Vesdre Instruments SRL" — an SRL has no gérant under the CSA (art. 5:70): "administrateur".
+3. "la réparation intégrale de son préjudice, notamment sur pied de l'article VI.104 du Code de droit économique" claimed against the worker *and* Vesdre — VI.104 binds enterprises; against the worker the basis is art. 18 LCT (dol / faute lourde): "à Vesdre Instruments SRL sur pied de l'article VI.104 CDE et à vous-même sur pied de l'article 18 de la loi du 3 juillet 1978".
+4. "PAR RECOMMANDÉ ET EN MAIN PROPRE" → "EN MAINS PROPRES".
+5. "Copie est adressée à votre conseil …" (§6) and "Copie : Maître Tilkin." (foot) say the same thing — keep one. First names "Xavier" (also 044) and "Grégory" (also 043) recur in the batch.
+
+## doc_037 — merger-control advice memo (en)
+
+Best document of the batch with 040 and 044: the Art. 1(3) arithmetic (limb (c) fails on NL/FR), the IV.7 / §35 GWB / §9 KartG tests, Illumina/Grail (C-611/22 P and C-625/22 P, 3 Sept 2024) and the 15-working-day count that skips 11 November all hold.
+
+1. "Section 35(2) GWB does not exempt" — since 2013 §35(2) only covers public-sector mergers (kommunale Gebietsreform) and cooperative bank groupings; the carve-out a German practitioner checks is the de minimis market clause: "the de minimis market clause of Section 36(1) sentence 2 no. 2 GWB does not apply".
+2. "runs from receipt by the Austrian Federal Competition Authority (the "BWB") and the Federal Cartel Prosecutor" — the filing goes to the BWB alone, which forwards it to the Bundeskartellanwalt: "runs from receipt by the BWB (Section 11 KartG)".
+3. "Dhaenens has confirmed that the Seller accepts" sits between "Mr. Wim Dhaenens" and "Mr. Dhaenens indicates" in the same paragraph — off-register mid-paragraph; keep the surname-only trap in the timetable line or write "Mr. Dhaenens has confirmed".
+4. Five phone numbers with "555" (+32 2 555 62 10 / 62 19 / 62 27, +32 3 555 29 84, +32 9 555 38 06); "555 62" recurs in 038 and 042 — re-roll (batch note 3).
+5. "Rue Guimard 23, 1040 Brussels", "Dulle-Grietlaan 233, 9050 Gentbrugge", "Vaartkaai 62, 2170 Merksem" are real streets with plausible real occupants — check the numbers are vacant, as for "22 Bedford Row" in batch one. "Bonn" also hosts 038's processor.
+
+## doc_038 — conclusions devant la Chambre contentieuse (fr)
+
+LCA arts 98 and 100 §1 1°/2°, loi caméras art. 6 §2, EDPB Guidelines 3/2019, RGPD 12(3)/15(4), the DOS-2026-xxxxx docket format and the Rue de la Presse address are all correct.
+
+1. §2.2 "pictogrammes et registre d'images sont conformes à l'arrêté royal du 8 mai 2018" vs §5 "remplacé les pictogrammes par le modèle de l'arrêté royal du 10 février 2008" — the 2018 AR governs the declaration and the register, the 2008 AR (as amended 28 May 2018) the pictogram; and compliant pictograms would not need replacing. In 2.2: "pictogrammes conformes à l'arrêté royal du 10 février 2008 et registre conforme à l'arrêté royal du 8 mai 2018"; in 5: "actualisé les pictogrammes (modèle 2018)".
+2. "Optiwacht Sicherheitstechnik GmbH, établie à Bonn … qui en assure la maintenance et l'hébergement" — a Bonn installer hosting the CCTV of a Jambes garde-meubles is odd (and Bonn recurs in 037); make it a Belgian or Dutch processor, or add "hébergement dans l'Union".
+3. "Madame, Monsieur," to the Chambre contentieuse → "Monsieur le Président," (or "Madame, Monsieur les Membres de la Chambre contentieuse,").
+4. "Chaussée de Marche 412, 5100 Jambes" — house number 412 also in 039 ("Chaussée de Louvain 412"); change one.
+5. "Mme Laurence Godefroid" — the surname is 043's street ("Rue Godefroid 64", a real Namur street); rename the complainant (e.g. "Mme Laurence Hubaux"). Phones "+32 81 555 40 78 / 555 62 93": see batch note 3.
+
+## doc_039 — extrait de contrat de franchise (fr)
+
+X.27/X.28 (DIP 17 Aug → signature 22 Sept, > 1 month), VBER 2022 art. 4(b)(i) and 5(3), the Charleroi ring of communes and the 7-year term arithmetic are correct.
+
+1. **Sensitivity.** "marque verbale Benelux « BOUCHÉE DOUBLE »" — a real Brussels culinary studio "Bouchée Double" (and a 2025 gastronomy platform "Bouchées Doubles") exist in the same sector; rename the brand (e.g. « DOUBLE FOURNÉE »), incl. the domain bouchee-double.example.be.
+2. "représentée par son gérant, M. Nicolas Rimaldi" and 7.2 "cessation des fonctions de M. Rimaldi en qualité de gérant" — SRL under the CSA: "administrateur" (twice); a Brussels-drafted contract would not use the old term.
+3. 7.2 "résilier avec effet immédiat en cas de faillite, de réorganisation judiciaire" — a clause triggered by the opening of a PRJ is ineffective (art. XX.56 §2 CDE); drop "de réorganisation judiciaire" or add "dans les limites de l'article XX.56 CDE".
+4. "Réf. : MV/26/2318 — Dossier suivi par : Marlière / Kesteloot" at the head of a signed contract — a fee-earner line belongs on a draft; label the excerpt "Projet" or keep the reference in 9.2 only (same pattern in 041, 045; batch note 1).
+5. "35.000 €" is also 044's budget total; first name "Nicolas" also 044 — vary.
+
+## doc_040 — internal investigation interview notes (en)
+
+Nothing substantive to fix: the Breda → 15 April announcement sequence, the litigation hold → group exit (24 → 26 Aug), Horizontal Guidelines ch. 6, the BCA's 2020 leniency guidelines, Art. 12 Reg. 1/2003 and the closing "not verbatim; not read back" are all right.
+
+1. "Ms. Rasquin gave the Upjohn warning" / "Litigation hold of 24 August 2026" — US vocabulary in a Belgian firm's notes; acceptable in international practice, but "explained that the Firm acts for the Company only" and "document preservation notice" read more Brussels.
+2. "+49 171 5539 2846" — German 0171 mobiles carry seven digits after the prefix: "+49 171 553 9284".
+3. "Real risk that Griesbacher approaches the Belgian Competition Authority first" — with Dutch and German meetings and effect on trade, the first port of call would be the Commission: "approaches the Commission or a national authority first".
+4. "Zwartebeekstraat 41, 2800 Mechelen" vs 045's "Zwartzustersvest 141, 2800 Mechelen" — two Mechelen seats with near-identical street strings; move Pentaflex (e.g. Lier).
+5. "Wouter Deneckere", "Saskia Verlinden", "Tobias Eyckmans" — Wouter appears in four documents (040, 041, 042, 045), Saskia in 045, Tobias in 041; rename.
+
+## doc_041 — shareholders' agreement excerpt (en)
+
+Capital table (24,000 × EUR 1,000; 12,000 / 9,600 / 2,400), Art. 7:195 blocked account, 7:78, Art. 4 → 6(1)(b) condition (the batch-one 022 error is not repeated), bindende derdenbeslissing and the Lux Class A/B managers are correct.
+
+1. 2.2 "as confirmed in the Expert's report under Article 7:197 of the Code" covers only Vlietmolen's extrusion line, while 2.3 issues the Founder's 2,400 shares "against the contribution in kind of the Halyard know-how and the domain name" — that contribution also needs the 7:197 report and a value: "…together with the Founder's contribution in kind valued at EUR 2,400,000, in the Expert's report under Article 7:197".
+2. 8.1 "declaring the formation of Zwalmveld Bioplastics NV as a full-function joint venture" — the Company already exists (enterprise number, seat, Founder); what is notified is the acquisition of joint control: "declaring the acquisition of joint control over the Company by Vlietmolen and the Investor (a full-function joint venture)…"; add that the Art. 1 thresholds are met on the two shareholders' group turnover.
+3. 10.1 "the Enterprise Court of Brussels (Dutch-speaking division)" — a separate court, not a division: "the Dutch-speaking Enterprise Court of Brussels" (as 045 has it).
+4. "Drafted by Tanghe Sabbe Advocaten BV … our ref. TS/2026/HAL/0731 (Vereecke / Tanghe)" on an execution version — delete or move to a cover e-mail; "0731" ≈ 044's "PJ/2026/07731".
+5. "Quillon Growth Equity ("QGE")" — "Quillon Partners" is a real investment advisory firm; rename. "Bavo" (also 042), "Tobias" (040), "Wouter" (040/042/045) recur; "Dated 3 September 2026" is also 045's signing date.
+
+## doc_042 — cartel settlement submission (en)
+
+The point-20 checklist (liability, facts/qualification/role/duration, maximum fine, procedural confirmations, language), points 17/27/29/32, Art. 10a(2) and 15(1a) Reg. 773/2004, Art. 6(6) Dir. 2014/104 and the Leniency Notice second-applicant band are all correct; the surname-only trap sits in a quoted footnote, as batch one recommended.
+
+1. "enterprise number 0682.315.402" fails mod 97 → "0682.315.420".
+2. "By hand and by secure e-mail" — settlement submissions are lodged via eLeniency: "Submitted via eLeniency; hard copy by hand" (same slip as batch-one 025).
+3. "quoted at paragraph 148 of the summary of objections" / "as presented in the summary of objections of 2 July 2026" — not a Settlement Notice term; the Commission discloses the "essential elements" at settlement meetings (point 16): "the Commission's presentation of the essential elements of the case at the settlement meeting of 2 July 2026 (point 16 of the Settlement Notice)".
+4. §12 "In that event the acknowledgements above shall be deemed withdrawn" — "that event" has no antecedent after 11(c): "Should the statement of objections or the final decision not reflect this submission, the acknowledgements…".
+5. "+32 2 555 62 39" shares "555 62" with 037/038; "Céline" (043), "Harriet" (045), "Wouter" (040/041/045), "Bavo" (041), "Breda" (040) recur — rename/renumber. Verify "Case AT.41786" (and 045's "M.12917") against the case register at release.
+
+## doc_043 — lettre de mise en demeure (fr)
+
+Arithmetic (4 invoices = 96,720.50; +160 +9,672.05 = 106,552.55), loi du 2 août 2002 arts 5–6, art. 1798 aCC action directe, competence of tribunal de l'entreprise de Liège, division Huy (Amay) and the agréation point are correct; excellent Belgian French ("TVAC", "agréation", "sans reconnaissance préjudiciable").
+
+1. "facture n° F26-1183 … : 41.140,00 € TVAC" (×4) — works on immovable property between VAT-registered contractors are reverse-charged (AR n° 1, art. 20): a subcontractor's invoices carry no VAT. Write "HTVA (TVA autoliquidée par le cocontractant)" on the four lines; the totals can stay.
+2. **Sensitivity.** "Maître Sandrine Delfosse, Delfosse & Coibion, Rue des Vennes 27, 4020 Liège" — "Avocats Delfosse" is a real Liège firm (founded 1920) active in construction and liability law: rename (e.g. "Maître Sandrine Gilon, Gilon & Coibion"). "HENNEQUIN & BASTIN AVOCATS SRL" — a Maître Hélène Bastin practises at the Namur bar: rename the second partner. "Tôleries Havelange SA … Andenne" — Andenne has real Havelange family businesses (Scierie Havelange): rename or move the seat.
+3. "À l'attention de Monsieur Grégory Marbaix, gérant" → "administrateur" (SRL, CSA).
+4. "IBAN BE50 7320 4471 9053" passes the ISO mod-97 check but fails the Belgian BBAN check digit → "BE49 7320 4471 9071".
+5. "Nos réf. : CH/2026/1362-TOH" ≈ 038's "PW/2026/1364-STM"; "Rue Godefroid 64" = 038's complainant surname and shares the house number with 044's "Rue de la Sablière 64" — re-roll.
+
+## doc_044 — fil d'e-mails avocat–client (fr)
+
+Best French document: X.36–X.38 handled correctly (the point batch-one 032 missed), Cass. 10 sept. 1971 (Pas., 1972, I, 28) accurate, art. 156 loi du 4 avril 2014, arts 735/747 CJ, the 24 € fonds d'aide juridique, the 12,100 € TVAC provision and the weekday chain (Mon 7 → Tue 8 → Wed 9 → Thu 10) all hold; the IBAN sits where it belongs.
+
+1. "IBAN BE72 7320 5581 9046" — ISO check passes, Belgian BBAN check digit fails → "BE85 7320 5581 9006".
+2. "Sécurilex Assurances SA" — one letter from Securex, a real Belgian provider of protection juridique: rename (e.g. "Juridis Protect SA").
+3. 10 Sept "Camille vous envoie ce matin la convention d'honoraires et le projet de citation" after 8 Sept "projet de citation ci-joint" → "le projet de citation revu".
+4. "Le gérant de HIB, Ludovic Quertinmont" — tolerable in the client's register (SRL → administrateur); leave or fix with the others.
+5. "PJ/2026/07731" ≈ 041's "TS/2026/HAL/0731"; "Rue de la Sablière 64, 1400 Nivelles" — Nivelles is also 024's raided site and "64" is 043's house number; first names "Nicolas" (039) and "Xavier" (036) recur — vary.
+
+## doc_045 — escrow agreement excerpt (en)
+
+1. "for EUR 58,400,000 … Completion is conditional on the European Commission declaring the concentration compatible … (Case M.12917)" — a wind-farm target sold for EUR 58.4 m cannot reach the Art. 1 EUMR turnover floors (the target itself needs EUR 250 m / 100 m EU-wide turnover); a Brussels reader stops here. Either replace the condition with the Belgian FDI screening (cooperation agreement of 30 Nov 2022; Interfederal Screening Committee — apt for a UK buyer of Belgian energy assets) or make the deal ten times larger.
+2. "notified the concentration on 21 August 2026 …; a decision is expected by 23 October 2026" — Phase I is 25 working days: 25 September 2026 (23 October ≈ 45 WD; with commitments 35 WD → 9 October). Fix the date if the EU condition stays.
+3. "Cnockaert Wynants Advocaten BV — Our ref.: CW-26-1447/ESC (Cnockaert / Wynants)" in the title block of an execution version — delete or move to a cover note (as 039, 041).
+4. "conventional sequestrator (séquestre conventionnel) … Articles 1956 to 1958 of the old Belgian Civil Code" — a French term in an otherwise Dutch-language notarial setting (derdenrekening, bedrijfsrevisor): "(sekwester / séquestre conventionnel)"; art. 1956 presumes a "chose contentieuse", so add "by analogy".
+5. "58,400,000" equals doc_026's turnover figure "58.400.000 EUR"; "Dated 3 September 2026" also 041; long-stop "26 February 2027" also 037 and 044; "Zwartzustersvest 141, 2800 Mechelen" ≈ 040's "Zwartebeekstraat 41, 2800 Mechelen"; "Wouter", "Saskia", "Harriet" recur — vary. Otherwise sound: Art. 7:93 CSA, ING/BBRUBEBB, the Dutch-speaking Enterprise Court and "Commercial Court in London" (the 027 fix applied).
+
+---
+
+## Batch-level observations
+
+**1. Reference-number fingerprint — mostly fixed, template still visible.** Batch one's "0417" token is gone: the 19 references carry distinct digit runs. Two near-pairs remain (043 "CH/2026/1362-TOH" vs 038 "PW/2026/1364-STM"; 041 "TS/2026/HAL/0731" vs 044 "PJ/2026/07731"), and the shape "AA/2026/dddd-XXX" (initials / year / four digits / three-letter codename) is used by five firms (037, 038, 040, 042, 043), while three contracts carry a "(Surname / Surname)" fee-earner tag (039, 041, 045). Vary the shapes.
+
+**2. Cross-document name reuse — surnames fixed, first names and cities not.** No surname of batch two recurs within the batch or in doc_001–035 (script-checked; batch one's Lambrechts/Meridian problem is solved), and the five codenames (Sarment, Bramble, Halyard, Cinnabar, Sorbier) are unique. First names cluster instead: Wouter ×4 (040, 041, 042, 045), Saskia, Tobias, Bavo, Harriet, Céline, Nicolas, Xavier, Grégory ×2 each. Geography clusters: three Namur firms at 5000 Namur (038, 043, 044), Mechelen ×2 (040, 045), Breda ×2 (040, 042), Bonn ×2 (037, 038), 1040 Brussels ×2 (037, 045), Nivelles (044 + 024). "Godefroid" is a surname in 038 and a (real) street in 043.
+
+**3. Numeric duplicates.** House number 412 (038, 039), 62/63/64 clusters (Rue des Trois Fontaines 62 / Vaartkaai 62; Kapellestraat 63 / boulevard 63 / Rue Pépin 63; Rue Godefroid 64 / Rue de la Sablière 64); phone group "555 62" in 037, 038, 042 (nine "555" numbers in the batch, all in 037/038/042 — the FR letters from Huy, Namur and Liège use genuine zone codes and read better); EUR 58,400,000 (045) = doc_026's turnover; 218,400 (043) = doc_017's data-subject count; 35,000 (039, 044); long-stop 26 Feb 2027 (037, 044, 045); signing date 3 Sept 2026 (041, 045); 10 September 2026 is "today" in six of ten (036, 038, 040, 042, 043, 044), as 11 September was in batch one.
+
+**4. Checksums — recurred.** One of thirteen enterprise numbers fails mod 97 (042: 0682.315.402 → 0682.315.420). All six IBANs pass the ISO mod-97 check, but two fail the Belgian BBAN check digit (043 → BE49 7320 4471 9071; 044 → BE85 7320 5581 9006); batch one's 035 (BE72 7340 8812 5507) has the same latent defect — the first report validated ISO only. Add the BBAN check to the validator.
+
+**5. Calendar — fixed.** Every 2026 date is a weekday and all ~25 stated weekday labels (036, 037, 040, 043, 044) are correct; 036's three-working-day count and 037's 15-working-day count (skipping 11 November) are right. The only weekend dates are real statute dates (loi du 3 décembre 2017, AR du 10 février 2008). The one calendar error is legal, not weekday: 045's Phase I date.
+
+**6. IBANs as benchmark artefacts — fixed.** Each IBAN now sits where a practitioner puts it: final pay (036), royalties clause (039), blocked capital account (041), payment paragraph of a demand letter (043), fee e-mail (044), escrow-account definition (045).
+
+**7. Surname-only in formal filings — fixed.** 042 puts "Vezzani"/"Blancquaert" inside a quoted message in a footnote and 038 puts "Godefroid" in a quoted e-mail subject, as recommended; the internal notes (040) and e-mails (044) use bare names naturally. One mild lapse: 037's mid-paragraph "Dhaenens has confirmed".
+
+**8. Language.** FR (036, 038, 039, 043, 044) is native Belgian legal French: "sur pied de", "pécule de vacances de sortie", "C4", "Dimona OUT", "TVAC", "agréation", "sans reconnaissance préjudiciable", "débats succincts", "indemnité de procédure", "Chère Maître", "Bien à vous", "le grief manque en fait" — no calques found. Two nits: "en main propre" (036), and "gérant" for an SRL in 036, 039, 043, 044 — pre-CSA vocabulary ("administrateur"); acceptable in a client's e-mail (044), a slip in a Brussels-drafted contract (039).
+
+**9. Legal substance — stronger than batch one, one structural slip.** Right: 037's thresholds and referral analysis; 042's point-20 checklist; 043's action directe and 2002 law; 044's X.36–X.38 and Cass. 1971; 036's art. 35 timing; 038's LCA arts 98/100; 039's VBER 4(b)(i)/5(3); 041's 7:195/7:197 and Art. 4 → 6(1)(b); 045's 7:93 and court names (the 027 "Commercial Court of London" fix applied). Wrong or loose: 045's EU clearance condition on a EUR 58 m deal and its Phase I date; 043's "TVAC" on reverse-charged construction invoices; 042's "summary of objections" and hand delivery instead of eLeniency (025's slip repeated); 041's court name and 7:197 coverage; 037's §35(2) GWB; 038's pictogram decree; 039's PRJ termination trigger.
+
+**10. Sensitivity — web-checked this time; several real-name collisions.** None is a real individual named as a party, so nothing fails outright, but rename before release: Tilkin (036 — real Liège law firm and huissier), Delfosse (043 — real Liège firm in construction/liability law), Bastin (043 — real Namur avocate), Bouchée Double (039 — real Brussels culinary studio), Sécurilex ≈ Securex (044 — real insurer, same product), Quillon ≈ Quillon Partners (041), Havelange family businesses in Andenne (043). All other invented companies, firms, notaries and competitors (Hesbaye Capteurs, Vesdre Instruments, Stockerie Mosane, Sablieux, Rimaldi Lunch, Optiwacht, Pentaflex Conveyor Belts, Terhaegen, Waelkens Sensortechniek, Scheldeboord Invest, Zwalmveld, Vlietmolen, Kempische Windkracht, Vaerenbergh, Thistlewood, Dorimont, HIB, Merckaert, Orvalline, Griesbacher, Rondelaar, Ziegelhoff, Perlati, Fenwright, BBP, ECMF, Quintard Lemahieu, Piérard Willems, Rousselot & Wanlin, Duvivier Hasselbrink, Ravaillé Deblonde, Marlière & Kesteloot, Cnockaert Wynants, Tanghe Sabbe, Meulebroeck Dhaenens, Verbiest & Callewaert, Descheemaeker & Vranckx) returned no match. Verify AT.41786 and M.12917 against the Commission's case register at release.
+
+**11. Regenerate vs. fix.** Nothing needs regeneration. The only paragraph-level rewrite is 045's condition (recital (B) and clause 2.3); everything else — the three checksums, the seven renames, "TVAC", "gérant", the reference and phone re-roll — is a Word-level edit.

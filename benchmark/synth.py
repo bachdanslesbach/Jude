@@ -159,8 +159,10 @@ def collisions(spec: dict, corpus_dir: Path | str) -> list[str]:
         s, t = ent["surface"], ent["type"]
         if s.lower() in _ALLOWED_SHARED:
             continue
-        if t == "LOC" and not re.search(r"\d", s):
-            continue  # bare city / region names recur legitimately; addresses must not
+        if t == "LOC" and (not re.search(r"\d", s) or re.fullmatch(r"\d{4,5}\s+[^\d]+", s)):
+            continue  # bare city / region names and "postcode city" recur legitimately; addresses must not
+        if t == "PERSON" and len(_HONORIFIC_RE.sub("", s).split()) < 2:
+            continue  # a bare first name is not a fingerprint
         pat = _bounded(s)
         last = _last_token(s) if t == "PERSON" else None
         runs = [r for r in re.findall(r"\d{4,}", s) if not _YEAR_RE.match(r)] if t == "CASE_REF" else []

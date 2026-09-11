@@ -89,6 +89,16 @@ class TestCollisions:
         assert not any("'Brussels'" in e for e in errs), errs
         assert any("Avenue Louise 250" in e for e in errs), errs
 
+    def test_postcode_city_and_bare_first_names_may_recur(self, tmp_path: Path):
+        from benchmark.synth import collisions
+
+        _corpus_doc(tmp_path / "doc_001_a_en.json", "doc_001_a_en",
+                    "Ingrid signed at 1050 Brussels.",
+                    [("Ingrid", "PERSON"), ("1050 Brussels", "LOC")])
+        spec = _spec([("Ingrid", "PERSON"), ("1050 Brussels", "LOC")],
+                     "Ingrid signed at 1050 Brussels.")
+        assert collisions(spec, tmp_path) == []
+
     def test_own_document_is_not_a_collision(self, tmp_path: Path):
         from benchmark.synth import collisions
 

@@ -128,7 +128,7 @@ pytest
 
 ## Benchmark
 
-`benchmark/` holds a 34-document, 1,173-span gold corpus of synthetic
+`benchmark/` holds a 44-document, 1,775-span gold corpus of synthetic
 legal documents (term sheets, pleadings, board minutes, Form CO, dawn-raid
 memos, settlements, data-room indexes…; EN / FR), split into a `dev` set
 Jude was tuned on and a `heldout` set it never saw, and a harness that

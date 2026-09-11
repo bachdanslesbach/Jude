@@ -41,19 +41,22 @@ Model revisions are pinned in the runner sources and listed under
 
 ## Protocol
 
-* **Corpus.** 34 gold-annotated documents in `benchmark/corpus/`
-  (1,173 spans), English and French, in two splits. `dev` (19
+* **Corpus.** 44 gold-annotated documents in `benchmark/corpus/`
+  (1,775 spans), English and French, in two splits. `dev` (19
   documents: term sheets, credit facilities, witness statements,
   regulatory submissions, sanctions memos, engagement letters, patent
   and antitrust pleadings, insolvency updates) is the set Jude's
-  whitelist and stop-lists were tuned on. `heldout` (15 documents:
-  board minutes, NDA, Form CO excerpt, dawn-raid memo, leniency
-  marker, RFI response, SPA excerpt, e-mail thread, arbitration
-  request, DPIA memo, due-diligence report, conclusions, settlement,
-  state-aid complaint, data-room index; 8 EN, 7 FR) was drafted by
-  agents against a programmatic quality bar
-  (`benchmark/synth.py`), judged for realism, and never consulted
-  while tuning — the honest number. All synthetic: professional
+  whitelist and stop-lists were tuned on. `heldout` (25 documents,
+  14 EN / 11 FR: board minutes, NDA, Form CO excerpt, dawn-raid memo,
+  leniency marker and settlement submission, RFI response, SPA, SHA
+  and escrow excerpts, e-mail threads, arbitration request, DPIA memo
+  and DPA response, due-diligence report, interview notes, conclusions,
+  mise en demeure, dismissal letter, settlement, franchise excerpt,
+  merger-thresholds memo, state-aid complaint, data-room index) was
+  drafted by agents against a programmatic quality bar
+  (`benchmark/synth.py`, including a cross-document uniqueness check),
+  judged for realism, and never consulted while tuning — the honest
+  number. All synthetic: professional
   secrecy rules out real files. Annotation policy: redact anything
   that identifies a party, adviser, witness or matter; leave public
   institutions, statutes, courts and jurisdictions in place; open

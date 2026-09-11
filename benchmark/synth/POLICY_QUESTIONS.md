@@ -81,6 +81,18 @@ line; bare city names are left to the reviewer.** Worth a ruling:
 "city of a party = LOC everywhere" (as doc_001 `Brussels`) would be
 simpler for the detector but conflicts with public seats.
 
+## 7. Invoice numbers, WhatsApp group names, initials (batch 2)
+
+`F26-1183` in a mise en demeure (doc_043) is left public by its
+drafter; it identifies a precise commercial relationship once combined
+with the parties. A WhatsApp group name (`Belting Amigos BNL`,
+doc_040) is typed ORG like a codename; a contact-label initial (`KH`)
+is typed PERSON.
+
+⟶ **Batch default: invoice numbers not redacted; group names ORG;
+initials PERSON.** Worth a ruling on invoice and order numbers: in an
+insolvency or a payment dispute they are the identifiers.
+
 ## Smaller points
 
 * Span counts run 42–71 per document, above the 15–30 aim, because the

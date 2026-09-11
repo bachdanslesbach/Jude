@@ -139,14 +139,21 @@ def _bounded(surface: str) -> re.Pattern[str]:
     return re.compile(r"(?<!\w)" + re.escape(surface) + r"(?!\w)")
 
 
-def collisions(spec: dict, corpus_dir: Path | str) -> list[str]:
-    """Surfaces of `spec` already used by another corpus document.
+def collisions(
+    spec: dict,
+    corpus_dir: Path | str,
+    specs_dir: Path | str | None = None,
+) -> list[str]:
+    """Surfaces of `spec` already used by another corpus document — or
+    by a sibling spec in `specs_dir` that has not been built yet (agents
+    drafting in parallel cannot see each other's work otherwise).
 
     Checked: exact PERSON/ORG/LOC surfaces (in the other document's
     gold or text), surnames shared between PERSON spans, exact
     identifiers, and 4+-digit runs (years excluded) shared between
-    case references — the "0417" fingerprint. Banks by acronym and
-    anything under `public` are allowed to recur.
+    case references — the "0417" fingerprint. Banks by acronym, bare
+    city names, "postcode city", bare first names and anything under
+    `public` are allowed to recur.
     """
 
     errs: list[str] = []
@@ -155,6 +162,16 @@ def collisions(spec: dict, corpus_dir: Path | str) -> list[str]:
         d = json.loads(p.read_text(encoding="utf-8"))
         if d.get("id") != spec.get("id"):
             others.append(d)
+    seen_ids = {d["id"] for d in others}
+    if specs_dir is not None:
+        for p in sorted(Path(specs_dir).glob("doc_*.json")):
+            try:
+                s = json.loads(p.read_text(encoding="utf-8"))
+                if s.get("id") in seen_ids or s.get("id") == spec.get("id") or "text" not in s:
+                    continue
+                others.append(build(s))
+            except (ValueError, KeyError):
+                continue  # a sibling still being written is not our problem
     for ent in spec.get("entities", []):
         s, t = ent["surface"], ent["type"]
         if s.lower() in _ALLOWED_SHARED:
@@ -216,13 +233,18 @@ def sweep(corpus_dir: Path | str) -> list[str]:
     return out
 
 
-def validate(spec: dict, corpus_dir: Path | str | None = None) -> list[str]:
+def validate(
+    spec: dict,
+    corpus_dir: Path | str | None = None,
+    specs_dir: Path | str | None = None,
+) -> list[str]:
     """Programmatic quality bar. Empty list == acceptable. With
-    `corpus_dir`, also refuse names / numbers already used elsewhere."""
+    `corpus_dir`, also refuse names / numbers already used elsewhere
+    (and, with `specs_dir`, in sibling specs not yet built)."""
 
     errs: list[str] = []
     if corpus_dir is not None and "entities" in spec:
-        errs.extend(collisions(spec, corpus_dir))
+        errs.extend(collisions(spec, corpus_dir, specs_dir=specs_dir))
     for key in ("id", "title", "language", "text", "entities"):
         if key not in spec:
             errs.append(f"missing field {key!r}")
@@ -321,12 +343,16 @@ def main(argv: list[str] | None = None) -> None:
     corpus_default = Path(__file__).parent / "corpus"
     v = sub.add_parser("validate")
     v.add_argument("specs", nargs="+", type=Path)
+    specs_default = Path(__file__).parent / "synth" / "specs"
     v.add_argument("--corpus", type=Path, default=corpus_default,
                    help="existing corpus to check name/number collisions against (default: benchmark/corpus)")
+    v.add_argument("--specs", type=Path, default=specs_default,
+                   help="sibling specs (not yet built) to check collisions against (default: benchmark/synth/specs)")
     b = sub.add_parser("build")
     b.add_argument("specs", nargs="+", type=Path)
     b.add_argument("--out", type=Path, default=corpus_default)
     b.add_argument("--corpus", type=Path, default=corpus_default)
+    b.add_argument("--specs-dir", type=Path, default=specs_default)
     b.add_argument("--force", action="store_true")
     s = sub.add_parser("sweep", help="report names / numbers reused across corpus documents")
     s.add_argument("--corpus", type=Path, default=corpus_default)
@@ -342,7 +368,12 @@ def main(argv: list[str] | None = None) -> None:
     failed = 0
     for path in args.specs:
         spec = _load(path)
-        errs = validate(spec, corpus_dir=args.corpus if args.corpus.exists() else None)
+        sd = args.specs if args.cmd == "validate" else args.specs_dir
+        errs = validate(
+            spec,
+            corpus_dir=args.corpus if args.corpus.exists() else None,
+            specs_dir=sd if sd.exists() else None,
+        )
         if errs:
             failed += 1
             print(f"✗ {path.name}")

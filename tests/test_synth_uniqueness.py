@@ -108,6 +108,25 @@ class TestCollisions:
         assert collisions(spec, tmp_path) == []
 
 
+class TestSiblingSpecs:
+    def test_collision_with_a_sibling_spec_not_yet_built(self, tmp_path: Path):
+        from benchmark.synth import collisions
+
+        corpus = tmp_path / "corpus"
+        specs = tmp_path / "specs"
+        corpus.mkdir()
+        specs.mkdir()
+        sibling = _spec([("Kestrel Foods NV", "ORG")], "Kestrel Foods NV signed.")
+        sibling["id"] = "doc_098_sibling_en"
+        (specs / "doc_098_sibling_en.json").write_text(json.dumps(sibling), encoding="utf-8")
+        mine = _spec([("Kestrel Foods NV", "ORG"), ("Orvane Capital SA", "ORG")],
+                     "Kestrel Foods NV and Orvane Capital SA signed.")
+        (specs / "doc_099_test_en.json").write_text(json.dumps(mine), encoding="utf-8")
+        errs = collisions(mine, corpus, specs_dir=specs)
+        assert any("Kestrel Foods NV" in e and "doc_098_sibling_en" in e for e in errs), errs
+        assert not any("doc_099_test_en" in e for e in errs)  # never against itself
+
+
 class TestValidateWithCorpus:
     def test_validate_takes_a_corpus_dir_and_reports_collisions(self, tmp_path: Path):
         from benchmark.synth import validate

@@ -120,14 +120,16 @@ exist at run time needs the runners re-run (`--render` says which).
 
 Commit the JSON, not the `.docx`: the corpus is the JSON.
 
-## Reviewing the synthetic batch (doc_021–035)
+## Reviewing the synthetic batches (doc_021–045)
 
-Fifteen documents drafted by agents from a genre brief, one agent per
-document, each passing the programmatic bar in `benchmark/synth.py`
-(length, identifier density and variety, public mentions, declared
-long-tail traps, language, no whitelist conflicts). They are the
-`heldout` split: nothing in Jude was tuned on them. Their review copies
-are `review/doc_021_….docx` … `doc_035_….docx`, same legend.
+Twenty-five documents drafted by agents from a genre brief, one agent
+per document, in two batches (021–035, then 036–045), each passing the
+programmatic bar in `benchmark/synth.py` (length, identifier density
+and variety, public mentions, declared long-tail traps, language, no
+whitelist conflicts, and — from batch two — no name, address or
+reference number already used in any other document). They are the
+`heldout` split: nothing in Jude was tuned on them. Their review
+copies are `review/doc_021_….docx` … `doc_045_….docx`, same legend.
 
 Read in this order:
 

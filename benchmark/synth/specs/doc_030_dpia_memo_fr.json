@@ -1,0 +1,168 @@
+{
+ "id": "doc_030_dpia_memo_fr",
+ "title": "Novaris Logistics — Mémo AIPD Projet Argus",
+ "language": "fr",
+ "genre": "mémo RGPD / analyse d'impact",
+ "split": "heldout",
+ "text": "MÉMORANDUM — NOVARIS LOGISTICS SA\nAnalyse d'impact relative à la protection des données (article 35 RGPD) — Projet Argus\nConfidentiel — secret professionnel\n\nVandermeulen Delcourt & Associés\nAvenue Louise 480, 1050 Bruxelles\n\nBruxelles, le 11 septembre 2026\n\nÀ l'attention de : Mme Sophie Lambert, déléguée à la protection des données, Novaris Logistics SA (dpo@novaris-logistics.example.be, +32 3 555 08 41)\nCopie : M. Karim Benali, directeur des ressources humaines\nDe : Hélène Delcourt et Julien Peeters\nVos réf. : NLS-DPO-2026-011 — Nos réf. : VDA/2026/0417\n\nObjet : Projet Argus — outil fourni par Sentinel Workforce Analytics GmbH : AIPD et consultation préalable\n\nChère Madame,\n\nVous nous avez demandé si le déploiement à Willebroek de l'outil d'analyse de la productivité proposé par Sentinel Workforce Analytics GmbH (« SWA ») impose une analyse d'impact relative à la protection des données (« AIPD ») et, le cas échéant, une consultation préalable de l'Autorité de protection des données (APD). Le présent mémo ne se substitue pas à l'AIPD elle-même, que le responsable du traitement doit documenter.\n\n1. Description du traitement\n\n1.1. Selon la fiche technique transmise par Mme Lambert le 28 août 2026, l'outil, accessible aux chefs d'équipe via le domaine sentinelwatch.example.com, collecte les données des scanners portatifs, des badges d'accès et des terminaux de picking de l'entrepôt de Willebroek (Industrieweg 14, 2830 Willebroek). Il en déduit, pour chacun des 412 travailleurs, un score de productivité horaire, des périodes d'« inactivité » et des alertes adressées à la hiérarchie.\n\n1.2. SWA, dont le siège est à Munich, agit en qualité de sous-traitant au sens de l'article 28 RGPD. Elle recourt à deux sous-traitants ultérieurs : Cloudhaven Hosting Ltd (Dublin) pour l'hébergement et Pinecrest Support Services Inc. (Denver, États-Unis) pour le support de second niveau, qui implique un accès distant aux données en clair. Sa déléguée à la protection des données, Anneliese Roth, nous a confirmé le 3 septembre 2026 que cet accès n'est ni journalisé ni limité dans le temps.\n\n1.3. Novaris est le responsable du traitement. Les scores, interfacés avec la paie, influencent les primes variables et, selon M. Benali, pourraient à terme alimenter les procédures disciplinaires.\n\n2. Obligation de réaliser une AIPD\n\n2.1. L'article 35, paragraphe 3, RGPD vise l'évaluation systématique d'aspects personnels fondée sur un traitement automatisé produisant des effets significatifs. Le Comité européen de la protection des données (lignes directrices WP248 rev.01) retient notamment le suivi systématique, les données de personnes vulnérables — dont les travailleurs — et l'usage innovant de la technologie. La décision de l'APD du 16 janvier 2019 fixant la liste des traitements soumis à AIPD y ajoute la surveillance des travailleurs aux fins de contrôle de la productivité. Trois critères au moins sont réunis : l'AIPD est obligatoire.\n\n2.2. Le traitement doit en outre respecter la CCT n° 81 du 26 avril 2002 ainsi que l'article 9 de la loi du 30 juillet 2018, les durées d'absence pour raisons médicales constituant des données relatives à la santé. L'information et la consultation préalables du conseil d'entreprise sont requises.\n\n3. Transferts hors Union européenne\n\n3.1. L'accès distant depuis Denver constitue un transfert au sens du chapitre V RGPD. Pinecrest Support Services Inc. n'est pas certifiée au titre du cadre de protection des données UE–États-Unis reconnu par la décision d'adéquation de la Commission européenne du 10 juillet 2023. Le transfert repose donc sur les clauses contractuelles types (module 3), qui exigent, depuis l'arrêt de la Cour de justice de l'Union européenne du 16 juillet 2020 (C-311/18), une analyse d'impact du transfert. Le contrat communiqué n'en contient aucune et ne prévoit ni chiffrement ni pseudonymisation préalable à l'accès du support.\n\n3.2. Le contrat-cadre désigne le droit allemand et l'autorité bavaroise de contrôle (BayLDA). Cette clause ne prive pas l'APD de sa compétence à l'égard de Novaris, responsable du traitement établi en Belgique.\n\n4. Recommandations\n\n4.1. Suspendre le lancement d'Argus, prévu le 1er octobre 2026, jusqu'à la finalisation de l'AIPD et de la consultation du conseil d'entreprise.\n\n4.2. Renégocier avec SWA : (i) la suppression de l'accès en clair depuis Denver ou, à défaut, une pseudonymisation côté client avant tout ticket de support ; (ii) une journalisation intégrale des accès ; (iii) une clause étendant les obligations de l'article 28, paragraphe 4, RGPD à Cloudhaven Hosting Ltd et à Pinecrest Support Services Inc.\n\n4.3. Réduire la granularité : scores agrégés par équipe plutôt que par travailleur, suppression des alertes d'« inactivité » individuelles, exclusion des données de badge des calculs de performance.\n\n4.4. Si l'AIPD conclut malgré tout à un risque résiduel élevé — probable tant que les scores individuels alimentent les décisions de rémunération —, une consultation préalable de l'APD au titre de l'article 36 RGPD sera nécessaire ; l'APD dispose alors de huit semaines, prorogeables de six. Nous suggérons de suivre la trame d'AIPD publiée par la CNIL, que l'APD accepte en pratique.\n\nNos honoraires, conformément à la convention du 12 mai 2026, sont à régler sur le compte du Cabinet auprès de KBC (IBAN BE80 7344 4181 2777), avec la mention de notre référence VDA/2026/0417.\n\nNous restons à votre disposition pour une réunion avec M. Benali et la direction de Willebroek.\n\nNous vous prions d'agréer, chère Madame, l'expression de nos salutations distinguées.\n\nHélène Delcourt\nAvocate associée\nh.delcourt@vda-avocats.example.be — +32 2 555 14 80\n\nJulien Peeters\nAvocat\n\nVandermeulen Delcourt & Associés\nAvenue Louise 480, 1050 Bruxelles",
+ "entities": [
+  {
+   "surface": "NOVARIS LOGISTICS SA",
+   "type": "ORG"
+  },
+  {
+   "surface": "Novaris Logistics SA",
+   "type": "ORG"
+  },
+  {
+   "surface": "Novaris",
+   "type": "ORG"
+  },
+  {
+   "surface": "Projet Argus",
+   "type": "ORG"
+  },
+  {
+   "surface": "Argus",
+   "type": "ORG"
+  },
+  {
+   "surface": "Vandermeulen Delcourt & Associés",
+   "type": "ORG"
+  },
+  {
+   "surface": "Avenue Louise 480",
+   "type": "LOC"
+  },
+  {
+   "surface": "Bruxelles",
+   "type": "LOC"
+  },
+  {
+   "surface": "Sophie Lambert",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Mme Lambert",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Karim Benali",
+   "type": "PERSON"
+  },
+  {
+   "surface": "M. Benali",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Hélène Delcourt",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Julien Peeters",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Anneliese Roth",
+   "type": "PERSON"
+  },
+  {
+   "surface": "dpo@novaris-logistics.example.be",
+   "type": "EMAIL"
+  },
+  {
+   "surface": "+32 3 555 08 41",
+   "type": "PHONE"
+  },
+  {
+   "surface": "h.delcourt@vda-avocats.example.be",
+   "type": "EMAIL"
+  },
+  {
+   "surface": "+32 2 555 14 80",
+   "type": "PHONE"
+  },
+  {
+   "surface": "NLS-DPO-2026-011",
+   "type": "CASE_REF"
+  },
+  {
+   "surface": "VDA/2026/0417",
+   "type": "CASE_REF"
+  },
+  {
+   "surface": "Sentinel Workforce Analytics GmbH",
+   "type": "ORG"
+  },
+  {
+   "surface": "SWA",
+   "type": "ORG"
+  },
+  {
+   "surface": "sentinelwatch.example.com",
+   "type": "URL"
+  },
+  {
+   "surface": "Munich",
+   "type": "LOC"
+  },
+  {
+   "surface": "Cloudhaven Hosting Ltd",
+   "type": "ORG"
+  },
+  {
+   "surface": "Dublin",
+   "type": "LOC"
+  },
+  {
+   "surface": "Pinecrest Support Services Inc.",
+   "type": "ORG"
+  },
+  {
+   "surface": "Denver",
+   "type": "LOC"
+  },
+  {
+   "surface": "Industrieweg 14",
+   "type": "LOC"
+  },
+  {
+   "surface": "Willebroek",
+   "type": "LOC"
+  },
+  {
+   "surface": "KBC",
+   "type": "ORG"
+  },
+  {
+   "surface": "BE80 7344 4181 2777",
+   "type": "IBAN"
+  }
+ ],
+ "public": [
+  "Autorité de protection des données",
+  "APD",
+  "CNIL",
+  "RGPD",
+  "Comité européen de la protection des données",
+  "Commission européenne",
+  "Cour de justice de l'Union européenne",
+  "C-311/18",
+  "loi du 30 juillet 2018",
+  "CCT n° 81",
+  "BayLDA"
+ ],
+ "traps": [
+  "codename",
+  "honorific-only",
+  "bare-domain",
+  "bank-acronym",
+  "acronym-defined",
+  "internal-docket",
+  "address",
+  "adjacent-public",
+  "role-noise",
+  "all-caps-header"
+ ],
+ "notes": "Belgian law-firm memo to a client's DPO on a GDPR Article 35 DPIA for a vendor-supplied workforce-monitoring tool. SHOULD redact: the client (Novaris Logistics SA, all-caps header form, bare 'Novaris'), the project codename ('Projet Argus' and bare 'Argus'), the advising firm + its street address and office city (Bruxelles, three times), the firm's lawyers + e-mail + phone, the client's DPO (full name and 'Mme Lambert') + e-mail + phone, the HR director (full name and 'M. Benali'), the vendor with legal form + defined acronym 'SWA' + its seat (Munich) + its DPO (Anneliese Roth, no honorific), the bare tool domain sentinelwatch.example.com, both sub-processors + their cities (Dublin, Denver, the latter three times), the affected warehouse address (Industrieweg 14) and town (Willebroek), both internal references (NLS-DPO-2026-011, VDA/2026/0417 twice), the firm's bank named only by its acronym (KBC) and the IBAN. SHOULD NOT redact: Autorité de protection des données / APD, CNIL, BayLDA (all DPAs), Comité européen de la protection des données, Commission européenne, Cour de justice de l'Union européenne and case C-311/18, RGPD, loi du 30 juillet 2018, CCT n° 81, WP248 rev.01, États-Unis / Belgique / Union européenne (countries and jurisdictions), and role nouns ('le responsable du traitement', 'le sous-traitant', 'le Cabinet', 'la déléguée à la protection des données', 'le conseil d'entreprise', 'la hiérarchie'). Honorifics stay outside full-name spans (corpus convention) but are included in honorific-only mentions."
+}

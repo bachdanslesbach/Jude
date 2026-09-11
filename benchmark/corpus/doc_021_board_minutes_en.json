@@ -1,0 +1,495 @@
+{
+ "id": "doc_021_board_minutes_en",
+ "title": "Vantaris Polymers NV — board minutes approving the Ganymede SPA",
+ "language": "en",
+ "text": "VANTARIS POLYMERS NV\nNaamloze vennootschap — Uitbreidingstraat 84, 2600 Antwerp — RPR Antwerp\n\nMINUTES OF THE MEETING OF THE BOARD OF DIRECTORS\nheld on 9 September 2026 at 10:00 at the registered office\n\nBoard file: VPN-BRD-2026-014\nSubject: Project Ganymede — approval of the share purchase agreement\n\n1. Attendance\n\nPresent:\n- Mr. Bart Vercruysse, Chairman\n- Ms. Annelies De Rouck, Chief Executive Officer (gedelegeerd bestuurder)\n- Mr. Olivier Lambrechts, Chief Financial Officer\n- Dr. Ingrid Schaefer, independent director\n- Mr. Rajesh Menon, permanent representative of Solvane Industrial Holdings BV\n\nApologies: Mrs. Hilde Peeters, who gave a written proxy to Mr. Vercruysse under Article 15.3 of the articles of association.\n\nBy invitation:\n- Ms. Charlotte Van Impe, General Counsel, acting as Secretary\n- Maître Frédéric Dumoulin (corporate) and Ms. Sophie Lenaerts (EU merger control), Roosendaal & Winter LLP (\"R&W\"), outside counsel\n- Mr. Jean-Paul Kaiser, Director Corporate Finance\n\nThe Chairman noted that the quorum under Article 15.1 of the articles of association was met and that the Board paper with Annexes 1 to 4 had been circulated on 2 September 2026.\n\n2. Purpose\n\nThe Board was asked to approve the acquisition by Vantaris Polymers NV (the \"Company\") of all issued shares (the \"Shares\") in Feldmann Beschichtungen GmbH (\"Feldmann\"), a German company with registered office at Grafenberger Allee 112, 40237 Düsseldorf, from its sole shareholder Heronmere Industrial Partners LLP (the \"Seller\"), under a share purchase agreement in the draft dated 8 September 2026 (the \"SPA\").\n\n3. Presentation\n\nMr. Kaiser summarised the terms. The purchase price is EUR 186,500,000 on a cash-free, debt-free basis under a locked-box mechanism with a locked-box date of 30 June 2026 (Clause 3.4). Feldmann employs some 640 people at its plants in Düsseldorf and Wrocław and generated revenue of EUR 142 million in 2025.\n\nMs. Lenaerts presented the merger-control analysis in Annex 2. The thresholds of Article 1(2) of the EU Merger Regulation are met; the transaction must be notified to the European Commission and may not be implemented before clearance (Article 7(1) EUMR). Overlaps in industrial powder coatings are below 20 per cent except for offshore anti-corrosion primers in Belgium (about 28 per cent combined). R&W recommended pre-notification contacts on behalf of Vantaris/Feldmann with DG COMP in the week of 21 September 2026. Should the Commission refer the Belgian segment under Article 9 EUMR, the Belgian Competition Authority would review it under Book IV of the Code of Economic Law. Maître Dumoulin confirmed that closing is conditional on clearance (Clause 5.1(a)), that the long-stop date is 31 March 2027 (Clause 5.5) and that a reverse break fee of EUR 4,000,000 is payable if clearance is not obtained by that date (Clause 5.6). The Company's remedy commitment is capped at the divestment of Feldmann's primer line at Wrocław (Clause 5.3 and Annex 3).\n\n4. Financing\n\nMr. Lambrechts reported that the price will be funded by a EUR 110,000,000 term loan under a facilities agreement with KBC as arranger and agent (the \"Facilities Agreement\"), secured by a pledge over the Shares, and by available cash. The escrow amount of EUR 9,325,000 (Clause 9) will be paid at closing to the escrow account, IBAN BE77 7350 4128 8642, in the joint names of the Company and the Seller. Mr. Duncan Ashworth, managing partner of Heronmere, has confirmed the Seller's payment instructions.\n\n5. Conflicts of interest\n\nThe Chairman asked each director whether he or she had a conflicting interest of a financial nature within the meaning of Article 7:96 of the Belgian Code of Companies and Associations. None was declared. Mr. Menon confirmed that Solvane Industrial Holdings BV holds no interest in Feldmann or the Seller.\n\n6. Resolutions\n\nHaving deliberated, the Board unanimously resolved as follows.\n\nResolution 1. The Board approves the acquisition of the Shares on the terms of the SPA (R&W reference RW/GAN/2026/0417) and the transaction documents listed in Annex 1.\n\nResolution 2. Ms. De Rouck and Mr. Lambrechts, each acting jointly with one other director, are authorised to negotiate final amendments, provided that the price does not exceed EUR 190,000,000, and to sign the SPA and ancillary documents on behalf of the Company.\n\nResolution 3. The Board approves the Facilities Agreement and the related security documents and authorises the persons named in Resolution 2 to execute them.\n\nResolution 4. The Board instructs management and R&W to notify the transaction to the European Commission under Article 4 EUMR, to engage with the Belgian Competition Authority as required and to offer commitments under Article 6(2) EUMR within the limits of Annex 3. Ms. Van Impe is authorised to sign the Form CO.\n\nResolution 5. The codename Ganymede remains in use until signing; no announcement will be made before then, and the draft press release in Annex 4 is approved subject to the Seller's consent.\n\n7. Next steps and close\n\nSigning is targeted for 18 September 2026 at the offices of R&W, Regentlaan 58, 1000 Brussels. Ms. Lenaerts will post the signature version in the data room at ganymede-dataroom.example.com. Weekly calls with Mr. Ashworth continue until closing. Counsel and Mr. Kaiser left at 11:50; the meeting closed at 12:10.\n\nAnnexes: 1. Transaction documents; 2. Merger-control memorandum (R&W); 3. Remedy parameters; 4. Draft press release; 5. Financing memorandum (Lambrechts).\n\nCharlotte Van Impe\nGeneral Counsel and Secretary of the Board\nc.vanimpe@vantaris.example.be | +32 3 555 71 20\n\nBart Vercruysse\nChairman",
+ "gold_spans": [
+  {
+   "start": 0,
+   "end": 20,
+   "type": "ORG",
+   "text": "VANTARIS POLYMERS NV"
+  },
+  {
+   "start": 45,
+   "end": 65,
+   "type": "LOC",
+   "text": "Uitbreidingstraat 84"
+  },
+  {
+   "start": 72,
+   "end": 79,
+   "type": "LOC",
+   "text": "Antwerp"
+  },
+  {
+   "start": 86,
+   "end": 93,
+   "type": "LOC",
+   "text": "Antwerp"
+  },
+  {
+   "start": 216,
+   "end": 232,
+   "type": "CASE_REF",
+   "text": "VPN-BRD-2026-014"
+  },
+  {
+   "start": 242,
+   "end": 258,
+   "type": "ORG",
+   "text": "Project Ganymede"
+  },
+  {
+   "start": 333,
+   "end": 348,
+   "type": "PERSON",
+   "text": "Bart Vercruysse"
+  },
+  {
+   "start": 365,
+   "end": 382,
+   "type": "PERSON",
+   "text": "Annelies De Rouck"
+  },
+  {
+   "start": 439,
+   "end": 457,
+   "type": "PERSON",
+   "text": "Olivier Lambrechts"
+  },
+  {
+   "start": 489,
+   "end": 504,
+   "type": "PERSON",
+   "text": "Ingrid Schaefer"
+  },
+  {
+   "start": 533,
+   "end": 545,
+   "type": "PERSON",
+   "text": "Rajesh Menon"
+  },
+  {
+   "start": 575,
+   "end": 605,
+   "type": "ORG",
+   "text": "Solvane Industrial Holdings BV"
+  },
+  {
+   "start": 623,
+   "end": 636,
+   "type": "PERSON",
+   "text": "Hilde Peeters"
+  },
+  {
+   "start": 666,
+   "end": 680,
+   "type": "PERSON",
+   "text": "Mr. Vercruysse"
+  },
+  {
+   "start": 754,
+   "end": 772,
+   "type": "PERSON",
+   "text": "Charlotte Van Impe"
+  },
+  {
+   "start": 820,
+   "end": 837,
+   "type": "PERSON",
+   "text": "Frédéric Dumoulin"
+  },
+  {
+   "start": 858,
+   "end": 873,
+   "type": "PERSON",
+   "text": "Sophie Lenaerts"
+  },
+  {
+   "start": 895,
+   "end": 918,
+   "type": "ORG",
+   "text": "Roosendaal & Winter LLP"
+  },
+  {
+   "start": 921,
+   "end": 924,
+   "type": "ORG",
+   "text": "R&W"
+  },
+  {
+   "start": 950,
+   "end": 966,
+   "type": "PERSON",
+   "text": "Jean-Paul Kaiser"
+  },
+  {
+   "start": 1238,
+   "end": 1258,
+   "type": "ORG",
+   "text": "Vantaris Polymers NV"
+  },
+  {
+   "start": 1314,
+   "end": 1342,
+   "type": "ORG",
+   "text": "Feldmann Beschichtungen GmbH"
+  },
+  {
+   "start": 1345,
+   "end": 1353,
+   "type": "ORG",
+   "text": "Feldmann"
+  },
+  {
+   "start": 1400,
+   "end": 1422,
+   "type": "LOC",
+   "text": "Grafenberger Allee 112"
+  },
+  {
+   "start": 1430,
+   "end": 1440,
+   "type": "LOC",
+   "text": "Düsseldorf"
+  },
+  {
+   "start": 1468,
+   "end": 1501,
+   "type": "ORG",
+   "text": "Heronmere Industrial Partners LLP"
+  },
+  {
+   "start": 1618,
+   "end": 1628,
+   "type": "PERSON",
+   "text": "Mr. Kaiser"
+  },
+  {
+   "start": 1803,
+   "end": 1811,
+   "type": "ORG",
+   "text": "Feldmann"
+  },
+  {
+   "start": 1853,
+   "end": 1863,
+   "type": "LOC",
+   "text": "Düsseldorf"
+  },
+  {
+   "start": 1868,
+   "end": 1875,
+   "type": "LOC",
+   "text": "Wrocław"
+  },
+  {
+   "start": 1927,
+   "end": 1939,
+   "type": "PERSON",
+   "text": "Ms. Lenaerts"
+  },
+  {
+   "start": 2328,
+   "end": 2331,
+   "type": "ORG",
+   "text": "R&W"
+  },
+  {
+   "start": 2383,
+   "end": 2391,
+   "type": "ORG",
+   "text": "Vantaris"
+  },
+  {
+   "start": 2392,
+   "end": 2400,
+   "type": "ORG",
+   "text": "Feldmann"
+  },
+  {
+   "start": 2611,
+   "end": 2626,
+   "type": "PERSON",
+   "text": "Maître Dumoulin"
+  },
+  {
+   "start": 2925,
+   "end": 2933,
+   "type": "ORG",
+   "text": "Feldmann"
+  },
+  {
+   "start": 2951,
+   "end": 2958,
+   "type": "LOC",
+   "text": "Wrocław"
+  },
+  {
+   "start": 3000,
+   "end": 3014,
+   "type": "PERSON",
+   "text": "Mr. Lambrechts"
+  },
+  {
+   "start": 3119,
+   "end": 3122,
+   "type": "ORG",
+   "text": "KBC"
+  },
+  {
+   "start": 3333,
+   "end": 3352,
+   "type": "IBAN",
+   "text": "BE77 7350 4128 8642"
+  },
+  {
+   "start": 3408,
+   "end": 3423,
+   "type": "PERSON",
+   "text": "Duncan Ashworth"
+  },
+  {
+   "start": 3445,
+   "end": 3454,
+   "type": "ORG",
+   "text": "Heronmere"
+  },
+  {
+   "start": 3737,
+   "end": 3746,
+   "type": "PERSON",
+   "text": "Mr. Menon"
+  },
+  {
+   "start": 3762,
+   "end": 3792,
+   "type": "ORG",
+   "text": "Solvane Industrial Holdings BV"
+  },
+  {
+   "start": 3814,
+   "end": 3822,
+   "type": "ORG",
+   "text": "Feldmann"
+  },
+  {
+   "start": 4007,
+   "end": 4010,
+   "type": "ORG",
+   "text": "R&W"
+  },
+  {
+   "start": 4021,
+   "end": 4037,
+   "type": "CASE_REF",
+   "text": "RW/GAN/2026/0417"
+  },
+  {
+   "start": 4103,
+   "end": 4115,
+   "type": "PERSON",
+   "text": "Ms. De Rouck"
+  },
+  {
+   "start": 4120,
+   "end": 4134,
+   "type": "PERSON",
+   "text": "Mr. Lambrechts"
+  },
+  {
+   "start": 4564,
+   "end": 4567,
+   "type": "ORG",
+   "text": "R&W"
+  },
+  {
+   "start": 4783,
+   "end": 4795,
+   "type": "PERSON",
+   "text": "Ms. Van Impe"
+  },
+  {
+   "start": 4859,
+   "end": 4867,
+   "type": "ORG",
+   "text": "Ganymede"
+  },
+  {
+   "start": 5110,
+   "end": 5113,
+   "type": "ORG",
+   "text": "R&W"
+  },
+  {
+   "start": 5115,
+   "end": 5128,
+   "type": "LOC",
+   "text": "Regentlaan 58"
+  },
+  {
+   "start": 5135,
+   "end": 5143,
+   "type": "LOC",
+   "text": "Brussels"
+  },
+  {
+   "start": 5145,
+   "end": 5157,
+   "type": "PERSON",
+   "text": "Ms. Lenaerts"
+  },
+  {
+   "start": 5210,
+   "end": 5239,
+   "type": "URL",
+   "text": "ganymede-dataroom.example.com"
+  },
+  {
+   "start": 5259,
+   "end": 5271,
+   "type": "PERSON",
+   "text": "Mr. Ashworth"
+  },
+  {
+   "start": 5308,
+   "end": 5318,
+   "type": "PERSON",
+   "text": "Mr. Kaiser"
+  },
+  {
+   "start": 5429,
+   "end": 5432,
+   "type": "ORG",
+   "text": "R&W"
+  },
+  {
+   "start": 5506,
+   "end": 5516,
+   "type": "PERSON",
+   "text": "Lambrechts"
+  },
+  {
+   "start": 5520,
+   "end": 5538,
+   "type": "PERSON",
+   "text": "Charlotte Van Impe"
+  },
+  {
+   "start": 5582,
+   "end": 5611,
+   "type": "EMAIL",
+   "text": "c.vanimpe@vantaris.example.be"
+  },
+  {
+   "start": 5614,
+   "end": 5629,
+   "type": "PHONE",
+   "text": "+32 3 555 71 20"
+  },
+  {
+   "start": 5631,
+   "end": 5646,
+   "type": "PERSON",
+   "text": "Bart Vercruysse"
+  }
+ ],
+ "public_spans": [
+  {
+   "start": 2028,
+   "end": 2048,
+   "type": "PUBLIC",
+   "text": "EU Merger Regulation"
+  },
+  {
+   "start": 2098,
+   "end": 2117,
+   "type": "PUBLIC",
+   "text": "European Commission"
+  },
+  {
+   "start": 2176,
+   "end": 2180,
+   "type": "PUBLIC",
+   "text": "EUMR"
+  },
+  {
+   "start": 2406,
+   "end": 2413,
+   "type": "PUBLIC",
+   "text": "DG COMP"
+  },
+  {
+   "start": 2459,
+   "end": 2469,
+   "type": "PUBLIC",
+   "text": "Commission"
+  },
+  {
+   "start": 2512,
+   "end": 2516,
+   "type": "PUBLIC",
+   "text": "EUMR"
+  },
+  {
+   "start": 2522,
+   "end": 2551,
+   "type": "PUBLIC",
+   "text": "Belgian Competition Authority"
+  },
+  {
+   "start": 2589,
+   "end": 2609,
+   "type": "PUBLIC",
+   "text": "Code of Economic Law"
+  },
+  {
+   "start": 3674,
+   "end": 3716,
+   "type": "PUBLIC",
+   "text": "Belgian Code of Companies and Associations"
+  },
+  {
+   "start": 4601,
+   "end": 4620,
+   "type": "PUBLIC",
+   "text": "European Commission"
+  },
+  {
+   "start": 4637,
+   "end": 4641,
+   "type": "PUBLIC",
+   "text": "EUMR"
+  },
+  {
+   "start": 4662,
+   "end": 4691,
+   "type": "PUBLIC",
+   "text": "Belgian Competition Authority"
+  },
+  {
+   "start": 4748,
+   "end": 4752,
+   "type": "PUBLIC",
+   "text": "EUMR"
+  }
+ ],
+ "notes": "Board minutes of a Belgian NV approving a share purchase agreement to acquire a German competitor under a deal codename, with EUMR/BCA conditions and bank financing. SHOULD redact: the Company + all-caps header form + bare 'Vantaris' + registered office street and city (Antwerp, also in the RPR line), the target + short form + its Düsseldorf street address + plant cities (Düsseldorf, Wrocław — party-locating), the Seller + bare 'Heronmere' + its managing partner (full name and 'Mr. Ashworth'), the corporate shareholder Solvane Industrial Holdings BV, outside counsel firm + defined acronym 'R&W' + its Brussels street address and city, every director and attendee in full-name, honorific-only ('Mr. Lambrechts', 'Maître Dumoulin', 'Ms. Van Impe' …) and surname-only ('Lambrechts' in the annex list) form, the financing bank named only by acronym (KBC — a real bank, redact:true in the whitelist, because its role as arranger here is deal-confidential), the escrow IBAN, the board file reference VPN-BRD-2026-014, counsel's file reference RW/GAN/2026/0417, the codename 'Project Ganymede' and bare 'Ganymede' (annotated as CASE_REF: an internal matter reference that identifies the deal), the bare data-room domain, the Secretary's email and phone. SHOULD NOT redact: European Commission / 'the Commission', DG COMP, EU Merger Regulation / EUMR and its article references, Belgian Competition Authority, Belgian Code of Companies and Associations (Article 7:96), Code of Economic Law (Book IV), Form CO, Belgium / 'German company' (jurisdictional), role words ('the Company', 'the Seller', 'the Board', 'the Chairman', 'Counsel', 'General Counsel', 'Secretary'), defined non-identifying terms ('the Shares', 'the SPA', 'the Facilities Agreement'), dates, amounts, clause and annex numbers, and the Dutch legal-form words 'Naamloze vennootschap' / 'gedelegeerd bestuurder'.",
+ "source": "agent-synthetic",
+ "split": "heldout",
+ "genre": "board minutes",
+ "traps": [
+  "codename",
+  "honorific-only",
+  "surname-only",
+  "bare-domain",
+  "bank-acronym",
+  "acronym-defined",
+  "internal-docket",
+  "address",
+  "adjacent-public",
+  "role-noise",
+  "all-caps-header"
+ ]
+}

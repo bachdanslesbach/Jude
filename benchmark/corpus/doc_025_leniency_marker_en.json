@@ -1,0 +1,476 @@
+{
+ "id": "doc_025_leniency_marker_en",
+ "title": "Meridiaan — marker application under the 2006 Leniency Notice",
+ "language": "en",
+ "text": "VERCAUTEREN ADRIAENSSENS & PARTNERS\nAvenue des Arts 46, 1000 Brussels\nT +32 2 555 04 17\nvercauteren-adriaenssens.example.be\n\nBy hand and by secure email\n\nEuropean Commission\nDirectorate-General for Competition\nPlace Madou 1, 1210 Brussels\n\nOur ref: VAP/COMP/2026-0417\nDate: 11 September 2026\n\nSTRICTLY CONFIDENTIAL — LENIENCY APPLICATION\n\nRe: Application for a marker under point 15 of the Commission Notice on Immunity from fines and reduction of fines in cartel cases — MERIDIAAN SURFACE TECHNOLOGIES B.V.\n\nDear Madam, Dear Sir,\n\n1. We, Vercauteren Adriaenssens & Partners (the \"Firm\"), act for Meridiaan Surface Technologies B.V., a Dutch private limited liability company with its registered office in Enschede (\"Meridiaan\" or the \"Applicant\"). We hereby apply for a marker pursuant to point 15 of the Commission Notice on Immunity from fines and reduction of fines in cartel cases (OJ C 298, 8.12.2006, p. 17) (the \"Leniency Notice\") and, in the alternative, for a reduction of fines under Section III of the Leniency Notice.\n\n2. This application is based on the information presently available from an internal review that began on 24 August 2026 and is ongoing (referred to within the Firm as Project Lantern). The Applicant undertakes to perfect the marker within the period set by the Commission and to cooperate genuinely, fully and continuously within the meaning of point 12 of the Leniency Notice.\n\nNature of the suspected conduct\n\n3. The conduct concerns the supply of zinc-flake coatings for high-strength fasteners for the wind-turbine and heavy-vehicle sectors in the EEA (the \"Products\"). On present knowledge, it may have consisted of periodic contacts between competitors on the timing and level of surcharges passed on to customers following increases in zinc and epoxy resin prices and, on occasion, on the allocation of OEM tenders. The contacts appear to have begun no later than spring 2019 and to have continued, with interruptions, until at least March 2026. The Applicant does not at this stage characterise the conduct beyond stating that it may infringe Article 101 TFEU and Article 53 of the EEA Agreement.\n\nUndertakings believed to be involved\n\n4. In addition to the Applicant, the following undertakings are believed to have participated in the contacts:\n(a) Steinhauer Oberflächentechnik GmbH, Cologne (\"Steinhauer\");\n(b) Arundel Protective Systems Ltd, Sheffield (\"Arundel\"); and\n(c) Rivestimenti Tirreno S.p.A., Livorno (\"Tirreno\").\nSteinhauer is understood to hold the largest share of supply of the Products in the EEA.\n\nIndividuals\n\n5. On the Applicant's side, the contacts appear to have been conducted principally by Mr. Joris Dekkers, Head of Sales, and, from 2023 onwards, by Ms. Renske Aalbers, Key Account Manager. Neither Mr. Dekkers nor Ms. Aalbers sits on the management board; both have been instructed to preserve all documents and to make themselves available to the Commission's case team.\n\n6. The documents also refer to Dr. Falk Rennert, Managing Director of Steinhauer; Ms. Priya Whitcombe, Commercial Director of Arundel; and Mr. Cosimo Barsanti, Export Manager of Tirreno. Rennert appears to have chaired most of the meetings referred to in paragraph 7.\n\nMeetings and contacts\n\n7. The contacts took place principally in the margins of the technical committee of the Fastener Coatings Forum Europe (\"FCFE\"), a trade association based in Frankfurt of which all four undertakings are members. Following the formal FCFE sessions, a smaller group appears to have convened, in particular at the Hotel Leyendecker in Cologne on or around 14 November 2019 and 3 March 2022, and at the Grand Hotel Marchesi in Bologna in September 2024. Further contacts took place by telephone and, from 2021, through a messaging group set up by Mr. Barsanti.\n\nEvidence available\n\n8. The Lantern review team has so far identified approximately 3,200 potentially relevant documents, including handwritten notes of Mr. Dekkers, travel records for the meetings above, and exports of the messaging group covering February 2021 to January 2026. A preliminary corporate statement can be delivered within four weeks of the grant of the marker; the documents will be made available to the case team in DG Competition through the Firm's secure transfer platform.\n\nParallel applications\n\n9. The Applicant has today lodged a marker application with the Bundeskartellamt in respect of the same conduct, acknowledged under reference B12-27/26, and will lodge a corresponding application with the Competition and Markets Authority (CMA) in the United Kingdom within days. Should the matter be allocated among network members under Article 11 of Regulation (EC) No 1/2003 and the ECN Model Leniency Programme, the Applicant asks that this application be treated as the principal one.\n\nConfidentiality and requests\n\n10. This letter is submitted on a strictly confidential basis for the sole purpose of the enforcement of Article 101 TFEU. The Applicant requests that (i) the Commission confirm in writing the date and time of receipt and the Applicant's rank; (ii) nothing be disclosed to Steinhauer, Arundel or Tirreno or to any third party before the Applicant has been heard on the scope of any inspection; and (iii) the identity of Mr. Dekkers and Ms. Aalbers be protected to the extent the Commission's procedures permit.\n\n11. Correspondence should be addressed to the undersigned (i.vercauteren@vercauteren-adriaenssens.example.be, +32 2 555 04 17), with a copy to Mr. Matthieu Desmet of this Firm (m.desmet@vercauteren-adriaenssens.example.be, +32 478 55 04 18). An acknowledgment of receipt by return would be appreciated.\n\nYours faithfully,\n\nIngrid Vercauteren\nPartner\nVercauteren Adriaenssens & Partners\nCounsel for the Applicant\n\ncc: Mr. Sjoerd Hoekstra, General Counsel, Meridiaan (by secure email)",
+ "gold_spans": [
+  {
+   "start": 0,
+   "end": 35,
+   "type": "ORG",
+   "text": "VERCAUTEREN ADRIAENSSENS & PARTNERS"
+  },
+  {
+   "start": 36,
+   "end": 69,
+   "type": "LOC",
+   "text": "Avenue des Arts 46, 1000 Brussels"
+  },
+  {
+   "start": 72,
+   "end": 87,
+   "type": "PHONE",
+   "text": "+32 2 555 04 17"
+  },
+  {
+   "start": 88,
+   "end": 123,
+   "type": "URL",
+   "text": "vercauteren-adriaenssens.example.be"
+  },
+  {
+   "start": 249,
+   "end": 267,
+   "type": "CASE_REF",
+   "text": "VAP/COMP/2026-0417"
+  },
+  {
+   "start": 472,
+   "end": 507,
+   "type": "ORG",
+   "text": "MERIDIAAN SURFACE TECHNOLOGIES B.V."
+  },
+  {
+   "start": 539,
+   "end": 574,
+   "type": "ORG",
+   "text": "Vercauteren Adriaenssens & Partners"
+  },
+  {
+   "start": 597,
+   "end": 632,
+   "type": "ORG",
+   "text": "Meridiaan Surface Technologies B.V."
+  },
+  {
+   "start": 706,
+   "end": 714,
+   "type": "LOC",
+   "text": "Enschede"
+  },
+  {
+   "start": 717,
+   "end": 726,
+   "type": "ORG",
+   "text": "Meridiaan"
+  },
+  {
+   "start": 1200,
+   "end": 1215,
+   "type": "ORG",
+   "text": "Project Lantern"
+  },
+  {
+   "start": 2292,
+   "end": 2326,
+   "type": "ORG",
+   "text": "Steinhauer Oberflächentechnik GmbH"
+  },
+  {
+   "start": 2328,
+   "end": 2335,
+   "type": "LOC",
+   "text": "Cologne"
+  },
+  {
+   "start": 2338,
+   "end": 2348,
+   "type": "ORG",
+   "text": "Steinhauer"
+  },
+  {
+   "start": 2356,
+   "end": 2386,
+   "type": "ORG",
+   "text": "Arundel Protective Systems Ltd"
+  },
+  {
+   "start": 2388,
+   "end": 2397,
+   "type": "LOC",
+   "text": "Sheffield"
+  },
+  {
+   "start": 2400,
+   "end": 2407,
+   "type": "ORG",
+   "text": "Arundel"
+  },
+  {
+   "start": 2419,
+   "end": 2446,
+   "type": "ORG",
+   "text": "Rivestimenti Tirreno S.p.A."
+  },
+  {
+   "start": 2448,
+   "end": 2455,
+   "type": "LOC",
+   "text": "Livorno"
+  },
+  {
+   "start": 2458,
+   "end": 2465,
+   "type": "ORG",
+   "text": "Tirreno"
+  },
+  {
+   "start": 2469,
+   "end": 2479,
+   "type": "ORG",
+   "text": "Steinhauer"
+  },
+  {
+   "start": 2662,
+   "end": 2675,
+   "type": "PERSON",
+   "text": "Joris Dekkers"
+  },
+  {
+   "start": 2723,
+   "end": 2737,
+   "type": "PERSON",
+   "text": "Renske Aalbers"
+  },
+  {
+   "start": 2768,
+   "end": 2779,
+   "type": "PERSON",
+   "text": "Mr. Dekkers"
+  },
+  {
+   "start": 2784,
+   "end": 2795,
+   "type": "PERSON",
+   "text": "Ms. Aalbers"
+  },
+  {
+   "start": 2978,
+   "end": 2990,
+   "type": "PERSON",
+   "text": "Falk Rennert"
+  },
+  {
+   "start": 3013,
+   "end": 3023,
+   "type": "ORG",
+   "text": "Steinhauer"
+  },
+  {
+   "start": 3029,
+   "end": 3044,
+   "type": "PERSON",
+   "text": "Priya Whitcombe"
+  },
+  {
+   "start": 3069,
+   "end": 3076,
+   "type": "ORG",
+   "text": "Arundel"
+  },
+  {
+   "start": 3086,
+   "end": 3101,
+   "type": "PERSON",
+   "text": "Cosimo Barsanti"
+  },
+  {
+   "start": 3121,
+   "end": 3128,
+   "type": "ORG",
+   "text": "Tirreno"
+  },
+  {
+   "start": 3130,
+   "end": 3137,
+   "type": "PERSON",
+   "text": "Rennert"
+  },
+  {
+   "start": 3323,
+   "end": 3353,
+   "type": "ORG",
+   "text": "Fastener Coatings Forum Europe"
+  },
+  {
+   "start": 3356,
+   "end": 3360,
+   "type": "ORG",
+   "text": "FCFE"
+  },
+  {
+   "start": 3393,
+   "end": 3402,
+   "type": "LOC",
+   "text": "Frankfurt"
+  },
+  {
+   "start": 3468,
+   "end": 3472,
+   "type": "ORG",
+   "text": "FCFE"
+  },
+  {
+   "start": 3546,
+   "end": 3563,
+   "type": "LOC",
+   "text": "Hotel Leyendecker"
+  },
+  {
+   "start": 3567,
+   "end": 3574,
+   "type": "LOC",
+   "text": "Cologne"
+  },
+  {
+   "start": 3634,
+   "end": 3654,
+   "type": "LOC",
+   "text": "Grand Hotel Marchesi"
+  },
+  {
+   "start": 3658,
+   "end": 3665,
+   "type": "LOC",
+   "text": "Bologna"
+  },
+  {
+   "start": 3778,
+   "end": 3790,
+   "type": "PERSON",
+   "text": "Mr. Barsanti"
+  },
+  {
+   "start": 3820,
+   "end": 3827,
+   "type": "ORG",
+   "text": "Lantern"
+  },
+  {
+   "start": 3945,
+   "end": 3956,
+   "type": "PERSON",
+   "text": "Mr. Dekkers"
+  },
+  {
+   "start": 4452,
+   "end": 4461,
+   "type": "CASE_REF",
+   "text": "B12-27/26"
+  },
+  {
+   "start": 5105,
+   "end": 5115,
+   "type": "ORG",
+   "text": "Steinhauer"
+  },
+  {
+   "start": 5117,
+   "end": 5124,
+   "type": "ORG",
+   "text": "Arundel"
+  },
+  {
+   "start": 5128,
+   "end": 5135,
+   "type": "ORG",
+   "text": "Tirreno"
+  },
+  {
+   "start": 5252,
+   "end": 5263,
+   "type": "PERSON",
+   "text": "Mr. Dekkers"
+  },
+  {
+   "start": 5268,
+   "end": 5279,
+   "type": "PERSON",
+   "text": "Ms. Aalbers"
+  },
+  {
+   "start": 5403,
+   "end": 5452,
+   "type": "EMAIL",
+   "text": "i.vercauteren@vercauteren-adriaenssens.example.be"
+  },
+  {
+   "start": 5454,
+   "end": 5469,
+   "type": "PHONE",
+   "text": "+32 2 555 04 17"
+  },
+  {
+   "start": 5491,
+   "end": 5506,
+   "type": "PERSON",
+   "text": "Matthieu Desmet"
+  },
+  {
+   "start": 5521,
+   "end": 5565,
+   "type": "EMAIL",
+   "text": "m.desmet@vercauteren-adriaenssens.example.be"
+  },
+  {
+   "start": 5567,
+   "end": 5583,
+   "type": "PHONE",
+   "text": "+32 478 55 04 18"
+  },
+  {
+   "start": 5667,
+   "end": 5685,
+   "type": "PERSON",
+   "text": "Ingrid Vercauteren"
+  },
+  {
+   "start": 5694,
+   "end": 5729,
+   "type": "ORG",
+   "text": "Vercauteren Adriaenssens & Partners"
+  },
+  {
+   "start": 5765,
+   "end": 5780,
+   "type": "PERSON",
+   "text": "Sjoerd Hoekstra"
+  },
+  {
+   "start": 5799,
+   "end": 5808,
+   "type": "ORG",
+   "text": "Meridiaan"
+  }
+ ],
+ "public_spans": [
+  {
+   "start": 154,
+   "end": 173,
+   "type": "PUBLIC",
+   "text": "European Commission"
+  },
+  {
+   "start": 174,
+   "end": 209,
+   "type": "PUBLIC",
+   "text": "Directorate-General for Competition"
+  },
+  {
+   "start": 210,
+   "end": 238,
+   "type": "PUBLIC",
+   "text": "Place Madou 1, 1210 Brussels"
+  },
+  {
+   "start": 390,
+   "end": 469,
+   "type": "PUBLIC",
+   "text": "Commission Notice on Immunity from fines and reduction of fines in cartel cases"
+  },
+  {
+   "start": 806,
+   "end": 885,
+   "type": "PUBLIC",
+   "text": "Commission Notice on Immunity from fines and reduction of fines in cartel cases"
+  },
+  {
+   "start": 921,
+   "end": 936,
+   "type": "PUBLIC",
+   "text": "Leniency Notice"
+  },
+  {
+   "start": 1014,
+   "end": 1029,
+   "type": "PUBLIC",
+   "text": "Leniency Notice"
+  },
+  {
+   "start": 1394,
+   "end": 1409,
+   "type": "PUBLIC",
+   "text": "Leniency Notice"
+  },
+  {
+   "start": 2084,
+   "end": 2100,
+   "type": "PUBLIC",
+   "text": "Article 101 TFEU"
+  },
+  {
+   "start": 2123,
+   "end": 2136,
+   "type": "PUBLIC",
+   "text": "EEA Agreement"
+  },
+  {
+   "start": 4226,
+   "end": 4240,
+   "type": "PUBLIC",
+   "text": "DG Competition"
+  },
+  {
+   "start": 4374,
+   "end": 4390,
+   "type": "PUBLIC",
+   "text": "Bundeskartellamt"
+  },
+  {
+   "start": 4515,
+   "end": 4548,
+   "type": "PUBLIC",
+   "text": "Competition and Markets Authority"
+  },
+  {
+   "start": 4550,
+   "end": 4553,
+   "type": "PUBLIC",
+   "text": "CMA"
+  },
+  {
+   "start": 4663,
+   "end": 4688,
+   "type": "PUBLIC",
+   "text": "Regulation (EC) No 1/2003"
+  },
+  {
+   "start": 4697,
+   "end": 4725,
+   "type": "PUBLIC",
+   "text": "ECN Model Leniency Programme"
+  },
+  {
+   "start": 4937,
+   "end": 4953,
+   "type": "PUBLIC",
+   "text": "Article 101 TFEU"
+  }
+ ],
+ "notes": "Leniency marker request from Brussels outside counsel to DG Competition. SHOULD redact: the Firm (letterhead all-caps and sentence-case forms, street address line, bare letterhead domain, switchboard and mobile numbers, both example.be emails, internal ref VAP/COMP/2026-0417, matter codename 'Project Lantern' and bare 'Lantern'); the Applicant (full legal name incl. all-caps form in the Re: line, defined short form 'Meridiaan', registered-office city Enschede, its Head of Sales and Key Account Manager incl. honorific-only repeats, its General Counsel in the cc line); the three other alleged participants with their legal-form suffixes and defined short forms, their seat cities, and their named executives (incl. bare 'Rennert' and 'Mr. Barsanti'); the trade association and its defined acronym FCFE, its seat city; the two hotels and their cities as meeting locations; the Bundeskartellamt acknowledgment reference B12-27/26; the signing partner and the associate. SHOULD NOT redact: European Commission, Directorate-General for Competition / DG Competition and its public address Place Madou 1, 1210 Brussels, the 2006 Leniency Notice (full title and short form, OJ citation), Article 101 TFEU, Article 53 EEA Agreement, Regulation (EC) No 1/2003, the ECN Model Leniency Programme, Bundeskartellamt, Competition and Markets Authority / CMA, countries (Netherlands, United Kingdom), the EEA, and role words such as 'the Firm', 'the Applicant', 'the undersigned', 'Counsel for the Applicant', 'the Commission's case team', 'Head of Sales', 'Managing Director'. The product description (zinc-flake coatings for high-strength fasteners) and the defined term 'the Products' are market descriptors, not identifiers.",
+ "source": "agent-synthetic",
+ "split": "heldout",
+ "genre": "leniency marker request",
+ "traps": [
+  "codename",
+  "honorific-only",
+  "surname-only",
+  "bare-domain",
+  "acronym-defined",
+  "internal-docket",
+  "address",
+  "adjacent-public",
+  "role-noise",
+  "all-caps-header"
+ ]
+}

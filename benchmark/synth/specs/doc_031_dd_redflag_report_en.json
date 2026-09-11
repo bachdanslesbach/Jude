@@ -1,0 +1,220 @@
+{
+ "id": "doc_031_dd_redflag_report_en",
+ "title": "Meridiaan Packaging NV — red-flag legal due diligence report (Project Osprey)",
+ "language": "en",
+ "genre": "legal due diligence red-flag report",
+ "split": "heldout",
+ "text": "RED-FLAG LEGAL DUE DILIGENCE REPORT — MERIDIAAN PACKAGING NV — PROJECT OSPREY\n\nPrepared for: Corvina Capital Partners S.à r.l. (the \"Bidder\")\nPrepared by: Verhaeghe Lindqvist Advocaten, Meir 88, 2000 Antwerp\nOur ref: VL/2026/OSP/0412\nDate: 4 September 2026\nStatus: Draft — privileged and confidential\n\n1. SCOPE AND METHODOLOGY\n\nThis report summarises the red-flag findings of our legal review of Meridiaan Packaging NV (\"MPN\") and its French and German subsidiaries (together, the \"Group\") in connection with Project Osprey, the proposed acquisition by the Bidder of 100% of the shares in MPN. Our review is limited to the virtual data room (the \"VDR\") as at 28 August 2026 (VDR index 3.4.1) and to management interviews held on 1 and 2 September 2026. Ratings: Red (deal-critical), Amber (to be addressed in the SPA), Green (no material issue).\n\n2. CORPORATE — Amber\n\nMPN is a public limited company (naamloze vennootschap) governed by the Belgian Companies and Associations Code, with its registered office at Industrielaan 14, 9320 Aalst. Its share capital of EUR 4,250,000 is held as follows:\n• Casteleyn Beheer BV — 42% (Mr. Bruno Casteleyn, founder and chairman);\n• Ostyn Invest BV — 33% (Mrs. Liesbeth Ostyn);\n• Terranova Growth Fund II SCSp — 25% (financial investor since 2021).\n\nThe shareholders' agreement dated 16 March 2021 contains a tag-along right in favour of the fund and a right of first refusal in favour of Casteleyn. Both must be waived in writing before signing; he has verbally indicated his support. Meridiaan Packaging France SAS (registered office 12 rue des Tanneurs, 59000 Lille) and Meridiaan Folien GmbH (registered office Hafenstraße 27, 47119 Duisburg) are wholly owned. The German subsidiary's shareholder list has not been filed with the commercial register since 2019 and should be regularised at closing.\n\n3. MATERIAL CONTRACTS — Red\n\n• Supply agreement with Valdoria Beverages SA (\"Valdoria\") dated 2 January 2024, approximately 31% of FY2025 Group revenue. Clause 17.2 entitles Valdoria to terminate on 30 days' written notice upon any change of control. No waiver has been sought; we recommend that a written waiver be a condition precedent under the Osprey SPA.\n• Lease of the Aalst production site from Immo Denderwaerts NV: change of control requires the landlord's prior consent, not to be unreasonably withheld (Amber).\n• Framework logistics agreement with Kaltenbrunn Logistik GmbH: no change-of-control provision (Green).\n\n4. LITIGATION — Amber\n\nTwo matters are pending:\n(a) Hexaform Moulds BV v. Meridiaan Packaging NV before the Brussels Enterprise Court (docket A/25/03127). The claimant seeks EUR 1,900,000 for alleged breach of an exclusivity undertaking; management estimates the exposure at EUR 400,000–600,000 and no provision has been booked.\n(b) Mr. Dries Vanhaverbeke v. MPN before the Court of Appeal of Brussels (docket 2025/AR/2214). The former chief executive claims EUR 640,000 in unpaid variable remuneration under his management agreement. The Group prevailed at first instance; the hearing is listed for 12 January 2027. We consider the appeal weak but recommend a specific indemnity.\n\n5. REGULATORY — Red\n\nOn 19 June 2026 the Belgian Competition Authority served a request for information on MPN in the context of an investigation into alleged resale price maintenance in the flexible packaging sector under Book IV of the Belgian Code of Economic Law and Article 101 TFEU. Management asserts that the Group is not a target, but the request covers four years of pricing correspondence with distributors. The matter was not in the VDR and surfaced only in interview. Separately, the transaction falls below the EU Merger Regulation thresholds and will not be notified to the European Commission; the Belgian thresholds are met, so notification to the Belgian Competition Authority and a standstill pending clearance will be required.\n\n6. EMPLOYMENT — Amber\n\nKey managers are Mr. Karel Deprez (CEO), Ms. Annelies Rombouts (CFO) and Dr. Sabine Wittek (Geschäftsführerin of the German subsidiary). Mr. Deprez's service agreement contains a change-of-control bonus equal to 18 months' fees (approximately EUR 540,000), payable on closing. Ms. Rombouts and Dr. Wittek have twelve-month non-compete undertakings but no non-solicitation clause. Rombouts has confirmed that no collective dismissal is contemplated. Employee data of the French subsidiary is processed on servers located in Aalst without a documented intra-group data transfer agreement (GDPR — Amber).\n\n7. BANKING — Amber\n\nThe Group's EUR 35,000,000 revolving credit facility with KBC dated 7 October 2022 contains a mandatory prepayment on change of control; a pay-off letter will be required at closing. The escrow account for the 10% purchase price retention (EUR 6,500,000) has been opened with KBC under IBAN BE13 7351 0648 2039 in the name of the escrow agent. The mortgage over the production site and the share pledge over the German subsidiary must be released at closing.\n\n8. INTELLECTUAL PROPERTY — Green\n\nThe word mark MERIDIAAN is registered with the Benelux Office for Intellectual Property in the name of MPN (renewal due 2029). The domain meridiaanpackaging.example.com is registered in the personal name of Mr. Casteleyn and should be transferred to the Group before closing. No third-party infringement claims were identified.\n\n9. RECOMMENDED NEXT STEPS\n\n(i) Obtain the Valdoria waiver and the shareholders' waivers before signing; (ii) request full disclosure of the correspondence with the Belgian Competition Authority; (iii) negotiate specific indemnities for the pending cases and any fine from the investigation; (iv) confirm the lender's pay-off amount.\n\nContact\nHélène Verhaeghe, Partner\nVerhaeghe Lindqvist Advocaten\nh.verhaeghe@verhaeghe-lindqvist.example.be | +32 3 205 44 70",
+ "entities": [
+  {
+   "surface": "MERIDIAAN PACKAGING NV",
+   "type": "ORG"
+  },
+  {
+   "surface": "Meridiaan Packaging NV",
+   "type": "ORG"
+  },
+  {
+   "surface": "MPN",
+   "type": "ORG"
+  },
+  {
+   "surface": "MERIDIAAN",
+   "type": "ORG"
+  },
+  {
+   "surface": "Meridiaan Packaging France SAS",
+   "type": "ORG"
+  },
+  {
+   "surface": "Meridiaan Folien GmbH",
+   "type": "ORG"
+  },
+  {
+   "surface": "Corvina Capital Partners S.à r.l.",
+   "type": "ORG"
+  },
+  {
+   "surface": "Verhaeghe Lindqvist Advocaten",
+   "type": "ORG"
+  },
+  {
+   "surface": "Casteleyn Beheer BV",
+   "type": "ORG"
+  },
+  {
+   "surface": "Ostyn Invest BV",
+   "type": "ORG"
+  },
+  {
+   "surface": "Terranova Growth Fund II SCSp",
+   "type": "ORG"
+  },
+  {
+   "surface": "Valdoria Beverages SA",
+   "type": "ORG"
+  },
+  {
+   "surface": "Valdoria",
+   "type": "ORG"
+  },
+  {
+   "surface": "Immo Denderwaerts NV",
+   "type": "ORG"
+  },
+  {
+   "surface": "Kaltenbrunn Logistik GmbH",
+   "type": "ORG"
+  },
+  {
+   "surface": "Hexaform Moulds BV",
+   "type": "ORG"
+  },
+  {
+   "surface": "KBC",
+   "type": "ORG"
+  },
+  {
+   "surface": "PROJECT OSPREY",
+   "type": "ORG"
+  },
+  {
+   "surface": "Project Osprey",
+   "type": "ORG"
+  },
+  {
+   "surface": "Osprey",
+   "type": "ORG"
+  },
+  {
+   "surface": "VL/2026/OSP/0412",
+   "type": "CASE_REF"
+  },
+  {
+   "surface": "A/25/03127",
+   "type": "CASE_REF"
+  },
+  {
+   "surface": "2025/AR/2214",
+   "type": "CASE_REF"
+  },
+  {
+   "surface": "Bruno Casteleyn",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Casteleyn",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Liesbeth Ostyn",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Dries Vanhaverbeke",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Karel Deprez",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Deprez",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Annelies Rombouts",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Rombouts",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Sabine Wittek",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Wittek",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Hélène Verhaeghe",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Meir 88",
+   "type": "LOC"
+  },
+  {
+   "surface": "Antwerp",
+   "type": "LOC"
+  },
+  {
+   "surface": "Industrielaan 14",
+   "type": "LOC"
+  },
+  {
+   "surface": "Aalst",
+   "type": "LOC"
+  },
+  {
+   "surface": "12 rue des Tanneurs",
+   "type": "LOC"
+  },
+  {
+   "surface": "Lille",
+   "type": "LOC"
+  },
+  {
+   "surface": "Hafenstraße 27",
+   "type": "LOC"
+  },
+  {
+   "surface": "Duisburg",
+   "type": "LOC"
+  },
+  {
+   "surface": "h.verhaeghe@verhaeghe-lindqvist.example.be",
+   "type": "EMAIL"
+  },
+  {
+   "surface": "+32 3 205 44 70",
+   "type": "PHONE"
+  },
+  {
+   "surface": "BE13 7351 0648 2039",
+   "type": "IBAN"
+  },
+  {
+   "surface": "meridiaanpackaging.example.com",
+   "type": "URL"
+  }
+ ],
+ "public": [
+  "Belgian Companies and Associations Code",
+  "Brussels Enterprise Court",
+  "Court of Appeal of Brussels",
+  "Belgian Competition Authority",
+  "Belgian Code of Economic Law",
+  "Article 101 TFEU",
+  "EU Merger Regulation",
+  "European Commission",
+  "GDPR",
+  "Benelux Office for Intellectual Property"
+ ],
+ "traps": [
+  "codename",
+  "honorific-only",
+  "surname-only",
+  "bare-domain",
+  "bank-acronym",
+  "acronym-defined",
+  "internal-docket",
+  "address",
+  "adjacent-public",
+  "role-noise",
+  "all-caps-header"
+ ],
+ "notes": "Red-flag legal due diligence report by a Belgian law firm for a Luxembourg bidder on a Belgian packaging group (parent NV + French SAS + German GmbH) under a deal codename. SHOULD redact: the target parent in all three forms (all-caps title line, full name, defined acronym 'MPN') and the bare word mark 'MERIDIAAN', both subsidiaries, the bidder, the issuing law firm + its Antwerp street and city + partner signatory + example.be email + phone, the internal matter reference, the codename in all forms ('PROJECT OSPREY', 'Project Osprey', bare 'Osprey' in 'the Osprey SPA'), the three shareholders (two holding BVs and the Luxembourg fund) and the individuals behind them (full names, bare 'Casteleyn', 'Mr. Casteleyn'), the registered-office streets and cities of the three group companies (Aalst also as plant/site/server location), the supply counterparty + defined short name 'Valdoria', the landlord, the logistics counterparty, the litigation opponents (Hexaform Moulds BV, the former CEO Dries Vanhaverbeke) and both court dockets, the three key managers (full names, 'Mr. Deprez', 'Ms. Rombouts', 'Dr. Wittek', bare 'Rombouts'), the lender/escrow bank named only by acronym (KBC) and the escrow IBAN, the bare domain. SHOULD NOT redact: role words ('the Bidder', 'the Group', 'the claimant', 'the landlord', 'the former chief executive', 'management', 'the escrow agent', 'the German subsidiary'), the VDR index '3.4.1' (a folder number, not an identifier), risk ratings, dates, amounts, clause numbers, legal-form descriptors ('naamloze vennootschap', 'Geschäftsführerin'), postcodes standing alone, and the public bodies, courts and statutes: Belgian Companies and Associations Code, Brussels Enterprise Court, Court of Appeal of Brussels, Belgian Competition Authority, Belgian Code of Economic Law, Article 101 TFEU, EU Merger Regulation, European Commission, GDPR, Benelux Office for Intellectual Property."
+}

@@ -1,0 +1,212 @@
+{
+ "id": "doc_027_spa_excerpt_en",
+ "title": "Project Corvid — Share purchase agreement (execution version, excerpt)",
+ "language": "en",
+ "genre": "share purchase agreement excerpt",
+ "split": "heldout",
+ "text": "SHARE PURCHASE AGREEMENT — PROJECT CORVID\nEXECUTION VERSION — VANDERSLOOT INDUSTRIAL HOLDINGS NV / HALDANE PEAK ACQUISITIONS LIMITED\nDated 4 September 2026\n\nTHIS AGREEMENT is made between:\n\n(1) VANDERSLOOT INDUSTRIAL HOLDINGS NV, a naamloze vennootschap incorporated under the laws of Belgium, having its registered office at Frankrijklei 118, 2000 Antwerp, registered with the Crossroads Bank for Enterprises under number 0712.445.303 (the \"Seller\" or \"VIH\");\n\n(2) HALDANE PEAK ACQUISITIONS LIMITED, a private company limited by shares incorporated in England and Wales with company number 14886231, whose registered office is at 4 Copthall Yard, London EC2R 7BX (the \"Buyer\"); and\n\n(3) HALDANE PEAK HOLDINGS B.V., a besloten vennootschap incorporated under the laws of the Netherlands, having its registered office at Weena 505, 3013 AL Rotterdam, registered with the Netherlands Chamber of Commerce under number 87214903 (the \"Guarantor\").\n\n1. DEFINITIONS AND INTERPRETATION\n\n1.1 In this Agreement, unless the context otherwise requires:\n\n\"Company\" means Meridian Thermal Systems NV, a naamloze vennootschap having its registered office at Noorderlaan 42, 2030 Antwerp, further particulars of which are set out in Schedule 1;\n\n\"Data Room\" means the virtual data room hosted at corvid-dataroom.example.net, the index of which is attached as Schedule 4;\n\n\"Project Corvid\" means the proposed acquisition of the Shares by the Buyer on the terms of this Agreement;\n\n\"Seller's Solicitors\" means Dhondt & Castellane BV of Louizalaan 331, 1050 Brussels (ref. DC/2026/CORVID/0419);\n\n\"Shares\" means the 240,000 registered shares representing the entire issued share capital of the Company.\n\n2. SALE AND PURCHASE\n\n2.1 The Seller shall sell and the Buyer shall purchase the Shares free from all Encumbrances for EUR 186,500,000 (the \"Purchase Price\"), of which EUR 18,650,000 (the \"Escrow Amount\") shall be paid into the Escrow Account in accordance with Clause 6.3.\n\n3. GUARANTEE\n\n3.1 The Guarantor irrevocably guarantees to the Seller the performance by the Buyer of its obligations under this Agreement, including payment of the Purchase Price.\n\n4. CONDITION PRECEDENT\n\n4.1 Completion is conditional on the European Commission having declared Corvid compatible with the internal market under Article 6(1)(b) of Regulation (EC) No 139/2004 and, to the extent the Competition and Markets Authority (the \"CMA\") asserts jurisdiction under the Enterprise Act 2002, on the CMA having cleared the transaction at Phase 1 (together, the \"Merger Control Condition\").\n\n4.2 The Buyer shall submit the Form CO to the European Commission within fifteen Business Days. The Seller shall procure that Meridian Thermal Systems NV cooperates with the European Commission and the CMA, and the Buyer shall not offer any remedy without the prior written consent of VIH.\n\n4.3 If the Merger Control Condition is not satisfied by 31 March 2027 (the \"Long Stop Date\"), either the Seller or the Buyer may terminate this Agreement by written notice to the other.\n\n5. WARRANTIES\n\n5.1 The Seller warrants to the Buyer in the terms set out in Schedule 3.\n\n5.2 Save for the proceedings brought by Mr. Dragan Brankovic, a former director of the Company, before the Enterprise Court of Antwerp under docket number A/25/03417 (the \"Brankovic Claim\"), which have been fairly Disclosed in folder 7.3 of the Data Room, the Company is not engaged in any litigation, arbitration or regulatory proceedings, and none is pending or threatened.\n\n5.3 The aggregate liability of VIH under the Warranties shall not exceed the Escrow Amount, save in respect of the Title Warranties and fraud.\n\n6. COMPLETION\n\n6.1 Completion shall take place at the offices of the Seller's Solicitors on the fifth Business Day after satisfaction of the Merger Control Condition, when the Seller shall deliver the documents listed in Schedule 2, including the share register of the Company updated in accordance with the Belgian Companies and Associations Code.\n\n6.2 At Completion the Buyer shall pay the Purchase Price less the Escrow Amount by electronic transfer in immediately available funds to the Seller's account with KBC, IBAN BE31 7340 5612 8855 (the \"Seller's Account\").\n\n6.3 The Buyer shall pay the Escrow Amount to the account held by the Escrow Agent with BIL, IBAN LU23 0021 0449 3875 5902 (the \"Escrow Account\"), to be released in accordance with the Escrow Agreement.\n\n7. NOTICES\n\n7.1 Any notice under this Agreement shall be in writing and delivered by hand, courier or email to:\n\n(a) the Seller: at its registered office, for the attention of Mr. Koen Vermeire, General Counsel (k.vermeire@vandersloot.example.be; +32 3 205 44 18), with a copy to Mrs. Anneleen Dhondt at the Seller's Solicitors (a.dhondt@dhondt-castellane.example.be);\n\n(b) the Buyer and the Guarantor: Haldane Peak Acquisitions Limited, 4 Copthall Yard, London EC2R 7BX, for the attention of Ms. Priya Ramaswamy, Head of Legal (priya.ramaswamy@haldanepeak.example.com; +44 20 7946 0312).\n\n7.2 A notice sent by email is deemed received when sent, unless Mr. Vermeire or Ms. Ramaswamy (as applicable) notifies the sender that it was not received.\n\n8. GOVERNING LAW AND JURISDICTION\n\n8.1 This Agreement is governed by English law, and the courts of England, and in particular the Commercial Court of London, have exclusive jurisdiction over any dispute arising out of or in connection with it.\n\nSIGNED for and on behalf of the Seller by Mr. Koen Vermeire, Director, and Mr. Bart Vandersloot, Chairman\n\nSIGNED for and on behalf of the Buyer by Ms. Priya Ramaswamy, Director\n\nSIGNED for and on behalf of the Guarantor by Dr. Matthias Reinholt, Managing Director",
+ "entities": [
+  {
+   "surface": "VANDERSLOOT INDUSTRIAL HOLDINGS NV",
+   "type": "ORG"
+  },
+  {
+   "surface": "VIH",
+   "type": "ORG"
+  },
+  {
+   "surface": "HALDANE PEAK ACQUISITIONS LIMITED",
+   "type": "ORG"
+  },
+  {
+   "surface": "Haldane Peak Acquisitions Limited",
+   "type": "ORG"
+  },
+  {
+   "surface": "HALDANE PEAK HOLDINGS B.V.",
+   "type": "ORG"
+  },
+  {
+   "surface": "Meridian Thermal Systems NV",
+   "type": "ORG"
+  },
+  {
+   "surface": "Dhondt & Castellane BV",
+   "type": "ORG"
+  },
+  {
+   "surface": "KBC",
+   "type": "ORG"
+  },
+  {
+   "surface": "BIL",
+   "type": "ORG"
+  },
+  {
+   "surface": "PROJECT CORVID",
+   "type": "ORG"
+  },
+  {
+   "surface": "Project Corvid",
+   "type": "ORG"
+  },
+  {
+   "surface": "Corvid",
+   "type": "ORG"
+  },
+  {
+   "surface": "Frankrijklei 118",
+   "type": "LOC"
+  },
+  {
+   "surface": "2000 Antwerp",
+   "type": "LOC"
+  },
+  {
+   "surface": "4 Copthall Yard",
+   "type": "LOC"
+  },
+  {
+   "surface": "London EC2R 7BX",
+   "type": "LOC"
+  },
+  {
+   "surface": "Weena 505",
+   "type": "LOC"
+  },
+  {
+   "surface": "3013 AL Rotterdam",
+   "type": "LOC"
+  },
+  {
+   "surface": "Noorderlaan 42",
+   "type": "LOC"
+  },
+  {
+   "surface": "2030 Antwerp",
+   "type": "LOC"
+  },
+  {
+   "surface": "Louizalaan 331",
+   "type": "LOC"
+  },
+  {
+   "surface": "1050 Brussels",
+   "type": "LOC"
+  },
+  {
+   "surface": "Koen Vermeire",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Mr. Vermeire",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Anneleen Dhondt",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Priya Ramaswamy",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Ms. Ramaswamy",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Dragan Brankovic",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Brankovic",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Bart Vandersloot",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Matthias Reinholt",
+   "type": "PERSON"
+  },
+  {
+   "surface": "k.vermeire@vandersloot.example.be",
+   "type": "EMAIL"
+  },
+  {
+   "surface": "a.dhondt@dhondt-castellane.example.be",
+   "type": "EMAIL"
+  },
+  {
+   "surface": "priya.ramaswamy@haldanepeak.example.com",
+   "type": "EMAIL"
+  },
+  {
+   "surface": "+32 3 205 44 18",
+   "type": "PHONE"
+  },
+  {
+   "surface": "+44 20 7946 0312",
+   "type": "PHONE"
+  },
+  {
+   "surface": "BE31 7340 5612 8855",
+   "type": "IBAN"
+  },
+  {
+   "surface": "LU23 0021 0449 3875 5902",
+   "type": "IBAN"
+  },
+  {
+   "surface": "A/25/03417",
+   "type": "CASE_REF"
+  },
+  {
+   "surface": "DC/2026/CORVID/0419",
+   "type": "CASE_REF"
+  },
+  {
+   "surface": "0712.445.303",
+   "type": "IBAN"
+  },
+  {
+   "surface": "14886231",
+   "type": "IBAN"
+  },
+  {
+   "surface": "87214903",
+   "type": "IBAN"
+  },
+  {
+   "surface": "corvid-dataroom.example.net",
+   "type": "URL"
+  }
+ ],
+ "public": [
+  "European Commission",
+  "Regulation (EC) No 139/2004",
+  "Competition and Markets Authority",
+  "CMA",
+  "Enterprise Act 2002",
+  "Belgian Companies and Associations Code",
+  "Commercial Court of London",
+  "Enterprise Court of Antwerp",
+  "Crossroads Bank for Enterprises",
+  "Netherlands Chamber of Commerce"
+ ],
+ "traps": [
+  "codename",
+  "acronym-defined",
+  "honorific-only",
+  "surname-only",
+  "bare-domain",
+  "bank-acronym",
+  "internal-docket",
+  "address",
+  "adjacent-public",
+  "role-noise",
+  "all-caps-header"
+ ],
+ "notes": "Excerpt of an English-law SPA for the sale of a Belgian target, with a Belgian seller, an English buyer and a Dutch guarantor. SHOULD redact: the three parties in every form (title-line capitals, parties clause, the defined acronym VIH), the target Meridian Thermal Systems NV, the Seller's Solicitors and their file reference, the deal codename (Project Corvid, PROJECT CORVID and bare Corvid), all registered-office street addresses and postcode+city pairs, the enterprise/company registration numbers (typed CASE_REF for want of a registry-number type), the pending-claim claimant Mr. Dragan Brankovic (also as bare Brankovic in the defined term) and the Antwerp docket number, both completion-payment IBANs and the banks named only by acronym (KBC, BIL), the notice contacts with honorifics and honorific-only repeats, their example.* emails and international phone numbers, the bare data-room domain, and the three signatories. SHOULD NOT redact: European Commission, Regulation (EC) No 139/2004, Competition and Markets Authority / CMA, Enterprise Act 2002, Belgian Companies and Associations Code, Commercial Court of London, Enterprise Court of Antwerp, Crossroads Bank for Enterprises, Netherlands Chamber of Commerce, the countries (Belgium, England and Wales, the Netherlands), the legal-form descriptors (naamloze vennootschap, besloten vennootschap), the role words (the Seller, the Buyer, the Guarantor, the Company, the Escrow Agent, the Seller's Solicitors), and defined commercial terms (Purchase Price, Escrow Amount, Merger Control Condition, Long Stop Date, Data Room)."
+}

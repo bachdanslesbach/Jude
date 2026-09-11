@@ -1,0 +1,487 @@
+{
+ "id": "doc_028_client_email_thread_en",
+ "title": "RE: Larkspur — Thursday workshop",
+ "language": "en",
+ "text": "From: Ingrid Halvorsen <i.halvorsen@hallstrom-vane.example.com>\nSent: Wednesday, 9 September 2026 07:52\nTo: Adaeze Okafor\nCc: Tomasz Wierzbicki\nSubject: RE: Larkspur — Thursday workshop\n\nAdaeze,\n\nAgree with Tomasz on all points. Please cancel Thursday, or at least take the plant managers and every commercial item off the agenda. A cultural introduction over lunch is fine; a joint pricing session is not.\n\nI am at DG COMP from 9 to 11 for the state-of-play meeting. Can we speak at 12:30? Tomasz will set up the call.\n\nIngrid\n\nSent from my iPhone\n\n-----Original Message-----\nFrom: Tomasz Wierzbicki\nSent: Tuesday, 8 September 2026 22:47\nTo: Adaeze Okafor\nCc: Ingrid Halvorsen\nSubject: RE: Larkspur — Thursday workshop\n\nDear Adaeze,\n\nThanks for forwarding Katrin's agenda. Short version: as drafted, the workshop would very likely amount to implementing the concentration before clearance, in breach of the standstill obligation in Article 7(1) of Regulation (EC) No 139/2004. Ingrid may want to add to this in the morning, but I did not want to leave it until then.\n\nThree items are the problem:\n\n1. \"Price harmonisation for Q1 2027\". Solvane cannot agree, or even discuss, the Target's future prices with the Target's sales team before the European Commission has cleared Solvane/Rheinfeld. This is close to the Altice fact pattern: the Court of Justice (C-746/21 P) treated veto rights over ordinary-course pricing as implementation of the concentration, not preparation for it.\n\n2. \"Joint customer list\". Customer-level pricing and margin data can only go into the clean team under the protocol we agreed in July. Katrin's team and the regional sales leads are not clean-team members. If the deal falls through, that exchange is an Article 101 problem in its own right.\n\n3. \"Migration of procurement\". Moving the Target's purchasing onto your systems before closing is precisely the kind of exercise of decisive influence that DG COMP treats as gun-jumping.\n\nWhat can be done: integration planning by a small team on Solvane's side, with no operational staff from the Target, no exchange of current price or customer data, and nothing that binds the Target's conduct before closing. Rheinfeld continues to run as an independent business, including the Neuss plant, until we have the decision. There is no realistic prospect of an Article 7(3) derogation; the Commission grants those for insolvency-type situations, not for convenience.\n\nOn RKB: the covenant as worded (\"operational control by 1 October\") cannot be given. I would tell their financing team that control passes on closing, which is conditional on clearance, and that the target date for the Phase I decision remains 16 October. I can put that in writing tomorrow.\n\nOn the Bundeskartellamt: it has asked DG COMP for a partial referral of the corrugated-board overlap in Bavaria under Article 9(2)(a). We do not think it will succeed, but it is one more reason to avoid anything that looks like early integration in Germany.\n\nPlease use our reference HV-2026-0417 on further correspondence for this matter.\n\nKind regards,\n\nTomasz Wierzbicki\nSenior Associate | Competition & EU\nHallstrom & Vane LLP\nBoulevard du Régent 37, 1000 Brussels\nT +32 2 555 04 71\nt.wierzbicki@hallstrom-vane.example.com\nhallstrom-vane.example.com\n\nThis message is confidential and may be legally privileged. If you have received it in error, please notify the sender and delete it. Hallstrom & Vane LLP is a limited liability partnership registered in England and Wales.\n\n-----Original Message-----\nFrom: Adaeze Okafor\nSent: Tuesday, 8 September 2026 17:05\nTo: Tomasz Wierzbicki\nCc: Ingrid Halvorsen\nSubject: FW: Larkspur — Thursday workshop\n\nTomasz,\n\nSee below. I only saw this at four o'clock. Katrin has invited the Rheinfeld plant managers and half of our sales team to Neuss on Thursday, and I am fairly sure at least two items on that agenda are things you told the deal team not to do under Article 7. Can you give me a view tonight, before she confirms the room?\n\nSeparately, RKB wants a covenant in the bridge that we take \"operational control\" of the Target by 1 October. That is obviously not possible before clearance. Can you give me a line I can send to their team?\n\nThanks,\nAdaeze\n\nAdaeze Okafor\nGeneral Counsel\nSolvane Packaging Group N.V.\nSchiedamsedijk 128, 3011 EP Rotterdam\nM +31 6 5550 0921\na.okafor@solvane.example.com\n\nBegin forwarded message:\n\nFrom: Katrin Zeller\nSent: Tuesday, 8 September 2026 14:32\nTo: Adaeze Okafor\nSubject: Larkspur — Thursday workshop\n\nMs. Okafor,\n\nAs discussed with the steering group, please find below the agenda for Thursday's Project Larkspur integration workshop. Location: Rheinfeld Kartonagen GmbH (\"Rheinfeld\"), Am Kartonwerk 4, 41468 Neuss, meeting room 2, 09:30–16:00. Attendees: the three plant managers, the head of sales, our regional sales leads and my team.\n\nAgenda:\n- Price harmonisation for Q1 2027 (corrugated and folding carton)\n- Joint customer list and key-account allocation\n- Migration of procurement onto our SAP\n- Site visit and lunch\n\nLet me know if you would like to attend. The room is booked, but I can hold confirmation until tomorrow morning.\n\nBest regards,\nKatrin Zeller\nHead of Integration\nSolvane Packaging Group N.V.\nM +31 6 5550 0184\nk.zeller@solvane.example.com",
+ "gold_spans": [
+  {
+   "start": 6,
+   "end": 22,
+   "type": "PERSON",
+   "text": "Ingrid Halvorsen"
+  },
+  {
+   "start": 24,
+   "end": 62,
+   "type": "EMAIL",
+   "text": "i.halvorsen@hallstrom-vane.example.com"
+  },
+  {
+   "start": 108,
+   "end": 121,
+   "type": "PERSON",
+   "text": "Adaeze Okafor"
+  },
+  {
+   "start": 126,
+   "end": 143,
+   "type": "PERSON",
+   "text": "Tomasz Wierzbicki"
+  },
+  {
+   "start": 157,
+   "end": 165,
+   "type": "ORG",
+   "text": "Larkspur"
+  },
+  {
+   "start": 187,
+   "end": 193,
+   "type": "PERSON",
+   "text": "Adaeze"
+  },
+  {
+   "start": 207,
+   "end": 213,
+   "type": "PERSON",
+   "text": "Tomasz"
+  },
+  {
+   "start": 491,
+   "end": 497,
+   "type": "PERSON",
+   "text": "Tomasz"
+  },
+  {
+   "start": 521,
+   "end": 527,
+   "type": "PERSON",
+   "text": "Ingrid"
+  },
+  {
+   "start": 583,
+   "end": 600,
+   "type": "PERSON",
+   "text": "Tomasz Wierzbicki"
+  },
+  {
+   "start": 643,
+   "end": 656,
+   "type": "PERSON",
+   "text": "Adaeze Okafor"
+  },
+  {
+   "start": 661,
+   "end": 677,
+   "type": "PERSON",
+   "text": "Ingrid Halvorsen"
+  },
+  {
+   "start": 691,
+   "end": 699,
+   "type": "ORG",
+   "text": "Larkspur"
+  },
+  {
+   "start": 726,
+   "end": 732,
+   "type": "PERSON",
+   "text": "Adaeze"
+  },
+  {
+   "start": 757,
+   "end": 763,
+   "type": "PERSON",
+   "text": "Katrin"
+  },
+  {
+   "start": 978,
+   "end": 984,
+   "type": "PERSON",
+   "text": "Ingrid"
+  },
+  {
+   "start": 1137,
+   "end": 1144,
+   "type": "ORG",
+   "text": "Solvane"
+  },
+  {
+   "start": 1275,
+   "end": 1282,
+   "type": "ORG",
+   "text": "Solvane"
+  },
+  {
+   "start": 1283,
+   "end": 1292,
+   "type": "ORG",
+   "text": "Rheinfeld"
+  },
+  {
+   "start": 1619,
+   "end": 1625,
+   "type": "PERSON",
+   "text": "Katrin"
+  },
+  {
+   "start": 2022,
+   "end": 2029,
+   "type": "ORG",
+   "text": "Solvane"
+  },
+  {
+   "start": 2188,
+   "end": 2197,
+   "type": "ORG",
+   "text": "Rheinfeld"
+  },
+  {
+   "start": 2257,
+   "end": 2262,
+   "type": "LOC",
+   "text": "Neuss"
+  },
+  {
+   "start": 2445,
+   "end": 2448,
+   "type": "ORG",
+   "text": "RKB"
+  },
+  {
+   "start": 3019,
+   "end": 3031,
+   "type": "CASE_REF",
+   "text": "HV-2026-0417"
+  },
+  {
+   "start": 3091,
+   "end": 3108,
+   "type": "PERSON",
+   "text": "Tomasz Wierzbicki"
+  },
+  {
+   "start": 3145,
+   "end": 3165,
+   "type": "ORG",
+   "text": "Hallstrom & Vane LLP"
+  },
+  {
+   "start": 3166,
+   "end": 3188,
+   "type": "LOC",
+   "text": "Boulevard du Régent 37"
+  },
+  {
+   "start": 3195,
+   "end": 3203,
+   "type": "LOC",
+   "text": "Brussels"
+  },
+  {
+   "start": 3206,
+   "end": 3221,
+   "type": "PHONE",
+   "text": "+32 2 555 04 71"
+  },
+  {
+   "start": 3222,
+   "end": 3261,
+   "type": "EMAIL",
+   "text": "t.wierzbicki@hallstrom-vane.example.com"
+  },
+  {
+   "start": 3262,
+   "end": 3288,
+   "type": "URL",
+   "text": "hallstrom-vane.example.com"
+  },
+  {
+   "start": 3424,
+   "end": 3444,
+   "type": "ORG",
+   "text": "Hallstrom & Vane LLP"
+  },
+  {
+   "start": 3547,
+   "end": 3560,
+   "type": "PERSON",
+   "text": "Adaeze Okafor"
+  },
+  {
+   "start": 3603,
+   "end": 3620,
+   "type": "PERSON",
+   "text": "Tomasz Wierzbicki"
+  },
+  {
+   "start": 3625,
+   "end": 3641,
+   "type": "PERSON",
+   "text": "Ingrid Halvorsen"
+  },
+  {
+   "start": 3655,
+   "end": 3663,
+   "type": "ORG",
+   "text": "Larkspur"
+  },
+  {
+   "start": 3685,
+   "end": 3691,
+   "type": "PERSON",
+   "text": "Tomasz"
+  },
+  {
+   "start": 3738,
+   "end": 3744,
+   "type": "PERSON",
+   "text": "Katrin"
+  },
+  {
+   "start": 3761,
+   "end": 3770,
+   "type": "ORG",
+   "text": "Rheinfeld"
+  },
+  {
+   "start": 3816,
+   "end": 3821,
+   "type": "LOC",
+   "text": "Neuss"
+  },
+  {
+   "start": 4026,
+   "end": 4029,
+   "type": "ORG",
+   "text": "RKB"
+  },
+  {
+   "start": 4231,
+   "end": 4237,
+   "type": "PERSON",
+   "text": "Adaeze"
+  },
+  {
+   "start": 4239,
+   "end": 4252,
+   "type": "PERSON",
+   "text": "Adaeze Okafor"
+  },
+  {
+   "start": 4269,
+   "end": 4297,
+   "type": "ORG",
+   "text": "Solvane Packaging Group N.V."
+  },
+  {
+   "start": 4298,
+   "end": 4316,
+   "type": "LOC",
+   "text": "Schiedamsedijk 128"
+  },
+  {
+   "start": 4326,
+   "end": 4335,
+   "type": "LOC",
+   "text": "Rotterdam"
+  },
+  {
+   "start": 4338,
+   "end": 4353,
+   "type": "PHONE",
+   "text": "+31 6 5550 0921"
+  },
+  {
+   "start": 4354,
+   "end": 4382,
+   "type": "EMAIL",
+   "text": "a.okafor@solvane.example.com"
+  },
+  {
+   "start": 4416,
+   "end": 4429,
+   "type": "PERSON",
+   "text": "Katrin Zeller"
+  },
+  {
+   "start": 4472,
+   "end": 4485,
+   "type": "PERSON",
+   "text": "Adaeze Okafor"
+  },
+  {
+   "start": 4495,
+   "end": 4503,
+   "type": "ORG",
+   "text": "Larkspur"
+  },
+  {
+   "start": 4525,
+   "end": 4535,
+   "type": "PERSON",
+   "text": "Ms. Okafor"
+  },
+  {
+   "start": 4620,
+   "end": 4636,
+   "type": "ORG",
+   "text": "Project Larkspur"
+  },
+  {
+   "start": 4669,
+   "end": 4694,
+   "type": "ORG",
+   "text": "Rheinfeld Kartonagen GmbH"
+  },
+  {
+   "start": 4697,
+   "end": 4706,
+   "type": "ORG",
+   "text": "Rheinfeld"
+  },
+  {
+   "start": 4710,
+   "end": 4725,
+   "type": "LOC",
+   "text": "Am Kartonwerk 4"
+  },
+  {
+   "start": 4733,
+   "end": 4738,
+   "type": "LOC",
+   "text": "Neuss"
+  },
+  {
+   "start": 5179,
+   "end": 5192,
+   "type": "PERSON",
+   "text": "Katrin Zeller"
+  },
+  {
+   "start": 5213,
+   "end": 5241,
+   "type": "ORG",
+   "text": "Solvane Packaging Group N.V."
+  },
+  {
+   "start": 5244,
+   "end": 5259,
+   "type": "PHONE",
+   "text": "+31 6 5550 0184"
+  },
+  {
+   "start": 5260,
+   "end": 5288,
+   "type": "EMAIL",
+   "text": "k.zeller@solvane.example.com"
+  }
+ ],
+ "public_spans": [
+  {
+   "start": 416,
+   "end": 423,
+   "type": "PUBLIC",
+   "text": "DG COMP"
+  },
+  {
+   "start": 933,
+   "end": 945,
+   "type": "PUBLIC",
+   "text": "Article 7(1)"
+  },
+  {
+   "start": 949,
+   "end": 976,
+   "type": "PUBLIC",
+   "text": "Regulation (EC) No 139/2004"
+  },
+  {
+   "start": 1243,
+   "end": 1262,
+   "type": "PUBLIC",
+   "text": "European Commission"
+  },
+  {
+   "start": 1315,
+   "end": 1321,
+   "type": "PUBLIC",
+   "text": "Altice"
+  },
+  {
+   "start": 1340,
+   "end": 1356,
+   "type": "PUBLIC",
+   "text": "Court of Justice"
+  },
+  {
+   "start": 1358,
+   "end": 1368,
+   "type": "PUBLIC",
+   "text": "C-746/21 P"
+  },
+  {
+   "start": 1737,
+   "end": 1748,
+   "type": "PUBLIC",
+   "text": "Article 101"
+  },
+  {
+   "start": 1932,
+   "end": 1939,
+   "type": "PUBLIC",
+   "text": "DG COMP"
+  },
+  {
+   "start": 2335,
+   "end": 2347,
+   "type": "PUBLIC",
+   "text": "Article 7(3)"
+  },
+  {
+   "start": 2364,
+   "end": 2374,
+   "type": "PUBLIC",
+   "text": "Commission"
+  },
+  {
+   "start": 2742,
+   "end": 2758,
+   "type": "PUBLIC",
+   "text": "Bundeskartellamt"
+  },
+  {
+   "start": 2773,
+   "end": 2780,
+   "type": "PUBLIC",
+   "text": "DG COMP"
+  },
+  {
+   "start": 2853,
+   "end": 2868,
+   "type": "PUBLIC",
+   "text": "Article 9(2)(a)"
+  },
+  {
+   "start": 3940,
+   "end": 3949,
+   "type": "PUBLIC",
+   "text": "Article 7"
+  }
+ ],
+ "notes": "Client email thread (most recent first) between outside counsel and a client's General Counsel on gun-jumping risk before EU merger clearance. SHOULD redact: the acquirer Solvane Packaging Group N.V. and its short form Solvane, the target Rheinfeld Kartonagen GmbH and its defined short form Rheinfeld, the codename Project Larkspur and bare Larkspur (incl. in subject lines), the lender referred to only by acronym RKB, the law firm Hallstrom & Vane LLP (incl. in the disclaimer footer) and its bare domain hallstrom-vane.example.com, all four individuals in every form (full name in headers and signatures, first name only in salutations and body, honorific-only Ms. Okafor), every distinct email address, phone number, the street addresses and office/plant cities (Brussels, Rotterdam, Neuss as party locations), and the internal matter reference HV-2026-0417. SHOULD NOT redact: European Commission / the Commission, DG COMP, Regulation (EC) No 139/2004, Article 7, 7(1), 7(3), 9(2)(a) and 101, the Bundeskartellamt, the Court of Justice and the public Altice precedent (C-746/21 P); Germany and Bavaria (countries/regions); Phase I; role words (the Target, the deal team, the steering group, General Counsel, Senior Associate, Head of Integration, the clean team); generic product references (SAP, iPhone); dates, times, quarters and meeting-room numbers.",
+ "source": "agent-synthetic",
+ "split": "heldout",
+ "genre": "email thread",
+ "traps": [
+  "codename",
+  "honorific-only",
+  "bare-domain",
+  "bank-acronym",
+  "acronym-defined",
+  "internal-docket",
+  "address",
+  "adjacent-public",
+  "role-noise"
+ ]
+}

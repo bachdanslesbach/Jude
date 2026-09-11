@@ -1,0 +1,411 @@
+{
+ "id": "doc_023_form_co_excerpt_en",
+ "title": "Draft Form CO — Corvane / Tessaro (Project Sable)",
+ "language": "en",
+ "text": "FORM CO — DRAFT FOR PRE-NOTIFICATION DISCUSSION\nCORVANE / TESSARO\nNotification to the European Commission pursuant to Regulation (EC) No 139/2004 (the \"Merger Regulation\")\nProvisional case number allocated by DG Competition: M.12384\nOur ref.: VD/2026/0417-SAB — Draft of 4 September 2026 — Privileged and confidential\n\nSECTION 1 — DESCRIPTION OF THE CONCENTRATION\n\n1.1 This Form CO concerns the proposed acquisition by Corvane Industries SE (\"Corvane\" or the \"Notifying Party\") of sole control, within the meaning of Article 3(1)(b) of the Merger Regulation, over Tessaro Fluid Control B.V. (\"Tessaro\" or the \"Target\") by purchase of 100% of the share capital (the \"Transaction\"). The Transaction is referred to by the Parties as Project Sable.\n\n1.2 The Transaction is implemented pursuant to a share purchase agreement signed on 17 July 2026 (the \"SPA\") between the Notifying Party, as purchaser, and Marlowe & Pitt Buyout Fund IV SCSp (the \"Seller\"), a fund vehicle managed and solely controlled by Marlowe & Pitt Capital Partners LLP (\"MPCP\"). Following completion, the Target will become a wholly owned subsidiary of the Notifying Party.\n\n1.3 The Notifying Party manufactures industrial pumps, compressors and process instrumentation. The Target manufactures control valves, actuators and positioners for the chemical, energy and water-treatment industries. The Parties' activities overlap horizontally in control valves for process industries in the EEA; on every plausible market definition the combined share remains below 20%, so that no affected market arises.(1)\n\nSECTION 2 — INFORMATION ABOUT THE PARTIES\n\n2.1 Notifying Party\n\nCorvane Industries SE, a European company (Societas Europaea) having its registered office at Königsallee 14, 40212 Düsseldorf, Germany. Its shares are admitted to trading on a regulated market and no shareholder holds more than 10% of the voting rights; the Notifying Party is not controlled by any person. Corporate information is available at corvane.example.com.\n\nContact person: Dr. Annika Strömberg, General Counsel (a.stroemberg@corvane.example.com, +49 211 5567 8900).\n\nAuthorised representative: Maître Céline Verhaegen, Verhaegen Dossche SRL, Rue Belliard 88, 1040 Brussels, Belgium (c.verhaegen@verhaegendossche.example.be, +32 2 555 01 44). The power of attorney executed by Dr. Strömberg is attached as Annex 2.1.\n\n2.2 Other parties to the concentration\n\n(a) Tessaro Fluid Control B.V., a private limited liability company (besloten vennootschap) under Dutch law, having its registered office at Westzeedijk 507, 3024 EB Rotterdam, Netherlands. Contact person: Ms. Ingrid Bakhuizen, Chief Executive Officer (+31 10 555 0187). Ms. Bakhuizen will continue to lead the Target after completion.\n\n(b) Marlowe & Pitt Capital Partners LLP, a limited liability partnership registered in England and Wales, having its registered office at 22 Bedford Row, London WC1R 4EB, United Kingdom. Contact person: Mr. Julian Ashcombe, Partner (j.ashcombe@mpcp.example.co.uk, +44 20 7946 0532). Ashcombe has confirmed that neither MPCP nor the Seller will retain any shareholding, board seat or veto right in the Target.\n\nSECTION 3 — DETAILS OF THE CONCENTRATION\n\n3.1 Nature and value. The consideration payable under the SPA amounts to EUR 1,155,000,000 on a cash-free, debt-free basis, corresponding to an enterprise value of approximately EUR 1.42 billion, subject to customary completion adjustments.\n\n3.2 Financing. The consideration will be funded as to EUR 505 million from the Notifying Party's cash resources and as to EUR 650 million by a committed acquisition facility underwritten by BIL under a facilities agreement dated 15 July 2026. The escrow amount of EUR 57,750,000 required under clause 9.3 of the SPA has been deposited on account LU20 0021 8730 6900 5400 in the name of the escrow agent. No lender acquires any right to influence the commercial conduct of the Target.\n\n3.3 Union dimension. In the financial year ended 31 December 2025, Corvane achieved a worldwide turnover of EUR 6,840 million (EUR 3,120 million in the Union) and Tessaro a worldwide turnover of EUR 938 million (EUR 612 million in the Union).(2) The thresholds of Article 1(2) of the Merger Regulation are met and neither undertaking achieves more than two-thirds of its Union-wide turnover in one and the same Member State.\n\n3.4 Timetable. Pre-notification contacts between Corvane and DG Competition were opened on 22 June 2026. The Parties intend to notify formally on 5 October 2026 and anticipate a decision under Article 6(1)(b) of the Merger Regulation in Phase I. Completion is conditional upon clearance and expected in the first quarter of 2027; the long-stop date under the SPA is 30 June 2027.\n\n3.5 Other jurisdictions. A merger notice will be submitted to the CMA, with which pre-notification discussions are ongoing, and a filing has been made with the Turkish Competition Authority. The conditions for a referral under Article 4(4) or Article 9 of the Merger Regulation are not met; the Bundeskartellamt and the ACM have nevertheless been informed on a courtesy basis and are not expected to seek a referral.\n\n3.6 Ancillary restraints. The three-year non-compete given by the Seller in clause 14 of the SPA is directly related and necessary to the Transaction and is covered by the clearance decision under the Commission's Notice on ancillary restraints; no separate assessment under Article 101 TFEU is required. Sable accordingly raises no issue beyond the Phase I review contemplated above.\n\n(1) Commission Implementing Regulation (EU) 2023/914, Annex I, Section 6; share estimates are provided in Section 6 below.\n(2) Turnover calculated in accordance with Article 5 of the Merger Regulation and the Consolidated Jurisdictional Notice (OJ C 95, 16.4.2008).",
+ "gold_spans": [
+  {
+   "start": 48,
+   "end": 55,
+   "type": "ORG",
+   "text": "CORVANE"
+  },
+  {
+   "start": 58,
+   "end": 65,
+   "type": "ORG",
+   "text": "TESSARO"
+  },
+  {
+   "start": 225,
+   "end": 232,
+   "type": "CASE_REF",
+   "text": "M.12384"
+  },
+  {
+   "start": 243,
+   "end": 259,
+   "type": "CASE_REF",
+   "text": "VD/2026/0417-SAB"
+  },
+  {
+   "start": 419,
+   "end": 440,
+   "type": "ORG",
+   "text": "Corvane Industries SE"
+  },
+  {
+   "start": 443,
+   "end": 450,
+   "type": "ORG",
+   "text": "Corvane"
+  },
+  {
+   "start": 564,
+   "end": 590,
+   "type": "ORG",
+   "text": "Tessaro Fluid Control B.V."
+  },
+  {
+   "start": 593,
+   "end": 600,
+   "type": "ORG",
+   "text": "Tessaro"
+  },
+  {
+   "start": 730,
+   "end": 743,
+   "type": "ORG",
+   "text": "Project Sable"
+  },
+  {
+   "start": 902,
+   "end": 936,
+   "type": "ORG",
+   "text": "Marlowe & Pitt Buyout Fund IV SCSp"
+  },
+  {
+   "start": 1001,
+   "end": 1036,
+   "type": "ORG",
+   "text": "Marlowe & Pitt Capital Partners LLP"
+  },
+  {
+   "start": 1039,
+   "end": 1043,
+   "type": "ORG",
+   "text": "MPCP"
+  },
+  {
+   "start": 1638,
+   "end": 1659,
+   "type": "ORG",
+   "text": "Corvane Industries SE"
+  },
+  {
+   "start": 1732,
+   "end": 1746,
+   "type": "LOC",
+   "text": "Königsallee 14"
+  },
+  {
+   "start": 1748,
+   "end": 1764,
+   "type": "LOC",
+   "text": "40212 Düsseldorf"
+  },
+  {
+   "start": 1984,
+   "end": 2003,
+   "type": "URL",
+   "text": "corvane.example.com"
+  },
+  {
+   "start": 2026,
+   "end": 2042,
+   "type": "PERSON",
+   "text": "Annika Strömberg"
+  },
+  {
+   "start": 2061,
+   "end": 2093,
+   "type": "EMAIL",
+   "text": "a.stroemberg@corvane.example.com"
+  },
+  {
+   "start": 2095,
+   "end": 2112,
+   "type": "PHONE",
+   "text": "+49 211 5567 8900"
+  },
+  {
+   "start": 2150,
+   "end": 2166,
+   "type": "PERSON",
+   "text": "Céline Verhaegen"
+  },
+  {
+   "start": 2168,
+   "end": 2189,
+   "type": "ORG",
+   "text": "Verhaegen Dossche SRL"
+  },
+  {
+   "start": 2191,
+   "end": 2206,
+   "type": "LOC",
+   "text": "Rue Belliard 88"
+  },
+  {
+   "start": 2208,
+   "end": 2221,
+   "type": "LOC",
+   "text": "1040 Brussels"
+  },
+  {
+   "start": 2232,
+   "end": 2271,
+   "type": "EMAIL",
+   "text": "c.verhaegen@verhaegendossche.example.be"
+  },
+  {
+   "start": 2273,
+   "end": 2288,
+   "type": "PHONE",
+   "text": "+32 2 555 01 44"
+  },
+  {
+   "start": 2329,
+   "end": 2338,
+   "type": "PERSON",
+   "text": "Strömberg"
+  },
+  {
+   "start": 2410,
+   "end": 2436,
+   "type": "ORG",
+   "text": "Tessaro Fluid Control B.V."
+  },
+  {
+   "start": 2547,
+   "end": 2562,
+   "type": "LOC",
+   "text": "Westzeedijk 507"
+  },
+  {
+   "start": 2564,
+   "end": 2581,
+   "type": "LOC",
+   "text": "3024 EB Rotterdam"
+  },
+  {
+   "start": 2616,
+   "end": 2632,
+   "type": "PERSON",
+   "text": "Ingrid Bakhuizen"
+  },
+  {
+   "start": 2659,
+   "end": 2674,
+   "type": "PHONE",
+   "text": "+31 10 555 0187"
+  },
+  {
+   "start": 2681,
+   "end": 2690,
+   "type": "PERSON",
+   "text": "Bakhuizen"
+  },
+  {
+   "start": 2747,
+   "end": 2782,
+   "type": "ORG",
+   "text": "Marlowe & Pitt Capital Partners LLP"
+  },
+  {
+   "start": 2881,
+   "end": 2895,
+   "type": "LOC",
+   "text": "22 Bedford Row"
+  },
+  {
+   "start": 2897,
+   "end": 2912,
+   "type": "LOC",
+   "text": "London WC1R 4EB"
+  },
+  {
+   "start": 2950,
+   "end": 2965,
+   "type": "PERSON",
+   "text": "Julian Ashcombe"
+  },
+  {
+   "start": 2976,
+   "end": 3005,
+   "type": "EMAIL",
+   "text": "j.ashcombe@mpcp.example.co.uk"
+  },
+  {
+   "start": 3007,
+   "end": 3023,
+   "type": "PHONE",
+   "text": "+44 20 7946 0532"
+  },
+  {
+   "start": 3026,
+   "end": 3034,
+   "type": "PERSON",
+   "text": "Ashcombe"
+  },
+  {
+   "start": 3062,
+   "end": 3066,
+   "type": "ORG",
+   "text": "MPCP"
+  },
+  {
+   "start": 3627,
+   "end": 3630,
+   "type": "ORG",
+   "text": "BIL"
+  },
+  {
+   "start": 3783,
+   "end": 3807,
+   "type": "IBAN",
+   "text": "LU20 0021 8730 6900 5400"
+  },
+  {
+   "start": 3989,
+   "end": 3996,
+   "type": "ORG",
+   "text": "Corvane"
+  },
+  {
+   "start": 4085,
+   "end": 4092,
+   "type": "ORG",
+   "text": "Tessaro"
+  },
+  {
+   "start": 4397,
+   "end": 4404,
+   "type": "ORG",
+   "text": "Corvane"
+  },
+  {
+   "start": 5452,
+   "end": 5457,
+   "type": "ORG",
+   "text": "Sable"
+  }
+ ],
+ "public_spans": [
+  {
+   "start": 86,
+   "end": 105,
+   "type": "PUBLIC",
+   "text": "European Commission"
+  },
+  {
+   "start": 118,
+   "end": 145,
+   "type": "PUBLIC",
+   "text": "Regulation (EC) No 139/2004"
+  },
+  {
+   "start": 152,
+   "end": 169,
+   "type": "PUBLIC",
+   "text": "Merger Regulation"
+  },
+  {
+   "start": 209,
+   "end": 223,
+   "type": "PUBLIC",
+   "text": "DG Competition"
+  },
+  {
+   "start": 540,
+   "end": 557,
+   "type": "PUBLIC",
+   "text": "Merger Regulation"
+  },
+  {
+   "start": 4206,
+   "end": 4223,
+   "type": "PUBLIC",
+   "text": "Merger Regulation"
+  },
+  {
+   "start": 4409,
+   "end": 4423,
+   "type": "PUBLIC",
+   "text": "DG Competition"
+  },
+  {
+   "start": 4564,
+   "end": 4581,
+   "type": "PUBLIC",
+   "text": "Merger Regulation"
+  },
+  {
+   "start": 4795,
+   "end": 4798,
+   "type": "PUBLIC",
+   "text": "CMA"
+  },
+  {
+   "start": 4889,
+   "end": 4918,
+   "type": "PUBLIC",
+   "text": "Turkish Competition Authority"
+  },
+  {
+   "start": 4989,
+   "end": 5006,
+   "type": "PUBLIC",
+   "text": "Merger Regulation"
+  },
+  {
+   "start": 5024,
+   "end": 5040,
+   "type": "PUBLIC",
+   "text": "Bundeskartellamt"
+  },
+  {
+   "start": 5049,
+   "end": 5052,
+   "type": "PUBLIC",
+   "text": "ACM"
+  },
+  {
+   "start": 5348,
+   "end": 5358,
+   "type": "PUBLIC",
+   "text": "Commission"
+  },
+  {
+   "start": 5422,
+   "end": 5438,
+   "type": "PUBLIC",
+   "text": "Article 101 TFEU"
+  },
+  {
+   "start": 5537,
+   "end": 5585,
+   "type": "PUBLIC",
+   "text": "Commission Implementing Regulation (EU) 2023/914"
+  },
+  {
+   "start": 5716,
+   "end": 5733,
+   "type": "PUBLIC",
+   "text": "Merger Regulation"
+  },
+  {
+   "start": 5742,
+   "end": 5776,
+   "type": "PUBLIC",
+   "text": "Consolidated Jurisdictional Notice"
+  }
+ ],
+ "notes": "Draft Form CO excerpt (Sections 1–3) for an EU merger notification. SHOULD redact: the notifying party (Corvane Industries SE, 'Corvane', all-caps 'CORVANE' in the header), the target (Tessaro Fluid Control B.V., 'Tessaro', 'TESSARO'), the seller-side entities (Marlowe & Pitt Capital Partners LLP, its defined acronym 'MPCP', the fund vehicle Marlowe & Pitt Buyout Fund IV SCSp), outside counsel firm (Verhaegen Dossche SRL) and its Brussels address, every named individual with or without honorific (Annika Strömberg / 'Dr. Strömberg', Céline Verhaegen, Ingrid Bakhuizen / 'Ms. Bakhuizen', Julian Ashcombe / bare 'Ashcombe'), all emails and phones, the three party registered-office addresses (street + postcode/city), the bare corporate domain corvane.example.com, the financing bank named only by acronym (BIL), the escrow IBAN, the deal codename 'Project Sable' and its bare reuse 'Sable', counsel's internal matter reference VD/2026/0417-SAB and the provisional Commission case number M.12384 (party-specific at pre-notification stage). SHOULD NOT redact: European Commission / the Commission, DG Competition, Regulation (EC) No 139/2004 and the defined 'Merger Regulation', Commission Implementing Regulation (EU) 2023/914, the Consolidated Jurisdictional Notice, Article 101 TFEU and other Article references, Bundeskartellamt, CMA, ACM, the Turkish Competition Authority, the EEA/Union/Member State framing, countries (Germany, Netherlands, Belgium, United Kingdom, England and Wales), corporate-form labels (Societas Europaea, besloten vennootschap), and role words ('the Notifying Party', 'the Target', 'the Parties', 'the Seller', 'General Counsel', 'Partner', 'escrow agent'). Honorifics (Dr., Ms., Mr., Maître) are excluded from the PERSON spans, consistent with the rest of the corpus.",
+ "source": "agent-synthetic",
+ "split": "heldout",
+ "genre": "merger notification (Form CO excerpt)",
+ "traps": [
+  "codename",
+  "honorific-only",
+  "surname-only",
+  "bare-domain",
+  "bank-acronym",
+  "acronym-defined",
+  "internal-docket",
+  "address",
+  "adjacent-public",
+  "role-noise",
+  "all-caps-header"
+ ]
+}

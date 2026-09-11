@@ -1,0 +1,435 @@
+{
+ "id": "doc_034_state_aid_complaint_en",
+ "title": "Eifelwerk — State aid complaint against Wallonia (Project Corvane)",
+ "language": "en",
+ "text": "COMPLAINT CONCERNING ALLEGED UNLAWFUL STATE AID TO MEUSE COMPOSITE SYSTEMS SA\nLodged under Article 24(2) of Regulation (EU) 2015/1589\nTo: European Commission, DG Competition\nOur ref.: VO/2026/EIF-0417\nDate: 8 September 2026\n\nI. THE COMPLAINANT AND ITS REPRESENTATIVES\n\n1. This complaint is lodged by Verstraeten Osei & Partners SRL (the \"Firm\"), Rue du Trône 118, 1050 Brussels, on behalf of Eifelwerk Composite GmbH (\"Eifelwerk\" or the \"Complainant\"), a German limited liability company with registered office at Trierer Straße 88, 52078 Aachen. Eifelwerk makes carbon-fibre structural components for wind-turbine and aircraft OEMs and sells roughly 40% of its output into Belgium, the Netherlands and France (power of attorney at Annex 1).\n\n2. Correspondence should be addressed to Dr. Annelies Verstraeten, partner (a.verstraeten@verstraeten-osei.example.be, +32 2 555 08 41), with copy to Mr. Kwame Osei. The Complainant's in-house contact is Mr. Jonas Hilgenfeld, Head of Legal (j.hilgenfeld@eifelwerk.example.de, +49 241 555 3320).\n\nII. THE BENEFICIARY AND THE GRANTING AUTHORITIES\n\n3. The alleged beneficiary is Meuse Composite Systems SA (\"MCS\" or the \"Beneficiary\"), a public limited company under Belgian law, enterprise number 0799.412.658, with registered office at Quai de Coronmeuse 21, 4000 Liège. MCS competes directly with Eifelwerk in composite nacelle covers and spar caps; its chief executive is Mr. Bertrand Coppieters.\n\n4. The measures were granted by the Walloon Region (the \"Region\") through SOGEPA and SPI, under a package approved by decision of the Walloon Government of 27 September 2024 and referred to there as \"Project Corvane\" (Annex 2). No measure was notified under Article 108(3) TFEU.\n\nIII. THE MEASURES\n\n5. Measure 1 — Loan. On 18 December 2024, SOGEPA and Meuse Composite Systems SA signed a EUR 38 million term loan at a fixed rate of 1.15% for twelve years, with no security other than a second-ranking pledge on the Grâce-Hollogne plant. MCS's 2024 accounts filed with the National Bank of Belgium (note 12) show negative equity of EUR 6.4 million at 31 December 2023 and a breach of the covenants of its previous facility. Under the Commission's 2008 Reference Rate Communication a \"weak\" borrower with low collateralisation attracts a margin of at least 650 basis points; the aid element is therefore not less than EUR 9.4 million. By comparison, on 3 March 2025 the Complainant's own house bank, BCHL, quoted it a margin of 410 basis points over EURIBOR on a fully secured facility half the size.\n\n6. Measure 2 — Land. On 6 February 2025, SPI sold to MCS a 6.2-hectare serviced industrial plot at Rue de l'Espérance 75, 4460 Grâce-Hollogne, for EUR 1.1 million. No open and unconditional tender was organised. An independent valuation obtained by the Complainant (Annex 4) puts the plot at EUR 4.3 million at the date of sale. The Commission's Notice on the notion of aid (paras 89–96) treats a sale below the price a private vendor would have accepted as an advantage; see also the judgment of the General Court in Valmont v Commission, T-274/01.\n\n7. Measure 3 — Tax ruling. By ministerial decision of 14 November 2024 the Region granted MCS an individual five-year exemption from the précompte immobilier on the Grâce-Hollogne site, outside any scheme of general application. The Complainant estimates the exemption at EUR 0.6 million per year (Annex 5), bringing total aid across the three measures to not less than EUR 15.6 million.\n\nIV. EXISTENCE OF AID AND UNLAWFULNESS\n\n8. Each measure is imputable to the Region, financed through State resources, and confers a selective advantage that no market economy operator would have granted (Commission v EDF, C-124/10 P). MCS competes on an EEA-wide market for composite structural parts on which the Complainant and Danish, Spanish and Polish manufacturers are active; the measures are liable to distort competition and affect trade. All conditions of Article 107(1) TFEU are met. Absent notification, the aid is unlawful and the Region has breached the standstill obligation in Article 108(3) TFEU.\n\n9. No exemption is available: MCS was an undertaking in difficulty within the meaning of the 2014 Rescue and Restructuring Guidelines when the loan was signed, which excludes regional aid and block exemption.\n\nV. EVIDENCE\n\n10. Corvane has been widely reported. L'Echo of 9 December 2024 quotes Coppieters as saying that the Region had \"de-risked the whole programme\". The Beneficiary's website, mcs-composites.example.be, states that the plant is \"built with the support of the Walloon Region\". Press cuttings are at Annex 3; the loan agreement, obtained from SOGEPA under an access-to-documents request, is at Annex 6.\n\nVI. EFFECT ON THE COMPLAINANT\n\n11. In April 2026 Eifelwerk lost a three-year framework contract for nacelle covers, worth some EUR 22 million, to MCS at a price it could not have matched without trading at a loss. A witness statement from Mr. Hilgenfeld is at Annex 7.\n\nVII. REQUEST\n\n12. The Complainant requests that the Commission (i) open the formal investigation procedure under Article 4(4) of Regulation (EU) 2015/1589; (ii) issue a suspension injunction under Article 13(1) requiring the Region to suspend the undrawn loan tranches and the tax exemption pending its decision; and (iii) order recovery of aid already paid, with interest. The Complainant claims the status of interested party under Article 1(h).\n\n13. Confidential business information is marked in Annexes 4 and 7; a non-confidential version is enclosed for transmission to Belgium. Questions on confidentiality should be addressed to Dr. Verstraeten.\n\nDr. Annelies Verstraeten\nVerstraeten Osei & Partners SRL\nBrussels, 8 September 2026",
+ "gold_spans": [
+  {
+   "start": 51,
+   "end": 77,
+   "type": "ORG",
+   "text": "MEUSE COMPOSITE SYSTEMS SA"
+  },
+  {
+   "start": 184,
+   "end": 200,
+   "type": "CASE_REF",
+   "text": "VO/2026/EIF-0417"
+  },
+  {
+   "start": 300,
+   "end": 331,
+   "type": "ORG",
+   "text": "Verstraeten Osei & Partners SRL"
+  },
+  {
+   "start": 346,
+   "end": 362,
+   "type": "LOC",
+   "text": "Rue du Trône 118"
+  },
+  {
+   "start": 392,
+   "end": 416,
+   "type": "ORG",
+   "text": "Eifelwerk Composite GmbH"
+  },
+  {
+   "start": 419,
+   "end": 428,
+   "type": "ORG",
+   "text": "Eifelwerk"
+  },
+  {
+   "start": 514,
+   "end": 531,
+   "type": "LOC",
+   "text": "Trierer Straße 88"
+  },
+  {
+   "start": 539,
+   "end": 545,
+   "type": "LOC",
+   "text": "Aachen"
+  },
+  {
+   "start": 547,
+   "end": 556,
+   "type": "ORG",
+   "text": "Eifelwerk"
+  },
+  {
+   "start": 788,
+   "end": 808,
+   "type": "PERSON",
+   "text": "Annelies Verstraeten"
+  },
+  {
+   "start": 819,
+   "end": 860,
+   "type": "EMAIL",
+   "text": "a.verstraeten@verstraeten-osei.example.be"
+  },
+  {
+   "start": 862,
+   "end": 877,
+   "type": "PHONE",
+   "text": "+32 2 555 08 41"
+  },
+  {
+   "start": 897,
+   "end": 907,
+   "type": "PERSON",
+   "text": "Kwame Osei"
+  },
+  {
+   "start": 951,
+   "end": 967,
+   "type": "PERSON",
+   "text": "Jonas Hilgenfeld"
+  },
+  {
+   "start": 984,
+   "end": 1017,
+   "type": "EMAIL",
+   "text": "j.hilgenfeld@eifelwerk.example.de"
+  },
+  {
+   "start": 1019,
+   "end": 1035,
+   "type": "PHONE",
+   "text": "+49 241 555 3320"
+  },
+  {
+   "start": 1119,
+   "end": 1145,
+   "type": "ORG",
+   "text": "Meuse Composite Systems SA"
+  },
+  {
+   "start": 1148,
+   "end": 1151,
+   "type": "ORG",
+   "text": "MCS"
+  },
+  {
+   "start": 1238,
+   "end": 1250,
+   "type": "IBAN",
+   "text": "0799.412.658"
+  },
+  {
+   "start": 1278,
+   "end": 1299,
+   "type": "LOC",
+   "text": "Quai de Coronmeuse 21"
+  },
+  {
+   "start": 1306,
+   "end": 1311,
+   "type": "LOC",
+   "text": "Liège"
+  },
+  {
+   "start": 1313,
+   "end": 1316,
+   "type": "ORG",
+   "text": "MCS"
+  },
+  {
+   "start": 1340,
+   "end": 1349,
+   "type": "ORG",
+   "text": "Eifelwerk"
+  },
+  {
+   "start": 1420,
+   "end": 1439,
+   "type": "PERSON",
+   "text": "Bertrand Coppieters"
+  },
+  {
+   "start": 1642,
+   "end": 1657,
+   "type": "ORG",
+   "text": "Project Corvane"
+  },
+  {
+   "start": 1794,
+   "end": 1820,
+   "type": "ORG",
+   "text": "Meuse Composite Systems SA"
+  },
+  {
+   "start": 1957,
+   "end": 1971,
+   "type": "LOC",
+   "text": "Grâce-Hollogne"
+  },
+  {
+   "start": 1979,
+   "end": 1982,
+   "type": "ORG",
+   "text": "MCS"
+  },
+  {
+   "start": 2440,
+   "end": 2444,
+   "type": "ORG",
+   "text": "BCHL"
+  },
+  {
+   "start": 2595,
+   "end": 2598,
+   "type": "ORG",
+   "text": "MCS"
+  },
+  {
+   "start": 2641,
+   "end": 2662,
+   "type": "LOC",
+   "text": "Rue de l'Espérance 75"
+  },
+  {
+   "start": 2669,
+   "end": 2683,
+   "type": "LOC",
+   "text": "Grâce-Hollogne"
+  },
+  {
+   "start": 3183,
+   "end": 3186,
+   "type": "ORG",
+   "text": "MCS"
+  },
+  {
+   "start": 3258,
+   "end": 3272,
+   "type": "LOC",
+   "text": "Grâce-Hollogne"
+  },
+  {
+   "start": 3716,
+   "end": 3719,
+   "type": "ORG",
+   "text": "MCS"
+  },
+  {
+   "start": 4126,
+   "end": 4129,
+   "type": "ORG",
+   "text": "MCS"
+  },
+  {
+   "start": 4323,
+   "end": 4330,
+   "type": "ORG",
+   "text": "Corvane"
+  },
+  {
+   "start": 4390,
+   "end": 4400,
+   "type": "PERSON",
+   "text": "Coppieters"
+  },
+  {
+   "start": 4491,
+   "end": 4516,
+   "type": "URL",
+   "text": "mcs-composites.example.be"
+  },
+  {
+   "start": 4766,
+   "end": 4775,
+   "type": "ORG",
+   "text": "Eifelwerk"
+  },
+  {
+   "start": 4863,
+   "end": 4866,
+   "type": "ORG",
+   "text": "MCS"
+  },
+  {
+   "start": 4956,
+   "end": 4970,
+   "type": "PERSON",
+   "text": "Mr. Hilgenfeld"
+  },
+  {
+   "start": 5624,
+   "end": 5639,
+   "type": "PERSON",
+   "text": "Dr. Verstraeten"
+  },
+  {
+   "start": 5646,
+   "end": 5666,
+   "type": "PERSON",
+   "text": "Annelies Verstraeten"
+  },
+  {
+   "start": 5667,
+   "end": 5698,
+   "type": "ORG",
+   "text": "Verstraeten Osei & Partners SRL"
+  }
+ ],
+ "public_spans": [
+  {
+   "start": 108,
+   "end": 133,
+   "type": "PUBLIC",
+   "text": "Regulation (EU) 2015/1589"
+  },
+  {
+   "start": 138,
+   "end": 157,
+   "type": "PUBLIC",
+   "text": "European Commission"
+  },
+  {
+   "start": 159,
+   "end": 173,
+   "type": "PUBLIC",
+   "text": "DG Competition"
+  },
+  {
+   "start": 1478,
+   "end": 1492,
+   "type": "PUBLIC",
+   "text": "Walloon Region"
+  },
+  {
+   "start": 1516,
+   "end": 1522,
+   "type": "PUBLIC",
+   "text": "SOGEPA"
+  },
+  {
+   "start": 1527,
+   "end": 1530,
+   "type": "PUBLIC",
+   "text": "SPI"
+  },
+  {
+   "start": 1576,
+   "end": 1594,
+   "type": "PUBLIC",
+   "text": "Walloon Government"
+  },
+  {
+   "start": 1700,
+   "end": 1719,
+   "type": "PUBLIC",
+   "text": "Article 108(3) TFEU"
+  },
+  {
+   "start": 1783,
+   "end": 1789,
+   "type": "PUBLIC",
+   "text": "SOGEPA"
+  },
+  {
+   "start": 2014,
+   "end": 2038,
+   "type": "PUBLIC",
+   "text": "National Bank of Belgium"
+  },
+  {
+   "start": 2583,
+   "end": 2586,
+   "type": "PUBLIC",
+   "text": "SPI"
+  },
+  {
+   "start": 2888,
+   "end": 2915,
+   "type": "PUBLIC",
+   "text": "Notice on the notion of aid"
+  },
+  {
+   "start": 3043,
+   "end": 3056,
+   "type": "PUBLIC",
+   "text": "General Court"
+  },
+  {
+   "start": 3060,
+   "end": 3080,
+   "type": "PUBLIC",
+   "text": "Valmont v Commission"
+  },
+  {
+   "start": 3082,
+   "end": 3090,
+   "type": "PUBLIC",
+   "text": "T-274/01"
+  },
+  {
+   "start": 3685,
+   "end": 3701,
+   "type": "PUBLIC",
+   "text": "Commission v EDF"
+  },
+  {
+   "start": 3703,
+   "end": 3713,
+   "type": "PUBLIC",
+   "text": "C-124/10 P"
+  },
+  {
+   "start": 3947,
+   "end": 3966,
+   "type": "PUBLIC",
+   "text": "Article 107(1) TFEU"
+  },
+  {
+   "start": 4074,
+   "end": 4093,
+   "type": "PUBLIC",
+   "text": "Article 108(3) TFEU"
+  },
+  {
+   "start": 4357,
+   "end": 4363,
+   "type": "PUBLIC",
+   "text": "L'Echo"
+  },
+  {
+   "start": 4574,
+   "end": 4588,
+   "type": "PUBLIC",
+   "text": "Walloon Region"
+  },
+  {
+   "start": 4656,
+   "end": 4662,
+   "type": "PUBLIC",
+   "text": "SOGEPA"
+  },
+  {
+   "start": 5116,
+   "end": 5141,
+   "type": "PUBLIC",
+   "text": "Regulation (EU) 2015/1589"
+  }
+ ],
+ "notes": "State aid complaint to DG COMP under Art. 24(2) Reg. 2015/1589. SHOULD redact: the beneficiary (full name, all-caps header form, defined acronym 'MCS'), the complainant and its short form, the law firm, both lawyers (full names and later 'Dr. Verstraeten'), the complainant's Head of Legal (full name and later 'Mr. Hilgenfeld'), the beneficiary's CEO (full name and surname-only 'Coppieters'), the complainant's house bank named only by acronym (BCHL — invented private bank), the project codename ('Project Corvane' and bare 'Corvane'), the three street addresses and the private parties' cities (Aachen, Liège, Grâce-Hollogne), both example.* emails, both phones, the firm's internal reference, the beneficiary's enterprise number (typed CASE_REF for want of a registry-number type), and the beneficiary's bare domain. SHOULD NOT redact: European Commission, DG Competition, the Treaty articles, Regulation 2015/1589, the General Court, the Walloon Region and Walloon Government, SOGEPA and SPI (real Walloon public bodies granting the aid), the National Bank of Belgium, the Notice on the notion of aid, the two decided public cases (Valmont, Commission v EDF), L'Echo (a newspaper cited as a press source), Brussels (seat of the Commission and of the firm; left unredacted as a capital), countries, EURIBOR, and role words such as 'the Complainant', 'the Beneficiary', 'the Region', 'the Firm'.",
+ "source": "agent-synthetic",
+ "split": "heldout",
+ "genre": "state aid complaint",
+ "traps": [
+  "codename",
+  "honorific-only",
+  "surname-only",
+  "bare-domain",
+  "bank-acronym",
+  "acronym-defined",
+  "internal-docket",
+  "address",
+  "adjacent-public",
+  "role-noise",
+  "all-caps-header"
+ ]
+}

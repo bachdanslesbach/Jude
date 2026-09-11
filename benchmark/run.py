@@ -40,8 +40,11 @@ CORPUS_DIR = Path(__file__).parent / "corpus"
 DEFAULT_RUNNERS = ("jude-full", "jude-no-public-filter", "spacy-only", "regex-only")
 
 
-def _load_corpus() -> list[GoldDocument]:
-    return [GoldDocument.from_json(p) for p in sorted(CORPUS_DIR.glob("doc_*.json"))]
+def _load_corpus(split: str | None = None) -> list[GoldDocument]:
+    docs = [GoldDocument.from_json(p) for p in sorted(CORPUS_DIR.glob("doc_*.json"))]
+    if split:
+        docs = [d for d in docs if d.split == split]
+    return docs
 
 
 def _registry() -> dict[str, Callable[[], object]]:
@@ -88,6 +91,48 @@ def _registry() -> dict[str, Callable[[], object]]:
         from .runners.roblox_pii import RobloxPiiRunner
         return RobloxPiiRunner()
 
+    # --- model-size / throughput ladder ---------------------------------
+    def jude_full_gliner(size: str):
+        def make():
+            from .runners.jude_full import JudeFullRunner
+            return JudeFullRunner(
+                name=f"jude-full-gliner-{size}",
+                gliner_model=f"urchade/gliner_{size}-v2.1",
+            )
+        return make
+
+    def jude_no_gliner():
+        from .runners.jude_full import JudeFullRunner
+        return JudeFullRunner(name="jude-full-no-gliner", use_gliner=False)
+
+    def gliner_size(size: str, device: str | None = None):
+        def make():
+            from .runners.nvidia_gliner_pii import GlinerLabelRunner, jude_label_map
+            suffix = f"-{device}" if device else ""
+            return GlinerLabelRunner(
+                name=f"gliner-{size}-v2.1-jude-labels{suffix}",
+                model_id=f"urchade/gliner_{size}-v2.1",
+                label_map=jude_label_map(),
+                device=device,
+            )
+        return make
+
+    def pplx_cpu():
+        from .runners.pplx_pii import PplxPiiRunner
+        r = PplxPiiRunner(device="cpu")
+        r.name = "pplx-pii-masking-cpu"
+        return r
+
+    def rules_only():
+        from .runners.rules_only import RulesOnlyRunner
+        return RulesOnlyRunner()
+
+    def ollama(model: str):
+        def make():
+            from .runners.ollama_llm import OllamaSpanRunner
+            return OllamaSpanRunner(model=model)
+        return make
+
     return {
         "jude-full": jude_full,
         "jude-no-public-filter": jude_no_filter,
@@ -99,6 +144,17 @@ def _registry() -> dict[str, Callable[[], object]]:
         "nvidia-gliner-pii-jude-labels": nvidia_jude,
         "pplx-pii-masking": pplx,
         "roblox-pii-classifier": roblox,
+        # ladder
+        "rules-only": rules_only,
+        "jude-full-no-gliner": jude_no_gliner,
+        "jude-full-gliner-small": jude_full_gliner("small"),
+        "jude-full-gliner-medium": jude_full_gliner("medium"),
+        "gliner-small-v2.1-jude-labels": gliner_size("small"),
+        "gliner-medium-v2.1-jude-labels": gliner_size("medium"),
+        "gliner-large-v2.1-jude-labels-cpu": gliner_size("large", "cpu"),
+        "pplx-pii-masking-cpu": pplx_cpu,
+        "ollama-qwen3-4b": ollama("qwen3:4b"),
+        "ollama-qwen3-8b": ollama("qwen3:8b"),
     }
 
 
@@ -338,6 +394,31 @@ def _render_per_doc_table(reports: list[CorpusReport]) -> str:
     return "\n".join(lines)
 
 
+def _render_split_table(reports: list[CorpusReport], docs: list[GoldDocument]) -> str:
+    """F1 per corpus split. `dev` is what Jude's lists were tuned on;
+    `heldout` was never looked at while tuning."""
+
+    split_of = {d.id: d.split for d in docs}
+    splits = sorted({s for s in split_of.values()})
+    if len(splits) < 2:
+        return ""
+    out = ["| Runner | " + " | ".join(f"{s} — F1 (P / R, docs)" for s in splits) + " |",
+           "|---|" + "---|" * len(splits)]
+    for r in reports:
+        if not r.meta.get("span_level", True):
+            continue
+        cells = []
+        for s in splits:
+            scores = [d.score for d in r.per_doc if split_of.get(d.doc_id) == s]
+            if not scores:
+                cells.append("—")
+                continue
+            a = aggregate_scores(scores)
+            cells.append(f"**{a.f1:.3f}** ({a.precision:.2f} / {a.recall:.2f}, {len(scores)})")
+        out.append(f"| `{r.runner_name}` | " + " | ".join(cells) + " |")
+    return "\n".join(out)
+
+
 def _render_notes(reports: list[CorpusReport]) -> str:
     lines: list[str] = []
     for r in reports:
@@ -367,9 +448,15 @@ def _render_notes(reports: list[CorpusReport]) -> str:
     return "\n".join(lines)
 
 
-def _full_report(reports: list[CorpusReport], title: str, prelude: str | None = None) -> str:
+def _full_report(
+    reports: list[CorpusReport],
+    title: str,
+    prelude: str | None = None,
+    docs: list[GoldDocument] | None = None,
+) -> str:
     n_docs = next((r.meta.get("n_docs") for r in reports if r.meta.get("n_docs")), None)
     n_docs = n_docs or max((len(r.per_doc) for r in reports), default=0)
+    split_table = _render_split_table(reports, docs) if docs else ""
     parts = [
         # Jekyll front matter so GitHub Pages renders the page through
         # the site layout instead of serving raw markdown.
@@ -396,6 +483,10 @@ def _full_report(reports: list[CorpusReport], title: str, prelude: str | None = 
         "",
         _render_summary_table(reports),
         "",
+        *(["## By corpus split", "",
+           "`dev`: the documents Jude's whitelist and stop-lists were tuned on. "
+           "`heldout`: added later, never consulted while tuning — the honest number.",
+           "", split_table, ""] if split_table else []),
         "## Sentence level",
         "",
         _render_sentence_table(reports),
@@ -430,6 +521,8 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--report", type=Path, default=None,
                         help="Write the full markdown report to this path")
     parser.add_argument("--title", default="Jude redaction benchmark")
+    parser.add_argument("--split", choices=["dev", "heldout"], default=None,
+                        help="Score only this corpus split (default: all documents)")
     parser.add_argument("--prelude", type=Path, default=None,
                         help="Markdown file inserted after the title (methodology, systems, …)")
     parser.add_argument("--postlude", type=Path, default=None,
@@ -449,7 +542,8 @@ def main(argv: list[str] | None = None) -> None:
             reports.extend(report_from_dict(d) for d in (data if isinstance(data, list) else [data]))
         # Stored predictions, current gold: a corpus review must not
         # require re-running every model.
-        corpus = _load_corpus()
+        corpus = _load_corpus(args.split)
+        docs = corpus
         if corpus:
             for r in reports:
                 rescore(r, corpus)
@@ -458,7 +552,7 @@ def main(argv: list[str] | None = None) -> None:
                           f"document(s) — {', '.join(r.meta['missing_docs'][:5])}"
                           f"{' …' if len(r.meta['missing_docs']) > 5 else ''}; re-run to include them.")
     else:
-        docs = _load_corpus()
+        docs = _load_corpus(args.split)
         if not docs:
             raise SystemExit(f"No documents found in {CORPUS_DIR}")
         print(f"Loaded {len(docs)} documents from {CORPUS_DIR}")
@@ -483,7 +577,7 @@ def main(argv: list[str] | None = None) -> None:
 
     if args.report:
         prelude = args.prelude.read_text(encoding="utf-8") if args.prelude else None
-        body = _full_report(reports, args.title, prelude)
+        body = _full_report(reports, args.title, prelude, docs)
         if args.postlude:
             body += "\n" + args.postlude.read_text(encoding="utf-8").rstrip() + "\n"
         args.report.write_text(body, encoding="utf-8")

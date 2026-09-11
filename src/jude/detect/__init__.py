@@ -49,6 +49,7 @@ class DetectionPipeline:
         languages: tuple[str, ...] = ("en", "fr", "nl"),
         use_gliner: bool | None = None,
         use_privacy_filter: bool = False,
+        gliner_model: str | None = None,
     ):
         self.store = store
         self.matter_id = matter_id
@@ -67,7 +68,11 @@ class DetectionPipeline:
         if use_gliner:
             from .gliner_detector import GlinerDetector
 
-            self.gliner: GlinerDetector | None = GlinerDetector()
+            # `gliner_model` selects the checkpoint (small / medium /
+            # large) — the model-size ladder in the benchmark uses it.
+            self.gliner: GlinerDetector | None = (
+                GlinerDetector(model_name=gliner_model) if gliner_model else GlinerDetector()
+            )
         else:
             self.gliner = None
         self.use_privacy_filter = use_privacy_filter

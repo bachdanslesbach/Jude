@@ -48,6 +48,10 @@ class GoldDocument:
     # (type "PUBLIC"). Feed the public-body over-redaction metric; never
     # scored as gold. Absent from older corpus files.
     public_spans: tuple[GoldSpan, ...] = ()
+    # "dev": the original documents, on which Jude's whitelist and
+    # stop-lists were tuned. "heldout": documents added later and never
+    # looked at while tuning — the honest number.
+    split: str = "dev"
 
     @classmethod
     def from_json(cls, path: Path | str) -> GoldDocument:
@@ -68,6 +72,7 @@ class GoldDocument:
             text=str(data["text"]),
             gold_spans=spans,
             notes=str(data.get("notes", "")),
+            split=str(data.get("split", "dev")),
             public_spans=tuple(
                 GoldSpan(
                     start=int(s["start"]),

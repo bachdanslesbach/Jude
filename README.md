@@ -138,18 +138,25 @@ type-agnostic), *public-body over-redaction* (how often a system
 redacts the European Commission, the DMA, a court…), sentence-level F1,
 throughput and peak memory.
 
-| System | Span F1 | Recall | Public bodies redacted |
+| System | Span F1 — heldout (dev) | Recall (heldout) | Public bodies redacted (heldout) |
 |---|---|---|---|
-| Jude (`jude-full`) | **0.963** | 0.998 | 3 % |
-| `nvidia/gliner-PII` (native labels) | 0.724 | 0.675 | 22 % |
-| `perplexity-ai/pplx-pii-masking` | 0.533 | 0.383 | 3 % |
-| `roblox/roblox-pii-classifier` | — (sentence-level 0.764) | — | — |
+| Jude (`jude-full`) | **0.735** (0.963) | 0.89 | 30 % |
+| `nvidia/gliner-PII` (native labels) | 0.658 (0.721) | 0.62 | 24 % |
+| `perplexity-ai/pplx-pii-masking` | 0.598 (0.531) | 0.44 | 2 % |
+| `roblox/roblox-pii-classifier` | — (sentence-level 0.751) | — | — |
 
-Generic PII taxonomies have no label for organisations-as-parties or
-case references — 48 % of what a legal document must hide. Protocol,
-full tables and failure taxonomy:
+The `heldout` column is the number to quote: the 25 documents Jude
+was never tuned on. Jude loses 23 F1 points between the two splits —
+its recall holds (0.89), its precision does not (0.93 → 0.62): the
+public sphere in French practice, role phrases and published
+citations it does not know yet. Generic PII taxonomies have no label
+for organisations-as-parties or case references — 47 % of what a
+legal document must hide. Protocol, full tables and failure taxonomy:
 [docs/benchmark-pii-models.md](docs/benchmark-pii-models.md);
-Jude-only ablations: [docs/benchmark.md](docs/benchmark.md).
+Jude-only ablations: [docs/benchmark.md](docs/benchmark.md);
+model size × speed × recall and where the efficient point is:
+[docs/efficiency-frontier.md](docs/efficiency-frontier.md); what it
+would take to train a legal encoder: [docs/training-data.md](docs/training-data.md).
 
 ```bash
 python -m benchmark.run --list                                   # registered runners

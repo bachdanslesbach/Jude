@@ -94,13 +94,96 @@ majority tier). *This section is filled from `benchmark/results/`;
 the numbers below are the current run.*
 
 <!-- LADDER_TABLE -->
+| Runner | Params | Device | Pages / s | s / page | Recall | Precision | F1 | Public-body over-redaction | Peak RSS |
+|---|---|---|---|---|---|---|---|---|---|
+| `rules-only` | 0 | cpu | 116.71 | 0.0 | 0.554 | 0.963 | **0.704** | 3% | 308 MB |
+| `regex-only` | 0 | cpu | 1151.22 | 0.0 | 0.136 | 0.956 | **0.238** | 0% | 308 MB |
+| `gliner-small-v2.1-jude-labels` | 50 M | mps | 2.18 | 0.5 | 0.495 | 0.673 | **0.570** | 38% | 1731 MB |
+| `spacy-only` | 125 M | cpu | 1.84 | 0.5 | 0.630 | 0.584 | **0.606** | 58% | 3030 MB |
+| `jude-full-no-gliner` | 125 M | cpu | 1.00 | 1.0 | 0.852 | 0.663 | **0.745** | 23% | 3037 MB |
+| `jude-full-gliner-small` | 175 M | cpu | 0.57 | 1.7 | 0.885 | 0.673 | **0.764** | 24% | 2451 MB |
+| `gliner-large-v2.1-jude-labels` | 440 M | mps | 0.94 | 1.1 | 0.582 | 0.641 | **0.610** | 51% | 3440 MB |
+| `gliner-large-v2.1-jude-labels-cpu` | 440 M | cpu | 0.72 | 1.4 | 0.582 | 0.641 | **0.610** | 51% | 3814 MB |
+| `nvidia-gliner-pii-native` | 440 M | mps | 0.83 | 1.2 | 0.634 | 0.715 | **0.672** | 24% | 3434 MB |
+| `jude-full` | 565 M | cpu | 0.21 | 4.8 | 0.916 | 0.678 | **0.779** | 25% | 2612 MB |
+| `pplx-pii-masking` | 596 M | mps | 0.70 | 1.4 | 0.429 | 0.916 | **0.584** | 2% | 755 MB |
+| `pplx-pii-masking-cpu` | 596 M | cpu | 0.04 | 23.0 | 0.430 | 0.916 | **0.585** | 2% | 1572 MB |
+| `roblox-pii-classifier` | 560 M | mps | 1.07 | 0.9 | — | — | **—** | — | 943 MB |
+<!-- /LADDER_TABLE -->
 
 <!-- LADDER_CHART -->
+![Size × speed × recall on the legal corpus](assets/efficiency-frontier.png)
+<!-- /LADDER_CHART -->
 
 ### Reading the curve
 
-<!-- LADDER_READING -->
+Numbers are the 44-document corpus (both splits); the held-out
+figures are in `benchmark-pii-models.html`. Five things the ladder
+says, in order of surprise:
+
+1. **Quality is not monotone in parameters.** Zero parameters, well
+   designed (`rules-only`: regex, long-tail patterns, known entities,
+   whitelist) scores F1 0.70 with precision 0.96 — above every neural
+   model run alone, including the 440 M GLiNER (0.61) and the 596 M
+   `pplx` (0.58). The same 440 M checkpoint gains six points once
+   fine-tuned on PII data (`nvidia-gliner-pii`, 0.67): at equal size,
+   *what the model was taught* is worth more than *how big it is*.
+2. **The model's job is recall; the rules' job is precision.** Rules
+   alone recall 0.55; adding the neural layers takes Jude to 0.92 —
+   +37 points — at a cost of 29 precision points. That is the division
+   of labour the numbers impose, not a design preference.
+3. **Diminishing returns start at 0.1 B.** Inside the same pipeline,
+   GLiNER small (50 M) gives F1 0.764 / recall 0.885; large (440 M)
+   gives 0.779 / 0.916. Nine times the parameters buy 1.5 points of
+   F1 and 3 of recall — and cost 2.7× the time per page (0.57 →
+   0.21 pages/s). No GLiNER at all: 0.745 / 0.852 at 1.0 page/s.
+4. **Architecture beats size for the CPU tier.** GLiNER large runs
+   almost as fast on CPU as on the GPU (0.72 vs 0.94 pages/s);
+   `pplx`'s Qwen-derived encoder of similar size drops from 0.70 to
+   **0.04 pages/s** on CPU — 23 s per page, 17× slower. For the
+   majority tier (no GPU) the model family decides deployability.
+5. **Generative extraction is a different order of magnitude.** A 4 B
+   chat model through Ollama produces one page every 45 s
+   (0.02 pages/s) on the same machine, with recall around 1.0 and
+   precision around 0.6 on the documents measured: it lists public
+   bodies too. Useful as a second reader on high-risk documents; not
+   an extractor.
+
+Jude's own pipeline is the slowest encoder on the chart (0.21 pages/s)
+for a reason unrelated to model size: two full passes and a
+transformer spaCy on CPU. Its throughput is an engineering item, not
+a modelling one.
 
 ## The efficient point
 
-<!-- CONCLUSION -->
+Read against the demand side above:
+
+* **Size: 50–450 M, encoder.** Everything a laptop tier needs; the
+  50 M variant already delivers 97 % of the large one's recall inside
+  the pipeline. What the extra parameters cannot buy — organisations
+  as parties, public bodies as negatives, case references, the long
+  tail — training data can: the six points the NVIDIA fine-tune gains
+  at equal size is the lower bound of what a *legal* fine-tune should
+  bring, since its label set finally matches the task.
+* **Speed: ≥ 1 page/s on CPU is within reach** for a single-pass
+  50–450 M encoder; Jude's 0.21 pages/s is the two-pass pipeline, not
+  the model. 10 pages/s is a server with batching, or the rules layer
+  alone (117 pages/s) for a first triage.
+* **Quality target: recall ≥ 0.99 by machine with the review report
+  closing the gap, precision ≥ 0.85, public-body over-redaction
+  ≤ 5 %.** On the held-out split Jude stands at recall 0.89 / precision
+  0.62 / over-redaction 30 % — the gap is almost entirely the public
+  sphere in French practice, role phrases and published citations,
+  i.e. the negative classes a model has to *learn*, not the positive
+  ones (see the failure taxonomy in `benchmark-pii-models.html`).
+* **100 B: not on the frontier.** Off every deployment tier a firm
+  can own, and the task does not need it; a 7–14 B local model earns
+  its place only as an occasional second reader for quasi-identifiers.
+
+So the model worth training is small: a 50–100 M encoder (GLiNER
+small/medium class) fine-tuned on synthetic legal documents with the
+label schema in `training-data.html`, evaluated on the held-out split.
+If it holds 95 % of the large model's recall — the hypothesis the
+ladder makes plausible but has not yet tested — it runs on every
+laptop at a page a second, and the rules and the review report do the
+rest.

@@ -1,176 +1,165 @@
+## The generalisation gap
+
+The first version of this benchmark scored twenty documents on which
+Jude's whitelist and stop-lists had been tuned. The `heldout` split —
+twenty-five documents drafted later against a programmatic bar and a
+judge, never consulted while tuning — is the number to quote:
+
+| System | dev F1 (P / R) | heldout F1 (P / R) | gap |
+|---|---|---|---|
+| `jude-full` | 0.963 (0.93 / 1.00) | **0.735** (0.62 / 0.89) | −0.23 |
+| `jude-full-gliner-small` | 0.960 | 0.716 (0.62 / 0.85) | −0.24 |
+| `rules-only` | 0.790 (0.99 / 0.66) | 0.678 (0.95 / 0.53) | −0.11 |
+| `nvidia-gliner-pii-native` | 0.721 (0.78 / 0.67) | 0.658 (0.70 / 0.62) | −0.06 |
+| `gliner-large-v2.1-jude-labels` | 0.657 | 0.597 | −0.06 |
+| `pplx-pii-masking` | 0.531 (0.89 / 0.38) | 0.598 (0.92 / 0.44) | +0.07 |
+| `roblox-pii-classifier` (sentence F1) | 0.764 | 0.751 | −0.01 |
+
+Jude loses 23 points between the two splits; the generic models lose
+six or gain some. That is the honest measure of how much of the dev
+score was tuning. Jude still leads on the held-out set, and its recall
+holds (0.89); what collapses is precision (0.93 → 0.62) — the public
+sphere it does not know yet, as the taxonomy below shows. Every fix
+suggested by a held-out failure is listed here and *not applied*: the
+next batch of documents will measure it.
+
 ## Failure taxonomy
 
-Everything below is read off `python -m benchmark.analyze
-benchmark/results/*.json`; the counts are exact for this corpus.
+Read off `python -m benchmark.analyze benchmark/results/*.json`; counts
+are exact for this corpus.
 
 ### 1. Generic PII taxonomies have no word for half of what a legal document must hide
 
-ORG (172 spans) and CASE_REF (18) together are 190 of the 400 gold
-spans — 48 %. `pplx-pii-masking` has no organisation label: ORG recall
-is **0.000** by construction. NVIDIA's `company_name` fires on 54 % of
-ORG spans — with perfect precision when it does — and misses the rest:
-short names (`UBS`, `BIL`, `BNP Paribas`), trading names
-(`TotalEnergies` without its `SE`), codenames (`Helios`, `Northbridge`),
-a bank named only by acronym (`BCEE`). Neither system has a notion of a
-case reference; `pplx` files 7 of the 18 under `account_number`.
+ORG and CASE_REF are 47 % of the gold spans. `pplx-pii-masking` has no
+organisation label: ORG recall is **0.000** by construction, on both
+splits; its overall recall is 0.44 and its precision 0.92 — it is a
+careful model for the wrong task. NVIDIA's `company_name` reaches
+ORG recall 0.47 with precision 0.85 — it misses short names, acronyms
+and every codename. Neither has a case-reference label.
 
-Seven of the twenty documents score below 0.5 for `pplx`; the
-antitrust complaint, the regulatory submission and the expert-economist
-report — the documents densest in company names — are the worst
-(0.474, 0.323, 0.261).
+### 2. What Jude misses on the held-out split (recall 0.89)
 
-### 2. Address ≠ location
+149 misses in 1,775 gold spans, in five classes, each a handful of
+lines to fix and each *left unfixed* for the next round:
 
-`private_address` catches full postal addresses and nothing else
-(precision 1.000, LOC recall **0.268**). *Brussels*, *Paris*, *Munich*,
-*Hamburg* are not PII to `pplx`. For a lawyer, the city of a party's
-registered office is often the strongest quasi-identifier in the file —
-the seat of the only listed brewer in a small country is the brewer.
+* **Registry numbers** (28): KBO/BCE `0712.445.303`, `HRB 71244`,
+  Companies House eight-digit numbers, an Italian VAT. IBAN precision
+  is 1.00 and recall 0.43 on the held-out split — the regex layer
+  simply has no pattern for them.
+* **Reference formats it has not seen** (28): Belgian *numéro de rôle*
+  `A/26/02371`, firm references of the shape `LH/2026/0583-TRV`, a
+  pre-notification `M.12384`. CASE_REF recall 0.56 — the same lesson
+  as v0.7.7, on new shapes.
+* **Bare codenames and short forms** (42 ORG): `Héron`, `Sarcelle`,
+  `Kittiwake`, `Valdoire`, `Ambreval`, `Tremonval`. Half of these are
+  the codename policy (the corpus says redact; Jude's filter still
+  drops bare codename words); the rest are short forms whose full form
+  was caught but not propagated.
+* **Surname-only repeats** (38 PERSON): `Herbiet` ×3, `Roelandts`,
+  `Thonnard`, `Brankovic`, `Pasqualotto`, `Rombouts` — the reference a
+  practitioner uses after first mention. The dictionary propagates
+  full names; it must propagate surnames.
+* **Bare cities and venues** (12 LOC): `Antwerp`, `Rotterdam`,
+  `Breda`, `Hotel Löwenkranz`, `9100 Sint-Niklaas` — the annotation
+  policy on cities (POLICY_QUESTIONS §6) as much as a detector gap.
 
-### 3. E-mail addresses read as names
+### 3. What Jude over-redacts on the held-out split (precision 0.62)
 
-NVIDIA's model labels the local part of an e-mail address as
-`first_name` / `last_name` — *sophie*, *martin*, *chen*, *hartmann* — so
-22 of 30 e-mails are lost (EMAIL recall 0.267) and 38 spurious PERSON
-spans appear. Its type-agnostic F1 (0.812 against 0.724 strict) shows
-that a third of its gap is label confusion, not blindness. `pplx` has
-the mirror problem: five phone numbers were fused into the preceding
-e-mail span (`sophie.martin@example-law.eu, +33 1 44 55 66 77` as one
-`private_email`).
+Three-quarters of the 772 spurious spans are the *negative* classes:
 
-### 4. Over-redaction of the public sphere
+* **The public sphere in Belgian and French practice** — 30 % of the
+  496 whitelisted mentions redacted: *Auditorat*, *Chambre
+  contentieuse*, *Cour des marchés*, *ONSS*, *SPF Emploi*, *Conseil
+  national du Travail*, *SETCa*, *loi du 3 juillet 1978*, *Cass.*,
+  *Pas.* — a whitelist built on English competition practice meeting
+  employment, data-protection and civil-procedure French. A list can
+  be extended forever; a model with a `public_body` label learns the
+  category.
+* **Published citations typed as live case references** (13):
+  `C-746/21 P`, `C-311/18`, `T-274/01`, *Hoffmann-La Roche 85/76*.
+  The corpus policy (POLICY_QUESTIONS §2) says published = public; the
+  regex says every `C-nnn/nn` is a case reference. A model needs the
+  distinction as two labels.
+* **Roles, defined terms and legal forms** (a large share of 427 ORG
+  false positives): *l'Auditeur*, *auditeur général*, *siège des
+  Parties*, *Naamloze vennootschap*, *Audit & Risk Committee*,
+  *Creditors' Committee*, *Swiss parent*. The stop-list has sixty
+  entries; the held-out documents used sixty others.
+* **Type confusion on bare short forms** (ORG → PERSON 26, PERSON →
+  ORG 20): a bare `Valdoire` or `Steinhauer` is a company in one
+  document and a person in the next; without context the neural layer
+  guesses. Lenient any-type F1 (0.78 vs 0.74) measures the cost.
+* **Countries and regions as LOC** (part of 185 LOC false positives):
+  *Pays-Bas*, *England and Wales*, *Afrique du Nord*, the Commission's
+  own address. Jurisdictions are public; the whitelist knows twenty.
 
-Share of the 117 public-body mentions redacted: base GLiNER **55 %**,
-NVIDIA with Jude's labels 41 %, NVIDIA native 22 %, Jude without its
-whitelist 81 %, Jude 3 %, `pplx` 3 %. NVIDIA's native run classifies
-*Bundeskartellamt* as an identification number three times and redacts
-*UK*, *Cayman*, *Ireland*, *Luxembourg* as countries. `pplx`'s 3 % is
-the flip side of §1–2: it barely redacts places or organisations at
-all, public or private. Jude's three residual hits are whitelisted
-words swallowed by a longer span (*Delaware* inside `THE DISTRICT OF
-DELAWARE`, *OECD* inside a guideline title) and one US state.
+### 4. Address ≠ location; e-mails as names; the honorific-only reference
 
-### 5. The honorific-only reference
+Unchanged from the first run and confirmed on the new documents:
+`pplx`'s `private_address` catches full postal addresses and no bare
+city (LOC recall 0.27); NVIDIA labels the local part of e-mail
+addresses as first and last names (EMAIL recall 0.40, dozens of
+spurious PERSON spans); `pplx` misses *Mr. Tan*-style references,
+NVIDIA catches them.
 
-*Mr. Tan* — the way a witness is referred to after first mention —
-appears five times in the witness statement; `pplx` misses all five.
-NVIDIA catches every one (PERSON recall 0.989, its best number).
+### 5. A message classifier on legal prose
 
-### 6. A message classifier on legal prose
+`roblox-pii-classifier` at sentence level: precision 0.97, recall 0.63
+on the held-out split — it almost never flags a clean sentence and
+misses a third of the sentences carrying an identifier.
 
-`roblox-pii-classifier` at sentence level: precision 0.968, recall
-0.631. It almost never flags a clean sentence and misses 37 % of the
-sentences that carry an identifier — "Pioneer Industries SA (the
-Borrower) has drawn EUR 40 m" is not *giving PII* in the chat sense it
-was trained on. Relatedly, `pplx`'s document-sensitivity head averages
-0.11 across documents every one of which is confidential.
+### 6. The review report as the last line
 
-### 7. PII fine-tuning transfers — and shows where the ceiling is
+Of Jude's 148 held-out misses, the unverified-term report puts 38 in
+front of the reviewer, at 17 items per document. The remaining 110 are
+mostly numbers (registry and reference formats) and lower-case or
+all-caps short forms the capitalisation heuristic does not see —
+which is why the report's next version lists digit-bearing tokens
+too.
 
-Same checkpoint family, same labels, same threshold, same windows:
-NVIDIA's fine-tune against the base GLiNER on Jude's legal labels moves
-PERSON 0.810 → 0.874, CASE_REF 0.560 → 0.759, ORG 0.687 → 0.703, and
-public-body over-redaction 55 % → 41 %. Synthetic-PII training helps on
-legal text it never saw. It also says what is missing: not architecture, but
-*legal* training data and a label set with parties and public bodies
-as first-class, opposite categories.
+## What Jude takes from this — for the next version, measured on the next batch
 
-### 8. Cost
-
-All three external models run at 2.3–2.9 k chars/s on an M2 laptop
-(MPS): a twenty-page brief in about twenty seconds. `pplx` is the
-lightest to deploy (749 MB resident, bf16, MIT). Jude's shipped stack
-is six times slower (426 chars/s: transformer spaCy and GLiNER on CPU,
-two passes, windowed) and nothing in it has been optimised yet. None of this is
-the bottleneck — a lawyer's review of the redaction is.
-
-## What Jude takes from this
-
-* **Long-tail rules and the review report** (v0.7.10). Deterministic
-  rules for what statistical NER predictably misses — legal-form
-  suffixes, short names defined in parentheses, honorific + name,
-  vessels, street addresses, bare domains, a family behind a trust —
-  plus the bundled banks and public companies as a detector. Recall
-  0.970 → **0.998**, F1 0.945 → 0.963, no new false positives; the one
-  remaining miss is an annotation-policy conflict (*Luxembourg* as a
-  place of business, which the whitelist treats as a jurisdiction — so
-  the review report, which honours the whitelist, cannot surface it
-  either: hence "0/1" in the *misses surfaced* column). And the
-  fail-closed half: `jude review` and the review panel list every
-  capitalised or identifier-shaped term that is neither redacted nor
-  public — six items per corpus document.
-* **GLiNER truncates at 384 word-tokens** (`predict_entities`,
-  `truncation=True`), found while writing the runners. Two of the
-  corpus documents are near the limit; a real pleading is far past it.
-  Fixed in v0.7.9: Jude's detector now windows the text on paragraph
-  boundaries (`jude.detect.chunking`), the same code the GLiNER runners
-  above use.
-* **The GLiNER layer had no shape filter.** Chunking exposed it: on a
-  short window GLiNER labels `the Firm`, `our client`, `Counsel for the
-  Claimant` as organisations, and nothing dropped them. v0.7.9 runs
-  GLiNER's PERSON / ORG / LOC output through the same normaliser as
-  the spaCy layer, balances the windows, and extends the stop-list
-  (litigation roles, defined terms, demonyms). Precision 0.892 → 0.922.
-* **Whitelist matching** (v0.7.9): nationality adjectives stripped
-  before alias lookup (`Belgian SPF Finances`, `Autorité de la
-  concurrence française`); courts, prosecutors, statistical agencies
-  and US/EU jurisdictions added (`Commercial Court of London`,
-  `Department of Justice`, `Parquet National Financier`, `Eurostat`,
-  `United States`, `France` …). Public-body over-redaction 7 % → 3 %.
-* **A month is not a first name.** The shape filter rejected any span
-  containing a month token — including *Jan Peeters*, since `jan` is
-  January. Found because the filter now also applies to GLiNER; fixed.
-* **Annotation policy on codenames** (`Helios` ×6 is half of Jude's
-  remaining misses, and it is deliberate — `helios` sits in the
-  header-stopword list). Deal codenames are confidential and should
-  probably be redacted; that is a policy call, not a bug.
-* **`nvidia/gliner-PII` as an opt-in detector**: +0.03 F1 over the base
-  checkpoint on Jude's labels in isolation. Its licence (NVIDIA Open
-  Model License) is not MIT-compatible for redistribution but fine as a
-  runtime download. Needs an in-pipeline ablation before it earns a
-  flag.
-
-Where the remaining misses are and what closes them:
-[Towards zero misses](towards-recall-one.html).
+* Registry-number and *numéro de rôle* patterns; surname propagation
+  in the dictionary; digit-bearing tokens in the review report.
+* French public-sphere entries and the *published citation* rule in
+  the whitelist — knowing that every such list is a stopgap the model
+  should make redundant.
+* The codename ruling (POLICY_QUESTIONS §1) applied consistently in
+  corpus and detector.
+* GLiNER small as the laptop default is defensible: −3 recall points
+  for 2.7× the speed inside the pipeline (see `efficiency-frontier.html`).
 
 ## What a legal-anonymisation model would need
 
-For anyone minded to train one:
+For anyone minded to train one — the plan is in `training-data.html`:
 
 1. **Labels that encode the legal distinction, not the PII one.**
    `party_organisation` *versus* `public_body`; `private_person`
-   *versus* `official_in_public_capacity`; `case_reference` and
-   `internal_docket`; `place_of_business` alongside postal address;
-   plus the usual contact identifiers. The negative class must be a
-   label, not a post-hoc list.
-2. **Legal synthetic data, multilingual, EU formats.** NVIDIA's
-   data-designer approach works; the missing ingredient is the domain:
-   term sheets, pleadings, board minutes, regulatory filings, in
-   EN / FR first (then DE / NL), with EU case numbers, ECLI, IBANs, VAT numbers,
-   Belgian national register numbers.
+   *versus* `official_in_public_capacity`; `case_reference_live`
+   *versus* `case_reference_published`; `registry_number`;
+   `party_address` *versus* `public_address`; `role` as an explicit
+   negative. Every one of these is a class of held-out error above.
+2. **Legal synthetic data, EN / FR first (then DE / NL), EU formats**,
+   generated the way this corpus was — briefs, a programmatic bar, a
+   judge, uniqueness across documents — at a scale of thousands.
 3. **Long context or built-in chunking** with consistent decisions
-   across chunks — two pages is a short document here.
-4. **Alias consistency**: *Mr. Tan* / *Wei Tan* / *the Claimant* must
-   map to one pseudonym. A post-processing layer can do it; a model that
-   emits coreference makes it much cheaper.
-5. **Evaluation on real public documents** as well as synthetic ones:
-   Commission decisions on EUR-Lex, US opinions on CourtListener, UK
-   judgments on BAILII carry real party names with no confidentiality
-   problem. That is the next extension of this corpus.
+   across chunks.
+4. **Alias consistency**: *Herbiet* / *Thomas Herbiet* / *le
+   directeur commercial* map to one pseudonym; a model that emits
+   coreference makes the propagation cheap.
+5. **Evaluation on the held-out split, never on the tuning split**,
+   and a fresh batch for every round of fixes.
 
 ## Limitations of this benchmark
 
-* Twenty synthetic documents, 400 spans, one annotation policy, two
-  non-English documents, not yet reviewed by a lawyer (the Word
-  protocol exists for that). The numbers are indicative; the *ranking* is
-  robust — the gaps are 20 to 40 points, not 2.
+* Forty-four synthetic documents, one annotation policy with seven
+  open rulings, agent-drafted held-out documents judged but not yet
+  reviewed by a lawyer. The numbers are indicative; the ranking and
+  the size of the generalisation gap are robust.
 * Where a mapping choice was ambiguous it was made in the external
   model's favour: dates and demographic labels are dropped rather than
   counted as false positives; adjacent name fragments are merged.
-* Jude's whitelist was built on the same *genre* of document as the
-  corpus (not on these documents), and its over-redaction figure
-  benefits from that.
 * Thresholds are the model cards' defaults; lowering NVIDIA's to 0.3
-  changes nothing.
+  changes little.
 * Roblox's own card reports 45.5 % F1 on the Kaggle PII essay dataset;
   that number is not comparable to anything here and is not used.

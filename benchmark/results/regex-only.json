@@ -2,44 +2,44 @@
  {
   "runner_name": "regex-only",
   "aggregate": {
-   "precision": 0.9195402298850575,
-   "recall": 0.19950124688279303,
-   "f1": 0.3278688524590164,
-   "tp": 80,
-   "fp": 7,
-   "fn": 321,
+   "precision": 0.9563492063492064,
+   "recall": 0.13577464788732393,
+   "f1": 0.23778983719782928,
+   "tp": 241,
+   "fp": 11,
+   "fn": 1534,
    "by_type": {
     "EMAIL": {
      "precision": 1.0,
      "recall": 1.0,
      "f1": 1.0,
-     "tp": 30,
+     "tp": 99,
      "fp": 0,
      "fn": 0
     },
     "IBAN": {
      "precision": 1.0,
-     "recall": 1.0,
-     "f1": 1.0,
-     "tp": 12,
+     "recall": 0.5333333333333333,
+     "f1": 0.6956521739130436,
+     "tp": 32,
      "fp": 0,
-     "fn": 0
+     "fn": 28
     },
     "PHONE": {
      "precision": 1.0,
      "recall": 1.0,
      "f1": 1.0,
-     "tp": 22,
+     "tp": 84,
      "fp": 0,
      "fn": 0
     },
     "CASE_REF": {
-     "precision": 0.6956521739130435,
-     "recall": 0.8888888888888888,
-     "f1": 0.7804878048780488,
-     "tp": 16,
-     "fp": 7,
-     "fn": 2
+     "precision": 0.7027027027027027,
+     "recall": 0.325,
+     "f1": 0.4444444444444445,
+     "tp": 26,
+     "fp": 11,
+     "fn": 54
     },
     "ORG": {
      "precision": 0.0,
@@ -47,7 +47,7 @@
      "f1": 0.0,
      "tp": 0,
      "fp": 0,
-     "fn": 173
+     "fn": 707
     },
     "LOC": {
      "precision": 0.0,
@@ -55,7 +55,7 @@
      "f1": 0.0,
      "tp": 0,
      "fp": 0,
-     "fn": 56
+     "fn": 248
     },
     "PERSON": {
      "precision": 0.0,
@@ -63,7 +63,7 @@
      "f1": 0.0,
      "tp": 0,
      "fp": 0,
-     "fn": 89
+     "fn": 468
     },
     "URL": {
      "precision": 0.0,
@@ -71,49 +71,49 @@
      "f1": 0.0,
      "tp": 0,
      "fp": 0,
-     "fn": 1
+     "fn": 29
     }
    }
   },
   "aggregate_any_type": {
-   "precision": 0.9195402298850575,
-   "recall": 0.19950124688279303,
-   "f1": 0.3278688524590164,
-   "tp": 80,
-   "fp": 7,
-   "fn": 321,
+   "precision": 0.9563492063492064,
+   "recall": 0.13577464788732393,
+   "f1": 0.23778983719782928,
+   "tp": 241,
+   "fp": 11,
+   "fn": 1534,
    "by_type": {
     "EMAIL": {
      "precision": 1.0,
      "recall": 1.0,
      "f1": 1.0,
-     "tp": 30,
+     "tp": 99,
      "fp": 0,
      "fn": 0
     },
     "IBAN": {
      "precision": 1.0,
-     "recall": 1.0,
-     "f1": 1.0,
-     "tp": 12,
+     "recall": 0.5333333333333333,
+     "f1": 0.6956521739130436,
+     "tp": 32,
      "fp": 0,
-     "fn": 0
+     "fn": 28
     },
     "PHONE": {
      "precision": 1.0,
      "recall": 1.0,
      "f1": 1.0,
-     "tp": 22,
+     "tp": 84,
      "fp": 0,
      "fn": 0
     },
     "CASE_REF": {
-     "precision": 0.6956521739130435,
-     "recall": 0.8888888888888888,
-     "f1": 0.7804878048780488,
-     "tp": 16,
-     "fp": 7,
-     "fn": 2
+     "precision": 0.7027027027027027,
+     "recall": 0.325,
+     "f1": 0.4444444444444445,
+     "tp": 26,
+     "fp": 11,
+     "fn": 54
     },
     "ORG": {
      "precision": 0.0,
@@ -121,7 +121,7 @@
      "f1": 0.0,
      "tp": 0,
      "fp": 0,
-     "fn": 173
+     "fn": 707
     },
     "LOC": {
      "precision": 0.0,
@@ -129,7 +129,7 @@
      "f1": 0.0,
      "tp": 0,
      "fp": 0,
-     "fn": 56
+     "fn": 248
     },
     "PERSON": {
      "precision": 0.0,
@@ -137,7 +137,7 @@
      "f1": 0.0,
      "tp": 0,
      "fp": 0,
-     "fn": 89
+     "fn": 468
     },
     "URL": {
      "precision": 0.0,
@@ -145,7 +145,7 @@
      "f1": 0.0,
      "tp": 0,
      "fp": 0,
-     "fn": 1
+     "fn": 29
     }
    }
   },
@@ -153,23 +153,29 @@
    "span_level": true,
    "public_body_over_redaction": {
     "hits": 0,
-    "total": 117,
+    "total": 612,
     "rate": 0.0
    },
    "sentence_level": {
-    "precision": 0.9682539682539683,
-    "recall": 0.2584745762711864,
-    "f1": 0.40802675585284276,
-    "tp": 61,
+    "precision": 0.9885057471264368,
+    "recall": 0.16180620884289745,
+    "f1": 0.27809215844785773,
+    "tp": 172,
     "fp": 2,
-    "fn": 175,
-    "n_sentences": 519
+    "fn": 891,
+    "n_sentences": 2353
    },
-   "n_docs": 20,
-   "load_seconds": 0.09352891700109467,
-   "seconds": 0.008816207999188919,
-   "chars_per_sec": 3422559.9036202384,
-   "peak_rss_mb": 33.828125,
+   "review": {
+    "misses": 1534,
+    "misses_surfaced": 1476,
+    "items": 1868,
+    "items_per_doc": 42.45454545454545
+   },
+   "n_docs": 44,
+   "load_seconds": 0.0849664590023167,
+   "seconds": 0.049758749999455176,
+   "chars_per_sec": 3453663.9284926094,
+   "peak_rss_mb": 307.890625,
    "device": "cpu"
   },
   "per_doc": [
@@ -655,167 +661,6 @@
       "end": 164,
       "type": "PHONE",
       "text": "+33 1 53 89 76 21"
-     }
-    ]
-   },
-   {
-    "doc_id": "doc_004_brussels_letter_nl",
-    "score": {
-     "precision": 1.0,
-     "recall": 0.4,
-     "f1": 0.5714285714285715,
-     "tp": 4,
-     "fp": 0,
-     "fn": 6,
-     "by_type": {
-      "EMAIL": {
-       "precision": 1.0,
-       "recall": 1.0,
-       "f1": 1.0,
-       "tp": 1,
-       "fp": 0,
-       "fn": 0
-      },
-      "IBAN": {
-       "precision": 1.0,
-       "recall": 1.0,
-       "f1": 1.0,
-       "tp": 1,
-       "fp": 0,
-       "fn": 0
-      },
-      "PHONE": {
-       "precision": 1.0,
-       "recall": 1.0,
-       "f1": 1.0,
-       "tp": 1,
-       "fp": 0,
-       "fn": 0
-      },
-      "CASE_REF": {
-       "precision": 1.0,
-       "recall": 1.0,
-       "f1": 1.0,
-       "tp": 1,
-       "fp": 0,
-       "fn": 0
-      },
-      "ORG": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 0,
-       "fn": 2
-      },
-      "PERSON": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 0,
-       "fn": 2
-      },
-      "LOC": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 0,
-       "fn": 2
-      }
-     }
-    },
-    "score_any_type": {
-     "precision": 1.0,
-     "recall": 0.4,
-     "f1": 0.5714285714285715,
-     "tp": 4,
-     "fp": 0,
-     "fn": 6,
-     "by_type": {
-      "EMAIL": {
-       "precision": 1.0,
-       "recall": 1.0,
-       "f1": 1.0,
-       "tp": 1,
-       "fp": 0,
-       "fn": 0
-      },
-      "IBAN": {
-       "precision": 1.0,
-       "recall": 1.0,
-       "f1": 1.0,
-       "tp": 1,
-       "fp": 0,
-       "fn": 0
-      },
-      "PHONE": {
-       "precision": 1.0,
-       "recall": 1.0,
-       "f1": 1.0,
-       "tp": 1,
-       "fp": 0,
-       "fn": 0
-      },
-      "CASE_REF": {
-       "precision": 1.0,
-       "recall": 1.0,
-       "f1": 1.0,
-       "tp": 1,
-       "fp": 0,
-       "fn": 0
-      },
-      "ORG": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 0,
-       "fn": 2
-      },
-      "PERSON": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 0,
-       "fn": 2
-      },
-      "LOC": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 0,
-       "fn": 2
-      }
-     }
-    },
-    "pred_spans": [
-     {
-      "start": 290,
-      "end": 319,
-      "type": "EMAIL",
-      "text": "j.peeters@example-be-legal.be"
-     },
-     {
-      "start": 586,
-      "end": 605,
-      "type": "IBAN",
-      "text": "BE68 5390 0754 7034"
-     },
-     {
-      "start": 321,
-      "end": 335,
-      "type": "PHONE",
-      "text": "+32 2 555 0123"
-     },
-     {
-      "start": 404,
-      "end": 417,
-      "type": "CASE_REF",
-      "text": "Case C-403/19"
      }
     ]
    },
@@ -1854,11 +1699,11 @@
     "doc_id": "doc_012_engagement_letter_en",
     "score": {
      "precision": 1.0,
-     "recall": 0.19047619047619047,
-     "f1": 0.32,
+     "recall": 0.2,
+     "f1": 0.33333333333333337,
      "tp": 4,
      "fp": 0,
-     "fn": 17,
+     "fn": 16,
      "by_type": {
       "EMAIL": {
        "precision": 1.0,
@@ -1898,7 +1743,7 @@
        "f1": 0.0,
        "tp": 0,
        "fp": 0,
-       "fn": 8
+       "fn": 7
       },
       "LOC": {
        "precision": 0.0,
@@ -1920,11 +1765,11 @@
     },
     "score_any_type": {
      "precision": 1.0,
-     "recall": 0.19047619047619047,
-     "f1": 0.32,
+     "recall": 0.2,
+     "f1": 0.33333333333333337,
      "tp": 4,
      "fp": 0,
-     "fn": 17,
+     "fn": 16,
      "by_type": {
       "EMAIL": {
        "precision": 1.0,
@@ -1964,7 +1809,7 @@
        "f1": 0.0,
        "tp": 0,
        "fp": 0,
-       "fn": 8
+       "fn": 7
       },
       "LOC": {
        "precision": 0.0,
@@ -3240,6 +3085,4733 @@
       "end": 2005,
       "type": "PHONE",
       "text": "+32 2 555 8800"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_021_board_minutes_en",
+    "score": {
+     "precision": 0.8,
+     "recall": 0.06153846153846154,
+     "f1": 0.1142857142857143,
+     "tp": 4,
+     "fp": 1,
+     "fn": 61,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.5,
+       "recall": 0.5,
+       "f1": 0.5,
+       "tp": 1,
+       "fp": 1,
+       "fn": 1
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 23
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 10
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 26
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.8,
+     "recall": 0.06153846153846154,
+     "f1": 0.1142857142857143,
+     "tp": 4,
+     "fp": 1,
+     "fn": 61,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.5,
+       "recall": 0.5,
+       "f1": 0.5,
+       "tp": 1,
+       "fp": 1,
+       "fn": 1
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 23
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 10
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 26
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 5584,
+      "end": 5613,
+      "type": "EMAIL",
+      "text": "c.vanimpe@vantaris.example.be"
+     },
+     {
+      "start": 3331,
+      "end": 3350,
+      "type": "IBAN",
+      "text": "BE77 7350 4128 8642"
+     },
+     {
+      "start": 5616,
+      "end": 5631,
+      "type": "PHONE",
+      "text": "+32 3 555 71 20"
+     },
+     {
+      "start": 216,
+      "end": 232,
+      "type": "CASE_REF",
+      "text": "VPN-BRD-2026-014"
+     },
+     {
+      "start": 216,
+      "end": 228,
+      "type": "CASE_REF",
+      "text": "VPN-BRD-2026"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_022_nda_fr",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.11904761904761904,
+     "f1": 0.21276595744680848,
+     "tp": 5,
+     "fp": 0,
+     "fn": 37,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 19
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 10
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 5
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.11904761904761904,
+     "f1": 0.21276595744680848,
+     "tp": 5,
+     "fp": 0,
+     "fn": 37,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 19
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 10
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 5
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 3516,
+      "end": 3555,
+      "type": "EMAIL",
+      "text": "j.castagnet@ateliers-baudrin.example.fr"
+     },
+     {
+      "start": 3617,
+      "end": 3652,
+      "type": "EMAIL",
+      "text": "s.moerman@valdoire-verre.example.be"
+     },
+     {
+      "start": 4499,
+      "end": 4532,
+      "type": "IBAN",
+      "text": "FR76 3008 7330 2100 0204 1756 304"
+     },
+     {
+      "start": 3557,
+      "end": 3574,
+      "type": "PHONE",
+      "text": "+33 4 72 41 19 63"
+     },
+     {
+      "start": 3654,
+      "end": 3669,
+      "type": "PHONE",
+      "text": "+32 4 223 60 18"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_023_form_co_excerpt_en",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.17391304347826086,
+     "f1": 0.29629629629629634,
+     "tp": 8,
+     "fp": 0,
+     "fn": 38,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 20
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 8
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 7
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.17391304347826086,
+     "f1": 0.29629629629629634,
+     "tp": 8,
+     "fp": 0,
+     "fn": 38,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 20
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 8
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 7
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 2066,
+      "end": 2099,
+      "type": "EMAIL",
+      "text": "a.stroemberg@tressane.example.com"
+     },
+     {
+      "start": 2234,
+      "end": 2269,
+      "type": "EMAIL",
+      "text": "c.wauters@wautersdossche.example.be"
+     },
+     {
+      "start": 2976,
+      "end": 3005,
+      "type": "EMAIL",
+      "text": "j.ashcombe@mpcp.example.co.uk"
+     },
+     {
+      "start": 3783,
+      "end": 3807,
+      "type": "IBAN",
+      "text": "LU20 0021 8730 6900 5400"
+     },
+     {
+      "start": 2101,
+      "end": 2118,
+      "type": "PHONE",
+      "text": "+49 211 5567 8900"
+     },
+     {
+      "start": 2271,
+      "end": 2286,
+      "type": "PHONE",
+      "text": "+32 2 555 01 44"
+     },
+     {
+      "start": 2657,
+      "end": 2672,
+      "type": "PHONE",
+      "text": "+31 10 555 0187"
+     },
+     {
+      "start": 3007,
+      "end": 3023,
+      "type": "PHONE",
+      "text": "+44 20 7946 0532"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_024_dawn_raid_memo_fr",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.14754098360655737,
+     "f1": 0.2571428571428572,
+     "tp": 9,
+     "fp": 0,
+     "fn": 52,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.6666666666666666,
+       "f1": 0.8,
+       "tp": 2,
+       "fp": 0,
+       "fn": 1
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 18
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 27
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.14754098360655737,
+     "f1": 0.2571428571428572,
+     "tp": 9,
+     "fp": 0,
+     "fn": 52,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.6666666666666666,
+       "f1": 0.8,
+       "tp": 2,
+       "fp": 0,
+       "fn": 1
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 18
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 27
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 2403,
+      "end": 2432,
+      "type": "EMAIL",
+      "text": "t.herbiet@ambreval.example.be"
+     },
+     {
+      "start": 2434,
+      "end": 2465,
+      "type": "EMAIL",
+      "text": "k.muyshondt@ambreval.example.be"
+     },
+     {
+      "start": 2469,
+      "end": 2504,
+      "type": "EMAIL",
+      "text": "l.vandenbroucke@ambreval.example.be"
+     },
+     {
+      "start": 5655,
+      "end": 5699,
+      "type": "EMAIL",
+      "text": "j.ghyselinck@ravensteyn-delcourt.example.com"
+     },
+     {
+      "start": 3264,
+      "end": 3283,
+      "type": "IBAN",
+      "text": "BE30 7340 5298 1611"
+     },
+     {
+      "start": 1739,
+      "end": 1755,
+      "type": "PHONE",
+      "text": "+32 478 23 41 09"
+     },
+     {
+      "start": 5702,
+      "end": 5717,
+      "type": "PHONE",
+      "text": "+32 2 771 45 60"
+     },
+     {
+      "start": 143,
+      "end": 155,
+      "type": "CASE_REF",
+      "text": "RD-2026-0871"
+     },
+     {
+      "start": 5598,
+      "end": 5610,
+      "type": "CASE_REF",
+      "text": "RD-2026-0871"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_025_leniency_marker_en",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.10344827586206896,
+     "f1": 0.1875,
+     "tp": 6,
+     "fp": 0,
+     "fn": 52,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.5,
+       "f1": 0.6666666666666666,
+       "tp": 1,
+       "fp": 0,
+       "fn": 1
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 25
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 10
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 15
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.10344827586206896,
+     "f1": 0.1875,
+     "tp": 6,
+     "fp": 0,
+     "fn": 52,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.5,
+       "f1": 0.6666666666666666,
+       "tp": 1,
+       "fp": 0,
+       "fn": 1
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 25
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 10
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 15
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 5406,
+      "end": 5455,
+      "type": "EMAIL",
+      "text": "i.vercauteren@vercauteren-adriaenssens.example.be"
+     },
+     {
+      "start": 5524,
+      "end": 5568,
+      "type": "EMAIL",
+      "text": "m.desmet@vercauteren-adriaenssens.example.be"
+     },
+     {
+      "start": 72,
+      "end": 87,
+      "type": "PHONE",
+      "text": "+32 2 555 04 17"
+     },
+     {
+      "start": 5457,
+      "end": 5472,
+      "type": "PHONE",
+      "text": "+32 2 555 04 17"
+     },
+     {
+      "start": 5570,
+      "end": 5586,
+      "type": "PHONE",
+      "text": "+32 478 55 04 18"
+     },
+     {
+      "start": 4455,
+      "end": 4464,
+      "type": "CASE_REF",
+      "text": "B12-27/26"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_026_rfi_response_fr",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.0851063829787234,
+     "f1": 0.1568627450980392,
+     "tp": 4,
+     "fp": 0,
+     "fn": 43,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.25,
+       "f1": 0.4,
+       "tp": 1,
+       "fp": 0,
+       "fn": 3
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 25
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 9
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.0851063829787234,
+     "f1": 0.1568627450980392,
+     "tp": 4,
+     "fp": 0,
+     "fn": 43,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.25,
+       "f1": 0.4,
+       "tp": 1,
+       "fp": 0,
+       "fn": 3
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 25
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 9
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 5136,
+      "end": 5170,
+      "type": "EMAIL",
+      "text": "a.ligot@lorquet-hanquet.example.be"
+     },
+     {
+      "start": 4450,
+      "end": 4469,
+      "type": "IBAN",
+      "text": "BE52 7325 2183 6409"
+     },
+     {
+      "start": 63,
+      "end": 78,
+      "type": "PHONE",
+      "text": "+32 4 341 76 09"
+     },
+     {
+      "start": 5172,
+      "end": 5187,
+      "type": "PHONE",
+      "text": "+32 4 341 76 09"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_027_spa_excerpt_en",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.1320754716981132,
+     "f1": 0.23333333333333334,
+     "tp": 7,
+     "fp": 0,
+     "fn": 46,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.4,
+       "f1": 0.5714285714285715,
+       "tp": 2,
+       "fp": 0,
+       "fn": 3
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 17
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 12
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 11
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.1320754716981132,
+     "f1": 0.23333333333333334,
+     "tp": 7,
+     "fp": 0,
+     "fn": 46,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.4,
+       "f1": 0.5714285714285715,
+       "tp": 2,
+       "fp": 0,
+       "fn": 3
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 17
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 12
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 11
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 4642,
+      "end": 4675,
+      "type": "EMAIL",
+      "text": "k.vermeire@vandersloot.example.be"
+     },
+     {
+      "start": 4759,
+      "end": 4796,
+      "type": "EMAIL",
+      "text": "a.dhondt@dhondt-castellane.example.be"
+     },
+     {
+      "start": 4959,
+      "end": 4998,
+      "type": "EMAIL",
+      "text": "priya.ramaswamy@haldanepeak.example.com"
+     },
+     {
+      "start": 4180,
+      "end": 4199,
+      "type": "IBAN",
+      "text": "BE31 7340 5612 8855"
+     },
+     {
+      "start": 4324,
+      "end": 4348,
+      "type": "IBAN",
+      "text": "LU23 0021 0449 3875 5902"
+     },
+     {
+      "start": 4677,
+      "end": 4692,
+      "type": "PHONE",
+      "text": "+32 3 205 44 18"
+     },
+     {
+      "start": 5000,
+      "end": 5016,
+      "type": "PHONE",
+      "text": "+44 20 7946 0312"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_028_client_email_thread_en",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.12903225806451613,
+     "f1": 0.2285714285714286,
+     "tp": 8,
+     "fp": 0,
+     "fn": 54,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 26
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 19
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 8
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.12903225806451613,
+     "f1": 0.2285714285714286,
+     "tp": 8,
+     "fp": 0,
+     "fn": 54,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 26
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 19
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 8
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 24,
+      "end": 62,
+      "type": "EMAIL",
+      "text": "i.halvorsen@hallstrom-vane.example.com"
+     },
+     {
+      "start": 3228,
+      "end": 3267,
+      "type": "EMAIL",
+      "text": "t.wierzbicki@hallstrom-vane.example.com"
+     },
+     {
+      "start": 4362,
+      "end": 4392,
+      "type": "EMAIL",
+      "text": "a.okafor@ravelston.example.com"
+     },
+     {
+      "start": 5272,
+      "end": 5302,
+      "type": "EMAIL",
+      "text": "k.zeller@ravelston.example.com"
+     },
+     {
+      "start": 3212,
+      "end": 3227,
+      "type": "PHONE",
+      "text": "+32 2 555 04 71"
+     },
+     {
+      "start": 4346,
+      "end": 4361,
+      "type": "PHONE",
+      "text": "+31 6 5550 0921"
+     },
+     {
+      "start": 5256,
+      "end": 5271,
+      "type": "PHONE",
+      "text": "+31 6 5550 0184"
+     },
+     {
+      "start": 3025,
+      "end": 3037,
+      "type": "CASE_REF",
+      "text": "HV-2026-0655"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_029_cepani_request_en",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.11538461538461539,
+     "f1": 0.20689655172413793,
+     "tp": 6,
+     "fp": 0,
+     "fn": 46,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.6666666666666666,
+       "f1": 0.8,
+       "tp": 2,
+       "fp": 0,
+       "fn": 1
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 23
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 12
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.11538461538461539,
+     "f1": 0.20689655172413793,
+     "tp": 6,
+     "fp": 0,
+     "fn": 46,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.6666666666666666,
+       "f1": 0.8,
+       "tp": 2,
+       "fp": 0,
+       "fn": 1
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 23
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 12
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 695,
+      "end": 731,
+      "type": "EMAIL",
+      "text": "t.roelandt@roelandt-sioen.example.be"
+     },
+     {
+      "start": 1072,
+      "end": 1116,
+      "type": "EMAIL",
+      "text": "l.ferrandini@ferrandini-associati.example.it"
+     },
+     {
+      "start": 5612,
+      "end": 5631,
+      "type": "IBAN",
+      "text": "BE88 7342 6185 4741"
+     },
+     {
+      "start": 830,
+      "end": 843,
+      "type": "IBAN",
+      "text": "IT04182730269"
+     },
+     {
+      "start": 678,
+      "end": 693,
+      "type": "PHONE",
+      "text": "+32 3 216 74 90"
+     },
+     {
+      "start": 1053,
+      "end": 1070,
+      "type": "PHONE",
+      "text": "+39 0422 55 41 87"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_030_dpia_memo_fr",
+    "score": {
+     "precision": 0.8571428571428571,
+     "recall": 0.1111111111111111,
+     "f1": 0.19672131147540986,
+     "tp": 6,
+     "fp": 1,
+     "fn": 48,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.5,
+       "recall": 0.3333333333333333,
+       "f1": 0.4,
+       "tp": 1,
+       "fp": 1,
+       "fn": 2
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 20
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 15
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 10
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.8571428571428571,
+     "recall": 0.1111111111111111,
+     "f1": 0.19672131147540986,
+     "tp": 6,
+     "fp": 1,
+     "fn": 48,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.5,
+       "recall": 0.3333333333333333,
+       "f1": 0.4,
+       "tp": 1,
+       "fp": 1,
+       "fn": 2
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 20
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 15
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 10
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 360,
+      "end": 392,
+      "type": "EMAIL",
+      "text": "dpo@novaris-logistics.example.be"
+     },
+     {
+      "start": 5634,
+      "end": 5669,
+      "type": "EMAIL",
+      "text": "h.fauconnier@vfa-avocats.example.be"
+     },
+     {
+      "start": 5342,
+      "end": 5361,
+      "type": "IBAN",
+      "text": "BE80 7344 4181 2777"
+     },
+     {
+      "start": 394,
+      "end": 409,
+      "type": "PHONE",
+      "text": "+32 3 555 71 26"
+     },
+     {
+      "start": 5672,
+      "end": 5687,
+      "type": "PHONE",
+      "text": "+32 2 555 14 80"
+     },
+     {
+      "start": 520,
+      "end": 536,
+      "type": "CASE_REF",
+      "text": "NLS-DPO-2026-011"
+     },
+     {
+      "start": 520,
+      "end": 532,
+      "type": "CASE_REF",
+      "text": "NLS-DPO-2026"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_031_dd_redflag_report_en",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.05,
+     "f1": 0.09523809523809523,
+     "tp": 3,
+     "fp": 0,
+     "fn": 57,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 30
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 10
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 13
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.05,
+     "f1": 0.09523809523809523,
+     "tp": 3,
+     "fp": 0,
+     "fn": 57,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 30
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 10
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 13
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 5772,
+      "end": 5816,
+      "type": "EMAIL",
+      "text": "h.stroobants@stroobants-lindqvist.example.be"
+     },
+     {
+      "start": 4838,
+      "end": 4857,
+      "type": "IBAN",
+      "text": "BE13 7351 0648 2039"
+     },
+     {
+      "start": 5819,
+      "end": 5834,
+      "type": "PHONE",
+      "text": "+32 3 205 44 70"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_032_conclusions_tribunal_fr",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.061224489795918366,
+     "f1": 0.11538461538461538,
+     "tp": 3,
+     "fp": 0,
+     "fn": 46,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.3333333333333333,
+       "f1": 0.5,
+       "tp": 1,
+       "fp": 0,
+       "fn": 2
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 21
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 9
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 11
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.061224489795918366,
+     "f1": 0.11538461538461538,
+     "tp": 3,
+     "fp": 0,
+     "fn": 46,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.3333333333333333,
+       "f1": 0.5,
+       "tp": 1,
+       "fp": 0,
+       "fn": 2
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 21
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 9
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 11
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 558,
+      "end": 592,
+      "type": "EMAIL",
+      "text": "a.vandersmissen@example-avocats.be"
+     },
+     {
+      "start": 5338,
+      "end": 5357,
+      "type": "IBAN",
+      "text": "BE62 7340 2815 4661"
+     },
+     {
+      "start": 599,
+      "end": 614,
+      "type": "PHONE",
+      "text": "+32 2 771 06 34"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_033_transaction_fr",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.175,
+     "f1": 0.2978723404255319,
+     "tp": 7,
+     "fp": 0,
+     "fn": 33,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.6666666666666666,
+       "f1": 0.8,
+       "tp": 2,
+       "fp": 0,
+       "fn": 1
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.3333333333333333,
+       "f1": 0.5,
+       "tp": 1,
+       "fp": 0,
+       "fn": 2
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 14
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 12
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.175,
+     "f1": 0.2978723404255319,
+     "tp": 7,
+     "fp": 0,
+     "fn": 33,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.6666666666666666,
+       "f1": 0.8,
+       "tp": 2,
+       "fp": 0,
+       "fn": 1
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.3333333333333333,
+       "f1": 0.5,
+       "tp": 1,
+       "fp": 0,
+       "fn": 2
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 14
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 12
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 653,
+      "end": 687,
+      "type": "EMAIL",
+      "text": "g.servais@example-servaismoreau.be"
+     },
+     {
+      "start": 1022,
+      "end": 1057,
+      "type": "EMAIL",
+      "text": "o.braibant@example-braibantlegal.be"
+     },
+     {
+      "start": 3579,
+      "end": 3598,
+      "type": "IBAN",
+      "text": "BE84 7320 4185 6359"
+     },
+     {
+      "start": 844,
+      "end": 859,
+      "type": "IBAN",
+      "text": "79.04.22-183.68"
+     },
+     {
+      "start": 694,
+      "end": 709,
+      "type": "PHONE",
+      "text": "+32 2 738 19 64"
+     },
+     {
+      "start": 1064,
+      "end": 1079,
+      "type": "PHONE",
+      "text": "+32 4 341 27 85"
+     },
+     {
+      "start": 55,
+      "end": 67,
+      "type": "CASE_REF",
+      "text": "OB-2026-6142"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_034_state_aid_complaint_en",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.08888888888888889,
+     "f1": 0.163265306122449,
+     "tp": 4,
+     "fp": 0,
+     "fn": 41,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 21
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 9
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 8
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.08888888888888889,
+     "f1": 0.163265306122449,
+     "tp": 4,
+     "fp": 0,
+     "fn": 41,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 21
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 9
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 8
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 819,
+      "end": 860,
+      "type": "EMAIL",
+      "text": "a.verstraeten@verstraeten-osei.example.be"
+     },
+     {
+      "start": 984,
+      "end": 1017,
+      "type": "EMAIL",
+      "text": "j.hilgenfeld@eifelwerk.example.de"
+     },
+     {
+      "start": 862,
+      "end": 877,
+      "type": "PHONE",
+      "text": "+32 2 555 30 97"
+     },
+     {
+      "start": 1019,
+      "end": 1035,
+      "type": "PHONE",
+      "text": "+49 241 555 3320"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_035_data_room_index_en",
+    "score": {
+     "precision": 0.875,
+     "recall": 0.14285714285714285,
+     "f1": 0.2456140350877193,
+     "tp": 7,
+     "fp": 1,
+     "fn": 42,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.6666666666666666,
+       "recall": 0.6666666666666666,
+       "f1": 0.6666666666666666,
+       "tp": 2,
+       "fp": 1,
+       "fn": 1
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 21
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 6
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 10
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.875,
+     "recall": 0.14285714285714285,
+     "f1": 0.2456140350877193,
+     "tp": 7,
+     "fp": 1,
+     "fn": 42,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.6666666666666666,
+       "recall": 0.6666666666666666,
+       "f1": 0.6666666666666666,
+       "tp": 2,
+       "fp": 1,
+       "fn": 1
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 21
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 6
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 10
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 430,
+      "end": 466,
+      "type": "EMAIL",
+      "text": "c.dewulf@dewulf-tielemans.example.be"
+     },
+     {
+      "start": 521,
+      "end": 559,
+      "type": "EMAIL",
+      "text": "vdr.corvus@dewulf-tielemans.example.be"
+     },
+     {
+      "start": 2043,
+      "end": 2062,
+      "type": "IBAN",
+      "text": "BE72 7340 8812 5507"
+     },
+     {
+      "start": 469,
+      "end": 484,
+      "type": "PHONE",
+      "text": "+32 2 555 01 23"
+     },
+     {
+      "start": 562,
+      "end": 578,
+      "type": "PHONE",
+      "text": "+32 470 12 34 56"
+     },
+     {
+      "start": 662,
+      "end": 679,
+      "type": "CASE_REF",
+      "text": "DV-2026-CORVUS-01"
+     },
+     {
+      "start": 2895,
+      "end": 2911,
+      "type": "CASE_REF",
+      "text": "HPN-LIT-2024-002"
+     },
+     {
+      "start": 2895,
+      "end": 2907,
+      "type": "CASE_REF",
+      "text": "HPN-LIT-2024"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_036_licenciement_motif_grave_fr",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.2222222222222222,
+     "f1": 0.3636363636363636,
+     "tp": 10,
+     "fp": 0,
+     "fn": 35,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 6,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.5,
+       "f1": 0.6666666666666666,
+       "tp": 1,
+       "fp": 0,
+       "fn": 1
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 13
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 5
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 13
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.2222222222222222,
+     "f1": 0.3636363636363636,
+     "tp": 10,
+     "fp": 0,
+     "fn": 35,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 6,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.5,
+       "f1": 0.6666666666666666,
+       "tp": 1,
+       "fp": 0,
+       "fn": 1
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 13
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 5
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 13
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 941,
+      "end": 977,
+      "type": "EMAIL",
+      "text": "x.ronvaux@example-hesbayecapteurs.be"
+     },
+     {
+      "start": 1004,
+      "end": 1030,
+      "type": "EMAIL",
+      "text": "xavier.ronvaux@example.com"
+     },
+     {
+      "start": 3539,
+      "end": 3575,
+      "type": "EMAIL",
+      "text": "x.ronvaux@example-hesbayecapteurs.be"
+     },
+     {
+      "start": 3663,
+      "end": 3696,
+      "type": "EMAIL",
+      "text": "ventes@example-hesbayecapteurs.be"
+     },
+     {
+      "start": 5054,
+      "end": 5090,
+      "type": "EMAIL",
+      "text": "i.crombez@example-hesbayecapteurs.be"
+     },
+     {
+      "start": 5233,
+      "end": 5272,
+      "type": "EMAIL",
+      "text": "s.rasquinet@example-rasquinetavocats.be"
+     },
+     {
+      "start": 4435,
+      "end": 4454,
+      "type": "IBAN",
+      "text": "BE70 3104 1726 8525"
+     },
+     {
+      "start": 3991,
+      "end": 4007,
+      "type": "PHONE",
+      "text": "+32 478 61 05 23"
+     },
+     {
+      "start": 5092,
+      "end": 5107,
+      "type": "PHONE",
+      "text": "+32 85 27 63 14"
+     },
+     {
+      "start": 5275,
+      "end": 5290,
+      "type": "PHONE",
+      "text": "+32 4 226 51 93"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_037_merger_thresholds_memo_en",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.15254237288135594,
+     "f1": 0.2647058823529412,
+     "tp": 9,
+     "fp": 0,
+     "fn": 50,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 5,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 30
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 6
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 11
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.15254237288135594,
+     "f1": 0.2647058823529412,
+     "tp": 9,
+     "fp": 0,
+     "fn": 50,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 5,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 30
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 6
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 11
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 241,
+      "end": 276,
+      "type": "EMAIL",
+      "text": "ilse.vantomme@terhaegen.example.com"
+     },
+     {
+      "start": 4600,
+      "end": 4642,
+      "type": "EMAIL",
+      "text": "w.dhaenens@meulebroeck-dhaenens.example.be"
+     },
+     {
+      "start": 5635,
+      "end": 5674,
+      "type": "EMAIL",
+      "text": "b.quintard@quintard-lemahieu.example.be"
+     },
+     {
+      "start": 5719,
+      "end": 5758,
+      "type": "EMAIL",
+      "text": "s.lemahieu@quintard-lemahieu.example.be"
+     },
+     {
+      "start": 54,
+      "end": 69,
+      "type": "PHONE",
+      "text": "+32 2 555 62 10"
+     },
+     {
+      "start": 278,
+      "end": 293,
+      "type": "PHONE",
+      "text": "+32 3 555 29 84"
+     },
+     {
+      "start": 4644,
+      "end": 4659,
+      "type": "PHONE",
+      "text": "+32 9 555 38 06"
+     },
+     {
+      "start": 5677,
+      "end": 5692,
+      "type": "PHONE",
+      "text": "+32 2 555 62 19"
+     },
+     {
+      "start": 5761,
+      "end": 5776,
+      "type": "PHONE",
+      "text": "+32 2 555 62 27"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_038_reponse_apd_plainte_fr",
+    "score": {
+     "precision": 0.875,
+     "recall": 0.19444444444444445,
+     "f1": 0.3181818181818182,
+     "tp": 7,
+     "fp": 1,
+     "fn": 29,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.6666666666666666,
+       "recall": 0.6666666666666666,
+       "f1": 0.6666666666666666,
+       "tp": 2,
+       "fp": 1,
+       "fn": 1
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 12
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 5
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 9
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.875,
+     "recall": 0.19444444444444445,
+     "f1": 0.3181818181818182,
+     "tp": 7,
+     "fp": 1,
+     "fn": 29,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.6666666666666666,
+       "recall": 0.6666666666666666,
+       "f1": 0.6666666666666666,
+       "tp": 2,
+       "fp": 1,
+       "fn": 1
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 12
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 5
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 9
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 55,
+      "end": 91,
+      "type": "EMAIL",
+      "text": "c.pierard@pierard-willems.example.be"
+     },
+     {
+      "start": 2388,
+      "end": 2419,
+      "type": "EMAIL",
+      "text": "dpo@stockerie-mosane.example.be"
+     },
+     {
+      "start": 3340,
+      "end": 3372,
+      "type": "EMAIL",
+      "text": "info@stockerie-mosane.example.be"
+     },
+     {
+      "start": 94,
+      "end": 110,
+      "type": "PHONE",
+      "text": "+32 81 555 40 78"
+     },
+     {
+      "start": 2421,
+      "end": 2437,
+      "type": "PHONE",
+      "text": "+32 81 555 62 93"
+     },
+     {
+      "start": 243,
+      "end": 257,
+      "type": "CASE_REF",
+      "text": "DOS-2026-02581"
+     },
+     {
+      "start": 305,
+      "end": 320,
+      "type": "CASE_REF",
+      "text": "SM-JUR-2026-058"
+     },
+     {
+      "start": 305,
+      "end": 316,
+      "type": "CASE_REF",
+      "text": "SM-JUR-2026"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_039_contrat_franchise_extrait_fr",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.16279069767441862,
+     "f1": 0.28,
+     "tp": 7,
+     "fp": 0,
+     "fn": 36,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.3333333333333333,
+       "f1": 0.5,
+       "tp": 1,
+       "fp": 0,
+       "fn": 2
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 14
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 10
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 7
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.16279069767441862,
+     "f1": 0.28,
+     "tp": 7,
+     "fp": 0,
+     "fn": 36,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.3333333333333333,
+       "f1": 0.5,
+       "tp": 1,
+       "fp": 0,
+       "fn": 2
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 14
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 10
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 7
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 4958,
+      "end": 4986,
+      "type": "EMAIL",
+      "text": "a.warzee@sablieux.example.be"
+     },
+     {
+      "start": 5116,
+      "end": 5155,
+      "type": "EMAIL",
+      "text": "nicolas.rimaldi@rimaldilunch.example.be"
+     },
+     {
+      "start": 5367,
+      "end": 5405,
+      "type": "EMAIL",
+      "text": "contrats@marliere-kesteloot.example.be"
+     },
+     {
+      "start": 2640,
+      "end": 2659,
+      "type": "IBAN",
+      "text": "BE75 7320 5831 6451"
+     },
+     {
+      "start": 4989,
+      "end": 5004,
+      "type": "PHONE",
+      "text": "+32 10 84 27 63"
+     },
+     {
+      "start": 5158,
+      "end": 5173,
+      "type": "PHONE",
+      "text": "+32 71 39 52 18"
+     },
+     {
+      "start": 5194,
+      "end": 5210,
+      "type": "PHONE",
+      "text": "+32 496 20 87 15"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_040_interview_notes_en",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.023529411764705882,
+     "f1": 0.04597701149425288,
+     "tp": 2,
+     "fp": 0,
+     "fn": 83,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 24
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 6
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 11
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 42
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.023529411764705882,
+     "f1": 0.04597701149425288,
+     "tp": 2,
+     "fp": 0,
+     "fn": 83,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 24
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 6
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 11
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 42
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 3609,
+      "end": 3651,
+      "type": "EMAIL",
+      "text": "k.hettinger@griesbacher-foerder.example.de"
+     },
+     {
+      "start": 2783,
+      "end": 2800,
+      "type": "PHONE",
+      "text": "+49 171 5539 2846"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_041_shareholders_agreement_excerpt_en",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.1111111111111111,
+     "f1": 0.19999999999999998,
+     "tp": 8,
+     "fp": 0,
+     "fn": 64,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.25,
+       "f1": 0.4,
+       "tp": 1,
+       "fp": 0,
+       "fn": 3
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 35
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 7
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 17
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.1111111111111111,
+     "f1": 0.19999999999999998,
+     "tp": 8,
+     "fp": 0,
+     "fn": 64,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.25,
+       "f1": 0.4,
+       "tp": 1,
+       "fp": 0,
+       "fn": 3
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 35
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 7
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 17
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 4969,
+      "end": 4996,
+      "type": "EMAIL",
+      "text": "legal@vlietmolen.example.be"
+     },
+     {
+      "start": 5155,
+      "end": 5189,
+      "type": "EMAIL",
+      "text": "f.rhydderch@vantrell-ge.example.lu"
+     },
+     {
+      "start": 5267,
+      "end": 5300,
+      "type": "EMAIL",
+      "text": "w.desloovere@zwalmveld.example.be"
+     },
+     {
+      "start": 1923,
+      "end": 1942,
+      "type": "IBAN",
+      "text": "BE73 7350 2914 6060"
+     },
+     {
+      "start": 4998,
+      "end": 5013,
+      "type": "PHONE",
+      "text": "+32 56 22 81 39"
+     },
+     {
+      "start": 5191,
+      "end": 5207,
+      "type": "PHONE",
+      "text": "+352 26 44 91 53"
+     },
+     {
+      "start": 5302,
+      "end": 5318,
+      "type": "PHONE",
+      "text": "+32 477 63 18 24"
+     },
+     {
+      "start": 5401,
+      "end": 5416,
+      "type": "PHONE",
+      "text": "+32 9 331 46 72"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_042_settlement_submission_en",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.06097560975609756,
+     "f1": 0.11494252873563218,
+     "tp": 5,
+     "fp": 0,
+     "fn": 77,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 40
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 13
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 19
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.06097560975609756,
+     "f1": 0.11494252873563218,
+     "tp": 5,
+     "fp": 0,
+     "fn": 77,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 40
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 13
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 19
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 5175,
+      "end": 5214,
+      "type": "EMAIL",
+      "text": "c.ravaille@ravaille-deblonde.example.be"
+     },
+     {
+      "start": 5282,
+      "end": 5320,
+      "type": "EMAIL",
+      "text": "w.nyssens@ravaille-deblonde.example.be"
+     },
+     {
+      "start": 82,
+      "end": 97,
+      "type": "PHONE",
+      "text": "+32 2 555 62 39"
+     },
+     {
+      "start": 5216,
+      "end": 5231,
+      "type": "PHONE",
+      "text": "+32 2 555 62 39"
+     },
+     {
+      "start": 5322,
+      "end": 5338,
+      "type": "PHONE",
+      "text": "+32 473 91 08 55"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_043_mise_en_demeure_fr",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.21621621621621623,
+     "f1": 0.35555555555555557,
+     "tp": 8,
+     "fp": 0,
+     "fn": 29,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.25,
+       "f1": 0.4,
+       "tp": 1,
+       "fp": 0,
+       "fn": 3
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 10
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 5
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 7
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.21621621621621623,
+     "f1": 0.35555555555555557,
+     "tp": 8,
+     "fp": 0,
+     "fn": 29,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.25,
+       "f1": 0.4,
+       "tp": 1,
+       "fp": 0,
+       "fn": 3
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 3,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 10
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 5
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 7
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 111,
+      "end": 150,
+      "type": "EMAIL",
+      "text": "c.hennequin@hennequin-dorval.example.be"
+     },
+     {
+      "start": 235,
+      "end": 272,
+      "type": "EMAIL",
+      "text": "g.marbaix@toitures-marbaix.example.be"
+     },
+     {
+      "start": 5314,
+      "end": 5354,
+      "type": "EMAIL",
+      "text": "s.ramaekers@ramaekers-coibion.example.be"
+     },
+     {
+      "start": 5428,
+      "end": 5466,
+      "type": "EMAIL",
+      "text": "n.pirlot@toleries-havelange.example.be"
+     },
+     {
+      "start": 4292,
+      "end": 4311,
+      "type": "IBAN",
+      "text": "BE50 7320 4471 9053"
+     },
+     {
+      "start": 93,
+      "end": 108,
+      "type": "PHONE",
+      "text": "+32 81 22 39 74"
+     },
+     {
+      "start": 5356,
+      "end": 5371,
+      "type": "PHONE",
+      "text": "+32 4 259 63 18"
+     },
+     {
+      "start": 5468,
+      "end": 5483,
+      "type": "PHONE",
+      "text": "+32 85 84 16 27"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_044_fil_emails_budget_fr",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.18840579710144928,
+     "f1": 0.3170731707317073,
+     "tp": 13,
+     "fp": 0,
+     "fn": 56,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 8,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.5,
+       "f1": 0.6666666666666666,
+       "tp": 1,
+       "fp": 0,
+       "fn": 1
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 29
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 19
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.18840579710144928,
+     "f1": 0.3170731707317073,
+     "tp": 13,
+     "fp": 0,
+     "fn": 56,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 8,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.5,
+       "f1": 0.6666666666666666,
+       "tp": 1,
+       "fp": 0,
+       "fn": 1
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 29
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 19
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 22,
+      "end": 58,
+      "type": "EMAIL",
+      "text": "d.wanlin@rousselot-wanlin.example.be"
+     },
+     {
+      "start": 121,
+      "end": 158,
+      "type": "EMAIL",
+      "text": "nicolas.brasseur@dorimont.example.com"
+     },
+     {
+      "start": 182,
+      "end": 219,
+      "type": "EMAIL",
+      "text": "c.thirion@rousselot-wanlin.example.be"
+     },
+     {
+      "start": 746,
+      "end": 783,
+      "type": "EMAIL",
+      "text": "nicolas.brasseur@dorimont.example.com"
+     },
+     {
+      "start": 1689,
+      "end": 1726,
+      "type": "EMAIL",
+      "text": "nicolas.brasseur@dorimont.example.com"
+     },
+     {
+      "start": 1778,
+      "end": 1814,
+      "type": "EMAIL",
+      "text": "d.wanlin@rousselot-wanlin.example.be"
+     },
+     {
+      "start": 4553,
+      "end": 4589,
+      "type": "EMAIL",
+      "text": "d.wanlin@rousselot-wanlin.example.be"
+     },
+     {
+      "start": 4874,
+      "end": 4911,
+      "type": "EMAIL",
+      "text": "nicolas.brasseur@dorimont.example.com"
+     },
+     {
+      "start": 4070,
+      "end": 4089,
+      "type": "IBAN",
+      "text": "BE72 7320 5581 9046"
+     },
+     {
+      "start": 1652,
+      "end": 1667,
+      "type": "PHONE",
+      "text": "+32 67 22 91 58"
+     },
+     {
+      "start": 1672,
+      "end": 1688,
+      "type": "PHONE",
+      "text": "+32 476 30 18 62"
+     },
+     {
+      "start": 4516,
+      "end": 4531,
+      "type": "PHONE",
+      "text": "+32 81 26 54 90"
+     },
+     {
+      "start": 4536,
+      "end": 4552,
+      "type": "PHONE",
+      "text": "+32 495 61 08 37"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_045_escrow_agreement_excerpt_en",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.12162162162162163,
+     "f1": 0.21686746987951808,
+     "tp": 9,
+     "fp": 0,
+     "fn": 65,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.16666666666666666,
+       "f1": 0.2857142857142857,
+       "tp": 1,
+       "fp": 0,
+       "fn": 5
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 24
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 17
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 16
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.12162162162162163,
+     "f1": 0.21686746987951808,
+     "tp": 9,
+     "fp": 0,
+     "fn": 65,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 1.0,
+       "recall": 0.16666666666666666,
+       "f1": 0.2857142857142857,
+       "tp": 1,
+       "fp": 0,
+       "fn": 5
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 24
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 17
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 16
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 4256,
+      "end": 4292,
+      "type": "EMAIL",
+      "text": "w.dierckxsens@vaerenbergh.example.be"
+     },
+     {
+      "start": 4442,
+      "end": 4482,
+      "type": "EMAIL",
+      "text": "s.cnockaert@cnockaert-wynants.example.be"
+     },
+     {
+      "start": 4659,
+      "end": 4698,
+      "type": "EMAIL",
+      "text": "h.ollerenshaw@thistlewood.example.co.uk"
+     },
+     {
+      "start": 4833,
+      "end": 4872,
+      "type": "EMAIL",
+      "text": "escrow@descheemaeker-vranckx.example.be"
+     },
+     {
+      "start": 2143,
+      "end": 2162,
+      "type": "IBAN",
+      "text": "BE13 3631 8027 4439"
+     },
+     {
+      "start": 4294,
+      "end": 4309,
+      "type": "PHONE",
+      "text": "+32 3 292 61 47"
+     },
+     {
+      "start": 4484,
+      "end": 4499,
+      "type": "PHONE",
+      "text": "+32 2 640 81 93"
+     },
+     {
+      "start": 4700,
+      "end": 4716,
+      "type": "PHONE",
+      "text": "+44 20 7183 9026"
+     },
+     {
+      "start": 4874,
+      "end": 4889,
+      "type": "PHONE",
+      "text": "+32 15 63 08 72"
      }
     ]
    }

@@ -37,7 +37,7 @@ _SYSTEM = (
 
 class OllamaSpanRunner:
     def __init__(self, model: str = "qwen3:4b", host: str = "http://localhost:11434",
-                 timeout: int = 600):
+                 timeout: int = 1800):
         self.model = model
         self.host = host
         self.timeout = timeout
@@ -67,7 +67,19 @@ class OllamaSpanRunner:
             return json.loads(resp.read().decode("utf-8"))
 
     def predict(self, text: str) -> list[PredSpan]:
-        resp = self._chat("Document:\n\n" + text)
+        # One retry: the daemon occasionally unloads the model between
+        # documents and the reload can exceed the read timeout. A second
+        # failure counts as a document with no predictions.
+        resp: dict = {}
+        for attempt in (1, 2):
+            try:
+                resp = self._chat("Document:\n\n" + text)
+                break
+            except (OSError, TimeoutError) as e:  # urllib raises URLError(OSError)
+                self._raw_failures += 1
+                if attempt == 2:
+                    print(f"[ollama] giving up on a document after two failures: {e}")
+                    return []
         self._tokens_out += int(resp.get("eval_count", 0))
         self._eval_seconds += float(resp.get("eval_duration", 0)) / 1e9
         content = (resp.get("message") or {}).get("content") or ""

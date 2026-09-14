@@ -125,18 +125,32 @@ def chart(rs: list[dict], out: Path) -> None:
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
 
-    fig, ax = plt.subplots(figsize=(9, 6))
+    fig, ax = plt.subplots(figsize=(11, 6.5))
+    fig.subplots_adjust(right=0.68)
+    legend_lines: list[str] = []
+    n = 0
     for r in rs:
         if r["params_m"] is None or not r["pages_per_s"]:
             continue
+        n += 1
         x = max(r["params_m"], 1.0)  # 0 params plotted at 1 M on the log axis
         y = r["pages_per_s"]
-        rec = r["recall"] if r["recall"] is not None else (r["sentence_f1"] or 0.0)
-        ax.scatter(x, y, s=60 + 400 * (rec ** 4), c=[[0.15, 0.35 + 0.6 * rec, 0.3]],
-                   edgecolors="black", linewidths=0.6, alpha=0.9)
-        label = r["runner"].replace("-v2.1-jude-labels", "").replace("-pii-masking", "")
-        ax.annotate(f"{label}\nR {rec:.2f}", (x, y), textcoords="offset points",
-                    xytext=(6, 6), fontsize=7)
+        span_level = r["recall"] is not None
+        rec = r["recall"] if span_level else (r["sentence_f1"] or 0.0)
+        ax.scatter(x, y, s=120 + 500 * (rec ** 4), c=[[0.15, 0.35 + 0.6 * rec, 0.3]],
+                   edgecolors="black", linewidths=0.6, alpha=0.85,
+                   marker="o" if span_level else "D", zorder=3)
+        ax.annotate(str(n), (x, y), ha="center", va="center", fontsize=7,
+                    fontweight="bold", color="white", zorder=4)
+        pm = r["params_m"]
+        size = "0" if pm == 0 else (f"{pm/1000:.1f} B" if pm >= 1000 else f"{pm:.0f} M")
+        metric = f"R {rec:.2f}" if span_level else f"sentence F1 {rec:.2f}"
+        short = (r["runner"].replace("-v2.1-jude-labels", " (jude labels)")
+                 .replace("nvidia-gliner-pii-native", "nvidia-gliner-pii")
+                 .replace("-pii-classifier", "").replace("-pii-masking", ""))
+        legend_lines.append(f"{n:>2}  {short}\n    {size}, {r['device']} · {metric} · {y:.2f} p/s")
+    fig.text(0.66, 0.90, "\n".join(legend_lines), fontsize=6.5, family="monospace",
+             va="top", ha="left")
     ax.set_xscale("log")
     ax.set_yscale("log")
     ax.set_xlabel("parameters (M, log) — 0 plotted at 1")
@@ -148,9 +162,32 @@ def chart(rs: list[dict], out: Path) -> None:
         ax.axvline(xv, color="grey", linewidth=0.6, linestyle=":")
         ax.text(xv * 1.05, ax.get_ylim()[0] * 1.3 if ax.get_ylim()[0] > 0 else 0.01, txt, fontsize=7, color="grey")
     ax.set_title("Size × speed × recall on the legal corpus (Apple M2, 8 GB; marker area ∝ recall⁴)")
-    fig.tight_layout()
+    fig.subplots_adjust(left=0.07, right=0.64, top=0.93, bottom=0.09)
     out.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(out, dpi=160)
+
+
+def inject(page: Path, table: str, chart_rel: str) -> None:
+    """Replace the LADDER_TABLE / LADDER_CHART markers in `page` (keeping
+    the markers so the page can be regenerated)."""
+
+    text = page.read_text(encoding="utf-8")
+    text = _replace_block(text, "LADDER_TABLE", table)
+    text = _replace_block(
+        text, "LADDER_CHART",
+        f"![Size × speed × recall on the legal corpus]({chart_rel})",
+    )
+    page.write_text(text, encoding="utf-8")
+
+
+def _replace_block(text: str, marker: str, body: str) -> str:
+    import re
+
+    start, end = f"<!-- {marker} -->", f"<!-- /{marker} -->"
+    block = f"{start}\n{body}\n{end}"
+    if end in text:
+        return re.sub(re.escape(start) + r".*?" + re.escape(end), lambda _: block, text, flags=re.S)
+    return text.replace(start, block)
 
 
 def main(argv: list[str] | None = None) -> None:
@@ -158,13 +195,19 @@ def main(argv: list[str] | None = None) -> None:
     p.add_argument("--results", type=Path, default=Path(__file__).parent / "results")
     p.add_argument("--out", type=Path, default=None, help="PNG path for the chart")
     p.add_argument("--markdown", action="store_true", help="print the table")
+    p.add_argument("--inject", type=Path, default=None,
+                   help="markdown page whose LADDER_TABLE / LADDER_CHART markers receive the table and chart")
     args = p.parse_args(argv)
     rs = rows(load_reports(args.results))
-    if args.markdown or not args.out:
+    if args.markdown or not (args.out or args.inject):
         print(markdown_table(rs))
     if args.out:
         chart(rs, args.out)
         print(f"chart written to {args.out}")
+    if args.inject:
+        rel = args.out.name if args.out else "efficiency-frontier.png"
+        inject(args.inject, markdown_table(rs), f"assets/{rel}")
+        print(f"table and chart injected into {args.inject}")
 
 
 if __name__ == "__main__":

@@ -13,6 +13,7 @@ judge, never consulted while tuning — is the number to quote:
 | `nvidia-gliner-pii-native` | 0.721 (0.78 / 0.67) | 0.658 (0.70 / 0.62) | −0.06 |
 | `gliner-large-v2.1-jude-labels` | 0.657 | 0.597 | −0.06 |
 | `pplx-pii-masking` | 0.531 (0.89 / 0.38) | 0.598 (0.92 / 0.44) | +0.07 |
+| `ollama-qwen3-4b` (generative, 4 B) | 0.731 (0.65 / 0.84) | 0.555 (0.53 / 0.58) | −0.18 |
 | `roblox-pii-classifier` (sentence F1) | 0.764 | 0.751 | −0.01 |
 
 Jude loses 23 points between the two splits; the generic models lose
@@ -108,7 +109,18 @@ NVIDIA catches them.
 on the held-out split — it almost never flags a clean sentence and
 misses a third of the sentences carrying an identifier.
 
-### 6. The review report as the last line
+### 6. A generative model as the extractor
+
+`qwen3:4b` through Ollama, prompted to list every identifier as JSON
+and told not to list institutions: F1 0.596 overall, 0.555 held out
+(recall 0.58); **46 % of public-body mentions redacted** — the
+instruction does not survive contact with a Belgian filing; 115 s per
+page on the laptop; two documents returned invalid JSON and one timed
+out twice. A hundred times the compute of the encoders for a result
+below the rules alone. The generative route is a second reader at
+most (see `efficiency-frontier.html`).
+
+### 7. The review report as the last line
 
 Of Jude's 148 held-out misses, the unverified-term report puts 38 in
 front of the reviewer, at 17 items per document. The remaining 110 are

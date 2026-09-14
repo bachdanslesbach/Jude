@@ -109,6 +109,7 @@ the numbers below are the current run.*
 | `pplx-pii-masking` | 596 M | mps | 0.70 | 1.4 | 0.429 | 0.916 | **0.584** | 2% | 755 MB |
 | `pplx-pii-masking-cpu` | 596 M | cpu | 0.04 | 23.0 | 0.430 | 0.916 | **0.585** | 2% | 1572 MB |
 | `roblox-pii-classifier` | 560 M | mps | 1.07 | 0.9 | — | — | **—** | — | 943 MB |
+| `ollama-qwen3-4b` | 4.0 B | ollama | 0.01 | 115.2 | 0.641 | 0.558 | **0.596** | 46% | 281 MB |
 <!-- /LADDER_TABLE -->
 
 <!-- LADDER_CHART -->
@@ -142,12 +143,18 @@ says, in order of surprise:
    `pplx`'s Qwen-derived encoder of similar size drops from 0.70 to
    **0.04 pages/s** on CPU — 23 s per page, 17× slower. For the
    majority tier (no GPU) the model family decides deployability.
-5. **Generative extraction is a different order of magnitude.** A 4 B
-   chat model through Ollama produces one page every 45 s
-   (0.02 pages/s) on the same machine, with recall around 1.0 and
-   precision around 0.6 on the documents measured: it lists public
-   bodies too. Useful as a second reader on high-risk documents; not
-   an extractor.
+5. **Generative extraction is a different order of magnitude — and
+   not better.** A 4 B chat model through Ollama (`qwen3:4b`, thinking
+   off, JSON output) needs about 115 s per page on the same machine
+   (0.009 pages/s at 18 tokens/s; one document abandoned after two
+   thirty-minute timeouts), for F1 0.60 — recall 0.64, precision 0.56
+   — and it redacts **46 %** of public-body mentions: told not to list
+   institutions, it lists them anyway. On the held-out split it scores
+   0.555, below the 440 M NVIDIA encoder (0.658) and below the rules
+   alone (0.678). A 7–14 B model may still earn a place as an
+   occasional second reader for quasi-identifiers; as the extractor,
+   the generative route costs a hundred times the compute for a
+   worse answer.
 
 Jude's own pipeline is the slowest encoder on the chart (0.21 pages/s)
 for a reason unrelated to model size: two full passes and a

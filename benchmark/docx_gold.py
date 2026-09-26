@@ -131,17 +131,59 @@ def _trim(text: str, start: int, end: int) -> tuple[int, int]:
 
 
 def _merge_whitespace_separated(text: str, segs: list[list]) -> list[list]:
-    """Merge same-colour segments separated only by whitespace — a
-    reviewer who highlights word by word leaves the space bare."""
+    """Merge same-colour segments separated only by spaces or tabs — a
+    reviewer who highlights word by word leaves the space bare. Never
+    across a line break: a letterhead or signature block puts one
+    identifier per line, and two lines are two spans."""
 
     out: list[list] = []
     for seg in segs:
         if out and out[-1][2] == seg[2]:
             gap = text[out[-1][1]:seg[0]]
-            if gap and gap.strip() == "":
+            if gap and gap.strip() == "" and "\n" not in gap and "\r" not in gap:
                 out[-1][1] = seg[1]
                 continue
         out.append(list(seg))
+    return out
+
+
+# --- export manifest ----------------------------------------------------------
+
+MANIFEST = ".export-manifest.json"
+
+
+def write_manifest(out_dir: Path | str, paths: Iterable[Path | str]) -> None:
+    """Record the modification time of each exported review copy so a
+    later save in Word can be told apart from the export itself (the
+    corpus record is often rebuilt after the export, so file dates
+    alone cannot tell)."""
+
+    out_dir = Path(out_dir)
+    path = out_dir / MANIFEST
+    manifest = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    for p in paths:
+        p = Path(p)
+        manifest[p.name] = p.stat().st_mtime
+    path.write_text(json.dumps(manifest, indent=1, sort_keys=True), encoding="utf-8")
+
+
+def saved_since_export(out_dir: Path | str, include_unknown: bool = False) -> list[Path]:
+    """Review copies whose mtime differs from the manifest's — i.e. a
+    person saved them after the export. Files absent from the manifest
+    are skipped unless `include_unknown`."""
+
+    out_dir = Path(out_dir)
+    path = out_dir / MANIFEST
+    manifest = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    out: list[Path] = []
+    for docx in sorted(out_dir.glob("doc_*.docx")):
+        recorded = manifest.get(docx.name)
+        if recorded is None:
+            if include_unknown:
+                out.append(docx)
+            continue
+        if abs(docx.stat().st_mtime - float(recorded)) > 1.0:
+            out.append(docx)
     return out
 
 
@@ -447,10 +489,13 @@ def _cmd_export(args: argparse.Namespace) -> None:
             sources.append(p)
     if not sources:
         raise SystemExit("Nothing to export: give document ids or --all")
+    written: list[Path] = []
     for src in sources:
         target = Path(args.out) / f"{src.stem}.docx"
         export_docx(src, target)
+        written.append(target)
         print(f"{target}")
+    write_manifest(Path(args.out), written)
 
 
 def _cmd_prefill(args: argparse.Namespace) -> None:

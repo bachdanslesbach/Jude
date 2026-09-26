@@ -43,14 +43,17 @@ def run(args: list[str]) -> str:
 
 
 def main() -> int:
+    sys.path.insert(0, str(ROOT))
+    from benchmark.docx_gold import saved_since_export
+
     before = heldout_line()
-    todo = []
-    for docx in sorted(REVIEW.glob("doc_0*.docx")):
-        rec = CORPUS / (docx.stem + ".json")
-        if not rec.exists() or docx.stat().st_mtime > rec.stat().st_mtime:
-            todo.append(docx)
+    todo = saved_since_export(REVIEW)
+    unknown = [p for p in saved_since_export(REVIEW, include_unknown=True) if p not in todo]
+    if unknown:
+        print("Ignorés (absents du manifeste d'export — ré-exportez-les d'abord) : "
+              + ", ".join(p.name for p in unknown) + "\n")
     if not todo:
-        print("Aucun fichier de review/ n'a été enregistré depuis son export : rien à réintégrer.")
+        print("Aucun fichier de review/ n'a été enregistré dans Word depuis son export : rien à réintégrer.")
         return 0
 
     print(f"{len(todo)} document(s) enregistré(s) dans Word depuis l'export :\n")
@@ -82,6 +85,10 @@ def main() -> int:
     print("  " + before)
     print("après :")
     print("  " + after)
+    # A re-ingested copy is now in sync with the corpus: record it so the
+    # next run only picks up files saved again.
+    from benchmark.docx_gold import write_manifest
+    write_manifest(REVIEW, todo)
     print("\nTerminé. Dites à Claude : « corpus relu : " + ", ".join(d.stem[:7] for d in todo) + " ».")
     return 0
 

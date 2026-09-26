@@ -194,10 +194,26 @@ def ingest_docx(path: Path | str, language: str | None = None) -> IngestResult:
     )
 
 
-def to_corpus_dict(result: IngestResult, doc_id: str, title: str, notes: str = "") -> dict:
+def to_corpus_dict(
+    result: IngestResult,
+    doc_id: str,
+    title: str,
+    notes: str = "",
+    carry: dict | None = None,
+) -> dict:
+    """Corpus record for an ingested document.
+
+    `carry` is the document's existing corpus record, if any: its split,
+    genre and declared traps survive a re-ingest — a held-out document
+    reviewed in Word must not fall back to `dev`. A document with no
+    record arrives through a reviewed .docx and was never tuned on: it
+    lands in `heldout`. `reviewed` records that a person saved it.
+    """
+
     def _spans(xs: Iterable[GoldSpan]) -> list[dict]:
         return [{"start": s.start, "end": s.end, "type": s.type, "text": s.text} for s in xs]
 
+    carry = carry or {}
     return {
         "id": doc_id,
         "title": title,
@@ -207,6 +223,10 @@ def to_corpus_dict(result: IngestResult, doc_id: str, title: str, notes: str = "
         "public_spans": _spans(result.public_spans),
         "notes": notes,
         "source": "docx-highlight",
+        "split": carry.get("split", "heldout"),
+        "genre": carry.get("genre", ""),
+        "traps": carry.get("traps", []),
+        "reviewed": True,
     }
 
 
@@ -379,11 +399,12 @@ def _cmd_ingest(args: argparse.Namespace) -> None:
     result = ingest_docx(args.docx, language=args.language)
     out = Path(args.out) / f"{args.id}.json"
     existing = GoldDocument.from_json(out) if out.exists() else None
+    carry = json.loads(out.read_text(encoding="utf-8")) if out.exists() else {}
 
     title = args.title or (existing.title if existing else None) \
         or Document(str(args.docx)).core_properties.title or Path(args.docx).stem
     notes = args.notes if args.notes is not None else (existing.notes if existing else "")
-    d = to_corpus_dict(result, doc_id=args.id, title=title, notes=notes)
+    d = to_corpus_dict(result, doc_id=args.id, title=title, notes=notes, carry=carry)
 
     if existing is not None:
         text_changed = existing.text != result.text

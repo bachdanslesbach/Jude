@@ -484,5 +484,8 @@
   "address",
   "adjacent-public",
   "role-noise"
- ]
+ ],
+ "reviewed": true,
+ "reviewed_by": "lawyer",
+ "reviewed_on": "2026-10-13"
 }

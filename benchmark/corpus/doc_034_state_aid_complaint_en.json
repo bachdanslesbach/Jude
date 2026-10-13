@@ -389,5 +389,8 @@
   "adjacent-public",
   "role-noise",
   "all-caps-header"
- ]
+ ],
+ "reviewed": true,
+ "reviewed_by": "lawyer",
+ "reviewed_on": "2026-10-13"
 }

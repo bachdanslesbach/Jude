@@ -77,5 +77,8 @@
    "text": "Case T-203/24"
   }
  ],
- "notes": "Fictional M&A term sheet. SHOULD redact: client names (Acme, Lumen Reality), counsel names + contacts, addresses, IBAN, internal case ref. SHOULD NOT redact: European Commission, Digital Markets Act, Regulation (EU) 139/2004, Buyer/Seller/Counsel labels."
+ "notes": "Fictional M&A term sheet. SHOULD redact: client names (Acme, Lumen Reality), counsel names + contacts, addresses, IBAN, internal case ref. SHOULD NOT redact: European Commission, Digital Markets Act, Regulation (EU) 139/2004, Buyer/Seller/Counsel labels.",
+ "reviewed": true,
+ "reviewed_by": "lawyer",
+ "reviewed_on": "2026-10-13"
 }

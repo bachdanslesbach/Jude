@@ -101,5 +101,8 @@
    "text": "+33 1 87 23 99 44"
   }
  ],
- "notes": "Internal anti-bribery investigation summary. SHOULD redact: client + subsidiary entity + all short forms, every named individual (investigators, suspect manager, interviewees, former employee), branch banking IBAN + bank, outside counsel firm + contact, internal investigation ref, cities (Casablanca = subsidiary's location, Marseille = ex-employee's residence). SHOULD NOT redact: U.S. Department of Justice (regulator), FCPA, French Parquet National Financier (public prosecutor), loi Sapin II (statute)."
+ "notes": "Internal anti-bribery investigation summary. SHOULD redact: client + subsidiary entity + all short forms, every named individual (investigators, suspect manager, interviewees, former employee), branch banking IBAN + bank, outside counsel firm + contact, internal investigation ref, cities (Casablanca = subsidiary's location, Marseille = ex-employee's residence). SHOULD NOT redact: U.S. Department of Justice (regulator), FCPA, French Parquet National Financier (public prosecutor), loi Sapin II (statute).",
+ "reviewed": true,
+ "reviewed_by": "lawyer",
+ "reviewed_on": "2026-10-13"
 }

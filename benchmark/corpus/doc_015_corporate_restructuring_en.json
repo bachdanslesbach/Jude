@@ -155,5 +155,8 @@
    "text": "+44 20 7000 4242"
   }
  ],
- "notes": "Cross-border corporate-restructuring opinion. SHOULD redact: client group + holding + all subsidiaries (Jersey treasury, Irish DAC, Dutch holdco) + short forms, issuing law firm + address, addressee CFO, lender (Standard Chartered = party-adjacent, named relationship bank) + relationship banker, partner signatory + contact, internal matter ref, Amsterdam registered-office address. SHOULD NOT redact: 'Jersey', 'Ireland', 'Dutch', 'English', 'Irish Companies Act 2014', 'UK Stamp Act 1891' (jurisdictions and statutes)."
+ "notes": "Cross-border corporate-restructuring opinion. SHOULD redact: client group + holding + all subsidiaries (Jersey treasury, Irish DAC, Dutch holdco) + short forms, issuing law firm + address, addressee CFO, lender (Standard Chartered = party-adjacent, named relationship bank) + relationship banker, partner signatory + contact, internal matter ref, Amsterdam registered-office address. SHOULD NOT redact: 'Jersey', 'Ireland', 'Dutch', 'English', 'Irish Companies Act 2014', 'UK Stamp Act 1891' (jurisdictions and statutes).",
+ "reviewed": true,
+ "reviewed_by": "lawyer",
+ "reviewed_on": "2026-10-13"
 }

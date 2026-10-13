@@ -85,9 +85,12 @@ scores the corpus with the new document included.
 
 ## Reviewing the existing corpus
 
-The twenty documents shipped so far were drafted and annotated by an
-agent. A lawyer's review of every one of them is what turns the
-benchmark from indicative into trustworthy.
+Every document in the corpus was drafted and annotated by an agent; a
+lawyer's review of each one is what turns the benchmark from
+indicative into trustworthy. **All 44 documents were reviewed in Word
+on 13 October 2026** (under the rulings of that day; no highlight
+needed changing) and carry `reviewed: true` in their corpus record.
+New batches go through the same route.
 
 ```bash
 python -m benchmark.docx_gold export --all --out review/

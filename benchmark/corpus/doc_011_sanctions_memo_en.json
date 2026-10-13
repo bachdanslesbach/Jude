@@ -95,5 +95,8 @@
    "text": "+49 40 5559 6677"
   }
  ],
- "notes": "Internal compliance memo on a sanctions hit. SHOULD redact: own client (Faraday Energy SE), counterparty + near-match alias, all named individuals (compliance officer, UBO, outside counsel), city refs locating parties, outside firm, relationship bank (ING is the client's bank here = party-adjacent), internal ref, intended IBAN. SHOULD NOT redact: OFAC, SDN list, EU Consolidated Sanctions List, UK OFSI, SECO — all official sanctions instruments / regulators."
+ "notes": "Internal compliance memo on a sanctions hit. SHOULD redact: own client (Faraday Energy SE), counterparty + near-match alias, all named individuals (compliance officer, UBO, outside counsel), city refs locating parties, outside firm, relationship bank (ING is the client's bank here = party-adjacent), internal ref, intended IBAN. SHOULD NOT redact: OFAC, SDN list, EU Consolidated Sanctions List, UK OFSI, SECO — all official sanctions instruments / regulators.",
+ "reviewed": true,
+ "reviewed_by": "lawyer",
+ "reviewed_on": "2026-10-13"
 }

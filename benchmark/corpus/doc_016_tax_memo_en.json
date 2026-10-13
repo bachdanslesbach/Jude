@@ -131,5 +131,8 @@
    "text": "a.watanabe@hamilton-reeves.example.ch"
   }
  ],
- "notes": "Cross-border tax structuring memo. SHOULD redact: client CFO + group + every group entity (US sub, Lux SCSp, Lux GP) + short forms, advising tax firm + contact, internal matter ref, party-locating cities (Zug = Swiss parent's location, Cambridge = US sub's location), Luxembourg bank (BCEE) and IBAN. SHOULD NOT redact: Pillar Two, GloBE, BEPS (OECD frameworks), OECD secretariat, GILTI (US tax concept), 'Swiss tax administration' (regulator), tax-treaty references, Luxembourg/Swiss/US as jurisdictional descriptors."
+ "notes": "Cross-border tax structuring memo. SHOULD redact: client CFO + group + every group entity (US sub, Lux SCSp, Lux GP) + short forms, advising tax firm + contact, internal matter ref, party-locating cities (Zug = Swiss parent's location, Cambridge = US sub's location), Luxembourg bank (BCEE) and IBAN. SHOULD NOT redact: Pillar Two, GloBE, BEPS (OECD frameworks), OECD secretariat, GILTI (US tax concept), 'Swiss tax administration' (regulator), tax-treaty references, Luxembourg/Swiss/US as jurisdictional descriptors.",
+ "reviewed": true,
+ "reviewed_by": "lawyer",
+ "reviewed_on": "2026-10-13"
 }

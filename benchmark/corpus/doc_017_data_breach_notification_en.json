@@ -83,5 +83,8 @@
    "text": "a.vermeulen@vermeulen-partners.example.be"
   }
  ],
- "notes": "GDPR Article 33 breach notification to a national DPA. SHOULD redact: controller + short forms + registered office, DPO + contact, internal ref, third-party contractor + firm, internal infrastructure-lead employee, outside counsel + firm + office city + contact. SHOULD NOT redact: Autoriteit Persoonsgegevens, Autorité de protection des données / APD, Information Commissioner's Office (all DPAs are public regulators), GDPR Article 33, 'Dutch', 'Belgian' (descriptors), Azure (a public-knowledge Microsoft cloud product; Microsoft is in the gatekeeper list and IS redactable in principle — but 'Azure blob storage container' here is a generic technical reference, so we omit it; Jude is expected to leave it alone)."
+ "notes": "GDPR Article 33 breach notification to a national DPA. SHOULD redact: controller + short forms + registered office, DPO + contact, internal ref, third-party contractor + firm, internal infrastructure-lead employee, outside counsel + firm + office city + contact. SHOULD NOT redact: Autoriteit Persoonsgegevens, Autorité de protection des données / APD, Information Commissioner's Office (all DPAs are public regulators), GDPR Article 33, 'Dutch', 'Belgian' (descriptors), Azure (a public-knowledge Microsoft cloud product; Microsoft is in the gatekeeper list and IS redactable in principle — but 'Azure blob storage container' here is a generic technical reference, so we omit it; Jude is expected to leave it alone).",
+ "reviewed": true,
+ "reviewed_by": "lawyer",
+ "reviewed_on": "2026-10-13"
 }

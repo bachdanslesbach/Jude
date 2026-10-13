@@ -137,5 +137,8 @@
    "text": "IPR2025-00712"
   }
  ],
- "notes": "US patent litigation pleading. SHOULD redact: both parties and all short forms, civil action number (party-specific), inventor and ex-employee names, opposing firm (Wilkerson Stone LLP), counsel contacts, addresses pinning the parties, IPR docket. SHOULD NOT redact: Delaware (state-of-incorporation descriptor), Cayman (incorporation descriptor), USPTO (regulator), 'California', 'Texas' here are state names tied to party HQs — annotate the city, not the state, to keep it lenient. The patent number is a public document identifier, not PII."
+ "notes": "US patent litigation pleading. SHOULD redact: both parties and all short forms, civil action number (party-specific), inventor and ex-employee names, opposing firm (Wilkerson Stone LLP), counsel contacts, addresses pinning the parties, IPR docket. SHOULD NOT redact: Delaware (state-of-incorporation descriptor), Cayman (incorporation descriptor), USPTO (regulator), 'California', 'Texas' here are state names tied to party HQs — annotate the city, not the state, to keep it lenient. The patent number is a public document identifier, not PII.",
+ "reviewed": true,
+ "reviewed_by": "lawyer",
+ "reviewed_on": "2026-10-13"
 }

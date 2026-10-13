@@ -107,5 +107,8 @@
    "text": "Charlotte Beaumont"
   }
  ],
- "notes": "Standard client engagement letter. SHOULD redact: client + short forms + HQ address, firm + abbreviation + office address, target company + short form + HQ city, lead and supervising attorneys + contact, internal matter ID, firm client-account IBAN, client signatory. SHOULD NOT redact: 'Belgian law', 'France', 'Germany', 'Italy', 'Norway' (general jurisdictional references at country level — not pinning the party). Article 458 Belgian Penal Code is a statute reference."
+ "notes": "Standard client engagement letter. SHOULD redact: client + short forms + HQ address, firm + abbreviation + office address, target company + short form + HQ city, lead and supervising attorneys + contact, internal matter ID, firm client-account IBAN, client signatory. SHOULD NOT redact: 'Belgian law', 'France', 'Germany', 'Italy', 'Norway' (general jurisdictional references at country level — not pinning the party). Article 458 Belgian Penal Code is a statute reference.",
+ "reviewed": true,
+ "reviewed_by": "lawyer",
+ "reviewed_on": "2026-10-13"
 }

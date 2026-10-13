@@ -603,5 +603,8 @@
   "role-noise",
   "all-caps-header",
   "bare-domain"
- ]
+ ],
+ "reviewed": true,
+ "reviewed_by": "lawyer",
+ "reviewed_on": "2026-10-13"
 }

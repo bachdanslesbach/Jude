@@ -143,5 +143,8 @@
    "text": "+1 617 555 0142"
   }
  ],
- "notes": "Witness statement with rich PII. SHOULD redact: witness + her home address + her contact details, employer + subsidiary mentions, every named individual (managers, third-party relative, attorney, opposing-firm partner), third-party supplier company, witness's outside counsel firm, internal case ref. SHOULD NOT redact: 'Delaware' (a US-state descriptor for the filing jurisdiction, not a party identifier), 'Senior Procurement Manager', 'Vice-President', 'CFO' (role labels), 'Massachusetts' (state-level, leave city for redaction)."
+ "notes": "Witness statement with rich PII. SHOULD redact: witness + her home address + her contact details, employer + subsidiary mentions, every named individual (managers, third-party relative, attorney, opposing-firm partner), third-party supplier company, witness's outside counsel firm, internal case ref. SHOULD NOT redact: 'Delaware' (a US-state descriptor for the filing jurisdiction, not a party identifier), 'Senior Procurement Manager', 'Vice-President', 'CFO' (role labels), 'Massachusetts' (state-level, leave city for redaction).",
+ "reviewed": true,
+ "reviewed_by": "lawyer",
+ "reviewed_on": "2026-10-13"
 }

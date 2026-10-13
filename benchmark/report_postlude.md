@@ -178,9 +178,10 @@ For anyone minded to train one — the plan is in `training-data.html`:
 
 ## Limitations of this benchmark
 
-* Forty-four synthetic documents, one annotation policy with seven
-  open rulings, agent-drafted held-out documents judged but not yet
-  reviewed by a lawyer. The numbers are indicative; the ranking and
+* Forty-four synthetic documents, one annotation policy whose seven
+  open questions were ruled on 13 October 2026, every document
+  reviewed in Word by a lawyer on the same day (no change required;
+  see `annotation-protocol.html`). The numbers are indicative; the ranking and
   the size of the generalisation gap are robust.
 * Where a mapping choice was ambiguous it was made in the external
   model's favour: dates and demographic labels are dropped rather than

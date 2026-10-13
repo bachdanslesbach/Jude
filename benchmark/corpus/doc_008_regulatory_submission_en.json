@@ -149,5 +149,8 @@
    "text": "DE12 5001 0517 5407 3249 31"
   }
  ],
- "notes": "Merger filing to a national authority. SHOULD redact: notifying party + target + all short forms, counsel name + contacts, target CEO, family trust name, both party addresses, escrow bank, IBAN, case file ref (party-specific). SHOULD NOT redact: Bundeskartellamt, Autorité de la concurrence, ACM, EU Merger Regulation, Regulation (EC) 139/2004. 'Aktiengesellschaft' is a corporate-form label."
+ "notes": "Merger filing to a national authority. SHOULD redact: notifying party + target + all short forms, counsel name + contacts, target CEO, family trust name, both party addresses, escrow bank, IBAN, case file ref (party-specific). SHOULD NOT redact: Bundeskartellamt, Autorité de la concurrence, ACM, EU Merger Regulation, Regulation (EC) 139/2004. 'Aktiengesellschaft' is a corporate-form label.",
+ "reviewed": true,
+ "reviewed_by": "lawyer",
+ "reviewed_on": "2026-10-13"
 }

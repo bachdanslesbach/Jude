@@ -101,5 +101,8 @@
    "text": "m.rodriguez@example-cabinet.fr"
   }
  ],
- "notes": "Working memo on a North-Africa solar JV. SHOULD redact: lawyer names + contacts, parties (TotalEnergies, Mediterranean Solar Group), city addresses, IBAN, BIL (named as the depository bank, hence party-adjacent). SHOULD NOT redact: Autorité de la concurrence, Commission européenne, Regulation (EC) 139/2004, ADEME, BEI."
+ "notes": "Working memo on a North-Africa solar JV. SHOULD redact: lawyer names + contacts, parties (TotalEnergies, Mediterranean Solar Group), city addresses, IBAN, BIL (named as the depository bank, hence party-adjacent). SHOULD NOT redact: Autorité de la concurrence, Commission européenne, Regulation (EC) 139/2004, ADEME, BEI.",
+ "reviewed": true,
+ "reviewed_by": "lawyer",
+ "reviewed_on": "2026-10-13"
 }

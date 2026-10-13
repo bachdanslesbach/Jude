@@ -161,5 +161,8 @@
    "text": "+33 1 56 90 22 14"
   }
  ],
- "notes": "DMA complaint to DG COMP. SHOULD redact: complainant + short forms, complainant HQ address, complainant CEO and policy contact + contact info, counsel + firm + contact, complainant's named product manager and engineer (witness affidavits), Apple Inc. and 'Apple' (a DMA-designated gatekeeper that IS in the known_entities whitelist with redact:true — it's a real party here, so Jude should still redact it). SHOULD NOT redact: European Commission, DG Competition, DMA, Regulation 1/2003, Article references, 'Irish' (jurisdictional descriptor), 'iOS' (Apple's platform; arguably Apple-adjacent but a generic platform name; conservative call: leave it)."
+ "notes": "DMA complaint to DG COMP. SHOULD redact: complainant + short forms, complainant HQ address, complainant CEO and policy contact + contact info, counsel + firm + contact, complainant's named product manager and engineer (witness affidavits), Apple Inc. and 'Apple' (a DMA-designated gatekeeper that IS in the known_entities whitelist with redact:true — it's a real party here, so Jude should still redact it). SHOULD NOT redact: European Commission, DG Competition, DMA, Regulation 1/2003, Article references, 'Irish' (jurisdictional descriptor), 'iOS' (Apple's platform; arguably Apple-adjacent but a generic platform name; conservative call: leave it).",
+ "reviewed": true,
+ "reviewed_by": "lawyer",
+ "reviewed_on": "2026-10-13"
 }

@@ -71,5 +71,8 @@
    "text": "DE89 3704 0044 0532 0130 00"
   }
  ],
- "notes": "Long-term commodity supply agreement. SHOULD redact: supplier / offtaker names, counsel names + contacts, IBAN, city refs that locate parties (Munich = offtaker HQ, Hamburg = signing place). SHOULD NOT redact: Bundeskartellamt, Swiss COMCO, OFAC, SECO, Article 101 TFEU, Regulation (EU) 2022/720, Council Regulation (EU) 833/2014."
+ "notes": "Long-term commodity supply agreement. SHOULD redact: supplier / offtaker names, counsel names + contacts, IBAN, city refs that locate parties (Munich = offtaker HQ, Hamburg = signing place). SHOULD NOT redact: Bundeskartellamt, Swiss COMCO, OFAC, SECO, Article 101 TFEU, Regulation (EU) 2022/720, Council Regulation (EU) 833/2014.",
+ "reviewed": true,
+ "reviewed_by": "lawyer",
+ "reviewed_on": "2026-10-13"
 }

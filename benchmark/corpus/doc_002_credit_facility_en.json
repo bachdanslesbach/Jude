@@ -83,5 +83,8 @@
    "text": "a.lefevre@example-swiss-legal.ch"
   }
  ],
- "notes": "Counsel-to-counsel memorandum on a syndicated facility. SHOULD redact: lawyer names + contacts, borrower (Pioneer Industries SA), arranger (UBS, since here it's a party not a regulator). SHOULD NOT redact: Bundeskartellamt, Autorité de la concurrence, European Banking Authority — these are regulators in plain references. The matter ID M-2026-PIO-001 is internal but not necessarily PII; conservative annotation excludes it."
+ "notes": "Counsel-to-counsel memorandum on a syndicated facility. SHOULD redact: lawyer names + contacts, borrower (Pioneer Industries SA), arranger (UBS, since here it's a party not a regulator). SHOULD NOT redact: Bundeskartellamt, Autorité de la concurrence, European Banking Authority — these are regulators in plain references. The matter ID M-2026-PIO-001 is internal but not necessarily PII; conservative annotation excludes it.",
+ "reviewed": true,
+ "reviewed_by": "lawyer",
+ "reviewed_on": "2026-10-13"
 }

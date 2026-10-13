@@ -56,7 +56,8 @@ Model revisions are pinned in the runner sources and listed under
   drafted by agents against a programmatic quality bar
   (`benchmark/synth.py`, including a cross-document uniqueness check),
   judged for realism, and never consulted while tuning — the honest
-  number. All synthetic: professional
+  number. All 44 documents were reviewed in Word by a lawyer on
+  13 October 2026 under the annotation rulings of that day. All synthetic: professional
   secrecy rules out real files. Annotation policy: redact anything
   that identifies a party, adviser, witness or matter; leave public
   institutions, statutes, courts and jurisdictions in place; open

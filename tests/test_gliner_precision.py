@@ -97,12 +97,15 @@ class TestGlinerShapeFilter:
             assert text[d.start:d.end] == d.text
 
     def test_demonyms_and_generic_courts_are_dropped(self):
-        text = "A Dutch company sued in the District Court; Escrow was released in Brussels."
+        # Ruling 6 (13 October 2026): a bare city is not an identifier
+        # either; a street address is.
+        text = ("A Dutch company sued in the District Court; Escrow was released "
+                "in Brussels, at Avenue Louise 250.")
         dets = _detector([
             ("Dutch", "country"), ("District Court", "court"),
-            ("Escrow", "company"), ("Brussels", "city"),
+            ("Escrow", "company"), ("Brussels", "city"), ("Avenue Louise 250", "address"),
         ]).detect(text)
-        assert [d.text for d in dets] == ["Brussels"]
+        assert [d.text for d in dets] == ["Avenue Louise 250"]
 
     def test_case_references_bypass_the_year_rule(self):
         # The spaCy normaliser rejects anything containing a year; that

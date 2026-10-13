@@ -128,6 +128,10 @@ class Store:
             self._conn.execute("ALTER TABLE matters ADD COLUMN llm_model TEXT")
         if "notes" not in cols:
             self._conn.execute("ALTER TABLE matters ADD COLUMN notes TEXT")
+        if "redact_codenames" not in cols:
+            self._conn.execute(
+                "ALTER TABLE matters ADD COLUMN redact_codenames INTEGER NOT NULL DEFAULT 0"
+            )
 
     def close(self) -> None:
         self._conn.close()
@@ -157,14 +161,17 @@ class Store:
         llm_endpoint: str = "anthropic",
         zero_retention_attested: bool = False,
         matter_id: str | None = None,
+        redact_codenames: bool = False,
     ) -> Matter:
         mid = matter_id or str(uuid.uuid4())
         now = datetime.now(timezone.utc).isoformat()
         with self._tx() as c:
             c.execute(
                 "INSERT INTO matters (id, name, mode, llm_endpoint, "
-                "zero_retention_attested, created_at) VALUES (?, ?, ?, ?, ?, ?)",
-                (mid, name, mode.value, llm_endpoint, int(zero_retention_attested), now),
+                "zero_retention_attested, redact_codenames, created_at) "
+                "VALUES (?, ?, ?, ?, ?, ?, ?)",
+                (mid, name, mode.value, llm_endpoint, int(zero_retention_attested),
+                 int(redact_codenames), now),
             )
         self._log(mid, "matter.create", json.dumps({"name": name, "mode": mode.value}))
         return Matter(
@@ -173,8 +180,21 @@ class Store:
             mode=mode,
             llm_endpoint=llm_endpoint,
             zero_retention_attested=zero_retention_attested,
+            redact_codenames=redact_codenames,
             created_at=datetime.fromisoformat(now),
         )
+
+    def set_redact_codenames(self, matter_id: str, flag: bool) -> None:
+        """Per-matter opt-in: redact deal codenames ("Project X" and the
+        bare "X") like any party name. Off by default (ruling of
+        13 October 2026)."""
+
+        with self._tx() as c:
+            c.execute(
+                "UPDATE matters SET redact_codenames = ? WHERE id = ?",
+                (int(flag), matter_id),
+            )
+        self._log(matter_id, "matter.redact_codenames", json.dumps({"flag": bool(flag)}))
 
     def get_matter(self, matter_id: str) -> Matter | None:
         row = self._conn.execute(
@@ -244,6 +264,10 @@ class Store:
             notes = row["notes"]
         except (KeyError, IndexError):
             notes = None
+        try:
+            redact_codenames = bool(row["redact_codenames"])
+        except (KeyError, IndexError):
+            redact_codenames = False
         return Matter(
             id=row["id"],
             name=row["name"],
@@ -252,6 +276,7 @@ class Store:
             llm_model=llm_model,
             zero_retention_attested=bool(row["zero_retention_attested"]),
             notes=notes,
+            redact_codenames=redact_codenames,
             created_at=datetime.fromisoformat(row["created_at"]),
         )
 

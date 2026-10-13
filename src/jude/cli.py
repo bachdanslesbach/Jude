@@ -59,10 +59,15 @@ def matter_create(
     zero_retention: bool = typer.Option(
         False, "--zr", help="Attest the LLM endpoint is zero-retention (smart mode)."
     ),
+    redact_codenames: bool = typer.Option(
+        False, "--redact-codenames",
+        help="Also redact deal codenames (\"Project X\" and bare \"X\"). Off by default.",
+    ),
 ) -> None:
     with Store(default_db_path()) as store:
         m = store.create_matter(
-            name=name, mode=mode, zero_retention_attested=zero_retention
+            name=name, mode=mode, zero_retention_attested=zero_retention,
+            redact_codenames=redact_codenames,
         )
     rprint(f"[green]Created matter[/green] {m.id} — {m.name} ({m.mode.value})")
 

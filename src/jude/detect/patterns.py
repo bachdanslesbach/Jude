@@ -237,8 +237,22 @@ def _det(text: str, start: int, end: int, etype: EntityType,
                      source=source, confidence=confidence)
 
 
+_CODENAME_RE = re.compile(
+    r"\b(?:Project|PROJECT|Projet|PROJET|Operation|OPERATION|Opération|OPÉRATION)\s+"
+    r"([A-ZÀ-Ý][\w\-]{2,})"
+)
+
+
 class PatternDetector:
-    """Deterministic long-tail rules. See module docstring."""
+    """Deterministic long-tail rules. See module docstring.
+
+    `redact_codenames` (per-matter opt-in, ruling of 13 October 2026)
+    adds the codename rule: "Project Ganymede" and every bare
+    "Ganymede" in the document become ORG spans.
+    """
+
+    def __init__(self, redact_codenames: bool = False):
+        self.redact_codenames = redact_codenames
 
     def detect(self, text: str) -> list[Detection]:
         out: list[Detection] = []
@@ -249,6 +263,19 @@ class PatternDetector:
         out.extend(self._domains(text))
         out.extend(self._families(text))
         out.extend(self._addresses(text))
+        if self.redact_codenames:
+            out.extend(self._codenames(text))
+        return out
+
+    def _codenames(self, text: str) -> list[Detection]:
+        out: list[Detection] = []
+        words: set[str] = set()
+        for m in _CODENAME_RE.finditer(text):
+            out.append(_det(text, m.start(), m.end(), EntityType.ORG))
+            words.add(m.group(1))
+        for w in words:
+            for m in re.finditer(r"(?<!\w)" + re.escape(w) + r"(?!\w)", text):
+                out.append(_det(text, m.start(), m.end(), EntityType.ORG, confidence=0.9))
         return out
 
     def _legal_forms(self, text: str) -> list[Detection]:

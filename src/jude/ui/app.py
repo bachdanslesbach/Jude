@@ -208,9 +208,18 @@ def _mode_controls(store: Store, matter: Matter) -> None:
             disabled=(new_mode == "strict"),
             key=f"zr_{matter.id}",
         )
+        codenames = st.checkbox(
+            "Redact deal codenames (\"Project X\" and bare \"X\")",
+            value=matter.redact_codenames,
+            help="Off by default: a codename identifies nobody on its own. "
+                 "Turn on for matters where the codename is itself confidential.",
+            key=f"codenames_{matter.id}",
+        )
         if st.button("Save mode", key=f"save_mode_{matter.id}"):
             try:
                 store.set_mode(matter.id, Mode(new_mode), zero_retention_attested=zr)
+                if codenames != matter.redact_codenames:
+                    store.set_redact_codenames(matter.id, codenames)
                 st.rerun()
             except ValueError as e:
                 st.error(str(e))

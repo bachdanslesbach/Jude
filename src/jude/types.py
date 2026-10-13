@@ -70,6 +70,10 @@ class Matter(BaseModel):
     llm_model: str | None = None
     zero_retention_attested: bool = False
     notes: str | None = None
+    # Ruling of 13 October 2026: deal codenames ("Project Ganymede") are
+    # not identifiers by default. A matter may opt in — then the phrase
+    # and its bare short form are redacted like any party name.
+    redact_codenames: bool = False
     created_at: datetime | None = None
 
 

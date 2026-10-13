@@ -86,8 +86,9 @@ class TestMatterOption:
             assert store.get_matter(m.id).redact_codenames is True
             m2 = store.create_matter("u", mode=Mode.STRICT, redact_codenames=True)
             assert store.get_matter(m2.id).redact_codenames is True
-            assert [x.redact_codenames for x in store.list_matters()] == [False, True] or \
-                   sorted(x.redact_codenames for x in store.list_matters()) == [False, True]
+            m3 = store.create_matter("v", mode=Mode.STRICT)
+            flags = {x.id: x.redact_codenames for x in store.list_matters()}
+            assert flags == {m.id: True, m2.id: True, m3.id: False}
         finally:
             store.close()
 

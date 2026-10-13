@@ -50,13 +50,20 @@ class DetectionPipeline:
         use_gliner: bool | None = None,
         use_privacy_filter: bool = False,
         gliner_model: str | None = None,
+        redact_codenames: bool | None = None,
     ):
         self.store = store
         self.matter_id = matter_id
+        # Per-matter opt-in (ruling 1, 13 October 2026). None = read it
+        # from the matter; explicit True/False overrides.
+        if redact_codenames is None:
+            m = store.get_matter(matter_id)
+            redact_codenames = bool(m.redact_codenames) if m is not None else False
+        self.redact_codenames = redact_codenames
         self.regex = RegexDetector()
-        self.patterns = PatternDetector()
+        self.patterns = PatternDetector(redact_codenames=redact_codenames)
         self.known = KnownEntityDetector()
-        self.spacy = SpacyDetector(languages=languages)
+        self.spacy = SpacyDetector(languages=languages, redact_codenames=redact_codenames)
         self.dictionary = DictionaryDetector(store=store, matter_id=matter_id)
         # GLiNER auto-detect: when use_gliner is None (the default) we
         # enable it iff the `gliner` package is importable. Explicit
@@ -71,7 +78,9 @@ class DetectionPipeline:
             # `gliner_model` selects the checkpoint (small / medium /
             # large) — the model-size ladder in the benchmark uses it.
             self.gliner: GlinerDetector | None = (
-                GlinerDetector(model_name=gliner_model) if gliner_model else GlinerDetector()
+                GlinerDetector(model_name=gliner_model, redact_codenames=redact_codenames)
+                if gliner_model
+                else GlinerDetector(redact_codenames=redact_codenames)
             )
         else:
             self.gliner = None

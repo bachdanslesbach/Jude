@@ -48,15 +48,18 @@ _LABELS_TO_TYPE: dict[str, EntityType] = {
     "company": EntityType.ORG,
     "law firm": EntityType.ORG,
     "client": EntityType.ORG,
-    "deal codename": EntityType.ORG,
     "regulator": EntityType.ORG,
     "court": EntityType.ORG,
-    # Locations
+    # Locations — ruling 6 (13 October 2026): bare cities and countries
+    # are never identifiers, so they are no longer asked for.
     "address": EntityType.LOC,
-    "city": EntityType.LOC,
-    "country": EntityType.LOC,
     # Case refs
     "case reference": EntityType.CASE_REF,
+}
+
+# Ruling 1: deal codenames are redacted only when the matter opts in.
+_OPT_IN_LABELS: dict[str, EntityType] = {
+    "deal codename": EntityType.ORG,
 }
 
 
@@ -95,9 +98,14 @@ class GlinerDetector:
         threshold: float = _DEFAULT_THRESHOLD,
         max_words: int = DEFAULT_MAX_WORDS,
         model=None,  # noqa: ANN001 — injectable for tests
+        redact_codenames: bool = False,
     ):
         self.model = model if model is not None else _load(model_name)
-        self.labels = list(_LABELS_TO_TYPE.keys())
+        self.redact_codenames = redact_codenames
+        self._label_map: dict[str, EntityType] = dict(_LABELS_TO_TYPE)
+        if redact_codenames:
+            self._label_map.update(_OPT_IN_LABELS)
+        self.labels = list(self._label_map.keys())
         self.threshold = threshold
         self.max_words = max_words
 
@@ -118,17 +126,19 @@ class GlinerDetector:
             )
             for s in spans:
                 label = (s.get("label") or "").lower()
-                etype = _LABELS_TO_TYPE.get(label)
+                etype = self._label_map.get(label)
                 if etype is None:
                     continue
                 rel_start, rel_end = int(s["start"]), int(s["end"])
                 if etype in _SHAPE_FILTERED:
                     # Same noise filter as the spaCy layer: role phrases
                     # ("the Firm", "our client"), section labels,
-                    # demonyms, salutation prefixes, date-bearing spans.
+                    # demonyms, salutation prefixes, date-bearing spans,
+                    # bare cities, codenames unless opted in.
                     # Case references are exempt — they contain years.
                     norm = _normalize_span(
-                        chunk[rel_start:rel_end], rel_start, rel_end, lang
+                        chunk[rel_start:rel_end], rel_start, rel_end, lang,
+                        etype=etype, redact_codenames=self.redact_codenames,
                     )
                     if norm is None:
                         continue

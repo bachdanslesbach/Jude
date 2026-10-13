@@ -136,14 +136,26 @@ _LEGAL_HEADERS = frozenset({
     "eiser", "verweerder", "partij", "partijen",
 })
 
-# Bare deal-codename words the neural detectors label as ORG in titles
-# ("Project Aurora — term sheet"). Whether codenames must be redacted
-# is an open annotation-policy question; until it is settled they are
-# dropped HERE ONLY. A short name the drafter defines in parentheses
-# ('Helios Photonics Inc. ("Helios")') is an identifier regardless and
-# is caught by the defined-alias rule in `patterns.py`, then propagated
-# by the dictionary.
+# Deal codenames. Ruling of 13 October 2026: not identifiers by default
+# — "Project Ganymede" and bare codename words are dropped unless the
+# matter opts in (`redact_codenames`), in which case `patterns.py`
+# catches the phrase and its bare short form deterministically. A short
+# name the drafter defines in parentheses ('Helios Photonics Inc.
+# ("Helios")') is an identifier regardless and is caught by the
+# defined-alias rule, then propagated by the dictionary.
 _CODENAME_WORDS = frozenset({"aurora", "atlas", "helios", "eclipse", "solaris"})
+_CODENAME_PHRASE_RE = re.compile(r"^(?:project|projet|operation|opération)\s+\S+$", re.I)
+
+# Ruling 6: a bare city or country name is never an identifier; a
+# party's street-address line is. A LOC span survives only if it carries
+# a number, a street word or a venue word.
+_ADDRESS_OR_VENUE_RE = re.compile(
+    r"\d|\b(?:rue|avenue|av\.|boulevard|bd|chaussée|place|square|straat|laan|lei|weg|kaai|"
+    r"dijk|plein|street|st\.|road|rd\.|lane|drive|quai|allée|chemin|impasse|cours|row|"
+    r"gate|markt|dreef|bailey|hotel|hôtel|villa|centre|center|conference|hof|château|"
+    r"castle|domaine|building|tower|campus|airport|port|station)\b",
+    re.I,
+)
 
 # Determiners and possessives that turn a role into a phrase spaCy or
 # GLiNER then label as an entity: "the Client", "our client", "its
@@ -221,8 +233,14 @@ def _normalize_span(
     start: int,
     end: int,
     lang: str,
+    etype: EntityType | None = None,
+    redact_codenames: bool = False,
 ) -> tuple[str, int, int] | None:
     """Trim a span to a sane shape; reject if it still looks like noise.
+
+    `etype` enables the type-specific rulings (bare LOC toponyms are
+    dropped); `redact_codenames` keeps "Project X" phrases, which are
+    otherwise dropped.
 
     Returns the (possibly shortened) `(text, start, end)` triple, or None to
     drop the span entirely. The trimming is conservative: it only removes
@@ -252,8 +270,10 @@ def _normalize_span(
     if (
         normalised_label in _LEGAL_HEADERS
         or normalised_label in _DEMONYMS
-        or normalised_label in _CODENAME_WORDS
+        or (normalised_label in _CODENAME_WORDS and not redact_codenames)
     ):
+        return None
+    if not redact_codenames and _CODENAME_PHRASE_RE.match(normalised_label):
         return None
     for pre in _ROLE_PREFIXES:
         if normalised_label.startswith(pre):
@@ -285,6 +305,10 @@ def _normalize_span(
 
     # Spans of 6+ tokens are almost always parser overreach.
     if len(tokens) > 5:
+        return None
+
+    # Ruling 6: a bare city / country / region is never an identifier.
+    if etype == EntityType.LOC and len(tokens) <= 3 and not _ADDRESS_OR_VENUE_RE.search(s):
         return None
 
     # Anything containing a recognizable date is not an entity for our purposes.
@@ -329,9 +353,11 @@ class SpacyDetector:
         self,
         languages: tuple[str, ...] = ("en", "fr", "nl"),
         models: dict[str, str] | None = None,
+        redact_codenames: bool = False,
     ):
         self.languages = languages
         self.model_overrides = models or {}
+        self.redact_codenames = redact_codenames
 
     def detect(self, text: str) -> list[Detection]:
         out: list[Detection] = []
@@ -364,7 +390,8 @@ class SpacyDetector:
                 if etype is None:
                     continue
                 normalized = _normalize_span(
-                    ent.text, ent.start_char, ent.end_char, lang
+                    ent.text, ent.start_char, ent.end_char, lang,
+                    etype=etype, redact_codenames=self.redact_codenames,
                 )
                 if normalized is None:
                     continue

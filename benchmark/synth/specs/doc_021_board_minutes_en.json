@@ -55,27 +55,11 @@
    "type": "LOC"
   },
   {
-   "surface": "Antwerp",
-   "type": "LOC"
-  },
-  {
    "surface": "Grafenberger Allee 112",
    "type": "LOC"
   },
   {
-   "surface": "Düsseldorf",
-   "type": "LOC"
-  },
-  {
-   "surface": "Wrocław",
-   "type": "LOC"
-  },
-  {
    "surface": "Regentlaan 58",
-   "type": "LOC"
-  },
-  {
-   "surface": "Brussels",
    "type": "LOC"
   },
   {
@@ -183,14 +167,6 @@
    "type": "CASE_REF"
   },
   {
-   "surface": "Project Ganymede",
-   "type": "ORG"
-  },
-  {
-   "surface": "Ganymede",
-   "type": "ORG"
-  },
-  {
    "surface": "ganymede-dataroom.example.com",
    "type": "URL"
   }
@@ -218,5 +194,9 @@
   "role-noise",
   "all-caps-header"
  ],
- "notes": "Board minutes of a Belgian NV approving a share purchase agreement to acquire a German competitor under a deal codename, with EUMR/BCA conditions and bank financing. SHOULD redact: the Company + all-caps header form + bare 'Vantaris' + registered office street and city (Antwerp, also in the RPR line), the target + short form + its Düsseldorf street address + plant cities (Düsseldorf, Wrocław — party-locating), the Seller + bare 'Heronmere' + its managing partner (full name and 'Mr. Ravensworth'), the corporate shareholder Solvane Industrial Holdings BV, outside counsel firm + defined acronym 'R&W' + its Brussels street address and city, every director and attendee in full-name, honorific-only ('Mr. Roelandts', 'Maître Dumoulin', 'Ms. Van Impe' …) and surname-only ('Roelandts' in the annex list) form, the financing bank named only by acronym (KBC — a real bank, redact:true in the whitelist, because its role as arranger here is deal-confidential), the escrow IBAN, the board file reference VPN-BRD-2026-014, counsel's file reference RW/GAN/2026/0283, the codename 'Project Ganymede' and bare 'Ganymede' (annotated as CASE_REF: an internal matter reference that identifies the deal), the bare data-room domain, the Secretary's email and phone. SHOULD NOT redact: European Commission / 'the Commission', DG COMP, EU Merger Regulation / EUMR and its article references, Belgian Competition Authority, Belgian Code of Companies and Associations (Article 7:96), Code of Economic Law (Book IV), Form CO, Belgium / 'German company' (jurisdictional), role words ('the Company', 'the Seller', 'the Board', 'the Chairman', 'Counsel', 'General Counsel', 'Secretary'), defined non-identifying terms ('the Shares', 'the SPA', 'the Facilities Agreement'), dates, amounts, clause and annex numbers, and the Dutch legal-form words 'Naamloze vennootschap' / 'gedelegeerd bestuurder'."
+ "notes": "Board minutes of a Belgian NV approving a share purchase agreement to acquire a German competitor under a deal codename, with EUMR/BCA conditions and bank financing. SHOULD redact: the Company + all-caps header form + bare 'Vantaris' + registered office street and city (Antwerp, also in the RPR line), the target + short form + its Düsseldorf street address + plant cities (Düsseldorf, Wrocław — party-locating), the Seller + bare 'Heronmere' + its managing partner (full name and 'Mr. Ravensworth'), the corporate shareholder Solvane Industrial Holdings BV, outside counsel firm + defined acronym 'R&W' + its Brussels street address and city, every director and attendee in full-name, honorific-only ('Mr. Roelandts', 'Maître Dumoulin', 'Ms. Van Impe' …) and surname-only ('Roelandts' in the annex list) form, the financing bank named only by acronym (KBC — a real bank, redact:true in the whitelist, because its role as arranger here is deal-confidential), the escrow IBAN, the board file reference VPN-BRD-2026-014, counsel's file reference RW/GAN/2026/0283, the codename 'Project Ganymede' and bare 'Ganymede' (annotated as CASE_REF: an internal matter reference that identifies the deal), the bare data-room domain, the Secretary's email and phone. SHOULD NOT redact: European Commission / 'the Commission', DG COMP, EU Merger Regulation / EUMR and its article references, Belgian Competition Authority, Belgian Code of Companies and Associations (Article 7:96), Code of Economic Law (Book IV), Form CO, Belgium / 'German company' (jurisdictional), role words ('the Company', 'the Seller', 'the Board', 'the Chairman', 'Counsel', 'General Counsel', 'Secretary'), defined non-identifying terms ('the Shares', 'the SPA', 'the Facilities Agreement'), dates, amounts, clause and annex numbers, and the Dutch legal-form words 'Naamloze vennootschap' / 'gedelegeerd bestuurder'.",
+ "codenames": [
+  "Ganymede",
+  "Project Ganymede"
+ ]
 }

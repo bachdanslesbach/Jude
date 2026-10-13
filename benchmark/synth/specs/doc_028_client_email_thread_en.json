@@ -63,14 +63,6 @@
    "type": "ORG"
   },
   {
-   "surface": "Project Larkspur",
-   "type": "ORG"
-  },
-  {
-   "surface": "Larkspur",
-   "type": "ORG"
-  },
-  {
    "surface": "RKB",
    "type": "ORG"
   },
@@ -79,23 +71,11 @@
    "type": "LOC"
   },
   {
-   "surface": "Brussels",
-   "type": "LOC"
-  },
-  {
    "surface": "Schiedamsedijk 128",
    "type": "LOC"
   },
   {
-   "surface": "Rotterdam",
-   "type": "LOC"
-  },
-  {
    "surface": "Am Kartonwerk 4",
-   "type": "LOC"
-  },
-  {
-   "surface": "Neuss",
    "type": "LOC"
   },
   {
@@ -161,5 +141,9 @@
   "adjacent-public",
   "role-noise"
  ],
- "notes": "Client email thread (most recent first) between outside counsel and a client's General Counsel on gun-jumping risk before EU merger clearance. SHOULD redact: the acquirer Ravelston Packaging Group N.V. and its short form Ravelston, the target Rheinfeld Kartonagen GmbH and its defined short form Rheinfeld, the codename Project Larkspur and bare Larkspur (incl. in subject lines), the lender referred to only by acronym RKB, the law firm Hallstrom & Vane LLP (incl. in the disclaimer footer) and its bare domain hallstrom-vane.example.com, all four individuals in every form (full name in headers and signatures, first name only in salutations and body, honorific-only Ms. Okafor), every distinct email address, phone number, the street addresses and office/plant cities (Brussels, Rotterdam, Neuss as party locations), and the internal matter reference HV-2026-0655. SHOULD NOT redact: European Commission / the Commission, DG COMP, Regulation (EC) No 139/2004, Article 7, 7(1), 7(3), 9(2)(a) and 101, the Bundeskartellamt, the Court of Justice and the public Altice precedent (C-746/21 P); Germany and Bavaria (countries/regions); Phase I; role words (the Target, the deal team, the steering group, General Counsel, Senior Associate, Head of Integration, the clean team); generic product references (SAP, iPhone); dates, times, quarters and meeting-room numbers."
+ "notes": "Client email thread (most recent first) between outside counsel and a client's General Counsel on gun-jumping risk before EU merger clearance. SHOULD redact: the acquirer Ravelston Packaging Group N.V. and its short form Ravelston, the target Rheinfeld Kartonagen GmbH and its defined short form Rheinfeld, the codename Project Larkspur and bare Larkspur (incl. in subject lines), the lender referred to only by acronym RKB, the law firm Hallstrom & Vane LLP (incl. in the disclaimer footer) and its bare domain hallstrom-vane.example.com, all four individuals in every form (full name in headers and signatures, first name only in salutations and body, honorific-only Ms. Okafor), every distinct email address, phone number, the street addresses and office/plant cities (Brussels, Rotterdam, Neuss as party locations), and the internal matter reference HV-2026-0655. SHOULD NOT redact: European Commission / the Commission, DG COMP, Regulation (EC) No 139/2004, Article 7, 7(1), 7(3), 9(2)(a) and 101, the Bundeskartellamt, the Court of Justice and the public Altice precedent (C-746/21 P); Germany and Bavaria (countries/regions); Phase I; role words (the Target, the deal team, the steering group, General Counsel, Senior Associate, Head of Integration, the clean team); generic product references (SAP, iPhone); dates, times, quarters and meeting-room numbers.",
+ "codenames": [
+  "Larkspur",
+  "Project Larkspur"
+ ]
 }

@@ -43,18 +43,6 @@
    "type": "ORG"
   },
   {
-   "surface": "PROJECT KITTIWAKE",
-   "type": "ORG"
-  },
-  {
-   "surface": "Project Kittiwake",
-   "type": "ORG"
-  },
-  {
-   "surface": "Kittiwake",
-   "type": "ORG"
-  },
-  {
    "surface": "Frankrijklei 118",
    "type": "LOC"
   },
@@ -208,5 +196,10 @@
   "role-noise",
   "all-caps-header"
  ],
- "notes": "Excerpt of an English-law SPA for the sale of a Belgian target, with a Belgian seller, an English buyer and a Dutch guarantor. SHOULD redact: the three parties in every form (title-line capitals, parties clause, the defined acronym VIH), the target Aldebrand Thermal Systems NV, the Seller's Solicitors and their file reference, the deal codename (Project Kittiwake, PROJECT KITTIWAKE and bare Kittiwake), all registered-office street addresses and postcode+city pairs, the enterprise/company registration numbers (typed CASE_REF for want of a registry-number type), the pending-claim claimant Mr. Dragan Brankovic (also as bare Brankovic in the defined term) and the Antwerp docket number, both completion-payment IBANs and the banks named only by acronym (KBC, BIL), the notice contacts with honorifics and honorific-only repeats, their example.* emails and international phone numbers, the bare data-room domain, and the three signatories. SHOULD NOT redact: European Commission, Regulation (EC) No 139/2004, Competition and Markets Authority / CMA, Enterprise Act 2002, Belgian Companies and Associations Code, Commercial Court of London, Enterprise Court of Antwerp, Crossroads Bank for Enterprises, Netherlands Chamber of Commerce, the countries (Belgium, England and Wales, the Netherlands), the legal-form descriptors (naamloze vennootschap, besloten vennootschap), the role words (the Seller, the Buyer, the Guarantor, the Company, the Escrow Agent, the Seller's Solicitors), and defined commercial terms (Purchase Price, Escrow Amount, Merger Control Condition, Long Stop Date, Data Room)."
+ "notes": "Excerpt of an English-law SPA for the sale of a Belgian target, with a Belgian seller, an English buyer and a Dutch guarantor. SHOULD redact: the three parties in every form (title-line capitals, parties clause, the defined acronym VIH), the target Aldebrand Thermal Systems NV, the Seller's Solicitors and their file reference, the deal codename (Project Kittiwake, PROJECT KITTIWAKE and bare Kittiwake), all registered-office street addresses and postcode+city pairs, the enterprise/company registration numbers (typed CASE_REF for want of a registry-number type), the pending-claim claimant Mr. Dragan Brankovic (also as bare Brankovic in the defined term) and the Antwerp docket number, both completion-payment IBANs and the banks named only by acronym (KBC, BIL), the notice contacts with honorifics and honorific-only repeats, their example.* emails and international phone numbers, the bare data-room domain, and the three signatories. SHOULD NOT redact: European Commission, Regulation (EC) No 139/2004, Competition and Markets Authority / CMA, Enterprise Act 2002, Belgian Companies and Associations Code, Commercial Court of London, Enterprise Court of Antwerp, Crossroads Bank for Enterprises, Netherlands Chamber of Commerce, the countries (Belgium, England and Wales, the Netherlands), the legal-form descriptors (naamloze vennootschap, besloten vennootschap), the role words (the Seller, the Buyer, the Guarantor, the Company, the Escrow Agent, the Seller's Solicitors), and defined commercial terms (Purchase Price, Escrow Amount, Merger Control Condition, Long Stop Date, Data Room).",
+ "codenames": [
+  "Kittiwake",
+  "PROJECT KITTIWAKE",
+  "Project Kittiwake"
+ ]
 }

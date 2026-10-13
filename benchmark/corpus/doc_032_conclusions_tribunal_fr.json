@@ -23,12 +23,6 @@
    "text": "Chaussée de Waterloo 1142"
   },
   {
-   "start": 246,
-   "end": 251,
-   "type": "LOC",
-   "text": "Uccle"
-  },
-  {
    "start": 315,
    "end": 327,
    "type": "IBAN",
@@ -59,12 +53,6 @@
    "text": "Avenue de Tervueren 271"
   },
   {
-   "start": 537,
-   "end": 556,
-   "type": "LOC",
-   "text": "Woluwe-Saint-Pierre"
-  },
-  {
    "start": 558,
    "end": 592,
    "type": "EMAIL",
@@ -89,12 +77,6 @@
    "text": "Kaiserswerther Straße 87"
   },
   {
-   "start": 770,
-   "end": 777,
-   "type": "LOC",
-   "text": "Krefeld"
-  },
-  {
    "start": 843,
    "end": 852,
    "type": "IBAN",
@@ -117,12 +99,6 @@
    "end": 1019,
    "type": "LOC",
    "text": "Place du Champ de Mars 5"
-  },
-  {
-   "start": 1026,
-   "end": 1033,
-   "type": "LOC",
-   "text": "Ixelles"
   },
   {
    "start": 1047,
@@ -171,12 +147,6 @@
    "end": 1754,
    "type": "ORG",
    "text": "Verdiane"
-  },
-  {
-   "start": 1845,
-   "end": 1850,
-   "type": "LOC",
-   "text": "Uccle"
   },
   {
    "start": 1898,

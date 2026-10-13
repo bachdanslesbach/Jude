@@ -47,12 +47,6 @@
    "text": "Trierer Straße 88"
   },
   {
-   "start": 539,
-   "end": 545,
-   "type": "LOC",
-   "text": "Aachen"
-  },
-  {
    "start": 547,
    "end": 556,
    "type": "ORG",
@@ -125,12 +119,6 @@
    "text": "Quai de Coronmeuse 21"
   },
   {
-   "start": 1306,
-   "end": 1311,
-   "type": "LOC",
-   "text": "Liège"
-  },
-  {
    "start": 1313,
    "end": 1316,
    "type": "ORG",
@@ -149,22 +137,10 @@
    "text": "Bertrand Coppieters"
   },
   {
-   "start": 1642,
-   "end": 1658,
-   "type": "ORG",
-   "text": "Project Tamarack"
-  },
-  {
    "start": 1795,
    "end": 1821,
    "type": "ORG",
    "text": "Meuse Composite Systems SA"
-  },
-  {
-   "start": 1958,
-   "end": 1972,
-   "type": "LOC",
-   "text": "Grâce-Hollogne"
   },
   {
    "start": 1980,
@@ -191,22 +167,10 @@
    "text": "Rue de l'Espérance 75"
   },
   {
-   "start": 2670,
-   "end": 2684,
-   "type": "LOC",
-   "text": "Grâce-Hollogne"
-  },
-  {
    "start": 3184,
    "end": 3187,
    "type": "ORG",
    "text": "MCS"
-  },
-  {
-   "start": 3259,
-   "end": 3273,
-   "type": "LOC",
-   "text": "Grâce-Hollogne"
   },
   {
    "start": 3717,
@@ -219,12 +183,6 @@
    "end": 4130,
    "type": "ORG",
    "text": "MCS"
-  },
-  {
-   "start": 4324,
-   "end": 4332,
-   "type": "ORG",
-   "text": "Tamarack"
   },
   {
    "start": 4392,

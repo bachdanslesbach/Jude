@@ -65,12 +65,6 @@
    "text": "xavier.ronvaux@example.com"
   },
   {
-   "start": 1190,
-   "end": 1204,
-   "type": "ORG",
-   "text": "projet Sarment"
-  },
-  {
    "start": 1286,
    "end": 1300,
    "type": "PERSON",
@@ -123,12 +117,6 @@
    "end": 2452,
    "type": "CASE_REF",
    "text": "PV-AUD-26-3306"
-  },
-  {
-   "start": 2541,
-   "end": 2548,
-   "type": "ORG",
-   "text": "Sarment"
   },
   {
    "start": 2659,

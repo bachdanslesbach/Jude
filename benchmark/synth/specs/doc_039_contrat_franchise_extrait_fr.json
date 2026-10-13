@@ -83,10 +83,6 @@
    "type": "LOC"
   },
   {
-   "surface": "Wavre",
-   "type": "LOC"
-  },
-  {
    "surface": "a.warzee@sablieux.example.be",
    "type": "EMAIL"
   },
@@ -151,5 +147,6 @@
   "role-noise",
   "all-caps-header"
  ],
- "notes": "Extrait d'un contrat de franchise de droit belge (restauration rapide) entre un franchiseur SA wavrien et un franchisé SRL carolorégien, rédigé par un cabinet bruxellois. SHOULD redact: les deux sociétés sous toutes leurs formes (dénomination complète avec forme juridique, capitales dans l'en-tête, forme courte « Sablieux »), la marque/enseigne « BROCHE BLEUE » / « Broche Bleue » (y compris adjacente à l'Office Benelux de la Propriété intellectuelle), le cabinet Marlière & Kesteloot et ses avocats désignés par le nom seul dans « Dossier suivi par », les signataires avec et sans civilité (« Anouk Warzée », « Mme Warzée », « Nicolas Rimaldi », « M. Rimaldi »), les quatre adresses (siège du Franchiseur, siège du Franchisé, Point de Vente, bureaux du conseil), « Wavre » comme lieu de signature, les e-mails, les trois téléphones, l'IBAN et la banque désignée par son sigle (CBC, adjacente au compte), les deux numéros BCE, la référence interne MV/26/2318 et le domaine nu broche-bleue.example.be. SHOULD NOT redact: Banque-Carrefour des Entreprises, Office Benelux de la Propriété intellectuelle, Code de droit économique (livre X, titre 2, art. X.27 et X.28), règlement (UE) 2022/720 et ses articles 4 et 5, Commission européenne, tribunal de l'entreprise du Brabant wallon, Belgique, le Territoire (Charleroi et les communes limitrophes énumérées, villes nues), les dates, montants, pourcentages et durées, ni les termes définis et rôles (Franchiseur, Franchisé, Parties, Réseau, Marque, Territoire, Point de Vente, Savoir-Faire, Manuel Opérationnel, Contrat)."
+ "notes": "Extrait d'un contrat de franchise de droit belge (restauration rapide) entre un franchiseur SA wavrien et un franchisé SRL carolorégien, rédigé par un cabinet bruxellois. SHOULD redact: les deux sociétés sous toutes leurs formes (dénomination complète avec forme juridique, capitales dans l'en-tête, forme courte « Sablieux »), la marque/enseigne « BROCHE BLEUE » / « Broche Bleue » (y compris adjacente à l'Office Benelux de la Propriété intellectuelle), le cabinet Marlière & Kesteloot et ses avocats désignés par le nom seul dans « Dossier suivi par », les signataires avec et sans civilité (« Anouk Warzée », « Mme Warzée », « Nicolas Rimaldi », « M. Rimaldi »), les quatre adresses (siège du Franchiseur, siège du Franchisé, Point de Vente, bureaux du conseil), « Wavre » comme lieu de signature, les e-mails, les trois téléphones, l'IBAN et la banque désignée par son sigle (CBC, adjacente au compte), les deux numéros BCE, la référence interne MV/26/2318 et le domaine nu broche-bleue.example.be. SHOULD NOT redact: Banque-Carrefour des Entreprises, Office Benelux de la Propriété intellectuelle, Code de droit économique (livre X, titre 2, art. X.27 et X.28), règlement (UE) 2022/720 et ses articles 4 et 5, Commission européenne, tribunal de l'entreprise du Brabant wallon, Belgique, le Territoire (Charleroi et les communes limitrophes énumérées, villes nues), les dates, montants, pourcentages et durées, ni les termes définis et rôles (Franchiseur, Franchisé, Parties, Réseau, Marque, Territoire, Point de Vente, Savoir-Faire, Manuel Opérationnel, Contrat).",
+ "codenames": []
 }

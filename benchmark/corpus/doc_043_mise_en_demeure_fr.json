@@ -125,6 +125,30 @@
    "text": "Monsieur Marbaix"
   },
   {
+   "start": 1750,
+   "end": 1758,
+   "type": "CASE_REF",
+   "text": "F26-1183"
+  },
+  {
+   "start": 1833,
+   "end": 1841,
+   "type": "CASE_REF",
+   "text": "F26-1247"
+  },
+  {
+   "start": 1915,
+   "end": 1923,
+   "type": "CASE_REF",
+   "text": "F26-1302"
+  },
+  {
+   "start": 1996,
+   "end": 2004,
+   "type": "CASE_REF",
+   "text": "F26-1389"
+  },
+  {
    "start": 2260,
    "end": 2275,
    "type": "PERSON",

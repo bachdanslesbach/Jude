@@ -29,12 +29,6 @@
    "text": "Tomasz Wierzbicki"
   },
   {
-   "start": 157,
-   "end": 165,
-   "type": "ORG",
-   "text": "Larkspur"
-  },
-  {
    "start": 187,
    "end": 193,
    "type": "PERSON",
@@ -75,12 +69,6 @@
    "end": 677,
    "type": "PERSON",
    "text": "Ingrid Halvorsen"
-  },
-  {
-   "start": 691,
-   "end": 699,
-   "type": "ORG",
-   "text": "Larkspur"
   },
   {
    "start": 726,
@@ -137,12 +125,6 @@
    "text": "Rheinfeld"
   },
   {
-   "start": 2263,
-   "end": 2268,
-   "type": "LOC",
-   "text": "Neuss"
-  },
-  {
    "start": 2451,
    "end": 2454,
    "type": "ORG",
@@ -171,12 +153,6 @@
    "end": 3194,
    "type": "LOC",
    "text": "Boulevard du Régent 37"
-  },
-  {
-   "start": 3201,
-   "end": 3209,
-   "type": "LOC",
-   "text": "Brussels"
   },
   {
    "start": 3212,
@@ -221,12 +197,6 @@
    "text": "Ingrid Halvorsen"
   },
   {
-   "start": 3661,
-   "end": 3669,
-   "type": "ORG",
-   "text": "Larkspur"
-  },
-  {
    "start": 3691,
    "end": 3697,
    "type": "PERSON",
@@ -243,12 +213,6 @@
    "end": 3776,
    "type": "ORG",
    "text": "Rheinfeld"
-  },
-  {
-   "start": 3822,
-   "end": 3827,
-   "type": "LOC",
-   "text": "Neuss"
   },
   {
    "start": 4032,
@@ -281,12 +245,6 @@
    "text": "Schiedamsedijk 128"
   },
   {
-   "start": 4334,
-   "end": 4343,
-   "type": "LOC",
-   "text": "Rotterdam"
-  },
-  {
    "start": 4346,
    "end": 4361,
    "type": "PHONE",
@@ -311,22 +269,10 @@
    "text": "Adaeze Okafor"
   },
   {
-   "start": 4505,
-   "end": 4513,
-   "type": "ORG",
-   "text": "Larkspur"
-  },
-  {
    "start": 4535,
    "end": 4545,
    "type": "PERSON",
    "text": "Ms. Okafor"
-  },
-  {
-   "start": 4630,
-   "end": 4646,
-   "type": "ORG",
-   "text": "Project Larkspur"
   },
   {
    "start": 4679,
@@ -345,12 +291,6 @@
    "end": 4735,
    "type": "LOC",
    "text": "Am Kartonwerk 4"
-  },
-  {
-   "start": 4743,
-   "end": 4748,
-   "type": "LOC",
-   "text": "Neuss"
   },
   {
    "start": 5189,

@@ -43,14 +43,6 @@
    "type": "CASE_REF"
   },
   {
-   "surface": "Project Lantern",
-   "type": "ORG"
-  },
-  {
-   "surface": "Lantern",
-   "type": "ORG"
-  },
-  {
    "surface": "Ingrid Vercauteren",
    "type": "PERSON"
   },
@@ -69,10 +61,6 @@
   {
    "surface": "Zilverberg",
    "type": "ORG"
-  },
-  {
-   "surface": "Enschede",
-   "type": "LOC"
   },
   {
    "surface": "Joris Dekkers",
@@ -103,10 +91,6 @@
    "type": "ORG"
   },
   {
-   "surface": "Cologne",
-   "type": "LOC"
-  },
-  {
    "surface": "Arundel Protective Systems Ltd",
    "type": "ORG"
   },
@@ -115,20 +99,12 @@
    "type": "ORG"
   },
   {
-   "surface": "Sheffield",
-   "type": "LOC"
-  },
-  {
    "surface": "Rivestimenti Tirreno S.p.A.",
    "type": "ORG"
   },
   {
    "surface": "Tirreno",
    "type": "ORG"
-  },
-  {
-   "surface": "Livorno",
-   "type": "LOC"
   },
   {
    "surface": "Falk Rennert",
@@ -159,19 +135,11 @@
    "type": "ORG"
   },
   {
-   "surface": "Frankfurt",
-   "type": "LOC"
-  },
-  {
    "surface": "Hotel Leyendecker",
    "type": "LOC"
   },
   {
    "surface": "Grand Hotel Marchesi",
-   "type": "LOC"
-  },
-  {
-   "surface": "Bologna",
    "type": "LOC"
   },
   {
@@ -206,5 +174,9 @@
   "role-noise",
   "all-caps-header"
  ],
- "notes": "Leniency marker request from Brussels outside counsel to DG Competition. SHOULD redact: the Firm (letterhead all-caps and sentence-case forms, street address line, bare letterhead domain, switchboard and mobile numbers, both example.be emails, internal ref VAP/COMP/2026-0336, matter codename 'Project Lantern' and bare 'Lantern'); the Applicant (full legal name incl. all-caps form in the Re: line, defined short form 'Zilverberg', registered-office city Enschede, its Head of Sales and Key Account Manager incl. honorific-only repeats, its General Counsel in the cc line); the three other alleged participants with their legal-form suffixes and defined short forms, their seat cities, and their named executives (incl. bare 'Rennert' and 'Mr. Barsanti'); the trade association and its defined acronym FCFE, its seat city; the two hotels and their cities as meeting locations; the Bundeskartellamt acknowledgment reference B12-27/26; the signing partner and the associate. SHOULD NOT redact: European Commission, Directorate-General for Competition / DG Competition and its public address Place Madou 1, 1210 Brussels, the 2006 Leniency Notice (full title and short form, OJ citation), Article 101 TFEU, Article 53 EEA Agreement, Regulation (EC) No 1/2003, the ECN Model Leniency Programme, Bundeskartellamt, Competition and Markets Authority / CMA, countries (Netherlands, United Kingdom), the EEA, and role words such as 'the Firm', 'the Applicant', 'the undersigned', 'Counsel for the Applicant', 'the Commission's case team', 'Head of Sales', 'Managing Director'. The product description (zinc-flake coatings for high-strength fasteners) and the defined term 'the Products' are market descriptors, not identifiers."
+ "notes": "Leniency marker request from Brussels outside counsel to DG Competition. SHOULD redact: the Firm (letterhead all-caps and sentence-case forms, street address line, bare letterhead domain, switchboard and mobile numbers, both example.be emails, internal ref VAP/COMP/2026-0336, matter codename 'Project Lantern' and bare 'Lantern'); the Applicant (full legal name incl. all-caps form in the Re: line, defined short form 'Zilverberg', registered-office city Enschede, its Head of Sales and Key Account Manager incl. honorific-only repeats, its General Counsel in the cc line); the three other alleged participants with their legal-form suffixes and defined short forms, their seat cities, and their named executives (incl. bare 'Rennert' and 'Mr. Barsanti'); the trade association and its defined acronym FCFE, its seat city; the two hotels and their cities as meeting locations; the Bundeskartellamt acknowledgment reference B12-27/26; the signing partner and the associate. SHOULD NOT redact: European Commission, Directorate-General for Competition / DG Competition and its public address Place Madou 1, 1210 Brussels, the 2006 Leniency Notice (full title and short form, OJ citation), Article 101 TFEU, Article 53 EEA Agreement, Regulation (EC) No 1/2003, the ECN Model Leniency Programme, Bundeskartellamt, Competition and Markets Authority / CMA, countries (Netherlands, United Kingdom), the EEA, and role words such as 'the Firm', 'the Applicant', 'the undersigned', 'Counsel for the Applicant', 'the Commission's case team', 'Head of Sales', 'Managing Director'. The product description (zinc-flake coatings for high-strength fasteners) and the defined term 'the Products' are market descriptors, not identifiers.",
+ "codenames": [
+  "Lantern",
+  "Project Lantern"
+ ]
 }

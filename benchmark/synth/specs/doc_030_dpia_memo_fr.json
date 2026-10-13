@@ -19,23 +19,11 @@
    "type": "ORG"
   },
   {
-   "surface": "Projet Argus",
-   "type": "ORG"
-  },
-  {
-   "surface": "Argus",
-   "type": "ORG"
-  },
-  {
    "surface": "Vandermeulen Fauconnier & Associés",
    "type": "ORG"
   },
   {
    "surface": "Avenue Louise 480",
-   "type": "LOC"
-  },
-  {
-   "surface": "Bruxelles",
    "type": "LOC"
   },
   {
@@ -103,31 +91,15 @@
    "type": "URL"
   },
   {
-   "surface": "Munich",
-   "type": "LOC"
-  },
-  {
    "surface": "Cloudhaven Hosting Ltd",
    "type": "ORG"
-  },
-  {
-   "surface": "Dublin",
-   "type": "LOC"
   },
   {
    "surface": "Pinecrest Support Services Inc.",
    "type": "ORG"
   },
   {
-   "surface": "Denver",
-   "type": "LOC"
-  },
-  {
    "surface": "Ambachtsweg 27",
-   "type": "LOC"
-  },
-  {
-   "surface": "Willebroek",
    "type": "LOC"
   },
   {
@@ -164,5 +136,9 @@
   "role-noise",
   "all-caps-header"
  ],
- "notes": "Belgian law-firm memo to a client's DPO on a GDPR Article 35 DPIA for a vendor-supplied workforce-monitoring tool. SHOULD redact: the client (Novaris Logistics SA, all-caps header form, bare 'Novaris'), the project codename ('Projet Argus' and bare 'Argus'), the advising firm + its street address and office city (Bruxelles, three times), the firm's lawyers + e-mail + phone, the client's DPO (full name and 'Mme Lambert') + e-mail + phone, the HR director (full name and 'M. Benali'), the vendor with legal form + defined acronym 'SWA' + its seat (Munich) + its DPO (Anneliese Roth, no honorific), the bare tool domain sentinelwatch.example.com, both sub-processors + their cities (Dublin, Denver, the latter three times), the affected warehouse address (Ambachtsweg 27) and town (Willebroek), both internal references (NLS-DPO-2026-011, VFA/2026/0562 twice), the firm's bank named only by its acronym (KBC) and the IBAN. SHOULD NOT redact: Autorité de protection des données / APD, CNIL, BayLDA (all DPAs), Comité européen de la protection des données, Commission européenne, Cour de justice de l'Union européenne and case C-311/18, RGPD, loi du 30 juillet 2018, CCT n° 81, WP248 rev.01, États-Unis / Belgique / Union européenne (countries and jurisdictions), and role nouns ('le responsable du traitement', 'le sous-traitant', 'le Cabinet', 'la déléguée à la protection des données', 'le conseil d'entreprise', 'la hiérarchie'). Honorifics stay outside full-name spans (corpus convention) but are included in honorific-only mentions."
+ "notes": "Belgian law-firm memo to a client's DPO on a GDPR Article 35 DPIA for a vendor-supplied workforce-monitoring tool. SHOULD redact: the client (Novaris Logistics SA, all-caps header form, bare 'Novaris'), the project codename ('Projet Argus' and bare 'Argus'), the advising firm + its street address and office city (Bruxelles, three times), the firm's lawyers + e-mail + phone, the client's DPO (full name and 'Mme Lambert') + e-mail + phone, the HR director (full name and 'M. Benali'), the vendor with legal form + defined acronym 'SWA' + its seat (Munich) + its DPO (Anneliese Roth, no honorific), the bare tool domain sentinelwatch.example.com, both sub-processors + their cities (Dublin, Denver, the latter three times), the affected warehouse address (Ambachtsweg 27) and town (Willebroek), both internal references (NLS-DPO-2026-011, VFA/2026/0562 twice), the firm's bank named only by its acronym (KBC) and the IBAN. SHOULD NOT redact: Autorité de protection des données / APD, CNIL, BayLDA (all DPAs), Comité européen de la protection des données, Commission européenne, Cour de justice de l'Union européenne and case C-311/18, RGPD, loi du 30 juillet 2018, CCT n° 81, WP248 rev.01, États-Unis / Belgique / Union européenne (countries and jurisdictions), and role nouns ('le responsable du traitement', 'le sous-traitant', 'le Cabinet', 'la déléguée à la protection des données', 'le conseil d'entreprise', 'la hiérarchie'). Honorifics stay outside full-name spans (corpus convention) but are included in honorific-only mentions.",
+ "codenames": [
+  "Argus",
+  "Projet Argus"
+ ]
 }

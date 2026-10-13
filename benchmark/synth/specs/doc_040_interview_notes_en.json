@@ -119,27 +119,11 @@
    "type": "LOC"
   },
   {
-   "surface": "Breda",
-   "type": "LOC"
-  },
-  {
    "surface": "Kastanjehof conference centre",
    "type": "LOC"
   },
   {
-   "surface": "Leuven",
-   "type": "LOC"
-  },
-  {
    "surface": "Hotel Löwenkranz",
-   "type": "LOC"
-  },
-  {
-   "surface": "Löwenkranz",
-   "type": "LOC"
-  },
-  {
-   "surface": "Cologne",
    "type": "LOC"
   },
   {
@@ -159,12 +143,12 @@
    "type": "CASE_REF"
   },
   {
-   "surface": "Belting Amigos BNL",
-   "type": "ORG"
-  },
-  {
    "surface": "k.hettinger@griesbacher-foerder.example.de",
    "type": "EMAIL"
+  },
+  {
+   "surface": "Löwenkranz",
+   "type": "LOC"
   }
  ],
  "public": [
@@ -190,5 +174,6 @@
   "adjacent-public",
   "role-noise"
  ],
- "notes": "Privileged interview notes by Belgian outside counsel in an internal antitrust investigation (information exchange with competitors at trade-association meetings). SHOULD redact: the client in every form (all-caps matter line, full legal name, bare 'Pentaflex' incl. the possessive), its street address line; the Firm (Duvivier Hasselbrink Advocaten) and its matter reference DH/2026/3862-PFX; the partner, the associate/note-taker and the General Counsel in full, honorific-only and initial+surname forms (Ms. Rasquin, I. Rasquin, Eyckmans, T. Eyckmans, Ms. Verlinden); the interviewee in full and every bare-surname repeat (Deneckere); the trade association and its defined acronym BBP; both competitors with legal-form suffixes and defined short forms; the competitor employees in full, surname-only (Hettinger, Schouwenaar) and the initials KH in the calendar entry and contact label; the three meeting venues and their cities (Breda, Leuven, Cologne — locations of the conduct), incl. bare 'Löwenkranz' in the calendar entry; the mobile number; the example.de email address; the WhatsApp group name 'Belting Amigos BNL'; the document codes DOC-7315 / DOC-7402 / DOC-7519. SHOULD NOT redact: Belgian Competition Authority, European Commission / 'the Commission', Article 101 TFEU, Article IV.1 of the Code of Economic Law, the Guidelines on horizontal cooperation agreements, the Leniency Notice, Regulation (EC) No 1/2003, the European Competition Network, CBAM, the Upjohn warning, 'Member States', the Benelux as a geographic market, nor role words such as 'the Company', 'the Firm', 'the interviewee', 'outside counsel', 'note-taker', 'General Counsel', 'Sales Director Benelux', 'Vertriebsleiter Benelux', 'the BBP secretariat / secretary-general', 'pricing committee chair', 'line manager'. Dates, times, percentages, the filename PL_Q3_draft.xlsx and the quoted phrases are not identifiers."
+ "notes": "Privileged interview notes by Belgian outside counsel in an internal antitrust investigation (information exchange with competitors at trade-association meetings). SHOULD redact: the client in every form (all-caps matter line, full legal name, bare 'Pentaflex' incl. the possessive), its street address line; the Firm (Duvivier Hasselbrink Advocaten) and its matter reference DH/2026/3862-PFX; the partner, the associate/note-taker and the General Counsel in full, honorific-only and initial+surname forms (Ms. Rasquin, I. Rasquin, Eyckmans, T. Eyckmans, Ms. Verlinden); the interviewee in full and every bare-surname repeat (Deneckere); the trade association and its defined acronym BBP; both competitors with legal-form suffixes and defined short forms; the competitor employees in full, surname-only (Hettinger, Schouwenaar) and the initials KH in the calendar entry and contact label; the three meeting venues and their cities (Breda, Leuven, Cologne — locations of the conduct), incl. bare 'Löwenkranz' in the calendar entry; the mobile number; the example.de email address; the WhatsApp group name 'Belting Amigos BNL'; the document codes DOC-7315 / DOC-7402 / DOC-7519. SHOULD NOT redact: Belgian Competition Authority, European Commission / 'the Commission', Article 101 TFEU, Article IV.1 of the Code of Economic Law, the Guidelines on horizontal cooperation agreements, the Leniency Notice, Regulation (EC) No 1/2003, the European Competition Network, CBAM, the Upjohn warning, 'Member States', the Benelux as a geographic market, nor role words such as 'the Company', 'the Firm', 'the interviewee', 'outside counsel', 'note-taker', 'General Counsel', 'Sales Director Benelux', 'Vertriebsleiter Benelux', 'the BBP secretariat / secretary-general', 'pricing committee chair', 'line manager'. Dates, times, percentages, the filename PL_Q3_draft.xlsx and the quoted phrases are not identifiers.",
+ "codenames": []
 }

@@ -139,14 +139,6 @@
    "type": "PHONE"
   },
   {
-   "surface": "Project Sable",
-   "type": "ORG"
-  },
-  {
-   "surface": "Sable",
-   "type": "ORG"
-  },
-  {
    "surface": "BIL",
    "type": "ORG"
   },
@@ -190,5 +182,9 @@
   "role-noise",
   "all-caps-header"
  ],
- "notes": "Draft Form CO excerpt (Sections 1–3) for an EU merger notification. SHOULD redact: the notifying party (Tressane Industries SE, 'Tressane', all-caps 'TRESSANE' in the header), the target (Tessaro Fluid Control B.V., 'Tessaro', 'TESSARO'), the seller-side entities (Marlowe & Pitt Capital Partners LLP, its defined acronym 'MPCP', the fund vehicle Marlowe & Pitt Buyout Fund IV SCSp), outside counsel firm (Wauters Dossche SRL) and its Brussels address, every named individual with or without honorific (Annika Strömberg / 'Dr. Strömberg', Céline Wauters, Ingrid Bakhuizen / 'Ms. Bakhuizen', Julian Ashcombe / bare 'Ashcombe'), all emails and phones, the three party registered-office addresses (street + postcode/city), the bare corporate domain tressane.example.com, the financing bank named only by acronym (BIL), the escrow IBAN, the deal codename 'Project Sable' and its bare reuse 'Sable', counsel's internal matter reference VD/2026/0928-SAB and the provisional Commission case number M.12384 (party-specific at pre-notification stage). SHOULD NOT redact: European Commission / the Commission, DG Competition, Regulation (EC) No 139/2004 and the defined 'Merger Regulation', Commission Implementing Regulation (EU) 2023/914, the Consolidated Jurisdictional Notice, Article 101 TFEU and other Article references, Bundeskartellamt, CMA, ACM, the Turkish Competition Authority, the EEA/Union/Member State framing, countries (Germany, Netherlands, Belgium, United Kingdom, England and Wales), corporate-form labels (Societas Europaea, besloten vennootschap), and role words ('the Notifying Party', 'the Target', 'the Parties', 'the Seller', 'General Counsel', 'Partner', 'escrow agent'). Honorifics (Dr., Ms., Mr., Maître) are excluded from the PERSON spans, consistent with the rest of the corpus."
+ "notes": "Draft Form CO excerpt (Sections 1–3) for an EU merger notification. SHOULD redact: the notifying party (Tressane Industries SE, 'Tressane', all-caps 'TRESSANE' in the header), the target (Tessaro Fluid Control B.V., 'Tessaro', 'TESSARO'), the seller-side entities (Marlowe & Pitt Capital Partners LLP, its defined acronym 'MPCP', the fund vehicle Marlowe & Pitt Buyout Fund IV SCSp), outside counsel firm (Wauters Dossche SRL) and its Brussels address, every named individual with or without honorific (Annika Strömberg / 'Dr. Strömberg', Céline Wauters, Ingrid Bakhuizen / 'Ms. Bakhuizen', Julian Ashcombe / bare 'Ashcombe'), all emails and phones, the three party registered-office addresses (street + postcode/city), the bare corporate domain tressane.example.com, the financing bank named only by acronym (BIL), the escrow IBAN, the deal codename 'Project Sable' and its bare reuse 'Sable', counsel's internal matter reference VD/2026/0928-SAB and the provisional Commission case number M.12384 (party-specific at pre-notification stage). SHOULD NOT redact: European Commission / the Commission, DG Competition, Regulation (EC) No 139/2004 and the defined 'Merger Regulation', Commission Implementing Regulation (EU) 2023/914, the Consolidated Jurisdictional Notice, Article 101 TFEU and other Article references, Bundeskartellamt, CMA, ACM, the Turkish Competition Authority, the EEA/Union/Member State framing, countries (Germany, Netherlands, Belgium, United Kingdom, England and Wales), corporate-form labels (Societas Europaea, besloten vennootschap), and role words ('the Notifying Party', 'the Target', 'the Parties', 'the Seller', 'General Counsel', 'Partner', 'escrow agent'). Honorifics (Dr., Ms., Mr., Maître) are excluded from the PERSON spans, consistent with the rest of the corpus.",
+ "codenames": [
+  "Project Sable",
+  "Sable"
+ ]
 }

@@ -71,12 +71,6 @@
    "text": "18 rue de la République, 69002 Lyon"
   },
   {
-   "start": 664,
-   "end": 668,
-   "type": "LOC",
-   "text": "Lyon"
-  },
-  {
    "start": 690,
    "end": 705,
    "type": "PERSON",
@@ -101,22 +95,10 @@
    "text": "ACS"
   },
   {
-   "start": 964,
-   "end": 976,
-   "type": "ORG",
-   "text": "Projet Héron"
-  },
-  {
    "start": 1203,
    "end": 1229,
    "type": "URL",
    "text": "dataroom.heron.example.com"
-  },
-  {
-   "start": 1794,
-   "end": 1799,
-   "type": "ORG",
-   "text": "Héron"
   },
   {
    "start": 2208,
@@ -219,18 +201,6 @@
    "end": 4890,
    "type": "ORG",
    "text": "Valdoire"
-  },
-  {
-   "start": 5513,
-   "end": 5518,
-   "type": "ORG",
-   "text": "Héron"
-  },
-  {
-   "start": 5546,
-   "end": 5551,
-   "type": "LOC",
-   "text": "Liège"
   },
   {
    "start": 5612,

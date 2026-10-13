@@ -95,12 +95,6 @@
    "text": "Orvalline Industries B.V."
   },
   {
-   "start": 941,
-   "end": 946,
-   "type": "LOC",
-   "text": "Breda"
-  },
-  {
    "start": 949,
    "end": 958,
    "type": "ORG",
@@ -143,12 +137,6 @@
    "text": "Ziegelhoff Mahlkörper GmbH"
   },
   {
-   "start": 2040,
-   "end": 2044,
-   "type": "LOC",
-   "text": "Selb"
-  },
-  {
    "start": 2047,
    "end": 2057,
    "type": "ORG",
@@ -161,12 +149,6 @@
    "text": "Perlati Microsfere S.r.l."
   },
   {
-   "start": 2088,
-   "end": 2096,
-   "type": "LOC",
-   "text": "Sassuolo"
-  },
-  {
    "start": 2099,
    "end": 2106,
    "type": "ORG",
@@ -177,12 +159,6 @@
    "end": 2141,
    "type": "ORG",
    "text": "Fenwright Milling Media Ltd"
-  },
-  {
-   "start": 2143,
-   "end": 2157,
-   "type": "LOC",
-   "text": "Stoke-on-Trent"
   },
   {
    "start": 2160,
@@ -203,12 +179,6 @@
    "text": "ECMF"
   },
   {
-   "start": 2324,
-   "end": 2334,
-   "type": "LOC",
-   "text": "Maastricht"
-  },
-  {
    "start": 2352,
    "end": 2356,
    "type": "ORG",
@@ -221,22 +191,10 @@
    "text": "Hotel Marienbrunn"
   },
   {
-   "start": 2395,
-   "end": 2404,
-   "type": "LOC",
-   "text": "Nuremberg"
-  },
-  {
    "start": 2466,
    "end": 2482,
    "type": "LOC",
    "text": "Villa Serramonte"
-  },
-  {
-   "start": 2486,
-   "end": 2492,
-   "type": "LOC",
-   "text": "Modena"
   },
   {
    "start": 2520,
@@ -275,12 +233,6 @@
    "text": "Ziegelhoff"
   },
   {
-   "start": 2825,
-   "end": 2834,
-   "type": "LOC",
-   "text": "Nuremberg"
-  },
-  {
    "start": 2849,
    "end": 2864,
    "type": "PERSON",
@@ -309,12 +261,6 @@
    "end": 3061,
    "type": "PERSON",
    "text": "Vezzani"
-  },
-  {
-   "start": 3101,
-   "end": 3107,
-   "type": "LOC",
-   "text": "Modena"
   },
   {
    "start": 3109,

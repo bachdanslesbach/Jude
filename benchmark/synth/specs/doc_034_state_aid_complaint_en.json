@@ -35,14 +35,6 @@
    "type": "ORG"
   },
   {
-   "surface": "Project Tamarack",
-   "type": "ORG"
-  },
-  {
-   "surface": "Tamarack",
-   "type": "ORG"
-  },
-  {
    "surface": "Annelies Verstraeten",
    "type": "PERSON"
   },
@@ -79,23 +71,11 @@
    "type": "LOC"
   },
   {
-   "surface": "Aachen",
-   "type": "LOC"
-  },
-  {
    "surface": "Quai de Coronmeuse 21",
    "type": "LOC"
   },
   {
-   "surface": "Liège",
-   "type": "LOC"
-  },
-  {
    "surface": "Rue de l'Espérance 75",
-   "type": "LOC"
-  },
-  {
-   "surface": "Grâce-Hollogne",
    "type": "LOC"
   },
   {
@@ -159,5 +139,9 @@
   "role-noise",
   "all-caps-header"
  ],
- "notes": "State aid complaint to DG COMP under Art. 24(2) Reg. 2015/1589. SHOULD redact: the beneficiary (full name, all-caps header form, defined acronym 'MCS'), the complainant and its short form, the law firm, both lawyers (full names and later 'Dr. Verstraeten'), the complainant's Head of Legal (full name and later 'Mr. Hilgenfeld'), the beneficiary's CEO (full name and surname-only 'Coppieters'), the complainant's house bank named only by acronym (BCHL — invented private bank), the project codename ('Project Tamarack' and bare 'Tamarack'), the three street addresses and the private parties' cities (Aachen, Liège, Grâce-Hollogne), both example.* emails, both phones, the firm's internal reference, the beneficiary's enterprise number (typed CASE_REF for want of a registry-number type), and the beneficiary's bare domain. SHOULD NOT redact: European Commission, DG Competition, the Treaty articles, Regulation 2015/1589, the General Court, the Walloon Region and Walloon Government, SOGEPA and SPI (real Walloon public bodies granting the aid), the National Bank of Belgium, the Notice on the notion of aid, the two decided public cases (Valmont, Commission v EDF), L'Echo (a newspaper cited as a press source), Brussels (seat of the Commission and of the firm; left unredacted as a capital), countries, EURIBOR, and role words such as 'the Complainant', 'the Beneficiary', 'the Region', 'the Firm'."
+ "notes": "State aid complaint to DG COMP under Art. 24(2) Reg. 2015/1589. SHOULD redact: the beneficiary (full name, all-caps header form, defined acronym 'MCS'), the complainant and its short form, the law firm, both lawyers (full names and later 'Dr. Verstraeten'), the complainant's Head of Legal (full name and later 'Mr. Hilgenfeld'), the beneficiary's CEO (full name and surname-only 'Coppieters'), the complainant's house bank named only by acronym (BCHL — invented private bank), the project codename ('Project Tamarack' and bare 'Tamarack'), the three street addresses and the private parties' cities (Aachen, Liège, Grâce-Hollogne), both example.* emails, both phones, the firm's internal reference, the beneficiary's enterprise number (typed CASE_REF for want of a registry-number type), and the beneficiary's bare domain. SHOULD NOT redact: European Commission, DG Competition, the Treaty articles, Regulation 2015/1589, the General Court, the Walloon Region and Walloon Government, SOGEPA and SPI (real Walloon public bodies granting the aid), the National Bank of Belgium, the Notice on the notion of aid, the two decided public cases (Valmont, Commission v EDF), L'Echo (a newspaper cited as a press source), Brussels (seat of the Commission and of the firm; left unredacted as a capital), countries, EURIBOR, and role words such as 'the Complainant', 'the Beneficiary', 'the Region', 'the Firm'.",
+ "codenames": [
+  "Project Tamarack",
+  "Tamarack"
+ ]
 }

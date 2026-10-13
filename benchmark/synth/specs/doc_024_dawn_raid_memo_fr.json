@@ -43,14 +43,6 @@
    "type": "ORG"
   },
   {
-   "surface": "Projet Sarcelle",
-   "type": "ORG"
-  },
-  {
-   "surface": "Sarcelle",
-   "type": "ORG"
-  },
-  {
    "surface": "Julie Ghyselinck",
    "type": "PERSON"
   },
@@ -112,10 +104,6 @@
   },
   {
    "surface": "rue de l'Industrie 14",
-   "type": "LOC"
-  },
-  {
-   "surface": "Nivelles",
    "type": "LOC"
   },
   {
@@ -190,5 +178,9 @@
   "role-noise",
   "all-caps-header"
  ],
- "notes": "Same-evening internal memo from a senior associate to the partners after a Belgian Competition Authority dawn raid at a client's plant. SHOULD redact: the client and every short form (Ambreval Emballages SA, all-caps header, bare 'Ambreval'), the competitor named in the mandate (Polyvex Belgium NV / 'Polyvex'), the trade association and its defined acronym (FBTF), the law firm (Ravensteyn Delcourt), the bank named only by acronym (KBC), the matter codename (Projet Sarcelle / 'Sarcelle'), every named individual in full, honorific-only ('Mme Deprez', 'M. Vandenbroucke', 'Me Delcourt') and surname-only ('Herbiet', 'Muyshondt', 'Vandenbroucke') forms, the inspected site (street + number, Nivelles), the copied mailboxes and the associate's e-mail, the GC's mobile and the firm's line, the IBAN, the internal docket (RD-2026-0871/CONC) and the authority's case number (MEDE-I-26/0031), the file-server hostname and the bare mail domain. SHOULD NOT redact: Autorité belge de la concurrence / ABC, Auditorat, Collège de la concurrence, Cour des marchés, cour d'appel de Bruxelles, Commission européenne, police fédérale, Institut des juristes d'entreprise, Code de droit économique, article 101 TFUE, loi du 1er mars 2000, the countries (France, Pays-Bas), and role words ('la Société', 'le Cabinet', 'la soussignée', 'les inspecteurs', 'l'auditeur général', 'les associés')."
+ "notes": "Same-evening internal memo from a senior associate to the partners after a Belgian Competition Authority dawn raid at a client's plant. SHOULD redact: the client and every short form (Ambreval Emballages SA, all-caps header, bare 'Ambreval'), the competitor named in the mandate (Polyvex Belgium NV / 'Polyvex'), the trade association and its defined acronym (FBTF), the law firm (Ravensteyn Delcourt), the bank named only by acronym (KBC), the matter codename (Projet Sarcelle / 'Sarcelle'), every named individual in full, honorific-only ('Mme Deprez', 'M. Vandenbroucke', 'Me Delcourt') and surname-only ('Herbiet', 'Muyshondt', 'Vandenbroucke') forms, the inspected site (street + number, Nivelles), the copied mailboxes and the associate's e-mail, the GC's mobile and the firm's line, the IBAN, the internal docket (RD-2026-0871/CONC) and the authority's case number (MEDE-I-26/0031), the file-server hostname and the bare mail domain. SHOULD NOT redact: Autorité belge de la concurrence / ABC, Auditorat, Collège de la concurrence, Cour des marchés, cour d'appel de Bruxelles, Commission européenne, police fédérale, Institut des juristes d'entreprise, Code de droit économique, article 101 TFUE, loi du 1er mars 2000, the countries (France, Pays-Bas), and role words ('la Société', 'le Cabinet', 'la soussignée', 'les inspecteurs', 'l'auditeur général', 'les associés').",
+ "codenames": [
+  "Projet Sarcelle",
+  "Sarcelle"
+ ]
 }

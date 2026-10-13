@@ -6,6 +6,22 @@ does not settle. The same six questions came back from most of them.
 They need a lawyer's ruling — the corpus, the whitelist and the
 detector will follow it. Current defaults are marked ⟶.
 
+## Rulings (Etienne Perrin, 2026-10-13) — applied to the corpus
+
+| # | Question | Ruling | Applied |
+|---|---|---|---|
+| 1 | Deal codenames | **Not redacted** — but a per-matter option to redact them is wanted as a feature | Removed from gold in all 25 held-out specs (kept in a `codenames` field for that option) and from doc_007 (`Helios`) |
+| 2 | Published vs live case references | **Published citations are public**; live / internal references are redacted | Already the batch convention; every CASE_REF in the original 19 documents is a live or internal reference — no change |
+| 3 | Company registration numbers | **Redact** (not useful for the legal analysis) | As is — typed IBAN (identifier bucket) |
+| 4 | Officials acting in a public capacity | **Redact** | As is — typed PERSON |
+| 5 | Honorifics | **Keep** the convention (excluded before a full name, included with a bare surname) | As is |
+| 6 | Cities | **Keep city names** — a bare city is never redacted; a party's street-address line still is | 47 bare-city LOC spans removed from the held-out specs, 37 from the original documents; address lines untouched |
+| 7 | Invoice numbers; WhatsApp group names | **Redact invoice numbers**; group names are not identifiers | Four `F26-…` invoice numbers added to doc_043 (CASE_REF); `Belting Amigos BNL` removed from doc_040 |
+
+The detector follows rulings 1 and 6 in the next version (bare city
+names and codenames are no longer predicted); the whitelist of
+published-citation shapes follows ruling 2.
+
 ## 1. Deal codenames — identifier or not?
 
 `Project Ganymede`, `Projet Héron`, `Project Corvus`, `Project Lantern`,

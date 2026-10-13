@@ -53,34 +53,16 @@
    "text": "Zilverberg Surface Technologies B.V."
   },
   {
-   "start": 708,
-   "end": 716,
-   "type": "LOC",
-   "text": "Enschede"
-  },
-  {
    "start": 719,
    "end": 729,
    "type": "ORG",
    "text": "Zilverberg"
   },
   {
-   "start": 1203,
-   "end": 1218,
-   "type": "ORG",
-   "text": "Project Lantern"
-  },
-  {
    "start": 2295,
    "end": 2329,
    "type": "ORG",
    "text": "Steinhauer Oberflächentechnik GmbH"
-  },
-  {
-   "start": 2331,
-   "end": 2338,
-   "type": "LOC",
-   "text": "Cologne"
   },
   {
    "start": 2341,
@@ -95,12 +77,6 @@
    "text": "Arundel Protective Systems Ltd"
   },
   {
-   "start": 2391,
-   "end": 2400,
-   "type": "LOC",
-   "text": "Sheffield"
-  },
-  {
    "start": 2403,
    "end": 2410,
    "type": "ORG",
@@ -111,12 +87,6 @@
    "end": 2449,
    "type": "ORG",
    "text": "Rivestimenti Tirreno S.p.A."
-  },
-  {
-   "start": 2451,
-   "end": 2458,
-   "type": "LOC",
-   "text": "Livorno"
   },
   {
    "start": 2461,
@@ -209,12 +179,6 @@
    "text": "FCFE"
   },
   {
-   "start": 3396,
-   "end": 3405,
-   "type": "LOC",
-   "text": "Frankfurt"
-  },
-  {
    "start": 3471,
    "end": 3475,
    "type": "ORG",
@@ -227,34 +191,16 @@
    "text": "Hotel Leyendecker"
   },
   {
-   "start": 3570,
-   "end": 3577,
-   "type": "LOC",
-   "text": "Cologne"
-  },
-  {
    "start": 3637,
    "end": 3657,
    "type": "LOC",
    "text": "Grand Hotel Marchesi"
   },
   {
-   "start": 3661,
-   "end": 3668,
-   "type": "LOC",
-   "text": "Bologna"
-  },
-  {
    "start": 3781,
    "end": 3793,
    "type": "PERSON",
    "text": "Mr. Barsanti"
-  },
-  {
-   "start": 3823,
-   "end": 3830,
-   "type": "ORG",
-   "text": "Lantern"
   },
   {
    "start": 3948,

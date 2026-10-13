@@ -75,18 +75,6 @@
    "type": "ORG"
   },
   {
-   "surface": "PROJECT OSPREY",
-   "type": "ORG"
-  },
-  {
-   "surface": "Project Osprey",
-   "type": "ORG"
-  },
-  {
-   "surface": "Osprey",
-   "type": "ORG"
-  },
-  {
    "surface": "VL/2026/OSP/0412",
    "type": "CASE_REF"
   },
@@ -147,15 +135,7 @@
    "type": "LOC"
   },
   {
-   "surface": "Antwerp",
-   "type": "LOC"
-  },
-  {
    "surface": "Kanaaldijk 9",
-   "type": "LOC"
-  },
-  {
-   "surface": "Aalst",
    "type": "LOC"
   },
   {
@@ -163,15 +143,7 @@
    "type": "LOC"
   },
   {
-   "surface": "Lille",
-   "type": "LOC"
-  },
-  {
    "surface": "Hafenstraße 27",
-   "type": "LOC"
-  },
-  {
-   "surface": "Duisburg",
    "type": "LOC"
   },
   {
@@ -216,5 +188,10 @@
   "role-noise",
   "all-caps-header"
  ],
- "notes": "Red-flag legal due diligence report by a Belgian law firm for a Luxembourg bidder on a Belgian packaging group (parent NV + French SAS + German GmbH) under a deal codename. SHOULD redact: the target parent in all three forms (all-caps title line, full name, defined acronym 'MPN') and the bare word mark 'BRAKELMANS', both subsidiaries, the bidder, the issuing law firm + its Antwerp street and city + partner signatory + example.be email + phone, the internal matter reference, the codename in all forms ('PROJECT OSPREY', 'Project Osprey', bare 'Osprey' in 'the Osprey SPA'), the three shareholders (two holding BVs and the Luxembourg fund) and the individuals behind them (full names, bare 'Casteleyn', 'Mr. Casteleyn'), the registered-office streets and cities of the three group companies (Aalst also as plant/site/server location), the supply counterparty + defined short name 'Valdoria', the landlord, the logistics counterparty, the litigation opponents (Hexaform Moulds BV, the former CEO Dries Vanhaverbeke) and both court dockets, the three key managers (full names, 'Mr. Coene', 'Ms. Rombouts', 'Dr. Wittek', bare 'Rombouts'), the lender/escrow bank named only by acronym (KBC) and the escrow IBAN, the bare domain. SHOULD NOT redact: role words ('the Bidder', 'the Group', 'the claimant', 'the landlord', 'the former chief executive', 'management', 'the escrow agent', 'the German subsidiary'), the VDR index '3.4.1' (a folder number, not an identifier), risk ratings, dates, amounts, clause numbers, legal-form descriptors ('naamloze vennootschap', 'Geschäftsführerin'), postcodes standing alone, and the public bodies, courts and statutes: Belgian Companies and Associations Code, Brussels Enterprise Court, Court of Appeal of Brussels, Belgian Competition Authority, Belgian Code of Economic Law, Article 101 TFEU, EU Merger Regulation, European Commission, GDPR, Benelux Office for Intellectual Property."
+ "notes": "Red-flag legal due diligence report by a Belgian law firm for a Luxembourg bidder on a Belgian packaging group (parent NV + French SAS + German GmbH) under a deal codename. SHOULD redact: the target parent in all three forms (all-caps title line, full name, defined acronym 'MPN') and the bare word mark 'BRAKELMANS', both subsidiaries, the bidder, the issuing law firm + its Antwerp street and city + partner signatory + example.be email + phone, the internal matter reference, the codename in all forms ('PROJECT OSPREY', 'Project Osprey', bare 'Osprey' in 'the Osprey SPA'), the three shareholders (two holding BVs and the Luxembourg fund) and the individuals behind them (full names, bare 'Casteleyn', 'Mr. Casteleyn'), the registered-office streets and cities of the three group companies (Aalst also as plant/site/server location), the supply counterparty + defined short name 'Valdoria', the landlord, the logistics counterparty, the litigation opponents (Hexaform Moulds BV, the former CEO Dries Vanhaverbeke) and both court dockets, the three key managers (full names, 'Mr. Coene', 'Ms. Rombouts', 'Dr. Wittek', bare 'Rombouts'), the lender/escrow bank named only by acronym (KBC) and the escrow IBAN, the bare domain. SHOULD NOT redact: role words ('the Bidder', 'the Group', 'the claimant', 'the landlord', 'the former chief executive', 'management', 'the escrow agent', 'the German subsidiary'), the VDR index '3.4.1' (a folder number, not an identifier), risk ratings, dates, amounts, clause numbers, legal-form descriptors ('naamloze vennootschap', 'Geschäftsführerin'), postcodes standing alone, and the public bodies, courts and statutes: Belgian Companies and Associations Code, Brussels Enterprise Court, Court of Appeal of Brussels, Belgian Competition Authority, Belgian Code of Economic Law, Article 101 TFEU, EU Merger Regulation, European Commission, GDPR, Benelux Office for Intellectual Property.",
+ "codenames": [
+  "Osprey",
+  "PROJECT OSPREY",
+  "Project Osprey"
+ ]
 }

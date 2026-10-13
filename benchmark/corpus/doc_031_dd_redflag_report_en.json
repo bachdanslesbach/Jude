@@ -11,12 +11,6 @@
    "text": "BRAKELMANS PACKAGING NV"
   },
   {
-   "start": 64,
-   "end": 78,
-   "type": "ORG",
-   "text": "PROJECT OSPREY"
-  },
-  {
    "start": 94,
    "end": 127,
    "type": "ORG",
@@ -33,12 +27,6 @@
    "end": 195,
    "type": "LOC",
    "text": "Meir 88"
-  },
-  {
-   "start": 202,
-   "end": 209,
-   "type": "LOC",
-   "text": "Antwerp"
   },
   {
    "start": 219,
@@ -59,12 +47,6 @@
    "text": "MPN"
   },
   {
-   "start": 512,
-   "end": 526,
-   "type": "ORG",
-   "text": "Project Osprey"
-  },
-  {
    "start": 592,
    "end": 595,
    "type": "ORG",
@@ -81,12 +63,6 @@
    "end": 1027,
    "type": "LOC",
    "text": "Kanaaldijk 9"
-  },
-  {
-   "start": 1034,
-   "end": 1039,
-   "type": "LOC",
-   "text": "Aalst"
   },
   {
    "start": 1098,
@@ -137,12 +113,6 @@
    "text": "12 rue des Tanneurs"
   },
   {
-   "start": 1602,
-   "end": 1607,
-   "type": "LOC",
-   "text": "Lille"
-  },
-  {
    "start": 1613,
    "end": 1635,
    "type": "ORG",
@@ -153,12 +123,6 @@
    "end": 1669,
    "type": "LOC",
    "text": "Hafenstraße 27"
-  },
-  {
-   "start": 1677,
-   "end": 1685,
-   "type": "LOC",
-   "text": "Duisburg"
   },
   {
    "start": 1897,
@@ -177,18 +141,6 @@
    "end": 2026,
    "type": "ORG",
    "text": "Valdoria"
-  },
-  {
-   "start": 2192,
-   "end": 2198,
-   "type": "ORG",
-   "text": "Osprey"
-  },
-  {
-   "start": 2219,
-   "end": 2224,
-   "type": "LOC",
-   "text": "Aalst"
   },
   {
    "start": 2246,
@@ -285,12 +237,6 @@
    "end": 4312,
    "type": "PERSON",
    "text": "Rombouts"
-  },
-  {
-   "start": 4447,
-   "end": 4452,
-   "type": "LOC",
-   "text": "Aalst"
   },
   {
    "start": 4605,

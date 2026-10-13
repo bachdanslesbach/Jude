@@ -17,28 +17,10 @@
    "text": "Uitbreidingstraat 84"
   },
   {
-   "start": 72,
-   "end": 79,
-   "type": "LOC",
-   "text": "Antwerp"
-  },
-  {
-   "start": 86,
-   "end": 93,
-   "type": "LOC",
-   "text": "Antwerp"
-  },
-  {
    "start": 216,
    "end": 232,
    "type": "CASE_REF",
    "text": "VPN-BRD-2026-014"
-  },
-  {
-   "start": 242,
-   "end": 258,
-   "type": "ORG",
-   "text": "Project Ganymede"
   },
   {
    "start": 333,
@@ -149,12 +131,6 @@
    "text": "Grafenberger Allee 112"
   },
   {
-   "start": 1429,
-   "end": 1439,
-   "type": "LOC",
-   "text": "Düsseldorf"
-  },
-  {
    "start": 1467,
    "end": 1500,
    "type": "ORG",
@@ -171,18 +147,6 @@
    "end": 1810,
    "type": "ORG",
    "text": "Feldmann"
-  },
-  {
-   "start": 1852,
-   "end": 1862,
-   "type": "LOC",
-   "text": "Düsseldorf"
-  },
-  {
-   "start": 1867,
-   "end": 1874,
-   "type": "LOC",
-   "text": "Wrocław"
   },
   {
    "start": 1926,
@@ -219,12 +183,6 @@
    "end": 2932,
    "type": "ORG",
    "text": "Feldmann"
-  },
-  {
-   "start": 2950,
-   "end": 2957,
-   "type": "LOC",
-   "text": "Wrocław"
   },
   {
    "start": 2999,
@@ -311,12 +269,6 @@
    "text": "Ms. Van Impe"
   },
   {
-   "start": 4859,
-   "end": 4867,
-   "type": "ORG",
-   "text": "Ganymede"
-  },
-  {
    "start": 5110,
    "end": 5113,
    "type": "ORG",
@@ -327,12 +279,6 @@
    "end": 5128,
    "type": "LOC",
    "text": "Regentlaan 58"
-  },
-  {
-   "start": 5135,
-   "end": 5143,
-   "type": "LOC",
-   "text": "Brussels"
   },
   {
    "start": 5145,

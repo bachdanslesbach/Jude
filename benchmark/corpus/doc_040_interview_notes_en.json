@@ -155,12 +155,6 @@
    "text": "Hotel De Blauwe Reiger"
   },
   {
-   "start": 1551,
-   "end": 1556,
-   "type": "LOC",
-   "text": "Breda"
-  },
-  {
    "start": 1559,
    "end": 1562,
    "type": "ORG",
@@ -209,12 +203,6 @@
    "text": "Pentaflex"
   },
   {
-   "start": 1950,
-   "end": 1955,
-   "type": "LOC",
-   "text": "Breda"
-  },
-  {
    "start": 2026,
    "end": 2037,
    "type": "ORG",
@@ -231,12 +219,6 @@
    "end": 2098,
    "type": "LOC",
    "text": "Kastanjehof conference centre"
-  },
-  {
-   "start": 2100,
-   "end": 2106,
-   "type": "LOC",
-   "text": "Leuven"
   },
   {
    "start": 2109,
@@ -263,22 +245,10 @@
    "text": "Hotel Löwenkranz"
   },
   {
-   "start": 2399,
-   "end": 2406,
-   "type": "LOC",
-   "text": "Cologne"
-  },
-  {
    "start": 2423,
    "end": 2426,
    "type": "ORG",
    "text": "BBP"
-  },
-  {
-   "start": 2449,
-   "end": 2456,
-   "type": "LOC",
-   "text": "Cologne"
   },
   {
    "start": 2479,
@@ -339,12 +309,6 @@
    "end": 3062,
    "type": "CASE_REF",
    "text": "DOC-7519"
-  },
-  {
-   "start": 3104,
-   "end": 3122,
-   "type": "ORG",
-   "text": "Belting Amigos BNL"
   },
   {
    "start": 3136,
@@ -423,12 +387,6 @@
    "end": 4426,
    "type": "ORG",
    "text": "BBP"
-  },
-  {
-   "start": 4882,
-   "end": 4887,
-   "type": "LOC",
-   "text": "Breda"
   },
   {
    "start": 5182,

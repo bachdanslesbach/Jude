@@ -11,12 +11,6 @@
    "text": "NOVARIS LOGISTICS SA"
   },
   {
-   "start": 108,
-   "end": 120,
-   "type": "ORG",
-   "text": "Projet Argus"
-  },
-  {
    "start": 158,
    "end": 192,
    "type": "ORG",
@@ -27,18 +21,6 @@
    "end": 210,
    "type": "LOC",
    "text": "Avenue Louise 480"
-  },
-  {
-   "start": 217,
-   "end": 226,
-   "type": "LOC",
-   "text": "Bruxelles"
-  },
-  {
-   "start": 228,
-   "end": 237,
-   "type": "LOC",
-   "text": "Bruxelles"
   },
   {
    "start": 284,
@@ -95,22 +77,10 @@
    "text": "VFA/2026/0562"
   },
   {
-   "start": 573,
-   "end": 585,
-   "type": "ORG",
-   "text": "Projet Argus"
-  },
-  {
    "start": 605,
    "end": 638,
    "type": "ORG",
    "text": "Sentinel Workforce Analytics GmbH"
-  },
-  {
-   "start": 731,
-   "end": 741,
-   "type": "LOC",
-   "text": "Willebroek"
   },
   {
    "start": 794,
@@ -137,22 +107,10 @@
    "text": "sentinelwatch.example.com"
   },
   {
-   "start": 1408,
-   "end": 1418,
-   "type": "LOC",
-   "text": "Willebroek"
-  },
-  {
    "start": 1420,
    "end": 1434,
    "type": "LOC",
    "text": "Ambachtsweg 27"
-  },
-  {
-   "start": 1441,
-   "end": 1451,
-   "type": "LOC",
-   "text": "Willebroek"
   },
   {
    "start": 1614,
@@ -161,34 +119,16 @@
    "text": "SWA"
   },
   {
-   "start": 1639,
-   "end": 1645,
-   "type": "LOC",
-   "text": "Munich"
-  },
-  {
    "start": 1758,
    "end": 1780,
    "type": "ORG",
    "text": "Cloudhaven Hosting Ltd"
   },
   {
-   "start": 1782,
-   "end": 1788,
-   "type": "LOC",
-   "text": "Dublin"
-  },
-  {
    "start": 1812,
    "end": 1843,
    "type": "ORG",
    "text": "Pinecrest Support Services Inc."
-  },
-  {
-   "start": 1845,
-   "end": 1851,
-   "type": "LOC",
-   "text": "Denver"
   },
   {
    "start": 1992,
@@ -209,12 +149,6 @@
    "text": "M. Benali"
   },
   {
-   "start": 3323,
-   "end": 3329,
-   "type": "LOC",
-   "text": "Denver"
-  },
-  {
    "start": 3381,
    "end": 3412,
    "type": "ORG",
@@ -227,22 +161,10 @@
    "text": "Novaris"
   },
   {
-   "start": 4175,
-   "end": 4180,
-   "type": "ORG",
-   "text": "Argus"
-  },
-  {
    "start": 4312,
    "end": 4315,
    "type": "ORG",
    "text": "SWA"
-  },
-  {
-   "start": 4364,
-   "end": 4370,
-   "type": "LOC",
-   "text": "Denver"
   },
   {
    "start": 4575,
@@ -281,12 +203,6 @@
    "text": "M. Benali"
   },
   {
-   "start": 5499,
-   "end": 5509,
-   "type": "LOC",
-   "text": "Willebroek"
-  },
-  {
    "start": 5599,
    "end": 5616,
    "type": "PERSON",
@@ -321,12 +237,6 @@
    "end": 5762,
    "type": "LOC",
    "text": "Avenue Louise 480"
-  },
-  {
-   "start": 5769,
-   "end": 5778,
-   "type": "LOC",
-   "text": "Bruxelles"
   }
  ],
  "public_spans": [

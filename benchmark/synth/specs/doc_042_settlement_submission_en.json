@@ -63,20 +63,12 @@
    "type": "ORG"
   },
   {
-   "surface": "Breda",
-   "type": "LOC"
-  },
-  {
    "surface": "Orvalline",
    "type": "ORG"
   },
   {
    "surface": "Ziegelhoff Mahlkörper GmbH",
    "type": "ORG"
-  },
-  {
-   "surface": "Selb",
-   "type": "LOC"
   },
   {
    "surface": "Ziegelhoff",
@@ -87,20 +79,12 @@
    "type": "ORG"
   },
   {
-   "surface": "Sassuolo",
-   "type": "LOC"
-  },
-  {
    "surface": "Perlati",
    "type": "ORG"
   },
   {
    "surface": "Fenwright Milling Media Ltd",
    "type": "ORG"
-  },
-  {
-   "surface": "Stoke-on-Trent",
-   "type": "LOC"
   },
   {
    "surface": "Fenwright",
@@ -115,23 +99,11 @@
    "type": "ORG"
   },
   {
-   "surface": "Maastricht",
-   "type": "LOC"
-  },
-  {
    "surface": "Hotel Marienbrunn",
    "type": "LOC"
   },
   {
-   "surface": "Nuremberg",
-   "type": "LOC"
-  },
-  {
    "surface": "Villa Serramonte",
-   "type": "LOC"
-  },
-  {
-   "surface": "Modena",
    "type": "LOC"
   },
   {
@@ -247,5 +219,6 @@
   "all-caps-header",
   "bare-domain"
  ],
- "notes": "Formal settlement submission under Article 10a of Regulation (EC) No 773/2004 by Brussels outside counsel on behalf of a Belgian cartel participant and its Dutch parent, lodged with DG Competition in an invented grinding-media cartel. SHOULD redact: the Firm (all-caps letterhead form and 'Ravaillé Deblonde SRL', its street address line, bare letterhead domain, switchboard and mobile numbers, both example.be e-mails, the internal reference CRA/26/3428-MCM); the Commission case number AT.41786 (live matter, both occurrences); the Applicant under every form (all-caps Re: line, 'Merckaert Ceramic Media NV', defined acronym 'MCM' including possessives and the cc line), its registered-office address line and enterprise number 0682.315.402 (numeric identifier, IBAN bucket in v0); the parent company (all-caps and sentence-case legal names, defined short form 'Orvalline', its registered-office city Breda); the three other participants with legal-form suffixes, their defined short forms and seat cities (Selb, Sassuolo, Stoke-on-Trent); the trade association and its defined acronym ECMF and its seat city Maastricht; the two meeting venues and their cities (Nuremberg, Modena — every occurrence, including inside the quoted message); the individuals with and without honorifics (Geert Blancquaert / Mr. Blancquaert / bare 'Blancquaert' in the footnote quote, Lieselot Deraedt / Ms. Deraedt, Ulrike Maschke / Dr. Maschke, Corrado Vezzani / Mr. Vezzani / bare 'Vezzani' in the quote, Harriet Pollington, Bavo Casier / Mr. Casier, Maud Lejoncourt / Ms. Lejoncourt); the signing partner and the associate. SHOULD NOT redact: European Commission, Directorate-General for Competition / DG Competition and its public address Place Madou 1, 1210 Brussels, Regulation (EC) No 773/2004 and Article 10a, the 2008 Settlement Notice (full title, short form, OJ citation and point numbers), Regulation (EC) No 1/2003 and Articles 7 and 23, Article 101 TFEU, Article 53 of the EEA Agreement, the 2006 Fining Guidelines and Leniency Notice (full and short titles), the Hearing Officer, the General Court, Article 263 TFEU, Directive 2014/104/EU, 'RLE Ghent, division Kortrijk' (public register, not a party address), bare 'Brussels' in the dateline, countries and the EEA, dates, amounts (EUR 23,650,000), percentages and paragraph numbers, and role words such as 'the Firm', 'the Parties', 'the undersigned', 'the case team', 'Counsel for the Parties', 'Sales Director', 'Managing Director', 'General Counsel'. The product description (yttria-stabilised zirconia grinding beads) and the defined terms 'the Products', 'the Infringement' and 'the Maximum Fine' are market or drafting descriptors, not identifiers; the case title 'Ceramic Grinding Media' is not annotated (the AT. number carries the identification)."
+ "notes": "Formal settlement submission under Article 10a of Regulation (EC) No 773/2004 by Brussels outside counsel on behalf of a Belgian cartel participant and its Dutch parent, lodged with DG Competition in an invented grinding-media cartel. SHOULD redact: the Firm (all-caps letterhead form and 'Ravaillé Deblonde SRL', its street address line, bare letterhead domain, switchboard and mobile numbers, both example.be e-mails, the internal reference CRA/26/3428-MCM); the Commission case number AT.41786 (live matter, both occurrences); the Applicant under every form (all-caps Re: line, 'Merckaert Ceramic Media NV', defined acronym 'MCM' including possessives and the cc line), its registered-office address line and enterprise number 0682.315.402 (numeric identifier, IBAN bucket in v0); the parent company (all-caps and sentence-case legal names, defined short form 'Orvalline', its registered-office city Breda); the three other participants with legal-form suffixes, their defined short forms and seat cities (Selb, Sassuolo, Stoke-on-Trent); the trade association and its defined acronym ECMF and its seat city Maastricht; the two meeting venues and their cities (Nuremberg, Modena — every occurrence, including inside the quoted message); the individuals with and without honorifics (Geert Blancquaert / Mr. Blancquaert / bare 'Blancquaert' in the footnote quote, Lieselot Deraedt / Ms. Deraedt, Ulrike Maschke / Dr. Maschke, Corrado Vezzani / Mr. Vezzani / bare 'Vezzani' in the quote, Harriet Pollington, Bavo Casier / Mr. Casier, Maud Lejoncourt / Ms. Lejoncourt); the signing partner and the associate. SHOULD NOT redact: European Commission, Directorate-General for Competition / DG Competition and its public address Place Madou 1, 1210 Brussels, Regulation (EC) No 773/2004 and Article 10a, the 2008 Settlement Notice (full title, short form, OJ citation and point numbers), Regulation (EC) No 1/2003 and Articles 7 and 23, Article 101 TFEU, Article 53 of the EEA Agreement, the 2006 Fining Guidelines and Leniency Notice (full and short titles), the Hearing Officer, the General Court, Article 263 TFEU, Directive 2014/104/EU, 'RLE Ghent, division Kortrijk' (public register, not a party address), bare 'Brussels' in the dateline, countries and the EEA, dates, amounts (EUR 23,650,000), percentages and paragraph numbers, and role words such as 'the Firm', 'the Parties', 'the undersigned', 'the case team', 'Counsel for the Parties', 'Sales Director', 'Managing Director', 'General Counsel'. The product description (yttria-stabilised zirconia grinding beads) and the defined terms 'the Products', 'the Infringement' and 'the Maximum Fine' are market or drafting descriptors, not identifiers; the case title 'Ceramic Grinding Media' is not annotated (the AT. number carries the identification).",
+ "codenames": []
 }

@@ -17,12 +17,6 @@
    "text": "RD-2026-0871/CONC"
   },
   {
-   "start": 164,
-   "end": 179,
-   "type": "ORG",
-   "text": "Projet Sarcelle"
-  },
-  {
    "start": 188,
    "end": 204,
    "type": "PERSON",
@@ -59,12 +53,6 @@
    "text": "rue de l'Industrie 14"
   },
   {
-   "start": 564,
-   "end": 572,
-   "type": "LOC",
-   "text": "Nivelles"
-  },
-  {
    "start": 976,
    "end": 990,
    "type": "CASE_REF",
@@ -87,12 +75,6 @@
    "end": 1170,
    "type": "ORG",
    "text": "FBTF"
-  },
-  {
-   "start": 1329,
-   "end": 1337,
-   "type": "LOC",
-   "text": "Nivelles"
   },
   {
    "start": 1549,
@@ -287,22 +269,10 @@
    "text": "Polyvex"
   },
   {
-   "start": 5092,
-   "end": 5100,
-   "type": "ORG",
-   "text": "Sarcelle"
-  },
-  {
    "start": 5132,
    "end": 5145,
    "type": "PERSON",
    "text": "Me Ravensteyn"
-  },
-  {
-   "start": 5168,
-   "end": 5176,
-   "type": "LOC",
-   "text": "Nivelles"
   },
   {
    "start": 5244,

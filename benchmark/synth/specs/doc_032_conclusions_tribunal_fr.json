@@ -91,15 +91,7 @@
    "type": "LOC"
   },
   {
-   "surface": "Uccle",
-   "type": "LOC"
-  },
-  {
    "surface": "Kaiserswerther Straße 87",
-   "type": "LOC"
-  },
-  {
-   "surface": "Krefeld",
    "type": "LOC"
   },
   {
@@ -107,15 +99,7 @@
    "type": "LOC"
   },
   {
-   "surface": "Woluwe-Saint-Pierre",
-   "type": "LOC"
-  },
-  {
    "surface": "Place du Champ de Mars 5",
-   "type": "LOC"
-  },
-  {
-   "surface": "Ixelles",
    "type": "LOC"
   },
   {
@@ -174,5 +158,6 @@
   "adjacent-public",
   "role-noise"
  ],
- "notes": "Conclusions principales devant le tribunal de l'entreprise (rupture abusive d'un contrat de distribution exclusive, distributeur belge contre fournisseur allemand). SHOULD redact: les deux parties sous toutes leurs formes (en-tête en capitales, dénomination complète avec forme juridique, forme courte définie « ci-après »), le client tiers Laiteries Wallonnes Associées SA et son sigle LWA, les cabinets d'avocats (Vandersmissen Marchal, Lemaire & Bosquet) et les conseils sous forme complète et « Maître + nom », les dirigeants et témoins (Ingrid Wolters / Madame Wolters, Frédéric Baltus, Monsieur Fontaine), les adresses de siège et de cabinet (rue + numéro et commune), le numéro BCE 0712.456.387 et le numéro HRB 71244 (numéros d'immatriculation, rangés dans le bucket IBAN comme la TVA/SIREN en v0), l'IBAN et la banque KBC (seule mention, par sigle), le numéro de rôle A/26/02371 et la référence interne VD/2024/0187, le domaine nu brandauer-pumpen.example.de. SHOULD NOT redact: tribunal de l'entreprise francophone de Bruxelles (y compris l'en-tête en capitales), Banque-Carrefour des Entreprises, Code de droit économique, ancien Code civil, article 101 TFUE, Cour de cassation, Cour de justice de l'Union européenne, Commission européenne, Autorité belge de la concurrence ; pays et territoires (Belgique, Pays-Bas, Luxembourg, Allemagne, Benelux, Europe occidentale) ; « Bruxelles » seul (siège du tribunal, barreau, tribunaux de Bruxelles, lieu de signature — non annoté ; les rues et communes suffisent à localiser les parties) ; codes postaux ; rôles (la demanderesse, la défenderesse, son nouveau distributeur, distributeur officiel, ses conseils) ; montants, dates, articles de loi et numéros de pièces."
+ "notes": "Conclusions principales devant le tribunal de l'entreprise (rupture abusive d'un contrat de distribution exclusive, distributeur belge contre fournisseur allemand). SHOULD redact: les deux parties sous toutes leurs formes (en-tête en capitales, dénomination complète avec forme juridique, forme courte définie « ci-après »), le client tiers Laiteries Wallonnes Associées SA et son sigle LWA, les cabinets d'avocats (Vandersmissen Marchal, Lemaire & Bosquet) et les conseils sous forme complète et « Maître + nom », les dirigeants et témoins (Ingrid Wolters / Madame Wolters, Frédéric Baltus, Monsieur Fontaine), les adresses de siège et de cabinet (rue + numéro et commune), le numéro BCE 0712.456.387 et le numéro HRB 71244 (numéros d'immatriculation, rangés dans le bucket IBAN comme la TVA/SIREN en v0), l'IBAN et la banque KBC (seule mention, par sigle), le numéro de rôle A/26/02371 et la référence interne VD/2024/0187, le domaine nu brandauer-pumpen.example.de. SHOULD NOT redact: tribunal de l'entreprise francophone de Bruxelles (y compris l'en-tête en capitales), Banque-Carrefour des Entreprises, Code de droit économique, ancien Code civil, article 101 TFUE, Cour de cassation, Cour de justice de l'Union européenne, Commission européenne, Autorité belge de la concurrence ; pays et territoires (Belgique, Pays-Bas, Luxembourg, Allemagne, Benelux, Europe occidentale) ; « Bruxelles » seul (siège du tribunal, barreau, tribunaux de Bruxelles, lieu de signature — non annoté ; les rues et communes suffisent à localiser les parties) ; codes postaux ; rôles (la demanderesse, la défenderesse, son nouveau distributeur, distributeur officiel, ses conseils) ; montants, dates, articles de loi et numéros de pièces.",
+ "codenames": []
 }

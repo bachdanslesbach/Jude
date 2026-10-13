@@ -103,18 +103,6 @@
    "type": "CASE_REF"
   },
   {
-   "surface": "PROJECT BRAMBLE",
-   "type": "ORG"
-  },
-  {
-   "surface": "Project Bramble",
-   "type": "ORG"
-  },
-  {
-   "surface": "Bramble",
-   "type": "ORG"
-  },
-  {
    "surface": "bramble-vdr.example.net",
    "type": "URL"
   },
@@ -251,5 +239,10 @@
   "role-noise",
   "all-caps-header"
  ],
- "notes": "Advice memo from a Brussels firm to an acquirer's General Counsel on whether a share acquisition is notifiable (EUMR, Belgium, Germany, Austria; Article 4(5) and Article 22 referrals; financing; timetable). SHOULD redact: the firm (Quintard Lemahieu SRL, all-caps letterhead 'QUINTARD LEMAHIEU SRL'), its street address (Rue Guimard 23, 1040 Brussels), switchboard phone and bare domain quintard-lemahieu.example.be; the two signing partners (Bénédicte Quintard, Stijn Lemahieu) with their emails and direct lines; the client GC (Ilse Vantomme / 'Ms. Vantomme'), her email and phone, and the client CFO (Dries Haesevoets / 'Mr. Haesevoets'); the acquirer (Terhaegen Motion Control NV, defined short form 'Terhaegen', all-caps 'TERHAEGEN' in the Re: line) and its address (Vaartkaai 62, 2170 Merksem); the target group (Waelkens Sensortechniek NV, 'Waelkens', 'WAELKENS', the German and Austrian subsidiaries Waelkens Sensorik GmbH / 'Waelkens Germany' and Waelkens Messtechnik GmbH / 'Waelkens Austria') and the target's registered office (Dulle-Grietlaan 233, 9050 Gentbrugge); the seller (Scheldeboord Invest BV); the seller's counsel (Wim Dhaenens / 'Mr. Dhaenens' / bare 'Dhaenens', Meulebroeck Dhaenens Advocaten BV and its defined acronym 'MDA', his email and phone); the deal codename 'Project Bramble' / 'PROJECT BRAMBLE' and its bare reuse 'Bramble'; the bare data-room domain bramble-vdr.example.net; the financing bank named only by acronym (ING); and the firm's internal matter reference QL/2026/6398-BRB. SHOULD NOT redact: the European Commission / the Commission, DG Competition, Regulation (EC) No 139/2004 and the defined 'Merger Regulation', its Articles (1(2), 1(3), 4(5), 5, 7, 22), the Consolidated Jurisdictional Notice, Form RS / Form CO, the Code of Economic Law and the defined 'CEL' with Articles IV.7, IV.10 and IV.63, the Belgian Competition Authority / 'BCA' and its Auditor, the Bundeskartellamt and the GWB (Sections 35(1) and 35(2)), the Austrian Federal Competition Authority / 'BWB', the Federal Cartel Prosecutor and the KartG (Sections 9(1) and 9(2)), the Court of Justice and the Illumina and Grail v Commission judgment with its case numbers, Euronext Brussels, countries and bare cities (Belgium, Germany, Austria, the Netherlands, France, Ghent, Bonn, Vienna), turnover figures and thresholds, dates, the purchase price, and role words ('the Acquirer', 'the Target', 'the Seller', 'the Transaction', 'General Counsel', 'CFO', 'Partner', 'our correspondent firms', 'local counsel', 'the same case team'). Honorifics (Ms., Mr.) are excluded from full-name spans and kept in honorific-only spans, as elsewhere in the corpus."
+ "notes": "Advice memo from a Brussels firm to an acquirer's General Counsel on whether a share acquisition is notifiable (EUMR, Belgium, Germany, Austria; Article 4(5) and Article 22 referrals; financing; timetable). SHOULD redact: the firm (Quintard Lemahieu SRL, all-caps letterhead 'QUINTARD LEMAHIEU SRL'), its street address (Rue Guimard 23, 1040 Brussels), switchboard phone and bare domain quintard-lemahieu.example.be; the two signing partners (Bénédicte Quintard, Stijn Lemahieu) with their emails and direct lines; the client GC (Ilse Vantomme / 'Ms. Vantomme'), her email and phone, and the client CFO (Dries Haesevoets / 'Mr. Haesevoets'); the acquirer (Terhaegen Motion Control NV, defined short form 'Terhaegen', all-caps 'TERHAEGEN' in the Re: line) and its address (Vaartkaai 62, 2170 Merksem); the target group (Waelkens Sensortechniek NV, 'Waelkens', 'WAELKENS', the German and Austrian subsidiaries Waelkens Sensorik GmbH / 'Waelkens Germany' and Waelkens Messtechnik GmbH / 'Waelkens Austria') and the target's registered office (Dulle-Grietlaan 233, 9050 Gentbrugge); the seller (Scheldeboord Invest BV); the seller's counsel (Wim Dhaenens / 'Mr. Dhaenens' / bare 'Dhaenens', Meulebroeck Dhaenens Advocaten BV and its defined acronym 'MDA', his email and phone); the deal codename 'Project Bramble' / 'PROJECT BRAMBLE' and its bare reuse 'Bramble'; the bare data-room domain bramble-vdr.example.net; the financing bank named only by acronym (ING); and the firm's internal matter reference QL/2026/6398-BRB. SHOULD NOT redact: the European Commission / the Commission, DG Competition, Regulation (EC) No 139/2004 and the defined 'Merger Regulation', its Articles (1(2), 1(3), 4(5), 5, 7, 22), the Consolidated Jurisdictional Notice, Form RS / Form CO, the Code of Economic Law and the defined 'CEL' with Articles IV.7, IV.10 and IV.63, the Belgian Competition Authority / 'BCA' and its Auditor, the Bundeskartellamt and the GWB (Sections 35(1) and 35(2)), the Austrian Federal Competition Authority / 'BWB', the Federal Cartel Prosecutor and the KartG (Sections 9(1) and 9(2)), the Court of Justice and the Illumina and Grail v Commission judgment with its case numbers, Euronext Brussels, countries and bare cities (Belgium, Germany, Austria, the Netherlands, France, Ghent, Bonn, Vienna), turnover figures and thresholds, dates, the purchase price, and role words ('the Acquirer', 'the Target', 'the Seller', 'the Transaction', 'General Counsel', 'CFO', 'Partner', 'our correspondent firms', 'local counsel', 'the same case team'). Honorifics (Ms., Mr.) are excluded from full-name spans and kept in honorific-only spans, as elsewhere in the corpus.",
+ "codenames": [
+  "Bramble",
+  "PROJECT BRAMBLE",
+  "Project Bramble"
+ ]
 }

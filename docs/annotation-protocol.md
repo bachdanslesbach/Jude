@@ -36,7 +36,17 @@ Any other colour is reported as a warning at ingest and ignored.
 * **Every occurrence**, not just the first. The gold must catch repeats
   as strictly as the pipeline is expected to.
 * **Not identifiers**: dates, amounts, job titles, roles (`the Buyer`,
-  `the Claimant`), generic section labels.
+  `the Claimant`), generic section labels; **deal codenames**
+  (`Project Ganymede`, bare `Ganymede`); **bare city or country names**
+  (`Brussels`, `Antwerp` — a party's street-address line *is* an
+  identifier and is highlighted whole, city included); WhatsApp group
+  names. Rulings of 13 October 2026, `benchmark/synth/POLICY_QUESTIONS.md`.
+* **Identifiers that are easy to miss**: company registration numbers
+  (KBO/BCE, Companies House, VAT — violet), invoice numbers (pink),
+  officials named in a public capacity (yellow), a venue named on its
+  own (`Löwenkranz` after `Hotel Löwenkranz` — turquoise).
+* **Published judgment citations are public** (`C-311/18`, `Cass. 10
+  sept. 1971` — grey); a pending or internal reference is pink.
 * **Grey out what must stay** whenever you notice it — courts,
   regulators, statutes, jurisdictions used as law (`Delaware law`) —
   and especially anything Jude highlighted wrongly. Grey feeds the

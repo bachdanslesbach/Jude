@@ -7,18 +7,6 @@
  "text": "PROJECT CORVUS — VIRTUAL DATA ROOM INDEX\nHELLEBORE PRECISION NV\nIndex version 4.2 — status as at 10 September 2026 — STRICTLY CONFIDENTIAL\n\nVendor: Semois Capital Partners SRL (\"ACP\" or the \"Vendor\")\nTarget: Hellebore Precision NV (\"HPN\" or the \"Target\"), registered office at the leased premises listed under 8.1\nVendor's counsel: Dewulf Tielemans BV, Boulevard de Waterloo 34, 1000 Brussels\nContact partner: Ms. Céline Dewulf — c.dewulf@dewulf-tielemans.example.be — +32 2 555 01 23\nVDR Administrator: Tomas Reyniers — vdr.corvus@dewulf-tielemans.example.be — +32 470 12 34 56\nVDR platform: vdr.dewulf-tielemans.example.be (access by invitation only)\nOur ref: DV-2026-CORVUS-01\nQ&A: questions are to be submitted through the Corvus Q&A module only; no direct contact with management.\n\nAccess levels: L1 (all bidders), L2 (Phase 2 bidders), CT (clean team only). Documents marked \"(redacted)\" are available unredacted at level CT after signature of the clean team protocol (document 0.2).\n\n0. GENERAL\n0.1 Process letter — 28 August 2026 — L1\n0.2 Clean team protocol (execution version) — 2 September 2026 — L1\n0.3 Vendor due diligence report, financial — prepared by Van Hoecke Bedrijfsrevisoren BV — 21 August 2026 — v3 — L2\n0.4 Group structure chart — the Target and its subsidiary Hellebore Precision Nederland BV (Eindhoven) — L1\n\n1. CORPORATE\n1.1 Coordinated articles of association of Hellebore Precision NV — 12 June 2024 — L1\n1.2 Shareholders' register (extract, certified by Ms. Dewulf) — 31 July 2026 — L1\n1.3 Board minutes 2023–2026 — L2 (redacted: minutes of 4 March 2025 on the sale process withheld)\n1.4 Conflict-of-interest declarations under Article 7:96 of the Belgian Companies and Associations Code — 2024, 2025 — L2\n1.5 Statutory auditor's reports, financial years 2023 to 2025 — L1\n\n2. FINANCING\n2.1 Facility agreement with KBC — EUR 18,000,000 term loan and EUR 4,000,000 revolving facility — 17 February 2023 — L2\n2.2 Amendment and waiver letter (change of control) — 30 June 2026 — v2 — L2\n2.3 Escrow account details: BE72 7340 8812 5507, held with KBC in the name of ACP — L2 (signatory list: CT)\n\n3. MATERIAL CONTRACTS\n3.1 Supply agreement with Brennecke Feinmechanik GmbH — 3 March 2023 — L2 (redacted: pricing annex, CT)\n3.2 Distribution agreement with Calder Ridge Distribution Ltd — 14 November 2021, amended 2 May 2025 — L2 (redacted: territory schedule, CT)\n3.3 Framework agreement with a top-three customer — 2024 — CT (customer name redacted at L1 and L2)\n3.4 Change-of-control review of all contracts above EUR 250,000 — prepared by the Vendor's counsel — 9 September 2026 — L2\n\n4. LITIGATION\n4.1 Claim by Mr. Joris Pelckmans (former commercial agent) against HPN before the Brussels Enterprise Court — writ of summons served 19 April 2024 — docket A/24/03117 — L2\n4.2 Pelckmans: submissions of the Target of 15 October 2024 and 12 March 2025 — internal file HPN-LIT-2024-002 — L2\n4.3 Litigation summary and provisioning memorandum — 5 September 2026 — L2\n4.4 Confirmation letter: no other pending or threatened proceedings — signed by Mr. Verhoeven — 1 September 2026 — L1\n\n5. REGULATORY\n5.1 Informal guidance request to the Belgian Competition Authority on the applicability of the Belgian merger control thresholds to Corvus — 9 January 2026 — and response of 3 February 2026 — L2\n5.2 Pre-notification contact with the European Commission (Directorate-General for Competition) under the EU Merger Regulation — briefing paper — 2 April 2026 — L2 (redacted: market share data, CT)\n5.3 Records of processing activities under Article 30 GDPR — group-wide — 2026 — L1\n5.4 Environmental permit, production site — issued 2019, valid until 2039 — L1\n\n6. EMPLOYMENT\n6.1 Service agreement of Mr. Anselm Verhoeven, CEO — 1 September 2021, amended 15 December 2024 (change-of-control bonus) — L2 (redacted: remuneration, CT)\n6.2 Employment agreement of Katrien Maes, CFO — 4 January 2022 — L2 (redacted: remuneration, CT)\n6.3 Collective bargaining agreements applicable at the Ghent site — L1\n6.4 Long-term incentive plan rules and grant letters to Mr. Verhoeven and K. Maes — CT\n\n7. INTELLECTUAL PROPERTY\n7.1 Domain names: hellebore-precision.example.com, hellebore.example.be, hpn-parts.example.eu — registrant confirmations — L1\n7.2 Benelux word mark HELLEBORE, registration no. 1094 7712 — Benelux Office for Intellectual Property — renewed 2025; EU trade mark application (figurative) — EUIPO — filed 14 May 2026 — L1\n7.3 Patent schedule (12 families) with assignments from inventors — L2\n\n8. REAL ESTATE\n8.1 Lease of premises at Havenlaan 112, 9000 Ghent — landlord Immo Scheldekaai NV — 1 April 2018, nine-year term, renewal option 2027 — L1\n\nIndex notes\nVersion history: v4.0 (28 August 2026); v4.1 (4 September 2026: folders 4 and 5 added); v4.2 (10 September 2026: documents 2.2, 3.4 and 6.4 added; 3.3 moved to CT).\nThis index is issued by the Vendor's counsel for the sole purpose of Project Corvus and does not constitute a representation as to completeness. Questions on access rights go to the VDR Administrator; questions on content go through the Q&A module.",
  "entities": [
   {
-   "surface": "PROJECT CORVUS",
-   "type": "ORG"
-  },
-  {
-   "surface": "Project Corvus",
-   "type": "ORG"
-  },
-  {
-   "surface": "Corvus",
-   "type": "ORG"
-  },
-  {
    "surface": "HELLEBORE PRECISION NV",
    "type": "ORG"
   },
@@ -115,19 +103,11 @@
    "type": "LOC"
   },
   {
-   "surface": "Ghent",
-   "type": "LOC"
-  },
-  {
    "surface": "Boulevard de Waterloo 34",
    "type": "LOC"
   },
   {
    "surface": "1000 Brussels",
-   "type": "LOC"
-  },
-  {
-   "surface": "Eindhoven",
    "type": "LOC"
   },
   {
@@ -203,5 +183,10 @@
   "adjacent-public",
   "role-noise"
  ],
- "notes": "Virtual data room index for an invented Belgian M&A sale process. SHOULD redact: the codename (PROJECT CORVUS in the header, Project Corvus in the closing note, bare Corvus twice), the target in its all-caps header line and normal form, its defined acronym (HPN), its Dutch subsidiary and the word mark HELLEBORE, the vendor and its defined acronym (ACP), vendor's counsel firm + street address + postal code and city, the contact partner (full name, later Ms. Dewulf), the VDR administrator, both example.* emails, both phones, the escrow IBAN, the bank named only by acronym (KBC, twice), the auditor, supplier, distributor and landlord, the claimant (full name, then bare surname Pelckmans), the CEO (full name, later Mr. Verhoeven twice) and CFO (full name, then K. Maes), the firm's matter reference, the Enterprise Court docket, the internal litigation file number, the VDR host name and the three bare domain names, the leased premises (street + postal code and city), bare Ghent (site) and Eindhoven. SHOULD NOT redact: Belgian Competition Authority, European Commission, Directorate-General for Competition, EU Merger Regulation, Brussels Enterprise Court (including the word Brussels inside it), Belgian Companies and Associations Code and Article 7:96, Article 30 GDPR, Benelux Office for Intellectual Property, EUIPO; role labels (the Vendor, the Target, bidders, management, VDR Administrator, Vendor's counsel, clean team, top-three customer); access-level codes L1/L2/CT, version numbers, dates, amounts, the trade mark registration number, folder and document numbers."
+ "notes": "Virtual data room index for an invented Belgian M&A sale process. SHOULD redact: the codename (PROJECT CORVUS in the header, Project Corvus in the closing note, bare Corvus twice), the target in its all-caps header line and normal form, its defined acronym (HPN), its Dutch subsidiary and the word mark HELLEBORE, the vendor and its defined acronym (ACP), vendor's counsel firm + street address + postal code and city, the contact partner (full name, later Ms. Dewulf), the VDR administrator, both example.* emails, both phones, the escrow IBAN, the bank named only by acronym (KBC, twice), the auditor, supplier, distributor and landlord, the claimant (full name, then bare surname Pelckmans), the CEO (full name, later Mr. Verhoeven twice) and CFO (full name, then K. Maes), the firm's matter reference, the Enterprise Court docket, the internal litigation file number, the VDR host name and the three bare domain names, the leased premises (street + postal code and city), bare Ghent (site) and Eindhoven. SHOULD NOT redact: Belgian Competition Authority, European Commission, Directorate-General for Competition, EU Merger Regulation, Brussels Enterprise Court (including the word Brussels inside it), Belgian Companies and Associations Code and Article 7:96, Article 30 GDPR, Benelux Office for Intellectual Property, EUIPO; role labels (the Vendor, the Target, bidders, management, VDR Administrator, Vendor's counsel, clean team, top-three customer); access-level codes L1/L2/CT, version numbers, dates, amounts, the trade mark registration number, folder and document numbers.",
+ "codenames": [
+  "Corvus",
+  "PROJECT CORVUS",
+  "Project Corvus"
+ ]
 }

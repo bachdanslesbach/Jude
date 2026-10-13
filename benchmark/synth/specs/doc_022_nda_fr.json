@@ -31,14 +31,6 @@
    "type": "ORG"
   },
   {
-   "surface": "Projet Héron",
-   "type": "ORG"
-  },
-  {
-   "surface": "Héron",
-   "type": "ORG"
-  },
-  {
    "surface": "Delvaux & Marchetti",
    "type": "ORG"
   },
@@ -51,15 +43,7 @@
    "type": "LOC"
   },
   {
-   "surface": "Liège",
-   "type": "LOC"
-  },
-  {
    "surface": "18 rue de la République, 69002 Lyon",
-   "type": "LOC"
-  },
-  {
-   "surface": "Lyon",
    "type": "LOC"
   },
   {
@@ -150,5 +134,9 @@
   "role-noise",
   "all-caps-header"
  ],
- "notes": "Accord de confidentialité pré-acquisition (Projet Héron) entre un acquéreur belge et une cible française, rédigé par un cabinet bruxellois. SHOULD redact: les deux parties sous toutes leurs formes (dénomination complète avec forme juridique, en capitales dans l'en-tête, forme courte « Valdoire », sigle défini « ACS »), le nom de code « Projet Héron » et « Héron » seul, le cabinet conseil Delvaux & Marchetti, les trois adresses de siège/bureaux et les villes de Liège et Lyon, les signataires et contacts data room avec leurs formes courtes (« M. Verhaegen », « Moerman », « Van den Broeck » seuls), e-mails, téléphones, l'IBAN et la banque désignée par son sigle (CIC, adjacente au compte), la référence interne DM/2026/HER/031 et le domaine nu de la data room. SHOULD NOT redact: Commission européenne, règlement (CE) n° 139/2004, Autorité belge de la concurrence, Autorité de la concurrence, articles 101 et 102 TFUE, Code de droit économique (art. I.17/1), Banque-Carrefour des Entreprises, tribunal de l'entreprise francophone de Bruxelles (« Bruxelles » n'est ici que le siège de la juridiction), le droit belge, les dates, montants et durées, ni les rôles définis (Partie Divulgatrice, Bénéficiaire, Représentants, Conseil, Parties, Opération, Data Room, Informations Confidentielles)."
+ "notes": "Accord de confidentialité pré-acquisition (Projet Héron) entre un acquéreur belge et une cible française, rédigé par un cabinet bruxellois. SHOULD redact: les deux parties sous toutes leurs formes (dénomination complète avec forme juridique, en capitales dans l'en-tête, forme courte « Valdoire », sigle défini « ACS »), le nom de code « Projet Héron » et « Héron » seul, le cabinet conseil Delvaux & Marchetti, les trois adresses de siège/bureaux et les villes de Liège et Lyon, les signataires et contacts data room avec leurs formes courtes (« M. Verhaegen », « Moerman », « Van den Broeck » seuls), e-mails, téléphones, l'IBAN et la banque désignée par son sigle (CIC, adjacente au compte), la référence interne DM/2026/HER/031 et le domaine nu de la data room. SHOULD NOT redact: Commission européenne, règlement (CE) n° 139/2004, Autorité belge de la concurrence, Autorité de la concurrence, articles 101 et 102 TFUE, Code de droit économique (art. I.17/1), Banque-Carrefour des Entreprises, tribunal de l'entreprise francophone de Bruxelles (« Bruxelles » n'est ici que le siège de la juridiction), le droit belge, les dates, montants et durées, ni les rôles définis (Partie Divulgatrice, Bénéficiaire, Représentants, Conseil, Parties, Opération, Data Room, Informations Confidentielles).",
+ "codenames": [
+  "Héron",
+  "Projet Héron"
+ ]
 }

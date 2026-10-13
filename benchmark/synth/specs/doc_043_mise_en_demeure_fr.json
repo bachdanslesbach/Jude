@@ -137,6 +137,22 @@
   {
    "surface": "toleries-havelange.example.be",
    "type": "URL"
+  },
+  {
+   "surface": "F26-1183",
+   "type": "CASE_REF"
+  },
+  {
+   "surface": "F26-1247",
+   "type": "CASE_REF"
+  },
+  {
+   "surface": "F26-1302",
+   "type": "CASE_REF"
+  },
+  {
+   "surface": "F26-1389",
+   "type": "CASE_REF"
   }
  ],
  "public": [
@@ -159,5 +175,6 @@
   "adjacent-public",
   "role-noise"
  ],
- "notes": "Lettre de mise en demeure d'un cabinet namurois, au nom d'un sous-traitant (SA) impayé, adressée à l'entrepreneur principal (SRL) : contrat, quatre factures échues, intérêts et indemnité de la loi du 2 août 2002, clause pénale, délai de huit jours, menace de citation. SHOULD redact: le cabinet sous ses deux formes (en-tête en capitales HENNEQUIN & DORVAL AVOCATS SRL et signature Hennequin & Dorval Avocats SRL) et son adresse, son numéro BCE, son téléphone et l'e-mail de l'avocate ; la créancière Tôleries Havelange SA (forme complète et forme courte « Tôleries Havelange »), son siège, son numéro BCE, son IBAN, la banque CBC (seule mention, par sigle), sa référence de dossier TH-CTX/26-0839 (y compris dans la communication de paiement) et son domaine nu toleries-havelange.example.be ; la débitrice TOITURES MARBAIX SRL / Toitures Marbaix SRL, son siège, son numéro BCE, l'e-mail de son gérant ; les personnes sous toutes leurs formes (Grégory Marbaix / Monsieur Marbaix ; Nathalie Pirlot ; Sandrine Ramaekers / Maître Ramaekers ; Céline Hennequin) ; le cabinet adverse Ramaekers & Coibion, son adresse, l'e-mail et le téléphone ; l'adresse du chantier (Rue de la Baronnerie 9, 4530 Villers-le-Bouillet) ; la référence interne du cabinet CH/2026/1362-TOH. Les numéros BCE sont rangés dans le bucket IBAN (numéros d'immatriculation, comme la TVA/SIREN en v0). SHOULD NOT redact: Banque-Carrefour des Entreprises, loi du 2 août 2002 concernant la lutte contre le retard de paiement dans les transactions commerciales, Service public fédéral Finances, Moniteur belge, Cour de cassation, ancien Code civil (article 1798), Code judiciaire (article 1022), tribunal de l'entreprise de Liège, division Huy ; « Namur » seul (barreau, lieu de signature — la ville figure déjà dans la ligne d'adresse annotée) ; les rôles (notre cliente, votre société, votre conseil, le Cabinet, la soussignée, le gérant, la directrice financière, le maître de l'ouvrage) ; les numéros de facture F26-1183 à F26-1389 (numéros de pièces comptables, non annotés) ; les montants, dates, articles du contrat et des conditions générales, taux et pourcentages."
+ "notes": "Lettre de mise en demeure d'un cabinet namurois, au nom d'un sous-traitant (SA) impayé, adressée à l'entrepreneur principal (SRL) : contrat, quatre factures échues, intérêts et indemnité de la loi du 2 août 2002, clause pénale, délai de huit jours, menace de citation. SHOULD redact: le cabinet sous ses deux formes (en-tête en capitales HENNEQUIN & DORVAL AVOCATS SRL et signature Hennequin & Dorval Avocats SRL) et son adresse, son numéro BCE, son téléphone et l'e-mail de l'avocate ; la créancière Tôleries Havelange SA (forme complète et forme courte « Tôleries Havelange »), son siège, son numéro BCE, son IBAN, la banque CBC (seule mention, par sigle), sa référence de dossier TH-CTX/26-0839 (y compris dans la communication de paiement) et son domaine nu toleries-havelange.example.be ; la débitrice TOITURES MARBAIX SRL / Toitures Marbaix SRL, son siège, son numéro BCE, l'e-mail de son gérant ; les personnes sous toutes leurs formes (Grégory Marbaix / Monsieur Marbaix ; Nathalie Pirlot ; Sandrine Ramaekers / Maître Ramaekers ; Céline Hennequin) ; le cabinet adverse Ramaekers & Coibion, son adresse, l'e-mail et le téléphone ; l'adresse du chantier (Rue de la Baronnerie 9, 4530 Villers-le-Bouillet) ; la référence interne du cabinet CH/2026/1362-TOH. Les numéros BCE sont rangés dans le bucket IBAN (numéros d'immatriculation, comme la TVA/SIREN en v0). SHOULD NOT redact: Banque-Carrefour des Entreprises, loi du 2 août 2002 concernant la lutte contre le retard de paiement dans les transactions commerciales, Service public fédéral Finances, Moniteur belge, Cour de cassation, ancien Code civil (article 1798), Code judiciaire (article 1022), tribunal de l'entreprise de Liège, division Huy ; « Namur » seul (barreau, lieu de signature — la ville figure déjà dans la ligne d'adresse annotée) ; les rôles (notre cliente, votre société, votre conseil, le Cabinet, la soussignée, le gérant, la directrice financière, le maître de l'ouvrage) ; les numéros de facture F26-1183 à F26-1389 (numéros de pièces comptables, non annotés) ; les montants, dates, articles du contrat et des conditions générales, taux et pourcentages.",
+ "codenames": []
 }

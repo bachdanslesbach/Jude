@@ -53,12 +53,6 @@
    "text": "Tessaro"
   },
   {
-   "start": 733,
-   "end": 746,
-   "type": "ORG",
-   "text": "Project Sable"
-  },
-  {
    "start": 905,
    "end": 939,
    "type": "ORG",
@@ -273,12 +267,6 @@
    "end": 4406,
    "type": "ORG",
    "text": "Tressane"
-  },
-  {
-   "start": 5454,
-   "end": 5459,
-   "type": "ORG",
-   "text": "Sable"
   }
  ],
  "public_spans": [

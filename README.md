@@ -140,16 +140,21 @@ throughput and peak memory.
 
 | System | Span F1 — heldout (dev) | Recall (heldout) | Public bodies redacted (heldout) |
 |---|---|---|---|
-| Jude (`jude-full`) | **0.735** (0.963) | 0.89 | 30 % |
-| `nvidia/gliner-PII` (native labels) | 0.658 (0.721) | 0.62 | 24 % |
-| `perplexity-ai/pplx-pii-masking` | 0.598 (0.531) | 0.44 | 2 % |
+| Jude (`jude-full`) | **0.701** (0.914) | 0.89 | 30 % |
+| rules only (0 parameters) | 0.714 (0.836) | 0.57 | 3 % |
+| `nvidia/gliner-PII` (native labels) | 0.628 (0.662) | 0.62 | 24 % |
+| `perplexity-ai/pplx-pii-masking` | 0.632 (0.570) | 0.48 | 2 % |
+| `ollama` qwen3 4 B (generative) | 0.544 (0.694) | 0.60 | 42 % |
 | `roblox/roblox-pii-classifier` | — (sentence-level 0.751) | — | — |
 
 The `heldout` column is the number to quote: the 25 documents Jude
-was never tuned on. Jude loses 23 F1 points between the two splits —
-its recall holds (0.89), its precision does not (0.93 → 0.62): the
-public sphere in French practice, role phrases and published
-citations it does not know yet. Generic PII taxonomies have no label
+was never tuned on, scored under the annotation rulings of 13 October
+2026 (codenames and bare city names are not identifiers). Jude loses
+21 F1 points between the two splits — its recall holds (0.89), its
+precision does not (0.84 → 0.58): cities and codenames it still
+predicts, the public sphere in French practice, role phrases and
+published citations. The rules alone now edge it on F1 at precision
+0.95 and recall 0.57; recall, not F1, is what a lawyer needs. Generic PII taxonomies have no label
 for organisations-as-parties or case references — 47 % of what a
 legal document must hide. Protocol, full tables and failure taxonomy:
 [docs/benchmark-pii-models.md](docs/benchmark-pii-models.md);

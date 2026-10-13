@@ -414,24 +414,36 @@ Jude's whitelist and stop-lists had been tuned. The `heldout` split —
 twenty-five documents drafted later against a programmatic bar and a
 judge, never consulted while tuning — is the number to quote:
 
+Numbers below follow the annotation rulings of 13 October 2026
+(`benchmark/synth/POLICY_QUESTIONS.md`): deal codenames and bare city
+names are no longer identifiers, invoice numbers are. The detector
+has not yet been changed to follow them — so Jude's codename and city
+predictions now count as false positives, which is where its precision
+went.
+
 | System | dev F1 (P / R) | heldout F1 (P / R) | gap |
 |---|---|---|---|
-| `jude-full` | 0.963 (0.93 / 1.00) | **0.735** (0.62 / 0.89) | −0.23 |
-| `jude-full-gliner-small` | 0.960 | 0.716 (0.62 / 0.85) | −0.24 |
-| `rules-only` | 0.790 (0.99 / 0.66) | 0.678 (0.95 / 0.53) | −0.11 |
-| `nvidia-gliner-pii-native` | 0.721 (0.78 / 0.67) | 0.658 (0.70 / 0.62) | −0.06 |
-| `gliner-large-v2.1-jude-labels` | 0.657 | 0.597 | −0.06 |
-| `pplx-pii-masking` | 0.531 (0.89 / 0.38) | 0.598 (0.92 / 0.44) | +0.07 |
-| `ollama-qwen3-4b` (generative, 4 B) | 0.731 (0.65 / 0.84) | 0.555 (0.53 / 0.58) | −0.18 |
+| `jude-full` | 0.914 (0.84 / 1.00) | **0.701** (0.58 / 0.89) | −0.21 |
+| `jude-full-gliner-small` | 0.911 (0.84 / 0.99) | 0.687 (0.57 / 0.86) | −0.22 |
+| `rules-only` | 0.836 (0.99 / 0.72) | 0.714 (0.95 / 0.57) | −0.12 |
+| `nvidia-gliner-pii-native` | 0.662 (0.68 / 0.65) | 0.628 (0.64 / 0.62) | −0.03 |
+| `gliner-large-v2.1-jude-labels` | 0.594 | 0.570 | −0.02 |
+| `pplx-pii-masking` | 0.570 (0.89 / 0.42) | 0.632 (0.92 / 0.48) | +0.06 |
+| `ollama-qwen3-4b` (generative, 4 B) | 0.694 (0.59 / 0.85) | 0.544 (0.50 / 0.60) | −0.15 |
 | `roblox-pii-classifier` (sentence F1) | 0.764 | 0.751 | −0.01 |
 
-Jude loses 23 points between the two splits; the generic models lose
-six or gain some. That is the honest measure of how much of the dev
-score was tuning. Jude still leads on the held-out set, and its recall
-holds (0.89); what collapses is precision (0.93 → 0.62) — the public
-sphere it does not know yet, as the taxonomy below shows. Every fix
-suggested by a held-out failure is listed here and *not applied*: the
-next batch of documents will measure it.
+Jude loses 21 points between the two splits; the generic models lose
+three or gain some. That is the honest measure of how much of the dev
+score was tuning. On the held-out set Jude's recall holds (0.89) while
+its precision collapses (0.84 → 0.58) — and the rules alone, at
+precision 0.95 and recall 0.57, now edge it on F1 (0.714). F1 is not
+the lawyer's objective; recall is, and 0.89 against 0.57 is the whole
+case for the neural layers. But the gap says what they add: 32 points
+of recall for 37 points of precision — the public sphere, roles,
+cities and codenames they do not yet know to leave alone, as the
+taxonomy below shows. Every fix suggested by a held-out failure is
+listed here and *not applied*; the policy rulings are applied to the
+corpus and the detector follows them in the next version.
 
 ## Failure taxonomy
 
@@ -449,7 +461,7 @@ and every codename. Neither has a case-reference label.
 
 ### 2. What Jude misses on the held-out split (recall 0.89)
 
-149 misses in 1,775 gold spans, in five classes, each a handful of
+134 misses in 1,627 gold spans, in five classes, each a handful of
 lines to fix and each *left unfixed* for the next round:
 
 * **Registry numbers** (28): KBO/BCE `0712.445.303`, `HRB 71244`,
@@ -460,22 +472,23 @@ lines to fix and each *left unfixed* for the next round:
   `A/26/02371`, firm references of the shape `LH/2026/0583-TRV`, a
   pre-notification `M.12384`. CASE_REF recall 0.56 — the same lesson
   as v0.7.7, on new shapes.
-* **Bare codenames and short forms** (42 ORG): `Héron`, `Sarcelle`,
-  `Kittiwake`, `Valdoire`, `Ambreval`, `Tremonval`. Half of these are
-  the codename policy (the corpus says redact; Jude's filter still
-  drops bare codename words); the rest are short forms whose full form
-  was caught but not propagated.
+* **Short forms** (29 ORG): `Valdoire`, `Ambreval`, `Tremonval`,
+  `Zilverberg` — the full form was caught but not propagated to its
+  bare short form. (Codenames are no longer gold under ruling 1.)
 * **Surname-only repeats** (38 PERSON): `Herbiet` ×3, `Roelandts`,
   `Thonnard`, `Brankovic`, `Pasqualotto`, `Rombouts` — the reference a
   practitioner uses after first mention. The dictionary propagates
   full names; it must propagate surnames.
-* **Bare cities and venues** (12 LOC): `Antwerp`, `Rotterdam`,
-  `Breda`, `Hotel Löwenkranz`, `9100 Sint-Niklaas` — the annotation
-  policy on cities (POLICY_QUESTIONS §6) as much as a detector gap.
+* **Venues and address lines** (7 LOC): `Hotel Löwenkranz`,
+  `9100 Sint-Niklaas` — a venue named on its own, a postcode-city pair
+  inside an address.
 
-### 3. What Jude over-redacts on the held-out split (precision 0.62)
+### 3. What Jude over-redacts on the held-out split (precision 0.58)
 
-Three-quarters of the 772 spurious spans are the *negative* classes:
+Most of the 839 spurious spans are the *negative* classes — including,
+since the rulings, bare city names (`Brussels`, `Antwerp`, `Liège` —
+245 of the 361 LOC predictions) and codenames (`Project Ganymede`,
+`Héron`), which the detector will stop predicting in the next version:
 
 * **The public sphere in Belgian and French practice** — 30 % of the
   496 whitelisted mentions redacted: *Auditorat*, *Chambre
@@ -531,7 +544,7 @@ most (see `efficiency-frontier.html`).
 
 ### 7. The review report as the last line
 
-Of Jude's 148 held-out misses, the unverified-term report puts 38 in
+Of Jude's 134 held-out misses, the unverified-term report puts 34 in
 front of the reviewer, at 17 items per document. The remaining 110 are
 mostly numbers (registry and reference formats) and lower-case or
 all-caps short forms the capitalisation heuristic does not see —
@@ -545,8 +558,9 @@ too.
 * French public-sphere entries and the *published citation* rule in
   the whitelist — knowing that every such list is a stopgap the model
   should make redundant.
-* The codename ruling (POLICY_QUESTIONS §1) applied consistently in
-  corpus and detector.
+* The rulings on codenames and bare cities (POLICY_QUESTIONS §1, §6)
+  implemented in the detector — the single largest precision item now;
+  and a per-matter option to redact codenames, as requested.
 * GLiNER small as the laptop default is defensible: −3 recall points
   for 2.7× the speed inside the pipeline (see `efficiency-frontier.html`).
 

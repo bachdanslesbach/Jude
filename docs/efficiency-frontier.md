@@ -96,20 +96,20 @@ the numbers below are the current run.*
 <!-- LADDER_TABLE -->
 | Runner | Params | Device | Pages / s | s / page | Recall | Precision | F1 | Public-body over-redaction | Peak RSS |
 |---|---|---|---|---|---|---|---|---|---|
-| `rules-only` | 0 | cpu | 116.71 | 0.0 | 0.554 | 0.963 | **0.704** | 3% | 308 MB |
-| `regex-only` | 0 | cpu | 1151.22 | 0.0 | 0.136 | 0.956 | **0.238** | 0% | 308 MB |
-| `gliner-small-v2.1-jude-labels` | 50 M | mps | 2.18 | 0.5 | 0.495 | 0.673 | **0.570** | 38% | 1731 MB |
-| `spacy-only` | 125 M | cpu | 1.84 | 0.5 | 0.630 | 0.584 | **0.606** | 58% | 3030 MB |
-| `jude-full-no-gliner` | 125 M | cpu | 1.00 | 1.0 | 0.852 | 0.663 | **0.745** | 23% | 3037 MB |
-| `jude-full-gliner-small` | 175 M | cpu | 0.57 | 1.7 | 0.885 | 0.673 | **0.764** | 24% | 2451 MB |
-| `gliner-large-v2.1-jude-labels` | 440 M | mps | 0.94 | 1.1 | 0.582 | 0.641 | **0.610** | 51% | 3440 MB |
-| `gliner-large-v2.1-jude-labels-cpu` | 440 M | cpu | 0.72 | 1.4 | 0.582 | 0.641 | **0.610** | 51% | 3814 MB |
-| `nvidia-gliner-pii-native` | 440 M | mps | 0.83 | 1.2 | 0.634 | 0.715 | **0.672** | 24% | 3434 MB |
-| `jude-full` | 565 M | cpu | 0.21 | 4.8 | 0.916 | 0.678 | **0.779** | 25% | 2612 MB |
-| `pplx-pii-masking` | 596 M | mps | 0.70 | 1.4 | 0.429 | 0.916 | **0.584** | 2% | 755 MB |
-| `pplx-pii-masking-cpu` | 596 M | cpu | 0.04 | 23.0 | 0.430 | 0.916 | **0.585** | 2% | 1572 MB |
+| `rules-only` | 0 | cpu | 116.71 | 0.0 | 0.604 | 0.962 | **0.742** | 3% | 308 MB |
+| `regex-only` | 0 | cpu | 1151.22 | 0.0 | 0.148 | 0.956 | **0.257** | 0% | 308 MB |
+| `gliner-small-v2.1-jude-labels` | 50 M | mps | 2.18 | 0.5 | 0.480 | 0.598 | **0.533** | 38% | 1731 MB |
+| `spacy-only` | 125 M | cpu | 1.84 | 0.5 | 0.623 | 0.530 | **0.573** | 58% | 3030 MB |
+| `jude-full-no-gliner` | 125 M | cpu | 1.00 | 1.0 | 0.859 | 0.612 | **0.715** | 23% | 3037 MB |
+| `jude-full-gliner-small` | 175 M | cpu | 0.57 | 1.7 | 0.889 | 0.619 | **0.730** | 24% | 2451 MB |
+| `gliner-large-v2.1-jude-labels` | 440 M | mps | 0.94 | 1.1 | 0.572 | 0.578 | **0.575** | 51% | 3440 MB |
+| `gliner-large-v2.1-jude-labels-cpu` | 440 M | cpu | 0.72 | 1.4 | 0.572 | 0.578 | **0.575** | 51% | 3814 MB |
+| `nvidia-gliner-pii-native` | 440 M | mps | 0.83 | 1.2 | 0.625 | 0.646 | **0.635** | 24% | 3434 MB |
+| `jude-full` | 565 M | cpu | 0.21 | 4.8 | 0.918 | 0.623 | **0.742** | 25% | 2612 MB |
+| `pplx-pii-masking` | 596 M | mps | 0.70 | 1.4 | 0.468 | 0.916 | **0.619** | 2% | 755 MB |
+| `pplx-pii-masking-cpu` | 596 M | cpu | 0.04 | 23.0 | 0.469 | 0.916 | **0.620** | 2% | 1572 MB |
 | `roblox-pii-classifier` | 560 M | mps | 1.07 | 0.9 | — | — | **—** | — | 943 MB |
-| `ollama-qwen3-4b` | 4.0 B | ollama | 0.01 | 115.2 | 0.641 | 0.558 | **0.596** | 46% | 281 MB |
+| `ollama-qwen3-4b` | 4.0 B | ollama | 0.01 | 115.2 | 0.652 | 0.520 | **0.579** | 46% | 281 MB |
 <!-- /LADDER_TABLE -->
 
 <!-- LADDER_CHART -->
@@ -124,20 +124,24 @@ says, in order of surprise:
 
 1. **Quality is not monotone in parameters.** Zero parameters, well
    designed (`rules-only`: regex, long-tail patterns, known entities,
-   whitelist) scores F1 0.70 with precision 0.96 — above every neural
-   model run alone, including the 440 M GLiNER (0.61) and the 596 M
-   `pplx` (0.58). The same 440 M checkpoint gains six points once
-   fine-tuned on PII data (`nvidia-gliner-pii`, 0.67): at equal size,
-   *what the model was taught* is worth more than *how big it is*.
+   whitelist) scores F1 0.74 with precision 0.96 — level with the full
+   pipeline on F1 and above every neural model run alone, including
+   the 440 M GLiNER (0.58) and the 596 M `pplx` (0.62). The same 440 M
+   checkpoint gains six points once fine-tuned on PII data
+   (`nvidia-gliner-pii`, 0.64): at equal size, *what the model was
+   taught* is worth more than *how big it is*.
 2. **The model's job is recall; the rules' job is precision.** Rules
-   alone recall 0.55; adding the neural layers takes Jude to 0.92 —
-   +37 points — at a cost of 29 precision points. That is the division
-   of labour the numbers impose, not a design preference.
+   alone recall 0.60; adding the neural layers takes Jude to 0.92 —
+   +32 points — at a cost of 34 precision points. That is the division
+   of labour the numbers impose, not a design preference; and since
+   the annotation rulings of 13 October 2026 (bare cities and
+   codenames are not identifiers) part of that precision cost is the
+   detector not yet following the policy.
 3. **Diminishing returns start at 0.1 B.** Inside the same pipeline,
-   GLiNER small (50 M) gives F1 0.764 / recall 0.885; large (440 M)
-   gives 0.779 / 0.916. Nine times the parameters buy 1.5 points of
+   GLiNER small (50 M) gives F1 0.730 / recall 0.889; large (440 M)
+   gives 0.742 / 0.918. Nine times the parameters buy 1.2 points of
    F1 and 3 of recall — and cost 2.7× the time per page (0.57 →
-   0.21 pages/s). No GLiNER at all: 0.745 / 0.852 at 1.0 page/s.
+   0.21 pages/s). No GLiNER at all: 0.715 / 0.859 at 1.0 page/s.
 4. **Architecture beats size for the CPU tier.** GLiNER large runs
    almost as fast on CPU as on the GPU (0.72 vs 0.94 pages/s);
    `pplx`'s Qwen-derived encoder of similar size drops from 0.70 to
@@ -147,11 +151,11 @@ says, in order of surprise:
    not better.** A 4 B chat model through Ollama (`qwen3:4b`, thinking
    off, JSON output) needs about 115 s per page on the same machine
    (0.009 pages/s at 18 tokens/s; one document abandoned after two
-   thirty-minute timeouts), for F1 0.60 — recall 0.64, precision 0.56
-   — and it redacts **46 %** of public-body mentions: told not to list
+   thirty-minute timeouts), for F1 0.58 — recall 0.65, precision 0.52
+   — and it redacts **44 %** of public-body mentions: told not to list
    institutions, it lists them anyway. On the held-out split it scores
-   0.555, below the 440 M NVIDIA encoder (0.658) and below the rules
-   alone (0.678). A 7–14 B model may still earn a place as an
+   0.544, below the 440 M NVIDIA encoder (0.628) and well below the
+   rules alone (0.714). A 7–14 B model may still earn a place as an
    occasional second reader for quasi-identifiers; as the extractor,
    the generative route costs a hundred times the compute for a
    worse answer.
@@ -179,10 +183,12 @@ Read against the demand side above:
 * **Quality target: recall ≥ 0.99 by machine with the review report
   closing the gap, precision ≥ 0.85, public-body over-redaction
   ≤ 5 %.** On the held-out split Jude stands at recall 0.89 / precision
-  0.62 / over-redaction 30 % — the gap is almost entirely the public
-  sphere in French practice, role phrases and published citations,
-  i.e. the negative classes a model has to *learn*, not the positive
-  ones (see the failure taxonomy in `benchmark-pii-models.html`).
+  0.58 / over-redaction 30 % — the gap is almost entirely the negative
+  classes: bare cities and codenames (now ruled non-identifiers, still
+  predicted), the public sphere in French practice, role phrases and
+  published citations — what a model has to *learn to leave alone*,
+  not what it has to find (see the failure taxonomy in
+  `benchmark-pii-models.html`).
 * **100 B: not on the frontier.** Off every deployment tier a firm
   can own, and the task does not need it; a 7–14 B local model earns
   its place only as an occasional second reader for quasi-identifiers.

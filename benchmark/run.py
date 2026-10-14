@@ -521,8 +521,10 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--report", type=Path, default=None,
                         help="Write the full markdown report to this path")
     parser.add_argument("--title", default="Jude redaction benchmark")
-    parser.add_argument("--split", choices=["dev", "heldout"], default=None,
-                        help="Score only this corpus split (default: all documents)")
+    parser.add_argument("--split", choices=["dev", "heldout", "public"], default=None,
+                        help="Score only this corpus split (default: all documents). "
+                             "dev: tuned on; heldout: agent-drafted, never tuned on; "
+                             "public: excerpts of real published documents")
     parser.add_argument("--prelude", type=Path, default=None,
                         help="Markdown file inserted after the title (methodology, systems, …)")
     parser.add_argument("--postlude", type=Path, default=None,

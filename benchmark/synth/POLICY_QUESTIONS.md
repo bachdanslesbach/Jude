@@ -18,9 +18,15 @@ detector will follow it. Current defaults are marked ⟶.
 | 6 | Cities | **Keep city names** — a bare city is never redacted; a party's street-address line still is | 47 bare-city LOC spans removed from the held-out specs, 37 from the original documents; address lines untouched |
 | 7 | Invoice numbers; WhatsApp group names | **Redact invoice numbers**; group names are not identifiers | Four `F26-…` invoice numbers added to doc_043 (CASE_REF); `Belting Amigos BNL` removed from doc_040 |
 
-The detector follows rulings 1 and 6 in the next version (bare city
-names and codenames are no longer predicted); the whitelist of
-published-citation shapes follows ruling 2.
+The detector follows rulings 1 and 6 since v0.8.1: bare city and
+country names are never predicted (a LOC span survives only with a
+number, a street word or a venue word), codename phrases and words are
+dropped unless the matter opts in (`Matter.redact_codenames`: UI
+checkbox under *Change mode*, CLI `jude matter create
+--redact-codenames`), in which case "Project X" and every bare "X" are
+redacted deterministically. Ruling 2 (published-citation shapes left
+alone) is not yet implemented in the detector: a `C-nnn/nn` citation
+is still redacted — fail-closed, counted as a false positive.
 
 ## 1. Deal codenames — identifier or not?
 

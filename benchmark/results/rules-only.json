@@ -172,10 +172,10 @@
     "items_per_doc": 29.113636363636363
    },
    "n_docs": 44,
-   "load_seconds": 0.05936225000186823,
-   "seconds": 0.4908344579998811,
-   "chars_per_sec": 350118.04326101654,
-   "peak_rss_mb": 307.703125,
+   "load_seconds": 0.115979791036807,
+   "seconds": 0.49074345792178065,
+   "chars_per_sec": 350182.9667332847,
+   "peak_rss_mb": 308.296875,
    "device": "cpu",
    "params_m": 0,
    "notes": [

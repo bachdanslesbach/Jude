@@ -2,28 +2,28 @@
  {
   "runner_name": "spacy-only",
   "aggregate": {
-   "precision": 0.5295039164490861,
-   "recall": 0.6232329440688383,
-   "f1": 0.5725578769057029,
-   "tp": 1014,
-   "fp": 901,
-   "fn": 613,
+   "precision": 0.6401045068582626,
+   "recall": 0.6023355869698832,
+   "f1": 0.6206459784673843,
+   "tp": 980,
+   "fp": 551,
+   "fn": 647,
    "by_type": {
     "ORG": {
-     "precision": 0.5281385281385281,
+     "precision": 0.5287107258938245,
      "recall": 0.7416413373860182,
-     "f1": 0.6169405815423514,
+     "f1": 0.6173308032890577,
      "tp": 488,
-     "fp": 436,
+     "fp": 435,
      "fn": 170
     },
     "LOC": {
-     "precision": 0.22317596566523606,
-     "recall": 0.7172413793103448,
-     "f1": 0.34042553191489366,
-     "tp": 104,
-     "fp": 362,
-     "fn": 41
+     "precision": 0.8433734939759037,
+     "recall": 0.4827586206896552,
+     "f1": 0.6140350877192983,
+     "tp": 70,
+     "fp": 13,
+     "fn": 75
     },
     "PERSON": {
      "precision": 0.8038095238095239,
@@ -76,36 +76,36 @@
    }
   },
   "aggregate_any_type": {
-   "precision": 0.5942558746736293,
-   "recall": 0.6994468346650277,
-   "f1": 0.6425748164878601,
-   "tp": 1138,
-   "fp": 777,
-   "fn": 489,
+   "precision": 0.7060744611365121,
+   "recall": 0.6644130301167793,
+   "f1": 0.6846105129829005,
+   "tp": 1081,
+   "fp": 450,
+   "fn": 546,
    "by_type": {
     "ORG": {
-     "precision": 0.5847280334728033,
-     "recall": 0.8495440729483282,
-     "f1": 0.6926889714993805,
-     "tp": 559,
-     "fp": 397,
-     "fn": 99
+     "precision": 0.5777063236870311,
+     "recall": 0.8191489361702128,
+     "f1": 0.677561282212445,
+     "tp": 539,
+     "fp": 394,
+     "fn": 119
     },
     "LOC": {
-     "precision": 0.24719101123595505,
-     "recall": 0.7586206896551724,
-     "f1": 0.3728813559322034,
-     "tp": 110,
-     "fp": 335,
-     "fn": 35
+     "precision": 0.8764044943820225,
+     "recall": 0.5379310344827586,
+     "f1": 0.6666666666666665,
+     "tp": 78,
+     "fp": 11,
+     "fn": 67
     },
     "PERSON": {
-     "precision": 0.9096385542168675,
-     "recall": 0.967948717948718,
-     "f1": 0.9378881987577641,
-     "tp": 453,
+     "precision": 0.9087221095334685,
+     "recall": 0.9572649572649573,
+     "f1": 0.9323621227887616,
+     "tp": 448,
      "fp": 45,
-     "fn": 15
+     "fn": 20
     },
     "EMAIL": {
      "precision": 0.0,
@@ -152,41 +152,41 @@
   "meta": {
    "span_level": true,
    "public_body_over_redaction": {
-    "hits": 354,
+    "hits": 247,
     "total": 613,
-    "rate": 0.5774877650897227
+    "rate": 0.4029363784665579
    },
    "sentence_level": {
-    "precision": 0.7703842549203374,
-    "recall": 0.8019512195121952,
-    "f1": 0.7858508604206501,
-    "tp": 822,
-    "fp": 245,
-    "fn": 203,
+    "precision": 0.8026183282980867,
+    "recall": 0.7775609756097561,
+    "f1": 0.7898909811694749,
+    "tp": 797,
+    "fp": 196,
+    "fn": 228,
     "n_sentences": 2353
    },
    "review": {
-    "misses": 613,
-    "misses_surfaced": 256,
-    "items": 827,
-    "items_per_doc": 18.795454545454547
+    "misses": 647,
+    "misses_surfaced": 315,
+    "items": 1027,
+    "items_per_doc": 23.34090909090909
    },
    "n_docs": 44,
-   "load_seconds": 0.10443233300247812,
-   "seconds": 31.160430708001513,
-   "chars_per_sec": 5515.007209315358,
-   "peak_rss_mb": 3030.421875,
+   "load_seconds": 0.06703741697128862,
+   "seconds": 32.36023279209621,
+   "chars_per_sec": 5310.530400200746,
+   "peak_rss_mb": 2206.03125,
    "device": "cpu"
   },
   "per_doc": [
    {
     "doc_id": "doc_001_term_sheet_en",
     "score": {
-     "precision": 0.75,
+     "precision": 0.8571428571428571,
      "recall": 0.5,
-     "f1": 0.6,
+     "f1": 0.631578947368421,
      "tp": 6,
-     "fp": 2,
+     "fp": 1,
      "fn": 6,
      "by_type": {
       "ORG": {
@@ -198,11 +198,11 @@
        "fn": 1
       },
       "LOC": {
-       "precision": 0.5,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.6666666666666666,
+       "f1": 1.0,
        "tp": 1,
-       "fp": 1,
+       "fp": 0,
        "fn": 0
       },
       "PERSON": {
@@ -248,11 +248,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.75,
+     "precision": 0.8571428571428571,
      "recall": 0.5,
-     "f1": 0.6,
+     "f1": 0.631578947368421,
      "tp": 6,
-     "fp": 2,
+     "fp": 1,
      "fn": 6,
      "by_type": {
       "ORG": {
@@ -264,11 +264,11 @@
        "fn": 1
       },
       "LOC": {
-       "precision": 0.5,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.6666666666666666,
+       "f1": 1.0,
        "tp": 1,
-       "fp": 1,
+       "fp": 0,
        "fn": 0
       },
       "PERSON": {
@@ -327,12 +327,6 @@
       "text": "rue de Rivoli"
      },
      {
-      "start": 287,
-      "end": 292,
-      "type": "LOC",
-      "text": "Paris"
-     },
-     {
       "start": 337,
       "end": 343,
       "type": "PERSON",
@@ -367,11 +361,11 @@
    {
     "doc_id": "doc_002_credit_facility_en",
     "score": {
-     "precision": 0.6666666666666666,
+     "precision": 0.7272727272727273,
      "recall": 0.6153846153846154,
-     "f1": 0.64,
+     "f1": 0.6666666666666667,
      "tp": 8,
-     "fp": 4,
+     "fp": 3,
      "fn": 5,
      "by_type": {
       "PERSON": {
@@ -388,14 +382,6 @@
        "f1": 0.7272727272727273,
        "tp": 4,
        "fp": 3,
-       "fn": 0
-      },
-      "LOC": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 1,
        "fn": 0
       },
       "EMAIL": {
@@ -425,11 +411,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.6666666666666666,
+     "precision": 0.7272727272727273,
      "recall": 0.6153846153846154,
-     "f1": 0.64,
+     "f1": 0.6666666666666667,
      "tp": 8,
-     "fp": 4,
+     "fp": 3,
      "fn": 5,
      "by_type": {
       "PERSON": {
@@ -446,14 +432,6 @@
        "f1": 0.7272727272727273,
        "tp": 4,
        "fp": 3,
-       "fn": 0
-      },
-      "LOC": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 1,
        "fn": 0
       },
       "EMAIL": {
@@ -520,12 +498,6 @@
       "text": "Pioneer Industries SA"
      },
      {
-      "start": 261,
-      "end": 271,
-      "type": "LOC",
-      "text": "Luxembourg"
-     },
-     {
       "start": 364,
       "end": 367,
       "type": "ORG",
@@ -560,11 +532,11 @@
    {
     "doc_id": "doc_003_solaris_jv_fr",
     "score": {
-     "precision": 0.4782608695652174,
+     "precision": 0.6111111111111112,
      "recall": 0.6875,
-     "f1": 0.5641025641025642,
+     "f1": 0.6470588235294118,
      "tp": 11,
-     "fp": 12,
+     "fp": 7,
      "fn": 5,
      "by_type": {
       "ORG": {
@@ -575,20 +547,20 @@
        "fp": 6,
        "fn": 1
       },
-      "LOC": {
-       "precision": 0.16666666666666666,
-       "recall": 1.0,
-       "f1": 0.2857142857142857,
-       "tp": 1,
-       "fp": 5,
-       "fn": 0
-      },
       "PERSON": {
        "precision": 0.8,
        "recall": 1.0,
        "f1": 0.888888888888889,
        "tp": 4,
        "fp": 1,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
        "fn": 0
       },
       "EMAIL": {
@@ -618,11 +590,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.5217391304347826,
+     "precision": 0.6666666666666666,
      "recall": 0.75,
-     "f1": 0.6153846153846153,
+     "f1": 0.7058823529411765,
      "tp": 12,
-     "fp": 11,
+     "fp": 6,
      "fn": 4,
      "by_type": {
       "ORG": {
@@ -633,14 +605,6 @@
        "fp": 5,
        "fn": 1
       },
-      "LOC": {
-       "precision": 0.16666666666666666,
-       "recall": 1.0,
-       "f1": 0.2857142857142857,
-       "tp": 1,
-       "fp": 5,
-       "fn": 0
-      },
       "PERSON": {
        "precision": 0.8,
        "recall": 1.0,
@@ -650,6 +614,14 @@
        "fn": 0
       },
       "IBAN": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 1,
+       "fp": 0,
+       "fn": 0
+      },
+      "LOC": {
        "precision": 1.0,
        "recall": 1.0,
        "f1": 1.0,
@@ -689,12 +661,6 @@
       "text": "Mediterranean Solar Group"
      },
      {
-      "start": 68,
-      "end": 77,
-      "type": "LOC",
-      "text": "Bruxelles"
-     },
-     {
       "start": 100,
       "end": 113,
       "type": "PERSON",
@@ -705,12 +671,6 @@
       "end": 186,
       "type": "PERSON",
       "text": "Maria Rodríguez"
-     },
-     {
-      "start": 227,
-      "end": 242,
-      "type": "LOC",
-      "text": "Afrique du Nord"
      },
      {
       "start": 249,
@@ -735,12 +695,6 @@
       "end": 490,
       "type": "ORG",
       "text": "Mediterranean Solar Group"
-     },
-     {
-      "start": 503,
-      "end": 513,
-      "type": "LOC",
-      "text": "Casablanca"
      },
      {
       "start": 518,
@@ -785,12 +739,6 @@
       "text": "LU28"
      },
      {
-      "start": 878,
-      "end": 888,
-      "type": "LOC",
-      "text": "Casablanca"
-     },
-     {
       "start": 955,
       "end": 970,
       "type": "PERSON",
@@ -803,12 +751,6 @@
       "text": "boulevard Haussmann"
      },
      {
-      "start": 1002,
-      "end": 1007,
-      "type": "LOC",
-      "text": "Paris"
-     },
-     {
       "start": 1023,
       "end": 1038,
       "type": "PERSON",
@@ -819,11 +761,11 @@
    {
     "doc_id": "doc_005_supply_agreement_en",
     "score": {
-     "precision": 0.4666666666666667,
+     "precision": 0.5833333333333334,
      "recall": 0.6363636363636364,
-     "f1": 0.5384615384615385,
+     "f1": 0.6086956521739131,
      "tp": 7,
-     "fp": 8,
+     "fp": 5,
      "fn": 4,
      "by_type": {
       "ORG": {
@@ -832,14 +774,6 @@
        "f1": 0.6666666666666666,
        "tp": 5,
        "fp": 5,
-       "fn": 0
-      },
-      "LOC": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 3,
        "fn": 0
       },
       "PERSON": {
@@ -877,11 +811,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.4666666666666667,
+     "precision": 0.5833333333333334,
      "recall": 0.6363636363636364,
-     "f1": 0.5384615384615385,
+     "f1": 0.6086956521739131,
      "tp": 7,
-     "fp": 8,
+     "fp": 5,
      "fn": 4,
      "by_type": {
       "ORG": {
@@ -890,14 +824,6 @@
        "f1": 0.6666666666666666,
        "tp": 5,
        "fp": 5,
-       "fn": 0
-      },
-      "LOC": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 3,
        "fn": 0
       },
       "PERSON": {
@@ -942,22 +868,10 @@
       "text": "Acme Mining Holdings Ltd"
      },
      {
-      "start": 88,
-      "end": 94,
-      "type": "LOC",
-      "text": "Cayman"
-     },
-     {
       "start": 125,
       "end": 151,
       "type": "ORG",
       "text": "Bavarian Steel Holdings AG"
-     },
-     {
-      "start": 153,
-      "end": 159,
-      "type": "LOC",
-      "text": "Munich"
      },
      {
       "start": 177,
@@ -1018,24 +932,18 @@
       "end": 957,
       "type": "ORG",
       "text": "Acme Mining Holdings Ltd"
-     },
-     {
-      "start": 1026,
-      "end": 1033,
-      "type": "LOC",
-      "text": "Hamburg"
      }
     ]
    },
    {
     "doc_id": "doc_006_employment_dispute_en",
     "score": {
-     "precision": 0.9333333333333333,
-     "recall": 0.7368421052631579,
-     "f1": 0.8235294117647058,
-     "tp": 14,
+     "precision": 0.9285714285714286,
+     "recall": 0.6842105263157895,
+     "f1": 0.7878787878787878,
+     "tp": 13,
      "fp": 1,
-     "fn": 5,
+     "fn": 6,
      "by_type": {
       "PERSON": {
        "precision": 1.0,
@@ -1054,12 +962,12 @@
        "fn": 0
       },
       "LOC": {
-       "precision": 1.0,
-       "recall": 0.5,
-       "f1": 0.6666666666666666,
-       "tp": 1,
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
        "fp": 0,
-       "fn": 1
+       "fn": 2
       },
       "EMAIL": {
        "precision": 0.0,
@@ -1088,12 +996,12 @@
      }
     },
     "score_any_type": {
-     "precision": 0.9333333333333333,
-     "recall": 0.7368421052631579,
-     "f1": 0.8235294117647058,
-     "tp": 14,
+     "precision": 0.9285714285714286,
+     "recall": 0.6842105263157895,
+     "f1": 0.7878787878787878,
+     "tp": 13,
      "fp": 1,
-     "fn": 5,
+     "fn": 6,
      "by_type": {
       "PERSON": {
        "precision": 1.0,
@@ -1112,12 +1020,12 @@
        "fn": 0
       },
       "LOC": {
-       "precision": 1.0,
-       "recall": 0.5,
-       "f1": 0.6666666666666666,
-       "tp": 1,
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
        "fp": 0,
-       "fn": 1
+       "fn": 2
       },
       "EMAIL": {
        "precision": 0.0,
@@ -1175,12 +1083,6 @@
       "end": 309,
       "type": "ORG",
       "text": "Northbridge Analytics Ltd"
-     },
-     {
-      "start": 330,
-      "end": 336,
-      "type": "LOC",
-      "text": "London"
      },
      {
       "start": 418,
@@ -1241,11 +1143,11 @@
    {
     "doc_id": "doc_007_patent_litigation_en",
     "score": {
-     "precision": 0.6538461538461539,
+     "precision": 0.8947368421052632,
      "recall": 0.7727272727272727,
-     "f1": 0.7083333333333333,
+     "f1": 0.8292682926829269,
      "tp": 17,
-     "fp": 9,
+     "fp": 2,
      "fn": 5,
      "by_type": {
       "LOC": {
@@ -1253,7 +1155,7 @@
        "recall": 0.0,
        "f1": 0.0,
        "tp": 0,
-       "fp": 8,
+       "fp": 1,
        "fn": 1
       },
       "ORG": {
@@ -1299,11 +1201,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.6538461538461539,
+     "precision": 0.8947368421052632,
      "recall": 0.7727272727272727,
-     "f1": 0.7083333333333333,
+     "f1": 0.8292682926829269,
      "tp": 17,
-     "fp": 9,
+     "fp": 2,
      "fn": 5,
      "by_type": {
       "LOC": {
@@ -1311,7 +1213,7 @@
        "recall": 0.0,
        "f1": 0.0,
        "tp": 0,
-       "fp": 8,
+       "fp": 1,
        "fn": 1
       },
       "ORG": {
@@ -1358,12 +1260,6 @@
     },
     "pred_spans": [
      {
-      "start": 3,
-      "end": 20,
-      "type": "LOC",
-      "text": "THE UNITED STATES"
-     },
-     {
       "start": 40,
       "end": 64,
       "type": "LOC",
@@ -1388,24 +1284,6 @@
       "text": "Helios Photonics Inc"
      },
      {
-      "start": 285,
-      "end": 293,
-      "type": "LOC",
-      "text": "Delaware"
-     },
-     {
-      "start": 369,
-      "end": 377,
-      "type": "LOC",
-      "text": "San Jose"
-     },
-     {
-      "start": 379,
-      "end": 389,
-      "type": "LOC",
-      "text": "California"
-     },
-     {
       "start": 424,
       "end": 450,
       "type": "ORG",
@@ -1416,24 +1294,6 @@
       "end": 459,
       "type": "ORG",
       "text": "Lumen"
-     },
-     {
-      "start": 465,
-      "end": 471,
-      "type": "LOC",
-      "text": "Cayman"
-     },
-     {
-      "start": 511,
-      "end": 517,
-      "type": "LOC",
-      "text": "Austin"
-     },
-     {
-      "start": 519,
-      "end": 524,
-      "type": "LOC",
-      "text": "Texas"
      },
      {
       "start": 678,
@@ -1518,12 +1378,12 @@
    {
     "doc_id": "doc_008_regulatory_submission_en",
     "score": {
-     "precision": 0.7307692307692307,
-     "recall": 0.7916666666666666,
-     "f1": 0.76,
-     "tp": 19,
-     "fp": 7,
-     "fn": 5,
+     "precision": 0.782608695652174,
+     "recall": 0.75,
+     "f1": 0.7659574468085107,
+     "tp": 18,
+     "fp": 5,
+     "fn": 6,
      "by_type": {
       "ORG": {
        "precision": 0.75,
@@ -1542,12 +1402,12 @@
        "fn": 1
       },
       "LOC": {
-       "precision": 0.5,
-       "recall": 1.0,
+       "precision": 1.0,
+       "recall": 0.5,
        "f1": 0.6666666666666666,
-       "tp": 2,
-       "fp": 2,
-       "fn": 0
+       "tp": 1,
+       "fp": 0,
+       "fn": 1
       },
       "CASE_REF": {
        "precision": 0.0,
@@ -1584,12 +1444,12 @@
      }
     },
     "score_any_type": {
-     "precision": 0.7692307692307693,
-     "recall": 0.8333333333333334,
-     "f1": 0.8,
-     "tp": 20,
-     "fp": 6,
-     "fn": 4,
+     "precision": 0.8260869565217391,
+     "recall": 0.7916666666666666,
+     "f1": 0.8085106382978724,
+     "tp": 19,
+     "fp": 4,
+     "fn": 5,
      "by_type": {
       "ORG": {
        "precision": 0.7894736842105263,
@@ -1608,12 +1468,12 @@
        "fn": 0
       },
       "LOC": {
-       "precision": 0.5,
-       "recall": 1.0,
+       "precision": 1.0,
+       "recall": 0.5,
        "f1": 0.6666666666666666,
-       "tp": 2,
-       "fp": 2,
-       "fn": 0
+       "tp": 1,
+       "fp": 0,
+       "fn": 1
       },
       "CASE_REF": {
        "precision": 0.0,
@@ -1693,22 +1553,10 @@
       "text": "Polaris"
      },
      {
-      "start": 347,
-      "end": 353,
-      "type": "LOC",
-      "text": "Berlin"
-     },
-     {
       "start": 388,
       "end": 412,
       "type": "LOC",
       "text": "Karl-Liebknecht-Straße 8"
-     },
-     {
-      "start": 420,
-      "end": 426,
-      "type": "LOC",
-      "text": "Berlin"
      },
      {
       "start": 478,
@@ -1721,12 +1569,6 @@
       "end": 512,
       "type": "ORG",
       "text": "MeridianMedia"
-     },
-     {
-      "start": 518,
-      "end": 525,
-      "type": "LOC",
-      "text": "Hamburg"
      },
      {
       "start": 571,
@@ -1811,11 +1653,11 @@
    {
     "doc_id": "doc_009_witness_statement_en",
     "score": {
-     "precision": 0.8181818181818182,
+     "precision": 0.9473684210526315,
      "recall": 0.782608695652174,
-     "f1": 0.8,
+     "f1": 0.8571428571428571,
      "tp": 18,
-     "fp": 4,
+     "fp": 1,
      "fn": 5,
      "by_type": {
       "PERSON": {
@@ -1826,14 +1668,6 @@
        "fp": 1,
        "fn": 0
       },
-      "LOC": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 3,
-       "fn": 1
-      },
       "ORG": {
        "precision": 1.0,
        "recall": 1.0,
@@ -1841,6 +1675,14 @@
        "tp": 5,
        "fp": 0,
        "fn": 0
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
       },
       "EMAIL": {
        "precision": 0.0,
@@ -1869,11 +1711,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.8181818181818182,
+     "precision": 0.9473684210526315,
      "recall": 0.782608695652174,
-     "f1": 0.8,
+     "f1": 0.8571428571428571,
      "tp": 18,
-     "fp": 4,
+     "fp": 1,
      "fn": 5,
      "by_type": {
       "PERSON": {
@@ -1884,14 +1726,6 @@
        "fp": 1,
        "fn": 0
       },
-      "LOC": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 3,
-       "fn": 1
-      },
       "ORG": {
        "precision": 1.0,
        "recall": 1.0,
@@ -1899,6 +1733,14 @@
        "tp": 5,
        "fp": 0,
        "fn": 0
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
       },
       "EMAIL": {
        "precision": 0.0,
@@ -1938,18 +1780,6 @@
       "end": 68,
       "type": "PERSON",
       "text": "Carmen Ortiz-Valdez"
-     },
-     {
-      "start": 96,
-      "end": 102,
-      "type": "LOC",
-      "text": "Boston"
-     },
-     {
-      "start": 104,
-      "end": 117,
-      "type": "LOC",
-      "text": "Massachusetts"
      },
      {
       "start": 216,
@@ -2022,12 +1852,6 @@
       "end": 883,
       "type": "PERSON",
       "text": "Petrov"
-     },
-     {
-      "start": 939,
-      "end": 947,
-      "type": "LOC",
-      "text": "Delaware"
      },
      {
       "start": 1220,
@@ -2313,11 +2137,11 @@
    {
     "doc_id": "doc_011_sanctions_memo_en",
     "score": {
-     "precision": 0.4782608695652174,
+     "precision": 0.6111111111111112,
      "recall": 0.7333333333333333,
-     "f1": 0.5789473684210527,
+     "f1": 0.6666666666666666,
      "tp": 11,
-     "fp": 12,
+     "fp": 7,
      "fn": 4,
      "by_type": {
       "ORG": {
@@ -2334,14 +2158,6 @@
        "f1": 1.0,
        "tp": 4,
        "fp": 0,
-       "fn": 0
-      },
-      "LOC": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 5,
        "fn": 0
       },
       "CASE_REF": {
@@ -2379,11 +2195,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.4782608695652174,
+     "precision": 0.6111111111111112,
      "recall": 0.7333333333333333,
-     "f1": 0.5789473684210527,
+     "f1": 0.6666666666666666,
      "tp": 11,
-     "fp": 12,
+     "fp": 7,
      "fn": 4,
      "by_type": {
       "ORG": {
@@ -2400,14 +2216,6 @@
        "f1": 1.0,
        "tp": 4,
        "fp": 0,
-       "fn": 0
-      },
-      "LOC": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 5,
        "fn": 0
       },
       "CASE_REF": {
@@ -2470,12 +2278,6 @@
       "text": "Severnaya Logistika OOO"
      },
      {
-      "start": 364,
-      "end": 372,
-      "type": "LOC",
-      "text": "Murmansk"
-     },
-     {
       "start": 395,
       "end": 413,
       "type": "PERSON",
@@ -2494,22 +2296,10 @@
       "text": "Severnaya Logistics LLC"
      },
      {
-      "start": 592,
-      "end": 608,
-      "type": "LOC",
-      "text": "Saint Petersburg"
-     },
-     {
       "start": 750,
       "end": 759,
       "type": "PERSON",
       "text": "Kuznetsov"
-     },
-     {
-      "start": 838,
-      "end": 840,
-      "type": "LOC",
-      "text": "UK"
      },
      {
       "start": 866,
@@ -2522,12 +2312,6 @@
       "end": 907,
       "type": "ORG",
       "text": "EU"
-     },
-     {
-      "start": 911,
-      "end": 913,
-      "type": "LOC",
-      "text": "UK"
      },
      {
       "start": 925,
@@ -2546,12 +2330,6 @@
       "end": 1064,
       "type": "ORG",
       "text": "Fitzgerald Maloney & Partners"
-     },
-     {
-      "start": 1066,
-      "end": 1072,
-      "type": "LOC",
-      "text": "Dublin"
      },
      {
       "start": 1092,
@@ -2588,11 +2366,11 @@
    {
     "doc_id": "doc_012_engagement_letter_en",
     "score": {
-     "precision": 0.5263157894736842,
+     "precision": 0.8333333333333334,
      "recall": 0.5882352941176471,
-     "f1": 0.5555555555555555,
+     "f1": 0.6896551724137931,
      "tp": 10,
-     "fp": 9,
+     "fp": 2,
      "fn": 7,
      "by_type": {
       "ORG": {
@@ -2603,14 +2381,6 @@
        "fp": 2,
        "fn": 0
       },
-      "LOC": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 7,
-       "fn": 2
-      },
       "PERSON": {
        "precision": 1.0,
        "recall": 0.75,
@@ -2618,6 +2388,14 @@
        "tp": 3,
        "fp": 0,
        "fn": 1
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
       },
       "CASE_REF": {
        "precision": 0.0,
@@ -2654,11 +2432,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.5263157894736842,
+     "precision": 0.8333333333333334,
      "recall": 0.5882352941176471,
-     "f1": 0.5555555555555555,
+     "f1": 0.6896551724137931,
      "tp": 10,
-     "fp": 9,
+     "fp": 2,
      "fn": 7,
      "by_type": {
       "ORG": {
@@ -2669,14 +2447,6 @@
        "fp": 2,
        "fn": 0
       },
-      "LOC": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 7,
-       "fn": 2
-      },
       "PERSON": {
        "precision": 1.0,
        "recall": 0.75,
@@ -2684,6 +2454,14 @@
        "tp": 3,
        "fp": 0,
        "fn": 1
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
       },
       "CASE_REF": {
        "precision": 0.0,
@@ -2727,22 +2505,10 @@
       "text": "BluePine Capital Partners LP"
      },
      {
-      "start": 116,
-      "end": 124,
-      "type": "LOC",
-      "text": "New York"
-     },
-     {
       "start": 157,
       "end": 178,
       "type": "ORG",
       "text": "Reinhart Voss & Klein"
-     },
-     {
-      "start": 204,
-      "end": 212,
-      "type": "LOC",
-      "text": "Brussels"
      },
      {
       "start": 215,
@@ -2761,36 +2527,6 @@
       "end": 412,
       "type": "ORG",
       "text": "NordVent Holdings AS"
-     },
-     {
-      "start": 414,
-      "end": 418,
-      "type": "LOC",
-      "text": "Oslo"
-     },
-     {
-      "start": 498,
-      "end": 504,
-      "type": "LOC",
-      "text": "France"
-     },
-     {
-      "start": 506,
-      "end": 513,
-      "type": "LOC",
-      "text": "Germany"
-     },
-     {
-      "start": 518,
-      "end": 523,
-      "type": "LOC",
-      "text": "Italy"
-     },
-     {
-      "start": 570,
-      "end": 576,
-      "type": "LOC",
-      "text": "Norway"
      },
      {
       "start": 770,
@@ -3078,11 +2814,11 @@
    {
     "doc_id": "doc_014_compliance_investigation_en",
     "score": {
-     "precision": 0.5789473684210527,
+     "precision": 0.7333333333333333,
      "recall": 0.6875,
-     "f1": 0.6285714285714286,
+     "f1": 0.7096774193548386,
      "tp": 11,
-     "fp": 8,
+     "fp": 4,
      "fn": 5,
      "by_type": {
       "PERSON": {
@@ -3100,14 +2836,6 @@
        "tp": 5,
        "fp": 3,
        "fn": 1
-      },
-      "LOC": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 4,
-       "fn": 0
       },
       "CASE_REF": {
        "precision": 0.0,
@@ -3144,11 +2872,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.631578947368421,
+     "precision": 0.8,
      "recall": 0.75,
-     "f1": 0.6857142857142857,
+     "f1": 0.7741935483870969,
      "tp": 12,
-     "fp": 7,
+     "fp": 3,
      "fn": 4,
      "by_type": {
       "PERSON": {
@@ -3165,14 +2893,6 @@
        "f1": 0.8,
        "tp": 6,
        "fp": 3,
-       "fn": 0
-      },
-      "LOC": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 4,
        "fn": 0
       },
       "CASE_REF": {
@@ -3229,12 +2949,6 @@
       "text": "Levaillant Partners"
      },
      {
-      "start": 329,
-      "end": 339,
-      "type": "LOC",
-      "text": "Casablanca"
-     },
-     {
       "start": 350,
       "end": 376,
       "type": "ORG",
@@ -3253,12 +2967,6 @@
       "text": "Alcyone"
      },
      {
-      "start": 551,
-      "end": 561,
-      "type": "LOC",
-      "text": "Casablanca"
-     },
-     {
       "start": 574,
       "end": 589,
       "type": "PERSON",
@@ -3271,12 +2979,6 @@
       "text": "Fatima El-Idrissi"
      },
      {
-      "start": 990,
-      "end": 1000,
-      "type": "LOC",
-      "text": "Casablanca"
-     },
-     {
       "start": 1007,
       "end": 1018,
       "type": "PERSON",
@@ -3287,12 +2989,6 @@
       "end": 1083,
       "type": "PERSON",
       "text": "Joëlle Dupont"
-     },
-     {
-      "start": 1101,
-      "end": 1110,
-      "type": "LOC",
-      "text": "Marseille"
      },
      {
       "start": 1352,
@@ -3329,12 +3025,12 @@
    {
     "doc_id": "doc_015_corporate_restructuring_en",
     "score": {
-     "precision": 0.76,
-     "recall": 0.76,
-     "f1": 0.76,
-     "tp": 19,
-     "fp": 6,
-     "fn": 6,
+     "precision": 0.9,
+     "recall": 0.72,
+     "f1": 0.7999999999999999,
+     "tp": 18,
+     "fp": 2,
+     "fn": 7,
      "by_type": {
       "ORG": {
        "precision": 0.8823529411764706,
@@ -3344,14 +3040,6 @@
        "fp": 2,
        "fn": 0
       },
-      "LOC": {
-       "precision": 0.2,
-       "recall": 0.3333333333333333,
-       "f1": 0.25,
-       "tp": 1,
-       "fp": 4,
-       "fn": 2
-      },
       "PERSON": {
        "precision": 1.0,
        "recall": 1.0,
@@ -3359,6 +3047,14 @@
        "tp": 3,
        "fp": 0,
        "fn": 0
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
       },
       "CASE_REF": {
        "precision": 0.0,
@@ -3387,12 +3083,12 @@
      }
     },
     "score_any_type": {
-     "precision": 0.8,
-     "recall": 0.8,
-     "f1": 0.8000000000000002,
-     "tp": 20,
-     "fp": 5,
-     "fn": 5,
+     "precision": 0.95,
+     "recall": 0.76,
+     "f1": 0.8444444444444444,
+     "tp": 19,
+     "fp": 1,
+     "fn": 6,
      "by_type": {
       "ORG": {
        "precision": 0.9375,
@@ -3402,14 +3098,6 @@
        "fp": 1,
        "fn": 0
       },
-      "LOC": {
-       "precision": 0.3333333333333333,
-       "recall": 0.6666666666666666,
-       "f1": 0.4444444444444444,
-       "tp": 2,
-       "fp": 4,
-       "fn": 1
-      },
       "PERSON": {
        "precision": 1.0,
        "recall": 1.0,
@@ -3417,6 +3105,14 @@
        "tp": 3,
        "fp": 0,
        "fn": 0
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 0.3333333333333333,
+       "f1": 0.5,
+       "tp": 1,
+       "fp": 0,
+       "fn": 2
       },
       "CASE_REF": {
        "precision": 0.0,
@@ -3470,12 +3166,6 @@
       "text": "Pemberton Cross LLP"
      },
      {
-      "start": 218,
-      "end": 224,
-      "type": "LOC",
-      "text": "London"
-     },
-     {
       "start": 319,
       "end": 350,
       "type": "ORG",
@@ -3494,12 +3184,6 @@
       "text": "Reginald Caulfield"
      },
      {
-      "start": 451,
-      "end": 457,
-      "type": "LOC",
-      "text": "Jersey"
-     },
-     {
       "start": 489,
       "end": 509,
       "type": "ORG",
@@ -3510,12 +3194,6 @@
       "end": 640,
       "type": "ORG",
       "text": "Halcyon Treasury Ltd"
-     },
-     {
-      "start": 665,
-      "end": 672,
-      "type": "LOC",
-      "text": "Ireland"
      },
      {
       "start": 729,
@@ -3554,12 +3232,6 @@
       "text": "Strawinskylaan"
      },
      {
-      "start": 997,
-      "end": 1006,
-      "type": "LOC",
-      "text": "Amsterdam"
-     },
-     {
       "start": 1013,
       "end": 1041,
       "type": "ORG",
@@ -3584,12 +3256,6 @@
       "text": "Trevor Akinyemi"
      },
      {
-      "start": 1576,
-      "end": 1582,
-      "type": "LOC",
-      "text": "Jersey"
-     },
-     {
       "start": 1600,
       "end": 1614,
       "type": "PERSON",
@@ -3600,11 +3266,11 @@
    {
     "doc_id": "doc_016_tax_memo_en",
     "score": {
-     "precision": 0.6521739130434783,
+     "precision": 0.9375,
      "recall": 0.7142857142857143,
-     "f1": 0.6818181818181819,
+     "f1": 0.8108108108108109,
      "tp": 15,
-     "fp": 8,
+     "fp": 1,
      "fn": 6,
      "by_type": {
       "PERSON": {
@@ -3622,14 +3288,6 @@
        "tp": 13,
        "fp": 1,
        "fn": 1
-      },
-      "LOC": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 7,
-       "fn": 0
       },
       "CASE_REF": {
        "precision": 0.0,
@@ -3666,11 +3324,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.6521739130434783,
+     "precision": 0.9375,
      "recall": 0.7142857142857143,
-     "f1": 0.6818181818181819,
+     "f1": 0.8108108108108109,
      "tp": 15,
-     "fp": 8,
+     "fp": 1,
      "fn": 6,
      "by_type": {
       "PERSON": {
@@ -3688,14 +3346,6 @@
        "tp": 13,
        "fp": 1,
        "fn": 1
-      },
-      "LOC": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 7,
-       "fn": 0
       },
       "CASE_REF": {
        "precision": 0.0,
@@ -3769,22 +3419,10 @@
       "text": "Helix Biotech Inc"
      },
      {
-      "start": 406,
-      "end": 416,
-      "type": "LOC",
-      "text": "Luxembourg"
-     },
-     {
       "start": 530,
       "end": 548,
       "type": "ORG",
       "text": "Helix Royalty SCSp"
-     },
-     {
-      "start": 552,
-      "end": 562,
-      "type": "LOC",
-      "text": "Luxembourg"
      },
      {
       "start": 597,
@@ -3793,22 +3431,10 @@
       "text": "Helix Biotech Group AG"
      },
      {
-      "start": 658,
-      "end": 668,
-      "type": "LOC",
-      "text": "Luxembourg"
-     },
-     {
       "start": 682,
       "end": 695,
       "type": "ORG",
       "text": "Helix GP Sarl"
-     },
-     {
-      "start": 803,
-      "end": 806,
-      "type": "LOC",
-      "text": "Zug"
      },
      {
       "start": 811,
@@ -3821,18 +3447,6 @@
       "end": 918,
       "type": "ORG",
       "text": "Helix Biotech Inc"
-     },
-     {
-      "start": 921,
-      "end": 930,
-      "type": "LOC",
-      "text": "Cambridge"
-     },
-     {
-      "start": 932,
-      "end": 945,
-      "type": "LOC",
-      "text": "Massachusetts"
      },
      {
       "start": 966,
@@ -3859,12 +3473,6 @@
       "text": "Helix Biotech Group AG"
      },
      {
-      "start": 1270,
-      "end": 1280,
-      "type": "LOC",
-      "text": "Luxembourg"
-     },
-     {
       "start": 1452,
       "end": 1456,
       "type": "ORG",
@@ -3875,11 +3483,11 @@
    {
     "doc_id": "doc_017_data_breach_notification_en",
     "score": {
-     "precision": 0.5,
+     "precision": 0.6363636363636364,
      "recall": 0.5384615384615384,
-     "f1": 0.5185185185185186,
+     "f1": 0.5833333333333334,
      "tp": 7,
-     "fp": 7,
+     "fp": 4,
      "fn": 6,
      "by_type": {
       "ORG": {
@@ -3903,7 +3511,7 @@
        "recall": 0.0,
        "f1": 0.0,
        "tp": 0,
-       "fp": 3,
+       "fp": 0,
        "fn": 1
       },
       "EMAIL": {
@@ -3933,11 +3541,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.5714285714285714,
+     "precision": 0.7272727272727273,
      "recall": 0.6153846153846154,
-     "f1": 0.5925925925925927,
+     "f1": 0.6666666666666667,
      "tp": 8,
-     "fp": 6,
+     "fp": 3,
      "fn": 5,
      "by_type": {
       "ORG": {
@@ -3948,14 +3556,6 @@
        "fp": 3,
        "fn": 0
       },
-      "LOC": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 3,
-       "fn": 1
-      },
       "PERSON": {
        "precision": 1.0,
        "recall": 1.0,
@@ -3963,6 +3563,14 @@
        "tp": 4,
        "fp": 0,
        "fn": 0
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
       },
       "EMAIL": {
        "precision": 0.0,
@@ -4002,12 +3610,6 @@
       "end": 243,
       "type": "PERSON",
       "text": "Stedelijk Verzekeringen"
-     },
-     {
-      "start": 288,
-      "end": 297,
-      "type": "LOC",
-      "text": "Amsterdam"
      },
      {
       "start": 307,
@@ -4052,12 +3654,6 @@
       "text": "the Information Commissioner's Office"
      },
      {
-      "start": 1607,
-      "end": 1609,
-      "type": "LOC",
-      "text": "UK"
-     },
-     {
       "start": 1685,
       "end": 1699,
       "type": "PERSON",
@@ -4068,24 +3664,18 @@
       "end": 1723,
       "type": "ORG",
       "text": "Vermeulen & Partners"
-     },
-     {
-      "start": 1725,
-      "end": 1733,
-      "type": "LOC",
-      "text": "Brussels"
      }
     ]
    },
    {
     "doc_id": "doc_018_cease_and_desist_en",
     "score": {
-     "precision": 0.5882352941176471,
-     "recall": 0.7142857142857143,
-     "f1": 0.6451612903225806,
-     "tp": 10,
-     "fp": 7,
-     "fn": 4,
+     "precision": 0.75,
+     "recall": 0.6428571428571429,
+     "f1": 0.6923076923076924,
+     "tp": 9,
+     "fp": 3,
+     "fn": 5,
      "by_type": {
       "PERSON": {
        "precision": 1.0,
@@ -4104,12 +3694,12 @@
        "fn": 0
       },
       "LOC": {
-       "precision": 0.16666666666666666,
-       "recall": 1.0,
-       "f1": 0.2857142857142857,
-       "tp": 1,
-       "fp": 5,
-       "fn": 0
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 1,
+       "fn": 1
       },
       "EMAIL": {
        "precision": 0.0,
@@ -4146,12 +3736,12 @@
      }
     },
     "score_any_type": {
-     "precision": 0.5882352941176471,
-     "recall": 0.7142857142857143,
-     "f1": 0.6451612903225806,
-     "tp": 10,
-     "fp": 7,
-     "fn": 4,
+     "precision": 0.75,
+     "recall": 0.6428571428571429,
+     "f1": 0.6923076923076924,
+     "tp": 9,
+     "fp": 3,
+     "fn": 5,
      "by_type": {
       "PERSON": {
        "precision": 1.0,
@@ -4170,12 +3760,12 @@
        "fn": 0
       },
       "LOC": {
-       "precision": 0.16666666666666666,
-       "recall": 1.0,
-       "f1": 0.2857142857142857,
-       "tp": 1,
-       "fp": 5,
-       "fn": 0
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 1,
+       "fn": 1
       },
       "EMAIL": {
        "precision": 0.0,
@@ -4231,18 +3821,6 @@
       "text": "Pinegrove Coffee Roasters LLC"
      },
      {
-      "start": 241,
-      "end": 252,
-      "type": "LOC",
-      "text": "Cascade Way"
-     },
-     {
-      "start": 254,
-      "end": 262,
-      "type": "LOC",
-      "text": "Portland"
-     },
-     {
       "start": 385,
       "end": 413,
       "type": "ORG",
@@ -4265,24 +3843,6 @@
       "end": 673,
       "type": "ORG",
       "text": "Pinegrove Coffee Roasters LLC"
-     },
-     {
-      "start": 825,
-      "end": 833,
-      "type": "LOC",
-      "text": "Portland"
-     },
-     {
-      "start": 835,
-      "end": 842,
-      "type": "LOC",
-      "text": "Seattle"
-     },
-     {
-      "start": 1151,
-      "end": 1157,
-      "type": "LOC",
-      "text": "Oregon"
      },
      {
       "start": 1544,
@@ -4319,11 +3879,11 @@
    {
     "doc_id": "doc_019_antitrust_complaint_en",
     "score": {
-     "precision": 0.7083333333333334,
+     "precision": 0.7391304347826086,
      "recall": 0.6538461538461539,
-     "f1": 0.68,
+     "f1": 0.693877551020408,
      "tp": 17,
-     "fp": 7,
+     "fp": 6,
      "fn": 9,
      "by_type": {
       "ORG": {
@@ -4347,7 +3907,7 @@
        "recall": 0.0,
        "f1": 0.0,
        "tp": 0,
-       "fp": 2,
+       "fp": 1,
        "fn": 1
       },
       "EMAIL": {
@@ -4369,11 +3929,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.75,
+     "precision": 0.782608695652174,
      "recall": 0.6923076923076923,
-     "f1": 0.7199999999999999,
+     "f1": 0.7346938775510203,
      "tp": 18,
-     "fp": 6,
+     "fp": 5,
      "fn": 8,
      "by_type": {
       "ORG": {
@@ -4397,7 +3957,7 @@
        "recall": 0.0,
        "f1": 0.0,
        "tp": 0,
-       "fp": 2,
+       "fp": 1,
        "fn": 1
       },
       "EMAIL": {
@@ -4454,12 +4014,6 @@
       "end": 392,
       "type": "LOC",
       "text": "Dublin 2"
-     },
-     {
-      "start": 394,
-      "end": 401,
-      "type": "LOC",
-      "text": "Ireland"
      },
      {
       "start": 403,
@@ -4568,12 +4122,12 @@
    {
     "doc_id": "doc_020_insolvency_update_en",
     "score": {
-     "precision": 0.8636363636363636,
-     "recall": 0.7307692307692307,
-     "f1": 0.7916666666666666,
-     "tp": 19,
+     "precision": 0.8333333333333334,
+     "recall": 0.5769230769230769,
+     "f1": 0.6818181818181818,
+     "tp": 15,
      "fp": 3,
-     "fn": 7,
+     "fn": 11,
      "by_type": {
       "ORG": {
        "precision": 0.7692307692307693,
@@ -4593,11 +4147,11 @@
       },
       "LOC": {
        "precision": 1.0,
-       "recall": 0.8333333333333334,
-       "f1": 0.9090909090909091,
-       "tp": 5,
+       "recall": 0.16666666666666666,
+       "f1": 0.2857142857142857,
+       "tp": 1,
        "fp": 0,
-       "fn": 1
+       "fn": 5
       },
       "CASE_REF": {
        "precision": 0.0,
@@ -4634,20 +4188,20 @@
      }
     },
     "score_any_type": {
-     "precision": 0.8636363636363636,
-     "recall": 0.7307692307692307,
-     "f1": 0.7916666666666666,
-     "tp": 19,
+     "precision": 0.8333333333333334,
+     "recall": 0.5769230769230769,
+     "f1": 0.6818181818181818,
+     "tp": 15,
      "fp": 3,
-     "fn": 7,
+     "fn": 11,
      "by_type": {
       "ORG": {
-       "precision": 0.7857142857142857,
-       "recall": 1.0,
-       "f1": 0.88,
-       "tp": 11,
+       "precision": 0.7692307692307693,
+       "recall": 0.9090909090909091,
+       "f1": 0.8333333333333333,
+       "tp": 10,
        "fp": 3,
-       "fn": 0
+       "fn": 1
       },
       "PERSON": {
        "precision": 1.0,
@@ -4659,11 +4213,11 @@
       },
       "LOC": {
        "precision": 1.0,
-       "recall": 0.6666666666666666,
-       "f1": 0.8,
-       "tp": 4,
+       "recall": 0.16666666666666666,
+       "f1": 0.2857142857142857,
+       "tp": 1,
        "fp": 0,
-       "fn": 2
+       "fn": 5
       },
       "CASE_REF": {
        "precision": 0.0,
@@ -4737,18 +4291,6 @@
       "text": "Avenir"
      },
      {
-      "start": 754,
-      "end": 769,
-      "type": "LOC",
-      "text": "the Avenir Lyon"
-     },
-     {
-      "start": 841,
-      "end": 845,
-      "type": "LOC",
-      "text": "Lyon"
-     },
-     {
       "start": 896,
       "end": 923,
       "type": "ORG",
@@ -4809,12 +4351,6 @@
       "text": "Ingrid Vanderbeke"
      },
      {
-      "start": 1846,
-      "end": 1854,
-      "type": "LOC",
-      "text": "Brussels"
-     },
-     {
       "start": 1866,
       "end": 1895,
       "type": "ORG",
@@ -4825,23 +4361,17 @@
       "end": 1919,
       "type": "LOC",
       "text": "Boulevard du Régent 47"
-     },
-     {
-      "start": 1926,
-      "end": 1934,
-      "type": "LOC",
-      "text": "Brussels"
      }
     ]
    },
    {
     "doc_id": "doc_021_board_minutes_en",
     "score": {
-     "precision": 0.676923076923077,
+     "precision": 0.7857142857142857,
      "recall": 0.7857142857142857,
-     "f1": 0.7272727272727272,
+     "f1": 0.7857142857142857,
      "tp": 44,
-     "fp": 21,
+     "fp": 12,
      "fn": 12,
      "by_type": {
       "PERSON": {
@@ -4852,14 +4382,6 @@
        "fp": 1,
        "fn": 2
       },
-      "LOC": {
-       "precision": 0.18181818181818182,
-       "recall": 0.6666666666666666,
-       "f1": 0.28571428571428575,
-       "tp": 2,
-       "fp": 9,
-       "fn": 1
-      },
       "ORG": {
        "precision": 0.6206896551724138,
        "recall": 0.8571428571428571,
@@ -4867,6 +4389,14 @@
        "tp": 18,
        "fp": 11,
        "fn": 3
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 0.6666666666666666,
+       "f1": 0.8,
+       "tp": 2,
+       "fp": 0,
+       "fn": 1
       },
       "CASE_REF": {
        "precision": 0.0,
@@ -4911,11 +4441,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.7076923076923077,
+     "precision": 0.8214285714285714,
      "recall": 0.8214285714285714,
-     "f1": 0.7603305785123968,
+     "f1": 0.8214285714285714,
      "tp": 46,
-     "fp": 19,
+     "fp": 10,
      "fn": 10,
      "by_type": {
       "ORG": {
@@ -4926,19 +4456,19 @@
        "fp": 10,
        "fn": 2
       },
-      "LOC": {
-       "precision": 0.18181818181818182,
-       "recall": 0.6666666666666666,
-       "f1": 0.28571428571428575,
-       "tp": 2,
-       "fp": 9,
-       "fn": 1
-      },
       "PERSON": {
        "precision": 1.0,
        "recall": 0.9615384615384616,
        "f1": 0.9803921568627451,
        "tp": 25,
+       "fp": 0,
+       "fn": 1
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 0.6666666666666666,
+       "f1": 0.8,
+       "tp": 2,
        "fp": 0,
        "fn": 1
       },
@@ -4990,24 +4520,6 @@
       "end": 17,
       "type": "PERSON",
       "text": "VANTARIS POLYMERS"
-     },
-     {
-      "start": 72,
-      "end": 79,
-      "type": "LOC",
-      "text": "Antwerp"
-     },
-     {
-      "start": 82,
-      "end": 85,
-      "type": "LOC",
-      "text": "RPR"
-     },
-     {
-      "start": 86,
-      "end": 93,
-      "type": "LOC",
-      "text": "Antwerp"
      },
      {
       "start": 121,
@@ -5118,12 +4630,6 @@
       "text": "Grafenberger Allee 112"
      },
      {
-      "start": 1429,
-      "end": 1439,
-      "type": "LOC",
-      "text": "Düsseldorf"
-     },
-     {
       "start": 1467,
       "end": 1500,
       "type": "ORG",
@@ -5148,18 +4654,6 @@
       "text": "Feldmann"
      },
      {
-      "start": 1852,
-      "end": 1862,
-      "type": "LOC",
-      "text": "Düsseldorf"
-     },
-     {
-      "start": 1867,
-      "end": 1874,
-      "type": "LOC",
-      "text": "Wrocław"
-     },
-     {
       "start": 1930,
       "end": 1938,
       "type": "PERSON",
@@ -5170,12 +4664,6 @@
       "end": 2116,
       "type": "ORG",
       "text": "the European Commission"
-     },
-     {
-      "start": 2289,
-      "end": 2296,
-      "type": "LOC",
-      "text": "Belgium"
      },
      {
       "start": 2327,
@@ -5218,12 +4706,6 @@
       "end": 2932,
       "type": "ORG",
       "text": "Feldmann"
-     },
-     {
-      "start": 2950,
-      "end": 2957,
-      "type": "LOC",
-      "text": "Wrocław"
      },
      {
       "start": 3003,
@@ -5328,12 +4810,6 @@
       "text": "Regentlaan 58"
      },
      {
-      "start": 5135,
-      "end": 5143,
-      "type": "LOC",
-      "text": "Brussels"
-     },
-     {
       "start": 5149,
       "end": 5157,
       "type": "PERSON",
@@ -5380,11 +4856,11 @@
    {
     "doc_id": "doc_022_nda_fr",
     "score": {
-     "precision": 0.35714285714285715,
+     "precision": 0.4411764705882353,
      "recall": 0.40540540540540543,
-     "f1": 0.379746835443038,
+     "f1": 0.4225352112676056,
      "tp": 15,
-     "fp": 27,
+     "fp": 19,
      "fn": 22,
      "by_type": {
       "ORG": {
@@ -5404,11 +4880,11 @@
        "fn": 0
       },
       "LOC": {
-       "precision": 0.2727272727272727,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.42857142857142855,
+       "f1": 1.0,
        "tp": 3,
-       "fp": 8,
+       "fp": 0,
        "fn": 0
       },
       "CASE_REF": {
@@ -5454,20 +4930,20 @@
      }
     },
     "score_any_type": {
-     "precision": 0.42857142857142855,
-     "recall": 0.4864864864864865,
-     "f1": 0.4556962025316456,
-     "tp": 18,
-     "fp": 24,
-     "fn": 19,
+     "precision": 0.5,
+     "recall": 0.4594594594594595,
+     "f1": 0.47887323943661975,
+     "tp": 17,
+     "fp": 17,
+     "fn": 20,
      "by_type": {
       "ORG": {
-       "precision": 0.25,
-       "recall": 0.3125,
-       "f1": 0.2777777777777778,
-       "tp": 5,
+       "precision": 0.21052631578947367,
+       "recall": 0.25,
+       "f1": 0.22857142857142856,
+       "tp": 4,
        "fp": 15,
-       "fn": 11
+       "fn": 12
       },
       "PERSON": {
        "precision": 0.8333333333333334,
@@ -5478,11 +4954,11 @@
        "fn": 0
       },
       "LOC": {
-       "precision": 0.3,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.4615384615384615,
+       "f1": 1.0,
        "tp": 3,
-       "fp": 7,
+       "fp": 0,
        "fn": 0
       },
       "CASE_REF": {
@@ -5553,12 +5029,6 @@
       "text": "Quai des Ardennes 14"
      },
      {
-      "start": 272,
-      "end": 277,
-      "type": "LOC",
-      "text": "Liège"
-     },
-     {
       "start": 293,
       "end": 325,
       "type": "ORG",
@@ -5575,18 +5045,6 @@
       "end": 594,
       "type": "LOC",
       "text": "rue de la République"
-     },
-     {
-      "start": 602,
-      "end": 606,
-      "type": "LOC",
-      "text": "Lyon"
-     },
-     {
-      "start": 664,
-      "end": 668,
-      "type": "LOC",
-      "text": "Lyon"
      },
      {
       "start": 686,
@@ -5625,12 +5083,6 @@
       "text": "Autorité de la concurrence"
      },
      {
-      "start": 1764,
-      "end": 1776,
-      "type": "LOC",
-      "text": "Bénéficiaire"
-     },
-     {
       "start": 1794,
       "end": 1799,
       "type": "PERSON",
@@ -5653,12 +5105,6 @@
       "end": 2282,
       "type": "LOC",
       "text": "Chaussée de Charleroi 95"
-     },
-     {
-      "start": 2289,
-      "end": 2298,
-      "type": "LOC",
-      "text": "Bruxelles"
      },
      {
       "start": 2314,
@@ -5727,12 +5173,6 @@
       "text": "Informations Confidentielles"
      },
      {
-      "start": 4489,
-      "end": 4492,
-      "type": "LOC",
-      "text": "CIC"
-     },
-     {
       "start": 4831,
       "end": 4852,
       "type": "ORG",
@@ -5745,12 +5185,6 @@
       "text": "Valdoire"
      },
      {
-      "start": 5221,
-      "end": 5230,
-      "type": "LOC",
-      "text": "Bruxelles"
-     },
-     {
       "start": 5374,
       "end": 5381,
       "type": "ORG",
@@ -5761,12 +5195,6 @@
       "end": 5518,
       "type": "PERSON",
       "text": "Héron"
-     },
-     {
-      "start": 5546,
-      "end": 5551,
-      "type": "LOC",
-      "text": "Liège"
      },
      {
       "start": 5641,
@@ -5785,12 +5213,12 @@
    {
     "doc_id": "doc_023_form_co_excerpt_en",
     "score": {
-     "precision": 0.52,
-     "recall": 0.5909090909090909,
-     "f1": 0.5531914893617023,
-     "tp": 26,
-     "fp": 24,
-     "fn": 18,
+     "precision": 0.55,
+     "recall": 0.5,
+     "f1": 0.5238095238095238,
+     "tp": 22,
+     "fp": 18,
+     "fn": 22,
      "by_type": {
       "ORG": {
        "precision": 0.41935483870967744,
@@ -5801,12 +5229,12 @@
        "fn": 5
       },
       "LOC": {
-       "precision": 0.5384615384615384,
-       "recall": 0.875,
-       "f1": 0.6666666666666667,
-       "tp": 7,
-       "fp": 6,
-       "fn": 1
+       "precision": 1.0,
+       "recall": 0.375,
+       "f1": 0.5454545454545454,
+       "tp": 3,
+       "fp": 0,
+       "fn": 5
       },
       "PERSON": {
        "precision": 1.0,
@@ -5859,12 +5287,12 @@
      }
     },
     "score_any_type": {
-     "precision": 0.52,
-     "recall": 0.5909090909090909,
-     "f1": 0.5531914893617023,
-     "tp": 26,
-     "fp": 24,
-     "fn": 18,
+     "precision": 0.55,
+     "recall": 0.5,
+     "f1": 0.5238095238095238,
+     "tp": 22,
+     "fp": 18,
+     "fn": 22,
      "by_type": {
       "ORG": {
        "precision": 0.41935483870967744,
@@ -5875,12 +5303,12 @@
        "fn": 5
       },
       "LOC": {
-       "precision": 0.5384615384615384,
-       "recall": 0.875,
-       "f1": 0.6666666666666667,
-       "tp": 7,
-       "fp": 6,
-       "fn": 1
+       "precision": 1.0,
+       "recall": 0.375,
+       "f1": 0.5454545454545454,
+       "tp": 3,
+       "fp": 0,
+       "fn": 5
       },
       "PERSON": {
        "precision": 1.0,
@@ -6018,18 +5446,6 @@
       "text": "Königsallee 14"
      },
      {
-      "start": 1758,
-      "end": 1768,
-      "type": "LOC",
-      "text": "Düsseldorf"
-     },
-     {
-      "start": 1770,
-      "end": 1777,
-      "type": "LOC",
-      "text": "Germany"
-     },
-     {
       "start": 1897,
       "end": 1916,
       "type": "ORG",
@@ -6054,18 +5470,6 @@
       "text": "Rue Belliard 88"
      },
      {
-      "start": 2215,
-      "end": 2223,
-      "type": "LOC",
-      "text": "Brussels"
-     },
-     {
-      "start": 2225,
-      "end": 2232,
-      "type": "LOC",
-      "text": "Belgium"
-     },
-     {
       "start": 2327,
       "end": 2336,
       "type": "PERSON",
@@ -6084,18 +5488,6 @@
       "text": "Westzeedijk 507"
      },
      {
-      "start": 2570,
-      "end": 2579,
-      "type": "LOC",
-      "text": "Rotterdam"
-     },
-     {
-      "start": 2581,
-      "end": 2592,
-      "type": "LOC",
-      "text": "Netherlands"
-     },
-     {
       "start": 2614,
       "end": 2630,
       "type": "PERSON",
@@ -6106,30 +5498,6 @@
       "end": 2688,
       "type": "PERSON",
       "text": "Bakhuizen"
-     },
-     {
-      "start": 2828,
-      "end": 2835,
-      "type": "LOC",
-      "text": "England"
-     },
-     {
-      "start": 2840,
-      "end": 2845,
-      "type": "LOC",
-      "text": "Wales"
-     },
-     {
-      "start": 2897,
-      "end": 2903,
-      "type": "LOC",
-      "text": "London"
-     },
-     {
-      "start": 2914,
-      "end": 2928,
-      "type": "LOC",
-      "text": "United Kingdom"
      },
      {
       "start": 2950,
@@ -6238,11 +5606,11 @@
    {
     "doc_id": "doc_024_dawn_raid_memo_fr",
     "score": {
-     "precision": 0.45901639344262296,
+     "precision": 0.5185185185185185,
      "recall": 0.5,
-     "f1": 0.4786324786324786,
+     "f1": 0.509090909090909,
      "tp": 28,
-     "fp": 33,
+     "fp": 26,
      "fn": 28,
      "by_type": {
       "ORG": {
@@ -6262,11 +5630,11 @@
        "fn": 4
       },
       "LOC": {
-       "precision": 0.1111111111111111,
+       "precision": 0.5,
        "recall": 1.0,
-       "f1": 0.19999999999999998,
+       "f1": 0.6666666666666666,
        "tp": 1,
-       "fp": 8,
+       "fp": 1,
        "fn": 0
       },
       "CASE_REF": {
@@ -6312,12 +5680,12 @@
      }
     },
     "score_any_type": {
-     "precision": 0.6557377049180327,
-     "recall": 0.7142857142857143,
-     "f1": 0.6837606837606838,
-     "tp": 40,
-     "fp": 21,
-     "fn": 16,
+     "precision": 0.7037037037037037,
+     "recall": 0.6785714285714286,
+     "f1": 0.6909090909090909,
+     "tp": 38,
+     "fp": 16,
+     "fn": 18,
      "by_type": {
       "CASE_REF": {
        "precision": 1.0,
@@ -6336,19 +5704,19 @@
        "fn": 0
       },
       "ORG": {
-       "precision": 0.391304347826087,
-       "recall": 0.5625,
-       "f1": 0.46153846153846156,
-       "tp": 9,
+       "precision": 0.3333333333333333,
+       "recall": 0.4375,
+       "f1": 0.37837837837837834,
+       "tp": 7,
        "fp": 14,
-       "fn": 7
+       "fn": 9
       },
       "LOC": {
-       "precision": 0.14285714285714285,
+       "precision": 0.5,
        "recall": 1.0,
-       "f1": 0.25,
+       "f1": 0.6666666666666666,
        "tp": 1,
-       "fp": 6,
+       "fp": 1,
        "fn": 0
       },
       "IBAN": {
@@ -6447,12 +5815,6 @@
       "text": "rue de l'Industrie 14"
      },
      {
-      "start": 564,
-      "end": 572,
-      "type": "LOC",
-      "text": "Nivelles"
-     },
-     {
       "start": 1032,
       "end": 1039,
       "type": "ORG",
@@ -6475,24 +5837,6 @@
       "end": 1199,
       "type": "ORG",
       "text": "Commission européenne"
-     },
-     {
-      "start": 1249,
-      "end": 1255,
-      "type": "LOC",
-      "text": "France"
-     },
-     {
-      "start": 1263,
-      "end": 1271,
-      "type": "LOC",
-      "text": "Pays-Bas"
-     },
-     {
-      "start": 1329,
-      "end": 1337,
-      "type": "LOC",
-      "text": "Nivelles"
      },
      {
       "start": 1362,
@@ -6657,22 +6001,10 @@
       "text": "Mme Deprez"
      },
      {
-      "start": 4611,
-      "end": 4618,
-      "type": "LOC",
-      "text": "Polyvex"
-     },
-     {
       "start": 4733,
       "end": 4742,
       "type": "ORG",
       "text": "Auditorat"
-     },
-     {
-      "start": 4804,
-      "end": 4811,
-      "type": "LOC",
-      "text": "Polyvex"
      },
      {
       "start": 4886,
@@ -6697,12 +6029,6 @@
       "end": 5145,
       "type": "PERSON",
       "text": "Me Ravensteyn"
-     },
-     {
-      "start": 5168,
-      "end": 5176,
-      "type": "LOC",
-      "text": "Nivelles"
      },
      {
       "start": 5244,
@@ -6757,12 +6083,12 @@
    {
     "doc_id": "doc_025_leniency_marker_en",
     "score": {
-     "precision": 0.53125,
-     "recall": 0.6938775510204082,
-     "f1": 0.6017699115044248,
-     "tp": 34,
-     "fp": 30,
-     "fn": 15,
+     "precision": 0.6470588235294118,
+     "recall": 0.673469387755102,
+     "f1": 0.66,
+     "tp": 33,
+     "fp": 18,
+     "fn": 16,
      "by_type": {
       "ORG": {
        "precision": 0.5483870967741935,
@@ -6773,12 +6099,12 @@
        "fn": 6
       },
       "LOC": {
-       "precision": 0.1875,
-       "recall": 1.0,
-       "f1": 0.3157894736842105,
-       "tp": 3,
-       "fp": 13,
-       "fn": 0
+       "precision": 0.6666666666666666,
+       "recall": 0.6666666666666666,
+       "f1": 0.6666666666666666,
+       "tp": 2,
+       "fp": 1,
+       "fn": 1
       },
       "PERSON": {
        "precision": 0.8235294117647058,
@@ -6823,28 +6149,28 @@
      }
     },
     "score_any_type": {
-     "precision": 0.640625,
-     "recall": 0.8367346938775511,
-     "f1": 0.7256637168141593,
-     "tp": 41,
-     "fp": 23,
-     "fn": 8,
+     "precision": 0.7254901960784313,
+     "recall": 0.7551020408163265,
+     "f1": 0.74,
+     "tp": 37,
+     "fp": 14,
+     "fn": 12,
      "by_type": {
       "ORG": {
-       "precision": 0.6388888888888888,
-       "recall": 1.0,
-       "f1": 0.7796610169491525,
-       "tp": 23,
+       "precision": 0.6060606060606061,
+       "recall": 0.8695652173913043,
+       "f1": 0.7142857142857143,
+       "tp": 20,
        "fp": 13,
-       "fn": 0
+       "fn": 3
       },
       "LOC": {
-       "precision": 0.23076923076923078,
-       "recall": 1.0,
-       "f1": 0.375,
-       "tp": 3,
-       "fp": 10,
-       "fn": 0
+       "precision": 0.6666666666666666,
+       "recall": 0.6666666666666666,
+       "f1": 0.6666666666666666,
+       "tp": 2,
+       "fp": 1,
+       "fn": 1
       },
       "PERSON": {
        "precision": 1.0,
@@ -6896,12 +6222,6 @@
       "text": "VERCAUTEREN ADRIAENSSENS"
      },
      {
-      "start": 61,
-      "end": 69,
-      "type": "LOC",
-      "text": "Brussels"
-     },
-     {
       "start": 154,
       "end": 173,
       "type": "ORG",
@@ -6912,12 +6232,6 @@
       "end": 223,
       "type": "LOC",
       "text": "Place Madou 1"
-     },
-     {
-      "start": 230,
-      "end": 238,
-      "type": "LOC",
-      "text": "Brussels"
      },
      {
       "start": 472,
@@ -6936,12 +6250,6 @@
       "end": 633,
       "type": "ORG",
       "text": "Zilverberg Surface Technologies B.V"
-     },
-     {
-      "start": 708,
-      "end": 716,
-      "type": "LOC",
-      "text": "Enschede"
      },
      {
       "start": 719,
@@ -6968,12 +6276,6 @@
       "text": "Steinhauer Oberflächentechnik GmbH"
      },
      {
-      "start": 2331,
-      "end": 2338,
-      "type": "LOC",
-      "text": "Cologne"
-     },
-     {
       "start": 2341,
       "end": 2351,
       "type": "ORG",
@@ -6986,34 +6288,10 @@
       "text": "Arundel Protective Systems Ltd"
      },
      {
-      "start": 2391,
-      "end": 2400,
-      "type": "LOC",
-      "text": "Sheffield"
-     },
-     {
-      "start": 2403,
-      "end": 2410,
-      "type": "LOC",
-      "text": "Arundel"
-     },
-     {
       "start": 2422,
       "end": 2446,
       "type": "ORG",
       "text": "Rivestimenti Tirreno S.p"
-     },
-     {
-      "start": 2451,
-      "end": 2458,
-      "type": "LOC",
-      "text": "Livorno"
-     },
-     {
-      "start": 2461,
-      "end": 2468,
-      "type": "LOC",
-      "text": "Tirreno"
      },
      {
       "start": 2472,
@@ -7088,12 +6366,6 @@
       "text": "Cosimo Barsanti"
      },
      {
-      "start": 3124,
-      "end": 3131,
-      "type": "LOC",
-      "text": "Tirreno"
-     },
-     {
       "start": 3133,
       "end": 3140,
       "type": "PERSON",
@@ -7112,12 +6384,6 @@
       "text": "FCFE"
      },
      {
-      "start": 3396,
-      "end": 3405,
-      "type": "LOC",
-      "text": "Frankfurt"
-     },
-     {
       "start": 3471,
       "end": 3475,
       "type": "ORG",
@@ -7130,22 +6396,10 @@
       "text": "the Hotel Leyendecker"
      },
      {
-      "start": 3570,
-      "end": 3577,
-      "type": "LOC",
-      "text": "Cologne"
-     },
-     {
       "start": 3633,
       "end": 3657,
       "type": "LOC",
       "text": "the Grand Hotel Marchesi"
-     },
-     {
-      "start": 3661,
-      "end": 3668,
-      "type": "LOC",
-      "text": "Bologna"
      },
      {
       "start": 3785,
@@ -7188,12 +6442,6 @@
       "end": 4556,
       "type": "ORG",
       "text": "CMA"
-     },
-     {
-      "start": 4561,
-      "end": 4579,
-      "type": "LOC",
-      "text": "the United Kingdom"
      },
      {
       "start": 4994,
@@ -7278,21 +6526,13 @@
    {
     "doc_id": "doc_026_rfi_response_fr",
     "score": {
-     "precision": 0.3132530120481928,
-     "recall": 0.5531914893617021,
-     "f1": 0.4,
-     "tp": 26,
-     "fp": 57,
-     "fn": 21,
+     "precision": 0.43103448275862066,
+     "recall": 0.5319148936170213,
+     "f1": 0.4761904761904762,
+     "tp": 25,
+     "fp": 33,
+     "fn": 22,
      "by_type": {
-      "LOC": {
-       "precision": 0.1111111111111111,
-       "recall": 1.0,
-       "f1": 0.19999999999999998,
-       "tp": 3,
-       "fp": 24,
-       "fn": 0
-      },
       "ORG": {
        "precision": 0.37209302325581395,
        "recall": 0.64,
@@ -7308,6 +6548,14 @@
        "tp": 7,
        "fp": 6,
        "fn": 2
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 0.6666666666666666,
+       "f1": 0.8,
+       "tp": 2,
+       "fp": 0,
+       "fn": 1
       },
       "PHONE": {
        "precision": 0.0,
@@ -7352,28 +6600,20 @@
      }
     },
     "score_any_type": {
-     "precision": 0.39759036144578314,
-     "recall": 0.7021276595744681,
-     "f1": 0.5076923076923077,
-     "tp": 33,
-     "fp": 50,
-     "fn": 14,
+     "precision": 0.4827586206896552,
+     "recall": 0.5957446808510638,
+     "f1": 0.5333333333333333,
+     "tp": 28,
+     "fp": 30,
+     "fn": 19,
      "by_type": {
       "ORG": {
-       "precision": 0.42,
-       "recall": 0.84,
-       "f1": 0.5599999999999999,
-       "tp": 21,
-       "fp": 29,
-       "fn": 4
-      },
-      "LOC": {
-       "precision": 0.13636363636363635,
-       "recall": 1.0,
-       "f1": 0.24000000000000002,
-       "tp": 3,
-       "fp": 19,
-       "fn": 0
+       "precision": 0.391304347826087,
+       "recall": 0.72,
+       "f1": 0.5070422535211268,
+       "tp": 18,
+       "fp": 28,
+       "fn": 7
       },
       "CASE_REF": {
        "precision": 1.0,
@@ -7384,11 +6624,19 @@
        "fn": 1
       },
       "PERSON": {
-       "precision": 0.8,
-       "recall": 0.8888888888888888,
-       "f1": 0.8421052631578948,
-       "tp": 8,
+       "precision": 0.7777777777777778,
+       "recall": 0.7777777777777778,
+       "f1": 0.7777777777777778,
+       "tp": 7,
        "fp": 2,
+       "fn": 2
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 0.6666666666666666,
+       "f1": 0.8,
+       "tp": 2,
+       "fp": 0,
        "fn": 1
       },
       "PHONE": {
@@ -7427,22 +6675,10 @@
     },
     "pred_spans": [
      {
-      "start": 0,
-      "end": 7,
-      "type": "LOC",
-      "text": "LORQUET"
-     },
-     {
       "start": 8,
       "end": 15,
       "type": "ORG",
       "text": "HANQUET"
-     },
-     {
-      "start": 52,
-      "end": 57,
-      "type": "LOC",
-      "text": "Liège"
      },
      {
       "start": 80,
@@ -7461,18 +6697,6 @@
       "end": 150,
       "type": "ORG",
       "text": "Auditeur"
-     },
-     {
-      "start": 197,
-      "end": 206,
-      "type": "LOC",
-      "text": "Bruxelles"
-     },
-     {
-      "start": 208,
-      "end": 213,
-      "type": "LOC",
-      "text": "Liège"
      },
      {
       "start": 279,
@@ -7517,34 +6741,10 @@
       "text": "ABC"
      },
      {
-      "start": 873,
-      "end": 882,
-      "type": "LOC",
-      "text": "Centrales"
-     },
-     {
-      "start": 885,
-      "end": 901,
-      "type": "LOC",
-      "text": "Béton Hoyoux SRL"
-     },
-     {
       "start": 905,
       "end": 908,
       "type": "ORG",
       "text": "CBH"
-     },
-     {
-      "start": 1069,
-      "end": 1074,
-      "type": "LOC",
-      "text": "Liège"
-     },
-     {
-      "start": 1081,
-      "end": 1091,
-      "type": "LOC",
-      "text": "Luxembourg"
      },
      {
       "start": 1261,
@@ -7571,12 +6771,6 @@
       "text": "Route de Louveigné 145"
      },
      {
-      "start": 1661,
-      "end": 1669,
-      "type": "LOC",
-      "text": "Sprimont"
-     },
-     {
       "start": 1680,
       "end": 1687,
       "type": "ORG",
@@ -7595,12 +6789,6 @@
       "text": "BCE"
      },
      {
-      "start": 1811,
-      "end": 1827,
-      "type": "LOC",
-      "text": "Tremonval Bétons"
-     },
-     {
       "start": 1833,
       "end": 1836,
       "type": "ORG",
@@ -7613,46 +6801,10 @@
       "text": "Rue du Bac 33"
      },
      {
-      "start": 1872,
-      "end": 1880,
-      "type": "LOC",
-      "text": "Stavelot"
-     },
-     {
       "start": 2066,
       "end": 2086,
       "type": "ORG",
       "text": "Tremonval Holding SA"
-     },
-     {
-      "start": 2108,
-      "end": 2111,
-      "type": "LOC",
-      "text": "EUR"
-     },
-     {
-      "start": 2139,
-      "end": 2142,
-      "type": "LOC",
-      "text": "EUR"
-     },
-     {
-      "start": 2163,
-      "end": 2166,
-      "type": "LOC",
-      "text": "EUR"
-     },
-     {
-      "start": 2185,
-      "end": 2188,
-      "type": "LOC",
-      "text": "EUR"
-     },
-     {
-      "start": 2257,
-      "end": 2265,
-      "type": "LOC",
-      "text": "Belgique"
      },
      {
       "start": 2369,
@@ -7667,28 +6819,10 @@
       "text": "Auditorat"
      },
      {
-      "start": 2490,
-      "end": 2498,
-      "type": "LOC",
-      "text": "Sprimont"
-     },
-     {
       "start": 2617,
       "end": 2649,
       "type": "ORG",
       "text": "Qualiroutes du Service public de"
-     },
-     {
-      "start": 2650,
-      "end": 2658,
-      "type": "LOC",
-      "text": "Wallonie"
-     },
-     {
-      "start": 2861,
-      "end": 2878,
-      "type": "LOC",
-      "text": "Hoffmann-La Roche"
      },
      {
       "start": 3026,
@@ -7703,22 +6837,10 @@
       "text": "Reymont SA"
      },
      {
-      "start": 3048,
-      "end": 3063,
-      "type": "LOC",
-      "text": "Gravières Meuse"
-     },
-     {
       "start": 3075,
       "end": 3086,
       "type": "PERSON",
       "text": "Kalkgroeven"
-     },
-     {
-      "start": 3154,
-      "end": 3159,
-      "type": "LOC",
-      "text": "Eifel"
      },
      {
       "start": 3164,
@@ -7731,12 +6853,6 @@
       "end": 3458,
       "type": "ORG",
       "text": "Service public de Wallonie"
-     },
-     {
-      "start": 3460,
-      "end": 3472,
-      "type": "LOC",
-      "text": "SPW Mobilité"
      },
      {
       "start": 3476,
@@ -7755,12 +6871,6 @@
       "end": 3525,
       "type": "ORG",
       "text": "Routes"
-     },
-     {
-      "start": 3529,
-      "end": 3536,
-      "type": "LOC",
-      "text": "Voiries"
      },
      {
       "start": 3540,
@@ -7817,12 +6927,6 @@
       "text": "Politique"
      },
      {
-      "start": 4321,
-      "end": 4329,
-      "type": "LOC",
-      "text": "Thonnard"
-     },
-     {
       "start": 4422,
       "end": 4429,
       "type": "ORG",
@@ -7839,12 +6943,6 @@
       "end": 4576,
       "type": "ORG",
       "text": "CBH"
-     },
-     {
-      "start": 4666,
-      "end": 4669,
-      "type": "LOC",
-      "text": "EUR"
      },
      {
       "start": 4737,
@@ -7929,12 +7027,12 @@
    {
     "doc_id": "doc_027_spa_excerpt_en",
     "score": {
-     "precision": 0.6346153846153846,
-     "recall": 0.66,
-     "f1": 0.6470588235294118,
-     "tp": 33,
-     "fp": 19,
-     "fn": 17,
+     "precision": 0.6585365853658537,
+     "recall": 0.54,
+     "f1": 0.5934065934065934,
+     "tp": 27,
+     "fp": 14,
+     "fn": 23,
      "by_type": {
       "ORG": {
        "precision": 0.48148148148148145,
@@ -7945,12 +7043,12 @@
        "fn": 1
       },
       "LOC": {
-       "precision": 0.6428571428571429,
-       "recall": 0.75,
-       "f1": 0.6923076923076924,
-       "tp": 9,
-       "fp": 5,
-       "fn": 3
+       "precision": 1.0,
+       "recall": 0.25,
+       "f1": 0.4,
+       "tp": 3,
+       "fp": 0,
+       "fn": 9
       },
       "PERSON": {
        "precision": 1.0,
@@ -8003,12 +7101,12 @@
      }
     },
     "score_any_type": {
-     "precision": 0.6730769230769231,
-     "recall": 0.7,
-     "f1": 0.6862745098039216,
-     "tp": 35,
-     "fp": 17,
-     "fn": 15,
+     "precision": 0.7073170731707317,
+     "recall": 0.58,
+     "f1": 0.6373626373626374,
+     "tp": 29,
+     "fp": 12,
+     "fn": 21,
      "by_type": {
       "ORG": {
        "precision": 0.52,
@@ -8019,12 +7117,12 @@
        "fn": 1
       },
       "LOC": {
-       "precision": 0.6875,
-       "recall": 0.9166666666666666,
-       "f1": 0.7857142857142857,
-       "tp": 11,
-       "fp": 5,
-       "fn": 1
+       "precision": 1.0,
+       "recall": 0.4166666666666667,
+       "f1": 0.5882352941176471,
+       "tp": 5,
+       "fp": 0,
+       "fn": 7
       },
       "PERSON": {
        "precision": 1.0,
@@ -8096,22 +7194,10 @@
       "text": "VANDERSLOOT INDUSTRIAL HOLDINGS NV"
      },
      {
-      "start": 288,
-      "end": 295,
-      "type": "LOC",
-      "text": "Belgium"
-     },
-     {
       "start": 329,
       "end": 345,
       "type": "LOC",
       "text": "Frankrijklei 118"
-     },
-     {
-      "start": 352,
-      "end": 359,
-      "type": "LOC",
-      "text": "Antwerp"
      },
      {
       "start": 377,
@@ -8132,28 +7218,10 @@
       "text": "HALDANE PEAK ACQUISITIONS LIMITED"
      },
      {
-      "start": 556,
-      "end": 563,
-      "type": "LOC",
-      "text": "England"
-     },
-     {
-      "start": 568,
-      "end": 573,
-      "type": "LOC",
-      "text": "Wales"
-     },
-     {
       "start": 634,
       "end": 649,
       "type": "LOC",
       "text": "4 Copthall Yard"
-     },
-     {
-      "start": 651,
-      "end": 657,
-      "type": "LOC",
-      "text": "London"
      },
      {
       "start": 691,
@@ -8162,22 +7230,10 @@
       "text": "HALDANE PEAK HOLDINGS B.V"
      },
      {
-      "start": 778,
-      "end": 789,
-      "type": "LOC",
-      "text": "Netherlands"
-     },
-     {
       "start": 823,
       "end": 832,
       "type": "ORG",
       "text": "Weena 505"
-     },
-     {
-      "start": 842,
-      "end": 851,
-      "type": "LOC",
-      "text": "Rotterdam"
      },
      {
       "start": 869,
@@ -8198,12 +7254,6 @@
       "text": "Scheldelaan 42"
      },
      {
-      "start": 1168,
-      "end": 1175,
-      "type": "LOC",
-      "text": "Antwerp"
-     },
-     {
       "start": 1475,
       "end": 1494,
       "type": "ORG",
@@ -8220,12 +7270,6 @@
       "end": 1538,
       "type": "ORG",
       "text": "Louizalaan"
-     },
-     {
-      "start": 1549,
-      "end": 1557,
-      "type": "LOC",
-      "text": "Brussels"
      },
      {
       "start": 2210,
@@ -8330,12 +7374,6 @@
       "text": "Haldane Peak Acquisitions Limited"
      },
      {
-      "start": 4885,
-      "end": 4891,
-      "type": "LOC",
-      "text": "London"
-     },
-     {
       "start": 4927,
       "end": 4942,
       "type": "PERSON",
@@ -8352,12 +7390,6 @@
       "end": 5113,
       "type": "PERSON",
       "text": "Ramaswamy"
-     },
-     {
-      "start": 5277,
-      "end": 5284,
-      "type": "LOC",
-      "text": "England"
      },
      {
       "start": 5304,
@@ -8394,11 +7426,11 @@
    {
     "doc_id": "doc_028_client_email_thread_en",
     "score": {
-     "precision": 0.559322033898305,
+     "precision": 0.673469387755102,
      "recall": 0.6346153846153846,
-     "f1": 0.5945945945945946,
+     "f1": 0.6534653465346534,
      "tp": 33,
-     "fp": 26,
+     "fp": 16,
      "fn": 19,
      "by_type": {
       "PERSON": {
@@ -8418,11 +7450,11 @@
        "fn": 6
       },
       "LOC": {
-       "precision": 0.09090909090909091,
+       "precision": 1.0,
        "recall": 0.3333333333333333,
-       "f1": 0.14285714285714288,
+       "f1": 0.5,
        "tp": 1,
-       "fp": 10,
+       "fp": 0,
        "fn": 2
       },
       "EMAIL": {
@@ -8460,12 +7492,12 @@
      }
     },
     "score_any_type": {
-     "precision": 0.6440677966101694,
-     "recall": 0.7307692307692307,
-     "f1": 0.6846846846846847,
-     "tp": 38,
-     "fp": 21,
-     "fn": 14,
+     "precision": 0.7346938775510204,
+     "recall": 0.6923076923076923,
+     "f1": 0.7128712871287128,
+     "tp": 36,
+     "fp": 13,
+     "fn": 16,
      "by_type": {
       "PERSON": {
        "precision": 0.9259259259259259,
@@ -8476,19 +7508,19 @@
        "fn": 1
       },
       "ORG": {
-       "precision": 0.5217391304347826,
-       "recall": 0.8571428571428571,
-       "f1": 0.6486486486486486,
-       "tp": 12,
+       "precision": 0.47619047619047616,
+       "recall": 0.7142857142857143,
+       "f1": 0.5714285714285714,
+       "tp": 10,
        "fp": 11,
-       "fn": 2
+       "fn": 4
       },
       "LOC": {
-       "precision": 0.1111111111111111,
+       "precision": 1.0,
        "recall": 0.3333333333333333,
-       "f1": 0.16666666666666666,
+       "f1": 0.5,
        "tp": 1,
-       "fp": 8,
+       "fp": 0,
        "fn": 2
       },
       "EMAIL": {
@@ -8593,12 +7625,6 @@
       "text": "Ingrid Halvorsen"
      },
      {
-      "start": 691,
-      "end": 699,
-      "type": "LOC",
-      "text": "Larkspur"
-     },
-     {
       "start": 726,
       "end": 732,
       "type": "PERSON",
@@ -8701,18 +7727,6 @@
       "text": "DG COMP"
      },
      {
-      "start": 2845,
-      "end": 2852,
-      "type": "LOC",
-      "text": "Bavaria"
-     },
-     {
-      "start": 2990,
-      "end": 2997,
-      "type": "LOC",
-      "text": "Germany"
-     },
-     {
       "start": 3097,
       "end": 3114,
       "type": "PERSON",
@@ -8725,28 +7739,10 @@
       "text": "Hallstrom & Vane LLP"
      },
      {
-      "start": 3201,
-      "end": 3209,
-      "type": "LOC",
-      "text": "Brussels"
-     },
-     {
       "start": 3430,
       "end": 3450,
       "type": "ORG",
       "text": "Hallstrom & Vane LLP"
-     },
-     {
-      "start": 3500,
-      "end": 3507,
-      "type": "LOC",
-      "text": "England"
-     },
-     {
-      "start": 3512,
-      "end": 3517,
-      "type": "LOC",
-      "text": "Wales"
      },
      {
       "start": 3553,
@@ -8785,12 +7781,6 @@
       "text": "Katrin"
      },
      {
-      "start": 3767,
-      "end": 3776,
-      "type": "LOC",
-      "text": "Rheinfeld"
-     },
-     {
       "start": 3822,
       "end": 3827,
       "type": "ORG",
@@ -8813,12 +7803,6 @@
       "end": 4300,
       "type": "ORG",
       "text": "Ravelston Packaging Group"
-     },
-     {
-      "start": 4334,
-      "end": 4343,
-      "type": "LOC",
-      "text": "Rotterdam"
      },
      {
       "start": 4426,
@@ -8851,22 +7835,10 @@
       "text": "Rheinfeld Kartonagen GmbH"
      },
      {
-      "start": 4707,
-      "end": 4716,
-      "type": "LOC",
-      "text": "Rheinfeld"
-     },
-     {
       "start": 4720,
       "end": 4735,
       "type": "LOC",
       "text": "Am Kartonwerk 4"
-     },
-     {
-      "start": 4743,
-      "end": 4748,
-      "type": "LOC",
-      "text": "Neuss"
      },
      {
       "start": 5189,
@@ -8885,12 +7857,12 @@
    {
     "doc_id": "doc_029_cepani_request_en",
     "score": {
-     "precision": 0.5555555555555556,
-     "recall": 0.6730769230769231,
-     "f1": 0.6086956521739131,
-     "tp": 35,
-     "fp": 28,
-     "fn": 17,
+     "precision": 0.7333333333333333,
+     "recall": 0.6346153846153846,
+     "f1": 0.6804123711340205,
+     "tp": 33,
+     "fp": 12,
+     "fn": 19,
      "by_type": {
       "ORG": {
        "precision": 0.7241379310344828,
@@ -8901,12 +7873,12 @@
        "fn": 2
       },
       "LOC": {
-       "precision": 0.19047619047619047,
-       "recall": 1.0,
-       "f1": 0.32,
-       "tp": 4,
-       "fp": 17,
-       "fn": 0
+       "precision": 0.6666666666666666,
+       "recall": 0.5,
+       "f1": 0.5714285714285715,
+       "tp": 2,
+       "fp": 1,
+       "fn": 2
       },
       "PERSON": {
        "precision": 0.7692307692307693,
@@ -8959,12 +7931,12 @@
      }
     },
     "score_any_type": {
-     "precision": 0.6031746031746031,
-     "recall": 0.7307692307692307,
-     "f1": 0.6608695652173913,
-     "tp": 38,
-     "fp": 25,
-     "fn": 14,
+     "precision": 0.8222222222222222,
+     "recall": 0.7115384615384616,
+     "f1": 0.7628865979381444,
+     "tp": 37,
+     "fp": 8,
+     "fn": 15,
      "by_type": {
       "ORG": {
        "precision": 0.7931034482758621,
@@ -8975,12 +7947,12 @@
        "fn": 0
       },
       "LOC": {
-       "precision": 0.19047619047619047,
-       "recall": 1.0,
-       "f1": 0.32,
-       "tp": 4,
-       "fp": 17,
-       "fn": 0
+       "precision": 1.0,
+       "recall": 0.75,
+       "f1": 0.8571428571428571,
+       "tp": 3,
+       "fp": 0,
+       "fn": 1
       },
       "PERSON": {
        "precision": 0.8461538461538461,
@@ -9070,18 +8042,6 @@
       "text": "Kerkedreef 31"
      },
      {
-      "start": 409,
-      "end": 419,
-      "type": "LOC",
-      "text": "Brasschaat"
-     },
-     {
-      "start": 421,
-      "end": 428,
-      "type": "LOC",
-      "text": "Belgium"
-     },
-     {
       "start": 502,
       "end": 521,
       "type": "PERSON",
@@ -9112,18 +8072,6 @@
       "text": "Amerikalei"
      },
      {
-      "start": 655,
-      "end": 662,
-      "type": "LOC",
-      "text": "Antwerp"
-     },
-     {
-      "start": 664,
-      "end": 671,
-      "type": "LOC",
-      "text": "Belgium"
-     },
-     {
       "start": 755,
       "end": 774,
       "type": "ORG",
@@ -9134,24 +8082,6 @@
       "end": 783,
       "type": "ORG",
       "text": "VCS"
-     },
-     {
-      "start": 871,
-      "end": 884,
-      "type": "LOC",
-      "text": "Via Molinetto"
-     },
-     {
-      "start": 895,
-      "end": 905,
-      "type": "LOC",
-      "text": "Conegliano"
-     },
-     {
-      "start": 912,
-      "end": 917,
-      "type": "LOC",
-      "text": "Italy"
      },
      {
       "start": 943,
@@ -9172,58 +8102,16 @@
       "text": "Via dei Mille 18"
      },
      {
-      "start": 1032,
-      "end": 1039,
-      "type": "LOC",
-      "text": "Treviso"
-     },
-     {
-      "start": 1041,
-      "end": 1046,
-      "type": "LOC",
-      "text": "Italy"
-     },
-     {
       "start": 1311,
       "end": 1314,
       "type": "ORG",
       "text": "VCS"
      },
      {
-      "start": 1338,
-      "end": 1345,
-      "type": "LOC",
-      "text": "Belgium"
-     },
-     {
-      "start": 1347,
-      "end": 1357,
-      "type": "LOC",
-      "text": "Luxembourg"
-     },
-     {
-      "start": 1366,
-      "end": 1377,
-      "type": "LOC",
-      "text": "Netherlands"
-     },
-     {
-      "start": 1694,
-      "end": 1702,
-      "type": "LOC",
-      "text": "Brussels"
-     },
-     {
       "start": 1772,
       "end": 1780,
       "type": "ORG",
       "text": "Tervelde"
-     },
-     {
-      "start": 1825,
-      "end": 1834,
-      "type": "LOC",
-      "text": "Territory"
      },
      {
       "start": 2015,
@@ -9242,12 +8130,6 @@
       "end": 2084,
       "type": "PERSON",
       "text": "Van Ryckeghem"
-     },
-     {
-      "start": 2116,
-      "end": 2125,
-      "type": "LOC",
-      "text": "Territory"
      },
      {
       "start": 2167,
@@ -9286,12 +8168,6 @@
       "text": "Pasqualotto"
      },
      {
-      "start": 2663,
-      "end": 2670,
-      "type": "LOC",
-      "text": "Benelux"
-     },
-     {
       "start": 2893,
       "end": 2896,
       "type": "ORG",
@@ -9328,12 +8204,6 @@
       "text": "Tervelde"
      },
      {
-      "start": 3731,
-      "end": 3738,
-      "type": "LOC",
-      "text": "Belgium"
-     },
-     {
       "start": 3822,
       "end": 3842,
       "type": "ORG",
@@ -9368,12 +8238,6 @@
       "end": 4340,
       "type": "ORG",
       "text": "VCS"
-     },
-     {
-      "start": 4778,
-      "end": 4787,
-      "type": "LOC",
-      "text": "Territory"
      },
      {
       "start": 5451,
@@ -9416,11 +8280,11 @@
    {
     "doc_id": "doc_030_dpia_memo_fr",
     "score": {
-     "precision": 0.32727272727272727,
+     "precision": 0.46153846153846156,
      "recall": 0.46153846153846156,
-     "f1": 0.3829787234042553,
+     "f1": 0.46153846153846156,
      "tp": 18,
-     "fp": 37,
+     "fp": 21,
      "fn": 21,
      "by_type": {
       "PERSON": {
@@ -9431,14 +8295,6 @@
        "fp": 4,
        "fn": 0
       },
-      "LOC": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 17,
-       "fn": 3
-      },
       "ORG": {
        "precision": 0.3333333333333333,
        "recall": 0.47058823529411764,
@@ -9446,6 +8302,14 @@
        "tp": 8,
        "fp": 16,
        "fn": 9
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 1,
+       "fn": 3
       },
       "EMAIL": {
        "precision": 0.0,
@@ -9490,11 +8354,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.38181818181818183,
+     "precision": 0.5384615384615384,
      "recall": 0.5384615384615384,
-     "f1": 0.44680851063829785,
+     "f1": 0.5384615384615384,
      "tp": 21,
-     "fp": 34,
+     "fp": 18,
      "fn": 18,
      "by_type": {
       "ORG": {
@@ -9505,14 +8369,6 @@
        "fp": 16,
        "fn": 7
       },
-      "LOC": {
-       "precision": 0.0,
-       "recall": 0.0,
-       "f1": 0.0,
-       "tp": 0,
-       "fp": 17,
-       "fn": 3
-      },
       "PERSON": {
        "precision": 0.9090909090909091,
        "recall": 1.0,
@@ -9520,6 +8376,14 @@
        "tp": 10,
        "fp": 1,
        "fn": 0
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 1,
+       "fn": 3
       },
       "IBAN": {
        "precision": 1.0,
@@ -9571,18 +8435,6 @@
       "text": "Vandermeulen Fauconnier & Associés"
      },
      {
-      "start": 217,
-      "end": 226,
-      "type": "LOC",
-      "text": "Bruxelles"
-     },
-     {
-      "start": 228,
-      "end": 237,
-      "type": "LOC",
-      "text": "Bruxelles"
-     },
-     {
       "start": 280,
       "end": 298,
       "type": "PERSON",
@@ -9631,12 +8483,6 @@
       "text": "AIPD"
      },
      {
-      "start": 731,
-      "end": 741,
-      "type": "LOC",
-      "text": "Willebroek"
-     },
-     {
       "start": 794,
       "end": 827,
       "type": "ORG",
@@ -9667,52 +8513,16 @@
       "text": "Mme Lambert"
      },
      {
-      "start": 1408,
-      "end": 1418,
-      "type": "LOC",
-      "text": "Willebroek"
-     },
-     {
-      "start": 1441,
-      "end": 1451,
-      "type": "LOC",
-      "text": "Willebroek"
-     },
-     {
-      "start": 1639,
-      "end": 1645,
-      "type": "LOC",
-      "text": "Munich"
-     },
-     {
       "start": 1758,
       "end": 1780,
       "type": "ORG",
       "text": "Cloudhaven Hosting Ltd"
      },
      {
-      "start": 1782,
-      "end": 1788,
-      "type": "LOC",
-      "text": "Dublin"
-     },
-     {
       "start": 1812,
       "end": 1842,
       "type": "ORG",
       "text": "Pinecrest Support Services Inc"
-     },
-     {
-      "start": 1845,
-      "end": 1851,
-      "type": "LOC",
-      "text": "Denver"
-     },
-     {
-      "start": 1853,
-      "end": 1863,
-      "type": "LOC",
-      "text": "États-Unis"
      },
      {
       "start": 1992,
@@ -9757,22 +8567,10 @@
       "text": "Union européenne"
      },
      {
-      "start": 3323,
-      "end": 3329,
-      "type": "LOC",
-      "text": "Denver"
-     },
-     {
       "start": 3477,
       "end": 3479,
       "type": "ORG",
       "text": "UE"
-     },
-     {
-      "start": 3480,
-      "end": 3490,
-      "type": "LOC",
-      "text": "États-Unis"
      },
      {
       "start": 3534,
@@ -9787,28 +8585,10 @@
       "text": "C-311/18"
      },
      {
-      "start": 4114,
-      "end": 4122,
-      "type": "LOC",
-      "text": "Belgique"
-     },
-     {
-      "start": 4175,
-      "end": 4180,
-      "type": "LOC",
-      "text": "Argus"
-     },
-     {
       "start": 4238,
       "end": 4242,
       "type": "ORG",
       "text": "AIPD"
-     },
-     {
-      "start": 4364,
-      "end": 4370,
-      "type": "LOC",
-      "text": "Denver"
      },
      {
       "start": 4575,
@@ -9859,12 +8639,6 @@
       "text": "M. Benali"
      },
      {
-      "start": 5499,
-      "end": 5509,
-      "type": "LOC",
-      "text": "Willebroek"
-     },
-     {
       "start": 5545,
       "end": 5551,
       "type": "PERSON",
@@ -9887,39 +8661,25 @@
       "end": 5744,
       "type": "PERSON",
       "text": "Vandermeulen Fauconnier & Associés"
-     },
-     {
-      "start": 5769,
-      "end": 5778,
-      "type": "LOC",
-      "text": "Bruxelles"
      }
     ]
    },
    {
     "doc_id": "doc_031_dd_redflag_report_en",
     "score": {
-     "precision": 0.6451612903225806,
+     "precision": 0.6896551724137931,
      "recall": 0.7843137254901961,
-     "f1": 0.7079646017699115,
+     "f1": 0.7339449541284404,
      "tp": 40,
-     "fp": 22,
+     "fp": 18,
      "fn": 11,
      "by_type": {
       "ORG": {
-       "precision": 0.65,
+       "precision": 0.6666666666666666,
        "recall": 0.9629629629629629,
-       "f1": 0.7761194029850746,
+       "f1": 0.7878787878787878,
        "tp": 26,
-       "fp": 14,
-       "fn": 1
-      },
-      "LOC": {
-       "precision": 0.5,
-       "recall": 0.75,
-       "f1": 0.6,
-       "tp": 3,
-       "fp": 3,
+       "fp": 13,
        "fn": 1
       },
       "PERSON": {
@@ -9929,6 +8689,14 @@
        "tp": 11,
        "fp": 5,
        "fn": 2
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 0.75,
+       "f1": 0.8571428571428571,
+       "tp": 3,
+       "fp": 0,
+       "fn": 1
       },
       "CASE_REF": {
        "precision": 0.0,
@@ -9973,28 +8741,20 @@
      }
     },
     "score_any_type": {
-     "precision": 0.6935483870967742,
+     "precision": 0.7413793103448276,
      "recall": 0.8431372549019608,
-     "f1": 0.7610619469026549,
+     "f1": 0.7889908256880734,
      "tp": 43,
-     "fp": 19,
+     "fp": 15,
      "fn": 8,
      "by_type": {
       "ORG": {
-       "precision": 0.6923076923076923,
+       "precision": 0.7105263157894737,
        "recall": 1.0,
-       "f1": 0.8181818181818181,
+       "f1": 0.8307692307692308,
        "tp": 27,
-       "fp": 12,
+       "fp": 11,
        "fn": 0
-      },
-      "LOC": {
-       "precision": 0.5,
-       "recall": 0.75,
-       "f1": 0.6,
-       "tp": 3,
-       "fp": 3,
-       "fn": 1
       },
       "PERSON": {
        "precision": 0.7647058823529411,
@@ -10003,6 +8763,14 @@
        "tp": 13,
        "fp": 4,
        "fn": 0
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 0.75,
+       "f1": 0.8571428571428571,
+       "tp": 3,
+       "fp": 0,
+       "fn": 1
       },
       "CASE_REF": {
        "precision": 0.0,
@@ -10066,12 +8834,6 @@
       "text": "Stroobants Lindqvist Advocaten"
      },
      {
-      "start": 202,
-      "end": 209,
-      "type": "LOC",
-      "text": "Antwerp"
-     },
-     {
       "start": 398,
       "end": 421,
       "type": "ORG",
@@ -10082,12 +8844,6 @@
       "end": 427,
       "type": "ORG",
       "text": "MPN"
-     },
-     {
-      "start": 512,
-      "end": 526,
-      "type": "ORG",
-      "text": "Project Osprey"
      },
      {
       "start": 560,
@@ -10174,12 +8930,6 @@
       "text": "rue des Tanneurs"
      },
      {
-      "start": 1602,
-      "end": 1607,
-      "type": "LOC",
-      "text": "Lille"
-     },
-     {
       "start": 1613,
       "end": 1635,
       "type": "ORG",
@@ -10190,12 +8940,6 @@
       "end": 1669,
       "type": "LOC",
       "text": "Hafenstraße 27"
-     },
-     {
-      "start": 1677,
-      "end": 1685,
-      "type": "LOC",
-      "text": "Duisburg"
      },
      {
       "start": 1897,
@@ -10424,19 +9168,19 @@
    {
     "doc_id": "doc_032_conclusions_tribunal_fr",
     "score": {
-     "precision": 0.2962962962962963,
+     "precision": 0.4444444444444444,
      "recall": 0.36363636363636365,
-     "f1": 0.32653061224489793,
+     "f1": 0.39999999999999997,
      "tp": 16,
-     "fp": 38,
+     "fp": 20,
      "fn": 28,
      "by_type": {
       "LOC": {
-       "precision": 0.09523809523809523,
+       "precision": 0.6666666666666666,
        "recall": 0.5,
-       "f1": 0.16,
+       "f1": 0.5714285714285715,
        "tp": 2,
-       "fp": 19,
+       "fp": 1,
        "fn": 2
       },
       "ORG": {
@@ -10498,28 +9242,28 @@
      }
     },
     "score_any_type": {
-     "precision": 0.5740740740740741,
-     "recall": 0.7045454545454546,
-     "f1": 0.6326530612244898,
-     "tp": 31,
-     "fp": 23,
-     "fn": 13,
+     "precision": 0.7777777777777778,
+     "recall": 0.6363636363636364,
+     "f1": 0.7000000000000001,
+     "tp": 28,
+     "fp": 8,
+     "fn": 16,
      "by_type": {
       "LOC": {
-       "precision": 0.1111111111111111,
+       "precision": 0.6666666666666666,
        "recall": 0.5,
-       "f1": 0.1818181818181818,
+       "f1": 0.5714285714285715,
        "tp": 2,
-       "fp": 16,
+       "fp": 1,
        "fn": 2
       },
       "ORG": {
-       "precision": 0.7619047619047619,
-       "recall": 0.7619047619047619,
-       "f1": 0.7619047619047619,
-       "tp": 16,
+       "precision": 0.7222222222222222,
+       "recall": 0.6190476190476191,
+       "f1": 0.6666666666666666,
+       "tp": 13,
        "fp": 5,
-       "fn": 5
+       "fn": 8
       },
       "PERSON": {
        "precision": 0.8461538461538461,
@@ -10579,12 +9323,6 @@
       "text": "Chaussée de Waterloo"
      },
      {
-      "start": 246,
-      "end": 251,
-      "type": "LOC",
-      "text": "Uccle"
-     },
-     {
       "start": 267,
       "end": 299,
       "type": "ORG",
@@ -10603,22 +9341,10 @@
       "text": "Maître Julien Marchal"
      },
      {
-      "start": 447,
-      "end": 456,
-      "type": "LOC",
-      "text": "Bruxelles"
-     },
-     {
       "start": 474,
       "end": 495,
       "type": "PERSON",
       "text": "Vandersmissen Marchal"
-     },
-     {
-      "start": 537,
-      "end": 556,
-      "type": "LOC",
-      "text": "Woluwe-Saint-Pierre"
      },
      {
       "start": 637,
@@ -10633,18 +9359,6 @@
       "text": "Kaiserswerther Straße 87"
      },
      {
-      "start": 770,
-      "end": 777,
-      "type": "LOC",
-      "text": "Krefeld"
-     },
-     {
-      "start": 779,
-      "end": 788,
-      "type": "LOC",
-      "text": "Allemagne"
-     },
-     {
       "start": 843,
       "end": 846,
       "type": "ORG",
@@ -10657,28 +9371,10 @@
       "text": "Maître Sophie Lemaire"
      },
      {
-      "start": 939,
-      "end": 948,
-      "type": "LOC",
-      "text": "Bruxelles"
-     },
-     {
-      "start": 966,
-      "end": 983,
-      "type": "LOC",
-      "text": "Lemaire & Bosquet"
-     },
-     {
       "start": 1021,
       "end": 1033,
       "type": "LOC",
       "text": "1050 Ixelles"
-     },
-     {
-      "start": 1126,
-      "end": 1134,
-      "type": "LOC",
-      "text": "Verdiane"
      },
      {
       "start": 1163,
@@ -10699,30 +9395,6 @@
       "text": "Brandauer"
      },
      {
-      "start": 1343,
-      "end": 1351,
-      "type": "LOC",
-      "text": "Verdiane"
-     },
-     {
-      "start": 1398,
-      "end": 1406,
-      "type": "LOC",
-      "text": "Belgique"
-     },
-     {
-      "start": 1412,
-      "end": 1420,
-      "type": "LOC",
-      "text": "Pays-Bas"
-     },
-     {
-      "start": 1427,
-      "end": 1437,
-      "type": "LOC",
-      "text": "Luxembourg"
-     },
-     {
       "start": 1708,
       "end": 1722,
       "type": "PERSON",
@@ -10741,12 +9413,6 @@
       "text": "Verdiane"
      },
      {
-      "start": 1845,
-      "end": 1850,
-      "type": "LOC",
-      "text": "Uccle"
-     },
-     {
       "start": 1905,
       "end": 1912,
       "type": "PERSON",
@@ -10757,12 +9423,6 @@
       "end": 1947,
       "type": "PERSON",
       "text": "Frédéric Baltus"
-     },
-     {
-      "start": 2042,
-      "end": 2048,
-      "type": "LOC",
-      "text": "Europe"
      },
      {
       "start": 2332,
@@ -10799,24 +9459,6 @@
       "end": 2800,
       "type": "PERSON",
       "text": "Maître Lemaire"
-     },
-     {
-      "start": 3031,
-      "end": 3040,
-      "type": "LOC",
-      "text": "Bruxelles"
-     },
-     {
-      "start": 3121,
-      "end": 3130,
-      "type": "LOC",
-      "text": "Bruxelles"
-     },
-     {
-      "start": 3389,
-      "end": 3406,
-      "type": "LOC",
-      "text": "Cour de cassation"
      },
      {
       "start": 3939,
@@ -10879,12 +9521,6 @@
       "text": "Condamner"
      },
      {
-      "start": 5545,
-      "end": 5554,
-      "type": "LOC",
-      "text": "Bruxelles"
-     },
-     {
       "start": 5614,
       "end": 5635,
       "type": "PERSON",
@@ -10901,19 +9537,19 @@
    {
     "doc_id": "doc_033_transaction_fr",
     "score": {
-     "precision": 0.25806451612903225,
+     "precision": 0.4444444444444444,
      "recall": 0.4,
-     "f1": 0.3137254901960784,
+     "f1": 0.4210526315789474,
      "tp": 16,
-     "fp": 46,
+     "fp": 20,
      "fn": 24,
      "by_type": {
       "LOC": {
-       "precision": 0.13333333333333333,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.23529411764705882,
+       "f1": 1.0,
        "tp": 4,
-       "fp": 26,
+       "fp": 0,
        "fn": 0
       },
       "ORG": {
@@ -10967,36 +9603,36 @@
      }
     },
     "score_any_type": {
-     "precision": 0.3064516129032258,
-     "recall": 0.475,
-     "f1": 0.37254901960784315,
-     "tp": 19,
-     "fp": 43,
-     "fn": 21,
+     "precision": 0.4444444444444444,
+     "recall": 0.4,
+     "f1": 0.4210526315789474,
+     "tp": 16,
+     "fp": 20,
+     "fn": 24,
      "by_type": {
       "LOC": {
-       "precision": 0.14814814814814814,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.25806451612903225,
+       "f1": 1.0,
        "tp": 4,
-       "fp": 23,
+       "fp": 0,
        "fn": 0
       },
       "ORG": {
-       "precision": 0.14285714285714285,
-       "recall": 0.21428571428571427,
-       "f1": 0.17142857142857143,
-       "tp": 3,
+       "precision": 0.05263157894736842,
+       "recall": 0.07142857142857142,
+       "f1": 0.06060606060606061,
+       "tp": 1,
        "fp": 18,
-       "fn": 11
+       "fn": 13
       },
       "PERSON": {
-       "precision": 0.8571428571428571,
-       "recall": 1.0,
-       "f1": 0.923076923076923,
-       "tp": 12,
+       "precision": 0.8461538461538461,
+       "recall": 0.9166666666666666,
+       "f1": 0.8799999999999999,
+       "tp": 11,
        "fp": 2,
-       "fn": 0
+       "fn": 1
       },
       "CASE_REF": {
        "precision": 0.0,
@@ -11040,28 +9676,10 @@
       "text": "Rue Saint-Laurent"
      },
      {
-      "start": 194,
-      "end": 199,
-      "type": "LOC",
-      "text": "Liège"
-     },
-     {
       "start": 215,
       "end": 247,
       "type": "ORG",
       "text": "Banque-Carrefour des Entreprises"
-     },
-     {
-      "start": 281,
-      "end": 286,
-      "type": "LOC",
-      "text": "Liège"
-     },
-     {
-      "start": 297,
-      "end": 302,
-      "type": "LOC",
-      "text": "Liège"
      },
      {
       "start": 328,
@@ -11082,12 +9700,6 @@
       "text": "Fabrice Quoilin"
      },
      {
-      "start": 459,
-      "end": 468,
-      "type": "LOC",
-      "text": "Employeur"
-     },
-     {
       "start": 479,
       "end": 486,
       "type": "ORG",
@@ -11100,28 +9712,10 @@
       "text": "Maître Guillaume Servais"
      },
      {
-      "start": 549,
-      "end": 558,
-      "type": "LOC",
-      "text": "Bruxelles"
-     },
-     {
-      "start": 568,
-      "end": 575,
-      "type": "LOC",
-      "text": "Servais"
-     },
-     {
       "start": 599,
       "end": 620,
       "type": "LOC",
       "text": "Avenue de Broqueville"
-     },
-     {
-      "start": 631,
-      "end": 651,
-      "type": "LOC",
-      "text": "Woluwe-Saint-Lambert"
      },
      {
       "start": 732,
@@ -11136,12 +9730,6 @@
       "text": "Chemin des Crêtes 9"
      },
      {
-      "start": 808,
-      "end": 814,
-      "type": "LOC",
-      "text": "Esneux"
-     },
-     {
       "start": 875,
       "end": 886,
       "type": "ORG",
@@ -11152,12 +9740,6 @@
       "end": 924,
       "type": "PERSON",
       "text": "Maître Ophélie Braibant"
-     },
-     {
-      "start": 948,
-      "end": 957,
-      "type": "LOC",
-      "text": "Liège-Huy"
      },
      {
       "start": 967,
@@ -11172,28 +9754,10 @@
       "text": "Boulevard d'Avroy 233"
      },
      {
-      "start": 1015,
-      "end": 1020,
-      "type": "LOC",
-      "text": "Liège"
-     },
-     {
-      "start": 1352,
-      "end": 1355,
-      "type": "LOC",
-      "text": "EUR"
-     },
-     {
       "start": 1442,
       "end": 1453,
       "type": "ORG",
       "text": "Travailleur"
-     },
-     {
-      "start": 1685,
-      "end": 1705,
-      "type": "LOC",
-      "text": "Ourthe Robotique SRL"
      },
      {
       "start": 1906,
@@ -11214,34 +9778,10 @@
       "text": "Travailleur"
      },
      {
-      "start": 2355,
-      "end": 2360,
-      "type": "LOC",
-      "text": "Liège"
-     },
-     {
-      "start": 2371,
-      "end": 2376,
-      "type": "LOC",
-      "text": "Liège"
-     },
-     {
-      "start": 2792,
-      "end": 2801,
-      "type": "LOC",
-      "text": "Employeur"
-     },
-     {
       "start": 2866,
       "end": 2877,
       "type": "ORG",
       "text": "Travailleur"
-     },
-     {
-      "start": 2987,
-      "end": 2996,
-      "type": "LOC",
-      "text": "Employeur"
      },
      {
       "start": 3005,
@@ -11250,22 +9790,10 @@
       "text": "Travailleur"
      },
      {
-      "start": 3088,
-      "end": 3091,
-      "type": "LOC",
-      "text": "EUR"
-     },
-     {
       "start": 3175,
       "end": 3178,
       "type": "ORG",
       "text": "CCT"
-     },
-     {
-      "start": 3195,
-      "end": 3204,
-      "type": "LOC",
-      "text": "Employeur"
      },
      {
       "start": 3306,
@@ -11278,12 +9806,6 @@
       "end": 3405,
       "type": "ORG",
       "text": "ONSS"
-     },
-     {
-      "start": 3444,
-      "end": 3453,
-      "type": "LOC",
-      "text": "Employeur"
      },
      {
       "start": 3465,
@@ -11310,34 +9832,10 @@
       "text": "Travailleur"
      },
      {
-      "start": 3916,
-      "end": 3925,
-      "type": "LOC",
-      "text": "Employeur"
-     },
-     {
       "start": 4039,
       "end": 4050,
       "type": "ORG",
       "text": "Travailleur"
-     },
-     {
-      "start": 4265,
-      "end": 4270,
-      "type": "LOC",
-      "text": "Liège"
-     },
-     {
-      "start": 4427,
-      "end": 4435,
-      "type": "LOC",
-      "text": "Belgique"
-     },
-     {
-      "start": 4442,
-      "end": 4467,
-      "type": "LOC",
-      "text": "Grand-Duché de Luxembourg"
      },
      {
       "start": 4619,
@@ -11370,24 +9868,6 @@
       "text": "Société de commun accord"
      },
      {
-      "start": 5280,
-      "end": 5285,
-      "type": "LOC",
-      "text": "Liège"
-     },
-     {
-      "start": 5300,
-      "end": 5307,
-      "type": "LOC",
-      "text": "Servais"
-     },
-     {
-      "start": 5423,
-      "end": 5428,
-      "type": "LOC",
-      "text": "Liège"
-     },
-     {
       "start": 5515,
       "end": 5532,
       "type": "PERSON",
@@ -11410,11 +9890,11 @@
    {
     "doc_id": "doc_034_state_aid_complaint_en",
     "score": {
-     "precision": 0.46153846153846156,
+     "precision": 0.5882352941176471,
      "recall": 0.7894736842105263,
-     "f1": 0.5825242718446603,
+     "f1": 0.6741573033707866,
      "tp": 30,
-     "fp": 35,
+     "fp": 21,
      "fn": 8,
      "by_type": {
       "ORG": {
@@ -11426,11 +9906,11 @@
        "fn": 1
       },
       "LOC": {
-       "precision": 0.2222222222222222,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.3636363636363636,
+       "f1": 1.0,
        "tp": 4,
-       "fp": 14,
+       "fp": 0,
        "fn": 0
       },
       "PERSON": {
@@ -11484,11 +9964,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.46153846153846156,
+     "precision": 0.5882352941176471,
      "recall": 0.7894736842105263,
-     "f1": 0.5825242718446603,
+     "f1": 0.6741573033707866,
      "tp": 30,
-     "fp": 35,
+     "fp": 21,
      "fn": 8,
      "by_type": {
       "ORG": {
@@ -11500,11 +9980,11 @@
        "fn": 1
       },
       "LOC": {
-       "precision": 0.2222222222222222,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.3636363636363636,
+       "f1": 1.0,
        "tp": 4,
-       "fp": 14,
+       "fp": 0,
        "fn": 0
       },
       "PERSON": {
@@ -11577,12 +10057,6 @@
       "text": "Rue du Trône 118"
      },
      {
-      "start": 369,
-      "end": 377,
-      "type": "LOC",
-      "text": "Brussels"
-     },
-     {
       "start": 392,
       "end": 416,
       "type": "ORG",
@@ -11607,34 +10081,10 @@
       "text": "Trierer Straße 88"
      },
      {
-      "start": 539,
-      "end": 545,
-      "type": "LOC",
-      "text": "Aachen"
-     },
-     {
       "start": 547,
       "end": 556,
       "type": "ORG",
       "text": "Eifelwerk"
-     },
-     {
-      "start": 674,
-      "end": 681,
-      "type": "LOC",
-      "text": "Belgium"
-     },
-     {
-      "start": 687,
-      "end": 698,
-      "type": "LOC",
-      "text": "Netherlands"
-     },
-     {
-      "start": 703,
-      "end": 709,
-      "type": "LOC",
-      "text": "France"
      },
      {
       "start": 788,
@@ -11673,12 +10123,6 @@
       "text": "Quai de Coronmeuse 21"
      },
      {
-      "start": 1306,
-      "end": 1311,
-      "type": "LOC",
-      "text": "Liège"
-     },
-     {
       "start": 1313,
       "end": 1316,
       "type": "ORG",
@@ -11697,12 +10141,6 @@
       "text": "Bertrand Coppieters"
      },
      {
-      "start": 1474,
-      "end": 1492,
-      "type": "LOC",
-      "text": "the Walloon Region"
-     },
-     {
       "start": 1516,
       "end": 1522,
       "type": "ORG",
@@ -11715,12 +10153,6 @@
       "text": "SPI"
      },
      {
-      "start": 1572,
-      "end": 1594,
-      "type": "LOC",
-      "text": "the Walloon Government"
-     },
-     {
       "start": 1784,
       "end": 1790,
       "type": "ORG",
@@ -11731,12 +10163,6 @@
       "end": 1821,
       "type": "ORG",
       "text": "Meuse Composite Systems SA"
-     },
-     {
-      "start": 1958,
-      "end": 1972,
-      "type": "LOC",
-      "text": "Grâce-Hollogne"
      },
      {
       "start": 1980,
@@ -11793,12 +10219,6 @@
       "text": "Rue de l'Espérance 75"
      },
      {
-      "start": 2670,
-      "end": 2684,
-      "type": "LOC",
-      "text": "Grâce-Hollogne"
-     },
-     {
       "start": 3040,
       "end": 3057,
       "type": "ORG",
@@ -11815,12 +10235,6 @@
       "end": 3187,
       "type": "ORG",
       "text": "MCS"
-     },
-     {
-      "start": 3259,
-      "end": 3273,
-      "type": "LOC",
-      "text": "Grâce-Hollogne"
      },
      {
       "start": 3583,
@@ -11883,12 +10297,6 @@
       "text": "Beneficiary"
      },
      {
-      "start": 4572,
-      "end": 4590,
-      "type": "LOC",
-      "text": "the Walloon Region"
-     },
-     {
       "start": 4658,
       "end": 4664,
       "type": "ORG",
@@ -11919,18 +10327,6 @@
       "text": "Commission"
      },
      {
-      "start": 5214,
-      "end": 5220,
-      "type": "LOC",
-      "text": "Region"
-     },
-     {
-      "start": 5565,
-      "end": 5572,
-      "type": "LOC",
-      "text": "Belgium"
-     },
-     {
       "start": 5630,
       "end": 5641,
       "type": "PERSON",
@@ -11953,12 +10349,12 @@
    {
     "doc_id": "doc_035_data_room_index_en",
     "score": {
-     "precision": 0.6170212765957447,
-     "recall": 0.6744186046511628,
-     "f1": 0.6444444444444444,
-     "tp": 29,
-     "fp": 18,
-     "fn": 14,
+     "precision": 0.7105263157894737,
+     "recall": 0.627906976744186,
+     "f1": 0.6666666666666666,
+     "tp": 27,
+     "fp": 11,
+     "fn": 16,
      "by_type": {
       "ORG": {
        "precision": 0.6,
@@ -11969,12 +10365,12 @@
        "fn": 2
       },
       "LOC": {
-       "precision": 0.36363636363636365,
-       "recall": 1.0,
-       "f1": 0.5333333333333333,
-       "tp": 4,
-       "fp": 7,
-       "fn": 0
+       "precision": 1.0,
+       "recall": 0.5,
+       "f1": 0.6666666666666666,
+       "tp": 2,
+       "fp": 0,
+       "fn": 2
       },
       "PERSON": {
        "precision": 0.9090909090909091,
@@ -12027,12 +10423,12 @@
      }
     },
     "score_any_type": {
-     "precision": 0.6382978723404256,
-     "recall": 0.6976744186046512,
-     "f1": 0.6666666666666666,
-     "tp": 30,
-     "fp": 17,
-     "fn": 13,
+     "precision": 0.7368421052631579,
+     "recall": 0.6511627906976745,
+     "f1": 0.6913580246913581,
+     "tp": 28,
+     "fp": 10,
+     "fn": 15,
      "by_type": {
       "ORG": {
        "precision": 0.6153846153846154,
@@ -12043,12 +10439,12 @@
        "fn": 1
       },
       "LOC": {
-       "precision": 0.36363636363636365,
-       "recall": 1.0,
-       "f1": 0.5333333333333333,
-       "tp": 4,
-       "fp": 7,
-       "fn": 0
+       "precision": 1.0,
+       "recall": 0.5,
+       "f1": 0.6666666666666666,
+       "tp": 2,
+       "fp": 0,
+       "fn": 2
       },
       "PERSON": {
        "precision": 1.0,
@@ -12138,12 +10534,6 @@
       "text": "Boulevard de Waterloo 34"
      },
      {
-      "start": 384,
-      "end": 392,
-      "type": "LOC",
-      "text": "Brussels"
-     },
-     {
       "start": 414,
       "end": 427,
       "type": "PERSON",
@@ -12172,12 +10562,6 @@
       "end": 1317,
       "type": "ORG",
       "text": "Hellebore Precision Nederland BV"
-     },
-     {
-      "start": 1319,
-      "end": 1328,
-      "type": "LOC",
-      "text": "Eindhoven"
      },
      {
       "start": 1392,
@@ -12222,22 +10606,10 @@
       "text": "Brennecke Feinmechanik GmbH"
      },
      {
-      "start": 2246,
-      "end": 2248,
-      "type": "LOC",
-      "text": "CT"
-     },
-     {
       "start": 2282,
       "end": 2311,
       "type": "ORG",
       "text": "Calder Ridge Distribution Ltd"
-     },
-     {
-      "start": 2387,
-      "end": 2389,
-      "type": "LOC",
-      "text": "CT"
      },
      {
       "start": 2646,
@@ -12300,28 +10672,10 @@
       "text": "Anselm Verhoeven"
      },
      {
-      "start": 3848,
-      "end": 3850,
-      "type": "LOC",
-      "text": "CT"
-     },
-     {
       "start": 3880,
       "end": 3892,
       "type": "PERSON",
       "text": "Katrien Maes"
-     },
-     {
-      "start": 3945,
-      "end": 3947,
-      "type": "LOC",
-      "text": "CT"
-     },
-     {
-      "start": 4004,
-      "end": 4009,
-      "type": "LOC",
-      "text": "Ghent"
      },
      {
       "start": 4080,
@@ -12348,12 +10702,6 @@
       "text": "Benelux Office for Intellectual Property"
      },
      {
-      "start": 4378,
-      "end": 4380,
-      "type": "LOC",
-      "text": "EU"
-     },
-     {
       "start": 4419,
       "end": 4424,
       "type": "ORG",
@@ -12364,12 +10712,6 @@
       "end": 4575,
       "type": "LOC",
       "text": "Havenlaan 112"
-     },
-     {
-      "start": 4582,
-      "end": 4587,
-      "type": "LOC",
-      "text": "Ghent"
      },
      {
       "start": 4599,
@@ -12388,19 +10730,19 @@
    {
     "doc_id": "doc_036_licenciement_motif_grave_fr",
     "score": {
-     "precision": 0.40384615384615385,
+     "precision": 0.5,
      "recall": 0.4883720930232558,
-     "f1": 0.4421052631578947,
+     "f1": 0.4941176470588235,
      "tp": 21,
-     "fp": 31,
+     "fp": 21,
      "fn": 22,
      "by_type": {
       "LOC": {
-       "precision": 0.3333333333333333,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.5,
+       "f1": 1.0,
        "tp": 5,
-       "fp": 10,
+       "fp": 0,
        "fn": 0
       },
       "PERSON": {
@@ -12454,19 +10796,19 @@
      }
     },
     "score_any_type": {
-     "precision": 0.46153846153846156,
+     "precision": 0.5714285714285714,
      "recall": 0.5581395348837209,
-     "f1": 0.5052631578947369,
+     "f1": 0.5647058823529412,
      "tp": 24,
-     "fp": 28,
+     "fp": 18,
      "fn": 19,
      "by_type": {
       "LOC": {
-       "precision": 0.3333333333333333,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.5,
+       "f1": 1.0,
        "tp": 5,
-       "fp": 10,
+       "fp": 0,
        "fn": 0
       },
       "PERSON": {
@@ -12527,24 +10869,6 @@
       "text": "Rue des Trois Fontaines 62"
      },
      {
-      "start": 53,
-      "end": 56,
-      "type": "LOC",
-      "text": "Huy"
-     },
-     {
-      "start": 80,
-      "end": 85,
-      "type": "LOC",
-      "text": "Liège"
-     },
-     {
-      "start": 96,
-      "end": 99,
-      "type": "LOC",
-      "text": "Huy"
-     },
-     {
       "start": 144,
       "end": 158,
       "type": "PERSON",
@@ -12555,18 +10879,6 @@
       "end": 180,
       "type": "LOC",
       "text": "Clos des Aubépines 14"
-     },
-     {
-      "start": 187,
-      "end": 194,
-      "type": "LOC",
-      "text": "Nandrin"
-     },
-     {
-      "start": 196,
-      "end": 199,
-      "type": "LOC",
-      "text": "Huy"
      },
      {
       "start": 340,
@@ -12597,12 +10909,6 @@
       "end": 1357,
       "type": "LOC",
       "text": "Rue du Vieux Moulin 5"
-     },
-     {
-      "start": 1364,
-      "end": 1372,
-      "type": "LOC",
-      "text": "Verviers"
      },
      {
       "start": 1664,
@@ -12701,12 +11007,6 @@
       "text": "Rue des Trois Fontaines 62"
      },
      {
-      "start": 3758,
-      "end": 3761,
-      "type": "LOC",
-      "text": "Huy"
-     },
-     {
       "start": 3789,
       "end": 3796,
       "type": "PERSON",
@@ -12767,18 +11067,6 @@
       "text": "Vesdre Instruments SRL"
      },
      {
-      "start": 4999,
-      "end": 5004,
-      "type": "LOC",
-      "text": "Liège"
-     },
-     {
-      "start": 5015,
-      "end": 5018,
-      "type": "LOC",
-      "text": "Huy"
-     },
-     {
       "start": 5111,
       "end": 5116,
       "type": "ORG",
@@ -12801,12 +11089,6 @@
       "end": 5218,
       "type": "LOC",
       "text": "Rue des Brasseurs 12"
-     },
-     {
-      "start": 5225,
-      "end": 5230,
-      "type": "LOC",
-      "text": "Liège"
      },
      {
       "start": 5334,
@@ -12837,21 +11119,13 @@
    {
     "doc_id": "doc_037_merger_thresholds_memo_en",
     "score": {
-     "precision": 0.4105263157894737,
-     "recall": 0.6964285714285714,
-     "f1": 0.5165562913907285,
-     "tp": 39,
-     "fp": 56,
-     "fn": 17,
+     "precision": 0.5362318840579711,
+     "recall": 0.6607142857142857,
+     "f1": 0.5920000000000001,
+     "tp": 37,
+     "fp": 32,
+     "fn": 19,
      "by_type": {
-      "LOC": {
-       "precision": 0.1111111111111111,
-       "recall": 0.5,
-       "f1": 0.1818181818181818,
-       "tp": 3,
-       "fp": 24,
-       "fn": 3
-      },
       "ORG": {
        "precision": 0.4642857142857143,
        "recall": 0.9629629629629629,
@@ -12859,6 +11133,14 @@
        "tp": 26,
        "fp": 30,
        "fn": 1
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 0.16666666666666666,
+       "f1": 0.2857142857142857,
+       "tp": 1,
+       "fp": 0,
+       "fn": 5
       },
       "PERSON": {
        "precision": 0.8333333333333334,
@@ -12903,28 +11185,28 @@
      }
     },
     "score_any_type": {
-     "precision": 0.4421052631578947,
-     "recall": 0.75,
-     "f1": 0.5562913907284768,
-     "tp": 42,
-     "fp": 53,
-     "fn": 14,
+     "precision": 0.5797101449275363,
+     "recall": 0.7142857142857143,
+     "f1": 0.64,
+     "tp": 40,
+     "fp": 29,
+     "fn": 16,
      "by_type": {
       "ORG": {
-       "precision": 0.48214285714285715,
+       "precision": 0.4909090909090909,
        "recall": 1.0,
-       "f1": 0.6506024096385542,
+       "f1": 0.6585365853658536,
        "tp": 27,
-       "fp": 29,
+       "fp": 28,
        "fn": 0
       },
       "LOC": {
-       "precision": 0.14814814814814814,
-       "recall": 0.6666666666666666,
-       "f1": 0.24242424242424243,
-       "tp": 4,
-       "fp": 23,
-       "fn": 2
+       "precision": 1.0,
+       "recall": 0.3333333333333333,
+       "f1": 0.5,
+       "tp": 2,
+       "fp": 0,
+       "fn": 4
       },
       "PERSON": {
        "precision": 0.9166666666666666,
@@ -12970,12 +11252,6 @@
     },
     "pred_spans": [
      {
-      "start": 0,
-      "end": 8,
-      "type": "LOC",
-      "text": "QUINTARD"
-     },
-     {
       "start": 9,
       "end": 17,
       "type": "ORG",
@@ -12988,12 +11264,6 @@
       "text": "Rue Guimard 23"
      },
      {
-      "start": 43,
-      "end": 51,
-      "type": "LOC",
-      "text": "Brussels"
-     },
-     {
       "start": 152,
       "end": 165,
       "type": "PERSON",
@@ -13004,12 +11274,6 @@
       "end": 211,
       "type": "ORG",
       "text": "Terhaegen Motion Control NV"
-     },
-     {
-      "start": 213,
-      "end": 222,
-      "type": "LOC",
-      "text": "Vaartkaai"
      },
      {
       "start": 301,
@@ -13114,12 +11378,6 @@
       "text": "Waelkens"
      },
      {
-      "start": 1032,
-      "end": 1039,
-      "type": "LOC",
-      "text": "Germany"
-     },
-     {
       "start": 1046,
       "end": 1071,
       "type": "ORG",
@@ -13156,82 +11414,16 @@
       "text": "Waelkens"
      },
      {
-      "start": 1503,
-      "end": 1505,
-      "type": "LOC",
-      "text": "EU"
-     },
-     {
-      "start": 1532,
-      "end": 1539,
-      "type": "LOC",
-      "text": "Belgium"
-     },
-     {
-      "start": 1556,
-      "end": 1563,
-      "type": "LOC",
-      "text": "Germany"
-     },
-     {
-      "start": 1581,
-      "end": 1588,
-      "type": "LOC",
-      "text": "Austria"
-     },
-     {
-      "start": 1603,
-      "end": 1614,
-      "type": "LOC",
-      "text": "Netherlands"
-     },
-     {
-      "start": 1631,
-      "end": 1637,
-      "type": "LOC",
-      "text": "France"
-     },
-     {
-      "start": 1938,
-      "end": 1945,
-      "type": "LOC",
-      "text": "Belgium"
-     },
-     {
-      "start": 1950,
-      "end": 1957,
-      "type": "LOC",
-      "text": "Germany"
-     },
-     {
       "start": 1959,
       "end": 1967,
       "type": "ORG",
       "text": "Waelkens"
      },
      {
-      "start": 1982,
-      "end": 1993,
-      "type": "LOC",
-      "text": "Netherlands"
-     },
-     {
-      "start": 2015,
-      "end": 2021,
-      "type": "LOC",
-      "text": "France"
-     },
-     {
       "start": 2075,
       "end": 2098,
       "type": "ORG",
       "text": "the European Commission"
-     },
-     {
-      "start": 2189,
-      "end": 2196,
-      "type": "LOC",
-      "text": "Belgium"
      },
      {
       "start": 2550,
@@ -13252,12 +11444,6 @@
       "text": "Terhaegen"
      },
      {
-      "start": 2719,
-      "end": 2726,
-      "type": "LOC",
-      "text": "Germany"
-     },
-     {
       "start": 2796,
       "end": 2805,
       "type": "ORG",
@@ -13270,34 +11456,10 @@
       "text": "Waelkens Germany"
      },
      {
-      "start": 2874,
-      "end": 2881,
-      "type": "LOC",
-      "text": "Germany"
-     },
-     {
       "start": 2938,
       "end": 2954,
       "type": "ORG",
       "text": "Bundeskartellamt"
-     },
-     {
-      "start": 2974,
-      "end": 2981,
-      "type": "LOC",
-      "text": "Austria"
-     },
-     {
-      "start": 3165,
-      "end": 3172,
-      "type": "LOC",
-      "text": "Austria"
-     },
-     {
-      "start": 3250,
-      "end": 3257,
-      "type": "LOC",
-      "text": "Austria"
      },
      {
       "start": 3309,
@@ -13360,24 +11522,6 @@
       "text": "Court of Justice"
      },
      {
-      "start": 3903,
-      "end": 3910,
-      "type": "LOC",
-      "text": "Belgium"
-     },
-     {
-      "start": 3912,
-      "end": 3919,
-      "type": "LOC",
-      "text": "Germany"
-     },
-     {
-      "start": 3924,
-      "end": 3931,
-      "type": "LOC",
-      "text": "Austria"
-     },
-     {
       "start": 4063,
       "end": 4077,
       "type": "ORG",
@@ -13438,12 +11582,6 @@
       "text": "MDA"
      },
      {
-      "start": 4593,
-      "end": 4598,
-      "type": "LOC",
-      "text": "Ghent"
-     },
-     {
       "start": 4662,
       "end": 4670,
       "type": "ORG",
@@ -13478,18 +11616,6 @@
       "end": 5207,
       "type": "ORG",
       "text": "BWB"
-     },
-     {
-      "start": 5295,
-      "end": 5299,
-      "type": "LOC",
-      "text": "Bonn"
-     },
-     {
-      "start": 5304,
-      "end": 5310,
-      "type": "LOC",
-      "text": "Vienna"
      },
      {
       "start": 5334,
@@ -13544,21 +11670,13 @@
    {
     "doc_id": "doc_038_reponse_apd_plainte_fr",
     "score": {
-     "precision": 0.2631578947368421,
+     "precision": 0.35714285714285715,
      "recall": 0.2857142857142857,
-     "f1": 0.273972602739726,
+     "f1": 0.3174603174603175,
      "tp": 10,
-     "fp": 28,
+     "fp": 18,
      "fn": 25,
      "by_type": {
-      "LOC": {
-       "precision": 0.21428571428571427,
-       "recall": 0.75,
-       "f1": 0.3333333333333333,
-       "tp": 3,
-       "fp": 11,
-       "fn": 1
-      },
       "ORG": {
        "precision": 0.0,
        "recall": 0.0,
@@ -13566,6 +11684,14 @@
        "tp": 0,
        "fp": 7,
        "fn": 12
+      },
+      "LOC": {
+       "precision": 0.75,
+       "recall": 0.75,
+       "f1": 0.75,
+       "tp": 3,
+       "fp": 1,
+       "fn": 1
       },
       "PERSON": {
        "precision": 0.4117647058823529,
@@ -13618,36 +11744,36 @@
      }
     },
     "score_any_type": {
-     "precision": 0.5263157894736842,
-     "recall": 0.5714285714285714,
-     "f1": 0.547945205479452,
-     "tp": 20,
-     "fp": 18,
-     "fn": 15,
+     "precision": 0.6071428571428571,
+     "recall": 0.4857142857142857,
+     "f1": 0.5396825396825397,
+     "tp": 17,
+     "fp": 11,
+     "fn": 18,
      "by_type": {
       "ORG": {
-       "precision": 0.5625,
-       "recall": 0.75,
-       "f1": 0.6428571428571429,
-       "tp": 9,
+       "precision": 0.5,
+       "recall": 0.5833333333333334,
+       "f1": 0.5384615384615384,
+       "tp": 7,
        "fp": 7,
-       "fn": 3
+       "fn": 5
       },
       "LOC": {
-       "precision": 0.2727272727272727,
+       "precision": 0.75,
        "recall": 0.75,
-       "f1": 0.39999999999999997,
+       "f1": 0.75,
        "tp": 3,
-       "fp": 8,
+       "fp": 1,
        "fn": 1
       },
       "PERSON": {
-       "precision": 0.7272727272727273,
-       "recall": 0.8888888888888888,
-       "f1": 0.7999999999999999,
-       "tp": 8,
+       "precision": 0.7,
+       "recall": 0.7777777777777778,
+       "f1": 0.7368421052631577,
+       "tp": 7,
        "fp": 3,
-       "fn": 1
+       "fn": 2
       },
       "EMAIL": {
        "precision": 0.0,
@@ -13693,18 +11819,6 @@
     },
     "pred_spans": [
      {
-      "start": 0,
-      "end": 23,
-      "type": "LOC",
-      "text": "PIÉRARD WILLEMS AVOCATS"
-     },
-     {
-      "start": 24,
-      "end": 27,
-      "type": "LOC",
-      "text": "SRL"
-     },
-     {
       "start": 112,
       "end": 120,
       "type": "ORG",
@@ -13723,40 +11837,16 @@
       "text": "Rue de la Presse 35"
      },
      {
-      "start": 194,
-      "end": 203,
-      "type": "LOC",
-      "text": "Bruxelles"
-     },
-     {
       "start": 516,
       "end": 538,
       "type": "LOC",
       "text": "Chaussée de Marche 412"
      },
      {
-      "start": 545,
-      "end": 551,
-      "type": "LOC",
-      "text": "Jambes"
-     },
-     {
       "start": 567,
       "end": 599,
       "type": "ORG",
       "text": "Banque-Carrefour des Entreprises"
-     },
-     {
-      "start": 633,
-      "end": 638,
-      "type": "LOC",
-      "text": "Liège"
-     },
-     {
-      "start": 649,
-      "end": 654,
-      "type": "LOC",
-      "text": "Namur"
      },
      {
       "start": 745,
@@ -13789,12 +11879,6 @@
       "text": "Avenue des Combattants 51"
      },
      {
-      "start": 1149,
-      "end": 1155,
-      "type": "LOC",
-      "text": "Jambes"
-     },
-     {
       "start": 1427,
       "end": 1443,
       "type": "PERSON",
@@ -13805,18 +11889,6 @@
       "end": 1610,
       "type": "PERSON",
       "text": "Optiwacht Sicherheitstechnik GmbH"
-     },
-     {
-      "start": 1622,
-      "end": 1626,
-      "type": "LOC",
-      "text": "Bonn"
-     },
-     {
-      "start": 1639,
-      "end": 1648,
-      "type": "LOC",
-      "text": "Optiwacht"
      },
      {
       "start": 2370,
@@ -13835,12 +11907,6 @@
       "end": 2982,
       "type": "PERSON",
       "text": "Optiwacht"
-     },
-     {
-      "start": 3409,
-      "end": 3415,
-      "type": "LOC",
-      "text": "Hubaux"
      },
      {
       "start": 3641,
@@ -13925,11 +11991,11 @@
    {
     "doc_id": "doc_039_contrat_franchise_extrait_fr",
     "score": {
-     "precision": 0.32432432432432434,
+     "precision": 0.4897959183673469,
      "recall": 0.5714285714285714,
-     "f1": 0.41379310344827586,
+     "f1": 0.5274725274725275,
      "tp": 24,
-     "fp": 50,
+     "fp": 25,
      "fn": 18,
      "by_type": {
       "ORG": {
@@ -13949,11 +12015,11 @@
        "fn": 0
       },
       "LOC": {
-       "precision": 0.1935483870967742,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.3243243243243243,
+       "f1": 1.0,
        "tp": 6,
-       "fp": 25,
+       "fp": 0,
        "fn": 0
       },
       "CASE_REF": {
@@ -13999,20 +12065,20 @@
      }
     },
     "score_any_type": {
-     "precision": 0.35135135135135137,
-     "recall": 0.6190476190476191,
-     "f1": 0.4482758620689656,
-     "tp": 26,
-     "fp": 48,
-     "fn": 16,
+     "precision": 0.5102040816326531,
+     "recall": 0.5952380952380952,
+     "f1": 0.5494505494505494,
+     "tp": 25,
+     "fp": 24,
+     "fn": 17,
      "by_type": {
       "ORG": {
-       "precision": 0.2903225806451613,
-       "recall": 0.6428571428571429,
-       "f1": 0.4,
-       "tp": 9,
+       "precision": 0.26666666666666666,
+       "recall": 0.5714285714285714,
+       "f1": 0.36363636363636365,
+       "tp": 8,
        "fp": 22,
-       "fn": 5
+       "fn": 6
       },
       "PERSON": {
        "precision": 0.8333333333333334,
@@ -14023,11 +12089,11 @@
        "fn": 0
       },
       "LOC": {
-       "precision": 0.2,
+       "precision": 1.0,
        "recall": 1.0,
-       "f1": 0.33333333333333337,
+       "f1": 1.0,
        "tp": 6,
-       "fp": 24,
+       "fp": 0,
        "fn": 0
       },
       "CASE_REF": {
@@ -14110,12 +12176,6 @@
       "text": "Chaussée de Louvain 412"
      },
      {
-      "start": 284,
-      "end": 289,
-      "type": "LOC",
-      "text": "Wavre"
-     },
-     {
       "start": 305,
       "end": 337,
       "type": "ORG",
@@ -14132,12 +12192,6 @@
       "end": 586,
       "type": "LOC",
       "text": "Rue de la Station 88"
-     },
-     {
-      "start": 593,
-      "end": 601,
-      "type": "LOC",
-      "text": "Châtelet"
      },
      {
       "start": 617,
@@ -14188,66 +12242,6 @@
       "text": "Réseau »"
      },
      {
-      "start": 1175,
-      "end": 1183,
-      "type": "LOC",
-      "text": "Belgique"
-     },
-     {
-      "start": 1191,
-      "end": 1202,
-      "type": "LOC",
-      "text": "Franchiseur"
-     },
-     {
-      "start": 1414,
-      "end": 1422,
-      "type": "LOC",
-      "text": "Sablieux"
-     },
-     {
-      "start": 1431,
-      "end": 1441,
-      "type": "LOC",
-      "text": "Territoire"
-     },
-     {
-      "start": 1464,
-      "end": 1473,
-      "type": "LOC",
-      "text": "Charleroi"
-     },
-     {
-      "start": 1505,
-      "end": 1513,
-      "type": "LOC",
-      "text": "Châtelet"
-     },
-     {
-      "start": 1515,
-      "end": 1525,
-      "type": "LOC",
-      "text": "Courcelles"
-     },
-     {
-      "start": 1527,
-      "end": 1534,
-      "type": "LOC",
-      "text": "Fleurus"
-     },
-     {
-      "start": 1536,
-      "end": 1545,
-      "type": "LOC",
-      "text": "Gerpinnes"
-     },
-     {
-      "start": 1549,
-      "end": 1568,
-      "type": "LOC",
-      "text": "Montigny-le-Tilleul"
-     },
-     {
       "start": 1634,
       "end": 1658,
       "type": "ORG",
@@ -14258,12 +12252,6 @@
       "end": 1687,
       "type": "LOC",
       "text": "Rue de la Montagne 19"
-     },
-     {
-      "start": 1694,
-      "end": 1703,
-      "type": "LOC",
-      "text": "Charleroi"
      },
      {
       "start": 1752,
@@ -14284,12 +12272,6 @@
       "text": "X.27"
      },
      {
-      "start": 2116,
-      "end": 2127,
-      "type": "LOC",
-      "text": "Franchiseur"
-     },
-     {
       "start": 2704,
       "end": 2718,
       "type": "ORG",
@@ -14302,24 +12284,6 @@
       "text": "la Marque"
      },
      {
-      "start": 2830,
-      "end": 2840,
-      "type": "LOC",
-      "text": "Territoire"
-     },
-     {
-      "start": 2904,
-      "end": 2914,
-      "type": "LOC",
-      "text": "Territoire"
-     },
-     {
-      "start": 3000,
-      "end": 3010,
-      "type": "LOC",
-      "text": "Territoire"
-     },
-     {
       "start": 3134,
       "end": 3136,
       "type": "ORG",
@@ -14330,12 +12294,6 @@
       "end": 3174,
       "type": "ORG",
       "text": "Commission européenne"
-     },
-     {
-      "start": 3230,
-      "end": 3237,
-      "type": "LOC",
-      "text": "Contrat"
      },
      {
       "start": 3242,
@@ -14392,22 +12350,10 @@
       "text": "M. Rimaldi"
      },
      {
-      "start": 4418,
-      "end": 4425,
-      "type": "LOC",
-      "text": "Contrat"
-     },
-     {
       "start": 4639,
       "end": 4646,
       "type": "PERSON",
       "text": "Contrat"
-     },
-     {
-      "start": 4712,
-      "end": 4726,
-      "type": "LOC",
-      "text": "Brabant wallon"
      },
      {
       "start": 4865,
@@ -14428,18 +12374,6 @@
       "text": "Chaussée de Louvain 412"
      },
      {
-      "start": 4950,
-      "end": 4955,
-      "type": "LOC",
-      "text": "Wavre"
-     },
-     {
-      "start": 5018,
-      "end": 5027,
-      "type": "LOC",
-      "text": "Franchisé"
-     },
-     {
       "start": 5030,
       "end": 5047,
       "type": "ORG",
@@ -14456,12 +12390,6 @@
       "end": 5098,
       "type": "LOC",
       "text": "Rue de la Station 88"
-     },
-     {
-      "start": 5105,
-      "end": 5113,
-      "type": "LOC",
-      "text": "Châtelet"
      },
      {
       "start": 5273,
@@ -14482,22 +12410,10 @@
       "text": "Avenue des Ormeaux 12"
      },
      {
-      "start": 5356,
-      "end": 5365,
-      "type": "LOC",
-      "text": "Bruxelles"
-     },
-     {
       "start": 5426,
       "end": 5436,
       "type": "ORG",
       "text": "MV/26/2318"
-     },
-     {
-      "start": 5446,
-      "end": 5451,
-      "type": "LOC",
-      "text": "Wavre"
      },
      {
       "start": 5512,
@@ -14522,12 +12438,12 @@
    {
     "doc_id": "doc_040_interview_notes_en",
     "score": {
-     "precision": 0.5568181818181818,
-     "recall": 0.6282051282051282,
-     "f1": 0.5903614457831325,
-     "tp": 49,
-     "fp": 39,
-     "fn": 29,
+     "precision": 0.5853658536585366,
+     "recall": 0.6153846153846154,
+     "f1": 0.6,
+     "tp": 48,
+     "fp": 34,
+     "fn": 30,
      "by_type": {
       "ORG": {
        "precision": 0.375,
@@ -14538,12 +12454,12 @@
        "fn": 5
       },
       "LOC": {
-       "precision": 0.2857142857142857,
-       "recall": 0.4,
-       "f1": 0.3333333333333333,
-       "tp": 2,
-       "fp": 5,
-       "fn": 3
+       "precision": 1.0,
+       "recall": 0.2,
+       "f1": 0.33333333333333337,
+       "tp": 1,
+       "fp": 0,
+       "fn": 4
       },
       "PERSON": {
        "precision": 0.8787878787878788,
@@ -14580,12 +12496,12 @@
      }
     },
     "score_any_type": {
-     "precision": 0.7613636363636364,
-     "recall": 0.8589743589743589,
-     "f1": 0.8072289156626505,
-     "tp": 67,
-     "fp": 21,
-     "fn": 11,
+     "precision": 0.8048780487804879,
+     "recall": 0.8461538461538461,
+     "f1": 0.8250000000000001,
+     "tp": 66,
+     "fp": 16,
+     "fn": 12,
      "by_type": {
       "ORG": {
        "precision": 0.5789473684210527,
@@ -14596,12 +12512,12 @@
        "fn": 1
       },
       "LOC": {
-       "precision": 0.4444444444444444,
-       "recall": 0.8,
-       "f1": 0.5714285714285714,
-       "tp": 4,
-       "fp": 5,
-       "fn": 1
+       "precision": 1.0,
+       "recall": 0.6,
+       "f1": 0.7499999999999999,
+       "tp": 3,
+       "fp": 0,
+       "fn": 2
       },
       "PERSON": {
        "precision": 1.0,
@@ -14819,12 +12735,6 @@
       "text": "Hotel De Blauwe Reiger"
      },
      {
-      "start": 1551,
-      "end": 1556,
-      "type": "LOC",
-      "text": "Breda"
-     },
-     {
       "start": 1559,
       "end": 1562,
       "type": "ORG",
@@ -14897,18 +12807,6 @@
       "text": "Rondelaar"
      },
      {
-      "start": 2069,
-      "end": 2080,
-      "type": "LOC",
-      "text": "Kastanjehof"
-     },
-     {
-      "start": 2100,
-      "end": 2106,
-      "type": "LOC",
-      "text": "Leuven"
-     },
-     {
       "start": 2109,
       "end": 2112,
       "type": "ORG",
@@ -14933,22 +12831,10 @@
       "text": "Hotel Löwenkranz"
      },
      {
-      "start": 2399,
-      "end": 2406,
-      "type": "LOC",
-      "text": "Cologne"
-     },
-     {
       "start": 2423,
       "end": 2426,
       "type": "ORG",
       "text": "BBP"
-     },
-     {
-      "start": 2449,
-      "end": 2456,
-      "type": "LOC",
-      "text": "Cologne"
      },
      {
       "start": 2479,
@@ -15059,12 +12945,6 @@
       "text": "BBP"
      },
      {
-      "start": 4827,
-      "end": 4834,
-      "type": "LOC",
-      "text": "Benelux"
-     },
-     {
       "start": 4882,
       "end": 4887,
       "type": "ORG",
@@ -15171,12 +13051,12 @@
    {
     "doc_id": "doc_041_shareholders_agreement_excerpt_en",
     "score": {
-     "precision": 0.7681159420289855,
-     "recall": 0.7681159420289855,
-     "f1": 0.7681159420289855,
-     "tp": 53,
-     "fp": 16,
-     "fn": 16,
+     "precision": 0.8225806451612904,
+     "recall": 0.7391304347826086,
+     "f1": 0.7786259541984734,
+     "tp": 51,
+     "fp": 11,
+     "fn": 18,
      "by_type": {
       "ORG": {
        "precision": 0.75,
@@ -15187,12 +13067,12 @@
        "fn": 2
       },
       "LOC": {
-       "precision": 0.5454545454545454,
-       "recall": 0.8571428571428571,
-       "f1": 0.6666666666666665,
-       "tp": 6,
-       "fp": 5,
-       "fn": 1
+       "precision": 1.0,
+       "recall": 0.5714285714285714,
+       "f1": 0.7272727272727273,
+       "tp": 4,
+       "fp": 0,
+       "fn": 3
       },
       "PERSON": {
        "precision": 0.9444444444444444,
@@ -15245,12 +13125,12 @@
      }
     },
     "score_any_type": {
-     "precision": 0.782608695652174,
-     "recall": 0.782608695652174,
-     "f1": 0.782608695652174,
-     "tp": 54,
-     "fp": 15,
-     "fn": 15,
+     "precision": 0.8387096774193549,
+     "recall": 0.7536231884057971,
+     "f1": 0.7938931297709925,
+     "tp": 52,
+     "fp": 10,
+     "fn": 17,
      "by_type": {
       "ORG": {
        "precision": 0.7560975609756098,
@@ -15261,12 +13141,12 @@
        "fn": 1
       },
       "LOC": {
-       "precision": 0.5454545454545454,
-       "recall": 0.8571428571428571,
-       "f1": 0.6666666666666665,
-       "tp": 6,
-       "fp": 5,
-       "fn": 1
+       "precision": 1.0,
+       "recall": 0.5714285714285714,
+       "f1": 0.7272727272727273,
+       "tp": 4,
+       "fp": 0,
+       "fn": 3
       },
       "PERSON": {
        "precision": 1.0,
@@ -15326,22 +13206,10 @@
       "text": "VLIETMOLEN POLYMERS NV"
      },
      {
-      "start": 227,
-      "end": 234,
-      "type": "LOC",
-      "text": "Belgium"
-     },
-     {
       "start": 262,
       "end": 283,
       "type": "LOC",
       "text": "Doorniksesteenweg 415"
-     },
-     {
-      "start": 290,
-      "end": 298,
-      "type": "LOC",
-      "text": "Kortrijk"
      },
      {
       "start": 316,
@@ -15360,18 +13228,6 @@
       "end": 431,
       "type": "ORG",
       "text": "VANTRELL PLASTICS HOLDCO S.à r.l"
-     },
-     {
-      "start": 487,
-      "end": 497,
-      "type": "LOC",
-      "text": "Luxembourg"
-     },
-     {
-      "start": 573,
-      "end": 583,
-      "type": "LOC",
-      "text": "Luxembourg"
      },
      {
       "start": 679,
@@ -15420,12 +13276,6 @@
       "end": 977,
       "type": "LOC",
       "text": "Ottergemsesteenweg-Zuid 812"
-     },
-     {
-      "start": 984,
-      "end": 989,
-      "type": "LOC",
-      "text": "Ghent"
      },
      {
       "start": 1007,
@@ -15632,12 +13482,6 @@
       "text": "boulevard Grande-Duchesse Charlotte"
      },
      {
-      "start": 5118,
-      "end": 5128,
-      "type": "LOC",
-      "text": "Luxembourg"
-     },
-     {
       "start": 5144,
       "end": 5153,
       "type": "PERSON",
@@ -15648,12 +13492,6 @@
       "end": 5242,
       "type": "PERSON",
       "text": "Desloovere"
-     },
-     {
-      "start": 5373,
-      "end": 5378,
-      "type": "LOC",
-      "text": "Ghent"
      },
      {
       "start": 5572,
@@ -15738,21 +13576,13 @@
    {
     "doc_id": "doc_042_settlement_submission_en",
     "score": {
-     "precision": 0.6666666666666666,
-     "recall": 0.7945205479452054,
-     "f1": 0.725,
-     "tp": 58,
-     "fp": 29,
-     "fn": 15,
+     "precision": 0.7402597402597403,
+     "recall": 0.7808219178082192,
+     "f1": 0.7600000000000001,
+     "tp": 57,
+     "fp": 20,
+     "fn": 16,
      "by_type": {
-      "LOC": {
-       "precision": 0.2857142857142857,
-       "recall": 1.0,
-       "f1": 0.4444444444444445,
-       "tp": 4,
-       "fp": 10,
-       "fn": 0
-      },
       "ORG": {
        "precision": 0.7,
        "recall": 0.875,
@@ -15760,6 +13590,14 @@
        "tp": 35,
        "fp": 15,
        "fn": 5
+      },
+      "LOC": {
+       "precision": 0.75,
+       "recall": 0.75,
+       "f1": 0.75,
+       "tp": 3,
+       "fp": 1,
+       "fn": 1
       },
       "PERSON": {
        "precision": 0.8260869565217391,
@@ -15812,21 +13650,13 @@
      }
     },
     "score_any_type": {
-     "precision": 0.7011494252873564,
-     "recall": 0.8356164383561644,
-     "f1": 0.7625000000000001,
-     "tp": 61,
-     "fp": 26,
-     "fn": 12,
+     "precision": 0.7792207792207793,
+     "recall": 0.821917808219178,
+     "f1": 0.7999999999999999,
+     "tp": 60,
+     "fp": 17,
+     "fn": 13,
      "by_type": {
-      "LOC": {
-       "precision": 0.2857142857142857,
-       "recall": 1.0,
-       "f1": 0.4444444444444445,
-       "tp": 4,
-       "fp": 10,
-       "fn": 0
-      },
       "ORG": {
        "precision": 0.7169811320754716,
        "recall": 0.95,
@@ -15834,6 +13664,14 @@
        "tp": 38,
        "fp": 15,
        "fn": 2
+      },
+      "LOC": {
+       "precision": 0.75,
+       "recall": 0.75,
+       "f1": 0.75,
+       "tp": 3,
+       "fp": 1,
+       "fn": 1
       },
       "PERSON": {
        "precision": 0.95,
@@ -15887,12 +13725,6 @@
     },
     "pred_spans": [
      {
-      "start": 71,
-      "end": 79,
-      "type": "LOC",
-      "text": "Brussels"
-     },
-     {
       "start": 158,
       "end": 177,
       "type": "ORG",
@@ -15903,12 +13735,6 @@
       "end": 227,
       "type": "LOC",
       "text": "Place Madou 1"
-     },
-     {
-      "start": 234,
-      "end": 242,
-      "type": "LOC",
-      "text": "Brussels"
      },
      {
       "start": 389,
@@ -15947,12 +13773,6 @@
       "text": "Ter Biest 44"
      },
      {
-      "start": 736,
-      "end": 743,
-      "type": "LOC",
-      "text": "Waregem"
-     },
-     {
       "start": 777,
       "end": 786,
       "type": "ORG",
@@ -15975,12 +13795,6 @@
       "end": 870,
       "type": "ORG",
       "text": "Orvalline Industries B.V"
-     },
-     {
-      "start": 941,
-      "end": 946,
-      "type": "LOC",
-      "text": "Breda"
      },
      {
       "start": 949,
@@ -16079,12 +13893,6 @@
       "text": "Fenwright Milling Media Ltd"
      },
      {
-      "start": 2143,
-      "end": 2157,
-      "type": "LOC",
-      "text": "Stoke-on-Trent"
-     },
-     {
       "start": 2160,
       "end": 2169,
       "type": "ORG",
@@ -16103,12 +13911,6 @@
       "text": "ECMF"
      },
      {
-      "start": 2324,
-      "end": 2334,
-      "type": "LOC",
-      "text": "Maastricht"
-     },
-     {
       "start": 2352,
       "end": 2356,
       "type": "ORG",
@@ -16121,22 +13923,10 @@
       "text": "the Hotel Marienbrunn"
      },
      {
-      "start": 2395,
-      "end": 2404,
-      "type": "LOC",
-      "text": "Nuremberg"
-     },
-     {
       "start": 2462,
       "end": 2482,
       "type": "LOC",
       "text": "the Villa Serramonte"
-     },
-     {
-      "start": 2486,
-      "end": 2492,
-      "type": "LOC",
-      "text": "Modena"
      },
      {
       "start": 2520,
@@ -16155,12 +13945,6 @@
       "end": 2641,
       "type": "PERSON",
       "text": "Lieselot Deraedt"
-     },
-     {
-      "start": 2663,
-      "end": 2669,
-      "type": "LOC",
-      "text": "Europe"
      },
      {
       "start": 2696,
@@ -16185,12 +13969,6 @@
       "end": 2806,
       "type": "ORG",
       "text": "Ziegelhoff"
-     },
-     {
-      "start": 2825,
-      "end": 2834,
-      "type": "LOC",
-      "text": "Nuremberg"
      },
      {
       "start": 2849,
@@ -16413,11 +14191,11 @@
    {
     "doc_id": "doc_043_mise_en_demeure_fr",
     "score": {
-     "precision": 0.375,
+     "precision": 0.4838709677419355,
      "recall": 0.36585365853658536,
-     "f1": 0.3703703703703704,
+     "f1": 0.4166666666666667,
      "tp": 15,
-     "fp": 25,
+     "fp": 16,
      "fn": 26,
      "by_type": {
       "PERSON": {
@@ -16429,11 +14207,11 @@
        "fn": 1
       },
       "LOC": {
-       "precision": 0.26666666666666666,
+       "precision": 0.6666666666666666,
        "recall": 0.8,
-       "f1": 0.4,
+       "f1": 0.7272727272727272,
        "tp": 4,
-       "fp": 11,
+       "fp": 2,
        "fn": 1
       },
       "ORG": {
@@ -16487,11 +14265,11 @@
      }
     },
     "score_any_type": {
-     "precision": 0.55,
+     "precision": 0.7096774193548387,
      "recall": 0.5365853658536586,
-     "f1": 0.54320987654321,
+     "f1": 0.6111111111111112,
      "tp": 22,
-     "fp": 18,
+     "fp": 9,
      "fn": 19,
      "by_type": {
       "PERSON": {
@@ -16503,11 +14281,11 @@
        "fn": 1
       },
       "LOC": {
-       "precision": 0.2857142857142857,
+       "precision": 0.8,
        "recall": 0.8,
-       "f1": 0.4210526315789473,
+       "f1": 0.8000000000000002,
        "tp": 4,
-       "fp": 10,
+       "fp": 1,
        "fn": 1
       },
       "CASE_REF": {
@@ -16580,18 +14358,6 @@
       "text": "Rue de l'Hydrion 58"
      },
      {
-      "start": 371,
-      "end": 375,
-      "type": "LOC",
-      "text": "Amay"
-     },
-     {
-      "start": 377,
-      "end": 382,
-      "type": "LOC",
-      "text": "Namur"
-     },
-     {
       "start": 458,
       "end": 472,
       "type": "ORG",
@@ -16616,12 +14382,6 @@
       "text": "Rue de la Sarte 112"
      },
      {
-      "start": 725,
-      "end": 732,
-      "type": "LOC",
-      "text": "Andenne"
-     },
-     {
       "start": 748,
       "end": 780,
       "type": "ORG",
@@ -16634,12 +14394,6 @@
       "text": "Banque-Carrefour des Entreprises"
      },
      {
-      "start": 1176,
-      "end": 1181,
-      "type": "LOC",
-      "text": "Halle"
-     },
-     {
       "start": 1191,
       "end": 1200,
       "type": "LOC",
@@ -16650,12 +14404,6 @@
       "end": 1213,
       "type": "LOC",
       "text": "Baronnerie 9"
-     },
-     {
-      "start": 1220,
-      "end": 1239,
-      "type": "LOC",
-      "text": "Villers-le-Bouillet"
      },
      {
       "start": 1628,
@@ -16694,12 +14442,6 @@
       "text": "Tôleries Havelange"
      },
      {
-      "start": 2703,
-      "end": 2720,
-      "type": "LOC",
-      "text": "Cour de cassation"
-     },
-     {
       "start": 2753,
       "end": 2769,
       "type": "PERSON",
@@ -16728,18 +14470,6 @@
       "end": 4346,
       "type": "ORG",
       "text": "TH-CTX/26"
-     },
-     {
-      "start": 4485,
-      "end": 4490,
-      "type": "LOC",
-      "text": "Liège"
-     },
-     {
-      "start": 4501,
-      "end": 4504,
-      "type": "LOC",
-      "text": "Huy"
      },
      {
       "start": 5130,
@@ -16784,12 +14514,6 @@
       "text": "Rue des Vennes 27"
      },
      {
-      "start": 5307,
-      "end": 5312,
-      "type": "LOC",
-      "text": "Liège"
-     },
-     {
       "start": 5388,
       "end": 5403,
       "type": "PERSON",
@@ -16806,11 +14530,11 @@
    {
     "doc_id": "doc_044_fil_emails_budget_fr",
     "score": {
-     "precision": 0.5769230769230769,
+     "precision": 0.6976744186046512,
      "recall": 0.43478260869565216,
-     "f1": 0.4958677685950413,
+     "f1": 0.5357142857142857,
      "tp": 30,
-     "fp": 22,
+     "fp": 13,
      "fn": 39,
      "by_type": {
       "PERSON": {
@@ -16821,14 +14545,6 @@
        "fp": 8,
        "fn": 5
       },
-      "LOC": {
-       "precision": 0.1,
-       "recall": 0.5,
-       "f1": 0.16666666666666669,
-       "tp": 1,
-       "fp": 9,
-       "fn": 1
-      },
       "ORG": {
        "precision": 0.5,
        "recall": 0.2631578947368421,
@@ -16836,6 +14552,14 @@
        "tp": 5,
        "fp": 5,
        "fn": 14
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 0.5,
+       "f1": 0.6666666666666666,
+       "tp": 1,
+       "fp": 0,
+       "fn": 1
       },
       "EMAIL": {
        "precision": 0.0,
@@ -16880,28 +14604,20 @@
      }
     },
     "score_any_type": {
-     "precision": 0.6153846153846154,
-     "recall": 0.463768115942029,
-     "f1": 0.5289256198347106,
-     "tp": 32,
-     "fp": 20,
-     "fn": 37,
+     "precision": 0.6976744186046512,
+     "recall": 0.43478260869565216,
+     "f1": 0.5357142857142857,
+     "tp": 30,
+     "fp": 13,
+     "fn": 39,
      "by_type": {
       "PERSON": {
-       "precision": 0.8125,
-       "recall": 0.896551724137931,
-       "f1": 0.8524590163934426,
-       "tp": 26,
+       "precision": 0.8,
+       "recall": 0.8275862068965517,
+       "f1": 0.8135593220338982,
+       "tp": 24,
        "fp": 6,
-       "fn": 3
-      },
-      "LOC": {
-       "precision": 0.125,
-       "recall": 0.5,
-       "f1": 0.2,
-       "tp": 1,
-       "fp": 7,
-       "fn": 1
+       "fn": 5
       },
       "ORG": {
        "precision": 0.4166666666666667,
@@ -16910,6 +14626,14 @@
        "tp": 5,
        "fp": 7,
        "fn": 14
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 0.5,
+       "f1": 0.6666666666666666,
+       "tp": 1,
+       "fp": 0,
+       "fn": 1
       },
       "EMAIL": {
        "precision": 0.0,
@@ -16965,12 +14689,6 @@
       "end": 119,
       "type": "PERSON",
       "text": "Nicolas Brasseur"
-     },
-     {
-      "start": 160,
-      "end": 162,
-      "type": "LOC",
-      "text": "Cc"
      },
      {
       "start": 165,
@@ -17057,12 +14775,6 @@
       "text": "Rue de la Sablière 64"
      },
      {
-      "start": 1641,
-      "end": 1649,
-      "type": "LOC",
-      "text": "Nivelles"
-     },
-     {
       "start": 1761,
       "end": 1776,
       "type": "PERSON",
@@ -17117,22 +14829,10 @@
       "text": "HIB"
      },
      {
-      "start": 2185,
-      "end": 2199,
-      "type": "LOC",
-      "text": "Brabant wallon"
-     },
-     {
       "start": 2429,
       "end": 2437,
       "type": "ORG",
       "text": "Dorimont"
-     },
-     {
-      "start": 3127,
-      "end": 3144,
-      "type": "LOC",
-      "text": "Cour de cassation"
      },
      {
       "start": 3262,
@@ -17159,24 +14859,6 @@
       "text": "Gérardy"
      },
      {
-      "start": 3549,
-      "end": 3555,
-      "type": "LOC",
-      "text": "Budget"
-     },
-     {
-      "start": 3557,
-      "end": 3561,
-      "type": "LOC",
-      "text": "HTVA"
-     },
-     {
-      "start": 3595,
-      "end": 3602,
-      "type": "LOC",
-      "text": "Camille"
-     },
-     {
       "start": 3777,
       "end": 3782,
       "type": "ORG",
@@ -17195,12 +14877,6 @@
       "text": "Audience"
      },
      {
-      "start": 4383,
-      "end": 4394,
-      "type": "LOC",
-      "text": "Quertinmont"
-     },
-     {
       "start": 4757,
       "end": 4775,
       "type": "PERSON",
@@ -17211,12 +14887,6 @@
       "end": 4787,
       "type": "ORG",
       "text": "SRL"
-     },
-     {
-      "start": 4815,
-      "end": 4820,
-      "type": "LOC",
-      "text": "Namur"
      },
      {
       "start": 4856,
@@ -17271,12 +14941,12 @@
    {
     "doc_id": "doc_045_escrow_agreement_excerpt_en",
     "score": {
-     "precision": 0.7096774193548387,
-     "recall": 0.6197183098591549,
-     "f1": 0.6616541353383459,
-     "tp": 44,
-     "fp": 18,
-     "fn": 27,
+     "precision": 0.7547169811320755,
+     "recall": 0.5633802816901409,
+     "f1": 0.6451612903225807,
+     "tp": 40,
+     "fp": 13,
+     "fn": 31,
      "by_type": {
       "ORG": {
        "precision": 0.6363636363636364,
@@ -17287,12 +14957,12 @@
        "fn": 0
       },
       "LOC": {
-       "precision": 0.6153846153846154,
-       "recall": 0.5,
-       "f1": 0.5517241379310345,
-       "tp": 8,
-       "fp": 5,
-       "fn": 8
+       "precision": 1.0,
+       "recall": 0.25,
+       "f1": 0.4,
+       "tp": 4,
+       "fp": 0,
+       "fn": 12
       },
       "PERSON": {
        "precision": 0.9375,
@@ -17345,12 +15015,12 @@
      }
     },
     "score_any_type": {
-     "precision": 0.7580645161290323,
-     "recall": 0.6619718309859155,
-     "f1": 0.706766917293233,
-     "tp": 47,
-     "fp": 15,
-     "fn": 24,
+     "precision": 0.8113207547169812,
+     "recall": 0.6056338028169014,
+     "f1": 0.6935483870967741,
+     "tp": 43,
+     "fp": 10,
+     "fn": 28,
      "by_type": {
       "ORG": {
        "precision": 0.7,
@@ -17369,12 +15039,12 @@
        "fn": 0
       },
       "LOC": {
-       "precision": 0.6428571428571429,
-       "recall": 0.5625,
-       "f1": 0.6000000000000001,
-       "tp": 9,
-       "fp": 5,
-       "fn": 7
+       "precision": 1.0,
+       "recall": 0.3125,
+       "f1": 0.47619047619047616,
+       "tp": 5,
+       "fp": 0,
+       "fn": 11
       },
       "CASE_REF": {
        "precision": 0.0,
@@ -17468,12 +15138,6 @@
       "text": "VAERENBERGH PARTICIPATIES NV"
      },
      {
-      "start": 396,
-      "end": 403,
-      "type": "LOC",
-      "text": "Belgium"
-     },
-     {
       "start": 431,
       "end": 450,
       "type": "LOC",
@@ -17492,28 +15156,10 @@
       "text": "THISTLEWOOD ENERGY INVESTMENTS LIMITED"
      },
      {
-      "start": 662,
-      "end": 669,
-      "type": "LOC",
-      "text": "England"
-     },
-     {
-      "start": 674,
-      "end": 679,
-      "type": "LOC",
-      "text": "Wales"
-     },
-     {
       "start": 695,
       "end": 710,
       "type": "ORG",
       "text": "Companies House"
-     },
-     {
-      "start": 779,
-      "end": 785,
-      "type": "LOC",
-      "text": "London"
      },
      {
       "start": 812,
@@ -17550,12 +15196,6 @@
       "end": 1309,
       "type": "LOC",
       "text": "Oevelse Dreef 18"
-     },
-     {
-      "start": 1316,
-      "end": 1324,
-      "type": "LOC",
-      "text": "Westerlo"
      },
      {
       "start": 1327,
@@ -17654,22 +15294,10 @@
       "text": "Wetenschapsstraat 33"
      },
      {
-      "start": 4432,
-      "end": 4440,
-      "type": "LOC",
-      "text": "Brussels"
-     },
-     {
       "start": 4518,
       "end": 4556,
       "type": "ORG",
       "text": "Thistlewood Energy Investments Limited"
-     },
-     {
-      "start": 4577,
-      "end": 4583,
-      "type": "LOC",
-      "text": "London"
      },
      {
       "start": 4608,
@@ -17720,22 +15348,10 @@
       "text": "the Commercial Court"
      },
      {
-      "start": 5561,
-      "end": 5567,
-      "type": "LOC",
-      "text": "London"
-     },
-     {
       "start": 5588,
       "end": 5604,
       "type": "ORG",
       "text": "Enterprise Court"
-     },
-     {
-      "start": 5608,
-      "end": 5616,
-      "type": "LOC",
-      "text": "Brussels"
      },
      {
       "start": 5748,

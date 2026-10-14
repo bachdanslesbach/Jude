@@ -45,6 +45,15 @@ Jude exposes two modes per matter, surfaced in the UI:
 
 The mode is recorded per matter and visible at every step.
 
+Two things Jude deliberately leaves readable, by annotation policy
+(rulings of 13 October 2026): **bare city and country names** (a
+party's street-address line is still redacted) and **deal codenames**
+(`Project Ganymede`) — a codename identifies nobody on its own, and
+the LLM reasons better with it. A matter can opt in to codename
+redaction (*Change mode → Redact deal codenames*, or `jude matter
+create --redact-codenames`); then the phrase and every bare `Ganymede`
+get one pseudonym.
+
 ## Threat model
 
 Jude protects against:
@@ -140,7 +149,7 @@ throughput and peak memory.
 
 | System | Span F1 — heldout (dev) | Recall (heldout) | Public bodies redacted (heldout) |
 |---|---|---|---|
-| Jude (`jude-full`) | **0.701** (0.914) | 0.89 | 30 % |
+| Jude (`jude-full`) | **0.745** (0.952) | 0.89 | 26 % |
 | rules only (0 parameters) | 0.714 (0.836) | 0.57 | 3 % |
 | `nvidia/gliner-PII` (native labels) | 0.628 (0.662) | 0.62 | 24 % |
 | `perplexity-ai/pplx-pii-masking` | 0.632 (0.570) | 0.48 | 2 % |
@@ -148,13 +157,14 @@ throughput and peak memory.
 | `roblox/roblox-pii-classifier` | — (sentence-level 0.751) | — | — |
 
 The `heldout` column is the number to quote: the 25 documents Jude
-was never tuned on, scored under the annotation rulings of 13 October
-2026 (codenames and bare city names are not identifiers). Jude loses
+was never tuned on, every one reviewed in Word by a lawyer, scored
+under the annotation rulings of 13 October 2026 (codenames and bare
+city names are not identifiers; the detector follows). Jude loses
 21 F1 points between the two splits — its recall holds (0.89), its
-precision does not (0.84 → 0.58): cities and codenames it still
-predicts, the public sphere in French practice, role phrases and
-published citations. The rules alone now edge it on F1 at precision
-0.95 and recall 0.57; recall, not F1, is what a lawyer needs. Generic PII taxonomies have no label
+precision does not (0.92 → 0.64): the public sphere in French
+practice, role phrases, published citations and bare short forms. The
+rules alone reach precision 0.95 at recall 0.57; recall, not F1, is
+what a lawyer needs. Generic PII taxonomies have no label
 for organisations-as-parties or case references — 47 % of what a
 legal document must hide. Protocol, full tables and failure taxonomy:
 [docs/benchmark-pii-models.md](docs/benchmark-pii-models.md);

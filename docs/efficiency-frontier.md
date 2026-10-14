@@ -96,16 +96,16 @@ the numbers below are the current run.*
 <!-- LADDER_TABLE -->
 | Runner | Params | Device | Pages / s | s / page | Recall | Precision | F1 | Public-body over-redaction | Peak RSS |
 |---|---|---|---|---|---|---|---|---|---|
-| `rules-only` | 0 | cpu | 116.71 | 0.0 | 0.604 | 0.962 | **0.742** | 3% | 308 MB |
-| `regex-only` | 0 | cpu | 1151.22 | 0.0 | 0.148 | 0.956 | **0.257** | 0% | 308 MB |
-| `gliner-small-v2.1-jude-labels` | 50 M | mps | 2.18 | 0.5 | 0.480 | 0.598 | **0.533** | 38% | 1731 MB |
-| `spacy-only` | 125 M | cpu | 1.84 | 0.5 | 0.623 | 0.530 | **0.573** | 58% | 3030 MB |
-| `jude-full-no-gliner` | 125 M | cpu | 1.00 | 1.0 | 0.859 | 0.612 | **0.715** | 23% | 3037 MB |
-| `jude-full-gliner-small` | 175 M | cpu | 0.57 | 1.7 | 0.889 | 0.619 | **0.730** | 24% | 2451 MB |
-| `gliner-large-v2.1-jude-labels` | 440 M | mps | 0.94 | 1.1 | 0.572 | 0.578 | **0.575** | 51% | 3440 MB |
+| `rules-only` | 0 | cpu | 116.73 | 0.0 | 0.604 | 0.962 | **0.742** | 3% | 308 MB |
+| `regex-only` | 0 | cpu | 1158.66 | 0.0 | 0.148 | 0.956 | **0.257** | 0% | 308 MB |
+| `gliner-small-v2.1-jude-labels` | 50 M | mps | 2.19 | 0.5 | 0.477 | 0.708 | **0.570** | 26% | 1674 MB |
+| `spacy-only` | 125 M | cpu | 1.77 | 0.6 | 0.602 | 0.640 | **0.621** | 40% | 2206 MB |
+| `jude-full-no-gliner` | 125 M | cpu | 0.97 | 1.0 | 0.846 | 0.690 | **0.760** | 19% | 2059 MB |
+| `jude-full-gliner-small` | 175 M | cpu | 0.54 | 1.8 | 0.883 | 0.688 | **0.774** | 21% | 1949 MB |
+| `gliner-large-v2.1-jude-labels` | 440 M | mps | 0.89 | 1.1 | 0.549 | 0.674 | **0.605** | 37% | 3442 MB |
 | `gliner-large-v2.1-jude-labels-cpu` | 440 M | cpu | 0.72 | 1.4 | 0.572 | 0.578 | **0.575** | 51% | 3814 MB |
 | `nvidia-gliner-pii-native` | 440 M | mps | 0.83 | 1.2 | 0.625 | 0.646 | **0.635** | 24% | 3434 MB |
-| `jude-full` | 565 M | cpu | 0.21 | 4.8 | 0.918 | 0.623 | **0.742** | 25% | 2612 MB |
+| `jude-full` | 565 M | cpu | 0.18 | 5.5 | 0.910 | 0.690 | **0.785** | 22% | 2445 MB |
 | `pplx-pii-masking` | 596 M | mps | 0.70 | 1.4 | 0.468 | 0.916 | **0.619** | 2% | 755 MB |
 | `pplx-pii-masking-cpu` | 596 M | cpu | 0.04 | 23.0 | 0.469 | 0.916 | **0.620** | 2% | 1572 MB |
 | `roblox-pii-classifier` | 560 M | mps | 1.07 | 0.9 | — | — | **—** | — | 943 MB |
@@ -124,24 +124,24 @@ says, in order of surprise:
 
 1. **Quality is not monotone in parameters.** Zero parameters, well
    designed (`rules-only`: regex, long-tail patterns, known entities,
-   whitelist) scores F1 0.74 with precision 0.96 — level with the full
-   pipeline on F1 and above every neural model run alone, including
-   the 440 M GLiNER (0.58) and the 596 M `pplx` (0.62). The same 440 M
-   checkpoint gains six points once fine-tuned on PII data
+   whitelist) scores F1 0.74 with precision 0.96 — four points behind
+   the full pipeline and above every neural model run alone, including
+   the 440 M GLiNER (0.61) and the 596 M `pplx` (0.62). The same 440 M
+   checkpoint gains three points once fine-tuned on PII data
    (`nvidia-gliner-pii`, 0.64): at equal size, *what the model was
    taught* is worth more than *how big it is*.
 2. **The model's job is recall; the rules' job is precision.** Rules
-   alone recall 0.60; adding the neural layers takes Jude to 0.92 —
-   +32 points — at a cost of 34 precision points. That is the division
-   of labour the numbers impose, not a design preference; and since
-   the annotation rulings of 13 October 2026 (bare cities and
-   codenames are not identifiers) part of that precision cost is the
-   detector not yet following the policy.
+   alone recall 0.60; adding the neural layers takes Jude to 0.91 —
+   +31 points — at a cost of 27 precision points (0.96 → 0.69). That
+   is the division of labour the numbers impose, not a design
+   preference. Numbers follow the annotation rulings of 13 October
+   2026 (bare cities and codenames are not identifiers), which the
+   detector implements since v0.8.1.
 3. **Diminishing returns start at 0.1 B.** Inside the same pipeline,
-   GLiNER small (50 M) gives F1 0.730 / recall 0.889; large (440 M)
-   gives 0.742 / 0.918. Nine times the parameters buy 1.2 points of
-   F1 and 3 of recall — and cost 2.7× the time per page (0.57 →
-   0.21 pages/s). No GLiNER at all: 0.715 / 0.859 at 1.0 page/s.
+   GLiNER small (50 M) gives F1 0.774 / recall 0.883; large (440 M)
+   gives 0.785 / 0.910. Nine times the parameters buy one point of F1
+   and 3 of recall — and cost 3× the time per page (0.54 → 0.18
+   pages/s). No GLiNER at all: 0.760 / 0.846 at 1.0 page/s.
 4. **Architecture beats size for the CPU tier.** GLiNER large runs
    almost as fast on CPU as on the GPU (0.72 vs 0.94 pages/s);
    `pplx`'s Qwen-derived encoder of similar size drops from 0.70 to
@@ -160,7 +160,7 @@ says, in order of surprise:
    the generative route costs a hundred times the compute for a
    worse answer.
 
-Jude's own pipeline is the slowest encoder on the chart (0.21 pages/s)
+Jude's own pipeline is the slowest encoder on the chart (0.18 pages/s)
 for a reason unrelated to model size: two full passes and a
 transformer spaCy on CPU. Its throughput is an engineering item, not
 a modelling one.
@@ -177,18 +177,17 @@ Read against the demand side above:
   at equal size is the lower bound of what a *legal* fine-tune should
   bring, since its label set finally matches the task.
 * **Speed: ≥ 1 page/s on CPU is within reach** for a single-pass
-  50–450 M encoder; Jude's 0.21 pages/s is the two-pass pipeline, not
+  50–450 M encoder; Jude's 0.18 pages/s is the two-pass pipeline, not
   the model. 10 pages/s is a server with batching, or the rules layer
   alone (117 pages/s) for a first triage.
 * **Quality target: recall ≥ 0.99 by machine with the review report
   closing the gap, precision ≥ 0.85, public-body over-redaction
   ≤ 5 %.** On the held-out split Jude stands at recall 0.89 / precision
-  0.58 / over-redaction 30 % — the gap is almost entirely the negative
-  classes: bare cities and codenames (now ruled non-identifiers, still
-  predicted), the public sphere in French practice, role phrases and
-  published citations — what a model has to *learn to leave alone*,
-  not what it has to find (see the failure taxonomy in
-  `benchmark-pii-models.html`).
+  0.64 / over-redaction 26 % — the gap is almost entirely the negative
+  classes: the public sphere in French practice, role phrases,
+  published citations and bare short forms — what a model has to
+  *learn to leave alone*, not what it has to find (see the failure
+  taxonomy in `benchmark-pii-models.html`).
 * **100 B: not on the frontier.** Off every deployment tier a firm
   can own, and the task does not need it; a 7–14 B local model earns
   its place only as an occasional second reader for quasi-identifiers.

@@ -97,7 +97,7 @@ def build(spec: dict) -> dict:
                 continue  # gold wins where the two overlap
             pub_c.append((s, e, "PUBLIC", text[s:e]))
     public = _resolve(pub_c)
-    return {
+    out = {
         "id": spec["id"],
         "title": spec["title"],
         "language": spec["language"],
@@ -105,11 +105,18 @@ def build(spec: dict) -> dict:
         "gold_spans": gold,
         "public_spans": public,
         "notes": spec.get("notes", ""),
-        "source": "agent-synthetic",
+        "source": spec.get("source", "agent-synthetic"),
         "split": spec.get("split", "heldout"),
         "genre": spec.get("genre", ""),
         "traps": spec.get("traps", []),
     }
+    # Real published documents (split "public") carry where they came
+    # from and under which licence they are reproduced.
+    if spec.get("provenance"):
+        out["provenance"] = spec["provenance"]
+    if spec.get("codenames"):
+        out["codenames"] = spec["codenames"]
+    return out
 
 
 # Real banks named by acronym may recur across documents (KBC finances
@@ -158,10 +165,17 @@ def collisions(
 
     errs: list[str] = []
     others = []
+    # Two real published documents may legitimately share a real counsel,
+    # judge or firm: that is not a synthetic fingerprint. A synthetic
+    # document must still not reuse a name from any split.
+    mine_public = spec.get("split") == "public"
     for p in sorted(Path(corpus_dir).glob("doc_*.json")):
         d = json.loads(p.read_text(encoding="utf-8"))
-        if d.get("id") != spec.get("id"):
-            others.append(d)
+        if d.get("id") == spec.get("id"):
+            continue
+        if mine_public and d.get("split") == "public":
+            continue
+        others.append(d)
     seen_ids = {d["id"] for d in others}
     if specs_dir is not None:
         for p in sorted(Path(specs_dir).glob("doc_*.json")):

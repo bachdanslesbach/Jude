@@ -1,0 +1,394 @@
+{
+ "id": "doc_111_cass_2025_g_v_etat_belge_fr",
+ "title": "C. G. c. État belge (ministre des Finances)",
+ "language": "fr",
+ "text": "No ECLI: ECLI:BE:CASS:2025:ARR.20250116.1F.1\nNo Rôle: F.24.0020.F\nAffaire: G. contra ETAT BELGE FINANCES\nChambre: 1F - première chambre\nDomaine juridique: Autres\n\nTexte de la décision\n\nN° F.24.0020.F\n\nC. G.,\n\ndemanderesse en cassation,\n\nreprésentée par Maître Daniel Garabedian, avocat à la Cour de cassation, dont le cabinet est établi à Bruxelles, rue de la Bonté, 5, où il est fait élection de domicile,\n\ncontre\n\nÉTAT BELGE, représenté par le ministre des Finances, dont le cabinet est établi à Bruxelles, rue de la Loi, 12,\n\ndéfendeur en cassation,\n\nreprésenté par Maître Geoffroy de Foestraets, avocat à la Cour de cassation, dont le cabinet est établi à Bruxelles, rue de la Vallée, 67, où il est fait élection de domicile.\n\nI. La procédure devant la Cour\n\nLe pourvoi en cassation est dirigé contre l’arrêt rendu le 5 mai 2023 par la cour d’appel de Mons.\n\nLe conseiller Marie-Claire Ernotte a fait rapport.\n\nL’avocat général Thierry Werquin a conclu.\n\nII. Le moyen de cassation\n\nDans la requête en cassation, jointe au présent arrêt en copie certifiée conforme, la demanderesse présente un moyen.\n\nIII. La décision de la Cour\n\nSur le moyen :\n\nLorsque le juge d’appel statue sur une question litigieuse tranchée par le premier juge dans la même cause et entre les mêmes parties, sans que cette décision ait fait l’objet d’un appel, il ne méconnaît pas l’autorité de la chose jugée de cette décision.\n\nDans cette mesure, le moyen est irrecevable.\n\nPour le surplus, selon l’article 19, alinéas 1er et 2, du Code judiciaire, le jugement est définitif dans la mesure où il épuise la juridiction du juge sur une question litigieuse, sauf les recours prévus par la loi ; le juge qui a épuisé sa juridiction sur une question litigieuse ne peut plus en être saisi, sauf exceptions prévues par ce code.\n\nEn vertu de l’article 19, alinéa 3, de ce code, le juge peut, avant dire droit, à tout stade de la procédure, ordonner une mesure préalable destinée, soit à instruire la demande ou à régler un incident portant sur une telle mesure, soit à régler provisoirement la situation des parties.\n\nLa décision du juge d’ordonner une réouverture des débats en vue d’inviter une partie à produire des documents est une mesure destinée à instruire la demande.\n\nIl rend ainsi une décision avant dire droit, lors même qu’il tranche, sans incidence sur la recevabilité ou le fondement de la demande, une contestation relative à cette mesure.\n\nDans la mesure où il est recevable, le moyen, qui est fondé sur le soutènement contraire, manque en droit.\n\nPar ces motifs,\n\nLa Cour\n\nRejette le pourvoi ;\n\nCondamne la demanderesse aux dépens.\n\nLes dépens taxés à la somme de cinq cent soixante-quatre euros quatre-vingts centimes envers la partie demanderesse, y compris la somme de vingt-quatre euros au profit du fonds budgétaire relatif à l’aide juridique de deuxième ligne.\n\nAinsi jugé par la Cour de cassation, première chambre, à Bruxelles, où siégeaient le président de section Christian Storck, président, le président de section Mireille Delange, les conseillers Marie-Claire Ernotte, Maxime Marchandise et Simon Claisse, et prononcé en audience publique du seize janvier deux mille vingt-cinq par le président de section Christian Storck, en présence de l’avocat général Thierry Werquin, avec l’assistance du greffier Patricia De Wadripont.\n",
+ "gold_spans": [
+  {
+   "start": 9,
+   "end": 44,
+   "type": "CASE_REF",
+   "text": "ECLI:BE:CASS:2025:ARR.20250116.1F.1"
+  },
+  {
+   "start": 54,
+   "end": 65,
+   "type": "CASE_REF",
+   "text": "F.24.0020.F"
+  },
+  {
+   "start": 188,
+   "end": 199,
+   "type": "CASE_REF",
+   "text": "F.24.0020.F"
+  },
+  {
+   "start": 260,
+   "end": 277,
+   "type": "PERSON",
+   "text": "Daniel Garabedian"
+  },
+  {
+   "start": 339,
+   "end": 368,
+   "type": "LOC",
+   "text": "Bruxelles, rue de la Bonté, 5"
+  },
+  {
+   "start": 576,
+   "end": 598,
+   "type": "PERSON",
+   "text": "Geoffroy de Foestraets"
+  },
+  {
+   "start": 660,
+   "end": 691,
+   "type": "LOC",
+   "text": "Bruxelles, rue de la Vallée, 67"
+  },
+  {
+   "start": 877,
+   "end": 897,
+   "type": "PERSON",
+   "text": "Marie-Claire Ernotte"
+  },
+  {
+   "start": 932,
+   "end": 947,
+   "type": "PERSON",
+   "text": "Thierry Werquin"
+  },
+  {
+   "start": 2963,
+   "end": 2979,
+   "type": "PERSON",
+   "text": "Christian Storck"
+  },
+  {
+   "start": 3016,
+   "end": 3032,
+   "type": "PERSON",
+   "text": "Mireille Delange"
+  },
+  {
+   "start": 3050,
+   "end": 3070,
+   "type": "PERSON",
+   "text": "Marie-Claire Ernotte"
+  },
+  {
+   "start": 3072,
+   "end": 3090,
+   "type": "PERSON",
+   "text": "Maxime Marchandise"
+  },
+  {
+   "start": 3094,
+   "end": 3107,
+   "type": "PERSON",
+   "text": "Simon Claisse"
+  },
+  {
+   "start": 3209,
+   "end": 3225,
+   "type": "PERSON",
+   "text": "Christian Storck"
+  },
+  {
+   "start": 3259,
+   "end": 3274,
+   "type": "PERSON",
+   "text": "Thierry Werquin"
+  },
+  {
+   "start": 3306,
+   "end": 3327,
+   "type": "PERSON",
+   "text": "Patricia De Wadripont"
+  }
+ ],
+ "public_spans": [
+  {
+   "start": 75,
+   "end": 77,
+   "type": "PUBLIC",
+   "text": "G."
+  },
+  {
+   "start": 85,
+   "end": 104,
+   "type": "PUBLIC",
+   "text": "ETAT BELGE FINANCES"
+  },
+  {
+   "start": 114,
+   "end": 135,
+   "type": "PUBLIC",
+   "text": "1F - première chambre"
+  },
+  {
+   "start": 155,
+   "end": 161,
+   "type": "PUBLIC",
+   "text": "Autres"
+  },
+  {
+   "start": 201,
+   "end": 206,
+   "type": "PUBLIC",
+   "text": "C. G."
+  },
+  {
+   "start": 209,
+   "end": 234,
+   "type": "PUBLIC",
+   "text": "demanderesse en cassation"
+  },
+  {
+   "start": 253,
+   "end": 259,
+   "type": "PUBLIC",
+   "text": "Maître"
+  },
+  {
+   "start": 279,
+   "end": 308,
+   "type": "PUBLIC",
+   "text": "avocat à la Cour de cassation"
+  },
+  {
+   "start": 385,
+   "end": 405,
+   "type": "PUBLIC",
+   "text": "élection de domicile"
+  },
+  {
+   "start": 416,
+   "end": 426,
+   "type": "PUBLIC",
+   "text": "ÉTAT BELGE"
+  },
+  {
+   "start": 446,
+   "end": 467,
+   "type": "PUBLIC",
+   "text": "ministre des Finances"
+  },
+  {
+   "start": 498,
+   "end": 526,
+   "type": "PUBLIC",
+   "text": "Bruxelles, rue de la Loi, 12"
+  },
+  {
+   "start": 529,
+   "end": 551,
+   "type": "PUBLIC",
+   "text": "défendeur en cassation"
+  },
+  {
+   "start": 569,
+   "end": 575,
+   "type": "PUBLIC",
+   "text": "Maître"
+  },
+  {
+   "start": 600,
+   "end": 629,
+   "type": "PUBLIC",
+   "text": "avocat à la Cour de cassation"
+  },
+  {
+   "start": 708,
+   "end": 728,
+   "type": "PUBLIC",
+   "text": "élection de domicile"
+  },
+  {
+   "start": 754,
+   "end": 761,
+   "type": "PUBLIC",
+   "text": "la Cour"
+  },
+  {
+   "start": 822,
+   "end": 832,
+   "type": "PUBLIC",
+   "text": "5 mai 2023"
+  },
+  {
+   "start": 840,
+   "end": 860,
+   "type": "PUBLIC",
+   "text": "cour d’appel de Mons"
+  },
+  {
+   "start": 866,
+   "end": 876,
+   "type": "PUBLIC",
+   "text": "conseiller"
+  },
+  {
+   "start": 917,
+   "end": 931,
+   "type": "PUBLIC",
+   "text": "avocat général"
+  },
+  {
+   "start": 1069,
+   "end": 1084,
+   "type": "PUBLIC",
+   "text": "la demanderesse"
+  },
+  {
+   "start": 1125,
+   "end": 1132,
+   "type": "PUBLIC",
+   "text": "la Cour"
+  },
+  {
+   "start": 1161,
+   "end": 1173,
+   "type": "PUBLIC",
+   "text": "juge d’appel"
+  },
+  {
+   "start": 1225,
+   "end": 1237,
+   "type": "PUBLIC",
+   "text": "premier juge"
+  },
+  {
+   "start": 1478,
+   "end": 1526,
+   "type": "PUBLIC",
+   "text": "article 19, alinéas 1er et 2, du Code judiciaire"
+  },
+  {
+   "start": 1815,
+   "end": 1835,
+   "type": "PUBLIC",
+   "text": "article 19, alinéa 3"
+  },
+  {
+   "start": 2553,
+   "end": 2560,
+   "type": "PUBLIC",
+   "text": "La Cour"
+  },
+  {
+   "start": 2593,
+   "end": 2608,
+   "type": "PUBLIC",
+   "text": "la demanderesse"
+  },
+  {
+   "start": 2653,
+   "end": 2707,
+   "type": "PUBLIC",
+   "text": "cinq cent soixante-quatre euros quatre-vingts centimes"
+  },
+  {
+   "start": 2715,
+   "end": 2737,
+   "type": "PUBLIC",
+   "text": "la partie demanderesse"
+  },
+  {
+   "start": 2761,
+   "end": 2779,
+   "type": "PUBLIC",
+   "text": "vingt-quatre euros"
+  },
+  {
+   "start": 2793,
+   "end": 2854,
+   "type": "PUBLIC",
+   "text": "fonds budgétaire relatif à l’aide juridique de deuxième ligne"
+  },
+  {
+   "start": 2875,
+   "end": 2892,
+   "type": "PUBLIC",
+   "text": "Cour de cassation"
+  },
+  {
+   "start": 2894,
+   "end": 2910,
+   "type": "PUBLIC",
+   "text": "première chambre"
+  },
+  {
+   "start": 2914,
+   "end": 2923,
+   "type": "PUBLIC",
+   "text": "Bruxelles"
+  },
+  {
+   "start": 2942,
+   "end": 2962,
+   "type": "PUBLIC",
+   "text": "président de section"
+  },
+  {
+   "start": 2995,
+   "end": 3015,
+   "type": "PUBLIC",
+   "text": "président de section"
+  },
+  {
+   "start": 3038,
+   "end": 3049,
+   "type": "PUBLIC",
+   "text": "conseillers"
+  },
+  {
+   "start": 3145,
+   "end": 3180,
+   "type": "PUBLIC",
+   "text": "seize janvier deux mille vingt-cinq"
+  },
+  {
+   "start": 3188,
+   "end": 3208,
+   "type": "PUBLIC",
+   "text": "président de section"
+  },
+  {
+   "start": 3244,
+   "end": 3258,
+   "type": "PUBLIC",
+   "text": "avocat général"
+  },
+  {
+   "start": 3297,
+   "end": 3305,
+   "type": "PUBLIC",
+   "text": "greffier"
+  }
+ ],
+ "notes": "Complete text of a short Cour de cassation (Belgium, 1st chamber, French section) judgment of 16 January 2025 in a tax case (C. G. against the Belgian State, Minister of Finance): the moyen argued that the appeal court had disregarded the res judicata of a first-instance decision; the Court holds that an order reopening the debates to have a party produce documents is a decision avant dire droit (art. 19 Code judiciaire) and rejects the pourvoi. JUPORTAL identification rows then the judgment from the N° line to the composition paragraph, annotated as if it were a client's confidential file sent to an outside LLM. SHOULD redact: the two avocats à la Cour de cassation, each as a full name without the honorific 'Maître' (ruling 5) — the applicant's counsel 'Daniel Garabedian' and the State's counsel 'Geoffroy de Foestraets' (the particle 'de' is part of the surname and inside the span); the magistrates and the clerk named in the document (ruling 4), each as a full name without the title: the conseiller-rapporteur 'Marie-Claire Ernotte' (twice: report and composition), the avocat général 'Thierry Werquin' (twice: conclusions and composition), the président de section 'Christian Storck' (twice: presiding and pronouncing), the président de section 'Mireille Delange', the conseillers 'Maxime Marchandise' and 'Simon Claisse', the greffier 'Patricia De Wadripont' (the capitalised 'De' is part of the surname); the two counsel's chambers address lines as whole lines including the city (ruling 6: a party's street-address line is gold even though the bare city is not) — 'Bruxelles, rue de la Bonté, 5' and 'Bruxelles, rue de la Vallée, 67'; the document's own identifiers as if live (ruling 2 applied to the matter's own numbers, typed CASE_REF): the ECLI 'ECLI:BE:CASS:2025:ARR.20250116.1F.1' and the rôle number 'F.24.0020.F' (twice: 'No Rôle' row and 'N°' line). SHOULD NOT redact: the applicant, already reduced by the Court to the initials 'C. G.' (party list) and 'G.' ('Affaire' row) — the anonymisation is the Court's, nothing remains to redact, and the initials are listed as public so that a detector redacting them is counted as over-redacting by design; the defendant 'ÉTAT BELGE' / 'ETAT BELGE FINANCES' (all-caps in the party list and the 'Affaire' row) and 'le ministre des Finances' — the Belgian State acting through its tax administration is a public authority (the whitelist already carries 'SPF Finances' as redact: false, and countries are public under the policy), it identifies no client and is the standard defendant of every Belgian tax case; its address line 'Bruxelles, rue de la Loi, 12' is therefore the authority's address, public, although it has exactly the shape of the two gold counsel addresses; the Court and its organs ('Cour de cassation', 'la Cour' / 'La Cour', 'première chambre', the chamber code '1F' in the 'Chambre' row — inside the ECLI it is part of the gold span — and the domain row 'Autres'); the lower court 'cour d’appel de Mons' and the bare cities 'Mons' and 'Bruxelles' (the Court's seat, 'à Bruxelles, où siégeaient' — gold only inside the two counsel address lines, ruling 6); the statute 'article 19, alinéas 1er et 2, du Code judiciaire' and 'ce code'; the public fund 'fonds budgétaire relatif à l’aide juridique de deuxième ligne'; the registration-role phrase 'avocat à la Cour de cassation' and the generic roles 'demanderesse en cassation', 'défendeur en cassation', 'la demanderesse', 'la partie demanderesse', 'le premier juge', 'le juge d’appel', 'conseiller(s)', 'président de section', 'avocat général', 'greffier', 'élection de domicile'; the dates (5 mai 2023; seize janvier deux mille vingt-cinq), the amounts in words (cinq cent soixante-quatre euros quatre-vingts centimes; vingt-quatre euros) and the section headings I–III. Traps genuinely present: address (two Belgian-style 'city, street, number' lines without postcode for the two counsel, gold, and a third line of identical shape for the Minister of Finance, 'Bruxelles, rue de la Loi, 12', public — a detector keying on the shape must still tell a private chambers from a ministry); adjacent-public ('Maître Daniel Garabedian, avocat à la Cour de cassation' — counsel glued to the public court; 'ÉTAT BELGE, représenté par le ministre des Finances, … représenté par Maître Geoffroy de Foestraets' — a gold name right after two public bodies; 'Cour de cassation, première chambre, à Bruxelles, où siégeaient le président de section Christian Storck' — judge glued to court and seat; 'Le conseiller Marie-Claire Ernotte', 'L’avocat général Thierry Werquin' — title + name); role-noise ('demanderesse en cassation', 'défendeur en cassation', 'la partie demanderesse', 'le ministre des Finances', 'le président de section' ×3, 'les conseillers', 'l’avocat général', 'du greffier', 'avocat à la Cour de cassation'); internal-docket (the rôle number 'F.24.0020.F' twice and the ECLI — the matter's own numbers in dotted Belgian format rather than a slash citation). Not present: no bare surname, no honorific + surname, no acronym, no e-mail, URL, phone, bank account or registry number, and no gold name in capitals (the only all-caps surfaces are the public État belge), so 'all-caps-header' is not declared. Doubts for the reviewer: (i) 'ÉTAT BELGE' / 'ETAT BELGE FINANCES' kept public as a whitelisted-type authority and as 'the country as a legal person'; the sibling doc_110 keeps 'VILLE DE VIRTON' gold because a small municipality in one paving dispute does identify the matter — if the rule should instead be 'every party is gold whatever its nature', move the two surfaces (and the address 'Bruxelles, rue de la Loi, 12') to entities as ORG / LOC; (ii) the ECLI is a published, stable citation of this very decision and could stay public under ruling 2 rather than gold under the 'own number as if live' rule (kept gold, consistent with doc_109 and doc_110); (iii) the avocat général is a member of the parquet, not of the bench, and the greffier is not a magistrate — both typed PERSON under ruling 4 like the judges; (iv) only three entity types occur (PERSON, LOC, CASE_REF): the judgment names no company, firm, e-mail, number or account, so the validator's four-type floor cannot be met from the text — a floor to relax for the public split, as five other public specs show the same single failure — since relaxed: the validator skips the type floor for split 'public' and the spec passes. ADJUDICATION (2026-10-15, against a blind second annotation of the same raw file): the two entity sets are identical — the same 13 surfaces with the same types (9 PERSON, 2 LOC, 2 CASE_REF), no surface held by one and missing from the other, no type mismatch — so nothing was resolved for either side. The second annotator independently reached the same two calls flagged above and flagged them too: (a) 'C. G.' / 'G.' public (already the Court's initials — policy: Belgian cassation initials are not gold); (b) 'ÉTAT BELGE' / 'ETAT BELGE FINANCES' and 'Bruxelles, rue de la Loi, 12' public — settled as public under the policy (the gold enumeration covers companies with a legal-form suffix and natural persons; a State represented by its minister sits with 'the authority itself and its address', regulators and countries), with the second annotator's alternative reading (ORG / LOC if every named party is gold) recorded for the lawyer because doc_110 keeps the municipality 'VILLE DE VIRTON' gold — the line between a public-law party that identifies a matter (a small commune) and one that identifies nothing (the State) is not written in the rulings. Doubt (ii) on the ECLI is settled gold: the policy makes the document's own case/docket/decision number CASE_REF 'as if live' (ruling 2 covers cited precedents, not the matter's own identifiers), consistent with doc_109 and doc_110. Public list merged with the second annotator's: added the bare city 'Mons' (ruling 6, inside 'cour d’appel de Mons' and resolved under it), the chamber row '1F - première chambre', the domain row 'Autres', the honorific 'Maître' (ruling 5: outside the counsel spans), 'élection de domicile', the statute references 'article 19, alinéas 1er et 2, du Code judiciaire' and 'article 19, alinéa 3', and the two amounts in words; the first annotator's role surfaces ('premier juge', 'juge d’appel', 'conseiller(s)', 'avocat général') kept. Every added surface verified to occur in the text; all public spans are non-overlapping with gold.",
+ "source": "public-JUPORTAL (SPF Justice, Belgian federal judiciary) — Cour de cassation de Belgique, première chambre, section française (1F), FR",
+ "split": "public",
+ "genre": "judgment",
+ "traps": [
+  "address",
+  "adjacent-public",
+  "role-noise",
+  "internal-docket"
+ ],
+ "provenance": {
+  "source": "JUPORTAL (SPF Justice, Belgian federal judiciary)",
+  "url": "https://juportal.be/content/ECLI:BE:CASS:2025:ARR.20250116.1F.1/FR",
+  "court": "Cour de cassation de Belgique, première chambre, section française (1F)",
+  "date": "2025-01-16",
+  "licence": "Public case-law database of the SPF Justice (JUPORTAL); reproduction with attribution",
+  "attribution": "Source: JUPORTAL, Cour de cassation de Belgique, ECLI:BE:CASS:2025:ARR.20250116.1F.1",
+  "ecli": "ECLI:BE:CASS:2025:ARR.20250116.1F.1",
+  "role_number": "F.24.0020.F",
+  "chamber": "1F - première chambre",
+  "jurisdiction": "Belgium",
+  "fetched": "2026-10-15",
+  "excerpt": "lines 1–65 of the raw file, i.e. the whole file, verbatim (identification rows ECLI / rôle / affaire / chambre / domaine, then the complete 'Texte de la décision' from the N° line to the composition paragraph; the Court's thesaurus summaries between the two blocks were already omitted at fetch time). No change to the text."
+ }
+}

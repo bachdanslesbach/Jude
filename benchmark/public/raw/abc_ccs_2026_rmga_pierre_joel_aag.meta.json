@@ -1,0 +1,24 @@
+{
+  "decision_number": "ABC-2026-CCS-24-AUD",
+  "case_number": "CONC-CCS-26/0017",
+  "title": "Décision ABC-2026-CCS-24-AUD du 9 juillet 2026 — Groupe RMGA / Groupe Pierre-Joël / Alliance Automotive Groupe (affaire CONC-CCS-26/0017)",
+  "court": "Autorité belge de la concurrence — Auditorat",
+  "date": "2026-07-09",
+  "url": "https://www.abc-bma.be/sites/default/files/content/download/files/ABC-2026-CCS-24-AUD_pub.pdf",
+  "licence": "Official publication of the Autorité belge de la concurrence (public version); reproduction with attribution",
+  "attribution": "Source: Autorité belge de la concurrence, décision n° ABC-2026-CCS-24-AUD du 9 juillet 2026 (version publique)",
+  "language": "fr",
+  "genre": "merger control — simplified procedure, Auditorat decision (article IV.70 §3 CDE)",
+  "source": "Autorité belge de la concurrence, https://www.abc-bma.be/fr/decisions",
+  "jurisdiction": "Belgium",
+  "excerpt": {
+    "pdf_pages": [
+      1,
+      2
+    ],
+    "words": 632,
+    "note": "Whole decision (two pages) in PDF reading order; PDF line breaks kept; page furniture removed. Text layer extracted with PyMuPDF."
+  },
+  "fetched": "2026-10-15",
+  "user_agent": "JudeBenchmark/0.8"
+}

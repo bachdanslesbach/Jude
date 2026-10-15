@@ -1,0 +1,713 @@
+{
+ "id": "doc_102_commercial_2026_intralinks_v_nexans_en",
+ "title": "Intralinks Inc v Nexans SA",
+ "language": "en",
+ "text": "Thomas Raphael KC,\n\nSitting as a Deputy Judge of the High Court\n\nApproved Judgment\n\nIntralinks v Nexans\n\nNeutral Citation Number:\n[2026] EWHC 2355 (Comm)\n\nCase No:\nLM-2026-000116\n\nIN THE HIGH COURT OF JUSTICE\n\nBUSINESS AND PROPERTY COURTS OF ENGLAND AND WALES\n\nLONDON CIRCUIT COMMERCIAL COURT (KBD)\n\nRoyal Courts of Justice, Rolls Building\n\nFetter Lane, London, EC4A 1NL\n\nDate:\n17 September 2026\n\nBefore :\n\nThomas Raphael KC, Sitting as a Deputy Judge of the High Court\n\n- - - - - - - - - - - - - - - - - - - - -\n\nBetween :\n\nINTRALINKS INC\n\nClaimant/\n\nRespondent\n\n- and -\n\nNEXANS SA\n\nDefendant/\n\nApplicant\n\n- - - - - - - - - - - - - - - - - - - - -\n\n- - - - - - - - - - - - - - - - - - - - -\n\nStuart Benzie (instructed by Fladgate LLP) for the Defendant/Applicant\n\nDaniel Khoo (instructed by Fieldfisher LLP) for the Claimant/Respondent\n\nHearing dates: 27 July 2026\n\n- - - - - - - - - - - - - - - - - - - - -\n\nApproved Judgment\n\nThis judgment was handed down remotely at 10.30am on 17 September 2026 by circulation to the parties or their representatives by e-mail and by release to the National Archives.\n\n.............................\n\nTHOMAS RAPHAEL KC, SITTING AS A DEPUTY JUDGE OF THE HIGH COURT\n\nIntroduction\n\n1.\n\nThis judgment resolves a jurisdiction challenge in a case about virtual data rooms.\n\n2.\n\nThe Claimant, Intralinks Inc (“Intralinks”) is a US company which provides information technology services, in particular virtual data rooms for corporate finance transactions. At the time of the events it operated out of New York City. Since April 2026 its primary business address is in Waltham, Massachusetts.\n\n3.\n\nThe Defendant, Nexans SA (“Nexans”) is a French company principally operating in the cable and optical fibre industry, which used Intralinks’ services. Its headquarters and registered office is in La Defense, Paris.\n\n4.\n\nThe parties had entered into previous contracts, but this case concerns a contract for “Project Otto”, agreed on 2 or 3 October 2024 (the “Contract”). There is disagreement about when and how the Contract was concluded.\n\n5.\n\nNexans says the Contract was formed principally on the terms of work order no. 535958 dated 2 October 2024 (the “2 October Work Order”), which incorporates a Master Services Agreement (“MSA”) providing for French law and jurisdiction (the “French MSA”).\n\n6.\n\nIntralinks says the Contract was formed on the terms of work order no. 5355137, dated on its front page 2 October 2024, but signed on 3 October 2024 (the “3 October Work Order”). The 3 October Work Order incorporates an MSA providing that it is governed by English law (the “English MSA”).\n\n7.\n\nA dispute has arisen as to performance of and payment under the Contract.\n\n8.\n\nThe Contract’s charging structure includes payments that vary according to the amount of data uploaded into the data room. Intralinks says Nexans uploaded documents in August 2025 which triggered payments of €2,193,147.70 (the “Disputed Sums”). Nexans denies these Disputed Sums are due.\n\n9.\n\nOn 19 December 2025, Nexans commenced proceedings in France (the “French Proceedings”) in which it alleges the English MSA should not be treated as agreed and the French MSA should be treated as incorporated. On the substance it contends the Disputed Sums were charged in circumstances which amount to bad faith in breach of contract. It claims damages for bad faith of €2,093,147.00. The French Proceedings were served on Intralinks in the USA on 22 January 2026.\n\n10.\n\nOn 24 March 2026, Intralinks issued a claim before the London Circuit Commercial Court for payment of the Disputed Sums. Intralinks applied for permission to serve proceedings abroad. It argued that jurisdiction could be established under Gateway 6(c) and Gateway 7. It also argued that England and Wales (“England” for brevity) was the proper place to bring the claim.\n\n11.\n\nHis Honour Judge Bird granted permission for service abroad on 31 March 2026, and the claim was served on Nexans in France. Nexans challenged the jurisdiction of the Court by application under CPR Part 11 dated 27 May 2026.\n\n12.\n\nNexans denied that a valid jurisdictional gateway was satisfied and said it had not been shown that England was the proper place to bring the claim.\n\n13.\n\nNexans’ application came on for hearing on 27 July 2026. I heard able argument from Mr Stuart Benzie for Nexans and Mr Daniel Khoo for Intralinks.\n\n14.\n\nFor the reasons below, I conclude that Intralinks has satisfied Gateways 6(c) and 7 and shown that England is the proper place to bring the claim. The jurisdiction challenge therefore fails.",
+ "gold_spans": [
+  {
+   "start": 0,
+   "end": 17,
+   "type": "PERSON",
+   "text": "Thomas Raphael KC"
+  },
+  {
+   "start": 84,
+   "end": 94,
+   "type": "ORG",
+   "text": "Intralinks"
+  },
+  {
+   "start": 97,
+   "end": 103,
+   "type": "ORG",
+   "text": "Nexans"
+  },
+  {
+   "start": 130,
+   "end": 153,
+   "type": "CASE_REF",
+   "text": "[2026] EWHC 2355 (Comm)"
+  },
+  {
+   "start": 164,
+   "end": 178,
+   "type": "CASE_REF",
+   "text": "LM-2026-000116"
+  },
+  {
+   "start": 407,
+   "end": 424,
+   "type": "PERSON",
+   "text": "Thomas Raphael KC"
+  },
+  {
+   "start": 525,
+   "end": 539,
+   "type": "ORG",
+   "text": "INTRALINKS INC"
+  },
+  {
+   "start": 573,
+   "end": 582,
+   "type": "ORG",
+   "text": "NEXANS SA"
+  },
+  {
+   "start": 693,
+   "end": 706,
+   "type": "PERSON",
+   "text": "Stuart Benzie"
+  },
+  {
+   "start": 722,
+   "end": 734,
+   "type": "ORG",
+   "text": "Fladgate LLP"
+  },
+  {
+   "start": 765,
+   "end": 776,
+   "type": "PERSON",
+   "text": "Daniel Khoo"
+  },
+  {
+   "start": 792,
+   "end": 807,
+   "type": "ORG",
+   "text": "Fieldfisher LLP"
+  },
+  {
+   "start": 1138,
+   "end": 1155,
+   "type": "PERSON",
+   "text": "THOMAS RAPHAEL KC"
+  },
+  {
+   "start": 1323,
+   "end": 1337,
+   "type": "ORG",
+   "text": "Intralinks Inc"
+  },
+  {
+   "start": 1340,
+   "end": 1350,
+   "type": "ORG",
+   "text": "Intralinks"
+  },
+  {
+   "start": 1642,
+   "end": 1651,
+   "type": "ORG",
+   "text": "Nexans SA"
+  },
+  {
+   "start": 1654,
+   "end": 1660,
+   "type": "ORG",
+   "text": "Nexans"
+  },
+  {
+   "start": 1757,
+   "end": 1767,
+   "type": "ORG",
+   "text": "Intralinks"
+  },
+  {
+   "start": 2073,
+   "end": 2079,
+   "type": "ORG",
+   "text": "Nexans"
+  },
+  {
+   "start": 2152,
+   "end": 2158,
+   "type": "CASE_REF",
+   "text": "535958"
+  },
+  {
+   "start": 2332,
+   "end": 2342,
+   "type": "ORG",
+   "text": "Intralinks"
+  },
+  {
+   "start": 2403,
+   "end": 2410,
+   "type": "CASE_REF",
+   "text": "5355137"
+  },
+  {
+   "start": 2829,
+   "end": 2839,
+   "type": "ORG",
+   "text": "Intralinks"
+  },
+  {
+   "start": 2845,
+   "end": 2851,
+   "type": "ORG",
+   "text": "Nexans"
+  },
+  {
+   "start": 2951,
+   "end": 2957,
+   "type": "ORG",
+   "text": "Nexans"
+  },
+  {
+   "start": 3020,
+   "end": 3026,
+   "type": "ORG",
+   "text": "Nexans"
+  },
+  {
+   "start": 3422,
+   "end": 3432,
+   "type": "ORG",
+   "text": "Intralinks"
+  },
+  {
+   "start": 3488,
+   "end": 3498,
+   "type": "ORG",
+   "text": "Intralinks"
+  },
+  {
+   "start": 3591,
+   "end": 3601,
+   "type": "ORG",
+   "text": "Intralinks"
+  },
+  {
+   "start": 3846,
+   "end": 3867,
+   "type": "PERSON",
+   "text": "His Honour Judge Bird"
+  },
+  {
+   "start": 3952,
+   "end": 3958,
+   "type": "ORG",
+   "text": "Nexans"
+  },
+  {
+   "start": 3970,
+   "end": 3976,
+   "type": "ORG",
+   "text": "Nexans"
+  },
+  {
+   "start": 4076,
+   "end": 4082,
+   "type": "ORG",
+   "text": "Nexans"
+  },
+  {
+   "start": 4231,
+   "end": 4237,
+   "type": "ORG",
+   "text": "Nexans"
+  },
+  {
+   "start": 4318,
+   "end": 4331,
+   "type": "PERSON",
+   "text": "Stuart Benzie"
+  },
+  {
+   "start": 4336,
+   "end": 4342,
+   "type": "ORG",
+   "text": "Nexans"
+  },
+  {
+   "start": 4350,
+   "end": 4361,
+   "type": "PERSON",
+   "text": "Daniel Khoo"
+  },
+  {
+   "start": 4366,
+   "end": 4376,
+   "type": "ORG",
+   "text": "Intralinks"
+  },
+  {
+   "start": 4423,
+   "end": 4433,
+   "type": "ORG",
+   "text": "Intralinks"
+  }
+ ],
+ "public_spans": [
+  {
+   "start": 20,
+   "end": 63,
+   "type": "PUBLIC",
+   "text": "Sitting as a Deputy Judge of the High Court"
+  },
+  {
+   "start": 180,
+   "end": 208,
+   "type": "PUBLIC",
+   "text": "IN THE HIGH COURT OF JUSTICE"
+  },
+  {
+   "start": 210,
+   "end": 259,
+   "type": "PUBLIC",
+   "text": "BUSINESS AND PROPERTY COURTS OF ENGLAND AND WALES"
+  },
+  {
+   "start": 261,
+   "end": 298,
+   "type": "PUBLIC",
+   "text": "LONDON CIRCUIT COMMERCIAL COURT (KBD)"
+  },
+  {
+   "start": 300,
+   "end": 339,
+   "type": "PUBLIC",
+   "text": "Royal Courts of Justice, Rolls Building"
+  },
+  {
+   "start": 341,
+   "end": 370,
+   "type": "PUBLIC",
+   "text": "Fetter Lane, London, EC4A 1NL"
+  },
+  {
+   "start": 378,
+   "end": 395,
+   "type": "PUBLIC",
+   "text": "17 September 2026"
+  },
+  {
+   "start": 426,
+   "end": 469,
+   "type": "PUBLIC",
+   "text": "Sitting as a Deputy Judge of the High Court"
+  },
+  {
+   "start": 541,
+   "end": 549,
+   "type": "PUBLIC",
+   "text": "Claimant"
+  },
+  {
+   "start": 552,
+   "end": 562,
+   "type": "PUBLIC",
+   "text": "Respondent"
+  },
+  {
+   "start": 584,
+   "end": 593,
+   "type": "PUBLIC",
+   "text": "Defendant"
+  },
+  {
+   "start": 596,
+   "end": 605,
+   "type": "PUBLIC",
+   "text": "Applicant"
+  },
+  {
+   "start": 744,
+   "end": 763,
+   "type": "PUBLIC",
+   "text": "Defendant/Applicant"
+  },
+  {
+   "start": 817,
+   "end": 836,
+   "type": "PUBLIC",
+   "text": "Claimant/Respondent"
+  },
+  {
+   "start": 853,
+   "end": 865,
+   "type": "PUBLIC",
+   "text": "27 July 2026"
+  },
+  {
+   "start": 971,
+   "end": 978,
+   "type": "PUBLIC",
+   "text": "10.30am"
+  },
+  {
+   "start": 982,
+   "end": 999,
+   "type": "PUBLIC",
+   "text": "17 September 2026"
+  },
+  {
+   "start": 1018,
+   "end": 1029,
+   "type": "PUBLIC",
+   "text": "the parties"
+  },
+  {
+   "start": 1087,
+   "end": 1104,
+   "type": "PUBLIC",
+   "text": "National Archives"
+  },
+  {
+   "start": 1157,
+   "end": 1200,
+   "type": "PUBLIC",
+   "text": "SITTING AS A DEPUTY JUDGE OF THE HIGH COURT"
+  },
+  {
+   "start": 1309,
+   "end": 1321,
+   "type": "PUBLIC",
+   "text": "The Claimant"
+  },
+  {
+   "start": 1531,
+   "end": 1544,
+   "type": "PUBLIC",
+   "text": "New York City"
+  },
+  {
+   "start": 1552,
+   "end": 1562,
+   "type": "PUBLIC",
+   "text": "April 2026"
+  },
+  {
+   "start": 1598,
+   "end": 1620,
+   "type": "PUBLIC",
+   "text": "Waltham, Massachusetts"
+  },
+  {
+   "start": 1627,
+   "end": 1640,
+   "type": "PUBLIC",
+   "text": "The Defendant"
+  },
+  {
+   "start": 1824,
+   "end": 1841,
+   "type": "PUBLIC",
+   "text": "La Defense, Paris"
+  },
+  {
+   "start": 1961,
+   "end": 1980,
+   "type": "PUBLIC",
+   "text": "2 or 3 October 2024"
+  },
+  {
+   "start": 2040,
+   "end": 2052,
+   "type": "PUBLIC",
+   "text": "the Contract"
+  },
+  {
+   "start": 2085,
+   "end": 2097,
+   "type": "PUBLIC",
+   "text": "the Contract"
+  },
+  {
+   "start": 2165,
+   "end": 2179,
+   "type": "PUBLIC",
+   "text": "2 October 2024"
+  },
+  {
+   "start": 2186,
+   "end": 2206,
+   "type": "PUBLIC",
+   "text": "2 October Work Order"
+  },
+  {
+   "start": 2231,
+   "end": 2256,
+   "type": "PUBLIC",
+   "text": "Master Services Agreement"
+  },
+  {
+   "start": 2259,
+   "end": 2262,
+   "type": "PUBLIC",
+   "text": "MSA"
+  },
+  {
+   "start": 2279,
+   "end": 2289,
+   "type": "PUBLIC",
+   "text": "French law"
+  },
+  {
+   "start": 2313,
+   "end": 2323,
+   "type": "PUBLIC",
+   "text": "French MSA"
+  },
+  {
+   "start": 2348,
+   "end": 2360,
+   "type": "PUBLIC",
+   "text": "the Contract"
+  },
+  {
+   "start": 2436,
+   "end": 2450,
+   "type": "PUBLIC",
+   "text": "2 October 2024"
+  },
+  {
+   "start": 2466,
+   "end": 2480,
+   "type": "PUBLIC",
+   "text": "3 October 2024"
+  },
+  {
+   "start": 2487,
+   "end": 2507,
+   "type": "PUBLIC",
+   "text": "3 October Work Order"
+  },
+  {
+   "start": 2515,
+   "end": 2535,
+   "type": "PUBLIC",
+   "text": "3 October Work Order"
+  },
+  {
+   "start": 2552,
+   "end": 2555,
+   "type": "PUBLIC",
+   "text": "MSA"
+  },
+  {
+   "start": 2589,
+   "end": 2600,
+   "type": "PUBLIC",
+   "text": "English law"
+  },
+  {
+   "start": 2607,
+   "end": 2618,
+   "type": "PUBLIC",
+   "text": "English MSA"
+  },
+  {
+   "start": 2687,
+   "end": 2699,
+   "type": "PUBLIC",
+   "text": "the Contract"
+  },
+  {
+   "start": 2874,
+   "end": 2885,
+   "type": "PUBLIC",
+   "text": "August 2025"
+  },
+  {
+   "start": 2914,
+   "end": 2927,
+   "type": "PUBLIC",
+   "text": "€2,193,147.70"
+  },
+  {
+   "start": 2934,
+   "end": 2947,
+   "type": "PUBLIC",
+   "text": "Disputed Sums"
+  },
+  {
+   "start": 2971,
+   "end": 2984,
+   "type": "PUBLIC",
+   "text": "Disputed Sums"
+  },
+  {
+   "start": 3002,
+   "end": 3018,
+   "type": "PUBLIC",
+   "text": "19 December 2025"
+  },
+  {
+   "start": 3052,
+   "end": 3058,
+   "type": "PUBLIC",
+   "text": "France"
+  },
+  {
+   "start": 3065,
+   "end": 3083,
+   "type": "PUBLIC",
+   "text": "French Proceedings"
+  },
+  {
+   "start": 3110,
+   "end": 3121,
+   "type": "PUBLIC",
+   "text": "English MSA"
+  },
+  {
+   "start": 3162,
+   "end": 3172,
+   "type": "PUBLIC",
+   "text": "French MSA"
+  },
+  {
+   "start": 3241,
+   "end": 3254,
+   "type": "PUBLIC",
+   "text": "Disputed Sums"
+  },
+  {
+   "start": 3369,
+   "end": 3382,
+   "type": "PUBLIC",
+   "text": "€2,093,147.00"
+  },
+  {
+   "start": 3388,
+   "end": 3406,
+   "type": "PUBLIC",
+   "text": "French Proceedings"
+  },
+  {
+   "start": 3440,
+   "end": 3443,
+   "type": "PUBLIC",
+   "text": "USA"
+  },
+  {
+   "start": 3447,
+   "end": 3462,
+   "type": "PUBLIC",
+   "text": "22 January 2026"
+  },
+  {
+   "start": 3473,
+   "end": 3486,
+   "type": "PUBLIC",
+   "text": "24 March 2026"
+  },
+  {
+   "start": 3525,
+   "end": 3556,
+   "type": "PUBLIC",
+   "text": "London Circuit Commercial Court"
+  },
+  {
+   "start": 3576,
+   "end": 3589,
+   "type": "PUBLIC",
+   "text": "Disputed Sums"
+  },
+  {
+   "start": 3709,
+   "end": 3721,
+   "type": "PUBLIC",
+   "text": "Gateway 6(c)"
+  },
+  {
+   "start": 3726,
+   "end": 3735,
+   "type": "PUBLIC",
+   "text": "Gateway 7"
+  },
+  {
+   "start": 3757,
+   "end": 3774,
+   "type": "PUBLIC",
+   "text": "England and Wales"
+  },
+  {
+   "start": 3777,
+   "end": 3784,
+   "type": "PUBLIC",
+   "text": "England"
+  },
+  {
+   "start": 3909,
+   "end": 3922,
+   "type": "PUBLIC",
+   "text": "31 March 2026"
+  },
+  {
+   "start": 3962,
+   "end": 3968,
+   "type": "PUBLIC",
+   "text": "France"
+  },
+  {
+   "start": 4008,
+   "end": 4017,
+   "type": "PUBLIC",
+   "text": "the Court"
+  },
+  {
+   "start": 4039,
+   "end": 4050,
+   "type": "PUBLIC",
+   "text": "CPR Part 11"
+  },
+  {
+   "start": 4057,
+   "end": 4068,
+   "type": "PUBLIC",
+   "text": "27 May 2026"
+  },
+  {
+   "start": 4176,
+   "end": 4183,
+   "type": "PUBLIC",
+   "text": "England"
+  },
+  {
+   "start": 4274,
+   "end": 4286,
+   "type": "PUBLIC",
+   "text": "27 July 2026"
+  },
+  {
+   "start": 4448,
+   "end": 4467,
+   "type": "PUBLIC",
+   "text": "Gateways 6(c) and 7"
+  },
+  {
+   "start": 4483,
+   "end": 4490,
+   "type": "PUBLIC",
+   "text": "England"
+  }
+ ],
+ "notes": "Real published judgment (Find Case Law, OGL v3): header and opening paragraphs (1–14) of a jurisdiction challenge in the London Circuit Commercial Court, annotated as if it were a client's confidential file. SHOULD redact: the parties under every form — the all-caps header lines 'INTRALINKS INC' and 'NEXANS SA', the legal names 'Intralinks Inc' and 'Nexans SA', and the defined short forms 'Intralinks' and 'Nexans' at every occurrence including the short title 'Intralinks v Nexans' and the possessives 'Intralinks’ services' and 'Nexans’ application'; counsel 'Stuart Benzie' and 'Daniel Khoo' (the honorific 'Mr' before the full name in paragraph 13 is left outside the span) and their instructing firms 'Fladgate LLP' and 'Fieldfisher LLP'; the deputy judge 'Thomas Raphael KC' in both header lines and the all-caps signature line 'THOMAS RAPHAEL KC' (KC is a post-nominal and stays inside the span; the role words 'Sitting as a Deputy Judge of the High Court' stay outside); 'His Honour Judge Bird', the judge who granted permission to serve out (ruling 4 — named official; surname only, so the judicial honorific is kept inside the span); the document's own neutral citation '[2026] EWHC 2355 (Comm)' and claim number 'LM-2026-000116' (treated as live — the document's own numbers, ruling 2); the two work-order numbers '535958' and '5355137', which identify the contract in dispute (internal references; ruling 7 by analogy with invoice numbers). SHOULD NOT redact: the court and its own address (IN THE HIGH COURT OF JUSTICE, BUSINESS AND PROPERTY COURTS OF ENGLAND AND WALES, LONDON CIRCUIT COMMERCIAL COURT (KBD), Royal Courts of Justice, Rolls Building, Fetter Lane, London, EC4A 1NL), 'the High Court' in the judge's title, the National Archives, 'the London Circuit Commercial Court' in paragraph 10; the procedural rules CPR Part 11 and Gateways 6(c) and 7; countries (France, USA, England and Wales / 'England'); bare localities under ruling 6 — 'New York City', 'Waltham, Massachusetts' (called the 'primary business address' but given only as city and state) and 'La Defense, Paris' (the registered office, given as district and city, no street line); the deal codename 'Project Otto' (ruling 1 — carried in 'codenames' for the per-matter opt-in); dates, hearing date and times, the amounts €2,193,147.70 and €2,093,147.00; defined terms and role words — 'the Claimant', 'the Defendant', 'Claimant/ Respondent', 'Defendant/Applicant', 'for the Defendant/Applicant', 'the Contract', 'Master Services Agreement' and its defined acronym 'MSA', 'French MSA', 'English MSA', '2 October Work Order', '3 October Work Order', 'Disputed Sums', 'French Proceedings'. Traps: all-caps header lines for both parties and the judge; honorific-only judge ('His Honour Judge Bird', never given a first name); internal docket (claim number and the two work-order numbers written as bare digit runs after 'work order no.'); adjacent-public (the judge's name glued to 'Sitting as a Deputy Judge of the High Court', 'Intralinks issued a claim before the London Circuit Commercial Court'); role-noise (party roles and 'Counsel'-style phrases that are not identifiers); codename ('Project Otto', not gold); acronym-defined in the defined-short-form sense ('Intralinks Inc (“Intralinks”)', 'Nexans SA (“Nexans”)' must be followed, while 'Master Services Agreement (“MSA”)' must not). No party address line, e-mail, phone, registry number or domain appears in these paragraphs, so the gold has three types (PERSON, ORG, CASE_REF). ADJUDICATION (two blind annotators): the gold sets were identical — 17 surfaces, same types, including both work-order numbers typed CASE_REF (the doc_043 invoice-number precedent under ruling 7; the second annotator flagged that the identifier bucket IBAN would fit equally — the spans do not change, the bucket is left to the lawyer). The only differences were on the public list, which the second annotator drew more fully: merged here are the judge-role phrases ('Sitting as a Deputy Judge of the High Court' and its all-caps form — adjacent-public probes), 'IN THE HIGH COURT OF JUSTICE', 'the Court', the party-role forms ('Claimant', 'Respondent', 'Defendant', 'Applicant', 'Claimant/Respondent', 'Defendant/Applicant', 'The Claimant', 'The Defendant', 'the parties' — role-noise probes), 'French law' / 'English law', the defined terms ('the Contract', '2 October Work Order', '3 October Work Order', 'French MSA', 'English MSA', 'Disputed Sums', 'French Proceedings'), the two euro amounts, the hand-down time '10.30am' and the twelve dates. Not merged: 'Project Otto' stays in 'codenames' only and is not duplicated under 'public' (corpus convention for every spec carrying a codenames field: the per-matter opt-in of ruling 1 flips it to gold, which a public mark would contradict); bare 'US', 'French', 'English' and the generic strings 'Introduction', 'Approved Judgment', 'Neutral Citation Number', 'Case No', 'virtual data rooms', 'cable and optical fibre industry' fall under no policy category and are not redaction risks. Possessives 'Intralinks’' and 'Nexans’' use U+2019, which is not a word character, so the bare-name spans match there without the apostrophe.",
+ "source": "public-Find Case Law (The National Archives)",
+ "split": "public",
+ "genre": "judgment",
+ "traps": [
+  "all-caps-header",
+  "honorific-only",
+  "internal-docket",
+  "adjacent-public",
+  "role-noise",
+  "codename",
+  "acronym-defined"
+ ],
+ "provenance": {
+  "source": "Find Case Law (The National Archives)",
+  "url": "https://caselaw.nationalarchives.gov.uk/ewhc/comm/2026/2355",
+  "court": "High Court of Justice, Business and Property Courts, London Circuit Commercial Court (KBD)",
+  "date": "2026-09-17",
+  "licence": "Open Justice Licence / Open Government Licence v3.0",
+  "attribution": "Contains public sector information licensed under the Open Government Licence v3.0; judgment published by The National Archives (Find Case Law)"
+ },
+ "codenames": [
+  "Otto",
+  "Project Otto"
+ ]
+}

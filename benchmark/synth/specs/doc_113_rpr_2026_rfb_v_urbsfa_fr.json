@@ -1,0 +1,226 @@
+{
+ "id": "doc_113_rpr_2026_rfb_v_urbsfa_fr",
+ "title": "Décision de classement ABC-2026-RPR-27-AUD du 13 août 2026 — RFB, KSC Lokeren, RFC Seraing c. URBSFA (affaire CONC.RPR.25-0025)",
+ "language": "fr",
+ "genre": "antitrust — Auditorat decision closing a complaint (classement, article IV.44 §1 3° CDE) in a U23-quota case (13-page decision; excerpt = title block, Procédure §§1-8, Entreprises concernées §§16-20, Décision and signature, blocks separated by '[…]')",
+ "split": "public",
+ "source": "public-Autorité belge de la concurrence (ABC/BMA), https://www.abc-bma.be/fr/decisions — French-language decisions (ABC- prefixed PDFs), public versions. Fetched with curl -A \"JudeBenchmark/0.8\", one second between requests, 5 requests in total (1 list page + 4 PDFs). Text layer extracted with PyMuPDF from the project venv (/Users/etienne/project/ano/.venv).",
+ "provenance": {
+  "source": "Autorité belge de la concurrence (ABC/BMA), https://www.abc-bma.be/fr/decisions",
+  "url": "https://www.abc-bma.be/sites/default/files/content/download/files/ABC-2026-RPR-27-AUD%20PUB.pdf",
+  "court": "Autorité belge de la concurrence — Auditorat",
+  "date": "2026-08-13",
+  "licence": "Official publication of the Autorité belge de la concurrence (public version); reproduction with attribution",
+  "attribution": "Source: Autorité belge de la concurrence, décision n° ABC-2026-RPR-27-AUD du 13 août 2026 (version publique)",
+  "decision_number": "ABC-2026-RPR-27-AUD",
+  "case_number": "CONC.RPR.25-0025",
+  "jurisdiction": "Belgium",
+  "fetched": "2026-10-15",
+  "user_agent": "JudeBenchmark/0.8",
+  "excerpt": {
+   "pdf_pages": [
+    1,
+    3,
+    5,
+    13
+   ],
+   "words": 875,
+   "note": "Title block; I.1 Plainte au fond §§1-8 (auditeur and team); II. Entreprises concernées §§16-20 (complainants and URBSFA: addresses, BCE numbers); VI. Décision and signature. Non-contiguous blocks separated by a line '[…]'; PDF line breaks kept; page furniture removed. Text layer extracted with PyMuPDF. One whitespace-only adjustment relative to the raw file: the three '[…]' separator lines are written '[ … ]' because the spec validator reads '[…]' as drafting-placeholder text; restore '[…]' if that check is relaxed for the public split. Three party names and one address straddle a PDF line break and are annotated with the embedded newline."
+  }
+ },
+ "text": "AUTORITÉ BELGE DE LA CONCURRENCE\nAuditorat\nDécision de classement n° ABC-2026-RPR-27-AUD du 13 août 2026\nAffaire CONC.RPR.25-0025\nen application de l’article IV.44, §1er 3°du Code de droit économique\nVersion publique\n[ … ]\nI. Procédure\nI.1 Plainte au fond\n1. Le 30 juin 2025, une plainte a été déposée auprès de l'auditeur général de l'Autorité belge de la\nConcurrence (ci-après, l’« Autorité ») par l'ASBL Royal Francs Borains (ci-après, « RFB »), la NV\nKoninklijke Sporting Club Lokeren (ci-après, « KFC Lokeren ») et la SA Royal Football Club Seraing (ci-\naprès, « RFC Seraing ») contre l'ASBL Union royale belge des Sociétés de Football-Association (ci-\naprès, l’« URBSFA ») concernant l'instauration par décision du Conseil Supérieur de l'URBSFA en date\ndu 16 juin 2025 (connue comme la « décision n°8 »), d'un quota minimum de quatre clubs U23 en\nChallenger Pro League (ci-après, « CPL »), assorti de règles de relégation spécifiques et moins\ncontraignantes pour ces clubs que pour les clubs non-U23 dits « classiques » (ci-après, le « Quota »).\n2. Le 4 juillet 2025, conformément à l'article IV.39, § 1er, 2° du Code de droit économique (ci-après, «\nCDE »), l'auditeur général, après avis du directeur des affaires économiques, a ouvert une instruction\nrelative à la plainte précitée, enregistrée sous le numéro CONC.RPR.25-0025, portant sur éventuelle\nviolation des articles IV.1 CDE et 101 du Traité sur le fonctionnement de l'Union européenne (ci-après,\n« TFUE »).\n3. Le 8 juillet 2025, la BV Royal Union Saint-Gilloise (ci-après, « RUSG ») a déposé une plainte à\nl’encontre de la décision n° 8, considérant que ce nouveau format de la compétition pour les\nchampionnats de football belges de la Jupiler Pro League (ci-après, « JPL ») et de la CPL a été approuvé\nde manière non transparente et contestable, et prévoit notamment la participation fixe d'au moins\nquatre équipes U23 dans la CPL, sans risque réel de relégation.\n4. Le 28 mars 2026, l’auditeur général de l’Autorité a reçu une plainte de la SA Racing White Daring\nMolenbeek Future (ci-après, « RWDM ») à l’encontre de l’URBSFA. Cette plainte porte également sur\nl’introduction du Quota d’équipes U23 en CPL ainsi que sur l’application de règles de relégation\ndistinctes selon qu’il s’agit d’équipes U23 ou de clubs classiques. Selon le RWDM, ce Quota et ces\nrègles sont de nature à fausser la concurrence au détriment des clubs classiques évoluant en CPL, dont\nil fait partie. Le RWDM a indiqué se joindre la plainte déposée le 30 juin 2025 par RFB, le KSC Lokeren\net le RFC Seraing, laquelle a donné lieu à l’ouverture d’une instruction.\n5. Le 30 mars 2026, l’auditeur général a décidé, dans un souci d’efficacité et d’économie de procédure,\nde joindre d’office les plaintes de RUSG et du RWDM à celle de RFB, de la KSC Lokeren et de la RFC\nSeraing faisant l’objet de l’instruction dans l’affaire CONC-RPR-25-0025.\n6. Conformément à l'article IV.27, § 2 du CDE, l'auditeur général a désigné Madame Marielle Fassin\ncomme auditeur responsable de la direction journalière de l'instruction.\n7. Conformément à l'article IV.27, § 3 du CDE, Madame Naura Guilbeau, Monsieur Arno Semey et\nMonsieur Victor Bouret ont été désignés comme membres du personnel de l'Auditorat faisant partie\nde l'équipe composée pour cette affaire.\n8. Conformément à l'article IV.27, § 4 du CDE l'auditeur général a désigné Madame Delphine Strohl\ncomme auditeur-conseiller.\n[ … ]\nII. Entreprises concernées\nII.1 Plaignants\nII.1.1 Plaignants initiaux\na. RFB dont le siège social est sis rue Saint Antoine (B)6, 7300 Boussu et qui est\nenregistrée à la Banque Carrefour des Entreprises (ci-après, « BCE ») sous le numéro\n0415.328.462.\nb. KSC Lokeren dont le siège social est sis Daknamstraat 91, 9160 Lokeren et qui est\nenregistrée à la BCE sous le numéro 0474.945.949.\nc. RFC Seraing dont le siège social est sis rue de la Boverie 253, 4100 Seraing et qui est\nenregistrée à la BCE sous le numéro 0461.276.867.\nII.1.2 Plaignants additionnels\n16. Le 8 juillet 2025, la RUSG, dont le siège social est sis chaussée de Bruxelles 223, 1190 Forest et qui\nest enregistrée à la BCE sous le numéro 0417.144.936, a introduit une plainte à l’encontre de la\ndécision n° 8 du Conseil Supérieur de l’URBSFA.\n17. Le 28 mars 2026, la RWDM, dont le siège social est sis rue Charles Malis 61, 1080 Molenbeek-Saint-\nJean et qui est enregistrée à la BCE sous le numéro 0714.982.050 a introduit une plainte portant sur\nle même objet.\n18. Le 30 mars 2026, l’auditeur général a décidé de joindre d’office les plaintes de la RUSG et du RWDM\nà celle de RFB, KSC Lokeren et RFC Seraing, au sein de l’instruction enregistrée sous le numéro\nCONC.RPR.25-0025.\n*\n19. RFB, KSC Lokeren, RFC Seraing, la RUSG et le RWDM sont ci-après désignés ensemble comme les\n«Plaignants ».\nII.2 Entreprise faisant l’objet de la plainte\n20. La partie concernée est l'URBSFA, enregistrée à la BCE sous le numéro 0403.543.160, dont le siège\nsocial est situé avenue de Marathon 129, 1020 Bruxelles.\n[ … ]\nVI. Décision\n70. Sur la base des motifs qui précèdent, et après avis de l’auditeur-conseiller, l'auditeur décide de\nclasser la plainte conformément à l'article IV.44, § 1er, 3° CDE.\n\nBruxelles, le 13 août 2026\nMarielle Fassin\nAuditeur\n",
+ "entities": [
+  {
+   "surface": "ASBL Royal Francs Borains",
+   "type": "ORG"
+  },
+  {
+   "surface": "RFB",
+   "type": "ORG"
+  },
+  {
+   "surface": "NV\nKoninklijke Sporting Club Lokeren",
+   "type": "ORG"
+  },
+  {
+   "surface": "KFC Lokeren",
+   "type": "ORG"
+  },
+  {
+   "surface": "KSC Lokeren",
+   "type": "ORG"
+  },
+  {
+   "surface": "SA Royal Football Club Seraing",
+   "type": "ORG"
+  },
+  {
+   "surface": "RFC Seraing",
+   "type": "ORG"
+  },
+  {
+   "surface": "RFC\nSeraing",
+   "type": "ORG"
+  },
+  {
+   "surface": "ASBL Union royale belge des Sociétés de Football-Association",
+   "type": "ORG"
+  },
+  {
+   "surface": "URBSFA",
+   "type": "ORG"
+  },
+  {
+   "surface": "BV Royal Union Saint-Gilloise",
+   "type": "ORG"
+  },
+  {
+   "surface": "RUSG",
+   "type": "ORG"
+  },
+  {
+   "surface": "SA Racing White Daring\nMolenbeek Future",
+   "type": "ORG"
+  },
+  {
+   "surface": "RWDM",
+   "type": "ORG"
+  },
+  {
+   "surface": "Marielle Fassin",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Naura Guilbeau",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Arno Semey",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Victor Bouret",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Delphine Strohl",
+   "type": "PERSON"
+  },
+  {
+   "surface": "rue Saint Antoine (B)6, 7300 Boussu",
+   "type": "LOC"
+  },
+  {
+   "surface": "Daknamstraat 91, 9160 Lokeren",
+   "type": "LOC"
+  },
+  {
+   "surface": "rue de la Boverie 253, 4100 Seraing",
+   "type": "LOC"
+  },
+  {
+   "surface": "chaussée de Bruxelles 223, 1190 Forest",
+   "type": "LOC"
+  },
+  {
+   "surface": "rue Charles Malis 61, 1080 Molenbeek-Saint-\nJean",
+   "type": "LOC"
+  },
+  {
+   "surface": "avenue de Marathon 129, 1020 Bruxelles",
+   "type": "LOC"
+  },
+  {
+   "surface": "0415.328.462",
+   "type": "IBAN"
+  },
+  {
+   "surface": "0474.945.949",
+   "type": "IBAN"
+  },
+  {
+   "surface": "0461.276.867",
+   "type": "IBAN"
+  },
+  {
+   "surface": "0417.144.936",
+   "type": "IBAN"
+  },
+  {
+   "surface": "0714.982.050",
+   "type": "IBAN"
+  },
+  {
+   "surface": "0403.543.160",
+   "type": "IBAN"
+  },
+  {
+   "surface": "ABC-2026-RPR-27-AUD",
+   "type": "CASE_REF"
+  },
+  {
+   "surface": "CONC.RPR.25-0025",
+   "type": "CASE_REF"
+  },
+  {
+   "surface": "CONC-RPR-25-0025",
+   "type": "CASE_REF"
+  }
+ ],
+ "public": [
+  "AUTORITÉ BELGE DE LA CONCURRENCE",
+  "Autorité belge de la\nConcurrence",
+  "Autorité",
+  "Auditorat",
+  "auditeur général",
+  "directeur des affaires économiques",
+  "auditeur-conseiller",
+  "auditeur",
+  "Auditeur",
+  "Décision de classement",
+  "Version publique",
+  "Conseil Supérieur",
+  "Code de droit économique",
+  "CDE",
+  "article IV.44, §1er 3°du Code de droit économique",
+  "article IV.39, § 1er, 2° du Code de droit économique",
+  "articles IV.1 CDE",
+  "article IV.27, § 2 du CDE",
+  "article IV.27, § 3 du CDE",
+  "article IV.27, § 4 du CDE",
+  "article IV.44, § 1er, 3° CDE",
+  "Traité sur le fonctionnement de l'Union européenne",
+  "101 du Traité sur le fonctionnement de l'Union européenne",
+  "Union européenne",
+  "TFUE",
+  "Banque Carrefour des Entreprises",
+  "BCE",
+  "Challenger Pro League",
+  "CPL",
+  "Jupiler Pro League",
+  "JPL",
+  "U23",
+  "clubs classiques",
+  "Plaignants",
+  "Quota",
+  "décision n°8",
+  "décision n° 8",
+  "La partie concernée",
+  "13 août 2026",
+  "30 juin 2025",
+  "4 juillet 2025",
+  "16 juin 2025",
+  "8 juillet 2025",
+  "28 mars 2026",
+  "30 mars 2026",
+  "Bruxelles"
+ ],
+ "traps": [
+  "acronym-defined",
+  "address",
+  "internal-docket",
+  "adjacent-public",
+  "role-noise"
+ ],
+ "notes": "Real Autorité belge de la concurrence (Auditorat) decision of 13 August 2026 closing (classement, article IV.44 §1er 3° CDE) the joined complaints of five professional football clubs against the URBSFA over a minimum quota of four U23 teams in the Challenger Pro League; excerpt = title block, I.1 Procédure §§1-8, II. Entreprises concernées §§16-20 and VI. Décision with signature, annotated as if it were a client's confidential file sent to an outside LLM. SHOULD redact: the six parties in every surface form — the full names with the legal form as written before the name ('ASBL Royal Francs Borains', 'NV Koninklijke Sporting Club Lokeren', 'SA Royal Football Club Seraing', 'ASBL Union royale belge des Sociétés de Football-Association', 'BV Royal Union Saint-Gilloise', 'SA Racing White Daring Molenbeek Future') and the defined acronyms used afterwards ('RFB' x6, 'KSC Lokeren' x5, 'RFC Seraing' x6, 'URBSFA' x5, 'RUSG' x5, 'RWDM' x7), including the source's own inconsistency 'KFC Lokeren' (the defined form in §1) versus 'KSC Lokeren' (the form actually used) and the acronym 'URBSFA' inside 'Conseil Supérieur de l'URBSFA'; three of these surfaces straddle a PDF line break and carry the newline ('NV\\nKoninklijke Sporting Club Lokeren', 'SA Racing White Daring\\nMolenbeek Future', 'RFC\\nSeraing'); the five officials of the Authority named in the document (ruling 4): the auditeur in charge 'Marielle Fassin' (§6 after 'Madame', honorific excluded before a full name — ruling 5; and the bare signature line), the three case-team members 'Naura Guilbeau', 'Arno Semey', 'Victor Bouret' (§7) and the auditeur-conseiller 'Delphine Strohl' (§8); the six registered-office address lines as whole lines including postcode and city — 'rue Saint Antoine (B)6, 7300 Boussu', 'Daknamstraat 91, 9160 Lokeren', 'rue de la Boverie 253, 4100 Seraing', 'chaussée de Bruxelles 223, 1190 Forest', 'rue Charles Malis 61, 1080 Molenbeek-Saint-\\nJean' (line break inside the city name kept) and the URBSFA's seat 'avenue de Marathon 129, 1020 Bruxelles' (the party's address, not the Authority's); the six Banque-Carrefour des Entreprises numbers '0415.328.462', '0474.945.949', '0461.276.867', '0417.144.936', '0714.982.050', '0403.543.160' (ruling 3, typed IBAN as the registry-number bucket); the document's own identifiers as if live (ruling 2 applied to the matter's own numbers): the decision number 'ABC-2026-RPR-27-AUD' and the case number in both spellings 'CONC.RPR.25-0025' (x3: title, §2, §18) and 'CONC-RPR-25-0025' (§5). SHOULD NOT redact: the Authority itself in every form ('AUTORITÉ BELGE DE LA CONCURRENCE' header, 'Autorité belge de la Concurrence' split over a line break, the defined term 'Autorité', 'Auditorat'); the roles 'auditeur général' (x7, never named), 'auditeur responsable', 'auditeur-conseiller', 'directeur des affaires économiques', 'membres du personnel de l'Auditorat', the signature role 'Auditeur', 'La partie concernée', the defined terms 'Plaignants', 'Quota', 'CPL', 'JPL'; the statutes and treaty ('Code de droit économique' / 'CDE', articles IV.1, IV.27, IV.39, IV.44, 'Traité sur le fonctionnement de l'Union européenne' / 'TFUE', article 101); the public register 'Banque Carrefour des Entreprises' / 'BCE' (x6, each glued to a gold registry number); the competitions 'Challenger Pro League' and 'Jupiler Pro League'; the contested act 'décision n°8' / 'décision n° 8' (the URBSFA's decision, a defined term, not a party identifier); the bare city 'Bruxelles' in the signature line 'Bruxelles, le 13 août 2026' (ruling 6 — the same word inside 'chaussée de Bruxelles 223, 1190 Forest' and '1020 Bruxelles' is swallowed by the address spans); all dates (30 juin 2025, 4 juillet 2025, 8 juillet 2025, 16 juin 2025, 28 mars 2026, 30 mars 2026, 13 août 2026), the section headings and 'Version publique'. 'Conseil Supérieur' (the URBSFA's governing body) is left unannotated: the gold 'URBSFA' inside it is what matters. Traps present: acronym-defined (six parties defined once in guillemets and used by acronym afterwards, with the KFC/KSC inconsistency and a 'RFC' / 'Seraing' pair split over a line); address (six Belgian 'street number, postcode city' lines, one Dutch-language, one with the city split over a line, the URBSFA's seat a party address while the Authority's seat is absent); internal-docket (the decision number 'ABC-2026-RPR-27-AUD' and the case number in dotted and hyphenated spellings); adjacent-public ('l'auditeur général de l'Autorité belge de la Concurrence (ci-après, l'« Autorité ») par l'ASBL Royal Francs Borains' — party glued to the public authority; 'enregistrée à la Banque Carrefour des Entreprises (ci-après, « BCE ») sous le numéro 0415.328.462' and five more 'BCE sous le numéro' pairs — gold number next to the public register; 'Conseil Supérieur de l'URBSFA'; 'Madame Marielle Fassin comme auditeur responsable' — name next to a public role); role-noise ('auditeur général', 'auditeur-conseiller', 'Auditeur', 'Plaignants', 'La partie concernée', 'les clubs classiques'). Doubts for the reviewer: (i) the legal form is kept inside the party surface because the French drafting puts it before the name ('la SA X'), the analogue of the corpus convention 'Kestrel Foods NV' — excluding it would leave 'ASBL', 'NV', 'SA', 'BV' outside; (ii) the three party surfaces and one address that straddle a PDF line break are annotated with the embedded newline rather than re-joined, so the text stays verbatim and a detector must cope with a name broken over two lines; (iii) 'décision n°8' is the URBSFA's internal decision number — kept public as the contested act / defined term, but it is arguably an internal reference; (iv) no counsel is named anywhere in the decision, so the PERSON spans are all officials (ruling 4); (v) the three '[…]' block separators of the raw file are written '[ … ]' (whitespace only) because the validator reads '[…]' as placeholder text. Only five entity types occur (ORG, PERSON, LOC, IBAN, CASE_REF): the decision contains no e-mail, URL, phone or bank account. ADJUDICATION (two blind annotators compared, 2026-10-15): the two gold sets name the same 36 referents with the same types; the only entity differences were notational — the second annotator wrote the three line-straddling surfaces joined ('NV Koninklijke Sporting Club Lokeren', 'SA Racing White Daring Molenbeek Future', 'rue Charles Malis 61, 1080 Molenbeek-Saint-Jean') and left out the split 'RFC\\nSeraing' of §5; the validator matches exactly and word-bounded, so the verbatim newline forms are kept (the joined forms do not occur in the text). On the public side the second annotator listed 22 further non-gold mentions that all occur verbatim and were adopted: the role 'directeur des affaires économiques' and the bare 'auditeur' (l.74 'l'auditeur décide'), the document furniture 'Décision de classement' / 'Version publique', the URBSFA organ 'Conseil Supérieur' (public on its own; the attached 'URBSFA' is gold and wins on overlap), the defined terms 'U23' and 'clubs classiques', the seven statute citations as written (art. IV.44 §1er 3° in the title and in §70, IV.39 §1er 2°, IV.1, IV.27 §§2-4), '101 du Traité sur le fonctionnement de l'Union européenne' and 'Union européenne', and the seven dates. Both annotators independently classed 'décision n°8' / 'décision n° 8' as public (the URBSFA's own numbering of the contested act, a defined term identifying nobody) and both flagged it as arguably an 'internal reference' — kept public, referred to the lawyer. The public 'Autorité belge de la Concurrence' is kept in its line-broken form only, the only form that occurs."
+}

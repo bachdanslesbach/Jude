@@ -41,8 +41,8 @@ Model revisions are pinned in the runner sources and listed under
 
 ## Protocol
 
-* **Corpus.** 44 gold-annotated documents in `benchmark/corpus/`
-  (1,775 spans), English and French, in two splits. `dev` (19
+* **Corpus.** 58 gold-annotated documents in `benchmark/corpus/`
+  (2,351 spans), English and French, in three splits. `dev` (19
   documents: term sheets, credit facilities, witness statements,
   regulatory submissions, sanctions memos, engagement letters, patent
   and antitrust pleadings, insolvency updates) is the set Jude's
@@ -57,8 +57,18 @@ Model revisions are pinned in the runner sources and listed under
   (`benchmark/synth.py`, including a cross-document uniqueness check),
   judged for realism, and never consulted while tuning — the honest
   number. All 44 documents were reviewed in Word by a lawyer on
-  13 October 2026 under the annotation rulings of that day. All synthetic: professional
-  secrecy rules out real files. Annotation policy: redact anything
+  13 October 2026 under the annotation rulings of that day. Both splits
+  are synthetic: professional secrecy rules out real files. `public`
+  (14 documents, 8 EN / 6 FR) answers "it is all synthetic" with
+  450–900-word excerpts of real published judgments and decisions —
+  Commercial Court, Chancery and Court of Appeal of England and Wales
+  (Find Case Law), US courts of appeals (govinfo), Cour de cassation de
+  Belgique (JUPORTAL), Autorité belge de la concurrence — annotated
+  *as if they were a client's file* (parties, counsel, judges, the
+  document's own case number and registry numbers are gold; courts,
+  statutes and cited precedents are public), each by two agents blind
+  and then adjudicated; provenance and licences in
+  `benchmark/public/README.md`. Annotation policy: redact anything
   that identifies a party, adviser, witness or matter; leave public
   institutions, statutes, courts and jurisdictions in place; open
   rulings in `benchmark/synth/POLICY_QUESTIONS.md`. Documents are

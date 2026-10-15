@@ -115,6 +115,28 @@ is typed PERSON.
 initials PERSON.** Worth a ruling on invoice and order numbers: in an
 insolvency or a payment dispute they are the identifiers.
 
+## Questions raised by the public split (doc_101–114, 15 October 2026)
+
+Fourteen excerpts of real judgments and decisions, each annotated blind
+by two agents and adjudicated by a third (`benchmark/public/README.md`).
+The two annotators agreed on what is gold in almost every document; the
+questions below are the points where the written policy is silent and
+the adjudicator applied a default. Each needs a one-line ruling; the
+default applied in the corpus is marked ⟶.
+
+| # | Question | Where | Default applied ⟶ |
+|---|---|---|---|
+| 8 | **Non-party private companies named in the facts** — a contractor, customer, distributor, parent or counterparty that is not a party (TSK, Farlin, Accredo/CVS, AEI Ventures, Live Ventures). The policy enumerates "the parties" only. | doc_101, 104, 105, 106, 107 | Gold ORG — a named private company in a confidential file identifies the matter; flips 8 of 46 spans in doc_101 alone |
+| 9 | **Earlier decisions in the client's own proceedings** — the judgment below (`[2025] EWHC 1569 (Ch)`), the earlier appeal (`2024 WL 1364345`): published, so public under ruling 2, yet one lookup re-identifies the parties. | doc_105, 108 | Gold CASE_REF — a carve-out to ruling 2 for the same matter's prior decisions |
+| 10 | **The document's own published citation** — its ECLI or neutral citation (`ECLI:BE:CASS:2023:ARR.20230223.1F.3`, `[2026] EWHC 2587 (Comm)`). Public once published, but it *is* the matter's reference. | all | Gold CASE_REF, "as if live" |
+| 11 | **A party's brands, products and titles** (`Remodulin`, `CADD-MS 3`, `La Libre`, `LN24`, `FUN Radio` …) — one-to-one with the party. Ruling wanted on identifier-or-not and on the type (ORG today; a `PRODUCT` label in a dedicated schema?). A licensed third-party mark operated by a party (`FUN Radio`) needs the same ruling. | doc_106, 112 | Gold ORG (word-mark precedent `MERIDIAAN`, doc_031) |
+| 12 | **Counsel's address line** (`Bruxelles, rue de la Régence, 4`, `avenue Louise, 250`, `Rue Joseph Stevens 7`) — ruling 6 speaks of a *party's* street-address line. | doc_109, 110, 112 | Gold LOC, like a party's |
+| 13 | **Public-law parties** — the State acting through its tax administration (`État belge`) vs a small municipality (`Ville de Virton`). | doc_110, 111 | State public, municipality gold — the test is whether the name identifies the matter |
+| 14 | **IP registration numbers** — a patent number and its short form (`6,000,608`, `’608`): redacted under ruling 3 by analogy, but in a patent case the number may be needed for the analysis. | doc_108 | Gold, IBAN bucket (registry numbers) |
+| 15 | **Commercial order numbers** (`work order no. 535958`) — ruling 7 covers invoice numbers only. | doc_102 | Gold CASE_REF, like invoice numbers |
+| 16 | **The authority's own contact identifiers** — the Autorité belge de la concurrence's switchboard, BCE number, e-mail and website in its letterhead. The policy exempts "the court or authority itself and its address"; PHONE / IBAN / EMAIL / URL are otherwise unconditional buckets. | doc_114 (precedent doc_026) | Public — institutional coordinates identify no client |
+| 17 | **Smaller shapes** — (a) a comma-appositive legal form glued to the name (`INTERNATIONAL TOOLS SERVICE, société anonyme`): inside the ORG span or a public generic term? left unannotated; (b) a third-party landmark locating a party's premises (`Immingham oil terminal`, venue → gold) next to bare places that identify it just as well (`North Killingholme`, public under ruling 6); (c) beneficial-owner family names that are neither parties nor officials (`Hurbain`, `le Hodey`) → gold PERSON; (d) the contested act's own numbering (`décision n° 8`) → public; (e) a real platform named as a business descriptor (`a YouTube channel`) → public. | doc_109, 103, 112, 113, 104 | As stated |
+
 ## Smaller points
 
 * Span counts run 42–71 per document, above the 15–30 aim, because the

@@ -1,0 +1,686 @@
+{
+ "id": "doc_103_chancery_2026_glencore_v_prax_lindsey_en",
+ "title": "Glencore Energy UK Ltd v Prax Lindsey Oil Refinery Limited (in liquidation)",
+ "language": "en",
+ "text": "Neutral Citation Number:\n[2026] EWHC 2394 (Ch)\n\nCase No:\nCR-2025-004409\n\nIN THE HIGH COURT OF JUSTICE\n\nCHANCERY DIVISION\n\nBUSINESS AND PROPERTY COURTS OF ENGLAND AND WALES\n\nINSOLVENCY AND COMPANIES LIST (ChD)\n\nRoyal Courts of Justice, Rolls Building\n\nFetter Lane, London, EC4A 1NL\n\nDate:\n21 September 2026\n\nBefore\n\nMR JUSTICE TROWER\n\n- - - - - - - - - - - - - - - - - - - - -\n\nIN THE MATTER OF PRAX LINDSEY OIL REFINERY LIMITED (IN LIQUIDATION)\n\nAND IN THE MATTER OF\n\nTHE INSOLVENCY ACT 1986\n\nBetween :\n\nGLENCORE ENERGY UK LTD.\n\n- and -\n\nApplicant\n\nPRAX LINDSEY OIL REFINERY LIMITED (IN LIQUIDATION)\n\nRespondent\n\nMr Edward Cumming KC and Ms Erin Hitchens (instructed by Jones Day) for the Applicant\n\nMr Joseph Curl KC and Ms Clara Johnson (instructed by Slaughter and May) for the Respondent\n\nHearing dates: 28 - 29 July 2026\n\n- - - - - - - - - - - - - - - - - - - - -\n\nApproved Judgment\n\nThis judgment was handed down remotely at 10.30am on 21 September 2026 by circulation to the parties or their representatives by e-mail and by release to the National Archives.\n\n.............................\n\nMR JUSTICE TROWER\n\nMr Justice Trower:\n\n1.\n\nThis is an application by Glencore Energy UK Ltd (“Glencore”) under section 130(2) of the Insolvency Act 1986 (“IA 1986”) seeking leave to commence and proceed with a claim against Prax Lindsey Oil Refinery Limited (in liquidation) (“PLOR”). In this judgment, unless the contrary appears, references to section numbers are to sections of the IA 1986 and references to rule numbers are to the Insolvency (England and Wales) Rules 2016 (the “Rules”).\n\n2.\n\nThe heads of relief sought in the draft particulars of claim are equitable rescission of five sales confirmations (the “Relevant Sales Confirmations”) pursuant to which Glencore supplied crude oil to PLOR worth in excess of US$230 million, an account of profits, a declaration that certain oil and/or its traceable proceeds are held on constructive or resulting trust for Glencore and consequential orders for delivery up. The application was issued on 19 December 2025 and alleges that the Relevant Sales Confirmations were induced by fraudulent misrepresentations made by PLOR prior to its liquidation. It pleads that it is a substantial victim of PLOR’s fraud.\n\n3.\n\nPLOR was a member of the Prax group of companies (the “Group”) which dealt in crude oil, petroleum products and biofuels. The businesses of the Group included oil exploration and production, oil refining and storage and the selling of refined product. PLOR owned and operated a refinery at North Killingholme in North Lincolnshire (the “Refinery”) located close to the Immingham oil terminal. At the material time, the Refinery was one of six major refineries in the United Kingdom, providing approximately 10% of the country's petrochemical supply.\n\n4.\n\nAt the end of June 2025, a number of key companies in the Group went into compulsory liquidation and administration. On 30 June 2025, a winding up order was made against PLOR by Michael Green J on a winding up petition presented the day before by PLOR’s sole director, Mr Winston Soosaipillai. The Official Receiver (the “OR”) thereupon became (as he remains) its liquidator, assisted by four special managers from FTI Consulting LLP (the “Special Managers”).\n\n5.\n\nIn order to understand the context in which the issues with which I am concerned arise, it is necessary to give a brief description both of PLOR’s funding arrangements and its agreements with Glencore for the supply of crude oil.\n\nThe Group funding arrangements\n\n6.\n\nThe Group operated a £738 million securitisation facility arranged by HSBC Bank Plc (“HSBC”). Receivables arising under contracts between Group companies including PLOR as sellers (the “Sellers”) were sold to an Irish SPV outside the Group (the “Purchaser”) established by the Group’s lenders. The Purchaser funded its acquisition of the receivables by issuing securities in the form of senior, mezzanine and subordinated notes to financial institutions and also to the ultimate parent of the Group, State Oil Limited, now in administration (“SOL”).\n\n7.\n\nEach Seller made various representations and warranties to the effect that any information provided to the Purchaser or other parties to the transaction, was true and correct as at the date it was provided. They also made various representations and gave various warranties with regards to each receivable listed in a list of receivables in respect of which it was identified as the Seller.\n\n8.\n\nA Group company, Prax Treasury Limited (“PTL”), operated a cash pool into which the purchase price for the receivables sold by the Sellers was deposited. The Sellers were appointed by the Purchaser to act as its agent in the interaction with customers and the collection of receivables. They operated accounts for the collection of monies payable by customers. PLOR and the other Sellers declared themselves trustees of the amounts held in those collection accounts for the benefit of the Purchaser to the extent that such amounts represented receivables sold to the Purchaser. At the end of each day, all amounts in the collection accounts were swept into the Purchaser’s transaction accounts or to PTL. These swept funds were mixed together with funds swept into those accounts from other Sellers in the Group.\n",
+ "gold_spans": [
+  {
+   "start": 25,
+   "end": 46,
+   "type": "CASE_REF",
+   "text": "[2026] EWHC 2394 (Ch)"
+  },
+  {
+   "start": 57,
+   "end": 71,
+   "type": "CASE_REF",
+   "text": "CR-2025-004409"
+  },
+  {
+   "start": 315,
+   "end": 332,
+   "type": "PERSON",
+   "text": "MR JUSTICE TROWER"
+  },
+  {
+   "start": 394,
+   "end": 427,
+   "type": "ORG",
+   "text": "PRAX LINDSEY OIL REFINERY LIMITED"
+  },
+  {
+   "start": 504,
+   "end": 527,
+   "type": "ORG",
+   "text": "GLENCORE ENERGY UK LTD."
+  },
+  {
+   "start": 549,
+   "end": 582,
+   "type": "ORG",
+   "text": "PRAX LINDSEY OIL REFINERY LIMITED"
+  },
+  {
+   "start": 616,
+   "end": 633,
+   "type": "PERSON",
+   "text": "Edward Cumming KC"
+  },
+  {
+   "start": 641,
+   "end": 654,
+   "type": "PERSON",
+   "text": "Erin Hitchens"
+  },
+  {
+   "start": 670,
+   "end": 679,
+   "type": "ORG",
+   "text": "Jones Day"
+  },
+  {
+   "start": 703,
+   "end": 717,
+   "type": "PERSON",
+   "text": "Joseph Curl KC"
+  },
+  {
+   "start": 725,
+   "end": 738,
+   "type": "PERSON",
+   "text": "Clara Johnson"
+  },
+  {
+   "start": 754,
+   "end": 771,
+   "type": "ORG",
+   "text": "Slaughter and May"
+  },
+  {
+   "start": 1098,
+   "end": 1115,
+   "type": "PERSON",
+   "text": "MR JUSTICE TROWER"
+  },
+  {
+   "start": 1117,
+   "end": 1134,
+   "type": "PERSON",
+   "text": "Mr Justice Trower"
+  },
+  {
+   "start": 1167,
+   "end": 1189,
+   "type": "ORG",
+   "text": "Glencore Energy UK Ltd"
+  },
+  {
+   "start": 1192,
+   "end": 1200,
+   "type": "ORG",
+   "text": "Glencore"
+  },
+  {
+   "start": 1322,
+   "end": 1355,
+   "type": "ORG",
+   "text": "Prax Lindsey Oil Refinery Limited"
+  },
+  {
+   "start": 1375,
+   "end": 1379,
+   "type": "ORG",
+   "text": "PLOR"
+  },
+  {
+   "start": 1764,
+   "end": 1772,
+   "type": "ORG",
+   "text": "Glencore"
+  },
+  {
+   "start": 1795,
+   "end": 1799,
+   "type": "ORG",
+   "text": "PLOR"
+  },
+  {
+   "start": 1967,
+   "end": 1975,
+   "type": "ORG",
+   "text": "Glencore"
+  },
+  {
+   "start": 2169,
+   "end": 2173,
+   "type": "ORG",
+   "text": "PLOR"
+  },
+  {
+   "start": 2245,
+   "end": 2249,
+   "type": "ORG",
+   "text": "PLOR"
+  },
+  {
+   "start": 2264,
+   "end": 2268,
+   "type": "ORG",
+   "text": "PLOR"
+  },
+  {
+   "start": 2289,
+   "end": 2293,
+   "type": "ORG",
+   "text": "Prax"
+  },
+  {
+   "start": 2516,
+   "end": 2520,
+   "type": "ORG",
+   "text": "PLOR"
+  },
+  {
+   "start": 2633,
+   "end": 2655,
+   "type": "LOC",
+   "text": "Immingham oil terminal"
+  },
+  {
+   "start": 2989,
+   "end": 2993,
+   "type": "ORG",
+   "text": "PLOR"
+  },
+  {
+   "start": 2997,
+   "end": 3012,
+   "type": "PERSON",
+   "text": "Michael Green J"
+  },
+  {
+   "start": 3066,
+   "end": 3070,
+   "type": "ORG",
+   "text": "PLOR"
+  },
+  {
+   "start": 3091,
+   "end": 3111,
+   "type": "PERSON",
+   "text": "Winston Soosaipillai"
+  },
+  {
+   "start": 3234,
+   "end": 3252,
+   "type": "ORG",
+   "text": "FTI Consulting LLP"
+  },
+  {
+   "start": 3424,
+   "end": 3428,
+   "type": "ORG",
+   "text": "PLOR"
+  },
+  {
+   "start": 3476,
+   "end": 3484,
+   "type": "ORG",
+   "text": "Glencore"
+  },
+  {
+   "start": 3621,
+   "end": 3634,
+   "type": "ORG",
+   "text": "HSBC Bank Plc"
+  },
+  {
+   "start": 3637,
+   "end": 3641,
+   "type": "ORG",
+   "text": "HSBC"
+  },
+  {
+   "start": 3715,
+   "end": 3719,
+   "type": "ORG",
+   "text": "PLOR"
+  },
+  {
+   "start": 4051,
+   "end": 4068,
+   "type": "ORG",
+   "text": "State Oil Limited"
+  },
+  {
+   "start": 4094,
+   "end": 4097,
+   "type": "ORG",
+   "text": "SOL"
+  },
+  {
+   "start": 4519,
+   "end": 4540,
+   "type": "ORG",
+   "text": "Prax Treasury Limited"
+  },
+  {
+   "start": 4543,
+   "end": 4546,
+   "type": "ORG",
+   "text": "PTL"
+  },
+  {
+   "start": 4863,
+   "end": 4867,
+   "type": "ORG",
+   "text": "PLOR"
+  },
+  {
+   "start": 5202,
+   "end": 5205,
+   "type": "ORG",
+   "text": "PTL"
+  }
+ ],
+ "public_spans": [
+  {
+   "start": 0,
+   "end": 23,
+   "type": "PUBLIC",
+   "text": "Neutral Citation Number"
+  },
+  {
+   "start": 48,
+   "end": 55,
+   "type": "PUBLIC",
+   "text": "Case No"
+  },
+  {
+   "start": 73,
+   "end": 101,
+   "type": "PUBLIC",
+   "text": "IN THE HIGH COURT OF JUSTICE"
+  },
+  {
+   "start": 103,
+   "end": 120,
+   "type": "PUBLIC",
+   "text": "CHANCERY DIVISION"
+  },
+  {
+   "start": 122,
+   "end": 171,
+   "type": "PUBLIC",
+   "text": "BUSINESS AND PROPERTY COURTS OF ENGLAND AND WALES"
+  },
+  {
+   "start": 173,
+   "end": 208,
+   "type": "PUBLIC",
+   "text": "INSOLVENCY AND COMPANIES LIST (ChD)"
+  },
+  {
+   "start": 210,
+   "end": 249,
+   "type": "PUBLIC",
+   "text": "Royal Courts of Justice, Rolls Building"
+  },
+  {
+   "start": 251,
+   "end": 280,
+   "type": "PUBLIC",
+   "text": "Fetter Lane, London, EC4A 1NL"
+  },
+  {
+   "start": 288,
+   "end": 305,
+   "type": "PUBLIC",
+   "text": "21 September 2026"
+  },
+  {
+   "start": 468,
+   "end": 491,
+   "type": "PUBLIC",
+   "text": "THE INSOLVENCY ACT 1986"
+  },
+  {
+   "start": 538,
+   "end": 547,
+   "type": "PUBLIC",
+   "text": "Applicant"
+  },
+  {
+   "start": 601,
+   "end": 611,
+   "type": "PUBLIC",
+   "text": "Respondent"
+  },
+  {
+   "start": 689,
+   "end": 698,
+   "type": "PUBLIC",
+   "text": "Applicant"
+  },
+  {
+   "start": 781,
+   "end": 791,
+   "type": "PUBLIC",
+   "text": "Respondent"
+  },
+  {
+   "start": 808,
+   "end": 825,
+   "type": "PUBLIC",
+   "text": "28 - 29 July 2026"
+  },
+  {
+   "start": 870,
+   "end": 887,
+   "type": "PUBLIC",
+   "text": "Approved Judgment"
+  },
+  {
+   "start": 942,
+   "end": 959,
+   "type": "PUBLIC",
+   "text": "21 September 2026"
+  },
+  {
+   "start": 1047,
+   "end": 1064,
+   "type": "PUBLIC",
+   "text": "National Archives"
+  },
+  {
+   "start": 1209,
+   "end": 1223,
+   "type": "PUBLIC",
+   "text": "section 130(2)"
+  },
+  {
+   "start": 1231,
+   "end": 1250,
+   "type": "PUBLIC",
+   "text": "Insolvency Act 1986"
+  },
+  {
+   "start": 1253,
+   "end": 1260,
+   "type": "PUBLIC",
+   "text": "IA 1986"
+  },
+  {
+   "start": 1483,
+   "end": 1490,
+   "type": "PUBLIC",
+   "text": "IA 1986"
+  },
+  {
+   "start": 1533,
+   "end": 1574,
+   "type": "PUBLIC",
+   "text": "Insolvency (England and Wales) Rules 2016"
+  },
+  {
+   "start": 1581,
+   "end": 1586,
+   "type": "PUBLIC",
+   "text": "Rules"
+  },
+  {
+   "start": 1715,
+   "end": 1743,
+   "type": "PUBLIC",
+   "text": "Relevant Sales Confirmations"
+  },
+  {
+   "start": 1819,
+   "end": 1833,
+   "type": "PUBLIC",
+   "text": "US$230 million"
+  },
+  {
+   "start": 2048,
+   "end": 2064,
+   "type": "PUBLIC",
+   "text": "19 December 2025"
+  },
+  {
+   "start": 2086,
+   "end": 2114,
+   "type": "PUBLIC",
+   "text": "Relevant Sales Confirmations"
+  },
+  {
+   "start": 2319,
+   "end": 2324,
+   "type": "PUBLIC",
+   "text": "Group"
+  },
+  {
+   "start": 2408,
+   "end": 2413,
+   "type": "PUBLIC",
+   "text": "Group"
+  },
+  {
+   "start": 2554,
+   "end": 2572,
+   "type": "PUBLIC",
+   "text": "North Killingholme"
+  },
+  {
+   "start": 2576,
+   "end": 2594,
+   "type": "PUBLIC",
+   "text": "North Lincolnshire"
+  },
+  {
+   "start": 2601,
+   "end": 2609,
+   "type": "PUBLIC",
+   "text": "Refinery"
+  },
+  {
+   "start": 2683,
+   "end": 2691,
+   "type": "PUBLIC",
+   "text": "Refinery"
+  },
+  {
+   "start": 2731,
+   "end": 2745,
+   "type": "PUBLIC",
+   "text": "United Kingdom"
+  },
+  {
+   "start": 2877,
+   "end": 2882,
+   "type": "PUBLIC",
+   "text": "Group"
+  },
+  {
+   "start": 2939,
+   "end": 2951,
+   "type": "PUBLIC",
+   "text": "30 June 2025"
+  },
+  {
+   "start": 3117,
+   "end": 3134,
+   "type": "PUBLIC",
+   "text": "Official Receiver"
+  },
+  {
+   "start": 3141,
+   "end": 3143,
+   "type": "PUBLIC",
+   "text": "OR"
+  },
+  {
+   "start": 3259,
+   "end": 3275,
+   "type": "PUBLIC",
+   "text": "Special Managers"
+  },
+  {
+   "start": 3519,
+   "end": 3524,
+   "type": "PUBLIC",
+   "text": "Group"
+  },
+  {
+   "start": 3555,
+   "end": 3560,
+   "type": "PUBLIC",
+   "text": "Group"
+  },
+  {
+   "start": 3572,
+   "end": 3584,
+   "type": "PUBLIC",
+   "text": "£738 million"
+  },
+  {
+   "start": 3689,
+   "end": 3694,
+   "type": "PUBLIC",
+   "text": "Group"
+  },
+  {
+   "start": 3737,
+   "end": 3744,
+   "type": "PUBLIC",
+   "text": "Sellers"
+  },
+  {
+   "start": 3763,
+   "end": 3768,
+   "type": "PUBLIC",
+   "text": "Irish"
+  },
+  {
+   "start": 3769,
+   "end": 3772,
+   "type": "PUBLIC",
+   "text": "SPV"
+  },
+  {
+   "start": 3785,
+   "end": 3790,
+   "type": "PUBLIC",
+   "text": "Group"
+  },
+  {
+   "start": 3797,
+   "end": 3806,
+   "type": "PUBLIC",
+   "text": "Purchaser"
+  },
+  {
+   "start": 3828,
+   "end": 3833,
+   "type": "PUBLIC",
+   "text": "Group"
+  },
+  {
+   "start": 3849,
+   "end": 3858,
+   "type": "PUBLIC",
+   "text": "Purchaser"
+  },
+  {
+   "start": 4044,
+   "end": 4049,
+   "type": "PUBLIC",
+   "text": "Group"
+  },
+  {
+   "start": 4111,
+   "end": 4117,
+   "type": "PUBLIC",
+   "text": "Seller"
+  },
+  {
+   "start": 4213,
+   "end": 4222,
+   "type": "PUBLIC",
+   "text": "Purchaser"
+  },
+  {
+   "start": 4489,
+   "end": 4495,
+   "type": "PUBLIC",
+   "text": "Seller"
+  },
+  {
+   "start": 4504,
+   "end": 4509,
+   "type": "PUBLIC",
+   "text": "Group"
+  },
+  {
+   "start": 4633,
+   "end": 4640,
+   "type": "PUBLIC",
+   "text": "Sellers"
+  },
+  {
+   "start": 4660,
+   "end": 4667,
+   "type": "PUBLIC",
+   "text": "Sellers"
+  },
+  {
+   "start": 4690,
+   "end": 4699,
+   "type": "PUBLIC",
+   "text": "Purchaser"
+  },
+  {
+   "start": 4882,
+   "end": 4889,
+   "type": "PUBLIC",
+   "text": "Sellers"
+  },
+  {
+   "start": 4991,
+   "end": 5000,
+   "type": "PUBLIC",
+   "text": "Purchaser"
+  },
+  {
+   "start": 5069,
+   "end": 5078,
+   "type": "PUBLIC",
+   "text": "Purchaser"
+  },
+  {
+   "start": 5163,
+   "end": 5172,
+   "type": "PUBLIC",
+   "text": "Purchaser"
+  },
+  {
+   "start": 5293,
+   "end": 5300,
+   "type": "PUBLIC",
+   "text": "Sellers"
+  },
+  {
+   "start": 5308,
+   "end": 5313,
+   "type": "PUBLIC",
+   "text": "Group"
+  }
+ ],
+ "notes": "Real published judgment (Find Case Law, OGL v3.0) annotated AS IF it were a client's confidential file sent to an outside LLM: header and opening paragraphs of an Insolvency and Companies List judgment on a s.130(2) IA 1986 leave application. SHOULD redact: the document's own neutral citation [2026] EWHC 2394 (Ch) and case number CR-2025-004409 (treated as live, CASE_REF); the judge under both styles, 'MR JUSTICE TROWER' (twice, all-caps header and signature line) and 'Mr Justice Trower' (judicial style kept whole, no first name ever given — ruling 4); the Applicant under every form: all-caps header 'GLENCORE ENERGY UK LTD.', the legal name 'Glencore Energy UK Ltd' and the defined short form 'Glencore' (five occurrences); the Respondent under every form: all-caps 'PRAX LINDSEY OIL REFINERY LIMITED' (in the matter line and the party block — '(IN LIQUIDATION)' is a status, left outside the span), 'Prax Lindsey Oil Refinery Limited', the defined acronym 'PLOR' (eleven occurrences incl. possessives PLOR’s) and the bare group name 'Prax' in 'the Prax group of companies'; counsel without the honorific but with the KC post-nominal (Edward Cumming KC, Erin Hitchens, Joseph Curl KC, Clara Johnson) and the instructing firms Jones Day and Slaughter and May (ORG); the winding-up judge 'Michael Green J' (J post-nominal kept, ruling 4); PLOR's sole director 'Winston Soosaipillai' (honorific 'Mr' excluded before a full name); the special managers' firm FTI Consulting LLP; the group treasury company 'Prax Treasury Limited' and its acronym 'PTL' (twice); the ultimate parent 'State Oil Limited' and its acronym 'SOL'; the arranging bank 'HSBC Bank Plc' and its defined short form 'HSBC' (real bank kept gold, as KBC/BCEE in the synthetic corpus); the venue named on its own, 'Immingham oil terminal' (LOC — a named facility that, next to 'refinery', pinpoints the client). SHOULD NOT redact: the court and its divisions (IN THE HIGH COURT OF JUSTICE, CHANCERY DIVISION, BUSINESS AND PROPERTY COURTS OF ENGLAND AND WALES, INSOLVENCY AND COMPANIES LIST (ChD)) and the court's own address lines 'Royal Courts of Justice, Rolls Building' / 'Fetter Lane, London, EC4A 1NL' (a public address, not a party's — the detector must not treat it as the address trap); statutes and rules (THE INSOLVENCY ACT 1986 / Insolvency Act 1986 / IA 1986, section 130(2), the Insolvency (England and Wales) Rules 2016 and 'the Rules'); the National Archives; the Official Receiver and its defined short form 'the OR' (a statutory office, not a named official — the four unnamed special managers are a role, not persons); bare place names under ruling 6 (North Killingholme, North Lincolnshire, London in the court address, United Kingdom, 'Irish SPV'); dates (21 September 2026, 28 - 29 July 2026, 19 December 2025, 30 June 2025), amounts (US$230 million, £738 million, 10%), paragraph and section numbers; role words and defined terms ('the Applicant', 'the Respondent', 'the Group', 'the Refinery', 'the Relevant Sales Confirmations', 'the Sellers', 'the Purchaser', 'the Special Managers', 'sole director', 'liquidator', 'special managers', 'senior, mezzanine and subordinated notes'). Traps actually present: all-caps header forms of both parties and the judge; four defined acronyms (PLOR, PTL, SOL, HSBC) plus the public 'IA 1986' and 'OR'; honorific-only judge style (Trower is never given a first name); party names adjacent to public bodies ('Glencore Energy UK Ltd (“Glencore”) under section 130(2) of the Insolvency Act 1986', 'IN THE MATTER OF PRAX LINDSEY OIL REFINERY LIMITED … AND IN THE MATTER OF THE INSOLVENCY ACT 1986', 'The Official Receiver … assisted by four special managers from FTI Consulting LLP'); role-noise throughout; the live case number as internal docket. No bare surname occurs (no surname-only trap). ADJUDICATION (2026-10-15, two blind annotators): 25 gold surfaces agreed outright, including the group affiliates PTL/SOL, the arranging bank HSBC and the special managers' firm FTI (both annotators gold, as-if-confidential). Two differences settled for the first annotator: (i) 'Prax' kept as the minimal span over the second's 'Prax group' — lowercase 'group' is a descriptor on a par with the defined term 'the Group' (public for both), and ruling 7's 'group names' are WhatsApp groups, not corporate groups; (ii) 'Immingham oil terminal' kept gold LOC as a venue named on its own (policy; the synthetic corpus already types named facilities such as hotels and a conference centre LOC) rather than public as the second had it — flagged for a ruling, because 'North Killingholme' (public under ruling 6) locates the Refinery just as precisely. The public list was enlarged with the second annotator's literally-occurring non-gold surfaces (defined terms, labels, dates, amounts); honorifics ('Mr', 'Ms', 'KC', 'J') were not added — they are span-boundary conventions, not public knowledge, and the post-nominals sit inside gold spans.",
+ "source": "public-Find Case Law (The National Archives)",
+ "split": "public",
+ "genre": "judgment",
+ "traps": [
+  "all-caps-header",
+  "acronym-defined",
+  "honorific-only",
+  "adjacent-public",
+  "role-noise",
+  "internal-docket"
+ ],
+ "provenance": {
+  "source": "Find Case Law (The National Archives)",
+  "url": "https://caselaw.nationalarchives.gov.uk/ewhc/ch/2026/2394",
+  "data_url": "https://caselaw.nationalarchives.gov.uk/ewhc/ch/2026/2394/data.xml",
+  "court": "High Court of Justice, Chancery Division, Business and Property Courts of England and Wales, Insolvency and Companies List (ChD)",
+  "jurisdiction": "England and Wales",
+  "neutral_citation": "[2026] EWHC 2394 (Ch)",
+  "case_number": "CR-2025-004409",
+  "judge": "Mr Justice Trower",
+  "date": "2026-09-21",
+  "licence": "Open Justice Licence / Open Government Licence v3.0",
+  "attribution": "Contains public sector information licensed under the Open Government Licence v3.0; judgment published by The National Archives (Find Case Law)",
+  "fetched": "2026-10-15",
+  "user_agent": "JudeBenchmark/0.8 (https://github.com/bachdanslesbach/Jude)",
+  "method": "Atom feed court=ewhc/ch (per_page=20); the entry's data.xml (LegalDocML) fetched with curl, one second apart; tags stripped (block elements become line breaks, inline tags dropped, <meta> block removed), html.unescape, whitespace runs collapsed within a line. Excerpt = lines 1-96 of the stripped text, cut at a paragraph end (header plus paragraphs 1-8); raw copy at benchmark/public/raw/fcl_chancery_2026_glencore_v_prax_lindsey.txt."
+ }
+}

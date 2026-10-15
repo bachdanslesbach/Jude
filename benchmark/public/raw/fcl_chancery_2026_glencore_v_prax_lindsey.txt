@@ -1,0 +1,96 @@
+Neutral Citation Number:
+[2026] EWHC 2394 (Ch)
+
+Case No:
+CR-2025-004409
+
+IN THE HIGH COURT OF JUSTICE
+
+CHANCERY DIVISION
+
+BUSINESS AND PROPERTY COURTS OF ENGLAND AND WALES
+
+INSOLVENCY AND COMPANIES LIST (ChD)
+
+Royal Courts of Justice, Rolls Building
+
+Fetter Lane, London, EC4A 1NL
+
+Date:
+21 September 2026
+
+Before
+
+MR JUSTICE TROWER
+
+- - - - - - - - - - - - - - - - - - - - -
+
+IN THE MATTER OF PRAX LINDSEY OIL REFINERY LIMITED (IN LIQUIDATION)
+
+AND IN THE MATTER OF
+
+THE INSOLVENCY ACT 1986
+
+Between :
+
+GLENCORE ENERGY UK LTD.
+
+- and -
+
+Applicant
+
+PRAX LINDSEY OIL REFINERY LIMITED (IN LIQUIDATION)
+
+Respondent
+
+Mr Edward Cumming KC and Ms Erin Hitchens (instructed by Jones Day) for the Applicant
+
+Mr Joseph Curl KC and Ms Clara Johnson (instructed by Slaughter and May) for the Respondent
+
+Hearing dates: 28 - 29 July 2026
+
+- - - - - - - - - - - - - - - - - - - - -
+
+Approved Judgment
+
+This judgment was handed down remotely at 10.30am on 21 September 2026 by circulation to the parties or their representatives by e-mail and by release to the National Archives.
+
+.............................
+
+MR JUSTICE TROWER
+
+Mr Justice Trower:
+
+1.
+
+This is an application by Glencore Energy UK Ltd (“Glencore”) under section 130(2) of the Insolvency Act 1986 (“IA 1986”) seeking leave to commence and proceed with a claim against Prax Lindsey Oil Refinery Limited (in liquidation) (“PLOR”). In this judgment, unless the contrary appears, references to section numbers are to sections of the IA 1986 and references to rule numbers are to the Insolvency (England and Wales) Rules 2016 (the “Rules”).
+
+2.
+
+The heads of relief sought in the draft particulars of claim are equitable rescission of five sales confirmations (the “Relevant Sales Confirmations”) pursuant to which Glencore supplied crude oil to PLOR worth in excess of US$230 million, an account of profits, a declaration that certain oil and/or its traceable proceeds are held on constructive or resulting trust for Glencore and consequential orders for delivery up. The application was issued on 19 December 2025 and alleges that the Relevant Sales Confirmations were induced by fraudulent misrepresentations made by PLOR prior to its liquidation. It pleads that it is a substantial victim of PLOR’s fraud.
+
+3.
+
+PLOR was a member of the Prax group of companies (the “Group”) which dealt in crude oil, petroleum products and biofuels. The businesses of the Group included oil exploration and production, oil refining and storage and the selling of refined product. PLOR owned and operated a refinery at North Killingholme in North Lincolnshire (the “Refinery”) located close to the Immingham oil terminal. At the material time, the Refinery was one of six major refineries in the United Kingdom, providing approximately 10% of the country's petrochemical supply.
+
+4.
+
+At the end of June 2025, a number of key companies in the Group went into compulsory liquidation and administration. On 30 June 2025, a winding up order was made against PLOR by Michael Green J on a winding up petition presented the day before by PLOR’s sole director, Mr Winston Soosaipillai. The Official Receiver (the “OR”) thereupon became (as he remains) its liquidator, assisted by four special managers from FTI Consulting LLP (the “Special Managers”).
+
+5.
+
+In order to understand the context in which the issues with which I am concerned arise, it is necessary to give a brief description both of PLOR’s funding arrangements and its agreements with Glencore for the supply of crude oil.
+
+The Group funding arrangements
+
+6.
+
+The Group operated a £738 million securitisation facility arranged by HSBC Bank Plc (“HSBC”). Receivables arising under contracts between Group companies including PLOR as sellers (the “Sellers”) were sold to an Irish SPV outside the Group (the “Purchaser”) established by the Group’s lenders. The Purchaser funded its acquisition of the receivables by issuing securities in the form of senior, mezzanine and subordinated notes to financial institutions and also to the ultimate parent of the Group, State Oil Limited, now in administration (“SOL”).
+
+7.
+
+Each Seller made various representations and warranties to the effect that any information provided to the Purchaser or other parties to the transaction, was true and correct as at the date it was provided. They also made various representations and gave various warranties with regards to each receivable listed in a list of receivables in respect of which it was identified as the Seller.
+
+8.
+
+A Group company, Prax Treasury Limited (“PTL”), operated a cash pool into which the purchase price for the receivables sold by the Sellers was deposited. The Sellers were appointed by the Purchaser to act as its agent in the interaction with customers and the collection of receivables. They operated accounts for the collection of monies payable by customers. PLOR and the other Sellers declared themselves trustees of the amounts held in those collection accounts for the benefit of the Purchaser to the extent that such amounts represented receivables sold to the Purchaser. At the end of each day, all amounts in the collection accounts were swept into the Purchaser’s transaction accounts or to PTL. These swept funds were mixed together with funds swept into those accounts from other Sellers in the Group.

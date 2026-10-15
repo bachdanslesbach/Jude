@@ -1,0 +1,99 @@
+NOT RECOMMENDED FOR PUBLICATION
+File Name: 26a0394n.06
+Case No. 25-3889
+UNITED STATES COURT OF APPEALS
+FOR THE SIXTH CIRCUIT
+TRUSTEES MAIN/270, LLC,
+Plaintiff-Appellee,
+v.
+APPLIANCESMART, INC.; JANONE, INC., fka
+Appliance Recycling Centers of America, Inc.,
+Defendants-Appellants.
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+ON APPEAL FROM THE
+UNITED STATES DISTRICT
+COURT FOR THE SOUTHERN
+DISTRICT OF OHIO
+O P I N I O N
+Before: MOORE, CLAY, and NALBANDIAN, Circuit Judges.
+NALBANDIAN, Circuit Judge. ApplianceSmart, Inc., ran a store in Trustees Main/270,
+LLC’s (Trustees Main) shopping center until 2022. JanOne, Inc. (ApplianceSmart’s former parent
+company), guaranteed the lease. ApplianceSmart defaulted three times. Everyone came together
+and resolved the first two breaches amicably. But the third prompted Trustees Main to repossess
+the property, sue for damages, and search for a new tenant. It found a new tenant, but only after
+rejecting tenants proposed by JanOne (and a related entity, Live Ventures, Inc.) that would’ve
+allegedly started paying rent sooner than Trustees Main’s selected replacement. On that basis,
+ApplianceSmart argues that Trustees Main didn’t reasonably mitigate its damages, warranting
+reversal of the district court’s judgment in Trustees Main’s favor. But because Ohio law doesn’t
+require lessors to mitigate damages by continuing to deal with demonstrably unreliable parties, we
+affirm.
+Case: 25-3889 Document: 37-2 Filed: 10/07/2026 Page: 1
+FILED
+KELLY L. STEPHENS, Clerk
+Oct 07, 2026
+No. 25-3889, Trustees Main/270 LLC v. ApplianceSmart Inc., et al.
+2
+I.
+This dispute is over a commercial lease. The only appellate question is whether the trial
+court erred in finding that the lessor—the non-breaching party here—sufficiently mitigated its
+damages. The court held a bench trial on that issue, where it heard the facts as told below.
+Trustees Main owns a shopping center in Columbus, Ohio. That shopping center comprises
+multiple retail spaces, including a “big box” space—a “larger” retail space suitable only for an
+“[e]xtremely limited” pool of “national retailers.” R.92, Trial Tr., PageID 519, 540–41.
+ApplianceSmart, Inc., ran a store of the same name in Trustees Main’s big-box space from
+2008 until it came to a rocky end in 2022. Toward the end of its tenure, ApplianceSmart repeatedly
+defaulted on the lease, ultimately leading Trustees Main to concurrently: (1) exercise its right
+under the lease to repossess the property and begin looking for a replacement tenant, and (2) seek
+damages against ApplianceSmart and JanOne, Inc (the guarantor on the lease and
+ApplianceSmart’s previous parent company). We’ll explain ApplianceSmart’s defaults and
+Trustees Main’s remediation in turn.
+A.
+To understand the trajectory of this case, it helps to trace the evolution of ApplianceSmart’s
+and Trustees Main’s lease agreement. That evolution is largely defined by two driving forces:
+changes in ApplianceSmart’s corporate structure and ownership, and ApplianceSmart’s repeated
+defaults.
+Start with the lease’s evolution until ApplianceSmart’s first default. The lease originally
+stood between ApplianceSmart’s predecessor in interest, Appliance Recycling Centers of
+America, Inc. (ARCA), and Trustees Main’s predecessor. The following years saw changes to
+both the parties’ corporate structures and to the lease itself. First, ARCA shifted roles from tenant
+Case: 25-3889 Document: 37-2 Filed: 10/07/2026 Page: 2
+No. 25-3889, Trustees Main/270 LLC v. ApplianceSmart Inc., et al.
+3
+to guarantor in 2017. At that point, ApplianceSmart itself—now a separate corporate entity owned
+by ARCA—took over as tenant. At the same time, the parties extended the lease term until June
+30, 2025.
+So by mid-2017, the lease stood between Trustees Main as lessor, ApplianceSmart as
+lessee, and ARCA as guarantor, with an end date in late June 2025.
+That brings us to the first of ApplianceSmart’s relevant defaults.1 It failed to pay rent in
+2019. To resolve the state-court lawsuit that Trustees Main filed against it for that failure,
+ApplianceSmart agreed to pay a portion of the amount it owed. And, as part of the same
+agreement, the parties acknowledged ARCA’s reincorporation into JanOne, Inc.—a co-defendant
+here—and ratified its continuation as guarantor. JanOne also assumed ARCA’s place as
+ApplianceSmart’s parent company.
+Also in 2019, JanOne sold ApplianceSmart to a different company, Live Ventures, Inc.
+But Live Ventures never took over as guarantor on the lease, leaving that role to JanOne.
+The second relevant default occurred during ApplianceSmart’s bankruptcy in 2021. By
+that point, ApplianceSmart, “like many, many retailers in the country, [was going] through a lot
+of difficulties.” R.92, PageID 669. Those troubles pushed it into defaulting on the lease and into
+bankruptcy. Even so, ApplianceSmart designated the Trustees Main location as a “surviving
+premises” that it would continue operating through the bankruptcy. Id. at PageID 668. So the
+parties entered into yet another agreement modifying the lease. Live Ventures—ApplianceSmart’s
+new parent company—agreed to pay over $185,000 in back rent. And Trustees Main (having been
+1 It appears that ApplianceSmart may have also defaulted in 2017 after a fire allegedly rendered
+the premises unusable. ApplianceSmart interpreted the lease to require Trustees Main to repair
+the property and pay its damages, so ApplianceSmart refused to pay rent. The parties settled that
+dispute, and no one addresses it before us despite the evidence about it in the record.
+Case: 25-3889 Document: 37-2 Filed: 10/07/2026 Page: 3
+No. 25-3889, Trustees Main/270 LLC v. ApplianceSmart Inc., et al.
+4
+burned at least twice by this point) inserted a new, non-reciprocal right to terminate the lease with
+30 days’ notice, even if ApplianceSmart wasn’t in default.

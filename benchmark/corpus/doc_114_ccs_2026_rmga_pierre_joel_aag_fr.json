@@ -1,0 +1,786 @@
+{
+ "id": "doc_114_ccs_2026_rmga_pierre_joel_aag_fr",
+ "title": "Décision ABC-2026-CCS-24-AUD du 9 juillet 2026 — Groupe RMGA / Groupe Pierre-Joël / Alliance Automotive Groupe (affaire CONC-CCS-26/0017)",
+ "language": "fr",
+ "text": "City Atrium\nRue du Progrès 50 - 1210 Bruxelles\nT +32 2 277 52 72\nNuméro d’entreprise : 0535.765.741\ninfo@bma-abc.be\nhttp://www.concurrence.be\n\nVERSION PUBLIQUE\n\nAUTORITÉ BELGE DE LA CONCURRENCE\n\nAuditorat\n\nCode de droit économique, Livre IV, article IV.70 §3.\nAffaire CONC-CCS-26/0017 : Groupe RMGA / Groupe Pierre-Joël/ Alliance Automotive Groupe (AAG)\nProcédure simplifiée – Décision n° ABC-2026-CCS-24-AUD du 9 juillet 2026\n\n1. Le 29 juin 2026, l’Auditeur général de l’Autorité belge de la Concurrence a reçu notification,\nconformément à l’article IV.10, §1er du Code de droit économique (ci-après « CDE »), d'une opération\nde concentration, par laquelle RMGA SA (ci-après : « RMGA ») d'une part et O.P.I.M Automotive SRL\n(ci-après : « O.P.I.M. Automotive ») d'autre part, acquièrent le contrôle conjoint d’une entreprise\ncommune de plein exercice (ci-après : « Alliance Automotive Groupe »). La création d'une entreprise\ncommune de plein exercice constitue une concentration au sens de l’article IV.6, §2 du CDE.\n2. Les parties notifiantes ont demandé l’application de la procédure simplifiée visée à l’article IV.70,§\n1er CDE.\n3. La concentration envisagée concerne le secteur (i) de la vente de véhicules automobiles, (ii) de la\nvente des pièces détachées, (iii) des services d’entretien et de réparation, (iv) des travaux de\ncarrosserie, et (v) de la location de véhicules.\n4. RMGA est une société anonyme dont le siège social est situé Chaussée de Bruxelles, 26, 1472 Vieux-\nGenappe et qui est enregistrée à la Banque Carrefour des Entreprises (ci-après « BCE ») sous le numéro\n0878.302.831. RMGA est une société holding qui fait partie du groupe RMGA. Le groupe RMGA est un\ngroupe automobile multimarque actif dans le sud de la Belgique, notamment dans les provinces du\nBrabant wallon, de Namur, du Hainaut, de Liège et du Luxembourg.\n5. Le groupe RMGA exploite 23 concessions des marques Renault/Dacia, Alpine, Hyundai, Suzuki, MG,\nFiat, Fiat Pro, Alfa, Abarth, Jeep, Nissan, Isuzu, Opel, Omoda/Jaecoo.\n6. O.P.I.M. AUTOMOTIVE est une société à responsabilité limitée dont le siège social est situé\nChaussée de Louvain, 475, 1300 Waver et qui est enregistrée à la BCE sous le numéro 0841.338.012.\nO.P.I.M. AUTOMOTIVE est une société holding qui fait partie du groupe Pierre-Joël. Le groupe Pierre-\nJoël est actif dans le secteur de la distribution automobile dans la province Brabant wallon et possède\ndeux concessions pour les marques Peugeot et Citroën (Stellantis) et une pour les voitures d’occasion.\n7. Alliance Automotive Groupe détiendra les sociétés existantes, RICCO ARLON SRL et SB FINANCE\nLUX, laquelle détient les sociétés SB-LEASE LUX, RICCO LIBRAMONT SA, RICCO MARCHE SRL et RICCO\nSRL. Les sociétés détenues par Alliance Automotive Groupe exploiteront 4 concessions pour les\nmarques Peugeot, Citroën, DS Automobiles, Iveco, Omoda et Jaecoo dans les provinces de\nLuxembourg et de Namur.\n\n8. Après examen de la notification et instruction de l’affaire, il apparaît que la concentration entre\ndans le champ d'application du CDE ainsi que de la catégorie II. 1. c) i) de la Communication du Conseil\nde la concurrence relative aux règles spécifiques d’une notification simplifiée de concentrations1 et du\npoint 3.a. des règles complémentaires concernant la procédure simplifiée en matière de\nconcentration2 .\n9. L'auditeur constate, en vertu de l'article IV.70 §3 du code de droit économique, que les conditions\nd'application de la procédure simplifiée sont remplies et que la concentration notifiée ne soulève pas\nd'opposition.\n10. Conformément à l'article IV.70 §4 du code de droit économique, la présente lettre doit être\nconsidérée comme une décision d’admissibilité du Collège de la concurrence au sens de l’article IV.66,\n§2, 1° CDE.\n\nL'Auditeur,\n\nBert Stulens\n\n1 Conseil de la concurrence - règles spécifiques d’une notification simplifiée de concentrations, approuvé par l’assemblée générale du Conseil\nde la concurrence du 8 juin 2007, M.B. 04/07/2007, p. 36893.\n\n2 Approuvées par le Comité de direction de l’Autorité belge de la concurrence le 8 janvier 2020.\n",
+ "gold_spans": [
+  {
+   "start": 268,
+   "end": 284,
+   "type": "CASE_REF",
+   "text": "CONC-CCS-26/0017"
+  },
+  {
+   "start": 294,
+   "end": 298,
+   "type": "ORG",
+   "text": "RMGA"
+  },
+  {
+   "start": 308,
+   "end": 319,
+   "type": "ORG",
+   "text": "Pierre-Joël"
+  },
+  {
+   "start": 321,
+   "end": 347,
+   "type": "ORG",
+   "text": "Alliance Automotive Groupe"
+  },
+  {
+   "start": 349,
+   "end": 352,
+   "type": "ORG",
+   "text": "AAG"
+  },
+  {
+   "start": 389,
+   "end": 408,
+   "type": "CASE_REF",
+   "text": "ABC-2026-CCS-24-AUD"
+  },
+  {
+   "start": 658,
+   "end": 665,
+   "type": "ORG",
+   "text": "RMGA SA"
+  },
+  {
+   "start": 680,
+   "end": 684,
+   "type": "ORG",
+   "text": "RMGA"
+  },
+  {
+   "start": 702,
+   "end": 724,
+   "type": "ORG",
+   "text": "O.P.I.M Automotive SRL"
+  },
+  {
+   "start": 739,
+   "end": 758,
+   "type": "ORG",
+   "text": "O.P.I.M. Automotive"
+  },
+  {
+   "start": 865,
+   "end": 891,
+   "type": "ORG",
+   "text": "Alliance Automotive Groupe"
+  },
+  {
+   "start": 1384,
+   "end": 1388,
+   "type": "ORG",
+   "text": "RMGA"
+  },
+  {
+   "start": 1444,
+   "end": 1490,
+   "type": "LOC",
+   "text": "Chaussée de Bruxelles, 26, 1472 Vieux-\nGenappe"
+  },
+  {
+   "start": 1586,
+   "end": 1598,
+   "type": "IBAN",
+   "text": "0878.302.831"
+  },
+  {
+   "start": 1600,
+   "end": 1604,
+   "type": "ORG",
+   "text": "RMGA"
+  },
+  {
+   "start": 1655,
+   "end": 1659,
+   "type": "ORG",
+   "text": "RMGA"
+  },
+  {
+   "start": 1671,
+   "end": 1675,
+   "type": "ORG",
+   "text": "RMGA"
+  },
+  {
+   "start": 1857,
+   "end": 1861,
+   "type": "ORG",
+   "text": "RMGA"
+  },
+  {
+   "start": 2016,
+   "end": 2035,
+   "type": "ORG",
+   "text": "O.P.I.M. AUTOMOTIVE"
+  },
+  {
+   "start": 2108,
+   "end": 2144,
+   "type": "LOC",
+   "text": "Chaussée de Louvain, 475, 1300 Waver"
+  },
+  {
+   "start": 2192,
+   "end": 2204,
+   "type": "IBAN",
+   "text": "0841.338.012"
+  },
+  {
+   "start": 2206,
+   "end": 2225,
+   "type": "ORG",
+   "text": "O.P.I.M. AUTOMOTIVE"
+  },
+  {
+   "start": 2276,
+   "end": 2287,
+   "type": "ORG",
+   "text": "Pierre-Joël"
+  },
+  {
+   "start": 2299,
+   "end": 2311,
+   "type": "ORG",
+   "text": "Pierre-\nJoël"
+  },
+  {
+   "start": 2517,
+   "end": 2543,
+   "type": "ORG",
+   "text": "Alliance Automotive Groupe"
+  },
+  {
+   "start": 2579,
+   "end": 2594,
+   "type": "ORG",
+   "text": "RICCO ARLON SRL"
+  },
+  {
+   "start": 2598,
+   "end": 2612,
+   "type": "ORG",
+   "text": "SB FINANCE\nLUX"
+  },
+  {
+   "start": 2644,
+   "end": 2656,
+   "type": "ORG",
+   "text": "SB-LEASE LUX"
+  },
+  {
+   "start": 2658,
+   "end": 2676,
+   "type": "ORG",
+   "text": "RICCO LIBRAMONT SA"
+  },
+  {
+   "start": 2678,
+   "end": 2694,
+   "type": "ORG",
+   "text": "RICCO MARCHE SRL"
+  },
+  {
+   "start": 2698,
+   "end": 2707,
+   "type": "ORG",
+   "text": "RICCO\nSRL"
+  },
+  {
+   "start": 2735,
+   "end": 2761,
+   "type": "ORG",
+   "text": "Alliance Automotive Groupe"
+  },
+  {
+   "start": 3772,
+   "end": 3784,
+   "type": "PERSON",
+   "text": "Bert Stulens"
+  }
+ ],
+ "public_spans": [
+  {
+   "start": 0,
+   "end": 11,
+   "type": "PUBLIC",
+   "text": "City Atrium"
+  },
+  {
+   "start": 12,
+   "end": 46,
+   "type": "PUBLIC",
+   "text": "Rue du Progrès 50 - 1210 Bruxelles"
+  },
+  {
+   "start": 49,
+   "end": 64,
+   "type": "PUBLIC",
+   "text": "+32 2 277 52 72"
+  },
+  {
+   "start": 65,
+   "end": 84,
+   "type": "PUBLIC",
+   "text": "Numéro d’entreprise"
+  },
+  {
+   "start": 87,
+   "end": 99,
+   "type": "PUBLIC",
+   "text": "0535.765.741"
+  },
+  {
+   "start": 100,
+   "end": 115,
+   "type": "PUBLIC",
+   "text": "info@bma-abc.be"
+  },
+  {
+   "start": 116,
+   "end": 141,
+   "type": "PUBLIC",
+   "text": "http://www.concurrence.be"
+  },
+  {
+   "start": 143,
+   "end": 159,
+   "type": "PUBLIC",
+   "text": "VERSION PUBLIQUE"
+  },
+  {
+   "start": 161,
+   "end": 193,
+   "type": "PUBLIC",
+   "text": "AUTORITÉ BELGE DE LA CONCURRENCE"
+  },
+  {
+   "start": 195,
+   "end": 204,
+   "type": "PUBLIC",
+   "text": "Auditorat"
+  },
+  {
+   "start": 206,
+   "end": 230,
+   "type": "PUBLIC",
+   "text": "Code de droit économique"
+  },
+  {
+   "start": 232,
+   "end": 240,
+   "type": "PUBLIC",
+   "text": "Livre IV"
+  },
+  {
+   "start": 242,
+   "end": 258,
+   "type": "PUBLIC",
+   "text": "article IV.70 §3"
+  },
+  {
+   "start": 354,
+   "end": 374,
+   "type": "PUBLIC",
+   "text": "Procédure simplifiée"
+  },
+  {
+   "start": 377,
+   "end": 388,
+   "type": "PUBLIC",
+   "text": "Décision n°"
+  },
+  {
+   "start": 412,
+   "end": 426,
+   "type": "PUBLIC",
+   "text": "9 juillet 2026"
+  },
+  {
+   "start": 434,
+   "end": 446,
+   "type": "PUBLIC",
+   "text": "29 juin 2026"
+  },
+  {
+   "start": 450,
+   "end": 466,
+   "type": "PUBLIC",
+   "text": "Auditeur général"
+  },
+  {
+   "start": 472,
+   "end": 504,
+   "type": "PUBLIC",
+   "text": "Autorité belge de la Concurrence"
+  },
+  {
+   "start": 543,
+   "end": 562,
+   "type": "PUBLIC",
+   "text": "article IV.10, §1er"
+  },
+  {
+   "start": 566,
+   "end": 590,
+   "type": "PUBLIC",
+   "text": "Code de droit économique"
+  },
+  {
+   "start": 603,
+   "end": 606,
+   "type": "PUBLIC",
+   "text": "CDE"
+  },
+  {
+   "start": 814,
+   "end": 850,
+   "type": "PUBLIC",
+   "text": "entreprise\ncommune de plein exercice"
+  },
+  {
+   "start": 914,
+   "end": 950,
+   "type": "PUBLIC",
+   "text": "entreprise\ncommune de plein exercice"
+  },
+  {
+   "start": 992,
+   "end": 1008,
+   "type": "PUBLIC",
+   "text": "article IV.6, §2"
+  },
+  {
+   "start": 1012,
+   "end": 1015,
+   "type": "PUBLIC",
+   "text": "CDE"
+  },
+  {
+   "start": 1020,
+   "end": 1043,
+   "type": "PUBLIC",
+   "text": "Les parties notifiantes"
+  },
+  {
+   "start": 1076,
+   "end": 1096,
+   "type": "PUBLIC",
+   "text": "procédure simplifiée"
+  },
+  {
+   "start": 1107,
+   "end": 1126,
+   "type": "PUBLIC",
+   "text": "article IV.70,§\n1er"
+  },
+  {
+   "start": 1127,
+   "end": 1130,
+   "type": "PUBLIC",
+   "text": "CDE"
+  },
+  {
+   "start": 1397,
+   "end": 1412,
+   "type": "PUBLIC",
+   "text": "société anonyme"
+  },
+  {
+   "start": 1519,
+   "end": 1551,
+   "type": "PUBLIC",
+   "text": "Banque Carrefour des Entreprises"
+  },
+  {
+   "start": 1564,
+   "end": 1567,
+   "type": "PUBLIC",
+   "text": "BCE"
+  },
+  {
+   "start": 1613,
+   "end": 1628,
+   "type": "PUBLIC",
+   "text": "société holding"
+  },
+  {
+   "start": 1727,
+   "end": 1745,
+   "type": "PUBLIC",
+   "text": "sud de la Belgique"
+  },
+  {
+   "start": 1779,
+   "end": 1793,
+   "type": "PUBLIC",
+   "text": "Brabant wallon"
+  },
+  {
+   "start": 1798,
+   "end": 1803,
+   "type": "PUBLIC",
+   "text": "Namur"
+  },
+  {
+   "start": 1808,
+   "end": 1815,
+   "type": "PUBLIC",
+   "text": "Hainaut"
+  },
+  {
+   "start": 1820,
+   "end": 1825,
+   "type": "PUBLIC",
+   "text": "Liège"
+  },
+  {
+   "start": 1832,
+   "end": 1842,
+   "type": "PUBLIC",
+   "text": "Luxembourg"
+  },
+  {
+   "start": 1898,
+   "end": 1911,
+   "type": "PUBLIC",
+   "text": "Renault/Dacia"
+  },
+  {
+   "start": 1913,
+   "end": 1919,
+   "type": "PUBLIC",
+   "text": "Alpine"
+  },
+  {
+   "start": 1921,
+   "end": 1928,
+   "type": "PUBLIC",
+   "text": "Hyundai"
+  },
+  {
+   "start": 1930,
+   "end": 1936,
+   "type": "PUBLIC",
+   "text": "Suzuki"
+  },
+  {
+   "start": 1938,
+   "end": 1940,
+   "type": "PUBLIC",
+   "text": "MG"
+  },
+  {
+   "start": 1942,
+   "end": 1946,
+   "type": "PUBLIC",
+   "text": "Fiat"
+  },
+  {
+   "start": 1948,
+   "end": 1956,
+   "type": "PUBLIC",
+   "text": "Fiat Pro"
+  },
+  {
+   "start": 1958,
+   "end": 1962,
+   "type": "PUBLIC",
+   "text": "Alfa"
+  },
+  {
+   "start": 1964,
+   "end": 1970,
+   "type": "PUBLIC",
+   "text": "Abarth"
+  },
+  {
+   "start": 1972,
+   "end": 1976,
+   "type": "PUBLIC",
+   "text": "Jeep"
+  },
+  {
+   "start": 1978,
+   "end": 1984,
+   "type": "PUBLIC",
+   "text": "Nissan"
+  },
+  {
+   "start": 1986,
+   "end": 1991,
+   "type": "PUBLIC",
+   "text": "Isuzu"
+  },
+  {
+   "start": 1993,
+   "end": 1997,
+   "type": "PUBLIC",
+   "text": "Opel"
+  },
+  {
+   "start": 1999,
+   "end": 2011,
+   "type": "PUBLIC",
+   "text": "Omoda/Jaecoo"
+  },
+  {
+   "start": 2044,
+   "end": 2076,
+   "type": "PUBLIC",
+   "text": "société à responsabilité limitée"
+  },
+  {
+   "start": 2173,
+   "end": 2176,
+   "type": "PUBLIC",
+   "text": "BCE"
+  },
+  {
+   "start": 2234,
+   "end": 2249,
+   "type": "PUBLIC",
+   "text": "société holding"
+  },
+  {
+   "start": 2385,
+   "end": 2399,
+   "type": "PUBLIC",
+   "text": "Brabant wallon"
+  },
+  {
+   "start": 2445,
+   "end": 2452,
+   "type": "PUBLIC",
+   "text": "Peugeot"
+  },
+  {
+   "start": 2456,
+   "end": 2463,
+   "type": "PUBLIC",
+   "text": "Citroën"
+  },
+  {
+   "start": 2465,
+   "end": 2475,
+   "type": "PUBLIC",
+   "text": "Stellantis"
+  },
+  {
+   "start": 2806,
+   "end": 2813,
+   "type": "PUBLIC",
+   "text": "Peugeot"
+  },
+  {
+   "start": 2815,
+   "end": 2822,
+   "type": "PUBLIC",
+   "text": "Citroën"
+  },
+  {
+   "start": 2824,
+   "end": 2838,
+   "type": "PUBLIC",
+   "text": "DS Automobiles"
+  },
+  {
+   "start": 2840,
+   "end": 2845,
+   "type": "PUBLIC",
+   "text": "Iveco"
+  },
+  {
+   "start": 2847,
+   "end": 2852,
+   "type": "PUBLIC",
+   "text": "Omoda"
+  },
+  {
+   "start": 2856,
+   "end": 2862,
+   "type": "PUBLIC",
+   "text": "Jaecoo"
+  },
+  {
+   "start": 2885,
+   "end": 2895,
+   "type": "PUBLIC",
+   "text": "Luxembourg"
+  },
+  {
+   "start": 2902,
+   "end": 2907,
+   "type": "PUBLIC",
+   "text": "Namur"
+  },
+  {
+   "start": 3044,
+   "end": 3047,
+   "type": "PUBLIC",
+   "text": "CDE"
+  },
+  {
+   "start": 3064,
+   "end": 3086,
+   "type": "PUBLIC",
+   "text": "catégorie II. 1. c) i)"
+  },
+  {
+   "start": 3093,
+   "end": 3135,
+   "type": "PUBLIC",
+   "text": "Communication du Conseil\nde la concurrence"
+  },
+  {
+   "start": 3223,
+   "end": 3233,
+   "type": "PUBLIC",
+   "text": "point 3.a."
+  },
+  {
+   "start": 3238,
+   "end": 3295,
+   "type": "PUBLIC",
+   "text": "règles complémentaires concernant la procédure simplifiée"
+  },
+  {
+   "start": 3332,
+   "end": 3340,
+   "type": "PUBLIC",
+   "text": "auditeur"
+  },
+  {
+   "start": 3365,
+   "end": 3381,
+   "type": "PUBLIC",
+   "text": "article IV.70 §3"
+  },
+  {
+   "start": 3385,
+   "end": 3409,
+   "type": "PUBLIC",
+   "text": "code de droit économique"
+  },
+  {
+   "start": 3450,
+   "end": 3470,
+   "type": "PUBLIC",
+   "text": "procédure simplifiée"
+  },
+  {
+   "start": 3568,
+   "end": 3584,
+   "type": "PUBLIC",
+   "text": "article IV.70 §4"
+  },
+  {
+   "start": 3588,
+   "end": 3612,
+   "type": "PUBLIC",
+   "text": "code de droit économique"
+  },
+  {
+   "start": 3614,
+   "end": 3632,
+   "type": "PUBLIC",
+   "text": "la présente lettre"
+  },
+  {
+   "start": 3664,
+   "end": 3688,
+   "type": "PUBLIC",
+   "text": "décision d’admissibilité"
+  },
+  {
+   "start": 3692,
+   "end": 3717,
+   "type": "PUBLIC",
+   "text": "Collège de la concurrence"
+  },
+  {
+   "start": 3731,
+   "end": 3752,
+   "type": "PUBLIC",
+   "text": "article IV.66,\n§2, 1°"
+  },
+  {
+   "start": 3753,
+   "end": 3756,
+   "type": "PUBLIC",
+   "text": "CDE"
+  },
+  {
+   "start": 3761,
+   "end": 3769,
+   "type": "PUBLIC",
+   "text": "Auditeur"
+  },
+  {
+   "start": 3788,
+   "end": 3813,
+   "type": "PUBLIC",
+   "text": "Conseil de la concurrence"
+  },
+  {
+   "start": 3899,
+   "end": 3917,
+   "type": "PUBLIC",
+   "text": "assemblée générale"
+  },
+  {
+   "start": 3921,
+   "end": 3946,
+   "type": "PUBLIC",
+   "text": "Conseil\nde la concurrence"
+  },
+  {
+   "start": 3950,
+   "end": 3961,
+   "type": "PUBLIC",
+   "text": "8 juin 2007"
+  },
+  {
+   "start": 3963,
+   "end": 3988,
+   "type": "PUBLIC",
+   "text": "M.B. 04/07/2007, p. 36893"
+  },
+  {
+   "start": 4011,
+   "end": 4068,
+   "type": "PUBLIC",
+   "text": "Comité de direction de l’Autorité belge de la concurrence"
+  },
+  {
+   "start": 4072,
+   "end": 4086,
+   "type": "PUBLIC",
+   "text": "8 janvier 2020"
+  }
+ ],
+ "notes": "Whole two-page simplified-procedure clearance letter of the Auditorat of the Belgian Competition Authority (article IV.70 §3 CDE): two dealer groups create a full-function joint venture holding six existing car-dealership companies. Annotated as if it were the parties' confidential file. SHOULD redact: the notifying parties under every surface — 'RMGA SA' with its legal form once, the defined short form 'RMGA' eight times (incl. inside 'Groupe RMGA' / 'groupe RMGA', where the generic word 'groupe' is left outside the span); 'O.P.I.M Automotive SRL' (sic, no dot after the M in the source), the defined short form 'O.P.I.M. Automotive' and its all-caps variant 'O.P.I.M. AUTOMOTIVE' (twice, opening paragraph 6); the second group's trade name 'Pierre-Joël' (typed ORG — it is a dealer group, not a natural person, although it reads like a French given name), twice intact and once broken across a PDF line break ('Pierre-\\nJoël'); the joint venture 'Alliance Automotive Groupe' (four times) and its acronym 'AAG' defined in the case title; the six target companies held by the joint venture, all-caps with legal-form suffix — 'RICCO ARLON SRL', 'SB FINANCE LUX' (broken across a line), 'SB-LEASE LUX', 'RICCO LIBRAMONT SA', 'RICCO MARCHE SRL', 'RICCO SRL' (broken across a line); the Auditeur who signs, 'Bert Stulens' (official acting in a public capacity, ruling 4; the role words 'L'Auditeur' / 'l'Auditeur général' stay public); the document's own case number 'CONC-CCS-26/0017' and decision number 'ABC-2026-CCS-24-AUD' as if live (CASE_REF); the two parties' BCE enterprise numbers '0878.302.831' and '0841.338.012' (IBAN bucket, ruling 3); the two parties' seat address lines as whole lines incl. postcode and city (ruling 6): 'Chaussée de Bruxelles, 26, 1472 Vieux-Genappe' (city broken across a line) and 'Chaussée de Louvain, 475, 1300 Waver' (Dutch spelling of Wavre, as in the source). SHOULD NOT redact: the authority itself in its three casings ('AUTORITÉ BELGE DE LA CONCURRENCE', 'Autorité belge de la Concurrence', 'Autorité belge de la concurrence'), its organs ('Auditorat', 'Auditeur général', 'L'Auditeur', 'Collège de la concurrence', 'Comité de direction', the former 'Conseil de la concurrence' and its 'assemblée générale') and its whole letterhead — 'City Atrium', 'Rue du Progrès 50 - 1210 Bruxelles', the switchboard '+32 2 277 52 72', the authority's own enterprise number '0535.765.741', 'info@bma-abc.be' and 'http://www.concurrence.be' — which identify the public body, not the parties (same treatment as the authority's address in doc_026); the public registry 'Banque Carrefour des Entreprises' / 'BCE' directly before the gold numbers; the statute 'Code de droit économique' / 'CDE' / 'Livre IV' and its articles (IV.70 §3, IV.10 §1er, IV.6 §2, IV.70 §4, IV.66), the Moniteur belge citation 'M.B. 04/07/2007, p. 36893' and the published soft-law instruments (the 2007 Communication and the 2020 complementary rules); the country 'Belgique', the regions and provinces ('Brabant wallon', 'Namur', 'Hainaut', 'Liège', 'Luxembourg') and the bare city 'Bruxelles' in the letterhead (gold only inside the party's address line 'Chaussée de Bruxelles, 26, …'); the third-party manufacturers' brands the dealers carry — Renault, Dacia, Alpine, Hyundai, Suzuki, MG, Fiat, Fiat Pro, Alfa, Abarth, Jeep, Nissan, Isuzu, Opel, Omoda, Jaecoo, Peugeot, Citroën, Stellantis, DS Automobiles, Iveco — which are not parties; the roles and defined terms ('parties notifiantes', 'entreprise commune de plein exercice', 'société anonyme', 'société à responsabilité limitée', 'société holding', 'Procédure simplifiée', 'décision d'admissibilité', 'la présente lettre', 'VERSION PUBLIQUE', 'catégorie II. 1. c) i)', 'point 3.a.'); the dates (29 juin 2026, 9 juillet 2026, 8 juin 2007, 8 janvier 2020), the counts (23 concessions, 4 concessions) and the footnote markers. Traps genuinely present: acronym-defined — 'Alliance Automotive Groupe (AAG)' in the case title, 'RMGA SA (ci-après : « RMGA »)' and 'O.P.I.M Automotive SRL (ci-après : « O.P.I.M. Automotive »)', with the public counterparts 'Banque Carrefour des Entreprises (ci-après « BCE »)' and 'Code de droit économique (ci-après « CDE »)' that must NOT be redacted; internal-docket — the authority's case number 'CONC-CCS-26/0017' and decision number 'ABC-2026-CCS-24-AUD' as the document's own live references; address — two party seat lines with number, postcode and city (one split by a line break), beside the authority's own address line that stays public; adjacent-public — each gold BCE number right after the public registry name, the parties named right next to 'Autorité belge de la Concurrence', the gold target companies in the same sentence as the public brands 'Peugeot, Citroën, DS Automobiles, Iveco', 'Bruxelles' both inside a gold address and as the public seat of the authority; role-noise — 'Les parties notifiantes', 'L'Auditeur', 'l'Auditeur général', 'entreprise commune de plein exercice', 'société holding', 'la présente lettre'; all-caps-header — the all-caps variant 'O.P.I.M. AUTOMOTIVE' opening paragraph 6 and the all-caps target companies ('RICCO ARLON SRL', 'SB FINANCE LUX', …) in the body, next to the all-caps public header lines 'AUTORITÉ BELGE DE LA CONCURRENCE' and 'VERSION PUBLIQUE'. Not present: honorific-only and surname-only forms (the only natural person, Bert Stulens, is named once in full, without honorific), bare domains, bank acronyms, codenames, vessels; no IBAN proper, no party e-mail or phone (the only e-mail, phone and URL in the text are the authority's). PDF line breaks are kept exactly as extracted; four gold surfaces therefore contain a line break. ADJUDICATION (two blind annotators compared, case-insensitive): 21 distinct gold surfaces agreed with identical types, including 'Pierre-Joël' typed ORG by both. Two disagreements, both resolved for the first annotator: the second listed the compound surfaces 'Groupe RMGA' / 'groupe RMGA' and 'Groupe Pierre-Joël' / 'groupe Pierre-Joël' as ORG while conceding that the redactable core is the proper name; the corpus convention (doc_112: 'groupe Rossel', 'groupe IPM' → gold 'Rossel', 'IPM' only; no spec carries a 'Groupe X' span) leaves the generic word 'groupe' outside the span, so the compounds are not added and 'groupe' is listed neither as gold nor as public. Both annotators kept the authority's whole letterhead public (building, address, switchboard '+32 2 277 52 72', enterprise number '0535.765.741', 'info@bma-abc.be', 'http://www.concurrence.be'), as doc_026 does for 'Rue du Progrès 50' / '1210 Bruxelles'; the second flagged that a literal reading of the unconditional PHONE / EMAIL / URL / IBAN buckets would make the four structured items gold — kept public here, referred to the lawyer. The second annotator's public mentions that occur in the text were merged into 'public' (incl. the line-broken 'article IV.70,§\\n1er', 'article IV.66,\\n§2, 1°' and 'entreprise\\ncommune de plein exercice'); its two long soft-law titles were shortened because the source glues the footnote markers '1' and '2' to their last word, which the word-bounded matcher rejects.",
+ "source": "public-Autorité belge de la concurrence (ABC/BMA), https://www.abc-bma.be/fr/decisions — French-language decisions (ABC- prefixed PDFs), public versions. Fetched with curl -A \"JudeBenchmark/0.8\", one second between requests, 5 requests in total (1 list page + 4 PDFs). Text layer extracted with PyMuPDF from the project venv (/Users/etienne/project/ano/.venv).",
+ "split": "public",
+ "genre": "merger control — simplified procedure, Auditorat decision (article IV.70 §3 CDE); the whole two-page decision is kept",
+ "traps": [
+  "acronym-defined",
+  "internal-docket",
+  "address",
+  "adjacent-public",
+  "role-noise",
+  "all-caps-header"
+ ],
+ "provenance": {
+  "source": "Autorité belge de la concurrence, https://www.abc-bma.be/fr/decisions",
+  "url": "https://www.abc-bma.be/sites/default/files/content/download/files/ABC-2026-CCS-24-AUD_pub.pdf",
+  "court": "Autorité belge de la concurrence — Auditorat",
+  "date": "2026-07-09",
+  "licence": "Official publication of the Autorité belge de la concurrence (public version); reproduction with attribution",
+  "attribution": "Source: Autorité belge de la concurrence, décision n° ABC-2026-CCS-24-AUD du 9 juillet 2026 (version publique)"
+ }
+}

@@ -1,0 +1,241 @@
+{
+  "id": "doc_108_cafc_2026_alexsam_v_simon_property_group_en",
+  "title": "AlexSam, Inc. v. Simon Property Group, L.P.; Blackhawk Network, Inc.; US Bank NA, No. 2025-1138 (Fed. Cir. Oct. 5, 2026)",
+  "language": "en",
+  "genre": "appellate opinion (nonprecedential) — third-party contractual indemnification claim between companies, Rule 60(b) post-judgment motion",
+  "split": "public",
+  "source": "public-govinfo (U.S. Government Publishing Office) — USCOURTS collection discovered via api.govinfo.gov with DEMO_KEY (6 API calls: 2 collection listings, 4 granule listings; 2 s apart, no rate-limiting hit), PDFs fetched from www.govinfo.gov (4 requests, 1 s apart, declared user agent), text extracted with PyMuPDF from the project .venv.",
+  "provenance": {
+    "source": "govinfo (U.S. Government Publishing Office), USCOURTS collection — package USCOURTS-ca13-25-01138, granule USCOURTS-ca13-25-01138-0",
+    "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca13-25-01138/pdf/USCOURTS-ca13-25-01138-0.pdf",
+    "court": "United States Court of Appeals for the Federal Circuit",
+    "date": "2026-10-05",
+    "licence": "US Government work, public domain (17 U.S.C. § 105)",
+    "attribution": "Opinion of the United States Court of Appeals for the Federal Circuit, published by the U.S. Government Publishing Office on govinfo.gov (package USCOURTS-ca13-25-01138, granule USCOURTS-ca13-25-01138-0)"
+  },
+  "text": "NOTE: This disposition is nonprecedential.\nUnited States Court of Appeals\nfor the Federal Circuit\n______________________\nALEXSAM, INC.,\nPlaintiff-Appellee\nv.\nSIMON PROPERTY GROUP, L.P.,\nDefendant-Appellant\nBLACKHAWK NETWORK, INC.,\nDefendant-Appellee\nUS BANK NA,\nDefendant\n______________________\n2025-1138\n______________________\nAppeal from the United States District Court for the\nEastern District of Texas in No. 2:19-cv-00331-RWS-RSP,\nJudge Robert Schroeder, III.\n______________________\nDecided: October 5, 2026\n______________________\nCHRIS HOOD, Heninger Garrison Davis, LLC, Birming-\nham, AL, argued for plaintiff-appellee. Also represented\nby TIMOTHY C. DAVIS, W. LEE GRESHAM, III; JACQUELINE\nKNAPP BURT, Atlanta, GA; STEVEN RITCHESON, Insight,\nCase: 25-1138 Document: 80 Page: 1 Filed: 10/05/2026\n2 ALEXSAM, INC. v. SIMON PROPERTY GROUP, L.P.\nPLC, Marina del Rey, CA.\nTODD E. LUNDELL, Sheppard Mullin Richter & Hamp-\nton LLP, Costa Mesa, CA, argued for third-party defend-\nant-appellee. Also represented by MARTIN BADER, San\nDiego, CA; ROBERT E. HOUGH, II, Dallas, TX.\nMATTHEW ERIC FISCHER, Potter Anderson & Corroon,\nLLP, Wilmington, DE, argued for defendant-appellant.\nAlso represented by JAMES MATTHEW BELGER, TYLER E.\nCRAGG; TIMOTHY J. CARROLL, Orrick, Herrington & Sut-\ncliffe LLP, Chicago, IL; LAURA A. WYTSMA, Los Angeles,\nCA.\n______________________\nBefore DYK, PROST, and CUNNINGHAM, Circuit Judges.\nDYK, Circuit Judge.\nAlexSam, Inc. (“AlexSam”) owns U.S. Patent\nNo. 6,000,608 (“’608 patent”) covering systems facilitating\nuse of multifunction cards, including prepaid gift cards.\nAlexSam sued Simon Property Group, L.P. (“Simon”) for\ninfringement in the Eastern District of Texas. Simon filed\na third-party indemnification complaint including a claim\nfor attorneys’ fees against Blackhawk Network, Inc.\n(“Blackhawk”), which Simon alleged had supplied it with\nthe allegedly infringing gift cards. The district court en-\ntered summary judgment of noninfringement, and the\ncourt later amended the judgment to dismiss all “counter-\nclaims or other claims” as moot. Simon filed a motion\nstyled in part as one under Rule 60(a) urging that its third-\nparty claim was not moot. The district court denied the\nmotion, and Simon appealed.\nWe conclude that Simon’s motion should be construed\nas a Rule 60(b) motion; that relief was available to Simon\nunder Rule 60(b)(1); and that the district court erred in dis-\nCase: 25-1138 Document: 80 Page: 2 Filed: 10/05/2026\nALEXSAM, INC. v. SIMON PROPERTY GROUP, L.P. 3\nmissing the third-party claim as moot. We vacate the dis-\ntrict court’s order and remand with instructions that the\ndistrict court enter a new order dismissing Simon’s indem-\nnification claim without prejudice pursuant to 28 U.S.C.\n§ 1367(c).\nBACKGROUND\nThe ’608 patent owned by AlexSam covers systems fa-\ncilitating the use of multifunction cards, including prepaid\ngift cards. See AlexSam, Inc. v. Simon Prop. Grp., L.P.\n(AlexSam I), 2024 WL 1364345, at *1 (Fed. Cir. Apr. 1,\n2024). AlexSam brought suit against Simon, a seller of gift\ncards, for infringement of the ’608 patent in 2019.\nSimon then filed a third-party contractual complaint\narising under state law against Blackhawk in June of 2020\nbased on a 2014 agreement under which Blackhawk would\nprovide the allegedly infringing gift cards to Simon. That\nagreement allegedly contained an indemnification provi-\nsion “which obligated Blackhawk to indemnify and defend\nSimon for alleged infringement,” including attorneys’ fees.\nAppellant’s Br. 8.\nIn May 2021, AlexSam amended its complaint to assert\ninfringement against Blackhawk, and Simon filed a coun-\nterclaim seeking a declaration that AlexSam’s ’608 patent\nwas invalid. In September 2021, Simon and Blackhawk\neach filed motions for summary judgment of invalidity and\nnoninfringement.\nOn March 16, 2022, the district court granted sum-\nmary judgment of noninfringement and two days later en-\ntered a final judgment dismissing the “cause” with\nprejudice and stating that “[a]ll motions by either party not\nCase: 25-1138 Document: 80 Page: 3 Filed: 10/05/2026\n4 ALEXSAM, INC. v. SIMON PROPERTY GROUP, L.P.\npreviously ruled on are hereby DENIED-AS-MOOT.”\nJ.A. 1514.1 AlexSam appealed on March 31, 2022.\nOn April 4, 2022, Simon and Blackhawk moved for ex-\npenses and attorneys’ fees under 35 U.S.C. § 285 and\n28 U.S.C. § 1927 as well as sanctions under Rule 11 and\nthe court’s inherent powers (collectively, “fees motions”).\nOn April 15, 2022, Simon and Blackhawk filed a joint mo-\ntion with the district court, styled as one under Rule 59(e)\nof the Federal Rules of Civil Procedure. In that motion,\nSimon and Blackhawk asserted that AlexSam’s appeal was\npremature because Simon’s invalidity counterclaim had\nnot yet been adjudicated; in a footnote, the motion added\nthat the “appeal [wa]s also premature because Simon[’s]\nthird-party claim[] against . . . Blackhawk . . . ha[d] not\nbeen adjudicated.” J.A. 1952. We deactivated the appeal\nto allow the district court to resolve the April 15 motion.\nThe magistrate judge held a hearing and issued a report\nand recommendation in July 2022 which discussed only the\ninvalidity counterclaim. The magistrate judge recom-\nmended that the judgment be amended to state that “[a]ll\ncounterclaims or other claims and motions by any party not\npreviously ruled on are hereby DENIED AS MOOT.”\nJ.A. 1969. The district court adopted the magistrate’s re-\nport on August 22, 2022; the court issued its amended final\njudgment the same day, which said that “[a]ll counter-\nclaims or other claims and motions by any party not previ-\nously ruled on are hereby DENIED-AS-MOOT.” J.A. 2.\n",
+  "entities": [
+    {
+      "surface": "ALEXSAM, INC.",
+      "type": "ORG"
+    },
+    {
+      "surface": "AlexSam, Inc.",
+      "type": "ORG"
+    },
+    {
+      "surface": "AlexSam",
+      "type": "ORG"
+    },
+    {
+      "surface": "SIMON PROPERTY GROUP, L.P.",
+      "type": "ORG"
+    },
+    {
+      "surface": "Simon Property Group, L.P.",
+      "type": "ORG"
+    },
+    {
+      "surface": "Simon Prop. Grp., L.P.",
+      "type": "ORG"
+    },
+    {
+      "surface": "Simon",
+      "type": "ORG"
+    },
+    {
+      "surface": "BLACKHAWK NETWORK, INC.",
+      "type": "ORG"
+    },
+    {
+      "surface": "Blackhawk Network, Inc.",
+      "type": "ORG"
+    },
+    {
+      "surface": "Blackhawk",
+      "type": "ORG"
+    },
+    {
+      "surface": "US BANK NA",
+      "type": "ORG"
+    },
+    {
+      "surface": "Heninger Garrison Davis, LLC",
+      "type": "ORG"
+    },
+    {
+      "surface": "Insight",
+      "type": "ORG"
+    },
+    {
+      "surface": "Sheppard Mullin Richter & Hamp-\nton LLP",
+      "type": "ORG"
+    },
+    {
+      "surface": "Potter Anderson & Corroon,\nLLP",
+      "type": "ORG"
+    },
+    {
+      "surface": "Orrick, Herrington & Sut-\ncliffe LLP",
+      "type": "ORG"
+    },
+    {
+      "surface": "Robert Schroeder, III",
+      "type": "PERSON"
+    },
+    {
+      "surface": "CHRIS HOOD",
+      "type": "PERSON"
+    },
+    {
+      "surface": "TIMOTHY C. DAVIS",
+      "type": "PERSON"
+    },
+    {
+      "surface": "W. LEE GRESHAM, III",
+      "type": "PERSON"
+    },
+    {
+      "surface": "JACQUELINE\nKNAPP BURT",
+      "type": "PERSON"
+    },
+    {
+      "surface": "STEVEN RITCHESON",
+      "type": "PERSON"
+    },
+    {
+      "surface": "TODD E. LUNDELL",
+      "type": "PERSON"
+    },
+    {
+      "surface": "MARTIN BADER",
+      "type": "PERSON"
+    },
+    {
+      "surface": "ROBERT E. HOUGH, II",
+      "type": "PERSON"
+    },
+    {
+      "surface": "MATTHEW ERIC FISCHER",
+      "type": "PERSON"
+    },
+    {
+      "surface": "JAMES MATTHEW BELGER",
+      "type": "PERSON"
+    },
+    {
+      "surface": "TYLER E.\nCRAGG",
+      "type": "PERSON"
+    },
+    {
+      "surface": "TIMOTHY J. CARROLL",
+      "type": "PERSON"
+    },
+    {
+      "surface": "LAURA A. WYTSMA",
+      "type": "PERSON"
+    },
+    {
+      "surface": "DYK",
+      "type": "PERSON"
+    },
+    {
+      "surface": "PROST",
+      "type": "PERSON"
+    },
+    {
+      "surface": "CUNNINGHAM",
+      "type": "PERSON"
+    },
+    {
+      "surface": "2025-1138",
+      "type": "CASE_REF"
+    },
+    {
+      "surface": "25-1138",
+      "type": "CASE_REF"
+    },
+    {
+      "surface": "2:19-cv-00331-RWS-RSP",
+      "type": "CASE_REF"
+    },
+    {
+      "surface": "2024 WL 1364345",
+      "type": "CASE_REF"
+    },
+    {
+      "surface": "6,000,608",
+      "type": "IBAN"
+    },
+    {
+      "surface": "’608",
+      "type": "IBAN"
+    }
+  ],
+  "public": [
+    "United States Court of Appeals\nfor the Federal Circuit",
+    "United States District Court for the\nEastern District of Texas",
+    "Eastern District of Texas",
+    "Fed. Cir.",
+    "district court",
+    "magistrate judge",
+    "Circuit Judges",
+    "Circuit Judge",
+    "Plaintiff-Appellee",
+    "Defendant-Appellant",
+    "Defendant-Appellee",
+    "Rule 60(a)",
+    "Rule 60(b)",
+    "Rule 60(b)(1)",
+    "Rule 59(e)",
+    "Rule 11",
+    "Federal Rules of Civil Procedure",
+    "28 U.S.C.\n§ 1367(c)",
+    "35 U.S.C. § 285",
+    "28 U.S.C. § 1927",
+    "Birming-\nham, AL",
+    "Atlanta, GA",
+    "Marina del Rey, CA",
+    "Costa Mesa, CA",
+    "San\nDiego, CA",
+    "Dallas, TX",
+    "Wilmington, DE",
+    "Chicago, IL",
+    "Los Angeles,\nCA",
+    "Defendant",
+    "third-party defend-\nant-appellee",
+    "Appellant’s Br. 8",
+    "J.A. 1514",
+    "J.A. 1952",
+    "J.A. 1969",
+    "J.A. 2",
+    "Document: 80",
+    "October 5, 2026",
+    "10/05/2026",
+    "Apr. 1,\n2024",
+    "June of 2020",
+    "May 2021",
+    "September 2021",
+    "March 16, 2022",
+    "March 31, 2022",
+    "April 4, 2022",
+    "April 15, 2022",
+    "July 2022",
+    "August 22, 2022",
+    "NOTE: This disposition is nonprecedential.",
+    "BACKGROUND",
+    "fees motions",
+    "counterclaims or other claims",
+    "DENIED-AS-MOOT",
+    "DENIED AS MOOT"
+  ],
+  "traps": [
+    "all-caps-header",
+    "surname-only",
+    "acronym-defined",
+    "internal-docket",
+    "adjacent-public",
+    "role-noise"
+  ],
+  "notes": "Real nonprecedential opinion of the Federal Circuit (Rule 60(b) construction of a post-judgment motion; third-party contractual indemnification claim dismissed as moot), pages 1–4: caption, district judge, counsel block, panel, introduction and Background through the amended final judgment of August 2022, annotated as if it were a client's confidential file sent to an outside LLM. SHOULD redact: the four parties in every surface form — caption and running-header ALL CAPS (ALEXSAM, INC.; SIMON PROPERTY GROUP, L.P.; BLACKHAWK NETWORK, INC.; US BANK NA), the full names with legal-form suffix in the body (AlexSam, Inc.; Simon Property Group, L.P.; Blackhawk Network, Inc.), the abbreviated party name inside the citation of the earlier appeal (Simon Prop. Grp., L.P.) and the defined short forms used bare throughout (AlexSam × 9 bare, incl. AlexSam’s and the short-form citation name ‘AlexSam I’; Simon × 19 bare, incl. Simon’s and Simon[’s]; Blackhawk × 10 bare); the real bank US BANK NA (a party, not on the whitelist); the district judge Robert Schroeder, III (honorific ‘Judge’ excluded before the full name; his and the magistrate's initials RWS-RSP are swallowed by the docket span); the panel DYK, PROST, CUNNINGHAM (ALL-CAPS surname-only, ruling 4) and the author line DYK; the fourteen counsel named in ALL CAPS in the counsel block (PERSON), two of them split across a line break (JACQUELINE / KNAPP BURT, TYLER E. / CRAGG) and two with generational suffixes inside the surface (W. LEE GRESHAM, III; ROBERT E. HOUGH, II); their five firms (ORG) — Heninger Garrison Davis, LLC; Insight (the ‘PLC’ of ‘Insight, PLC’ is orphaned on the next page by the ECF stamp and left in clear); Sheppard Mullin Richter & Hampton LLP, Orrick, Herrington & Sutcliffe LLP (both hyphen-split by the PDF line break, surface kept as extracted); Potter Anderson & Corroon, LLP; the matter's own references as if live (ruling 2 applied to the document's own numbers): the Federal Circuit docket 2025-1138, its short form 25-1138 in the three ‘Case: 25-1138 Document: 80’ ECF stamps, the district-court docket 2:19-cv-00331-RWS-RSP, and the Westlaw citation of the same matter's earlier appeal 2024 WL 1364345 (AlexSam I) — the judgment below / prior appeal is the same matter, not a cited precedent, and left in clear it re-identifies the parties in one lookup; the client's patent number 6,000,608 and its defined short form ’608 (× 4) typed IBAN as a public-register identifier (ruling 3 logic: the USPTO assignment record names AlexSam; the number is not needed for the Rule 60 analysis). SHOULD NOT redact: the court and the lower court (United States Court of Appeals for the Federal Circuit, United States District Court for the Eastern District of Texas, ‘Eastern District of Texas’, ‘Fed. Cir.’, ‘the district court’, ‘the magistrate judge’); the role words and defined terms (Plaintiff-Appellee, Defendant-Appellant, Defendant-Appellee, Defendant, third-party defendant-appellee, Circuit Judge(s), ‘fees motions’, ‘counterclaims or other claims’); the counsel's city/state lines (Birmingham, AL; Atlanta, GA; Marina del Rey, CA; Costa Mesa, CA; San Diego, CA; Dallas, TX; Wilmington, DE; Chicago, IL; Los Angeles, CA — ruling 6, bare cities, no street line); the rules and statutes (Rule 60(a), 60(b), 60(b)(1), 59(e), Rule 11, Federal Rules of Civil Procedure, 28 U.S.C. § 1367(c), 35 U.S.C. § 285, 28 U.S.C. § 1927); the Joint Appendix and brief cites (J.A. 1514, J.A. 1952, J.A. 1969, J.A. 2, Appellant’s Br. 8), the ECF document and page numbers (Document: 80, Page: 1–3), the running page numbers 2–4, footnote marker 1; the dates (October 5, 2026; 10/05/2026; Apr. 1, 2024; June of 2020; 2014; May 2021; September 2021; March 16, 2022; March 31, 2022; April 4 and 15, 2022; July 2022; August 22, 2022; 2019); ‘NOTE: This disposition is nonprecedential’ and the section heading BACKGROUND. Traps present: all-caps-header (party names in the caption and in the three running headers ‘ALEXSAM, INC. v. SIMON PROPERTY GROUP, L.P.’; every counsel name in capitals); surname-only (the panel DYK, PROST, CUNNINGHAM and the author line, never with a first name); acronym-defined in its short-form variant (X (“AlexSam”), X (“Simon”), X (“Blackhawk”), U.S. Patent No. 6,000,608 (“’608 patent”) then bare); internal-docket (2025-1138 / 25-1138 / 2:19-cv-00331-RWS-RSP); adjacent-public (the live docket and the judge's name sit inside the sentence naming the public district court; the gold party names sit inside the citation ‘AlexSam, Inc. v. Simon Prop. Grp., L.P. (AlexSam I), 2024 WL 1364345, at *1 (Fed. Cir. Apr. 1, 2024)’ whose court and date are public); role-noise (Plaintiff-Appellee, Defendant-Appellant, the district court, the magistrate judge, Circuit Judge, third-party defendant-appellee). Doubts for the reviewer: (i) the patent number and ’608 as gold IBAN — the policy has no ruling on IP registration numbers; without them the document has only three entity types, like doc_105 and doc_106, and fails the validator's ≥ 4-types gate; (ii) 2024 WL 1364345 as gold rather than public under ruling 2 — same reasoning as doc_105's first-instance citation; (iii) the orphaned ‘PLC’; (iv) whether the counsel's bare city/state lines should count as part of a firm's ‘address’ (kept public: no street, ruling 6). ADJUDICATION (2026-10-15, second annotator blind to this spec): 35 of the surfaces agree in identity and type — the 11 party forms, the district judge, the three panel judges, the 13 counsel, four of the five firms and the three live docket numbers (2025-1138, 25-1138, 2:19-cv-00331-RWS-RSP); the second annotator gave the line-broken names joined (Sheppard Mullin Richter & Hampton LLP, Orrick, Herrington & Sutcliffe LLP, Potter Anderson & Corroon, LLP, JACQUELINE KNAPP BURT, TYLER E. CRAGG) and itself listed the raw forms a strict matcher needs — the spec keeps the raw forms, which are the only ones that occur. Four disagreements, all settled for the first annotator: (1) 'Insight, PLC' (second) does not occur contiguously — the ECF stamp and running header fall between 'Insight,' and 'PLC' — so 'Insight' stays the surface and the orphaned 'PLC' is left in clear and unlisted (a bare legal-form suffix identifies nobody; listing it public would count a detector that joins across the stamp as over-redacting); (2) '2024 WL 1364345' kept gold CASE_REF, not public under ruling 2 — it is the Westlaw citation of the earlier appeal in this same matter (AlexSam I), not a cited precedent, and left in clear it re-identifies the parties in one lookup, the same choice as doc_105's judgment below; (3)-(4) '6,000,608' and '’608' kept gold IBAN (registry-number bucket) by analogy with ruling 3 — the USPTO record names AlexSam — and with the MERIDIAAN word mark (doc_031); note the first annotator's doubt (i) rested partly on the validator's ≥ 4-types gate, which does not apply to the public split, so the decision stands on the re-identification logic alone. 'Judge Robert Schroeder, III' with the honorific (second annotator's alternative) rejected under ruling 5: a full name follows. The public list was enriched with the second annotator's non-gold surfaces that occur verbatim and do not touch a gold span (role words, record cites J.A. and Appellant's Br., 'Document: 80', dates, headings, the quoted judgment wording); not added: 'Judge' (adjacent to the gold judge name — an overlapping lenient prediction would count as over-redaction), 'AlexSam I', 'U.S. Patent No. 6,000,608', ''608 patent' and 'Case: 25-1138' (contain gold), bare years, 'multifunction cards' / 'prepaid gift cards' (no detector would redact them). Two doubts remain for the lawyer: (i) '2024 WL 1364345' — a published citation of the same matter's earlier appeal, gold although ruling 2 as written makes published citations public (same question as doc_105's '[2025] EWHC 1569 (Ch)'); (ii) '6,000,608' / '’608' — a patent number: the policy has no ruling on IP registration numbers, and in a patent case the number may be needed for the legal analysis, unlike a company registration number."
+}

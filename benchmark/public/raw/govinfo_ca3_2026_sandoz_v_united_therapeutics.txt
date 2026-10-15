@@ -1,0 +1,118 @@
+UNITED STATES COURT OF APPEALS FOR THE
+THIRD CIRCUIT
+Nos. 24-3067, 24-3116, and 24-3146
+SANDOZ, INC.; RAREGEN, LLC, n/k/a Liquidia PAH, LLC
+v.
+UNITED THERAPEUTICS CORP.; SMITHS MEDICAL ASD, INC.
+UNITED THERAPEUTICS CORP.,
+Appellant in No. 24-3067
+SANDOZ, INC.,
+Appellant in No. 24-3116
+RAREGEN, LLC,
+Appellant in No. 24-3146
+_________________________________
+On Appeal from the U.S. District Court, D.N.J.
+Judge Brian R. Martinotti, No. 2:19-cv-10170
+Before: RESTREPO, MCKEE, AND AMBRO, Circuit Judges
+Argued: Nov. 12, 2025; Filed: Oct. 7, 2026
+_____________________________ _____________________________
+OPINION OF THE COURT
+RESTREPO, Circuit Judge. This case involves
+competitive conduct between two pharmaceutical companies
+that manufacture and sell the brand-name and generic versions
+of the drug treprostinil. In 2002, United Therapeutics
+Corporation (“UTC”) launched an injectable form of
+treprostinil under the brand name Remodulin to treat
+pulmonary arterial hypertension, a disease that causes high
+blood pressure in the arteries running from the heart to the
+lungs. In 2017, Sandoz, Inc. received approval to market
+generic injectable treprostinil. Sandoz and its marketing
+partner RareGen, LLC (together with Sandoz, “Plaintiffs”)
+contend that, in connection with Sandoz’s launch of generic
+Case: 24-3146 Document: 68 Page: 1 Date Filed: 10/07/2026
+2
+treprostinil, UTC violated federal antitrust and state tort laws
+and breached a patent settlement agreement with Sandoz.
+Because the settlement agreement does not
+unambiguously establish the interpretation that Sandoz
+advances, we will reverse the grant of summary judgment in
+favor of Sandoz as to liability on the breach-of-contract claim
+and remand with instructions that the issue of liability proceed
+to trial.1 We will also reverse the grant of summary judgment
+in favor of UTC on the tortious interference claim and remand
+for the District Court to analyze the tortious interference claim
+separately from the antitrust claims. As UTC demonstrated
+procompetitive justifications for its conduct, we will affirm the
+dismissal of the antitrust and state tort claims against UTC.
+Finally, we will affirm the denial of UTC’s motion to exclude
+Plaintiffs’ damages expert.
+I. FACTUAL AND PROCEDURAL BACKGROUND
+A. UTC and Smiths Cartridge Agreements
+UTC is a pharmaceutical drug company that designs
+and manufactures the brand-name drug Remodulin for patients
+with pulmonary arterial hypertension. Remodulin can be
+administered either intravenously or subcutaneously.
+Subcutaneous administration requires the use of a pump and
+disposable cartridges. Smiths Medical ASD, Inc. (“Smiths”)
+developed and manufactured the CADD-MS 3 pump and
+cartridges used to administer Remodulin subcutaneously.
+Smiths sold its pump and cartridges to two specialty pharmacy
+distributors, Accredo Health Group (“Accredo”) and CVS
+Specialty (“CVS” and with Accredo, the “Specialty
+Pharmacies”), which sold the medication to patients.
+[…]
+As the District Court did not abuse its discretion in
+denying UTC’s motion to exclude Jena’s testimony, we will
+affirm its ruling.
+* * * * *
+For the reasons discussed above, we will reverse the
+grant of summary judgment in favor of Sandoz on the breach-
+of-contract claim as to liability and the grant of summary
+judgment in favor of UTC on the tortious interference claim;
+affirm the dismissal of the Sherman Act claims and North
+5 Jena’s trial testimony corroborated his report and deposition
+testimony. He explained that the model was reliable because
+there were business incentives for the model to be accurate, it
+was prepared closest in time to the launch of treprostinil, its
+creators—former UTC executives employed by RareGen—
+had specialized knowledge, and its forecast was in the middle
+when compared to other forecasts he examined. Jena dismissed
+concerns that the model, which was created after this litigation
+commenced, was altered for litigation because there were
+earlier versions with the same or higher generic penetration
+rates.
+Case: 24-3146 Document: 68 Page: 19 Date Filed: 10/07/2026
+20
+Carolina unfair and deceptive trade practices claim; affirm the
+denial of the Daubert motion against Plaintiffs’ damages
+expert Dr. Anupam Jena; and dismiss the remaining
+evidentiary and damages challenges as moot. Because we will
+reverse the grant of Sandoz’s motion for partial summary
+judgment on Count VII, breach of contract, as to liability, we
+will vacate the November 1, 2024 judgment and damages
+award entered in favor of Sandoz and against UTC on Count
+VII, and remand for further proceedings consistent with this
+Opinion.
+Counsel for Appellant United Therapeutics Corp.
+Charles L. McCloud [Argued]
+Edward J. Bennett
+Jonathan B. Pitt
+Sean Douglass
+WILLIAMS & CONNOLLY LLP
+Stephen M. Orlofsky
+Michael R. Darbee
+BLANK ROME LLP
+Counsel for Appellant Sandoz, Inc.
+Matthew D. Kent [Argued]
+David A. Hatchett
+Karla M. Doe
+Jenny R. Kramer
+Jonathan D. Parente
+ALSTON & BIRD LLP
+Counsel for Appellant RareGen, LLC.
+Kathleen R. Hartnett [Argued]
+Patrick J. Hayden
+COOLEY LLP
+Kevin H. Marino
+MARINO TORTORELLA & BOYLE, P.C.
+Case: 24-3146 Document: 68 Page: 20 Date Filed: 10/07/2026

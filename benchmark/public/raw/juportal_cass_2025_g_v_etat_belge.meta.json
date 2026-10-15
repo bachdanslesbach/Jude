@@ -1,0 +1,23 @@
+{
+  "title": "C. G. c. État belge (ministre des Finances)",
+  "court": "Cour de cassation de Belgique, première chambre, section française (1F)",
+  "date": "2025-01-16",
+  "url": "https://juportal.be/content/ECLI:BE:CASS:2025:ARR.20250116.1F.1/FR",
+  "ecli": "ECLI:BE:CASS:2025:ARR.20250116.1F.1",
+  "role_number": "F.24.0020.F",
+  "chamber": "1F - première chambre",
+  "licence": "Public case-law database of the SPF Justice (JUPORTAL); reproduction with attribution",
+  "attribution": "Source: JUPORTAL, Cour de cassation de Belgique, ECLI:BE:CASS:2025:ARR.20250116.1F.1",
+  "language": "fr",
+  "genre": "judgment",
+  "source": "JUPORTAL (SPF Justice, Belgian federal judiciary)",
+  "jurisdiction": "Belgium",
+  "excerpt": {
+    "from_line": 1,
+    "to_line": 65,
+    "words": 541,
+    "note": "verbatim from the JUPORTAL detail page stripped to text (re + html.unescape); identification rows (ECLI, rôle, affaire, chambre, domaine) then the complete 'Texte de la décision' section. The Court's thesaurus summaries between the two blocks are omitted"
+  },
+  "fetched": "2026-10-15",
+  "user_agent": "Jude/0.4 (https://github.com/bachdanslesbach/Jude; legal-tech benchmark; contact: <user e-mail>)"
+}

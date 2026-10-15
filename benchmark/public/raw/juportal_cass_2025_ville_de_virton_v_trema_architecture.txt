@@ -1,0 +1,65 @@
+No ECLI: ECLI:BE:CASS:2025:ARR.20250313.1F.1
+No Rôle: C.24.0271.F
+Affaire: VILLE DE VIRTON contra TREMA ARCHITECTURE s.r.l.
+Chambre: 1F - première chambre
+Domaine juridique: Droit civil
+
+Texte de la décision
+
+N° C.24.0271.F
+
+VILLE DE VIRTON, représentée par son collège communal, dont les bureaux sont établis à Virton, rue Charles Magnette, 17, inscrite à la banque-carrefour des entreprises sous le numéro 0206.524.777,
+
+demanderesse en cassation,
+
+représentée par Maître Paul Alain Foriers, avocat à la Cour de cassation, dont le cabinet est établi à Bruxelles, avenue Louise, 250, où il est fait élection de domicile,
+
+contre
+
+T., société à responsabilité limitée,
+
+défenderesse en cassation.
+
+I. La procédure devant la Cour
+
+Le pourvoi en cassation est dirigé contre l’arrêt rendu le 6 février 2024 par la cour d’appel de Liège.
+
+Le président de section Michel Lemal a fait rapport.
+
+L’avocat général Thierry Werquin a conclu.
+
+II. Le moyen de cassation
+
+Dans la requête en cassation, jointe au présent arrêt en copie certifiée conforme, la demanderesse présente un moyen.
+
+III. La décision de la Cour
+
+Sur le moyen :
+
+L’existence d’un lien de causalité entre la faute et le dommage tel qu’il s’est réalisé suppose que, sans la faute, le dommage n’eût pu se produire tel qu’il s’est produit.
+
+Le juge qui apprécie l’existence d’un tel lien doit reconstruire le cours des événements en omettant la faute, sans modifier les autres conditions dans lesquelles le dommage est survenu, et vérifier si le dommage se serait également produit en ce cas.
+
+L’arrêt constate que la demanderesse a adjugé à une société tierce l’exécution des phases une et deux comprenant la pose de pavés du marché de rénovation de la place …, que la défenderesse était l’auteur de projet, qu’après que la demanderesse eut donné l’ordre à l’adjudicataire de commencer les travaux, celui-ci a proposé un échantillon de pavés, qui a été refusé par la demanderesse au motif que le format et la couleur ne correspondent pas aux prescriptions du cahier spécial des charges et que le produit n’est pas similaire à celui qui a déjà été posé dans le centre ancien, ce que l’adjudicataire a contesté, et qu’après un échange de lettres, la demanderesse a résilié unilatéralement le marché.
+
+Il considère, d’une part, qu’« en l’absence de procès-verbal de constat de manquements et, a fortiori, de l’envoi immédiat par recommandé de la copie de ce procès-verbal à [l’adjudicataire], la [demanderesse] n’a pas respecté le formalisme requis, ce qui entraîne l’irrégularité de la mesure d’office qu’elle a mise en œuvre », d’autre part, qu’« à défaut pour la [demanderesse] d’établir un manquement, et a fortiori un manquement grave, de [l’adjudicataire], sa demande de résolution du contrat aux torts de [celui-ci] n’est pas fondée » et il condamne la demanderesse à réparer le dommage subi par l’adjudicataire.
+
+Statuant sur la demande de la demanderesse de condamner la défenderesse à la garantir des condamnations prononcées à son encontre « au motif que cette dernière a commis une faute […] lors de la rédaction des documents du marché », il relève que cette « faute dans l’élaboration des prescriptions techniques du cahier spécial des charges [a été] dénoncée dans le procès-verbal de manquement qui […] a été notifié [à la défenderesse] le 19 novembre 2018, auquel elle n’a pas répondu dans le délai qui lui était imparti », et que la demanderesse « soutient que, si la [défenderesse] avait rédigé des prescriptions techniques réalistes, adéquates et proportionnées et avait prévu que les pavés devaient être présentés pour approbation avant l’attribution du marché, les problèmes rencontrés avec les pavés proposés par [l’adjudicataire] auraient été évités ».
+
+L’arrêt, qui se borne à considérer que la demanderesse « n’établit pas, par cette affirmation, qu’il existe un lien de causalité entre la faute alléguée et sa condamnation au paiement d’une indemnité pour résiliation fautive du marché aux motifs qu’elle n’a pas respecté les formalités requises pour recourir à la mesure d’office et sans démontrer que [l’adjudicataire] a manqué à ses obligations contractuelles et notamment ne pourrait réaliser un travail conforme au cahier spécial des charges », sans vérifier si, sans la faute de la défenderesse, le dommage se serait également produit, ne justifie pas légalement sa décision d’exclure tout lien de causalité entre ladite faute et ce dommage.
+
+Le moyen est fondé.
+
+Par ces motifs,
+
+La Cour
+
+Casse l’arrêt attaqué en tant qu’il statue sur la demande en garantie de la demanderesse contre la défenderesse et sur les dépens entre ces parties ;
+
+Ordonne que mention du présent arrêt sera faite en marge de l’arrêt partiellement cassé ;
+
+Réserve les dépens pour qu’il soit statué sur ceux-ci par le juge du fond ;
+
+Renvoie la cause, ainsi limitée, devant la cour d’appel de Mons.
+
+Ainsi jugé par la Cour de cassation, première chambre, à Bruxelles, où siégeaient le président de section Christian Storck, président, le président de section Michel Lemal, les conseillers Ariane Jacquemin, Maxime Marchandise et Simon Claisse, et prononcé en audience publique du treize mars deux mille vingt-cinq par le président de section Christian Storck, en présence de l’avocat général Thierry Werquin, avec l’assistance du greffier Patricia De Wadripont.

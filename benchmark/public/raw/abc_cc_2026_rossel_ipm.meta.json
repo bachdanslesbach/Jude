@@ -1,0 +1,27 @@
+{
+  "decision_number": "ABC-2026-CC-22",
+  "case_number": "CONC.C/C.25-0009",
+  "title": "Décision ABC-2026-CC-22 du 3 juillet 2026 — Rossel / IPM (affaire n° CONC.C/C.25-0009)",
+  "court": "Autorité belge de la concurrence — Collège de la concurrence",
+  "date": "2026-07-03",
+  "url": "https://www.abc-bma.be/sites/default/files/content/download/files/ABC-2026-CC-22%20PUB%20FIN_0.pdf",
+  "licence": "Official publication of the Autorité belge de la concurrence (public version); reproduction with attribution",
+  "attribution": "Source: Autorité belge de la concurrence, décision n° ABC-2026-CC-22 du 3 juillet 2026 (version publique)",
+  "language": "fr",
+  "genre": "merger control — Collège decision, article IV.66 CDE, admissibility subject to commitments",
+  "source": "Autorité belge de la concurrence, https://www.abc-bma.be/fr/decisions",
+  "jurisdiction": "Belgium",
+  "excerpt": {
+    "pdf_pages": [
+      1,
+      14,
+      19,
+      20,
+      282
+    ],
+    "words": 858,
+    "note": "Cover page; I. Procédure §§1-3 and 8; III. Parties concernées (III.1-III.4, incl. counsel table); XIII. Décision items i)-ii) and Collège composition with signature. Non-contiguous blocks separated by a line '[…]'; PDF line breaks kept; page furniture removed. Text layer extracted with PyMuPDF."
+  },
+  "fetched": "2026-10-15",
+  "user_agent": "JudeBenchmark/0.8"
+}

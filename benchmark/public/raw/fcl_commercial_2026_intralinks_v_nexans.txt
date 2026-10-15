@@ -1,0 +1,126 @@
+Thomas Raphael KC,
+
+Sitting as a Deputy Judge of the High Court
+
+Approved Judgment
+
+Intralinks v Nexans
+
+Neutral Citation Number:
+[2026] EWHC 2355 (Comm)
+
+Case No:
+LM-2026-000116
+
+IN THE HIGH COURT OF JUSTICE
+
+BUSINESS AND PROPERTY COURTS OF ENGLAND AND WALES
+
+LONDON CIRCUIT COMMERCIAL COURT (KBD)
+
+Royal Courts of Justice, Rolls Building
+
+Fetter Lane, London, EC4A 1NL
+
+Date:
+17 September 2026
+
+Before :
+
+Thomas Raphael KC, Sitting as a Deputy Judge of the High Court
+
+- - - - - - - - - - - - - - - - - - - - -
+
+Between :
+
+INTRALINKS INC
+
+Claimant/
+
+Respondent
+
+- and -
+
+NEXANS SA
+
+Defendant/
+
+Applicant
+
+- - - - - - - - - - - - - - - - - - - - -
+
+- - - - - - - - - - - - - - - - - - - - -
+
+Stuart Benzie (instructed by Fladgate LLP) for the Defendant/Applicant
+
+Daniel Khoo (instructed by Fieldfisher LLP) for the Claimant/Respondent
+
+Hearing dates: 27 July 2026
+
+- - - - - - - - - - - - - - - - - - - - -
+
+Approved Judgment
+
+This judgment was handed down remotely at 10.30am on 17 September 2026 by circulation to the parties or their representatives by e-mail and by release to the National Archives.
+
+.............................
+
+THOMAS RAPHAEL KC, SITTING AS A DEPUTY JUDGE OF THE HIGH COURT
+
+Introduction
+
+1.
+
+This judgment resolves a jurisdiction challenge in a case about virtual data rooms.
+
+2.
+
+The Claimant, Intralinks Inc (“Intralinks”) is a US company which provides information technology services, in particular virtual data rooms for corporate finance transactions. At the time of the events it operated out of New York City. Since April 2026 its primary business address is in Waltham, Massachusetts.
+
+3.
+
+The Defendant, Nexans SA (“Nexans”) is a French company principally operating in the cable and optical fibre industry, which used Intralinks’ services. Its headquarters and registered office is in La Defense, Paris.
+
+4.
+
+The parties had entered into previous contracts, but this case concerns a contract for “Project Otto”, agreed on 2 or 3 October 2024 (the “Contract”). There is disagreement about when and how the Contract was concluded.
+
+5.
+
+Nexans says the Contract was formed principally on the terms of work order no. 535958 dated 2 October 2024 (the “2 October Work Order”), which incorporates a Master Services Agreement (“MSA”) providing for French law and jurisdiction (the “French MSA”).
+
+6.
+
+Intralinks says the Contract was formed on the terms of work order no. 5355137, dated on its front page 2 October 2024, but signed on 3 October 2024 (the “3 October Work Order”). The 3 October Work Order incorporates an MSA providing that it is governed by English law (the “English MSA”).
+
+7.
+
+A dispute has arisen as to performance of and payment under the Contract.
+
+8.
+
+The Contract’s charging structure includes payments that vary according to the amount of data uploaded into the data room. Intralinks says Nexans uploaded documents in August 2025 which triggered payments of €2,193,147.70 (the “Disputed Sums”). Nexans denies these Disputed Sums are due.
+
+9.
+
+On 19 December 2025, Nexans commenced proceedings in France (the “French Proceedings”) in which it alleges the English MSA should not be treated as agreed and the French MSA should be treated as incorporated. On the substance it contends the Disputed Sums were charged in circumstances which amount to bad faith in breach of contract. It claims damages for bad faith of €2,093,147.00. The French Proceedings were served on Intralinks in the USA on 22 January 2026.
+
+10.
+
+On 24 March 2026, Intralinks issued a claim before the London Circuit Commercial Court for payment of the Disputed Sums. Intralinks applied for permission to serve proceedings abroad. It argued that jurisdiction could be established under Gateway 6(c) and Gateway 7. It also argued that England and Wales (“England” for brevity) was the proper place to bring the claim.
+
+11.
+
+His Honour Judge Bird granted permission for service abroad on 31 March 2026, and the claim was served on Nexans in France. Nexans challenged the jurisdiction of the Court by application under CPR Part 11 dated 27 May 2026.
+
+12.
+
+Nexans denied that a valid jurisdictional gateway was satisfied and said it had not been shown that England was the proper place to bring the claim.
+
+13.
+
+Nexans’ application came on for hearing on 27 July 2026. I heard able argument from Mr Stuart Benzie for Nexans and Mr Daniel Khoo for Intralinks.
+
+14.
+
+For the reasons below, I conclude that Intralinks has satisfied Gateways 6(c) and 7 and shown that England is the proper place to bring the claim. The jurisdiction challenge therefore fails.

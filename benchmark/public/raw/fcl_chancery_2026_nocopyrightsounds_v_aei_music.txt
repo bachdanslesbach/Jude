@@ -1,0 +1,104 @@
+Neutral Citation Number:
+[2026] EWHC 2360 (Ch)
+
+Case No:
+IL-2025-000220
+
+IN THE HIGH COURT OF JUSTICE
+
+BUSINESS AND PROPERTY COURTS OF ENGLAND AND WALES
+
+Intellectual Property List (ChD)
+
+Royal Courts of Justice, Rolls Building
+
+Fetter Lane, London, EC4A 1NL
+
+Date:
+15 September 2026
+
+Before :
+
+MASTER PESTER
+
+- - - - - - - - - - - - - - - - - - - - -
+
+Between :
+
+NOCOPYRIGHTSOUNDS LIMITED
+
+Claimant
+
+- and -
+
+(1)
+
+AEI MUSIC LIMITED
+
+(2)
+
+FEATHERSTONE MUSIC LIMITED
+
+Defendants
+
+- - - - - - - - - - - - - - - - - - - - -
+
+- - - - - - - - - - - - - - - - - - - - -
+
+Ian Mill KC and Tom Cleaver (instructed by Simkins LLP) for the Claimant
+
+James Knott (instructed by Keystone Law) for the Defendants
+
+Hearing date: 23 July 2026
+
+- - - - - - - - - - - - - - - - - - - - -
+
+APPROVED JUDGMENT
+
+This judgment was handed down remotely by circulation to the parties or their representatives by email. The date and time for hand-down is deemed to be 2.30pm on 15 September 2026.
+
+Master Pester
+
+INTRODUCTION
+
+1.
+
+This is my judgment on the application, dated 26 March 2026, by the Claimant (“NCS”) for two heads of relief: the provision of interim accounts, pursuant to CPR r. 25.1(1)(o) and an interim payment of £3 million pursuant to CPR 25.23(c). During the course of the hearing on 23 July 2026 the First Defendant (“AEI”) agreed to provide interim accounts, so the only issue I need to determine is whether to order an interim payment and, if so, in what amount.
+
+2.
+
+On 13 August 2026, that is, after the hearing before me, the Defendants filed a second witness statement of Diluk Dias, the director of both Defendants, in order to supply the information which the Defendants were to provide pursuant to the order made on 23 July 2026. What AEI’s account shows is that, as at 31 March 2026, there was a running balance in favour of NCS from AEI of US$6,126,037.43, even on the Defendants’ case. Mr Dias says, at paragraph 6(ii) of his witness statement, that whilst there is a balance, that is subject to the set off against sums said to be due from NCS to AEI, and even if there is any residual balance it is not payable immediately, upon demand, because of an agreement to extend credit and / or waiver/estoppel. (I note that NCS has made certain criticisms, in a letter dated 14 August 2026, of Mr Dias’ witness statement and the accompanying exhibit, but I have not been asked to rule on those criticisms, at this stage).
+
+3.
+
+In overview, NCS for its part says that AEI has acknowledged that it owes NCS millions of pounds, but that NCS is wrongly being kept out of its receipt of that money, and that there is no good reason why an interim payment should not be ordered now. In turn, AEI submits that no order for an interim payment should be made, because in summary:
+
+(i.)
+
+it is an abuse of process, as it seeks to relitigate an issue decided by a previous tribunal or is an inappropriate invitation to conduct a mini-trial;
+
+(ii.)
+
+it fails to meet the threshold test even on NCS’s own evidence (which alleges that it is “likely” to succeed on its claims);
+
+(iii.)
+
+it fails in any event to meet the threshold test given the arguable disputes of fact and law that will need to be determined at trial; and
+
+(iv.)
+
+the figures put forward by NCS are not reliable.
+
+4.
+
+It would be unreal to ignore the evidence of Mr Dias. It seems to me, therefore, that there is no real dispute that AEI owes NCS very substantial sums, although AEI has pleaded a counterclaim, which needs to be taken into account, as well as certain defences, which raises the question whether the sum is presently due.
+
+BACKGROUND
+
+5.
+
+By way of brief background, NCS is a company that holds rights in respect of a catalogue of music and sound recordings – described as “the Catalogue”. NCS carries on business as a YouTube channel, music publisher and record label.
+
+6.
+
+The Defendants, which I will refer to as “AEI” and “Featherstone” respectively, where it is necessary to distinguish between them, were authorised to exploit those rights in return for an obligation to pay NCS a percentage of the revenue from that exploitation. The Defendants’ parent company, AEI Ventures Ltd, was and remains a 25.25% shareholder in NCS.

@@ -1,0 +1,69 @@
+No ECLI: ECLI:BE:CASS:2023:ARR.20230223.1F.3
+No Rôle: C.22.0112.F
+Affaire: INTERNATIONAL TOOLS SERVICE s.a. contra H.
+Chambre: 1F - première chambre
+Domaine juridique: Droit civil
+
+Texte de la décision
+
+N° C.22.0112.F
+
+1. INTERNATIONAL TOOLS SERVICE, société anonyme, dont le siège est établi à Ixelles, rue du Printemps, 39-43, inscrite à la banque-carrefour des entreprises sous le numéro 0447.966.784,
+
+2. É. H.,
+
+3. L. H,
+
+demandeurs en cassation,
+
+représentés par Maître Michèle Grégoire, avocat à la Cour de cassation, dont le cabinet est établi à Bruxelles, rue de la Régence, 4, où il est fait élection de domicile,
+
+contre
+
+1. M. H.,
+
+2. D. H.,
+
+3. M. H.,
+
+4. HORELEC, société anonyme en liquidation, dont le siège est établi à Ixelles, rue du Printemps, 33-35, inscrite à la banque-carrefour des entreprises sous le numéro 0433.552.881, représentée par son liquidateur, Maître E. S., avocat,
+
+5. E. J., notaire,
+
+défendeurs en cassation.
+
+I. La procédure devant la Cour
+
+Le pourvoi en cassation est dirigé contre l’arrêt rendu le 10 juin 2021 par la cour d’appel de Bruxelles.
+
+Le conseiller Marie-Claire Ernotte a fait rapport.
+
+L’avocat général Thierry Werquin a conclu.
+
+II. Le moyen de cassation
+
+Dans la requête en cassation, jointe au présent arrêt en copie certifiée conforme, les demandeurs présentent un moyen.
+
+III. La décision de la Cour
+
+Sur le moyen :
+
+Quant à la seconde branche :
+
+L’existence d’un lien de causalité entre la faute et le dommage tel qu’il s’est réalisé suppose que, sans la faute, le dommage n’eût pu se produire tel qu’il s’est produit.
+
+Le juge, qui apprécie l’existence d’un tel lien, doit reconstruire le cours des événements en omettant la faute, sans modifier les autres conditions dans lesquelles le dommage est survenu.
+
+Lorsque la faute consiste en une omission, cette reconstruction implique de remplacer la faute par le comportement positif qui aurait dû être adopté dans les mêmes conditions.
+
+L’arrêt énonce que, selon la quatrième partie défenderesse, « du fait de l’inscription de l’action originaire, introduite le 3 juin 2015, en marge du registre de la conservation des hypothèques, elle s’est trouvée dans l’impossibilité de vendre le bien et de pouvoir ainsi rembourser son créancier hypothécaire » et que « tant l’introduction de l’action que l’appel sont fautifs, de même que l’attitude [des demandeurs] après le prononcé de l’arrêt du 14 octobre 2016 [déclarant leur action prescrite] », dès lors qu’ils « n’ont pas réagi au courriel de [la quatrième partie défenderesse] du 15 novembre 2016 leur demandant s’ils acquiesçaient à la décision, l’obligeant à signifier l’arrêt le 18 novembre 2016 et à attendre l’expiration du délai du pourvoi en cassation et l’obtention d’un certificat de non-cassation, délivré le 22 février 2017, pour pouvoir vendre ».
+
+Après avoir écarté toute faute des demandeurs avant le prononcé de l’arrêt précité du 14 octobre 2016, il relève que, pour la période postérieure, les demandeurs « objectent qu’ils ont consulté un avocat à la Cour de cassation afin d’examiner l’opportunité et la possibilité d’un pourvoi et que la loi fixe le délai d’intentement du pourvoi à trois mois », mais considère que « l’attitude des [demandeurs] après le prononcé de [cet] arrêt […] est plus problématique » au motif que si, « après le prononcé de [l’]arrêt, notifié aux parties le 20 octobre 2016, un délai de réflexion était […] nécessaire pour examiner l’opportunité d’un éventuel pourvoi », ils « auraient dû prendre position […] au terme [de ce délai], ce qu’ils se sont abstenus de faire malgré la lettre officielle qui leur fut adressée
+
+le 15 novembre 2016, à laquelle ils n’ont pas répondu, et […] malgré la signification de l’arrêt le 18 novembre 2016, alors qu’ils étaient informés de l’existence d’une créance hypothécaire s’accroissant au fil du temps », et que la consultation d’un avocat à la Cour de cassation « ne dispensait cependant pas [les demandeurs] de faire diligence quant à leurs démarches et d’informer [la quatrième partie défenderesse] de leur intention ».
+
+Il en déduit que, « dans ce contexte, le manque de diligence des [demandeurs] et leur silence entre le 16 novembre 2016, jour du courriel leur demandant officiellement de prendre position, et le 22 février 2017, date de l’obtention du certificat d’absence de pourvoi en cassation, sont fautifs ».
+
+L’arrêt considère ensuite que, « si [la quatrième partie défenderesse] avait été tenue informée des démarches des [demandeurs] relatives à une éventuelle cassation et de leur résultat, elle aurait pu vendre le bien dès après avoir été tenue informée de l’issue de la consultation effectuée auprès de l’avocat spécialisé » et que, dès lors que les demandeurs « ne donnent aucune indication du moment auquel ils ont consulté un avocat spécialisé en cassation, ni du moment auquel ils ont reçu l’avis leur permettant de faire un choix et d’en informer la partie adverse », « cette consultation aurait pu être obtenue, vu l’urgence, dans un délai d’un mois après le 16 novembre 2016, soit pour le 16 décembre 2016 ». Il en déduit que, « sans la faute [des demandeurs], la vente aurait donc pu intervenir après le 16 décembre 2016, dans un délai supposé identique à celui qui a séparé l’obtention du certificat de non-cassation le 22 février 2017 de la vente
+
+le 6 mars 2017 ».

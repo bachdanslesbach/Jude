@@ -1,0 +1,23 @@
+{
+  "title": "Intralinks Inc v Nexans SA",
+  "court": "High Court of Justice, Business and Property Courts, London Circuit Commercial Court (KBD)",
+  "date": "2026-09-17",
+  "url": "https://caselaw.nationalarchives.gov.uk/ewhc/comm/2026/2355",
+  "data_url": "https://caselaw.nationalarchives.gov.uk/ewhc/comm/2026/2355/data.xml",
+  "neutral_citation": "[2026] EWHC 2355 (Comm)",
+  "case_number": "LM-2026-000116",
+  "licence": "Open Justice Licence / Open Government Licence v3.0",
+  "attribution": "Contains public sector information licensed under the Open Government Licence v3.0; judgment published by The National Archives (Find Case Law)",
+  "language": "en",
+  "genre": "judgment",
+  "source": "Find Case Law (The National Archives)",
+  "jurisdiction": "England and Wales",
+  "excerpt": {
+    "from_line": 1,
+    "to_line": 126,
+    "words": 787,
+    "note": "verbatim from data.xml stripped to text; header plus opening substantive paragraphs"
+  },
+  "fetched": "2026-10-15",
+  "user_agent": "JudeBenchmark/0.8 (https://github.com/bachdanslesbach/Jude)"
+}

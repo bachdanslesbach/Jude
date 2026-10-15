@@ -1,0 +1,750 @@
+{
+ "id": "doc_101_commercial_2026_central_termica_v_santan_en",
+ "title": "Central Térmica de Temane SA & Anor v Banco Santander SA",
+ "language": "en",
+ "text": "Neutral Citation Number:\n[2026] EWHC 2587 (Comm)\n\nCase No:\nCL-2025-000494\n\nIN THE HIGH COURT OF JUSTICE\n\nBUSINESS AND PROPERTY COURTS\n\nCOMMERCIAL COURT\n\nRoyal Courts of Justice, Rolls Building\n\nFetter Lane, London, EC4A 1NL\n\nDate:\n13/10/2026\n\nBefore :\n\nTHE HONOURABLE MR JUSTICE CALVER\n\n- - - - - - - - - - - - - - - - - - - - -\n\nBetween :\n\n(1)\n\nCENTRAL TÉRMICA DE TEMANE S.A.\n\n(2)\n\nCITIBANK, N.A., LONDON BRANCH\n\nClaimants\n\n- and -\n\nBANCO SANTANDER S.A.\n\nDefendant\n\n- - - - - - - - - - - - - - - - - - - - -\n\n- - - - - - - - - - - - - - - - - - - - -\n\nStephen Houseman KC, Nehali Shah KC, Moritz Grimm (instructed by Greenwoods Legal Services Limited) for the First Claimant and (instructed by Goodwin Procter (UK) LLP) for the Second Claimant\n\nAdrian Beltrami KC, Paul Bonner Hughes (instructed by Allen Overy Shearman Sterling LLP) for the Defendant\n\nHearing dates: 15-17/09/2026\n\n- - - - - - - - - - - - - - - - - - - - -\n\nJUDGMENT\n\nThis judgment was handed down by the Judge remotely by circulation to the parties' representatives by email and release to The National Archives. The date and time for hand-down is deemed to be 12:00 on Tuesday 13 October 2026.\n\nMr Justice Calver:\n\nFACTUAL BACKGROUND TO THE TRIAL\n\n1.\n\nThe First Claimant (“CTT”) is a Mozambique corporation and was the employer in respect of a project for the design, construction, and operation of a 450 MW combined-cycle power plant fuelled by natural gas at Temane, Mozambique (“Project”). Companies in the TSK Group were the onshore and offshore contractors in respect of the Project. CTT and entities in the TSK Group entered into an EPC (Engineering, Procurement and Construction) contract (“EPC Contract”)and a Co-ordination Agreement (“Coordination Agreement”) pursuant to which two Bonds were issued by the Defendant-bank (“Santander”) at the request of its customer, TSK Electrónica y Electricidad, S.A. (Spain) (and together with TSK Moçambique Limitada (Mozambique), “TSK”) (part of the TSK Group), in order to secure aspects of the EPC Contract (“theBonds”). The Bonds consist of an Advance Payment Bond and a Performance Bond, each originally dated 2 December 2021, and each in favour of CTT as beneficiary.\n\n2.\n\nThe purpose of the Advance Payment Bondwas to provide security to CTT in the event that TSK should fail to earn the full amount of the Advance Payment (as defined). The value of the Advance Payment Bond was to reduce as interim payments were earned by the contractors, with the remaining value being equal to the unearned amount of the Advance Payment. The purpose of the Performance Bondwas to provide security to CTT in the event that TSK should fail to complete the Project in accordance with the contractual scheme.\n\n3.\n\nThe Expiry Date of the Bonds was originally 1 December 2024. They were extended on or around 5 November 2024 so that the Expiry Date became 28 February 2026. It is common ground between the parties that the Bonds are autonomous demand instruments. It is also common ground that CTT was at all times the beneficiary under the Bonds.\n\n4.\n\nBy this Part 8 claim CTT seeks an order for immediate payment to it by Santander in the sum of USD90,796,078.66 plus interest pursuant to demands made by CTT under the terms of the Bonds.The claim originally made in this action by the Second Claimant (“Citi”) no longer arises further to Santander’s admission that CTT, and not Citi, is the Beneficiary under the Bonds and that CTT has made valid demands thereunder. However, Santander resists the claim of CTT on the ground that it has an illegality defence by reason of the fact that a Spanish Court has granted an interim injunction restraining it from paying CTT under the Bonds (“the illegality defence”).\n\n5.\n\nThe illegality defence raises four principal issues:\n\n(1)\n\nFirst, is the Spanish interim injunction capable of engaging the principle in Ralli Brothers so as to provide a defence to the claim?\n\n(2)\n\nSecond, if the Spanish interim injunction is capable of engaging the principle in Ralli Brothers, is the place of performance under the Bonds (i) Mozambique, as the Claimants contend, on the basis that it is the place of Santander’s payment obligation under the Bonds; or (ii) Spain, as Santander contends, either on the basis that it is the country where the demands were to be made (and were in fact made) or the country where necessary performance steps were to be taken?\n\n(3)\n\nThird, is Santander entitled to rely upon the principle in Ralli Brothers in circumstances where it has not taken any steps in Spain to seek to discharge the Spanish interim injunction, nor established that any such steps would have been unsuccessful?\n\n(4)\n\nFourth, is Santander entitled to rely on the principle in Ralli Brothers in circumstances where Santander could have paid under the Bonds before notification of the Spanish interim injunction on 10 April 2025?\n",
+ "gold_spans": [
+  {
+   "start": 25,
+   "end": 48,
+   "type": "CASE_REF",
+   "text": "[2026] EWHC 2587 (Comm)"
+  },
+  {
+   "start": 59,
+   "end": 73,
+   "type": "CASE_REF",
+   "text": "CL-2025-000494"
+  },
+  {
+   "start": 268,
+   "end": 285,
+   "type": "PERSON",
+   "text": "MR JUSTICE CALVER"
+  },
+  {
+   "start": 346,
+   "end": 376,
+   "type": "ORG",
+   "text": "CENTRAL TÉRMICA DE TEMANE S.A."
+  },
+  {
+   "start": 383,
+   "end": 412,
+   "type": "ORG",
+   "text": "CITIBANK, N.A., LONDON BRANCH"
+  },
+  {
+   "start": 434,
+   "end": 454,
+   "type": "ORG",
+   "text": "BANCO SANTANDER S.A."
+  },
+  {
+   "start": 553,
+   "end": 572,
+   "type": "PERSON",
+   "text": "Stephen Houseman KC"
+  },
+  {
+   "start": 574,
+   "end": 588,
+   "type": "PERSON",
+   "text": "Nehali Shah KC"
+  },
+  {
+   "start": 590,
+   "end": 602,
+   "type": "PERSON",
+   "text": "Moritz Grimm"
+  },
+  {
+   "start": 618,
+   "end": 651,
+   "type": "ORG",
+   "text": "Greenwoods Legal Services Limited"
+  },
+  {
+   "start": 695,
+   "end": 719,
+   "type": "ORG",
+   "text": "Goodwin Procter (UK) LLP"
+  },
+  {
+   "start": 746,
+   "end": 764,
+   "type": "PERSON",
+   "text": "Adrian Beltrami KC"
+  },
+  {
+   "start": 766,
+   "end": 784,
+   "type": "PERSON",
+   "text": "Paul Bonner Hughes"
+  },
+  {
+   "start": 800,
+   "end": 833,
+   "type": "ORG",
+   "text": "Allen Overy Shearman Sterling LLP"
+  },
+  {
+   "start": 1166,
+   "end": 1183,
+   "type": "PERSON",
+   "text": "Mr Justice Calver"
+  },
+  {
+   "start": 1244,
+   "end": 1247,
+   "type": "ORG",
+   "text": "CTT"
+  },
+  {
+   "start": 1481,
+   "end": 1490,
+   "type": "ORG",
+   "text": "TSK Group"
+  },
+  {
+   "start": 1560,
+   "end": 1563,
+   "type": "ORG",
+   "text": "CTT"
+  },
+  {
+   "start": 1584,
+   "end": 1593,
+   "type": "ORG",
+   "text": "TSK Group"
+  },
+  {
+   "start": 1804,
+   "end": 1813,
+   "type": "ORG",
+   "text": "Santander"
+  },
+  {
+   "start": 1848,
+   "end": 1884,
+   "type": "ORG",
+   "text": "TSK Electrónica y Electricidad, S.A."
+  },
+  {
+   "start": 1912,
+   "end": 1935,
+   "type": "ORG",
+   "text": "TSK Moçambique Limitada"
+  },
+  {
+   "start": 1951,
+   "end": 1954,
+   "type": "ORG",
+   "text": "TSK"
+  },
+  {
+   "start": 1970,
+   "end": 1979,
+   "type": "ORG",
+   "text": "TSK Group"
+  },
+  {
+   "start": 2173,
+   "end": 2176,
+   "type": "ORG",
+   "text": "CTT"
+  },
+  {
+   "start": 2264,
+   "end": 2267,
+   "type": "ORG",
+   "text": "CTT"
+  },
+  {
+   "start": 2286,
+   "end": 2289,
+   "type": "ORG",
+   "text": "TSK"
+  },
+  {
+   "start": 2613,
+   "end": 2616,
+   "type": "ORG",
+   "text": "CTT"
+  },
+  {
+   "start": 2635,
+   "end": 2638,
+   "type": "ORG",
+   "text": "TSK"
+  },
+  {
+   "start": 3001,
+   "end": 3004,
+   "type": "ORG",
+   "text": "CTT"
+  },
+  {
+   "start": 3081,
+   "end": 3084,
+   "type": "ORG",
+   "text": "CTT"
+  },
+  {
+   "start": 3131,
+   "end": 3140,
+   "type": "ORG",
+   "text": "Santander"
+  },
+  {
+   "start": 3214,
+   "end": 3217,
+   "type": "ORG",
+   "text": "CTT"
+  },
+  {
+   "start": 3313,
+   "end": 3317,
+   "type": "ORG",
+   "text": "Citi"
+  },
+  {
+   "start": 3348,
+   "end": 3357,
+   "type": "ORG",
+   "text": "Santander"
+  },
+  {
+   "start": 3375,
+   "end": 3378,
+   "type": "ORG",
+   "text": "CTT"
+  },
+  {
+   "start": 3388,
+   "end": 3392,
+   "type": "ORG",
+   "text": "Citi"
+  },
+  {
+   "start": 3438,
+   "end": 3441,
+   "type": "ORG",
+   "text": "CTT"
+  },
+  {
+   "start": 3486,
+   "end": 3495,
+   "type": "ORG",
+   "text": "Santander"
+  },
+  {
+   "start": 3517,
+   "end": 3520,
+   "type": "ORG",
+   "text": "CTT"
+  },
+  {
+   "start": 3673,
+   "end": 3676,
+   "type": "ORG",
+   "text": "CTT"
+  },
+  {
+   "start": 4146,
+   "end": 4155,
+   "type": "ORG",
+   "text": "Santander"
+  },
+  {
+   "start": 4212,
+   "end": 4221,
+   "type": "ORG",
+   "text": "Santander"
+  },
+  {
+   "start": 4416,
+   "end": 4425,
+   "type": "ORG",
+   "text": "Santander"
+  },
+  {
+   "start": 4675,
+   "end": 4684,
+   "type": "ORG",
+   "text": "Santander"
+  },
+  {
+   "start": 4760,
+   "end": 4769,
+   "type": "ORG",
+   "text": "Santander"
+  }
+ ],
+ "public_spans": [
+  {
+   "start": 0,
+   "end": 23,
+   "type": "PUBLIC",
+   "text": "Neutral Citation Number"
+  },
+  {
+   "start": 50,
+   "end": 57,
+   "type": "PUBLIC",
+   "text": "Case No"
+  },
+  {
+   "start": 82,
+   "end": 103,
+   "type": "PUBLIC",
+   "text": "HIGH COURT OF JUSTICE"
+  },
+  {
+   "start": 105,
+   "end": 133,
+   "type": "PUBLIC",
+   "text": "BUSINESS AND PROPERTY COURTS"
+  },
+  {
+   "start": 135,
+   "end": 151,
+   "type": "PUBLIC",
+   "text": "COMMERCIAL COURT"
+  },
+  {
+   "start": 153,
+   "end": 192,
+   "type": "PUBLIC",
+   "text": "Royal Courts of Justice, Rolls Building"
+  },
+  {
+   "start": 194,
+   "end": 223,
+   "type": "PUBLIC",
+   "text": "Fetter Lane, London, EC4A 1NL"
+  },
+  {
+   "start": 231,
+   "end": 241,
+   "type": "PUBLIC",
+   "text": "13/10/2026"
+  },
+  {
+   "start": 414,
+   "end": 423,
+   "type": "PUBLIC",
+   "text": "Claimants"
+  },
+  {
+   "start": 456,
+   "end": 465,
+   "type": "PUBLIC",
+   "text": "Defendant"
+  },
+  {
+   "start": 661,
+   "end": 675,
+   "type": "PUBLIC",
+   "text": "First Claimant"
+  },
+  {
+   "start": 729,
+   "end": 744,
+   "type": "PUBLIC",
+   "text": "Second Claimant"
+  },
+  {
+   "start": 843,
+   "end": 852,
+   "type": "PUBLIC",
+   "text": "Defendant"
+  },
+  {
+   "start": 869,
+   "end": 882,
+   "type": "PUBLIC",
+   "text": "15-17/09/2026"
+  },
+  {
+   "start": 974,
+   "end": 979,
+   "type": "PUBLIC",
+   "text": "Judge"
+  },
+  {
+   "start": 1060,
+   "end": 1081,
+   "type": "PUBLIC",
+   "text": "The National Archives"
+  },
+  {
+   "start": 1140,
+   "end": 1163,
+   "type": "PUBLIC",
+   "text": "Tuesday 13 October 2026"
+  },
+  {
+   "start": 1227,
+   "end": 1241,
+   "type": "PUBLIC",
+   "text": "First Claimant"
+  },
+  {
+   "start": 1255,
+   "end": 1265,
+   "type": "PUBLIC",
+   "text": "Mozambique"
+  },
+  {
+   "start": 1372,
+   "end": 1378,
+   "type": "PUBLIC",
+   "text": "450 MW"
+  },
+  {
+   "start": 1432,
+   "end": 1438,
+   "type": "PUBLIC",
+   "text": "Temane"
+  },
+  {
+   "start": 1440,
+   "end": 1450,
+   "type": "PUBLIC",
+   "text": "Mozambique"
+  },
+  {
+   "start": 1453,
+   "end": 1460,
+   "type": "PUBLIC",
+   "text": "Project"
+  },
+  {
+   "start": 1551,
+   "end": 1558,
+   "type": "PUBLIC",
+   "text": "Project"
+  },
+  {
+   "start": 1610,
+   "end": 1613,
+   "type": "PUBLIC",
+   "text": "EPC"
+  },
+  {
+   "start": 1669,
+   "end": 1681,
+   "type": "PUBLIC",
+   "text": "EPC Contract"
+  },
+  {
+   "start": 1689,
+   "end": 1712,
+   "type": "PUBLIC",
+   "text": "Co-ordination Agreement"
+  },
+  {
+   "start": 1715,
+   "end": 1737,
+   "type": "PUBLIC",
+   "text": "Coordination Agreement"
+  },
+  {
+   "start": 1762,
+   "end": 1767,
+   "type": "PUBLIC",
+   "text": "Bonds"
+  },
+  {
+   "start": 1787,
+   "end": 1796,
+   "type": "PUBLIC",
+   "text": "Defendant"
+  },
+  {
+   "start": 1886,
+   "end": 1891,
+   "type": "PUBLIC",
+   "text": "Spain"
+  },
+  {
+   "start": 1937,
+   "end": 1947,
+   "type": "PUBLIC",
+   "text": "Mozambique"
+  },
+  {
+   "start": 2016,
+   "end": 2028,
+   "type": "PUBLIC",
+   "text": "EPC Contract"
+  },
+  {
+   "start": 2047,
+   "end": 2052,
+   "type": "PUBLIC",
+   "text": "Bonds"
+  },
+  {
+   "start": 2067,
+   "end": 2087,
+   "type": "PUBLIC",
+   "text": "Advance Payment Bond"
+  },
+  {
+   "start": 2094,
+   "end": 2110,
+   "type": "PUBLIC",
+   "text": "Performance Bond"
+  },
+  {
+   "start": 2134,
+   "end": 2149,
+   "type": "PUBLIC",
+   "text": "2 December 2021"
+  },
+  {
+   "start": 2217,
+   "end": 2232,
+   "type": "PUBLIC",
+   "text": "Advance Payment"
+  },
+  {
+   "start": 2333,
+   "end": 2348,
+   "type": "PUBLIC",
+   "text": "Advance Payment"
+  },
+  {
+   "start": 2380,
+   "end": 2400,
+   "type": "PUBLIC",
+   "text": "Advance Payment Bond"
+  },
+  {
+   "start": 2534,
+   "end": 2549,
+   "type": "PUBLIC",
+   "text": "Advance Payment"
+  },
+  {
+   "start": 2667,
+   "end": 2674,
+   "type": "PUBLIC",
+   "text": "Project"
+  },
+  {
+   "start": 2727,
+   "end": 2738,
+   "type": "PUBLIC",
+   "text": "Expiry Date"
+  },
+  {
+   "start": 2746,
+   "end": 2751,
+   "type": "PUBLIC",
+   "text": "Bonds"
+  },
+  {
+   "start": 2844,
+   "end": 2855,
+   "type": "PUBLIC",
+   "text": "Expiry Date"
+  },
+  {
+   "start": 2930,
+   "end": 2935,
+   "type": "PUBLIC",
+   "text": "Bonds"
+  },
+  {
+   "start": 3048,
+   "end": 3053,
+   "type": "PUBLIC",
+   "text": "Bonds"
+  },
+  {
+   "start": 3068,
+   "end": 3074,
+   "type": "PUBLIC",
+   "text": "Part 8"
+  },
+  {
+   "start": 3155,
+   "end": 3171,
+   "type": "PUBLIC",
+   "text": "USD90,796,078.66"
+  },
+  {
+   "start": 3241,
+   "end": 3246,
+   "type": "PUBLIC",
+   "text": "Bonds"
+  },
+  {
+   "start": 3295,
+   "end": 3310,
+   "type": "PUBLIC",
+   "text": "Second Claimant"
+  },
+  {
+   "start": 3401,
+   "end": 3412,
+   "type": "PUBLIC",
+   "text": "Beneficiary"
+  },
+  {
+   "start": 3423,
+   "end": 3428,
+   "type": "PUBLIC",
+   "text": "Bonds"
+  },
+  {
+   "start": 3550,
+   "end": 3568,
+   "type": "PUBLIC",
+   "text": "illegality defence"
+  },
+  {
+   "start": 3598,
+   "end": 3611,
+   "type": "PUBLIC",
+   "text": "Spanish Court"
+  },
+  {
+   "start": 3687,
+   "end": 3692,
+   "type": "PUBLIC",
+   "text": "Bonds"
+  },
+  {
+   "start": 3699,
+   "end": 3717,
+   "type": "PUBLIC",
+   "text": "illegality defence"
+  },
+  {
+   "start": 3730,
+   "end": 3748,
+   "type": "PUBLIC",
+   "text": "illegality defence"
+  },
+  {
+   "start": 3799,
+   "end": 3806,
+   "type": "PUBLIC",
+   "text": "Spanish"
+  },
+  {
+   "start": 3863,
+   "end": 3877,
+   "type": "PUBLIC",
+   "text": "Ralli Brothers"
+  },
+  {
+   "start": 3940,
+   "end": 3947,
+   "type": "PUBLIC",
+   "text": "Spanish"
+  },
+  {
+   "start": 4007,
+   "end": 4021,
+   "type": "PUBLIC",
+   "text": "Ralli Brothers"
+  },
+  {
+   "start": 4061,
+   "end": 4066,
+   "type": "PUBLIC",
+   "text": "Bonds"
+  },
+  {
+   "start": 4071,
+   "end": 4081,
+   "type": "PUBLIC",
+   "text": "Mozambique"
+  },
+  {
+   "start": 4090,
+   "end": 4099,
+   "type": "PUBLIC",
+   "text": "Claimants"
+  },
+  {
+   "start": 4187,
+   "end": 4192,
+   "type": "PUBLIC",
+   "text": "Bonds"
+  },
+  {
+   "start": 4202,
+   "end": 4207,
+   "type": "PUBLIC",
+   "text": "Spain"
+  },
+  {
+   "start": 4465,
+   "end": 4479,
+   "type": "PUBLIC",
+   "text": "Ralli Brothers"
+  },
+  {
+   "start": 4533,
+   "end": 4538,
+   "type": "PUBLIC",
+   "text": "Spain"
+  },
+  {
+   "start": 4564,
+   "end": 4571,
+   "type": "PUBLIC",
+   "text": "Spanish"
+  },
+  {
+   "start": 4722,
+   "end": 4736,
+   "type": "PUBLIC",
+   "text": "Ralli Brothers"
+  },
+  {
+   "start": 4796,
+   "end": 4801,
+   "type": "PUBLIC",
+   "text": "Bonds"
+  },
+  {
+   "start": 4829,
+   "end": 4836,
+   "type": "PUBLIC",
+   "text": "Spanish"
+  },
+  {
+   "start": 4859,
+   "end": 4872,
+   "type": "PUBLIC",
+   "text": "10 April 2025"
+  }
+ ],
+ "notes": "Header and opening paragraphs (factual background, the four issues) of a Commercial Court judgment on an illegality defence to a demand under two autonomous bonds; annotated as if it were the client's own live file. SHOULD redact: the three parties in every surface form — the First Claimant's all-caps header name 'CENTRAL TÉRMICA DE TEMANE S.A.' and its defined acronym 'CTT' (every occurrence, incl. the definition in quotation marks); the Second Claimant 'CITIBANK, N.A., LONDON BRANCH' (the whole header line, branch included) and its defined short form 'Citi'; the Defendant 'BANCO SANTANDER S.A.' and the defined short form 'Santander' (every occurrence, incl. the possessive 'Santander’s'); the contractor group named in the file — 'TSK Group', 'TSK Electrónica y Electricidad, S.A.', 'TSK Moçambique Limitada' and the defined short form 'TSK' (the country in parentheses after each legal name is NOT part of the span); all five counsel with their KC post-nominal (Stephen Houseman KC, Nehali Shah KC, Moritz Grimm, Adrian Beltrami KC, Paul Bonner Hughes); the three instructing firms with their legal-form suffix (Greenwoods Legal Services Limited, Goodwin Procter (UK) LLP, Allen Overy Shearman Sterling LLP); the judge (ruling 4) under both forms, 'MR JUSTICE CALVER' in the all-caps header (without 'THE HONOURABLE') and 'Mr Justice Calver' — the judicial title is kept whole as the name, there is no first name or bare surname in the text; the document's own neutral citation '[2026] EWHC 2587 (Comm)' and docket number 'CL-2025-000494' (CASE_REF, as if live). SHOULD NOT redact: the court and its divisions (HIGH COURT OF JUSTICE, BUSINESS AND PROPERTY COURTS, COMMERCIAL COURT) and the court's own address lines 'Royal Courts of Justice, Rolls Building' and 'Fetter Lane, London, EC4A 1NL' (the only address in the document is the court's — a distractor, no party address is given); The National Archives; the unnamed 'Spanish Court' and its interim injunction; 'Part 8' (CPR); the cited precedent 'Ralli Brothers' (ruling 2, four occurrences); the countries Mozambique and Spain and the bare locality 'Temane' (ruling 6 — gold only inside the party's all-caps name); dates (13/10/2026, the hearing dates, 2 December 2021, 1 December 2024, 5 November 2024, 28 February 2026, 10 April 2025), the hand-down time, the amount USD90,796,078.66, '450 MW'; the generic roles 'First Claimant', 'Second Claimant', 'Claimants', 'Defendant' / 'Defendant-bank', 'the Judge', 'the parties' representatives', 'the contractors', 'its customer', 'beneficiary' / 'Beneficiary'; the defined terms 'Project', 'EPC' / 'EPC Contract', 'Coordination Agreement', 'Bonds' / 'theBonds', 'Advance Payment Bond', 'Performance Bond', 'Advance Payment', 'Expiry Date', 'the illegality defence'. Traps genuinely present: four all-caps header names; acronym-defined short forms (CTT, Citi, Santander, TSK) carrying most of the occurrences; honorific-only judge (title + surname, never a first name); role noise throughout; party names adjacent to public surfaces (LONDON inside the Citibank header line, '(Spain)' and '(Mozambique)' right after the TSK legal names, 'Santander' next to 'Ralli Brothers'); the live docket number CL-2025-000494 next to the public court header. The policy leaves only three gold types (ORG, PERSON, CASE_REF) — the whole judgment contains no e-mail, phone, IBAN, URL or party address. ADJUDICATION (two blind annotators, 2026-10-15): the two entity sets are identical — 21 distinct surfaces case-insensitively (22 entries, the judge in two case variants), same types, no disagreement; nothing resolved for either side. Judgment calls both annotators made the same way and the reconciler confirms: (i) 'THE HONOURABLE' excluded from the header span, 'MR JUSTICE CALVER' / 'Mr Justice Calver' kept whole as the judge's name (ruling 4, honorific convention); (ii) the TSK companies are not parties but the named private counterparty whose underlying dispute identifies the matter — kept gold 'as if confidential', flagged for a ruling since the policy text lists only 'the parties'; (iii) 'TSK Group' stays an ORG span — ruling 7's 'group names are not identifiers' concerns WhatsApp group names, not a corporate group; (iv) '[2026] EWHC 2587 (Comm)' is the document's OWN neutral citation, CASE_REF as if live, not a cited precedent; (v) 'Temane' bare is public (ruling 6), gold only inside the party name; (vi) 'London' in the court address is public (and already inside the public address line), 'LONDON' inside the Citibank header is gold by the longer ORG span. Public distractors merged from the second annotator: 'Spanish', 'EPC', 'Co-ordination Agreement', 'Bonds', 'Advance Payment', 'Expiry Date', 'Beneficiary', 'illegality defence', 'Neutral Citation Number', 'Case No', '450 MW' and the main dates. Validator: 'Santander' collided with the real bank named in passing in synthetic doc_013 ('Banco Santander'); a real bank is not a synthetic fingerprint, so 'santander' / 'banco santander' were added to the validator's shared-bank allowlist rather than dropping a party surface from gold.",
+ "source": "public-Find Case Law (The National Archives), England & Wales — atom feeds court=ewhc/comm, ewhc/ch, ewca/civ (per_page=20), each entry's data.xml (LegalDocML) fetched with curl -A \"JudeBenchmark/0.8 (https://github.com/bachdanslesbach/Jude)\", one second apart. 8 of the 12-request budget used (3 feeds + 5 judgments), all HTTP 200. Text obtained by stripping tags (block elements become line breaks, inline tags dropped, <meta> block removed), html.unescape, whitespace runs collapsed within a line. Excerpts are lines 1..N of the stripped text, cut at a paragraph end; word counts verified with Python (str.split and an alphanumeric-token regex both inside 450–900). Written only to /Users/etienne/project/ano/benchmark/public/raw/ (created); nothing committed. Scratch copies of the full stripped texts are in the session scratchpad (fcl_txt/) if a different cut is wanted.",
+ "split": "public",
+ "genre": "judgment",
+ "traps": [
+  "all-caps-header",
+  "acronym-defined",
+  "honorific-only",
+  "role-noise",
+  "adjacent-public",
+  "internal-docket"
+ ],
+ "provenance": {
+  "source": "Find Case Law (The National Archives)",
+  "url": "https://caselaw.nationalarchives.gov.uk/ewhc/comm/2026/2587",
+  "court": "High Court of Justice, Business and Property Courts, Commercial Court (KBD)",
+  "date": "2026-10-13",
+  "licence": "Open Justice Licence / Open Government Licence v3.0",
+  "attribution": "Contains public sector information licensed under the Open Government Licence v3.0; judgment published by The National Archives (Find Case Law)"
+ }
+}

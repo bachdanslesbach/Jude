@@ -1,0 +1,23 @@
+{
+  "title": "NoCopyrightSounds Limited v AEI Music Limited & Anor",
+  "court": "High Court of Justice, Business and Property Courts, Intellectual Property List (ChD)",
+  "date": "2026-09-15",
+  "url": "https://caselaw.nationalarchives.gov.uk/ewhc/ch/2026/2360",
+  "data_url": "https://caselaw.nationalarchives.gov.uk/ewhc/ch/2026/2360/data.xml",
+  "neutral_citation": "[2026] EWHC 2360 (Ch)",
+  "case_number": "IL-2025-000220",
+  "licence": "Open Justice Licence / Open Government Licence v3.0",
+  "attribution": "Contains public sector information licensed under the Open Government Licence v3.0; judgment published by The National Archives (Find Case Law)",
+  "language": "en",
+  "genre": "judgment",
+  "source": "Find Case Law (The National Archives)",
+  "jurisdiction": "England and Wales",
+  "excerpt": {
+    "from_line": 1,
+    "to_line": 104,
+    "words": 781,
+    "note": "verbatim from data.xml stripped to text; header plus opening substantive paragraphs"
+  },
+  "fetched": "2026-10-15",
+  "user_agent": "JudeBenchmark/0.8 (https://github.com/bachdanslesbach/Jude)"
+}

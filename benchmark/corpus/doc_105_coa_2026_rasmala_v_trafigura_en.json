@@ -1,0 +1,696 @@
+{
+ "id": "doc_105_coa_2026_rasmala_v_trafigura_en",
+ "title": "Rasmala Trade Finance Fund v Trafigura Pte Ltd",
+ "language": "en",
+ "text": "Neutral Citation Number:\n[2026] EWCA Civ 1259\n\nCase No:\nCA-2025-001931\n\nIN THE COURT OF APPEAL (CIVIL DIVISION)\n\nON APPEAL FROM THE HIGH COURT OF JUSTICE\n\nBUSINESS AND PROPERTY COURTS OF ENGLAND AND WALES\n\nBUSINESS LIST (ChD)\n\nMr Justice Rajah\n\n[2025] EWHC 1569 (Ch)\n\nRoyal Courts of Justice\n\nStrand, London, WC2A 2LL\n\nDate:\n7 October 2026\n\nBefore :\n\nLORD JUSTICE BAKER\n\nLORD JUSTICE NUGEE\n\nand\n\nLADY JUSTICE FALK\n\n- - - - - - - - - - - - - - - - - - - - -\n\nBetween :\n\nRASMALA TRADE FINANCE FUND\n\nClaimant / Appellant\n\n- and -\n\nTRAFIGURA PTE LTD\n\nDefendant/\n\nRespondent\n\n- - - - - - - - - - - - - - - - - - - - -\n\n- - - - - - - - - - - - - - - - - - - - -\n\nJonathan Adkin KC and Adil Mohamedbhai (instructed by Hill Dickinson LLP)\n\nfor the Appellant\n\nNeil Kitchener KC and James Nadin (instructed by Reed Smith LLP)\n\nfor the Respondent\n\nHearing dates: 30 June and 1 July 2026\n\n- - - - - - - - - - - - - - - - - - - - -\n\nApproved Judgment\n\nThis judgment was handed down remotely at 10.30am on 7 October 2026 by circulation to the parties or their representatives by e-mail and by release to the National Archives.\n\n.............................\n\nLord Justice Nugee:\n\nIntroduction\n\n1.\n\nThis appeal from the High Court concerns a claim by the Appellant, Rasmala Trade Finance Fund (“Rasmala”), to recover money paid by mistake to the Respondent, Trafigura Pte Ltd (“Trafigura”).\n\n2.\n\nBetween August 2017 and March 2018 Rasmala made 5 payments to Trafigura totalling over $22.6m (save for references to A$ (Australian $), all references to $ are to US$) in the belief that it was financing particular coal trading contracts for the supply of coal by Trafigura to a coal trader called Farlin Energy & Commodities FZE (“Farlin”). In fact Farlin had committed a fraud on Rasmala and none of the supposed contracts were valid. Rasmala sought restitution of the moneys it had paid from Trafigura.\n\n3.\n\nThe claim was tried by Rajah J (“the Judge”) in March and April 2025 and he handed down judgment on 23 June 2025 at [2025] EWHC 1569 (Ch) (“the Judgment”). He accepted that Rasmala only made the payments because of its mistaken belief that it was making payments on genuine contracts and that Trafigura had been enriched at its expense. Nevertheless the claim failed because Trafigura had a defence of change of position. If it had not received the payments (which it believed were valid and that it could apply to Farlin’s outstanding indebtedness) Trafigura would not have continued to trade with Farlin because further deliveries would have exceeded Farlin’s credit limit. In fact it entered into a series of new contracts with Farlin between September 2017 and May 2018 with an invoice value of just under $60m, and when it eventually stopped trading with Farlin, Trafigura was owed slightly more than it had been before receiving the first payment. The Judge held that in those circumstances it would be inequitable to require Trafigura to make any repayment. He therefore dismissed the claim.\n\n4.\n\nRasmala appeals with permission granted by Miles LJ. We heard from Mr Jonathan Adkin KC and Mr Adil Mohamedbhai for Rasmala; and from Mr Neil Kitchener KC and Mr James Nadin for Trafigura.\n\n5.\n\nFor the reasons that follow I prefer the submissions for Trafigura and would dismiss the appeal.\n\nFacts\n\n6.\n\nThe facts were to some extent contentious at trial but I can take them from the findings made by the Judge in the Judgment. These can be summarised as follows.\n\n7.\n\nTrafigura is an international commodities trader incorporated in Singapore. One of its customers was Farlin, which had been a customer of Trafigura since September 2015. In 2016 Trafigura granted Farlin an open credit limit of approximately $2m. In December 2016 Trafigura increased the limit to $11m, supported by insurance cover for 50% of the limit. Trafigura made some small adjustments in 2017 and early 2018 and thereafter the limit was between $10m and $11m. By July and August 2017 Farlin was struggling to remain within the limit and was late in making payments.\n",
+ "gold_spans": [
+  {
+   "start": 25,
+   "end": 45,
+   "type": "CASE_REF",
+   "text": "[2026] EWCA Civ 1259"
+  },
+  {
+   "start": 56,
+   "end": 70,
+   "type": "CASE_REF",
+   "text": "CA-2025-001931"
+  },
+  {
+   "start": 227,
+   "end": 243,
+   "type": "PERSON",
+   "text": "Mr Justice Rajah"
+  },
+  {
+   "start": 245,
+   "end": 266,
+   "type": "CASE_REF",
+   "text": "[2025] EWHC 1569 (Ch)"
+  },
+  {
+   "start": 351,
+   "end": 369,
+   "type": "PERSON",
+   "text": "LORD JUSTICE BAKER"
+  },
+  {
+   "start": 371,
+   "end": 389,
+   "type": "PERSON",
+   "text": "LORD JUSTICE NUGEE"
+  },
+  {
+   "start": 396,
+   "end": 413,
+   "type": "PERSON",
+   "text": "LADY JUSTICE FALK"
+  },
+  {
+   "start": 469,
+   "end": 495,
+   "type": "ORG",
+   "text": "RASMALA TRADE FINANCE FUND"
+  },
+  {
+   "start": 528,
+   "end": 545,
+   "type": "ORG",
+   "text": "TRAFIGURA PTE LTD"
+  },
+  {
+   "start": 657,
+   "end": 674,
+   "type": "PERSON",
+   "text": "Jonathan Adkin KC"
+  },
+  {
+   "start": 679,
+   "end": 695,
+   "type": "PERSON",
+   "text": "Adil Mohamedbhai"
+  },
+  {
+   "start": 711,
+   "end": 729,
+   "type": "ORG",
+   "text": "Hill Dickinson LLP"
+  },
+  {
+   "start": 751,
+   "end": 768,
+   "type": "PERSON",
+   "text": "Neil Kitchener KC"
+  },
+  {
+   "start": 773,
+   "end": 784,
+   "type": "PERSON",
+   "text": "James Nadin"
+  },
+  {
+   "start": 800,
+   "end": 814,
+   "type": "ORG",
+   "text": "Reed Smith LLP"
+  },
+  {
+   "start": 1145,
+   "end": 1163,
+   "type": "PERSON",
+   "text": "Lord Justice Nugee"
+  },
+  {
+   "start": 1251,
+   "end": 1277,
+   "type": "ORG",
+   "text": "Rasmala Trade Finance Fund"
+  },
+  {
+   "start": 1280,
+   "end": 1287,
+   "type": "ORG",
+   "text": "Rasmala"
+  },
+  {
+   "start": 1343,
+   "end": 1360,
+   "type": "ORG",
+   "text": "Trafigura Pte Ltd"
+  },
+  {
+   "start": 1363,
+   "end": 1372,
+   "type": "ORG",
+   "text": "Trafigura"
+  },
+  {
+   "start": 1416,
+   "end": 1423,
+   "type": "ORG",
+   "text": "Rasmala"
+  },
+  {
+   "start": 1443,
+   "end": 1452,
+   "type": "ORG",
+   "text": "Trafigura"
+  },
+  {
+   "start": 1646,
+   "end": 1655,
+   "type": "ORG",
+   "text": "Trafigura"
+  },
+  {
+   "start": 1680,
+   "end": 1711,
+   "type": "ORG",
+   "text": "Farlin Energy & Commodities FZE"
+  },
+  {
+   "start": 1714,
+   "end": 1720,
+   "type": "ORG",
+   "text": "Farlin"
+  },
+  {
+   "start": 1732,
+   "end": 1738,
+   "type": "ORG",
+   "text": "Farlin"
+  },
+  {
+   "start": 1764,
+   "end": 1771,
+   "type": "ORG",
+   "text": "Rasmala"
+  },
+  {
+   "start": 1819,
+   "end": 1826,
+   "type": "ORG",
+   "text": "Rasmala"
+  },
+  {
+   "start": 1877,
+   "end": 1886,
+   "type": "ORG",
+   "text": "Trafigura"
+  },
+  {
+   "start": 1916,
+   "end": 1923,
+   "type": "PERSON",
+   "text": "Rajah J"
+  },
+  {
+   "start": 2009,
+   "end": 2030,
+   "type": "CASE_REF",
+   "text": "[2025] EWHC 1569 (Ch)"
+  },
+  {
+   "start": 2066,
+   "end": 2073,
+   "type": "ORG",
+   "text": "Rasmala"
+  },
+  {
+   "start": 2186,
+   "end": 2195,
+   "type": "ORG",
+   "text": "Trafigura"
+  },
+  {
+   "start": 2268,
+   "end": 2277,
+   "type": "ORG",
+   "text": "Trafigura"
+  },
+  {
+   "start": 2408,
+   "end": 2414,
+   "type": "ORG",
+   "text": "Farlin"
+  },
+  {
+   "start": 2443,
+   "end": 2452,
+   "type": "ORG",
+   "text": "Trafigura"
+  },
+  {
+   "start": 2492,
+   "end": 2498,
+   "type": "ORG",
+   "text": "Farlin"
+  },
+  {
+   "start": 2546,
+   "end": 2552,
+   "type": "ORG",
+   "text": "Farlin"
+  },
+  {
+   "start": 2624,
+   "end": 2630,
+   "type": "ORG",
+   "text": "Farlin"
+  },
+  {
+   "start": 2753,
+   "end": 2759,
+   "type": "ORG",
+   "text": "Farlin"
+  },
+  {
+   "start": 2761,
+   "end": 2770,
+   "type": "ORG",
+   "text": "Trafigura"
+  },
+  {
+   "start": 2925,
+   "end": 2934,
+   "type": "ORG",
+   "text": "Trafigura"
+  },
+  {
+   "start": 2997,
+   "end": 3004,
+   "type": "ORG",
+   "text": "Rasmala"
+  },
+  {
+   "start": 3040,
+   "end": 3048,
+   "type": "PERSON",
+   "text": "Miles LJ"
+  },
+  {
+   "start": 3067,
+   "end": 3084,
+   "type": "PERSON",
+   "text": "Jonathan Adkin KC"
+  },
+  {
+   "start": 3092,
+   "end": 3108,
+   "type": "PERSON",
+   "text": "Adil Mohamedbhai"
+  },
+  {
+   "start": 3113,
+   "end": 3120,
+   "type": "ORG",
+   "text": "Rasmala"
+  },
+  {
+   "start": 3134,
+   "end": 3151,
+   "type": "PERSON",
+   "text": "Neil Kitchener KC"
+  },
+  {
+   "start": 3159,
+   "end": 3170,
+   "type": "PERSON",
+   "text": "James Nadin"
+  },
+  {
+   "start": 3175,
+   "end": 3184,
+   "type": "ORG",
+   "text": "Trafigura"
+  },
+  {
+   "start": 3248,
+   "end": 3257,
+   "type": "ORG",
+   "text": "Trafigura"
+  },
+  {
+   "start": 3465,
+   "end": 3474,
+   "type": "ORG",
+   "text": "Trafigura"
+  },
+  {
+   "start": 3566,
+   "end": 3572,
+   "type": "ORG",
+   "text": "Farlin"
+  },
+  {
+   "start": 3603,
+   "end": 3612,
+   "type": "ORG",
+   "text": "Trafigura"
+  },
+  {
+   "start": 3643,
+   "end": 3652,
+   "type": "ORG",
+   "text": "Trafigura"
+  },
+  {
+   "start": 3661,
+   "end": 3667,
+   "type": "ORG",
+   "text": "Farlin"
+  },
+  {
+   "start": 3728,
+   "end": 3737,
+   "type": "ORG",
+   "text": "Trafigura"
+  },
+  {
+   "start": 3818,
+   "end": 3827,
+   "type": "ORG",
+   "text": "Trafigura"
+  },
+  {
+   "start": 3955,
+   "end": 3961,
+   "type": "ORG",
+   "text": "Farlin"
+  }
+ ],
+ "public_spans": [
+  {
+   "start": 0,
+   "end": 23,
+   "type": "PUBLIC",
+   "text": "Neutral Citation Number"
+  },
+  {
+   "start": 47,
+   "end": 54,
+   "type": "PUBLIC",
+   "text": "Case No"
+  },
+  {
+   "start": 79,
+   "end": 111,
+   "type": "PUBLIC",
+   "text": "COURT OF APPEAL (CIVIL DIVISION)"
+  },
+  {
+   "start": 132,
+   "end": 153,
+   "type": "PUBLIC",
+   "text": "HIGH COURT OF JUSTICE"
+  },
+  {
+   "start": 155,
+   "end": 204,
+   "type": "PUBLIC",
+   "text": "BUSINESS AND PROPERTY COURTS OF ENGLAND AND WALES"
+  },
+  {
+   "start": 206,
+   "end": 225,
+   "type": "PUBLIC",
+   "text": "BUSINESS LIST (ChD)"
+  },
+  {
+   "start": 268,
+   "end": 291,
+   "type": "PUBLIC",
+   "text": "Royal Courts of Justice"
+  },
+  {
+   "start": 293,
+   "end": 317,
+   "type": "PUBLIC",
+   "text": "Strand, London, WC2A 2LL"
+  },
+  {
+   "start": 325,
+   "end": 339,
+   "type": "PUBLIC",
+   "text": "7 October 2026"
+  },
+  {
+   "start": 497,
+   "end": 517,
+   "type": "PUBLIC",
+   "text": "Claimant / Appellant"
+  },
+  {
+   "start": 547,
+   "end": 556,
+   "type": "PUBLIC",
+   "text": "Defendant"
+  },
+  {
+   "start": 559,
+   "end": 569,
+   "type": "PUBLIC",
+   "text": "Respondent"
+  },
+  {
+   "start": 736,
+   "end": 749,
+   "type": "PUBLIC",
+   "text": "the Appellant"
+  },
+  {
+   "start": 821,
+   "end": 835,
+   "type": "PUBLIC",
+   "text": "the Respondent"
+  },
+  {
+   "start": 852,
+   "end": 875,
+   "type": "PUBLIC",
+   "text": "30 June and 1 July 2026"
+  },
+  {
+   "start": 920,
+   "end": 937,
+   "type": "PUBLIC",
+   "text": "Approved Judgment"
+  },
+  {
+   "start": 981,
+   "end": 988,
+   "type": "PUBLIC",
+   "text": "10.30am"
+  },
+  {
+   "start": 992,
+   "end": 1006,
+   "type": "PUBLIC",
+   "text": "7 October 2026"
+  },
+  {
+   "start": 1094,
+   "end": 1111,
+   "type": "PUBLIC",
+   "text": "National Archives"
+  },
+  {
+   "start": 1205,
+   "end": 1215,
+   "type": "PUBLIC",
+   "text": "High Court"
+  },
+  {
+   "start": 1236,
+   "end": 1249,
+   "type": "PUBLIC",
+   "text": "the Appellant"
+  },
+  {
+   "start": 1327,
+   "end": 1341,
+   "type": "PUBLIC",
+   "text": "the Respondent"
+  },
+  {
+   "start": 1389,
+   "end": 1400,
+   "type": "PUBLIC",
+   "text": "August 2017"
+  },
+  {
+   "start": 1405,
+   "end": 1415,
+   "type": "PUBLIC",
+   "text": "March 2018"
+  },
+  {
+   "start": 1468,
+   "end": 1474,
+   "type": "PUBLIC",
+   "text": "$22.6m"
+  },
+  {
+   "start": 1499,
+   "end": 1501,
+   "type": "PUBLIC",
+   "text": "A$"
+  },
+  {
+   "start": 1503,
+   "end": 1515,
+   "type": "PUBLIC",
+   "text": "Australian $"
+  },
+  {
+   "start": 1545,
+   "end": 1548,
+   "type": "PUBLIC",
+   "text": "US$"
+  },
+  {
+   "start": 1661,
+   "end": 1672,
+   "type": "PUBLIC",
+   "text": "coal trader"
+  },
+  {
+   "start": 1926,
+   "end": 1935,
+   "type": "PUBLIC",
+   "text": "the Judge"
+  },
+  {
+   "start": 1941,
+   "end": 1961,
+   "type": "PUBLIC",
+   "text": "March and April 2025"
+  },
+  {
+   "start": 1993,
+   "end": 2005,
+   "type": "PUBLIC",
+   "text": "23 June 2025"
+  },
+  {
+   "start": 2033,
+   "end": 2045,
+   "type": "PUBLIC",
+   "text": "the Judgment"
+  },
+  {
+   "start": 2639,
+   "end": 2653,
+   "type": "PUBLIC",
+   "text": "September 2017"
+  },
+  {
+   "start": 2658,
+   "end": 2666,
+   "type": "PUBLIC",
+   "text": "May 2018"
+  },
+  {
+   "start": 2703,
+   "end": 2707,
+   "type": "PUBLIC",
+   "text": "$60m"
+  },
+  {
+   "start": 3397,
+   "end": 3406,
+   "type": "PUBLIC",
+   "text": "the Judge"
+  },
+  {
+   "start": 3410,
+   "end": 3422,
+   "type": "PUBLIC",
+   "text": "the Judgment"
+  },
+  {
+   "start": 3481,
+   "end": 3513,
+   "type": "PUBLIC",
+   "text": "international commodities trader"
+  },
+  {
+   "start": 3530,
+   "end": 3539,
+   "type": "PUBLIC",
+   "text": "Singapore"
+  },
+  {
+   "start": 3619,
+   "end": 3633,
+   "type": "PUBLIC",
+   "text": "September 2015"
+  },
+  {
+   "start": 3638,
+   "end": 3642,
+   "type": "PUBLIC",
+   "text": "2016"
+  },
+  {
+   "start": 3706,
+   "end": 3709,
+   "type": "PUBLIC",
+   "text": "$2m"
+  },
+  {
+   "start": 3714,
+   "end": 3727,
+   "type": "PUBLIC",
+   "text": "December 2016"
+  },
+  {
+   "start": 3761,
+   "end": 3765,
+   "type": "PUBLIC",
+   "text": "$11m"
+  },
+  {
+   "start": 3800,
+   "end": 3803,
+   "type": "PUBLIC",
+   "text": "50%"
+  },
+  {
+   "start": 3859,
+   "end": 3863,
+   "type": "PUBLIC",
+   "text": "2017"
+  },
+  {
+   "start": 3868,
+   "end": 3878,
+   "type": "PUBLIC",
+   "text": "early 2018"
+  },
+  {
+   "start": 3916,
+   "end": 3920,
+   "type": "PUBLIC",
+   "text": "$10m"
+  },
+  {
+   "start": 3925,
+   "end": 3929,
+   "type": "PUBLIC",
+   "text": "$11m"
+  },
+  {
+   "start": 3934,
+   "end": 3954,
+   "type": "PUBLIC",
+   "text": "July and August 2017"
+  }
+ ],
+ "notes": "Real Court of Appeal judgment (restitution of payments made by mistake; change-of-position defence), header and paragraphs 1–7, annotated as if it were a client's confidential file sent to an outside LLM. SHOULD redact: the two parties in every surface form — the all-caps header lines RASMALA TRADE FINANCE FUND and TRAFIGURA PTE LTD, the full names with legal-form suffix in paragraph 1, and the defined short forms Rasmala (7 bare occurrences) and Trafigura (16) used bare throughout; the third-party coal trader Farlin Energy & Commodities FZE and its defined short form Farlin (incl. the possessive Farlin’s) — not a party, but an obscure company whose name identifies the matter as surely as the parties do; the four counsel, named once in the header without honorific and once in paragraph 4 with 'Mr' (the surface excludes 'Mr' and keeps the post-nominal KC: Jonathan Adkin KC, Adil Mohamedbhai, Neil Kitchener KC, James Nadin); their instructing firms Hill Dickinson LLP and Reed Smith LLP; the judges named in the document (ruling 4) — the first-instance judge as 'Mr Justice Rajah' (judicial title kept whole with the bare surname) and 'Rajah J', the constitution LORD JUSTICE BAKER, LORD JUSTICE NUGEE, LADY JUSTICE FALK in the header and 'Lord Justice Nugee' as author, and 'Miles LJ' who granted permission; the matter's own references as if live (ruling 2 applied to the document's own numbers): the neutral citation [2026] EWCA Civ 1259, the Court of Appeal case number CA-2025-001931, and the first-instance citation [2025] EWHC 1569 (Ch) (twice) — the judgment below is the same matter, not a cited precedent, and left in clear it re-identifies both parties in one lookup, the same re-identification logic as ruling 3. SHOULD NOT redact: the court and its seat — COURT OF APPEAL (CIVIL DIVISION), HIGH COURT OF JUSTICE, BUSINESS AND PROPERTY COURTS OF ENGLAND AND WALES, BUSINESS LIST (ChD), Royal Courts of Justice and its address line Strand, London, WC2A 2LL (a court's address, not a party's — a postcode-bearing line the detector will probably redact, counted as a false positive by design), 'the High Court'; the National Archives; the country Singapore (ruling 6); the role words and defined terms Claimant / Appellant, Defendant / Respondent, the Appellant, the Respondent, the Judge, the Judgment, the descriptions 'coal trader' and 'international commodities trader'; the dates (7 October 2026, 30 June and 1 July 2026, 23 June 2025, August 2017 – May 2018), the amounts ($22.6m, $60m, $2m, $11m, $10m, 50%), the currency notes (A$, US$), section headings (Introduction, Facts, Approved Judgment) and paragraph numbers. Traps present: all-caps-header (party and judge names in capitals in the header); acronym-defined in its short-form variant (X (“Rasmala”), X (“Trafigura”), X (“Farlin”) then bare); honorific-only and surname-only (judges appear only as title + surname or surname + post-nominal — Mr Justice Rajah, Rajah J, Miles LJ, Lord Justice Nugee — never with a first name); role-noise (the Appellant, the Respondent, the Judge, the Judgment); adjacent-public (the first-instance judge's name sits directly under the court's name in the header; 'Trafigura … incorporated in Singapore'; 'the Appellant, Rasmala Trade Finance Fund'); internal-docket (CA-2025-001931). Doubts for the reviewer: (i) whether the judgment below's published citation should follow ruling 2 and stay public rather than gold; (ii) whether Farlin, a non-party, should be gold — kept gold because a named private company in a confidential file is an identifier whatever its procedural role. Only three entity types occur (PERSON, ORG, CASE_REF): the full judgment contains no e-mail, URL, phone, account number or party address, and its only place names are countries. ADJUDICATION (2026-10-15, second annotator blind to this spec): the two entity sets are identical — 24 surfaces, same types, no gold/public conflict; the second annotator's occurrence count (Rasmala 7, Trafigura 16, Farlin 10 incl. the possessive) matches the build (59 gold spans). Settled: 'Miles LJ' (granted permission, not on the bench) is gold PERSON under ruling 4 — both agreed; 'Mr Justice Rajah' is kept whole under ruling 5 (title included with a bare surname) — both agreed. The public list was enriched with the second annotator's non-gold surfaces that occur in the text (header labels, role words, 'coal trader', dates, amounts, currency notes); surfaces that would be no-ops at build were not added: 'KC', 'LJ', 'Lord Justice' (every occurrence sits inside a gold name span — gold wins on overlap — and they are not gold on their own), 'London' (sits inside the court address line, itself public under ruling 6), 'England and Wales' and 'Lady Justice' (do not occur in that case). Two doubts remain for the lawyer, both annotators having independently reached the same answer: (i) '[2025] EWHC 1569 (Ch)' — the judgment below in the same proceedings, kept gold as the matter's own reference although ruling 2 as written makes published citations public; (ii) 'Farlin Energy & Commodities FZE' / 'Farlin' — a non-party, kept gold although the policy text enumerates 'the parties'.",
+ "source": "public-Find Case Law (The National Archives), England & Wales — atom feeds court=ewhc/comm, ewhc/ch, ewca/civ (per_page=20), each entry's data.xml (LegalDocML) fetched with curl -A \"JudeBenchmark/0.8 (https://github.com/bachdanslesbach/Jude)\", one second apart. 8 of the 12-request budget used (3 feeds + 5 judgments), all HTTP 200. Text obtained by stripping tags (block elements become line breaks, inline tags dropped, <meta> block removed), html.unescape, whitespace runs collapsed within a line. Excerpts are lines 1..N of the stripped text, cut at a paragraph end; word counts verified with Python (str.split and an alphanumeric-token regex both inside 450–900). Written only to /Users/etienne/project/ano/benchmark/public/raw/ (created); nothing committed. Scratch copies of the full stripped texts are in the session scratchpad (fcl_txt/) if a different cut is wanted.",
+ "split": "public",
+ "genre": "judgment",
+ "traps": [
+  "all-caps-header",
+  "acronym-defined",
+  "honorific-only",
+  "surname-only",
+  "role-noise",
+  "adjacent-public",
+  "internal-docket"
+ ],
+ "provenance": {
+  "source": "Find Case Law (The National Archives)",
+  "url": "https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/1259",
+  "data_url": "https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/1259/data.xml",
+  "court": "Court of Appeal (Civil Division)",
+  "date": "2026-10-07",
+  "neutral_citation": "[2026] EWCA Civ 1259",
+  "case_number": "CA-2025-001931",
+  "licence": "Open Justice Licence / Open Government Licence v3.0",
+  "attribution": "Contains public sector information licensed under the Open Government Licence v3.0; judgment published by The National Archives (Find Case Law)",
+  "fetched": "2026-10-15",
+  "excerpt": "lines 1–106 of the stripped data.xml text (header and paragraphs 1–7), verbatim"
+ }
+}

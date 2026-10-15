@@ -1,0 +1,121 @@
+NOTE: This disposition is nonprecedential.
+United States Court of Appeals
+for the Federal Circuit
+______________________
+ALEXSAM, INC.,
+Plaintiff-Appellee
+v.
+SIMON PROPERTY GROUP, L.P.,
+Defendant-Appellant
+BLACKHAWK NETWORK, INC.,
+Defendant-Appellee
+US BANK NA,
+Defendant
+______________________
+2025-1138
+______________________
+Appeal from the United States District Court for the
+Eastern District of Texas in No. 2:19-cv-00331-RWS-RSP,
+Judge Robert Schroeder, III.
+______________________
+Decided: October 5, 2026
+______________________
+CHRIS HOOD, Heninger Garrison Davis, LLC, Birming-
+ham, AL, argued for plaintiff-appellee. Also represented
+by TIMOTHY C. DAVIS, W. LEE GRESHAM, III; JACQUELINE
+KNAPP BURT, Atlanta, GA; STEVEN RITCHESON, Insight,
+Case: 25-1138 Document: 80 Page: 1 Filed: 10/05/2026
+2 ALEXSAM, INC. v. SIMON PROPERTY GROUP, L.P.
+PLC, Marina del Rey, CA.
+TODD E. LUNDELL, Sheppard Mullin Richter & Hamp-
+ton LLP, Costa Mesa, CA, argued for third-party defend-
+ant-appellee. Also represented by MARTIN BADER, San
+Diego, CA; ROBERT E. HOUGH, II, Dallas, TX.
+MATTHEW ERIC FISCHER, Potter Anderson & Corroon,
+LLP, Wilmington, DE, argued for defendant-appellant.
+Also represented by JAMES MATTHEW BELGER, TYLER E.
+CRAGG; TIMOTHY J. CARROLL, Orrick, Herrington & Sut-
+cliffe LLP, Chicago, IL; LAURA A. WYTSMA, Los Angeles,
+CA.
+______________________
+Before DYK, PROST, and CUNNINGHAM, Circuit Judges.
+DYK, Circuit Judge.
+AlexSam, Inc. (“AlexSam”) owns U.S. Patent
+No. 6,000,608 (“’608 patent”) covering systems facilitating
+use of multifunction cards, including prepaid gift cards.
+AlexSam sued Simon Property Group, L.P. (“Simon”) for
+infringement in the Eastern District of Texas. Simon filed
+a third-party indemnification complaint including a claim
+for attorneys’ fees against Blackhawk Network, Inc.
+(“Blackhawk”), which Simon alleged had supplied it with
+the allegedly infringing gift cards. The district court en-
+tered summary judgment of noninfringement, and the
+court later amended the judgment to dismiss all “counter-
+claims or other claims” as moot. Simon filed a motion
+styled in part as one under Rule 60(a) urging that its third-
+party claim was not moot. The district court denied the
+motion, and Simon appealed.
+We conclude that Simon’s motion should be construed
+as a Rule 60(b) motion; that relief was available to Simon
+under Rule 60(b)(1); and that the district court erred in dis-
+Case: 25-1138 Document: 80 Page: 2 Filed: 10/05/2026
+ALEXSAM, INC. v. SIMON PROPERTY GROUP, L.P. 3
+missing the third-party claim as moot. We vacate the dis-
+trict court’s order and remand with instructions that the
+district court enter a new order dismissing Simon’s indem-
+nification claim without prejudice pursuant to 28 U.S.C.
+§ 1367(c).
+BACKGROUND
+The ’608 patent owned by AlexSam covers systems fa-
+cilitating the use of multifunction cards, including prepaid
+gift cards. See AlexSam, Inc. v. Simon Prop. Grp., L.P.
+(AlexSam I), 2024 WL 1364345, at *1 (Fed. Cir. Apr. 1,
+2024). AlexSam brought suit against Simon, a seller of gift
+cards, for infringement of the ’608 patent in 2019.
+Simon then filed a third-party contractual complaint
+arising under state law against Blackhawk in June of 2020
+based on a 2014 agreement under which Blackhawk would
+provide the allegedly infringing gift cards to Simon. That
+agreement allegedly contained an indemnification provi-
+sion “which obligated Blackhawk to indemnify and defend
+Simon for alleged infringement,” including attorneys’ fees.
+Appellant’s Br. 8.
+In May 2021, AlexSam amended its complaint to assert
+infringement against Blackhawk, and Simon filed a coun-
+terclaim seeking a declaration that AlexSam’s ’608 patent
+was invalid. In September 2021, Simon and Blackhawk
+each filed motions for summary judgment of invalidity and
+noninfringement.
+On March 16, 2022, the district court granted sum-
+mary judgment of noninfringement and two days later en-
+tered a final judgment dismissing the “cause” with
+prejudice and stating that “[a]ll motions by either party not
+Case: 25-1138 Document: 80 Page: 3 Filed: 10/05/2026
+4 ALEXSAM, INC. v. SIMON PROPERTY GROUP, L.P.
+previously ruled on are hereby DENIED-AS-MOOT.”
+J.A. 1514.1 AlexSam appealed on March 31, 2022.
+On April 4, 2022, Simon and Blackhawk moved for ex-
+penses and attorneys’ fees under 35 U.S.C. § 285 and
+28 U.S.C. § 1927 as well as sanctions under Rule 11 and
+the court’s inherent powers (collectively, “fees motions”).
+On April 15, 2022, Simon and Blackhawk filed a joint mo-
+tion with the district court, styled as one under Rule 59(e)
+of the Federal Rules of Civil Procedure. In that motion,
+Simon and Blackhawk asserted that AlexSam’s appeal was
+premature because Simon’s invalidity counterclaim had
+not yet been adjudicated; in a footnote, the motion added
+that the “appeal [wa]s also premature because Simon[’s]
+third-party claim[] against . . . Blackhawk . . . ha[d] not
+been adjudicated.” J.A. 1952. We deactivated the appeal
+to allow the district court to resolve the April 15 motion.
+The magistrate judge held a hearing and issued a report
+and recommendation in July 2022 which discussed only the
+invalidity counterclaim. The magistrate judge recom-
+mended that the judgment be amended to state that “[a]ll
+counterclaims or other claims and motions by any party not
+previously ruled on are hereby DENIED AS MOOT.”
+J.A. 1969. The district court adopted the magistrate’s re-
+port on August 22, 2022; the court issued its amended final
+judgment the same day, which said that “[a]ll counter-
+claims or other claims and motions by any party not previ-
+ously ruled on are hereby DENIED-AS-MOOT.” J.A. 2.

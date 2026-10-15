@@ -1,0 +1,739 @@
+{
+ "id": "doc_107_ca6_2026_trustees_main_v_appliancesmart_en",
+ "title": "Trustees Main/270, LLC v. ApplianceSmart, Inc.; JanOne, Inc., No. 25-3889 (6th Cir. Oct. 7, 2026)",
+ "language": "en",
+ "text": "NOT RECOMMENDED FOR PUBLICATION\nFile Name: 26a0394n.06\nCase No. 25-3889\nUNITED STATES COURT OF APPEALS\nFOR THE SIXTH CIRCUIT\nTRUSTEES MAIN/270, LLC,\nPlaintiff-Appellee,\nv.\nAPPLIANCESMART, INC.; JANONE, INC., fka\nAppliance Recycling Centers of America, Inc.,\nDefendants-Appellants.\n)\n)\n)\n)\n)\n)\n)\n)\n)\n)\nON APPEAL FROM THE\nUNITED STATES DISTRICT\nCOURT FOR THE SOUTHERN\nDISTRICT OF OHIO\nO P I N I O N\nBefore: MOORE, CLAY, and NALBANDIAN, Circuit Judges.\nNALBANDIAN, Circuit Judge. ApplianceSmart, Inc., ran a store in Trustees Main/270,\nLLC’s (Trustees Main) shopping center until 2022. JanOne, Inc. (ApplianceSmart’s former parent\ncompany), guaranteed the lease. ApplianceSmart defaulted three times. Everyone came together\nand resolved the first two breaches amicably. But the third prompted Trustees Main to repossess\nthe property, sue for damages, and search for a new tenant. It found a new tenant, but only after\nrejecting tenants proposed by JanOne (and a related entity, Live Ventures, Inc.) that would’ve\nallegedly started paying rent sooner than Trustees Main’s selected replacement. On that basis,\nApplianceSmart argues that Trustees Main didn’t reasonably mitigate its damages, warranting\nreversal of the district court’s judgment in Trustees Main’s favor. But because Ohio law doesn’t\nrequire lessors to mitigate damages by continuing to deal with demonstrably unreliable parties, we\naffirm.\nCase: 25-3889 Document: 37-2 Filed: 10/07/2026 Page: 1\nFILED\nKELLY L. STEPHENS, Clerk\nOct 07, 2026\nNo. 25-3889, Trustees Main/270 LLC v. ApplianceSmart Inc., et al.\n2\nI.\nThis dispute is over a commercial lease. The only appellate question is whether the trial\ncourt erred in finding that the lessor—the non-breaching party here—sufficiently mitigated its\ndamages. The court held a bench trial on that issue, where it heard the facts as told below.\nTrustees Main owns a shopping center in Columbus, Ohio. That shopping center comprises\nmultiple retail spaces, including a “big box” space—a “larger” retail space suitable only for an\n“[e]xtremely limited” pool of “national retailers.” R.92, Trial Tr., PageID 519, 540–41.\nApplianceSmart, Inc., ran a store of the same name in Trustees Main’s big-box space from\n2008 until it came to a rocky end in 2022. Toward the end of its tenure, ApplianceSmart repeatedly\ndefaulted on the lease, ultimately leading Trustees Main to concurrently: (1) exercise its right\nunder the lease to repossess the property and begin looking for a replacement tenant, and (2) seek\ndamages against ApplianceSmart and JanOne, Inc (the guarantor on the lease and\nApplianceSmart’s previous parent company). We’ll explain ApplianceSmart’s defaults and\nTrustees Main’s remediation in turn.\nA.\nTo understand the trajectory of this case, it helps to trace the evolution of ApplianceSmart’s\nand Trustees Main’s lease agreement. That evolution is largely defined by two driving forces:\nchanges in ApplianceSmart’s corporate structure and ownership, and ApplianceSmart’s repeated\ndefaults.\nStart with the lease’s evolution until ApplianceSmart’s first default. The lease originally\nstood between ApplianceSmart’s predecessor in interest, Appliance Recycling Centers of\nAmerica, Inc. (ARCA), and Trustees Main’s predecessor. The following years saw changes to\nboth the parties’ corporate structures and to the lease itself. First, ARCA shifted roles from tenant\nCase: 25-3889 Document: 37-2 Filed: 10/07/2026 Page: 2\nNo. 25-3889, Trustees Main/270 LLC v. ApplianceSmart Inc., et al.\n3\nto guarantor in 2017. At that point, ApplianceSmart itself—now a separate corporate entity owned\nby ARCA—took over as tenant. At the same time, the parties extended the lease term until June\n30, 2025.\nSo by mid-2017, the lease stood between Trustees Main as lessor, ApplianceSmart as\nlessee, and ARCA as guarantor, with an end date in late June 2025.\nThat brings us to the first of ApplianceSmart’s relevant defaults.1 It failed to pay rent in\n2019. To resolve the state-court lawsuit that Trustees Main filed against it for that failure,\nApplianceSmart agreed to pay a portion of the amount it owed. And, as part of the same\nagreement, the parties acknowledged ARCA’s reincorporation into JanOne, Inc.—a co-defendant\nhere—and ratified its continuation as guarantor. JanOne also assumed ARCA’s place as\nApplianceSmart’s parent company.\nAlso in 2019, JanOne sold ApplianceSmart to a different company, Live Ventures, Inc.\nBut Live Ventures never took over as guarantor on the lease, leaving that role to JanOne.\nThe second relevant default occurred during ApplianceSmart’s bankruptcy in 2021. By\nthat point, ApplianceSmart, “like many, many retailers in the country, [was going] through a lot\nof difficulties.” R.92, PageID 669. Those troubles pushed it into defaulting on the lease and into\nbankruptcy. Even so, ApplianceSmart designated the Trustees Main location as a “surviving\npremises” that it would continue operating through the bankruptcy. Id. at PageID 668. So the\nparties entered into yet another agreement modifying the lease. Live Ventures—ApplianceSmart’s\nnew parent company—agreed to pay over $185,000 in back rent. And Trustees Main (having been\n1 It appears that ApplianceSmart may have also defaulted in 2017 after a fire allegedly rendered\nthe premises unusable. ApplianceSmart interpreted the lease to require Trustees Main to repair\nthe property and pay its damages, so ApplianceSmart refused to pay rent. The parties settled that\ndispute, and no one addresses it before us despite the evidence about it in the record.\nCase: 25-3889 Document: 37-2 Filed: 10/07/2026 Page: 3\nNo. 25-3889, Trustees Main/270 LLC v. ApplianceSmart Inc., et al.\n4\nburned at least twice by this point) inserted a new, non-reciprocal right to terminate the lease with\n30 days’ notice, even if ApplianceSmart wasn’t in default.\n",
+ "gold_spans": [
+  {
+   "start": 43,
+   "end": 54,
+   "type": "CASE_REF",
+   "text": "26a0394n.06"
+  },
+  {
+   "start": 64,
+   "end": 71,
+   "type": "CASE_REF",
+   "text": "25-3889"
+  },
+  {
+   "start": 125,
+   "end": 147,
+   "type": "ORG",
+   "text": "TRUSTEES MAIN/270, LLC"
+  },
+  {
+   "start": 172,
+   "end": 192,
+   "type": "ORG",
+   "text": "APPLIANCESMART, INC."
+  },
+  {
+   "start": 194,
+   "end": 206,
+   "type": "ORG",
+   "text": "JANONE, INC."
+  },
+  {
+   "start": 212,
+   "end": 256,
+   "type": "ORG",
+   "text": "Appliance Recycling Centers of America, Inc."
+  },
+  {
+   "start": 405,
+   "end": 410,
+   "type": "PERSON",
+   "text": "MOORE"
+  },
+  {
+   "start": 412,
+   "end": 416,
+   "type": "PERSON",
+   "text": "CLAY"
+  },
+  {
+   "start": 422,
+   "end": 432,
+   "type": "PERSON",
+   "text": "NALBANDIAN"
+  },
+  {
+   "start": 450,
+   "end": 460,
+   "type": "PERSON",
+   "text": "NALBANDIAN"
+  },
+  {
+   "start": 477,
+   "end": 497,
+   "type": "ORG",
+   "text": "ApplianceSmart, Inc."
+  },
+  {
+   "start": 514,
+   "end": 536,
+   "type": "ORG",
+   "text": "Trustees Main/270,\nLLC"
+  },
+  {
+   "start": 540,
+   "end": 553,
+   "type": "ORG",
+   "text": "Trustees Main"
+  },
+  {
+   "start": 583,
+   "end": 595,
+   "type": "ORG",
+   "text": "JanOne, Inc."
+  },
+  {
+   "start": 597,
+   "end": 611,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 660,
+   "end": 674,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 790,
+   "end": 803,
+   "type": "ORG",
+   "text": "Trustees Main"
+  },
+  {
+   "start": 945,
+   "end": 951,
+   "type": "ORG",
+   "text": "JanOne"
+  },
+  {
+   "start": 975,
+   "end": 994,
+   "type": "ORG",
+   "text": "Live Ventures, Inc."
+  },
+  {
+   "start": 1052,
+   "end": 1065,
+   "type": "ORG",
+   "text": "Trustees Main"
+  },
+  {
+   "start": 1105,
+   "end": 1119,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 1132,
+   "end": 1145,
+   "type": "ORG",
+   "text": "Trustees Main"
+  },
+  {
+   "start": 1242,
+   "end": 1255,
+   "type": "ORG",
+   "text": "Trustees Main"
+  },
+  {
+   "start": 1407,
+   "end": 1414,
+   "type": "CASE_REF",
+   "text": "25-3889"
+  },
+  {
+   "start": 1462,
+   "end": 1479,
+   "type": "PERSON",
+   "text": "KELLY L. STEPHENS"
+  },
+  {
+   "start": 1504,
+   "end": 1511,
+   "type": "CASE_REF",
+   "text": "25-3889"
+  },
+  {
+   "start": 1513,
+   "end": 1534,
+   "type": "ORG",
+   "text": "Trustees Main/270 LLC"
+  },
+  {
+   "start": 1538,
+   "end": 1557,
+   "type": "ORG",
+   "text": "ApplianceSmart Inc."
+  },
+  {
+   "start": 1849,
+   "end": 1862,
+   "type": "ORG",
+   "text": "Trustees Main"
+  },
+  {
+   "start": 2122,
+   "end": 2142,
+   "type": "ORG",
+   "text": "ApplianceSmart, Inc."
+  },
+  {
+   "start": 2176,
+   "end": 2189,
+   "type": "ORG",
+   "text": "Trustees Main"
+  },
+  {
+   "start": 2284,
+   "end": 2298,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 2353,
+   "end": 2366,
+   "type": "ORG",
+   "text": "Trustees Main"
+  },
+  {
+   "start": 2522,
+   "end": 2536,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 2541,
+   "end": 2552,
+   "type": "ORG",
+   "text": "JanOne, Inc"
+  },
+  {
+   "start": 2585,
+   "end": 2599,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 2642,
+   "end": 2656,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 2672,
+   "end": 2685,
+   "type": "ORG",
+   "text": "Trustees Main"
+  },
+  {
+   "start": 2790,
+   "end": 2804,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 2811,
+   "end": 2824,
+   "type": "ORG",
+   "text": "Trustees Main"
+  },
+  {
+   "start": 2912,
+   "end": 2926,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 2968,
+   "end": 2982,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 3043,
+   "end": 3057,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 3110,
+   "end": 3124,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 3152,
+   "end": 3196,
+   "type": "ORG",
+   "text": "Appliance Recycling Centers of\nAmerica, Inc."
+  },
+  {
+   "start": 3198,
+   "end": 3202,
+   "type": "ORG",
+   "text": "ARCA"
+  },
+  {
+   "start": 3209,
+   "end": 3222,
+   "type": "ORG",
+   "text": "Trustees Main"
+  },
+  {
+   "start": 3344,
+   "end": 3348,
+   "type": "ORG",
+   "text": "ARCA"
+  },
+  {
+   "start": 3381,
+   "end": 3388,
+   "type": "CASE_REF",
+   "text": "25-3889"
+  },
+  {
+   "start": 3434,
+   "end": 3441,
+   "type": "CASE_REF",
+   "text": "25-3889"
+  },
+  {
+   "start": 3443,
+   "end": 3464,
+   "type": "ORG",
+   "text": "Trustees Main/270 LLC"
+  },
+  {
+   "start": 3468,
+   "end": 3487,
+   "type": "ORG",
+   "text": "ApplianceSmart Inc."
+  },
+  {
+   "start": 3535,
+   "end": 3549,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 3598,
+   "end": 3602,
+   "type": "ORG",
+   "text": "ARCA"
+  },
+  {
+   "start": 3739,
+   "end": 3752,
+   "type": "ORG",
+   "text": "Trustees Main"
+  },
+  {
+   "start": 3764,
+   "end": 3778,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 3794,
+   "end": 3798,
+   "type": "ORG",
+   "text": "ARCA"
+  },
+  {
+   "start": 3880,
+   "end": 3894,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 3988,
+   "end": 4001,
+   "type": "ORG",
+   "text": "Trustees Main"
+  },
+  {
+   "start": 4037,
+   "end": 4051,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 4160,
+   "end": 4164,
+   "type": "ORG",
+   "text": "ARCA"
+  },
+  {
+   "start": 4188,
+   "end": 4200,
+   "type": "ORG",
+   "text": "JanOne, Inc."
+  },
+  {
+   "start": 4265,
+   "end": 4271,
+   "type": "ORG",
+   "text": "JanOne"
+  },
+  {
+   "start": 4285,
+   "end": 4289,
+   "type": "ORG",
+   "text": "ARCA"
+  },
+  {
+   "start": 4301,
+   "end": 4315,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 4348,
+   "end": 4354,
+   "type": "ORG",
+   "text": "JanOne"
+  },
+  {
+   "start": 4360,
+   "end": 4374,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 4399,
+   "end": 4418,
+   "type": "ORG",
+   "text": "Live Ventures, Inc."
+  },
+  {
+   "start": 4423,
+   "end": 4436,
+   "type": "ORG",
+   "text": "Live Ventures"
+  },
+  {
+   "start": 4501,
+   "end": 4507,
+   "type": "ORG",
+   "text": "JanOne"
+  },
+  {
+   "start": 4553,
+   "end": 4567,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 4605,
+   "end": 4619,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 4810,
+   "end": 4824,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 4840,
+   "end": 4853,
+   "type": "ORG",
+   "text": "Trustees Main"
+  },
+  {
+   "start": 5036,
+   "end": 5049,
+   "type": "ORG",
+   "text": "Live Ventures"
+  },
+  {
+   "start": 5050,
+   "end": 5064,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 5132,
+   "end": 5145,
+   "type": "ORG",
+   "text": "Trustees Main"
+  },
+  {
+   "start": 5177,
+   "end": 5191,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 5279,
+   "end": 5293,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 5327,
+   "end": 5340,
+   "type": "ORG",
+   "text": "Trustees Main"
+  },
+  {
+   "start": 5388,
+   "end": 5402,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  },
+  {
+   "start": 5543,
+   "end": 5550,
+   "type": "CASE_REF",
+   "text": "25-3889"
+  },
+  {
+   "start": 5596,
+   "end": 5603,
+   "type": "CASE_REF",
+   "text": "25-3889"
+  },
+  {
+   "start": 5605,
+   "end": 5626,
+   "type": "ORG",
+   "text": "Trustees Main/270 LLC"
+  },
+  {
+   "start": 5630,
+   "end": 5649,
+   "type": "ORG",
+   "text": "ApplianceSmart Inc."
+  },
+  {
+   "start": 5787,
+   "end": 5801,
+   "type": "ORG",
+   "text": "ApplianceSmart"
+  }
+ ],
+ "public_spans": [
+  {
+   "start": 0,
+   "end": 31,
+   "type": "PUBLIC",
+   "text": "NOT RECOMMENDED FOR PUBLICATION"
+  },
+  {
+   "start": 72,
+   "end": 124,
+   "type": "PUBLIC",
+   "text": "UNITED STATES COURT OF APPEALS\nFOR THE SIXTH CIRCUIT"
+  },
+  {
+   "start": 149,
+   "end": 167,
+   "type": "PUBLIC",
+   "text": "Plaintiff-Appellee"
+  },
+  {
+   "start": 208,
+   "end": 211,
+   "type": "PUBLIC",
+   "text": "fka"
+  },
+  {
+   "start": 258,
+   "end": 279,
+   "type": "PUBLIC",
+   "text": "Defendants-Appellants"
+  },
+  {
+   "start": 320,
+   "end": 382,
+   "type": "PUBLIC",
+   "text": "UNITED STATES DISTRICT\nCOURT FOR THE SOUTHERN\nDISTRICT OF OHIO"
+  },
+  {
+   "start": 383,
+   "end": 396,
+   "type": "PUBLIC",
+   "text": "O P I N I O N"
+  },
+  {
+   "start": 434,
+   "end": 448,
+   "type": "PUBLIC",
+   "text": "Circuit Judges"
+  },
+  {
+   "start": 462,
+   "end": 475,
+   "type": "PUBLIC",
+   "text": "Circuit Judge"
+  },
+  {
+   "start": 1213,
+   "end": 1227,
+   "type": "PUBLIC",
+   "text": "district court"
+  },
+  {
+   "start": 1277,
+   "end": 1285,
+   "type": "PUBLIC",
+   "text": "Ohio law"
+  },
+  {
+   "start": 1415,
+   "end": 1429,
+   "type": "PUBLIC",
+   "text": "Document: 37-2"
+  },
+  {
+   "start": 1430,
+   "end": 1447,
+   "type": "PUBLIC",
+   "text": "Filed: 10/07/2026"
+  },
+  {
+   "start": 1456,
+   "end": 1461,
+   "type": "PUBLIC",
+   "text": "FILED"
+  },
+  {
+   "start": 1481,
+   "end": 1486,
+   "type": "PUBLIC",
+   "text": "Clerk"
+  },
+  {
+   "start": 1487,
+   "end": 1499,
+   "type": "PUBLIC",
+   "text": "Oct 07, 2026"
+  },
+  {
+   "start": 1559,
+   "end": 1565,
+   "type": "PUBLIC",
+   "text": "et al."
+  },
+  {
+   "start": 1655,
+   "end": 1666,
+   "type": "PUBLIC",
+   "text": "trial\ncourt"
+  },
+  {
+   "start": 1889,
+   "end": 1903,
+   "type": "PUBLIC",
+   "text": "Columbus, Ohio"
+  },
+  {
+   "start": 2085,
+   "end": 2089,
+   "type": "PUBLIC",
+   "text": "R.92"
+  },
+  {
+   "start": 2091,
+   "end": 2100,
+   "type": "PUBLIC",
+   "text": "Trial Tr."
+  },
+  {
+   "start": 2102,
+   "end": 2108,
+   "type": "PUBLIC",
+   "text": "PageID"
+  },
+  {
+   "start": 3389,
+   "end": 3403,
+   "type": "PUBLIC",
+   "text": "Document: 37-2"
+  },
+  {
+   "start": 3404,
+   "end": 3421,
+   "type": "PUBLIC",
+   "text": "Filed: 10/07/2026"
+  },
+  {
+   "start": 3489,
+   "end": 3495,
+   "type": "PUBLIC",
+   "text": "et al."
+  },
+  {
+   "start": 3963,
+   "end": 3974,
+   "type": "PUBLIC",
+   "text": "state-court"
+  },
+  {
+   "start": 4708,
+   "end": 4712,
+   "type": "PUBLIC",
+   "text": "R.92"
+  },
+  {
+   "start": 4714,
+   "end": 4720,
+   "type": "PUBLIC",
+   "text": "PageID"
+  },
+  {
+   "start": 4953,
+   "end": 4959,
+   "type": "PUBLIC",
+   "text": "PageID"
+  },
+  {
+   "start": 5551,
+   "end": 5565,
+   "type": "PUBLIC",
+   "text": "Document: 37-2"
+  },
+  {
+   "start": 5566,
+   "end": 5583,
+   "type": "PUBLIC",
+   "text": "Filed: 10/07/2026"
+  },
+  {
+   "start": 5651,
+   "end": 5657,
+   "type": "PUBLIC",
+   "text": "et al."
+  }
+ ],
+ "notes": "SHOULD redact: the parties in every surface form — caption ALL CAPS (TRUSTEES MAIN/270, LLC; APPLIANCESMART, INC.; JANONE, INC.), the line-broken first body mention 'Trustees Main/270,\\nLLC’s', the running-header forms without commas ('Trustees Main/270 LLC', 'ApplianceSmart Inc.'), the defined short form 'Trustees Main' (20×), 'ApplianceSmart' (31×, incl. every 'ApplianceSmart’s'), 'JanOne' (7×) and the one 'JanOne, Inc' typed without a period; JanOne's former name and ApplianceSmart's predecessor in interest 'Appliance Recycling Centers of America, Inc.' (caption and line-broken body forms) and its defined acronym ARCA (6×); ApplianceSmart's later parent 'Live Ventures, Inc.' / 'Live Ventures' (a related non-party whose proposed tenants are the mitigation issue); the panel MOORE, CLAY, NALBANDIAN (ALL-CAPS surname only, ruling 4; 'NALBANDIAN, Circuit Judge' — the role stays public) and the clerk KELLY L. STEPHENS (ruling 4); the document's own docket number 25-3889 (7×: 'Case No. 25-3889', 'No. 25-3889, …' running headers, 'Case: 25-3889 Document: 37-2' ECF stamps) and the Sixth Circuit's file name for this opinion '26a0394n.06' (CASE_REF, as if live). SHOULD NOT redact: the court itself (UNITED STATES COURT OF APPEALS FOR THE SIXTH CIRCUIT) and the lower court (UNITED STATES DISTRICT COURT FOR THE SOUTHERN DISTRICT OF OHIO, 'the district court', 'the trial court', 'state-court lawsuit'); the roles and defined terms ('Plaintiff-Appellee', 'Defendants-Appellants', 'Circuit Judge(s)', 'Clerk', 'the lessor', 'the lessee', 'the guarantor', 'the non-breaching party', 'co-defendant', 'fka', 'et al.'); Ohio law and the bare city 'Columbus, Ohio' (ruling 6); the shopping-center and 'big box' descriptions; record and ECF citations that identify nothing without the docket number ('R.92', 'Trial Tr.', 'PageID 519, 540–41', 'PageID 668/669', 'Id.', 'Document: 37-2', 'Page: 1–3', 'Filed: 10/07/2026', 'FILED', 'Oct 07, 2026'); dates and years (2008, 2017, 2019, 2021, 2022, June 30, 2025), the amount '$185,000', '30 days’ notice', footnote and page numbers, 'NOT RECOMMENDED FOR PUBLICATION', 'O P I N I O N', the section marks I. and A.\n\nADJUDICATION (two blind annotators, 2026-10-15): 22 distinct surfaces agreed after whitespace normalisation (the second annotator listed 'Trustees Main/270, LLC' and 'Appliance Recycling Centers of America, Inc.' single-line; the validator matches verbatim, so the spec keeps the line-broken forms 'Trustees Main/270,\\nLLC' and 'Appliance Recycling Centers of\\nAmerica, Inc.' that actually occur at l.28-29 and l.65-66, plus the caption single-line ARCA form). Two disagreements, both resolved for the first annotator (public): (a) '37-2' — the ECF document number in the three 'Case: 25-3889 Document: 37-2' stamps; the second annotator typed it CASE_REF (moderate confidence) as the opinion's own docket entry. Ruled public: once the case number 25-3889 is redacted, '37-2' identifies nothing (entry 37, attachment 2 of an unknown docket), exactly like 'Page: 1–3' and 'PageID 669'; this matches doc_106 ('Document: 68') and doc_108 ('Document: 80'), where the ECF document number is public and only the case number is gold. 'Internal references' in the policy means references that identify a matter (file numbers, pending dockets), not positions inside a redacted docket. (b) 'R.92' — the district-court record cite (entry 92 = trial transcript, l.51 and l.86); the second annotator typed it CASE_REF at low confidence and itself suggested public. Ruled public for the same reason and for consistency with the 'J.A. 1514'-style appendix cites left public in doc_108. Nothing left for the lawyer.",
+ "source": "public-govinfo (U.S. Government Publishing Office) — USCOURTS collection discovered via api.govinfo.gov with DEMO_KEY (6 API calls: 2 collection listings, 4 granule listings; 2 s apart, no rate-limiting hit), PDFs fetched from www.govinfo.gov (4 requests, 1 s apart, declared user agent), text extracted with PyMuPDF from the project .venv.",
+ "split": "public",
+ "genre": "appellate opinion (not recommended for publication) — commercial lease, breach of contract and guaranty, mitigation of damages",
+ "traps": [
+  "all-caps-header",
+  "surname-only",
+  "acronym-defined",
+  "internal-docket",
+  "adjacent-public",
+  "role-noise"
+ ],
+ "provenance": {
+  "source": "govinfo (U.S. Government Publishing Office), USCOURTS collection — package USCOURTS-ca6-25-03889, granule USCOURTS-ca6-25-03889-0",
+  "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca6-25-03889/pdf/USCOURTS-ca6-25-03889-0.pdf",
+  "court": "United States Court of Appeals for the Sixth Circuit",
+  "date": "2026-10-07",
+  "licence": "US Government work, public domain (17 U.S.C. § 105)",
+  "attribution": "Opinion of the United States Court of Appeals for the Sixth Circuit, published by the U.S. Government Publishing Office on govinfo.gov (package USCOURTS-ca6-25-03889, granule USCOURTS-ca6-25-03889-0)",
+  "excerpt": "Verbatim and contiguous: caption, panel, clerk's filing stamp, introduction and Part I.A through the 2021 lease modification (pp. 1–4). Text extracted with PyMuPDF; words PyMuPDF split off a justified line were re-joined on that physical line; whitespace runs within a line collapsed."
+ }
+}

@@ -1,0 +1,23 @@
+{
+  "title": "International Tools Service s.a. c. H. et Horelec s.a. (en liquidation)",
+  "court": "Cour de cassation de Belgique, première chambre, section française (1F)",
+  "date": "2023-02-23",
+  "url": "https://juportal.be/content/ECLI:BE:CASS:2023:ARR.20230223.1F.3/FR",
+  "ecli": "ECLI:BE:CASS:2023:ARR.20230223.1F.3",
+  "role_number": "C.22.0112.F",
+  "chamber": "1F - première chambre",
+  "licence": "Public case-law database of the SPF Justice (JUPORTAL); reproduction with attribution",
+  "attribution": "Source: JUPORTAL, Cour de cassation de Belgique, ECLI:BE:CASS:2023:ARR.20230223.1F.3",
+  "language": "fr",
+  "genre": "judgment",
+  "source": "JUPORTAL (SPF Justice, Belgian federal judiciary)",
+  "jurisdiction": "Belgium",
+  "excerpt": {
+    "from_line": 1,
+    "to_line": 69,
+    "words": 870,
+    "note": "verbatim from the JUPORTAL detail page stripped to text (re + html.unescape); identification rows (ECLI, rôle, affaire, chambre, domaine) then the 'Texte de la décision' section from the heading through the sentence ending « le 6 mars 2017 ». The Court's thesaurus summaries between the two blocks, and the closing conclusion, dispositif and composition paragraph, are omitted to stay under 900 words"
+  },
+  "fetched": "2026-10-15",
+  "user_agent": "Jude/0.4 (https://github.com/bachdanslesbach/Jude; legal-tech benchmark; contact: <user e-mail>)"
+}

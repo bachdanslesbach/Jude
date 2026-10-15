@@ -1,0 +1,720 @@
+{
+ "id": "doc_106_ca3_2026_sandoz_v_united_therapeutics_en",
+ "title": "Sandoz, Inc.; RareGen, LLC v. United Therapeutics Corp.; Smiths Medical ASD, Inc., Nos. 24-3067, 24-3116, 24-3146 (3d Cir. Oct. 7, 2026)",
+ "language": "en",
+ "text": "UNITED STATES COURT OF APPEALS FOR THE\nTHIRD CIRCUIT\nNos. 24-3067, 24-3116, and 24-3146\nSANDOZ, INC.; RAREGEN, LLC, n/k/a Liquidia PAH, LLC\nv.\nUNITED THERAPEUTICS CORP.; SMITHS MEDICAL ASD, INC.\nUNITED THERAPEUTICS CORP.,\nAppellant in No. 24-3067\nSANDOZ, INC.,\nAppellant in No. 24-3116\nRAREGEN, LLC,\nAppellant in No. 24-3146\n_________________________________\nOn Appeal from the U.S. District Court, D.N.J.\nJudge Brian R. Martinotti, No. 2:19-cv-10170\nBefore: RESTREPO, MCKEE, AND AMBRO, Circuit Judges\nArgued: Nov. 12, 2025; Filed: Oct. 7, 2026\n_____________________________ _____________________________\nOPINION OF THE COURT\nRESTREPO, Circuit Judge. This case involves\ncompetitive conduct between two pharmaceutical companies\nthat manufacture and sell the brand-name and generic versions\nof the drug treprostinil. In 2002, United Therapeutics\nCorporation (“UTC”) launched an injectable form of\ntreprostinil under the brand name Remodulin to treat\npulmonary arterial hypertension, a disease that causes high\nblood pressure in the arteries running from the heart to the\nlungs. In 2017, Sandoz, Inc. received approval to market\ngeneric injectable treprostinil. Sandoz and its marketing\npartner RareGen, LLC (together with Sandoz, “Plaintiffs”)\ncontend that, in connection with Sandoz’s launch of generic\nCase: 24-3146 Document: 68 Page: 1 Date Filed: 10/07/2026\n2\ntreprostinil, UTC violated federal antitrust and state tort laws\nand breached a patent settlement agreement with Sandoz.\nBecause the settlement agreement does not\nunambiguously establish the interpretation that Sandoz\nadvances, we will reverse the grant of summary judgment in\nfavor of Sandoz as to liability on the breach-of-contract claim\nand remand with instructions that the issue of liability proceed\nto trial.1 We will also reverse the grant of summary judgment\nin favor of UTC on the tortious interference claim and remand\nfor the District Court to analyze the tortious interference claim\nseparately from the antitrust claims. As UTC demonstrated\nprocompetitive justifications for its conduct, we will affirm the\ndismissal of the antitrust and state tort claims against UTC.\nFinally, we will affirm the denial of UTC’s motion to exclude\nPlaintiffs’ damages expert.\nI. FACTUAL AND PROCEDURAL BACKGROUND\nA. UTC and Smiths Cartridge Agreements\nUTC is a pharmaceutical drug company that designs\nand manufactures the brand-name drug Remodulin for patients\nwith pulmonary arterial hypertension. Remodulin can be\nadministered either intravenously or subcutaneously.\nSubcutaneous administration requires the use of a pump and\ndisposable cartridges. Smiths Medical ASD, Inc. (“Smiths”)\ndeveloped and manufactured the CADD-MS 3 pump and\ncartridges used to administer Remodulin subcutaneously.\nSmiths sold its pump and cartridges to two specialty pharmacy\ndistributors, Accredo Health Group (“Accredo”) and CVS\nSpecialty (“CVS” and with Accredo, the “Specialty\nPharmacies”), which sold the medication to patients.\n[…]\nAs the District Court did not abuse its discretion in\ndenying UTC’s motion to exclude Jena’s testimony, we will\naffirm its ruling.\n* * * * *\nFor the reasons discussed above, we will reverse the\ngrant of summary judgment in favor of Sandoz on the breach-\nof-contract claim as to liability and the grant of summary\njudgment in favor of UTC on the tortious interference claim;\naffirm the dismissal of the Sherman Act claims and North\n5 Jena’s trial testimony corroborated his report and deposition\ntestimony. He explained that the model was reliable because\nthere were business incentives for the model to be accurate, it\nwas prepared closest in time to the launch of treprostinil, its\ncreators—former UTC executives employed by RareGen—\nhad specialized knowledge, and its forecast was in the middle\nwhen compared to other forecasts he examined. Jena dismissed\nconcerns that the model, which was created after this litigation\ncommenced, was altered for litigation because there were\nearlier versions with the same or higher generic penetration\nrates.\nCase: 24-3146 Document: 68 Page: 19 Date Filed: 10/07/2026\n20\nCarolina unfair and deceptive trade practices claim; affirm the\ndenial of the Daubert motion against Plaintiffs’ damages\nexpert Dr. Anupam Jena; and dismiss the remaining\nevidentiary and damages challenges as moot. Because we will\nreverse the grant of Sandoz’s motion for partial summary\njudgment on Count VII, breach of contract, as to liability, we\nwill vacate the November 1, 2024 judgment and damages\naward entered in favor of Sandoz and against UTC on Count\nVII, and remand for further proceedings consistent with this\nOpinion.\nCounsel for Appellant United Therapeutics Corp.\nCharles L. McCloud [Argued]\nEdward J. Bennett\nJonathan B. Pitt\nSean Douglass\nWILLIAMS & CONNOLLY LLP\nStephen M. Orlofsky\nMichael R. Darbee\nBLANK ROME LLP\nCounsel for Appellant Sandoz, Inc.\nMatthew D. Kent [Argued]\nDavid A. Hatchett\nKarla M. Doe\nJenny R. Kramer\nJonathan D. Parente\nALSTON & BIRD LLP\nCounsel for Appellant RareGen, LLC.\nKathleen R. Hartnett [Argued]\nPatrick J. Hayden\nCOOLEY LLP\nKevin H. Marino\nMARINO TORTORELLA & BOYLE, P.C.\nCase: 24-3146 Document: 68 Page: 20 Date Filed: 10/07/2026\n",
+ "gold_spans": [
+  {
+   "start": 58,
+   "end": 65,
+   "type": "CASE_REF",
+   "text": "24-3067"
+  },
+  {
+   "start": 67,
+   "end": 74,
+   "type": "CASE_REF",
+   "text": "24-3116"
+  },
+  {
+   "start": 80,
+   "end": 87,
+   "type": "CASE_REF",
+   "text": "24-3146"
+  },
+  {
+   "start": 88,
+   "end": 100,
+   "type": "ORG",
+   "text": "SANDOZ, INC."
+  },
+  {
+   "start": 102,
+   "end": 114,
+   "type": "ORG",
+   "text": "RAREGEN, LLC"
+  },
+  {
+   "start": 122,
+   "end": 139,
+   "type": "ORG",
+   "text": "Liquidia PAH, LLC"
+  },
+  {
+   "start": 143,
+   "end": 168,
+   "type": "ORG",
+   "text": "UNITED THERAPEUTICS CORP."
+  },
+  {
+   "start": 170,
+   "end": 194,
+   "type": "ORG",
+   "text": "SMITHS MEDICAL ASD, INC."
+  },
+  {
+   "start": 195,
+   "end": 220,
+   "type": "ORG",
+   "text": "UNITED THERAPEUTICS CORP."
+  },
+  {
+   "start": 239,
+   "end": 246,
+   "type": "CASE_REF",
+   "text": "24-3067"
+  },
+  {
+   "start": 247,
+   "end": 259,
+   "type": "ORG",
+   "text": "SANDOZ, INC."
+  },
+  {
+   "start": 278,
+   "end": 285,
+   "type": "CASE_REF",
+   "text": "24-3116"
+  },
+  {
+   "start": 286,
+   "end": 298,
+   "type": "ORG",
+   "text": "RAREGEN, LLC"
+  },
+  {
+   "start": 317,
+   "end": 324,
+   "type": "CASE_REF",
+   "text": "24-3146"
+  },
+  {
+   "start": 412,
+   "end": 431,
+   "type": "PERSON",
+   "text": "Brian R. Martinotti"
+  },
+  {
+   "start": 437,
+   "end": 450,
+   "type": "CASE_REF",
+   "text": "2:19-cv-10170"
+  },
+  {
+   "start": 459,
+   "end": 467,
+   "type": "PERSON",
+   "text": "RESTREPO"
+  },
+  {
+   "start": 469,
+   "end": 474,
+   "type": "PERSON",
+   "text": "MCKEE"
+  },
+  {
+   "start": 480,
+   "end": 485,
+   "type": "PERSON",
+   "text": "AMBRO"
+  },
+  {
+   "start": 626,
+   "end": 634,
+   "type": "PERSON",
+   "text": "RESTREPO"
+  },
+  {
+   "start": 824,
+   "end": 855,
+   "type": "ORG",
+   "text": "United Therapeutics\nCorporation"
+  },
+  {
+   "start": 858,
+   "end": 861,
+   "type": "ORG",
+   "text": "UTC"
+  },
+  {
+   "start": 929,
+   "end": 938,
+   "type": "ORG",
+   "text": "Remodulin"
+  },
+  {
+   "start": 1085,
+   "end": 1097,
+   "type": "ORG",
+   "text": "Sandoz, Inc."
+  },
+  {
+   "start": 1159,
+   "end": 1165,
+   "type": "ORG",
+   "text": "Sandoz"
+  },
+  {
+   "start": 1192,
+   "end": 1204,
+   "type": "ORG",
+   "text": "RareGen, LLC"
+  },
+  {
+   "start": 1220,
+   "end": 1226,
+   "type": "ORG",
+   "text": "Sandoz"
+  },
+  {
+   "start": 1275,
+   "end": 1281,
+   "type": "ORG",
+   "text": "Sandoz"
+  },
+  {
+   "start": 1308,
+   "end": 1315,
+   "type": "CASE_REF",
+   "text": "24-3146"
+  },
+  {
+   "start": 1376,
+   "end": 1379,
+   "type": "ORG",
+   "text": "UTC"
+  },
+  {
+   "start": 1475,
+   "end": 1481,
+   "type": "ORG",
+   "text": "Sandoz"
+  },
+  {
+   "start": 1573,
+   "end": 1579,
+   "type": "ORG",
+   "text": "Sandoz"
+  },
+  {
+   "start": 1648,
+   "end": 1654,
+   "type": "ORG",
+   "text": "Sandoz"
+  },
+  {
+   "start": 1842,
+   "end": 1845,
+   "type": "ORG",
+   "text": "UTC"
+  },
+  {
+   "start": 1999,
+   "end": 2002,
+   "type": "ORG",
+   "text": "UTC"
+  },
+  {
+   "start": 2139,
+   "end": 2142,
+   "type": "ORG",
+   "text": "UTC"
+  },
+  {
+   "start": 2182,
+   "end": 2185,
+   "type": "ORG",
+   "text": "UTC"
+  },
+  {
+   "start": 2274,
+   "end": 2277,
+   "type": "ORG",
+   "text": "UTC"
+  },
+  {
+   "start": 2282,
+   "end": 2288,
+   "type": "ORG",
+   "text": "Smiths"
+  },
+  {
+   "start": 2310,
+   "end": 2313,
+   "type": "ORG",
+   "text": "UTC"
+  },
+  {
+   "start": 2397,
+   "end": 2406,
+   "type": "ORG",
+   "text": "Remodulin"
+  },
+  {
+   "start": 2458,
+   "end": 2467,
+   "type": "ORG",
+   "text": "Remodulin"
+  },
+  {
+   "start": 2610,
+   "end": 2634,
+   "type": "ORG",
+   "text": "Smiths Medical ASD, Inc."
+  },
+  {
+   "start": 2637,
+   "end": 2643,
+   "type": "ORG",
+   "text": "Smiths"
+  },
+  {
+   "start": 2677,
+   "end": 2686,
+   "type": "ORG",
+   "text": "CADD-MS 3"
+  },
+  {
+   "start": 2726,
+   "end": 2735,
+   "type": "ORG",
+   "text": "Remodulin"
+  },
+  {
+   "start": 2752,
+   "end": 2758,
+   "type": "ORG",
+   "text": "Smiths"
+  },
+  {
+   "start": 2828,
+   "end": 2848,
+   "type": "ORG",
+   "text": "Accredo Health Group"
+  },
+  {
+   "start": 2851,
+   "end": 2858,
+   "type": "ORG",
+   "text": "Accredo"
+  },
+  {
+   "start": 2865,
+   "end": 2878,
+   "type": "ORG",
+   "text": "CVS\nSpecialty"
+  },
+  {
+   "start": 2881,
+   "end": 2884,
+   "type": "ORG",
+   "text": "CVS"
+  },
+  {
+   "start": 2895,
+   "end": 2902,
+   "type": "ORG",
+   "text": "Accredo"
+  },
+  {
+   "start": 3038,
+   "end": 3041,
+   "type": "ORG",
+   "text": "UTC"
+  },
+  {
+   "start": 3062,
+   "end": 3066,
+   "type": "PERSON",
+   "text": "Jena"
+  },
+  {
+   "start": 3208,
+   "end": 3214,
+   "type": "ORG",
+   "text": "Sandoz"
+  },
+  {
+   "start": 3310,
+   "end": 3313,
+   "type": "ORG",
+   "text": "UTC"
+  },
+  {
+   "start": 3409,
+   "end": 3413,
+   "type": "PERSON",
+   "text": "Jena"
+  },
+  {
+   "start": 3675,
+   "end": 3678,
+   "type": "ORG",
+   "text": "UTC"
+  },
+  {
+   "start": 3702,
+   "end": 3709,
+   "type": "ORG",
+   "text": "RareGen"
+  },
+  {
+   "start": 3819,
+   "end": 3823,
+   "type": "PERSON",
+   "text": "Jena"
+  },
+  {
+   "start": 4030,
+   "end": 4037,
+   "type": "CASE_REF",
+   "text": "24-3146"
+  },
+  {
+   "start": 4218,
+   "end": 4229,
+   "type": "PERSON",
+   "text": "Anupam Jena"
+  },
+  {
+   "start": 4338,
+   "end": 4344,
+   "type": "ORG",
+   "text": "Sandoz"
+  },
+  {
+   "start": 4517,
+   "end": 4523,
+   "type": "ORG",
+   "text": "Sandoz"
+  },
+  {
+   "start": 4536,
+   "end": 4539,
+   "type": "ORG",
+   "text": "UTC"
+  },
+  {
+   "start": 4641,
+   "end": 4666,
+   "type": "ORG",
+   "text": "United Therapeutics Corp."
+  },
+  {
+   "start": 4667,
+   "end": 4685,
+   "type": "PERSON",
+   "text": "Charles L. McCloud"
+  },
+  {
+   "start": 4695,
+   "end": 4712,
+   "type": "PERSON",
+   "text": "Edward J. Bennett"
+  },
+  {
+   "start": 4713,
+   "end": 4729,
+   "type": "PERSON",
+   "text": "Jonathan B. Pitt"
+  },
+  {
+   "start": 4730,
+   "end": 4743,
+   "type": "PERSON",
+   "text": "Sean Douglass"
+  },
+  {
+   "start": 4744,
+   "end": 4767,
+   "type": "ORG",
+   "text": "WILLIAMS & CONNOLLY LLP"
+  },
+  {
+   "start": 4768,
+   "end": 4787,
+   "type": "PERSON",
+   "text": "Stephen M. Orlofsky"
+  },
+  {
+   "start": 4788,
+   "end": 4805,
+   "type": "PERSON",
+   "text": "Michael R. Darbee"
+  },
+  {
+   "start": 4806,
+   "end": 4820,
+   "type": "ORG",
+   "text": "BLANK ROME LLP"
+  },
+  {
+   "start": 4843,
+   "end": 4855,
+   "type": "ORG",
+   "text": "Sandoz, Inc."
+  },
+  {
+   "start": 4856,
+   "end": 4871,
+   "type": "PERSON",
+   "text": "Matthew D. Kent"
+  },
+  {
+   "start": 4881,
+   "end": 4898,
+   "type": "PERSON",
+   "text": "David A. Hatchett"
+  },
+  {
+   "start": 4899,
+   "end": 4911,
+   "type": "PERSON",
+   "text": "Karla M. Doe"
+  },
+  {
+   "start": 4912,
+   "end": 4927,
+   "type": "PERSON",
+   "text": "Jenny R. Kramer"
+  },
+  {
+   "start": 4928,
+   "end": 4947,
+   "type": "PERSON",
+   "text": "Jonathan D. Parente"
+  },
+  {
+   "start": 4948,
+   "end": 4965,
+   "type": "ORG",
+   "text": "ALSTON & BIRD LLP"
+  },
+  {
+   "start": 4988,
+   "end": 5000,
+   "type": "ORG",
+   "text": "RareGen, LLC"
+  },
+  {
+   "start": 5002,
+   "end": 5022,
+   "type": "PERSON",
+   "text": "Kathleen R. Hartnett"
+  },
+  {
+   "start": 5032,
+   "end": 5049,
+   "type": "PERSON",
+   "text": "Patrick J. Hayden"
+  },
+  {
+   "start": 5050,
+   "end": 5060,
+   "type": "ORG",
+   "text": "COOLEY LLP"
+  },
+  {
+   "start": 5061,
+   "end": 5076,
+   "type": "PERSON",
+   "text": "Kevin H. Marino"
+  },
+  {
+   "start": 5077,
+   "end": 5108,
+   "type": "ORG",
+   "text": "MARINO TORTORELLA & BOYLE, P.C."
+  },
+  {
+   "start": 5115,
+   "end": 5122,
+   "type": "CASE_REF",
+   "text": "24-3146"
+  }
+ ],
+ "public_spans": [
+  {
+   "start": 0,
+   "end": 52,
+   "type": "PUBLIC",
+   "text": "UNITED STATES COURT OF APPEALS FOR THE\nTHIRD CIRCUIT"
+  },
+  {
+   "start": 222,
+   "end": 231,
+   "type": "PUBLIC",
+   "text": "Appellant"
+  },
+  {
+   "start": 261,
+   "end": 270,
+   "type": "PUBLIC",
+   "text": "Appellant"
+  },
+  {
+   "start": 300,
+   "end": 309,
+   "type": "PUBLIC",
+   "text": "Appellant"
+  },
+  {
+   "start": 378,
+   "end": 405,
+   "type": "PUBLIC",
+   "text": "U.S. District Court, D.N.J."
+  },
+  {
+   "start": 487,
+   "end": 501,
+   "type": "PUBLIC",
+   "text": "Circuit Judges"
+  },
+  {
+   "start": 605,
+   "end": 625,
+   "type": "PUBLIC",
+   "text": "OPINION OF THE COURT"
+  },
+  {
+   "start": 636,
+   "end": 649,
+   "type": "PUBLIC",
+   "text": "Circuit Judge"
+  },
+  {
+   "start": 801,
+   "end": 813,
+   "type": "PUBLIC",
+   "text": "treprostinil"
+  },
+  {
+   "start": 895,
+   "end": 907,
+   "type": "PUBLIC",
+   "text": "treprostinil"
+  },
+  {
+   "start": 948,
+   "end": 979,
+   "type": "PUBLIC",
+   "text": "pulmonary arterial hypertension"
+  },
+  {
+   "start": 1145,
+   "end": 1157,
+   "type": "PUBLIC",
+   "text": "treprostinil"
+  },
+  {
+   "start": 1229,
+   "end": 1239,
+   "type": "PUBLIC",
+   "text": "Plaintiffs"
+  },
+  {
+   "start": 1362,
+   "end": 1374,
+   "type": "PUBLIC",
+   "text": "treprostinil"
+  },
+  {
+   "start": 1900,
+   "end": 1914,
+   "type": "PUBLIC",
+   "text": "District Court"
+  },
+  {
+   "start": 2206,
+   "end": 2216,
+   "type": "PUBLIC",
+   "text": "Plaintiffs"
+  },
+  {
+   "start": 2425,
+   "end": 2456,
+   "type": "PUBLIC",
+   "text": "pulmonary arterial hypertension"
+  },
+  {
+   "start": 2909,
+   "end": 2929,
+   "type": "PUBLIC",
+   "text": "Specialty\nPharmacies"
+  },
+  {
+   "start": 2983,
+   "end": 2997,
+   "type": "PUBLIC",
+   "text": "District Court"
+  },
+  {
+   "start": 3378,
+   "end": 3389,
+   "type": "PUBLIC",
+   "text": "Sherman Act"
+  },
+  {
+   "start": 3641,
+   "end": 3653,
+   "type": "PUBLIC",
+   "text": "treprostinil"
+  },
+  {
+   "start": 4164,
+   "end": 4171,
+   "type": "PUBLIC",
+   "text": "Daubert"
+  },
+  {
+   "start": 4187,
+   "end": 4197,
+   "type": "PUBLIC",
+   "text": "Plaintiffs"
+  },
+  {
+   "start": 4386,
+   "end": 4395,
+   "type": "PUBLIC",
+   "text": "Count VII"
+  },
+  {
+   "start": 4631,
+   "end": 4640,
+   "type": "PUBLIC",
+   "text": "Appellant"
+  },
+  {
+   "start": 4833,
+   "end": 4842,
+   "type": "PUBLIC",
+   "text": "Appellant"
+  },
+  {
+   "start": 4978,
+   "end": 4987,
+   "type": "PUBLIC",
+   "text": "Appellant"
+  }
+ ],
+ "notes": "SHOULD redact: the parties in every surface form — caption ALL CAPS (SANDOZ, INC.; RAREGEN, LLC; UNITED THERAPEUTICS CORP.; SMITHS MEDICAL ASD, INC.), body and counsel-block forms (Sandoz, Inc. / Sandoz; RareGen, LLC / RareGen; United Therapeutics Corporation / United Therapeutics Corp. / the defined acronym UTC, incl. every 'UTC’s'; Smiths Medical ASD, Inc. / Smiths), RareGen's successor name Liquidia PAH, LLC; the third-party distributors named in the facts (Accredo Health Group / Accredo, CVS Specialty / CVS); the parties' product names Remodulin and CADD-MS 3 (one-to-one with a party — Remodulin names UTC and CADD-MS 3 names Smiths as surely as their corporate names, and redacting UTC while leaving Remodulin in clear would undo the redaction; typed ORG after the batch default for the bare word mark in doc_031, 'MERIDIAAN' in POLICY_QUESTIONS 'Smaller points', now 'BRAKELMANS', followed by doc_112 for the target's newspaper titles — ruling wanted); the district judge Brian R. Martinotti (honorific 'Judge' excluded before the full name) and the panel RESTREPO, MCKEE, AMBRO (ALL-CAPS surname-only, ruling 4); the damages expert Anupam Jena ('Dr.' excluded) and every bare 'Jena' / 'Jena’s'; all fourteen counsel by full name (PERSON) and the five law firms (ORG); the document's own appeal dockets 24-3067, 24-3116, 24-3146 (incl. the three 'Case: 24-3146 Document: 68' ECF stamps) and the district-court docket 2:19-cv-10170 (CASE_REF, as if live). SHOULD NOT redact: the court itself (UNITED STATES COURT OF APPEALS FOR THE THIRD CIRCUIT) and the lower court (U.S. District Court, D.N.J., 'the District Court'); the roles and defined terms ('Circuit Judge(s)', 'Appellant', 'Plaintiffs', 'Specialty Pharmacies', 'Counsel for Appellant', '[Argued]', 'the Firm'-type nouns); statutes and precedents (Sherman Act, Daubert, North Carolina unfair and deceptive trade practices act); the generic drug name treprostinil and the disease pulmonary arterial hypertension; 'Count VII', 'Document: 68', 'Page: 1', dates (Nov. 12, 2025; Oct. 7, 2026; 10/07/2026; November 1, 2024; 2002; 2017), footnote numbers and page numbers; the state North Carolina and the district abbreviation D.N.J. (ruling 6, by analogy). ADJUDICATION (2026-10-15; a second annotator, blind to this spec, compared case-insensitive and trimmed): 43 case-folded surfaces agreed (47 literal — the four ALL-CAPS caption forms fold into their mixed-case twins), no type mismatch; 2 disagreements, 'Remodulin' and 'CADD-MS 3' — gold ORG here, public for the second annotator (no gold type fits a product; it conceded that Remodulin re-identifies UTC). Both resolved for the first annotator: kept gold ORG for the reasons above; a ruling 'brands and product names are not identifiers' would remove these two surfaces and twelve in doc_112. The second annotator's 'United Therapeutics Corporation' and 'CVS Specialty' are the same entities as the line-broken forms listed here (the validator matches exactly, and only the line-broken forms occur). Agreed by both and checked against the corpus: the third-party distributors Accredo and CVS stay gold (the policy enumerates the parties and is silent on non-parties; an identifying company in the factual matrix is gold as Farlin in doc_105, AEI Ventures in doc_104 and Live Ventures in doc_107); 'Brian R. Martinotti' without 'Judge' and 'Anupam Jena' without 'Dr.' (a full name follows, ruling 5 — 'Mr Justice Smith' is kept whole only because a bare surname follows). The second annotator's extra public items ('Judge', 'Dr.', 'Counsel for Appellant', '[Argued]', 'Document: 68', 'n/k/a', dates, page stamps) are not added: the explicit public list feeds the public-body over-redaction metric, which counts any overlapping prediction as a hit, so honorifics and role words adjacent to gold would turn a lenient gold hit into an over-redaction count; 'North Carolina' cannot be listed at all, the footnote splits it across lines 72 and 86. Entities and public list unchanged by the adjudication.",
+ "source": "public-govinfo (U.S. Government Publishing Office) — USCOURTS collection discovered via api.govinfo.gov with DEMO_KEY (6 API calls: 2 collection listings, 4 granule listings; 2 s apart, no rate-limiting hit), PDFs fetched from www.govinfo.gov (4 requests, 1 s apart, declared user agent), text extracted with PyMuPDF from the project .venv.",
+ "split": "public",
+ "genre": "appellate opinion (precedential) — antitrust and breach of a patent settlement agreement between pharmaceutical companies",
+ "traps": [
+  "all-caps-header",
+  "acronym-defined",
+  "surname-only",
+  "internal-docket",
+  "role-noise",
+  "adjacent-public"
+ ],
+ "provenance": {
+  "source": "govinfo (U.S. Government Publishing Office), USCOURTS collection — package USCOURTS-ca3-24-03146, granule USCOURTS-ca3-24-03146-0",
+  "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca3-24-03146/pdf/USCOURTS-ca3-24-03146-0.pdf",
+  "court": "United States Court of Appeals for the Third Circuit",
+  "date": "2026-10-07",
+  "licence": "US Government work, public domain (17 U.S.C. § 105)",
+  "attribution": "Opinion of the United States Court of Appeals for the Third Circuit, published by the U.S. Government Publishing Office on govinfo.gov (package USCOURTS-ca3-24-03146, granule USCOURTS-ca3-24-03146-0)"
+ }
+}

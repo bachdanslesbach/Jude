@@ -125,6 +125,7 @@ _ALLOWED_SHARED = frozenset({
     "kbc", "cbc", "ing", "belfius", "bnp", "bnp paribas", "bnp paribas fortis",
     "ubs", "bcee", "bil", "deutsche bank", "crédit agricole", "credit agricole",
     "société générale", "societe generale", "rabobank", "abn amro", "hsbc",
+    "santander", "banco santander",
 })
 _HONORIFIC_RE = re.compile(
     r"^(?:Mr|Mrs|Ms|Mx|Dr|Prof|Me|M|Mme|Mlle|Maître|Monsieur|Madame|Dhr|Mevr|"
@@ -183,6 +184,8 @@ def collisions(
                 s = json.loads(p.read_text(encoding="utf-8"))
                 if s.get("id") in seen_ids or s.get("id") == spec.get("id") or "text" not in s:
                     continue
+                if mine_public and s.get("split") == "public":
+                    continue  # same exemption as above: real documents share real judges
                 others.append(build(s))
             except (ValueError, KeyError):
                 continue  # a sibling still being written is not our problem
@@ -275,7 +278,11 @@ def validate(
     n_words = len(text.split())
     if not (MIN_WORDS <= n_words <= MAX_WORDS):
         errs.append(f"text has {n_words} words; need {MIN_WORDS}–{MAX_WORDS}")
-    if "lorem" in text.lower() or "[…]" in text or "[...]" in text:
+    # A verbatim published document may legitimately contain "[…]" (the
+    # court eliding a quotation); the placeholder guard is for drafts.
+    if spec.get("split") != "public" and (
+        "lorem" in text.lower() or "[…]" in text or "[...]" in text
+    ):
         errs.append("placeholder text found")
 
     seen: set[str] = set()
@@ -299,7 +306,9 @@ def validate(
     if len(gold) < MIN_GOLD:
         errs.append(f"only {len(gold)} gold spans; need ≥ {MIN_GOLD}")
     types = {g["type"] for g in gold}
-    if len(types) < MIN_TYPES:
+    # The variety floor is a drafting instruction for invented documents;
+    # a real published judgment contains the identifier types it contains.
+    if spec.get("split") != "public" and len(types) < MIN_TYPES:
         errs.append(f"only {len(types)} entity types ({sorted(types)}); need ≥ {MIN_TYPES}")
     for surface in spec.get("public", []):
         if not _occurrences(text, surface):

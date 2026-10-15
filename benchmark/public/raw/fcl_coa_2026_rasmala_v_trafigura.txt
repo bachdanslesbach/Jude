@@ -1,0 +1,106 @@
+Neutral Citation Number:
+[2026] EWCA Civ 1259
+
+Case No:
+CA-2025-001931
+
+IN THE COURT OF APPEAL (CIVIL DIVISION)
+
+ON APPEAL FROM THE HIGH COURT OF JUSTICE
+
+BUSINESS AND PROPERTY COURTS OF ENGLAND AND WALES
+
+BUSINESS LIST (ChD)
+
+Mr Justice Rajah
+
+[2025] EWHC 1569 (Ch)
+
+Royal Courts of Justice
+
+Strand, London, WC2A 2LL
+
+Date:
+7 October 2026
+
+Before :
+
+LORD JUSTICE BAKER
+
+LORD JUSTICE NUGEE
+
+and
+
+LADY JUSTICE FALK
+
+- - - - - - - - - - - - - - - - - - - - -
+
+Between :
+
+RASMALA TRADE FINANCE FUND
+
+Claimant / Appellant
+
+- and -
+
+TRAFIGURA PTE LTD
+
+Defendant/
+
+Respondent
+
+- - - - - - - - - - - - - - - - - - - - -
+
+- - - - - - - - - - - - - - - - - - - - -
+
+Jonathan Adkin KC and Adil Mohamedbhai (instructed by Hill Dickinson LLP)
+
+for the Appellant
+
+Neil Kitchener KC and James Nadin (instructed by Reed Smith LLP)
+
+for the Respondent
+
+Hearing dates: 30 June and 1 July 2026
+
+- - - - - - - - - - - - - - - - - - - - -
+
+Approved Judgment
+
+This judgment was handed down remotely at 10.30am on 7 October 2026 by circulation to the parties or their representatives by e-mail and by release to the National Archives.
+
+.............................
+
+Lord Justice Nugee:
+
+Introduction
+
+1.
+
+This appeal from the High Court concerns a claim by the Appellant, Rasmala Trade Finance Fund (“Rasmala”), to recover money paid by mistake to the Respondent, Trafigura Pte Ltd (“Trafigura”).
+
+2.
+
+Between August 2017 and March 2018 Rasmala made 5 payments to Trafigura totalling over $22.6m (save for references to A$ (Australian $), all references to $ are to US$) in the belief that it was financing particular coal trading contracts for the supply of coal by Trafigura to a coal trader called Farlin Energy & Commodities FZE (“Farlin”). In fact Farlin had committed a fraud on Rasmala and none of the supposed contracts were valid. Rasmala sought restitution of the moneys it had paid from Trafigura.
+
+3.
+
+The claim was tried by Rajah J (“the Judge”) in March and April 2025 and he handed down judgment on 23 June 2025 at [2025] EWHC 1569 (Ch) (“the Judgment”). He accepted that Rasmala only made the payments because of its mistaken belief that it was making payments on genuine contracts and that Trafigura had been enriched at its expense. Nevertheless the claim failed because Trafigura had a defence of change of position. If it had not received the payments (which it believed were valid and that it could apply to Farlin’s outstanding indebtedness) Trafigura would not have continued to trade with Farlin because further deliveries would have exceeded Farlin’s credit limit. In fact it entered into a series of new contracts with Farlin between September 2017 and May 2018 with an invoice value of just under $60m, and when it eventually stopped trading with Farlin, Trafigura was owed slightly more than it had been before receiving the first payment. The Judge held that in those circumstances it would be inequitable to require Trafigura to make any repayment. He therefore dismissed the claim.
+
+4.
+
+Rasmala appeals with permission granted by Miles LJ. We heard from Mr Jonathan Adkin KC and Mr Adil Mohamedbhai for Rasmala; and from Mr Neil Kitchener KC and Mr James Nadin for Trafigura.
+
+5.
+
+For the reasons that follow I prefer the submissions for Trafigura and would dismiss the appeal.
+
+Facts
+
+6.
+
+The facts were to some extent contentious at trial but I can take them from the findings made by the Judge in the Judgment. These can be summarised as follows.
+
+7.
+
+Trafigura is an international commodities trader incorporated in Singapore. One of its customers was Farlin, which had been a customer of Trafigura since September 2015. In 2016 Trafigura granted Farlin an open credit limit of approximately $2m. In December 2016 Trafigura increased the limit to $11m, supported by insurance cover for 50% of the limit. Trafigura made some small adjustments in 2017 and early 2018 and thereafter the limit was between $10m and $11m. By July and August 2017 Farlin was struggling to remain within the limit and was late in making payments.

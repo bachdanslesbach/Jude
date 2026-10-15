@@ -1,0 +1,98 @@
+Neutral Citation Number:
+[2026] EWHC 2587 (Comm)
+
+Case No:
+CL-2025-000494
+
+IN THE HIGH COURT OF JUSTICE
+
+BUSINESS AND PROPERTY COURTS
+
+COMMERCIAL COURT
+
+Royal Courts of Justice, Rolls Building
+
+Fetter Lane, London, EC4A 1NL
+
+Date:
+13/10/2026
+
+Before :
+
+THE HONOURABLE MR JUSTICE CALVER
+
+- - - - - - - - - - - - - - - - - - - - -
+
+Between :
+
+(1)
+
+CENTRAL TÉRMICA DE TEMANE S.A.
+
+(2)
+
+CITIBANK, N.A., LONDON BRANCH
+
+Claimants
+
+- and -
+
+BANCO SANTANDER S.A.
+
+Defendant
+
+- - - - - - - - - - - - - - - - - - - - -
+
+- - - - - - - - - - - - - - - - - - - - -
+
+Stephen Houseman KC, Nehali Shah KC, Moritz Grimm (instructed by Greenwoods Legal Services Limited) for the First Claimant and (instructed by Goodwin Procter (UK) LLP) for the Second Claimant
+
+Adrian Beltrami KC, Paul Bonner Hughes (instructed by Allen Overy Shearman Sterling LLP) for the Defendant
+
+Hearing dates: 15-17/09/2026
+
+- - - - - - - - - - - - - - - - - - - - -
+
+JUDGMENT
+
+This judgment was handed down by the Judge remotely by circulation to the parties' representatives by email and release to The National Archives. The date and time for hand-down is deemed to be 12:00 on Tuesday 13 October 2026.
+
+Mr Justice Calver:
+
+FACTUAL BACKGROUND TO THE TRIAL
+
+1.
+
+The First Claimant (“CTT”) is a Mozambique corporation and was the employer in respect of a project for the design, construction, and operation of a 450 MW combined-cycle power plant fuelled by natural gas at Temane, Mozambique (“Project”). Companies in the TSK Group were the onshore and offshore contractors in respect of the Project. CTT and entities in the TSK Group entered into an EPC (Engineering, Procurement and Construction) contract (“EPC Contract”)and a Co-ordination Agreement (“Coordination Agreement”) pursuant to which two Bonds were issued by the Defendant-bank (“Santander”) at the request of its customer, TSK Electrónica y Electricidad, S.A. (Spain) (and together with TSK Moçambique Limitada (Mozambique), “TSK”) (part of the TSK Group), in order to secure aspects of the EPC Contract (“theBonds”). The Bonds consist of an Advance Payment Bond and a Performance Bond, each originally dated 2 December 2021, and each in favour of CTT as beneficiary.
+
+2.
+
+The purpose of the Advance Payment Bondwas to provide security to CTT in the event that TSK should fail to earn the full amount of the Advance Payment (as defined). The value of the Advance Payment Bond was to reduce as interim payments were earned by the contractors, with the remaining value being equal to the unearned amount of the Advance Payment. The purpose of the Performance Bondwas to provide security to CTT in the event that TSK should fail to complete the Project in accordance with the contractual scheme.
+
+3.
+
+The Expiry Date of the Bonds was originally 1 December 2024. They were extended on or around 5 November 2024 so that the Expiry Date became 28 February 2026. It is common ground between the parties that the Bonds are autonomous demand instruments. It is also common ground that CTT was at all times the beneficiary under the Bonds.
+
+4.
+
+By this Part 8 claim CTT seeks an order for immediate payment to it by Santander in the sum of USD90,796,078.66 plus interest pursuant to demands made by CTT under the terms of the Bonds.The claim originally made in this action by the Second Claimant (“Citi”) no longer arises further to Santander’s admission that CTT, and not Citi, is the Beneficiary under the Bonds and that CTT has made valid demands thereunder. However, Santander resists the claim of CTT on the ground that it has an illegality defence by reason of the fact that a Spanish Court has granted an interim injunction restraining it from paying CTT under the Bonds (“the illegality defence”).
+
+5.
+
+The illegality defence raises four principal issues:
+
+(1)
+
+First, is the Spanish interim injunction capable of engaging the principle in Ralli Brothers so as to provide a defence to the claim?
+
+(2)
+
+Second, if the Spanish interim injunction is capable of engaging the principle in Ralli Brothers, is the place of performance under the Bonds (i) Mozambique, as the Claimants contend, on the basis that it is the place of Santander’s payment obligation under the Bonds; or (ii) Spain, as Santander contends, either on the basis that it is the country where the demands were to be made (and were in fact made) or the country where necessary performance steps were to be taken?
+
+(3)
+
+Third, is Santander entitled to rely upon the principle in Ralli Brothers in circumstances where it has not taken any steps in Spain to seek to discharge the Spanish interim injunction, nor established that any such steps would have been unsuccessful?
+
+(4)
+
+Fourth, is Santander entitled to rely on the principle in Ralli Brothers in circumstances where Santander could have paid under the Bonds before notification of the Spanish interim injunction on 10 April 2025?

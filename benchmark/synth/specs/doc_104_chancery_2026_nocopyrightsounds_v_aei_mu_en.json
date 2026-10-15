@@ -1,0 +1,147 @@
+{
+ "id": "doc_104_chancery_2026_nocopyrightsounds_v_aei_mu_en",
+ "title": "NoCopyrightSounds Limited v AEI Music Limited & Anor",
+ "language": "en",
+ "genre": "judgment",
+ "split": "public",
+ "source": "public-Find Case Law (The National Archives)",
+ "provenance": {
+  "source": "Find Case Law (The National Archives)",
+  "url": "https://caselaw.nationalarchives.gov.uk/ewhc/ch/2026/2360",
+  "data_url": "https://caselaw.nationalarchives.gov.uk/ewhc/ch/2026/2360/data.xml",
+  "court": "High Court of Justice, Business and Property Courts, Intellectual Property List (ChD)",
+  "jurisdiction": "England and Wales",
+  "neutral_citation": "[2026] EWHC 2360 (Ch)",
+  "case_number": "IL-2025-000220",
+  "judge": "Master Pester",
+  "date": "2026-09-15",
+  "licence": "Open Justice Licence / Open Government Licence v3.0",
+  "attribution": "Contains public sector information licensed under the Open Government Licence v3.0; judgment published by The National Archives (Find Case Law)",
+  "fetched": "2026-10-15",
+  "user_agent": "JudeBenchmark/0.8 (https://github.com/bachdanslesbach/Jude)",
+  "excerpt": {
+   "from_line": 1,
+   "to_line": 104,
+   "words": 781,
+   "note": "verbatim from data.xml stripped to text; header plus opening substantive paragraphs"
+  },
+  "text_processing": "data.xml (LegalDocML) fetched with curl; tags stripped (block elements become line breaks, inline tags dropped, <meta> block removed), html.unescape, whitespace runs collapsed within a line; excerpt cut at a paragraph end"
+ },
+ "text": "Neutral Citation Number:\n[2026] EWHC 2360 (Ch)\n\nCase No:\nIL-2025-000220\n\nIN THE HIGH COURT OF JUSTICE\n\nBUSINESS AND PROPERTY COURTS OF ENGLAND AND WALES\n\nIntellectual Property List (ChD)\n\nRoyal Courts of Justice, Rolls Building\n\nFetter Lane, London, EC4A 1NL\n\nDate:\n15 September 2026\n\nBefore :\n\nMASTER PESTER\n\n- - - - - - - - - - - - - - - - - - - - -\n\nBetween :\n\nNOCOPYRIGHTSOUNDS LIMITED\n\nClaimant\n\n- and -\n\n(1)\n\nAEI MUSIC LIMITED\n\n(2)\n\nFEATHERSTONE MUSIC LIMITED\n\nDefendants\n\n- - - - - - - - - - - - - - - - - - - - -\n\n- - - - - - - - - - - - - - - - - - - - -\n\nIan Mill KC and Tom Cleaver (instructed by Simkins LLP) for the Claimant\n\nJames Knott (instructed by Keystone Law) for the Defendants\n\nHearing date: 23 July 2026\n\n- - - - - - - - - - - - - - - - - - - - -\n\nAPPROVED JUDGMENT\n\nThis judgment was handed down remotely by circulation to the parties or their representatives by email. The date and time for hand-down is deemed to be 2.30pm on 15 September 2026.\n\nMaster Pester\n\nINTRODUCTION\n\n1.\n\nThis is my judgment on the application, dated 26 March 2026, by the Claimant (“NCS”) for two heads of relief: the provision of interim accounts, pursuant to CPR r. 25.1(1)(o) and an interim payment of £3 million pursuant to CPR 25.23(c). During the course of the hearing on 23 July 2026 the First Defendant (“AEI”) agreed to provide interim accounts, so the only issue I need to determine is whether to order an interim payment and, if so, in what amount.\n\n2.\n\nOn 13 August 2026, that is, after the hearing before me, the Defendants filed a second witness statement of Diluk Dias, the director of both Defendants, in order to supply the information which the Defendants were to provide pursuant to the order made on 23 July 2026. What AEI’s account shows is that, as at 31 March 2026, there was a running balance in favour of NCS from AEI of US$6,126,037.43, even on the Defendants’ case. Mr Dias says, at paragraph 6(ii) of his witness statement, that whilst there is a balance, that is subject to the set off against sums said to be due from NCS to AEI, and even if there is any residual balance it is not payable immediately, upon demand, because of an agreement to extend credit and / or waiver/estoppel. (I note that NCS has made certain criticisms, in a letter dated 14 August 2026, of Mr Dias’ witness statement and the accompanying exhibit, but I have not been asked to rule on those criticisms, at this stage).\n\n3.\n\nIn overview, NCS for its part says that AEI has acknowledged that it owes NCS millions of pounds, but that NCS is wrongly being kept out of its receipt of that money, and that there is no good reason why an interim payment should not be ordered now. In turn, AEI submits that no order for an interim payment should be made, because in summary:\n\n(i.)\n\nit is an abuse of process, as it seeks to relitigate an issue decided by a previous tribunal or is an inappropriate invitation to conduct a mini-trial;\n\n(ii.)\n\nit fails to meet the threshold test even on NCS’s own evidence (which alleges that it is “likely” to succeed on its claims);\n\n(iii.)\n\nit fails in any event to meet the threshold test given the arguable disputes of fact and law that will need to be determined at trial; and\n\n(iv.)\n\nthe figures put forward by NCS are not reliable.\n\n4.\n\nIt would be unreal to ignore the evidence of Mr Dias. It seems to me, therefore, that there is no real dispute that AEI owes NCS very substantial sums, although AEI has pleaded a counterclaim, which needs to be taken into account, as well as certain defences, which raises the question whether the sum is presently due.\n\nBACKGROUND\n\n5.\n\nBy way of brief background, NCS is a company that holds rights in respect of a catalogue of music and sound recordings – described as “the Catalogue”. NCS carries on business as a YouTube channel, music publisher and record label.\n\n6.\n\nThe Defendants, which I will refer to as “AEI” and “Featherstone” respectively, where it is necessary to distinguish between them, were authorised to exploit those rights in return for an obligation to pay NCS a percentage of the revenue from that exploitation. The Defendants’ parent company, AEI Ventures Ltd, was and remains a 25.25% shareholder in NCS.\n",
+ "entities": [
+  {
+   "surface": "[2026] EWHC 2360 (Ch)",
+   "type": "CASE_REF"
+  },
+  {
+   "surface": "IL-2025-000220",
+   "type": "CASE_REF"
+  },
+  {
+   "surface": "MASTER PESTER",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Master Pester",
+   "type": "PERSON"
+  },
+  {
+   "surface": "NOCOPYRIGHTSOUNDS LIMITED",
+   "type": "ORG"
+  },
+  {
+   "surface": "NCS",
+   "type": "ORG"
+  },
+  {
+   "surface": "AEI MUSIC LIMITED",
+   "type": "ORG"
+  },
+  {
+   "surface": "AEI",
+   "type": "ORG"
+  },
+  {
+   "surface": "FEATHERSTONE MUSIC LIMITED",
+   "type": "ORG"
+  },
+  {
+   "surface": "Featherstone",
+   "type": "ORG"
+  },
+  {
+   "surface": "AEI Ventures Ltd",
+   "type": "ORG"
+  },
+  {
+   "surface": "Ian Mill KC",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Tom Cleaver",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Simkins LLP",
+   "type": "ORG"
+  },
+  {
+   "surface": "James Knott",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Keystone Law",
+   "type": "ORG"
+  },
+  {
+   "surface": "Diluk Dias",
+   "type": "PERSON"
+  },
+  {
+   "surface": "Mr Dias",
+   "type": "PERSON"
+  }
+ ],
+ "public": [
+  "HIGH COURT OF JUSTICE",
+  "BUSINESS AND PROPERTY COURTS OF ENGLAND AND WALES",
+  "Intellectual Property List (ChD)",
+  "Royal Courts of Justice, Rolls Building",
+  "Fetter Lane, London, EC4A 1NL",
+  "London",
+  "CPR r. 25.1(1)(o)",
+  "CPR 25.23(c)",
+  "YouTube",
+  "APPROVED JUDGMENT",
+  "Claimant",
+  "the Claimant",
+  "Defendants",
+  "the Defendants",
+  "the First Defendant",
+  "the director of both Defendants",
+  "the parties or their representatives",
+  "a previous tribunal",
+  "the Catalogue",
+  "15 September 2026",
+  "23 July 2026",
+  "26 March 2026",
+  "13 August 2026",
+  "31 March 2026",
+  "14 August 2026",
+  "2.30pm",
+  "£3 million",
+  "US$6,126,037.43",
+  "25.25%",
+  "paragraph 6(ii) of his witness statement"
+ ],
+ "traps": [
+  "all-caps-header",
+  "honorific-only",
+  "acronym-defined",
+  "role-noise",
+  "internal-docket",
+  "adjacent-public"
+ ],
+ "notes": "Approved judgment of Master Pester (Chancery Division, Intellectual Property List) on an application for an interim payment under CPR 25.23(c) in a music-catalogue royalties dispute; header plus paragraphs 1-6 of a real published judgment, annotated as if it were the client's confidential file. SHOULD redact: the document's own neutral citation '[2026] EWHC 2360 (Ch)' and claim number 'IL-2025-000220' (the live references of this matter, CASE_REF); the judge in both forms, the all-caps header 'MASTER PESTER' and the signature 'Master Pester' (judicial title kept with the surname, as 'Mr Justice X' would be; ruling 4); the Claimant under every form - all-caps header 'NOCOPYRIGHTSOUNDS LIMITED' and the defined acronym 'NCS' (14 occurrences, including the possessive 'NCS's'); the First Defendant - 'AEI MUSIC LIMITED' and the defined acronym 'AEI' (every bare occurrence including 'AEI's'); the Second Defendant - 'FEATHERSTONE MUSIC LIMITED' and the defined short form 'Featherstone'; the Defendants' parent company 'AEI Ventures Ltd' (a 25.25% shareholder in the Claimant, identifying both sides); counsel 'Ian Mill KC' (KC is a post-nominal, kept inside the span), 'Tom Cleaver' and 'James Knott'; their firms 'Simkins LLP' and 'Keystone Law'; the Defendants' director and witness 'Diluk Dias' and the three honorific-only mentions 'Mr Dias' (including 'Mr Dias' witness statement'). SHOULD NOT redact: the court and its address block - 'IN THE HIGH COURT OF JUSTICE', 'BUSINESS AND PROPERTY COURTS OF ENGLAND AND WALES', 'Intellectual Property List (ChD)', 'Royal Courts of Justice, Rolls Building', 'Fetter Lane, London, EC4A 1NL' (the court's own seat, not a party address; 'London' is a bare city, ruling 6); the procedural rules 'CPR r. 25.1(1)(o)' and 'CPR 25.23(c)'; 'YouTube', named only as the platform on which the Claimant carries on business (a market descriptor, not a party); dates (26 March, 23 July, 13 and 14 August, 15 September 2026, 31 March 2026, '2.30pm'), amounts ('£3 million', 'US$6,126,037.43') and the percentage 25.25%; paragraph and sub-paragraph numbers; and role words and defined terms - 'the Claimant', 'the Defendants', 'the First Defendant' (the Second Defendant is never so called in the excerpt), 'the director of both Defendants', 'the parties or their representatives', 'the Catalogue', 'a YouTube channel, music publisher and record label'. Traps actually present: all-caps header forms of the judge and all three parties; honorific-only 'Mr Dias' after 'Diluk Dias'; acronyms and short forms defined in brackets ('NCS', 'AEI', 'Featherstone') carrying the rest of the text; the live claim number 'IL-2025-000220' as an internal-docket shape; role nouns ('the Claimant', 'the Defendants') next to the names they stand for; and gold sitting against public text - the neutral citation embeds the court abbreviations 'EWHC' and '(Ch)' directly above 'IN THE HIGH COURT OF JUSTICE', and 'MASTER PESTER' follows the court's address lines. Nothing in the excerpt is a LOC, EMAIL, PHONE, IBAN, URL or SECRET: an English judgment carries no party addresses or contact details, so the excerpt has three entity types (PERSON, ORG, CASE_REF). ADJUDICATION (2026-10-15, two blind annotators compared): the two gold sets are identical - 18 surfaces, same types, no surface held by one and lacking in the other, no type mismatch; occurrence counts verified against the text (NCS 14, AEI 9 standalone after longest-match-first leaves 'AEI MUSIC LIMITED' and 'AEI Ventures Ltd' whole, Mr Dias 3, everything else once). Both read 'MASTER PESTER' / 'Master Pester' as the judge's full title kept whole (ruling 4), 'Ian Mill KC' with the post-nominal inside the span (ruling 5), the parent company 'AEI Ventures Ltd' as gold ORG although not formally a party (a named private company that identifies both sides in an as-if-confidential file; flagged for the lawyer as a policy gap on affiliated companies), and 'YouTube' as public (platform named as a market descriptor, not a party). The public list was merged from both annotators: the second listed the generic roles, defined terms, dates, amounts and the cross-reference to the witness statement that the policy says to carry under 'public'; all of them occur verbatim and were added. Not added: 'England and Wales' (occurs only in capitals inside the court's name, already public) and 'the Second Defendant' (not in the excerpt). Court name kept as 'HIGH COURT OF JUSTICE' rather than the header line 'IN THE HIGH COURT OF JUSTICE'.",
+ "codenames": []
+}

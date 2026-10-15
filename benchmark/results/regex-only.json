@@ -2,44 +2,44 @@
  {
   "runner_name": "regex-only",
   "aggregate": {
-   "precision": 0.9563492063492064,
-   "recall": 0.14812538414259374,
-   "f1": 0.25651942522618415,
-   "tp": 241,
-   "fp": 11,
-   "fn": 1386,
+   "precision": 0.948905109489051,
+   "recall": 0.11059123777116121,
+   "f1": 0.19809523809523807,
+   "tp": 260,
+   "fp": 14,
+   "fn": 2091,
    "by_type": {
     "EMAIL": {
-     "precision": 1.0,
+     "precision": 0.9901960784313726,
      "recall": 1.0,
-     "f1": 1.0,
-     "tp": 99,
-     "fp": 0,
+     "f1": 0.9950738916256158,
+     "tp": 101,
+     "fp": 1,
      "fn": 0
     },
     "IBAN": {
      "precision": 1.0,
-     "recall": 0.5333333333333333,
-     "f1": 0.6956521739130436,
+     "recall": 0.4,
+     "f1": 0.5714285714285715,
      "tp": 32,
      "fp": 0,
-     "fn": 28
+     "fn": 48
     },
     "PHONE": {
-     "precision": 1.0,
+     "precision": 0.9887640449438202,
      "recall": 1.0,
-     "f1": 1.0,
-     "tp": 84,
-     "fp": 0,
+     "f1": 0.9943502824858756,
+     "tp": 88,
+     "fp": 1,
      "fn": 0
     },
     "CASE_REF": {
-     "precision": 0.7027027027027027,
-     "recall": 0.30952380952380953,
-     "f1": 0.42975206611570244,
-     "tp": 26,
+     "precision": 0.78,
+     "recall": 0.2765957446808511,
+     "f1": 0.4083769633507853,
+     "tp": 39,
      "fp": 11,
-     "fn": 58
+     "fn": 102
     },
     "ORG": {
      "precision": 0.0,
@@ -47,7 +47,7 @@
      "f1": 0.0,
      "tp": 0,
      "fp": 0,
-     "fn": 658
+     "fn": 1132
     },
     "LOC": {
      "precision": 0.0,
@@ -55,7 +55,7 @@
      "f1": 0.0,
      "tp": 0,
      "fp": 0,
-     "fn": 145
+     "fn": 167
     },
     "PERSON": {
      "precision": 0.0,
@@ -63,57 +63,57 @@
      "f1": 0.0,
      "tp": 0,
      "fp": 0,
-     "fn": 468
+     "fn": 613
     },
     "URL": {
      "precision": 0.0,
      "recall": 0.0,
      "f1": 0.0,
      "tp": 0,
-     "fp": 0,
+     "fp": 1,
      "fn": 29
     }
    }
   },
   "aggregate_any_type": {
-   "precision": 0.9563492063492064,
-   "recall": 0.14812538414259374,
-   "f1": 0.25651942522618415,
-   "tp": 241,
-   "fp": 11,
-   "fn": 1386,
+   "precision": 0.948905109489051,
+   "recall": 0.11059123777116121,
+   "f1": 0.19809523809523807,
+   "tp": 260,
+   "fp": 14,
+   "fn": 2091,
    "by_type": {
     "EMAIL": {
-     "precision": 1.0,
+     "precision": 0.9901960784313726,
      "recall": 1.0,
-     "f1": 1.0,
-     "tp": 99,
-     "fp": 0,
+     "f1": 0.9950738916256158,
+     "tp": 101,
+     "fp": 1,
      "fn": 0
     },
     "IBAN": {
      "precision": 1.0,
-     "recall": 0.5333333333333333,
-     "f1": 0.6956521739130436,
+     "recall": 0.4,
+     "f1": 0.5714285714285715,
      "tp": 32,
      "fp": 0,
-     "fn": 28
+     "fn": 48
     },
     "PHONE": {
-     "precision": 1.0,
+     "precision": 0.9887640449438202,
      "recall": 1.0,
-     "f1": 1.0,
-     "tp": 84,
-     "fp": 0,
+     "f1": 0.9943502824858756,
+     "tp": 88,
+     "fp": 1,
      "fn": 0
     },
     "CASE_REF": {
-     "precision": 0.7027027027027027,
-     "recall": 0.30952380952380953,
-     "f1": 0.42975206611570244,
-     "tp": 26,
+     "precision": 0.78,
+     "recall": 0.2765957446808511,
+     "f1": 0.4083769633507853,
+     "tp": 39,
      "fp": 11,
-     "fn": 58
+     "fn": 102
     },
     "ORG": {
      "precision": 0.0,
@@ -121,7 +121,7 @@
      "f1": 0.0,
      "tp": 0,
      "fp": 0,
-     "fn": 658
+     "fn": 1132
     },
     "LOC": {
      "precision": 0.0,
@@ -129,7 +129,7 @@
      "f1": 0.0,
      "tp": 0,
      "fp": 0,
-     "fn": 145
+     "fn": 167
     },
     "PERSON": {
      "precision": 0.0,
@@ -137,14 +137,14 @@
      "f1": 0.0,
      "tp": 0,
      "fp": 0,
-     "fn": 468
+     "fn": 613
     },
     "URL": {
      "precision": 0.0,
      "recall": 0.0,
      "f1": 0.0,
      "tp": 0,
-     "fp": 0,
+     "fp": 1,
      "fn": 29
     }
    }
@@ -152,30 +152,30 @@
   "meta": {
    "span_level": true,
    "public_body_over_redaction": {
-    "hits": 0,
-    "total": 613,
-    "rate": 0.0
+    "hits": 3,
+    "total": 1466,
+    "rate": 0.0020463847203274215
    },
    "sentence_level": {
-    "precision": 0.9885057471264368,
-    "recall": 0.1678048780487805,
-    "f1": 0.28690575479566305,
-    "tp": 172,
-    "fp": 2,
-    "fn": 853,
-    "n_sentences": 2353
+    "precision": 0.9744897959183674,
+    "recall": 0.12451108213820078,
+    "f1": 0.2208092485549133,
+    "tp": 191,
+    "fp": 5,
+    "fn": 1343,
+    "n_sentences": 3611
    },
    "review": {
-    "misses": 1386,
-    "misses_surfaced": 1337,
-    "items": 1868,
-    "items_per_doc": 42.45454545454545
+    "misses": 2091,
+    "misses_surfaced": 1981,
+    "items": 2535,
+    "items_per_doc": 43.706896551724135
    },
-   "n_docs": 44,
-   "load_seconds": 0.10311399993952364,
-   "seconds": 0.04943908401764929,
-   "chars_per_sec": 3475994.8209932684,
-   "peak_rss_mb": 307.734375,
+   "n_docs": 58,
+   "load_seconds": 0.06783537496812642,
+   "seconds": 0.06928233301732689,
+   "chars_per_sec": 3465717.5869055954,
+   "peak_rss_mb": 288.515625,
    "device": "cpu"
   },
   "per_doc": [
@@ -7732,6 +7732,1431 @@
       "end": 4889,
       "type": "PHONE",
       "text": "+32 15 63 08 72"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_101_commercial_2026_central_termica_v_santan_en",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.021739130434782608,
+     "f1": 0.042553191489361694,
+     "tp": 1,
+     "fp": 0,
+     "fn": 45,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.5,
+       "f1": 0.6666666666666666,
+       "tp": 1,
+       "fp": 0,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 7
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 37
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.021739130434782608,
+     "f1": 0.042553191489361694,
+     "tp": 1,
+     "fp": 0,
+     "fn": 45,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.5,
+       "f1": 0.6666666666666666,
+       "tp": 1,
+       "fp": 0,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 7
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 37
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 59,
+      "end": 73,
+      "type": "CASE_REF",
+      "text": "CL-2025-000494"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_102_commercial_2026_intralinks_v_nexans_en",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.02564102564102564,
+     "f1": 0.05,
+     "tp": 1,
+     "fp": 0,
+     "fn": 38,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.25,
+       "f1": 0.4,
+       "tp": 1,
+       "fp": 0,
+       "fn": 3
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 8
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 27
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.02564102564102564,
+     "f1": 0.05,
+     "tp": 1,
+     "fp": 0,
+     "fn": 38,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.25,
+       "f1": 0.4,
+       "tp": 1,
+       "fp": 0,
+       "fn": 3
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 8
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 27
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 164,
+      "end": 178,
+      "type": "CASE_REF",
+      "text": "LM-2026-000116"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_103_chancery_2026_glencore_v_prax_lindsey_en",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.023255813953488372,
+     "f1": 0.04545454545454545,
+     "tp": 1,
+     "fp": 0,
+     "fn": 42,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.5,
+       "f1": 0.6666666666666666,
+       "tp": 1,
+       "fp": 0,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 9
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 31
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.023255813953488372,
+     "f1": 0.04545454545454545,
+     "tp": 1,
+     "fp": 0,
+     "fn": 42,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.5,
+       "f1": 0.6666666666666666,
+       "tp": 1,
+       "fp": 0,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 9
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 31
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 57,
+      "end": 71,
+      "type": "CASE_REF",
+      "text": "CR-2025-004409"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_104_chancery_2026_nocopyrightsounds_v_aei_mu_en",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.024390243902439025,
+     "f1": 0.047619047619047616,
+     "tp": 1,
+     "fp": 0,
+     "fn": 40,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.5,
+       "f1": 0.6666666666666666,
+       "tp": 1,
+       "fp": 0,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 9
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 30
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.024390243902439025,
+     "f1": 0.047619047619047616,
+     "tp": 1,
+     "fp": 0,
+     "fn": 40,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.5,
+       "f1": 0.6666666666666666,
+       "tp": 1,
+       "fp": 0,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 9
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 30
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 57,
+      "end": 71,
+      "type": "CASE_REF",
+      "text": "IL-2025-000220"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_105_coa_2026_rasmala_v_trafigura_en",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.01694915254237288,
+     "f1": 0.03333333333333333,
+     "tp": 1,
+     "fp": 0,
+     "fn": 58,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.25,
+       "f1": 0.4,
+       "tp": 1,
+       "fp": 0,
+       "fn": 3
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 15
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 40
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.01694915254237288,
+     "f1": 0.03333333333333333,
+     "tp": 1,
+     "fp": 0,
+     "fn": 58,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.25,
+       "f1": 0.4,
+       "tp": 1,
+       "fp": 0,
+       "fn": 3
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 15
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 40
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 56,
+      "end": 70,
+      "type": "CASE_REF",
+      "text": "CA-2025-001931"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_106_ca3_2026_sandoz_v_united_therapeutics_en",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.011363636363636364,
+     "f1": 0.02247191011235955,
+     "tp": 1,
+     "fp": 0,
+     "fn": 87,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.1,
+       "f1": 0.18181818181818182,
+       "tp": 1,
+       "fp": 0,
+       "fn": 9
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 55
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 23
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.011363636363636364,
+     "f1": 0.02247191011235955,
+     "tp": 1,
+     "fp": 0,
+     "fn": 87,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.1,
+       "f1": 0.18181818181818182,
+       "tp": 1,
+       "fp": 0,
+       "fn": 9
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 55
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 23
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 437,
+      "end": 450,
+      "type": "CASE_REF",
+      "text": "2:19-cv-10170"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_107_ca6_2026_trustees_main_v_appliancesmart_en",
+    "score": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "tp": 0,
+     "fp": 0,
+     "fn": 86,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 8
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 73
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 5
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "tp": 0,
+     "fp": 0,
+     "fn": 86,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 8
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 73
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 5
+      }
+     }
+    },
+    "pred_spans": []
+   },
+   {
+    "doc_id": "doc_108_cafc_2026_alexsam_v_simon_property_group_en",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.011494252873563218,
+     "f1": 0.022727272727272724,
+     "tp": 1,
+     "fp": 0,
+     "fn": 86,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.16666666666666666,
+       "f1": 0.2857142857142857,
+       "tp": 1,
+       "fp": 0,
+       "fn": 5
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 58
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 18
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 5
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.011494252873563218,
+     "f1": 0.022727272727272724,
+     "tp": 1,
+     "fp": 0,
+     "fn": 86,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.16666666666666666,
+       "f1": 0.2857142857142857,
+       "tp": 1,
+       "fp": 0,
+       "fn": 5
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 58
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 18
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 5
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 414,
+      "end": 431,
+      "type": "CASE_REF",
+      "text": "2:19-cv-00331-RWS"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_109_cass_2023_international_tools_service_v__fr",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.07142857142857142,
+     "f1": 0.13333333333333333,
+     "tp": 1,
+     "fp": 0,
+     "fn": 13,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.3333333333333333,
+       "f1": 0.5,
+       "tp": 1,
+       "fp": 0,
+       "fn": 2
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.07142857142857142,
+     "f1": 0.13333333333333333,
+     "tp": 1,
+     "fp": 0,
+     "fn": 13,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.3333333333333333,
+       "f1": 0.5,
+       "tp": 1,
+       "fp": 0,
+       "fn": 2
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 9,
+      "end": 44,
+      "type": "CASE_REF",
+      "text": "ECLI:BE:CASS:2023:ARR.20230223.1F.3"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_110_cass_2025_ville_de_virton_v_trema_archit_fr",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.05,
+     "f1": 0.09523809523809523,
+     "tp": 1,
+     "fp": 0,
+     "fn": 19,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.3333333333333333,
+       "f1": 0.5,
+       "tp": 1,
+       "fp": 0,
+       "fn": 2
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 11
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.05,
+     "f1": 0.09523809523809523,
+     "tp": 1,
+     "fp": 0,
+     "fn": 19,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.3333333333333333,
+       "f1": 0.5,
+       "tp": 1,
+       "fp": 0,
+       "fn": 2
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 11
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 9,
+      "end": 44,
+      "type": "CASE_REF",
+      "text": "ECLI:BE:CASS:2025:ARR.20250313.1F.1"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_111_cass_2025_g_v_etat_belge_fr",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.058823529411764705,
+     "f1": 0.1111111111111111,
+     "tp": 1,
+     "fp": 0,
+     "fn": 16,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.3333333333333333,
+       "f1": 0.5,
+       "tp": 1,
+       "fp": 0,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 12
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.058823529411764705,
+     "f1": 0.1111111111111111,
+     "tp": 1,
+     "fp": 0,
+     "fn": 16,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.3333333333333333,
+       "f1": 0.5,
+       "tp": 1,
+       "fp": 0,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 12
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 9,
+      "end": 44,
+      "type": "CASE_REF",
+      "text": "ECLI:BE:CASS:2025:ARR.20250116.1F.1"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_112_cc_2026_rossel_ipm_fr",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.08045977011494253,
+     "f1": 0.14893617021276595,
+     "tp": 7,
+     "fp": 0,
+     "fn": 80,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.3333333333333333,
+       "f1": 0.5,
+       "tp": 1,
+       "fp": 0,
+       "fn": 2
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 50
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 18
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 6
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.08045977011494253,
+     "f1": 0.14893617021276595,
+     "tp": 7,
+     "fp": 0,
+     "fn": 80,
+     "by_type": {
+      "EMAIL": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 4,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.3333333333333333,
+       "f1": 0.5,
+       "tp": 1,
+       "fp": 0,
+       "fn": 2
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 50
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 18
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 6
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 4432,
+      "end": 4452,
+      "type": "EMAIL",
+      "text": "TDeMeese@crowell.com"
+     },
+     {
+      "start": 4453,
+      "end": 4470,
+      "type": "EMAIL",
+      "text": "KStas@crowell.com"
+     },
+     {
+      "start": 4282,
+      "end": 4296,
+      "type": "PHONE",
+      "text": "+32 2 282 4082"
+     },
+     {
+      "start": 4297,
+      "end": 4311,
+      "type": "PHONE",
+      "text": "+32 2 282 1842"
+     },
+     {
+      "start": 4312,
+      "end": 4326,
+      "type": "PHONE",
+      "text": "+32 2 214 2888"
+     },
+     {
+      "start": 4327,
+      "end": 4342,
+      "type": "PHONE",
+      "text": "+32 468 14 6976"
+     },
+     {
+      "start": 58,
+      "end": 72,
+      "type": "CASE_REF",
+      "text": "ABC-2026-CC-22"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_113_rpr_2026_rfb_v_urbsfa_fr",
+    "score": {
+     "precision": 1.0,
+     "recall": 0.015625,
+     "f1": 0.03076923076923077,
+     "tp": 1,
+     "fp": 0,
+     "fn": 63,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.2,
+       "f1": 0.33333333333333337,
+       "tp": 1,
+       "fp": 0,
+       "fn": 4
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 41
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 6
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 6
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 6
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 1.0,
+     "recall": 0.015625,
+     "f1": 0.03076923076923077,
+     "tp": 1,
+     "fp": 0,
+     "fn": 63,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.2,
+       "f1": 0.33333333333333337,
+       "tp": 1,
+       "fp": 0,
+       "fn": 4
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 41
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 6
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 6
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 6
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 69,
+      "end": 88,
+      "type": "CASE_REF",
+      "text": "ABC-2026-RPR-27-AUD"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_114_ccs_2026_rmga_pierre_joel_aag_fr",
+    "score": {
+     "precision": 0.25,
+     "recall": 0.030303030303030304,
+     "f1": 0.054054054054054064,
+     "tp": 1,
+     "fp": 3,
+     "fn": 32,
+     "by_type": {
+      "EMAIL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 1,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 1,
+       "fn": 0
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 1,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.5,
+       "f1": 0.6666666666666666,
+       "tp": 1,
+       "fp": 0,
+       "fn": 1
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 26
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.25,
+     "recall": 0.030303030303030304,
+     "f1": 0.054054054054054064,
+     "tp": 1,
+     "fp": 3,
+     "fn": 32,
+     "by_type": {
+      "EMAIL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 1,
+       "fn": 0
+      },
+      "PHONE": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 1,
+       "fn": 0
+      },
+      "URL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 1,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.5,
+       "f1": 0.6666666666666666,
+       "tp": 1,
+       "fp": 0,
+       "fn": 1
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 26
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 100,
+      "end": 115,
+      "type": "EMAIL",
+      "text": "info@bma-abc.be"
+     },
+     {
+      "start": 49,
+      "end": 64,
+      "type": "PHONE",
+      "text": "+32 2 277 52 72"
+     },
+     {
+      "start": 116,
+      "end": 141,
+      "type": "URL",
+      "text": "http://www.concurrence.be"
+     },
+     {
+      "start": 389,
+      "end": 408,
+      "type": "CASE_REF",
+      "text": "ABC-2026-CCS-24-AUD"
      }
     ]
    }

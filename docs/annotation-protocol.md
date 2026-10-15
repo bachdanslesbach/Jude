@@ -90,7 +90,13 @@ lawyer's review of each one is what turns the benchmark from
 indicative into trustworthy. **All 44 documents were reviewed in Word
 on 13 October 2026** (under the rulings of that day; no highlight
 needed changing) and carry `reviewed: true` in their corpus record.
-New batches go through the same route.
+New batches go through the same route. The `public` split added on
+15 October 2026 (`doc_101`–`doc_114`, excerpts of real published
+judgments and decisions, see `benchmark/public/README.md`) was
+annotated blind by two agents and adjudicated by a third; its review
+copies `review/doc_101_….docx` … `doc_114_….docx` await the lawyer's
+pass, and its open questions are items 8–17 of
+`benchmark/synth/POLICY_QUESTIONS.md`.
 
 ```bash
 python -m benchmark.docx_gold export --all --out review/

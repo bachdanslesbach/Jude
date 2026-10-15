@@ -137,34 +137,43 @@ pytest
 
 ## Benchmark
 
-`benchmark/` holds a 44-document, 1,775-span gold corpus of synthetic
-legal documents (term sheets, pleadings, board minutes, Form CO, dawn-raid
-memos, settlements, data-room indexes…; EN / FR), split into a `dev` set
-Jude was tuned on and a `heldout` set it never saw, and a harness that
-scores any span-level or
+`benchmark/` holds a 58-document, 2,351-span gold corpus of legal
+documents (EN / FR) in three splits — `dev`, 19 synthetic documents
+Jude was tuned on; `heldout`, 25 synthetic documents it never saw
+(term sheets, pleadings, board minutes, Form CO, dawn-raid memos,
+settlements, data-room indexes…); `public`, 14 excerpts of real
+published judgments and decisions (Commercial Court and Court of Appeal
+of England and Wales, US courts of appeals, Cour de cassation de
+Belgique, Autorité belge de la concurrence) annotated *as if they were
+a client's file* — and a harness that scores any span-level or
 message-level PII system against it: span F1 (type-strict and
 type-agnostic), *public-body over-redaction* (how often a system
 redacts the European Commission, the DMA, a court…), sentence-level F1,
 throughput and peak memory.
 
-| System | Span F1 — heldout (dev) | Recall (heldout) | Public bodies redacted (heldout) |
-|---|---|---|---|
-| Jude (`jude-full`) | **0.745** (0.952) | 0.89 | 26 % |
-| rules only (0 parameters) | 0.714 (0.836) | 0.57 | 3 % |
-| `nvidia/gliner-PII` (native labels) | 0.628 (0.662) | 0.62 | 24 % |
-| `perplexity-ai/pplx-pii-masking` | 0.632 (0.570) | 0.48 | 2 % |
-| `ollama` qwen3 4 B (generative) | 0.544 (0.694) | 0.60 | 42 % |
-| `roblox/roblox-pii-classifier` | — (sentence-level 0.751) | — | — |
+| System | Span F1 — heldout | Span F1 — public (real documents) | Recall (public) | Public bodies redacted (public) |
+|---|---|---|---|---|
+| Jude (`jude-full`) | **0.745** | **0.768** | 0.88 | 25 % |
+| rules only (0 parameters) | 0.714 | 0.296 | 0.18 | 2 % |
+| spaCy alone | 0.593 | 0.749 | 0.76 | 17 % |
+| `nvidia/gliner-PII` (native labels) | 0.628 | 0.539 | 0.46 | 10 % |
+| `perplexity-ai/pplx-pii-masking` | 0.632 | 0.267 | 0.16 | 2 % |
+| `ollama` qwen3 4 B (generative) | 0.544 | running | — | — |
+| `roblox/roblox-pii-classifier` | — (sentence-level 0.751) | — (sentence-level 0.674) | — | — |
 
-The `heldout` column is the number to quote: the 25 documents Jude
-was never tuned on, every one reviewed in Word by a lawyer, scored
-under the annotation rulings of 13 October 2026 (codenames and bare
-city names are not identifiers; the detector follows). Jude loses
-21 F1 points between the two splits — its recall holds (0.89), its
-precision does not (0.92 → 0.64): the public sphere in French
-practice, role phrases, published citations and bare short forms. The
-rules alone reach precision 0.95 at recall 0.57; recall, not F1, is
-what a lawyer needs. Generic PII taxonomies have no label
+Two numbers to quote. On `heldout` (synthetic, never tuned on, every
+document reviewed in Word by a lawyer under the rulings of
+13 October 2026) Jude scores 0.745: it loses 21 F1 points against the
+`dev` split, all of it precision (0.92 → 0.64) — the public sphere in
+French practice, role phrases, published citations and bare short
+forms. On `public` (real judgments, 15 October 2026) Jude scores
+0.768 with recall 0.88: the synthetic number was not optimistic. The
+rules alone reach precision 0.95 at recall 0.57 on synthetic files
+and collapse to recall 0.18 on real judgments, where the identifiers
+are names repeated on every page, not IBANs; `pplx-pii-masking`
+collapses with them (0.27) because its taxonomy has no organisation
+label. Recall, not F1, is what a lawyer needs. Generic PII taxonomies
+have no label
 for organisations-as-parties or case references — 47 % of what a
 legal document must hide. Protocol, full tables and failure taxonomy:
 [docs/benchmark-pii-models.md](docs/benchmark-pii-models.md);

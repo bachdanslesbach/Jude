@@ -2,36 +2,36 @@
  {
   "runner_name": "spacy-only",
   "aggregate": {
-   "precision": 0.6401045068582626,
-   "recall": 0.6023355869698832,
-   "f1": 0.6206459784673843,
-   "tp": 980,
-   "fp": 551,
-   "fn": 647,
+   "precision": 0.6716352476983779,
+   "recall": 0.6516376010208422,
+   "f1": 0.6614853195164077,
+   "tp": 1532,
+   "fp": 749,
+   "fn": 819,
    "by_type": {
     "ORG": {
-     "precision": 0.5287107258938245,
-     "recall": 0.7416413373860182,
-     "f1": 0.6173308032890577,
-     "tp": 488,
-     "fp": 435,
-     "fn": 170
+     "precision": 0.6068493150684932,
+     "recall": 0.7826855123674912,
+     "f1": 0.6836419753086419,
+     "tp": 886,
+     "fp": 574,
+     "fn": 246
     },
     "LOC": {
-     "precision": 0.8433734939759037,
-     "recall": 0.4827586206896552,
-     "f1": 0.6140350877192983,
-     "tp": 70,
-     "fp": 13,
-     "fn": 75
+     "precision": 0.7241379310344828,
+     "recall": 0.5029940119760479,
+     "f1": 0.5936395759717314,
+     "tp": 84,
+     "fp": 32,
+     "fn": 83
     },
     "PERSON": {
-     "precision": 0.8038095238095239,
-     "recall": 0.9017094017094017,
-     "f1": 0.8499496475327291,
-     "tp": 422,
-     "fp": 103,
-     "fn": 46
+     "precision": 0.7971631205673759,
+     "recall": 0.9168026101141925,
+     "f1": 0.8528072837632776,
+     "tp": 562,
+     "fp": 143,
+     "fn": 51
     },
     "EMAIL": {
      "precision": 0.0,
@@ -39,7 +39,7 @@
      "f1": 0.0,
      "tp": 0,
      "fp": 0,
-     "fn": 99
+     "fn": 101
     },
     "PHONE": {
      "precision": 0.0,
@@ -47,7 +47,7 @@
      "f1": 0.0,
      "tp": 0,
      "fp": 0,
-     "fn": 84
+     "fn": 88
     },
     "IBAN": {
      "precision": 0.0,
@@ -55,7 +55,7 @@
      "f1": 0.0,
      "tp": 0,
      "fp": 0,
-     "fn": 60
+     "fn": 80
     },
     "CASE_REF": {
      "precision": 0.0,
@@ -63,7 +63,7 @@
      "f1": 0.0,
      "tp": 0,
      "fp": 0,
-     "fn": 84
+     "fn": 141
     },
     "URL": {
      "precision": 0.0,
@@ -76,36 +76,36 @@
    }
   },
   "aggregate_any_type": {
-   "precision": 0.7060744611365121,
-   "recall": 0.6644130301167793,
-   "f1": 0.6846105129829005,
-   "tp": 1081,
-   "fp": 450,
-   "fn": 546,
+   "precision": 0.7286277948268304,
+   "recall": 0.7069332199064228,
+   "f1": 0.7176165803108808,
+   "tp": 1662,
+   "fp": 619,
+   "fn": 689,
    "by_type": {
     "ORG": {
-     "precision": 0.5777063236870311,
-     "recall": 0.8191489361702128,
-     "f1": 0.677561282212445,
-     "tp": 539,
-     "fp": 394,
-     "fn": 119
+     "precision": 0.6439649359406608,
+     "recall": 0.8436395759717314,
+     "f1": 0.7304015296367113,
+     "tp": 955,
+     "fp": 528,
+     "fn": 177
     },
     "LOC": {
-     "precision": 0.8764044943820225,
-     "recall": 0.5379310344827586,
-     "f1": 0.6666666666666665,
-     "tp": 78,
-     "fp": 11,
-     "fn": 67
+     "precision": 0.7723577235772358,
+     "recall": 0.5688622754491018,
+     "f1": 0.6551724137931034,
+     "tp": 95,
+     "fp": 28,
+     "fn": 72
     },
     "PERSON": {
-     "precision": 0.9087221095334685,
-     "recall": 0.9572649572649573,
-     "f1": 0.9323621227887616,
-     "tp": 448,
-     "fp": 45,
-     "fn": 20
+     "precision": 0.9033742331288344,
+     "recall": 0.9608482871125612,
+     "f1": 0.9312252964426877,
+     "tp": 589,
+     "fp": 63,
+     "fn": 24
     },
     "EMAIL": {
      "precision": 0.0,
@@ -113,7 +113,7 @@
      "f1": 0.0,
      "tp": 0,
      "fp": 0,
-     "fn": 99
+     "fn": 101
     },
     "PHONE": {
      "precision": 0.0,
@@ -121,23 +121,23 @@
      "f1": 0.0,
      "tp": 0,
      "fp": 0,
-     "fn": 84
+     "fn": 88
     },
     "IBAN": {
      "precision": 1.0,
-     "recall": 0.11666666666666667,
-     "f1": 0.208955223880597,
+     "recall": 0.0875,
+     "f1": 0.16091954022988506,
      "tp": 7,
      "fp": 0,
-     "fn": 53
+     "fn": 73
     },
     "CASE_REF": {
      "precision": 1.0,
-     "recall": 0.10714285714285714,
-     "f1": 0.19354838709677416,
-     "tp": 9,
+     "recall": 0.11347517730496454,
+     "f1": 0.20382165605095542,
+     "tp": 16,
      "fp": 0,
-     "fn": 75
+     "fn": 125
     },
     "URL": {
      "precision": 0.0,
@@ -152,30 +152,30 @@
   "meta": {
    "span_level": true,
    "public_body_over_redaction": {
-    "hits": 247,
-    "total": 613,
-    "rate": 0.4029363784665579
+    "hits": 391,
+    "total": 1466,
+    "rate": 0.26671214188267395
    },
    "sentence_level": {
-    "precision": 0.8026183282980867,
-    "recall": 0.7775609756097561,
-    "f1": 0.7898909811694749,
-    "tp": 797,
-    "fp": 196,
-    "fn": 228,
-    "n_sentences": 2353
+    "precision": 0.8074616922051966,
+    "recall": 0.7900912646675359,
+    "f1": 0.7986820428336079,
+    "tp": 1212,
+    "fp": 289,
+    "fn": 322,
+    "n_sentences": 3611
    },
    "review": {
-    "misses": 647,
-    "misses_surfaced": 315,
-    "items": 1027,
-    "items_per_doc": 23.34090909090909
+    "misses": 819,
+    "misses_surfaced": 406,
+    "items": 1342,
+    "items_per_doc": 23.137931034482758
    },
-   "n_docs": 44,
-   "load_seconds": 0.06703741697128862,
-   "seconds": 32.36023279209621,
-   "chars_per_sec": 5310.530400200746,
-   "peak_rss_mb": 2206.03125,
+   "n_docs": 58,
+   "load_seconds": 0.07706258294638246,
+   "seconds": 48.70595795894042,
+   "chars_per_sec": 4929.848627603578,
+   "peak_rss_mb": 1233.625,
    "device": "cpu"
   },
   "per_doc": [
@@ -15406,6 +15406,5832 @@
       "end": 6077,
       "type": "PERSON",
       "text": "Filip Descheemaeker"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_101_commercial_2026_central_termica_v_santan_en",
+    "score": {
+     "precision": 0.7735849056603774,
+     "recall": 0.8913043478260869,
+     "f1": 0.8282828282828283,
+     "tp": 41,
+     "fp": 12,
+     "fn": 5,
+     "by_type": {
+      "ORG": {
+       "precision": 0.7727272727272727,
+       "recall": 0.918918918918919,
+       "f1": 0.8395061728395061,
+       "tp": 34,
+       "fp": 10,
+       "fn": 3
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 2,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 7,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.7735849056603774,
+     "recall": 0.8913043478260869,
+     "f1": 0.8282828282828283,
+     "tp": 41,
+     "fp": 12,
+     "fn": 5,
+     "by_type": {
+      "ORG": {
+       "precision": 0.7727272727272727,
+       "recall": 0.918918918918919,
+       "f1": 0.8395061728395061,
+       "tp": 34,
+       "fp": 10,
+       "fn": 3
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 2,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 7,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 78,
+      "end": 103,
+      "type": "ORG",
+      "text": "THE HIGH COURT OF JUSTICE"
+     },
+     {
+      "start": 153,
+      "end": 176,
+      "type": "ORG",
+      "text": "Royal Courts of Justice"
+     },
+     {
+      "start": 178,
+      "end": 192,
+      "type": "LOC",
+      "text": "Rolls Building"
+     },
+     {
+      "start": 194,
+      "end": 205,
+      "type": "LOC",
+      "text": "Fetter Lane"
+     },
+     {
+      "start": 279,
+      "end": 285,
+      "type": "PERSON",
+      "text": "CALVER"
+     },
+     {
+      "start": 553,
+      "end": 569,
+      "type": "PERSON",
+      "text": "Stephen Houseman"
+     },
+     {
+      "start": 574,
+      "end": 588,
+      "type": "PERSON",
+      "text": "Nehali Shah KC"
+     },
+     {
+      "start": 590,
+      "end": 602,
+      "type": "PERSON",
+      "text": "Moritz Grimm"
+     },
+     {
+      "start": 618,
+      "end": 651,
+      "type": "ORG",
+      "text": "Greenwoods Legal Services Limited"
+     },
+     {
+      "start": 695,
+      "end": 719,
+      "type": "ORG",
+      "text": "Goodwin Procter (UK) LLP"
+     },
+     {
+      "start": 746,
+      "end": 761,
+      "type": "PERSON",
+      "text": "Adrian Beltrami"
+     },
+     {
+      "start": 766,
+      "end": 784,
+      "type": "PERSON",
+      "text": "Paul Bonner Hughes"
+     },
+     {
+      "start": 800,
+      "end": 833,
+      "type": "ORG",
+      "text": "Allen Overy Shearman Sterling LLP"
+     },
+     {
+      "start": 1060,
+      "end": 1081,
+      "type": "ORG",
+      "text": "The National Archives"
+     },
+     {
+      "start": 1177,
+      "end": 1183,
+      "type": "PERSON",
+      "text": "Calver"
+     },
+     {
+      "start": 1244,
+      "end": 1247,
+      "type": "ORG",
+      "text": "CTT"
+     },
+     {
+      "start": 1477,
+      "end": 1490,
+      "type": "ORG",
+      "text": "the TSK Group"
+     },
+     {
+      "start": 1551,
+      "end": 1558,
+      "type": "ORG",
+      "text": "Project"
+     },
+     {
+      "start": 1560,
+      "end": 1563,
+      "type": "ORG",
+      "text": "CTT"
+     },
+     {
+      "start": 1580,
+      "end": 1593,
+      "type": "ORG",
+      "text": "the TSK Group"
+     },
+     {
+      "start": 1615,
+      "end": 1656,
+      "type": "ORG",
+      "text": "Engineering, Procurement and Construction"
+     },
+     {
+      "start": 1804,
+      "end": 1813,
+      "type": "ORG",
+      "text": "Santander"
+     },
+     {
+      "start": 1848,
+      "end": 1883,
+      "type": "ORG",
+      "text": "TSK Electrónica y Electricidad, S.A"
+     },
+     {
+      "start": 1912,
+      "end": 1935,
+      "type": "ORG",
+      "text": "TSK Moçambique Limitada"
+     },
+     {
+      "start": 1951,
+      "end": 1954,
+      "type": "ORG",
+      "text": "TSK"
+     },
+     {
+      "start": 1966,
+      "end": 1979,
+      "type": "ORG",
+      "text": "the TSK Group"
+     },
+     {
+      "start": 2173,
+      "end": 2176,
+      "type": "ORG",
+      "text": "CTT"
+     },
+     {
+      "start": 2264,
+      "end": 2267,
+      "type": "ORG",
+      "text": "CTT"
+     },
+     {
+      "start": 2286,
+      "end": 2289,
+      "type": "ORG",
+      "text": "TSK"
+     },
+     {
+      "start": 2613,
+      "end": 2616,
+      "type": "ORG",
+      "text": "CTT"
+     },
+     {
+      "start": 2635,
+      "end": 2638,
+      "type": "ORG",
+      "text": "TSK"
+     },
+     {
+      "start": 3001,
+      "end": 3004,
+      "type": "ORG",
+      "text": "CTT"
+     },
+     {
+      "start": 3081,
+      "end": 3084,
+      "type": "ORG",
+      "text": "CTT"
+     },
+     {
+      "start": 3131,
+      "end": 3140,
+      "type": "ORG",
+      "text": "Santander"
+     },
+     {
+      "start": 3214,
+      "end": 3217,
+      "type": "ORG",
+      "text": "CTT"
+     },
+     {
+      "start": 3313,
+      "end": 3317,
+      "type": "ORG",
+      "text": "Citi"
+     },
+     {
+      "start": 3348,
+      "end": 3357,
+      "type": "ORG",
+      "text": "Santander"
+     },
+     {
+      "start": 3375,
+      "end": 3378,
+      "type": "ORG",
+      "text": "CTT"
+     },
+     {
+      "start": 3388,
+      "end": 3392,
+      "type": "ORG",
+      "text": "Citi"
+     },
+     {
+      "start": 3438,
+      "end": 3441,
+      "type": "ORG",
+      "text": "CTT"
+     },
+     {
+      "start": 3486,
+      "end": 3495,
+      "type": "ORG",
+      "text": "Santander"
+     },
+     {
+      "start": 3517,
+      "end": 3520,
+      "type": "ORG",
+      "text": "CTT"
+     },
+     {
+      "start": 3596,
+      "end": 3611,
+      "type": "ORG",
+      "text": "a Spanish Court"
+     },
+     {
+      "start": 3673,
+      "end": 3676,
+      "type": "ORG",
+      "text": "CTT"
+     },
+     {
+      "start": 3863,
+      "end": 3877,
+      "type": "ORG",
+      "text": "Ralli Brothers"
+     },
+     {
+      "start": 4007,
+      "end": 4021,
+      "type": "ORG",
+      "text": "Ralli Brothers"
+     },
+     {
+      "start": 4146,
+      "end": 4155,
+      "type": "ORG",
+      "text": "Santander"
+     },
+     {
+      "start": 4212,
+      "end": 4221,
+      "type": "ORG",
+      "text": "Santander"
+     },
+     {
+      "start": 4416,
+      "end": 4425,
+      "type": "ORG",
+      "text": "Santander"
+     },
+     {
+      "start": 4465,
+      "end": 4479,
+      "type": "ORG",
+      "text": "Ralli Brothers"
+     },
+     {
+      "start": 4675,
+      "end": 4684,
+      "type": "ORG",
+      "text": "Santander"
+     },
+     {
+      "start": 4722,
+      "end": 4736,
+      "type": "ORG",
+      "text": "Ralli Brothers"
+     },
+     {
+      "start": 4760,
+      "end": 4769,
+      "type": "ORG",
+      "text": "Santander"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_102_commercial_2026_intralinks_v_nexans_en",
+    "score": {
+     "precision": 0.7555555555555555,
+     "recall": 0.8717948717948718,
+     "f1": 0.8095238095238095,
+     "tp": 34,
+     "fp": 11,
+     "fn": 5,
+     "by_type": {
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 8,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.7428571428571429,
+       "recall": 0.9629629629629629,
+       "f1": 0.8387096774193549,
+       "tp": 26,
+       "fp": 9,
+       "fn": 1
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 2,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.7555555555555555,
+     "recall": 0.8717948717948718,
+     "f1": 0.8095238095238095,
+     "tp": 34,
+     "fp": 11,
+     "fn": 5,
+     "by_type": {
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 8,
+       "fp": 0,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.7428571428571429,
+       "recall": 0.9629629629629629,
+       "f1": 0.8387096774193549,
+       "tp": 26,
+       "fp": 9,
+       "fn": 1
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 2,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 0,
+      "end": 17,
+      "type": "PERSON",
+      "text": "Thomas Raphael KC"
+     },
+     {
+      "start": 49,
+      "end": 63,
+      "type": "ORG",
+      "text": "the High Court"
+     },
+     {
+      "start": 84,
+      "end": 94,
+      "type": "ORG",
+      "text": "Intralinks"
+     },
+     {
+      "start": 97,
+      "end": 103,
+      "type": "ORG",
+      "text": "Nexans"
+     },
+     {
+      "start": 183,
+      "end": 208,
+      "type": "ORG",
+      "text": "THE HIGH COURT OF JUSTICE"
+     },
+     {
+      "start": 261,
+      "end": 292,
+      "type": "ORG",
+      "text": "LONDON CIRCUIT COMMERCIAL COURT"
+     },
+     {
+      "start": 294,
+      "end": 297,
+      "type": "ORG",
+      "text": "KBD"
+     },
+     {
+      "start": 300,
+      "end": 323,
+      "type": "ORG",
+      "text": "Royal Courts of Justice"
+     },
+     {
+      "start": 325,
+      "end": 339,
+      "type": "LOC",
+      "text": "Rolls Building"
+     },
+     {
+      "start": 341,
+      "end": 352,
+      "type": "LOC",
+      "text": "Fetter Lane"
+     },
+     {
+      "start": 407,
+      "end": 424,
+      "type": "PERSON",
+      "text": "Thomas Raphael KC"
+     },
+     {
+      "start": 455,
+      "end": 469,
+      "type": "ORG",
+      "text": "the High Court"
+     },
+     {
+      "start": 525,
+      "end": 539,
+      "type": "ORG",
+      "text": "INTRALINKS INC"
+     },
+     {
+      "start": 573,
+      "end": 582,
+      "type": "ORG",
+      "text": "NEXANS SA"
+     },
+     {
+      "start": 693,
+      "end": 706,
+      "type": "PERSON",
+      "text": "Stuart Benzie"
+     },
+     {
+      "start": 722,
+      "end": 734,
+      "type": "ORG",
+      "text": "Fladgate LLP"
+     },
+     {
+      "start": 765,
+      "end": 776,
+      "type": "PERSON",
+      "text": "Daniel Khoo"
+     },
+     {
+      "start": 792,
+      "end": 807,
+      "type": "ORG",
+      "text": "Fieldfisher LLP"
+     },
+     {
+      "start": 1083,
+      "end": 1104,
+      "type": "ORG",
+      "text": "the National Archives"
+     },
+     {
+      "start": 1138,
+      "end": 1155,
+      "type": "PERSON",
+      "text": "THOMAS RAPHAEL KC"
+     },
+     {
+      "start": 1186,
+      "end": 1200,
+      "type": "ORG",
+      "text": "THE HIGH COURT"
+     },
+     {
+      "start": 1323,
+      "end": 1337,
+      "type": "ORG",
+      "text": "Intralinks Inc"
+     },
+     {
+      "start": 1340,
+      "end": 1350,
+      "type": "ORG",
+      "text": "Intralinks"
+     },
+     {
+      "start": 1642,
+      "end": 1651,
+      "type": "ORG",
+      "text": "Nexans SA"
+     },
+     {
+      "start": 1654,
+      "end": 1660,
+      "type": "ORG",
+      "text": "Nexans"
+     },
+     {
+      "start": 1757,
+      "end": 1767,
+      "type": "ORG",
+      "text": "Intralinks"
+     },
+     {
+      "start": 2073,
+      "end": 2079,
+      "type": "ORG",
+      "text": "Nexans"
+     },
+     {
+      "start": 2332,
+      "end": 2342,
+      "type": "ORG",
+      "text": "Intralinks"
+     },
+     {
+      "start": 2829,
+      "end": 2839,
+      "type": "ORG",
+      "text": "Intralinks"
+     },
+     {
+      "start": 2845,
+      "end": 2851,
+      "type": "ORG",
+      "text": "Nexans"
+     },
+     {
+      "start": 2951,
+      "end": 2957,
+      "type": "ORG",
+      "text": "Nexans"
+     },
+     {
+      "start": 3020,
+      "end": 3026,
+      "type": "ORG",
+      "text": "Nexans"
+     },
+     {
+      "start": 3422,
+      "end": 3432,
+      "type": "ORG",
+      "text": "Intralinks"
+     },
+     {
+      "start": 3488,
+      "end": 3498,
+      "type": "ORG",
+      "text": "Intralinks"
+     },
+     {
+      "start": 3521,
+      "end": 3556,
+      "type": "ORG",
+      "text": "the London Circuit Commercial Court"
+     },
+     {
+      "start": 3591,
+      "end": 3601,
+      "type": "ORG",
+      "text": "Intralinks"
+     },
+     {
+      "start": 3863,
+      "end": 3867,
+      "type": "PERSON",
+      "text": "Bird"
+     },
+     {
+      "start": 3952,
+      "end": 3958,
+      "type": "ORG",
+      "text": "Nexans"
+     },
+     {
+      "start": 3970,
+      "end": 3976,
+      "type": "ORG",
+      "text": "Nexans"
+     },
+     {
+      "start": 4231,
+      "end": 4237,
+      "type": "ORG",
+      "text": "Nexans"
+     },
+     {
+      "start": 4318,
+      "end": 4331,
+      "type": "PERSON",
+      "text": "Stuart Benzie"
+     },
+     {
+      "start": 4336,
+      "end": 4342,
+      "type": "ORG",
+      "text": "Nexans"
+     },
+     {
+      "start": 4350,
+      "end": 4361,
+      "type": "PERSON",
+      "text": "Daniel Khoo"
+     },
+     {
+      "start": 4366,
+      "end": 4376,
+      "type": "ORG",
+      "text": "Intralinks"
+     },
+     {
+      "start": 4423,
+      "end": 4433,
+      "type": "ORG",
+      "text": "Intralinks"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_103_chancery_2026_glencore_v_prax_lindsey_en",
+    "score": {
+     "precision": 0.7959183673469388,
+     "recall": 0.9069767441860465,
+     "f1": 0.8478260869565216,
+     "tp": 39,
+     "fp": 10,
+     "fn": 4,
+     "by_type": {
+      "ORG": {
+       "precision": 0.8571428571428571,
+       "recall": 0.967741935483871,
+       "f1": 0.909090909090909,
+       "tp": 30,
+       "fp": 5,
+       "fn": 1
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 2,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 0.75,
+       "recall": 1.0,
+       "f1": 0.8571428571428571,
+       "tp": 9,
+       "fp": 3,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.8163265306122449,
+     "recall": 0.9302325581395349,
+     "f1": 0.8695652173913043,
+     "tp": 40,
+     "fp": 9,
+     "fn": 3,
+     "by_type": {
+      "ORG": {
+       "precision": 0.8611111111111112,
+       "recall": 1.0,
+       "f1": 0.9253731343283582,
+       "tp": 31,
+       "fp": 5,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 2,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 0.8181818181818182,
+       "recall": 1.0,
+       "f1": 0.9,
+       "tp": 9,
+       "fp": 2,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 76,
+      "end": 101,
+      "type": "ORG",
+      "text": "THE HIGH COURT OF JUSTICE"
+     },
+     {
+      "start": 210,
+      "end": 233,
+      "type": "ORG",
+      "text": "Royal Courts of Justice"
+     },
+     {
+      "start": 235,
+      "end": 249,
+      "type": "LOC",
+      "text": "Rolls Building"
+     },
+     {
+      "start": 251,
+      "end": 262,
+      "type": "LOC",
+      "text": "Fetter Lane"
+     },
+     {
+      "start": 326,
+      "end": 332,
+      "type": "PERSON",
+      "text": "TROWER"
+     },
+     {
+      "start": 394,
+      "end": 427,
+      "type": "ORG",
+      "text": "PRAX LINDSEY OIL REFINERY LIMITED"
+     },
+     {
+      "start": 504,
+      "end": 526,
+      "type": "ORG",
+      "text": "GLENCORE ENERGY UK LTD"
+     },
+     {
+      "start": 549,
+      "end": 582,
+      "type": "ORG",
+      "text": "PRAX LINDSEY OIL REFINERY LIMITED"
+     },
+     {
+      "start": 616,
+      "end": 630,
+      "type": "PERSON",
+      "text": "Edward Cumming"
+     },
+     {
+      "start": 641,
+      "end": 654,
+      "type": "PERSON",
+      "text": "Erin Hitchens"
+     },
+     {
+      "start": 670,
+      "end": 679,
+      "type": "ORG",
+      "text": "Jones Day"
+     },
+     {
+      "start": 703,
+      "end": 717,
+      "type": "PERSON",
+      "text": "Joseph Curl KC"
+     },
+     {
+      "start": 725,
+      "end": 738,
+      "type": "PERSON",
+      "text": "Clara Johnson"
+     },
+     {
+      "start": 754,
+      "end": 763,
+      "type": "PERSON",
+      "text": "Slaughter"
+     },
+     {
+      "start": 1043,
+      "end": 1064,
+      "type": "ORG",
+      "text": "the National Archives"
+     },
+     {
+      "start": 1109,
+      "end": 1115,
+      "type": "PERSON",
+      "text": "TROWER"
+     },
+     {
+      "start": 1128,
+      "end": 1134,
+      "type": "PERSON",
+      "text": "Trower"
+     },
+     {
+      "start": 1167,
+      "end": 1189,
+      "type": "ORG",
+      "text": "Glencore Energy UK Ltd"
+     },
+     {
+      "start": 1192,
+      "end": 1200,
+      "type": "ORG",
+      "text": "Glencore"
+     },
+     {
+      "start": 1322,
+      "end": 1355,
+      "type": "ORG",
+      "text": "Prax Lindsey Oil Refinery Limited"
+     },
+     {
+      "start": 1375,
+      "end": 1379,
+      "type": "ORG",
+      "text": "PLOR"
+     },
+     {
+      "start": 1764,
+      "end": 1772,
+      "type": "ORG",
+      "text": "Glencore"
+     },
+     {
+      "start": 1795,
+      "end": 1799,
+      "type": "ORG",
+      "text": "PLOR"
+     },
+     {
+      "start": 1967,
+      "end": 1975,
+      "type": "ORG",
+      "text": "Glencore"
+     },
+     {
+      "start": 2169,
+      "end": 2173,
+      "type": "ORG",
+      "text": "PLOR"
+     },
+     {
+      "start": 2245,
+      "end": 2249,
+      "type": "ORG",
+      "text": "PLOR"
+     },
+     {
+      "start": 2264,
+      "end": 2268,
+      "type": "ORG",
+      "text": "PLOR"
+     },
+     {
+      "start": 2289,
+      "end": 2293,
+      "type": "ORG",
+      "text": "Prax"
+     },
+     {
+      "start": 2516,
+      "end": 2520,
+      "type": "ORG",
+      "text": "PLOR"
+     },
+     {
+      "start": 2989,
+      "end": 2993,
+      "type": "ORG",
+      "text": "PLOR"
+     },
+     {
+      "start": 2997,
+      "end": 3012,
+      "type": "PERSON",
+      "text": "Michael Green J"
+     },
+     {
+      "start": 3066,
+      "end": 3070,
+      "type": "ORG",
+      "text": "PLOR"
+     },
+     {
+      "start": 3091,
+      "end": 3111,
+      "type": "PERSON",
+      "text": "Winston Soosaipillai"
+     },
+     {
+      "start": 3234,
+      "end": 3252,
+      "type": "ORG",
+      "text": "FTI Consulting LLP"
+     },
+     {
+      "start": 3424,
+      "end": 3428,
+      "type": "ORG",
+      "text": "PLOR"
+     },
+     {
+      "start": 3476,
+      "end": 3484,
+      "type": "ORG",
+      "text": "Glencore"
+     },
+     {
+      "start": 3621,
+      "end": 3634,
+      "type": "ORG",
+      "text": "HSBC Bank Plc"
+     },
+     {
+      "start": 3637,
+      "end": 3641,
+      "type": "ORG",
+      "text": "HSBC"
+     },
+     {
+      "start": 3715,
+      "end": 3719,
+      "type": "ORG",
+      "text": "PLOR"
+     },
+     {
+      "start": 3737,
+      "end": 3744,
+      "type": "ORG",
+      "text": "Sellers"
+     },
+     {
+      "start": 4051,
+      "end": 4068,
+      "type": "ORG",
+      "text": "State Oil Limited"
+     },
+     {
+      "start": 4094,
+      "end": 4097,
+      "type": "ORG",
+      "text": "SOL"
+     },
+     {
+      "start": 4519,
+      "end": 4540,
+      "type": "ORG",
+      "text": "Prax Treasury Limited"
+     },
+     {
+      "start": 4543,
+      "end": 4546,
+      "type": "ORG",
+      "text": "PTL"
+     },
+     {
+      "start": 4633,
+      "end": 4640,
+      "type": "PERSON",
+      "text": "Sellers"
+     },
+     {
+      "start": 4660,
+      "end": 4667,
+      "type": "PERSON",
+      "text": "Sellers"
+     },
+     {
+      "start": 4863,
+      "end": 4867,
+      "type": "ORG",
+      "text": "PLOR"
+     },
+     {
+      "start": 4882,
+      "end": 4889,
+      "type": "ORG",
+      "text": "Sellers"
+     },
+     {
+      "start": 5202,
+      "end": 5205,
+      "type": "ORG",
+      "text": "PTL"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_104_chancery_2026_nocopyrightsounds_v_aei_mu_en",
+    "score": {
+     "precision": 0.8809523809523809,
+     "recall": 0.9024390243902439,
+     "f1": 0.8915662650602411,
+     "tp": 37,
+     "fp": 5,
+     "fn": 4,
+     "by_type": {
+      "ORG": {
+       "precision": 0.9032258064516129,
+       "recall": 0.9333333333333333,
+       "f1": 0.9180327868852459,
+       "tp": 28,
+       "fp": 3,
+       "fn": 2
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 2,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 9,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.8809523809523809,
+     "recall": 0.9024390243902439,
+     "f1": 0.8915662650602411,
+     "tp": 37,
+     "fp": 5,
+     "fn": 4,
+     "by_type": {
+      "ORG": {
+       "precision": 0.9032258064516129,
+       "recall": 0.9333333333333333,
+       "f1": 0.9180327868852459,
+       "tp": 28,
+       "fp": 3,
+       "fn": 2
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 2,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 9,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 76,
+      "end": 101,
+      "type": "ORG",
+      "text": "THE HIGH COURT OF JUSTICE"
+     },
+     {
+      "start": 188,
+      "end": 211,
+      "type": "ORG",
+      "text": "Royal Courts of Justice"
+     },
+     {
+      "start": 213,
+      "end": 227,
+      "type": "LOC",
+      "text": "Rolls Building"
+     },
+     {
+      "start": 229,
+      "end": 240,
+      "type": "LOC",
+      "text": "Fetter Lane"
+     },
+     {
+      "start": 295,
+      "end": 308,
+      "type": "PERSON",
+      "text": "MASTER PESTER"
+     },
+     {
+      "start": 415,
+      "end": 432,
+      "type": "ORG",
+      "text": "AEI MUSIC LIMITED"
+     },
+     {
+      "start": 439,
+      "end": 465,
+      "type": "ORG",
+      "text": "FEATHERSTONE MUSIC LIMITED"
+     },
+     {
+      "start": 565,
+      "end": 576,
+      "type": "PERSON",
+      "text": "Ian Mill KC"
+     },
+     {
+      "start": 581,
+      "end": 592,
+      "type": "PERSON",
+      "text": "Tom Cleaver"
+     },
+     {
+      "start": 608,
+      "end": 619,
+      "type": "ORG",
+      "text": "Simkins LLP"
+     },
+     {
+      "start": 639,
+      "end": 650,
+      "type": "PERSON",
+      "text": "James Knott"
+     },
+     {
+      "start": 979,
+      "end": 985,
+      "type": "PERSON",
+      "text": "Pester"
+     },
+     {
+      "start": 1084,
+      "end": 1087,
+      "type": "ORG",
+      "text": "NCS"
+     },
+     {
+      "start": 1314,
+      "end": 1317,
+      "type": "ORG",
+      "text": "AEI"
+     },
+     {
+      "start": 1574,
+      "end": 1584,
+      "type": "PERSON",
+      "text": "Diluk Dias"
+     },
+     {
+      "start": 1740,
+      "end": 1743,
+      "type": "ORG",
+      "text": "AEI"
+     },
+     {
+      "start": 1831,
+      "end": 1834,
+      "type": "ORG",
+      "text": "NCS"
+     },
+     {
+      "start": 1840,
+      "end": 1843,
+      "type": "ORG",
+      "text": "AEI"
+     },
+     {
+      "start": 1897,
+      "end": 1901,
+      "type": "PERSON",
+      "text": "Dias"
+     },
+     {
+      "start": 2049,
+      "end": 2052,
+      "type": "ORG",
+      "text": "NCS"
+     },
+     {
+      "start": 2056,
+      "end": 2059,
+      "type": "ORG",
+      "text": "AEI"
+     },
+     {
+      "start": 2227,
+      "end": 2230,
+      "type": "ORG",
+      "text": "NCS"
+     },
+     {
+      "start": 2300,
+      "end": 2304,
+      "type": "PERSON",
+      "text": "Dias"
+     },
+     {
+      "start": 2443,
+      "end": 2446,
+      "type": "ORG",
+      "text": "NCS"
+     },
+     {
+      "start": 2470,
+      "end": 2473,
+      "type": "ORG",
+      "text": "AEI"
+     },
+     {
+      "start": 2504,
+      "end": 2507,
+      "type": "ORG",
+      "text": "NCS"
+     },
+     {
+      "start": 2537,
+      "end": 2540,
+      "type": "ORG",
+      "text": "NCS"
+     },
+     {
+      "start": 2689,
+      "end": 2692,
+      "type": "ORG",
+      "text": "AEI"
+     },
+     {
+      "start": 2985,
+      "end": 2988,
+      "type": "ORG",
+      "text": "NCS"
+     },
+     {
+      "start": 3249,
+      "end": 3252,
+      "type": "ORG",
+      "text": "NCS"
+     },
+     {
+      "start": 3324,
+      "end": 3328,
+      "type": "PERSON",
+      "text": "Dias"
+     },
+     {
+      "start": 3392,
+      "end": 3395,
+      "type": "ORG",
+      "text": "AEI"
+     },
+     {
+      "start": 3401,
+      "end": 3404,
+      "type": "ORG",
+      "text": "NCS"
+     },
+     {
+      "start": 3437,
+      "end": 3440,
+      "type": "ORG",
+      "text": "AEI"
+     },
+     {
+      "start": 3641,
+      "end": 3644,
+      "type": "ORG",
+      "text": "NCS"
+     },
+     {
+      "start": 3764,
+      "end": 3767,
+      "type": "ORG",
+      "text": "NCS"
+     },
+     {
+      "start": 3793,
+      "end": 3800,
+      "type": "ORG",
+      "text": "YouTube"
+     },
+     {
+      "start": 3891,
+      "end": 3894,
+      "type": "ORG",
+      "text": "AEI"
+     },
+     {
+      "start": 3901,
+      "end": 3913,
+      "type": "ORG",
+      "text": "Featherstone"
+     },
+     {
+      "start": 4055,
+      "end": 4058,
+      "type": "ORG",
+      "text": "NCS"
+     },
+     {
+      "start": 4143,
+      "end": 4159,
+      "type": "ORG",
+      "text": "AEI Ventures Ltd"
+     },
+     {
+      "start": 4201,
+      "end": 4204,
+      "type": "ORG",
+      "text": "NCS"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_105_coa_2026_rasmala_v_trafigura_en",
+    "score": {
+     "precision": 0.9298245614035088,
+     "recall": 0.8983050847457628,
+     "f1": 0.9137931034482759,
+     "tp": 53,
+     "fp": 4,
+     "fn": 6,
+     "by_type": {
+      "ORG": {
+       "precision": 0.9047619047619048,
+       "recall": 0.95,
+       "f1": 0.9268292682926829,
+       "tp": 38,
+       "fp": 4,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 15,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.9298245614035088,
+     "recall": 0.8983050847457628,
+     "f1": 0.9137931034482759,
+     "tp": 53,
+     "fp": 4,
+     "fn": 6,
+     "by_type": {
+      "ORG": {
+       "precision": 0.9047619047619048,
+       "recall": 0.95,
+       "f1": 0.9268292682926829,
+       "tp": 38,
+       "fp": 4,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 15,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 128,
+      "end": 153,
+      "type": "ORG",
+      "text": "THE HIGH COURT OF JUSTICE"
+     },
+     {
+      "start": 238,
+      "end": 243,
+      "type": "PERSON",
+      "text": "Rajah"
+     },
+     {
+      "start": 268,
+      "end": 291,
+      "type": "ORG",
+      "text": "Royal Courts of Justice"
+     },
+     {
+      "start": 351,
+      "end": 369,
+      "type": "PERSON",
+      "text": "LORD JUSTICE BAKER"
+     },
+     {
+      "start": 371,
+      "end": 389,
+      "type": "PERSON",
+      "text": "LORD JUSTICE NUGEE"
+     },
+     {
+      "start": 409,
+      "end": 413,
+      "type": "PERSON",
+      "text": "FALK"
+     },
+     {
+      "start": 528,
+      "end": 545,
+      "type": "ORG",
+      "text": "TRAFIGURA PTE LTD"
+     },
+     {
+      "start": 657,
+      "end": 671,
+      "type": "PERSON",
+      "text": "Jonathan Adkin"
+     },
+     {
+      "start": 679,
+      "end": 695,
+      "type": "PERSON",
+      "text": "Adil Mohamedbhai"
+     },
+     {
+      "start": 711,
+      "end": 729,
+      "type": "ORG",
+      "text": "Hill Dickinson LLP"
+     },
+     {
+      "start": 751,
+      "end": 768,
+      "type": "PERSON",
+      "text": "Neil Kitchener KC"
+     },
+     {
+      "start": 773,
+      "end": 784,
+      "type": "PERSON",
+      "text": "James Nadin"
+     },
+     {
+      "start": 800,
+      "end": 814,
+      "type": "ORG",
+      "text": "Reed Smith LLP"
+     },
+     {
+      "start": 1090,
+      "end": 1111,
+      "type": "ORG",
+      "text": "the National Archives"
+     },
+     {
+      "start": 1158,
+      "end": 1163,
+      "type": "PERSON",
+      "text": "Nugee"
+     },
+     {
+      "start": 1201,
+      "end": 1215,
+      "type": "ORG",
+      "text": "the High Court"
+     },
+     {
+      "start": 1280,
+      "end": 1287,
+      "type": "ORG",
+      "text": "Rasmala"
+     },
+     {
+      "start": 1343,
+      "end": 1360,
+      "type": "ORG",
+      "text": "Trafigura Pte Ltd"
+     },
+     {
+      "start": 1363,
+      "end": 1372,
+      "type": "ORG",
+      "text": "Trafigura"
+     },
+     {
+      "start": 1416,
+      "end": 1423,
+      "type": "ORG",
+      "text": "Rasmala"
+     },
+     {
+      "start": 1443,
+      "end": 1452,
+      "type": "ORG",
+      "text": "Trafigura"
+     },
+     {
+      "start": 1646,
+      "end": 1655,
+      "type": "ORG",
+      "text": "Trafigura"
+     },
+     {
+      "start": 1680,
+      "end": 1711,
+      "type": "ORG",
+      "text": "Farlin Energy & Commodities FZE"
+     },
+     {
+      "start": 1714,
+      "end": 1720,
+      "type": "ORG",
+      "text": "Farlin"
+     },
+     {
+      "start": 1732,
+      "end": 1738,
+      "type": "ORG",
+      "text": "Farlin"
+     },
+     {
+      "start": 1764,
+      "end": 1771,
+      "type": "ORG",
+      "text": "Rasmala"
+     },
+     {
+      "start": 1819,
+      "end": 1826,
+      "type": "ORG",
+      "text": "Rasmala"
+     },
+     {
+      "start": 1877,
+      "end": 1886,
+      "type": "ORG",
+      "text": "Trafigura"
+     },
+     {
+      "start": 1916,
+      "end": 1923,
+      "type": "PERSON",
+      "text": "Rajah J"
+     },
+     {
+      "start": 2066,
+      "end": 2073,
+      "type": "ORG",
+      "text": "Rasmala"
+     },
+     {
+      "start": 2186,
+      "end": 2195,
+      "type": "ORG",
+      "text": "Trafigura"
+     },
+     {
+      "start": 2268,
+      "end": 2277,
+      "type": "ORG",
+      "text": "Trafigura"
+     },
+     {
+      "start": 2408,
+      "end": 2414,
+      "type": "ORG",
+      "text": "Farlin"
+     },
+     {
+      "start": 2443,
+      "end": 2452,
+      "type": "ORG",
+      "text": "Trafigura"
+     },
+     {
+      "start": 2492,
+      "end": 2498,
+      "type": "ORG",
+      "text": "Farlin"
+     },
+     {
+      "start": 2546,
+      "end": 2552,
+      "type": "ORG",
+      "text": "Farlin"
+     },
+     {
+      "start": 2624,
+      "end": 2630,
+      "type": "ORG",
+      "text": "Farlin"
+     },
+     {
+      "start": 2753,
+      "end": 2759,
+      "type": "ORG",
+      "text": "Farlin"
+     },
+     {
+      "start": 2761,
+      "end": 2770,
+      "type": "ORG",
+      "text": "Trafigura"
+     },
+     {
+      "start": 2925,
+      "end": 2934,
+      "type": "ORG",
+      "text": "Trafigura"
+     },
+     {
+      "start": 2997,
+      "end": 3004,
+      "type": "ORG",
+      "text": "Rasmala"
+     },
+     {
+      "start": 3040,
+      "end": 3048,
+      "type": "PERSON",
+      "text": "Miles LJ"
+     },
+     {
+      "start": 3067,
+      "end": 3084,
+      "type": "PERSON",
+      "text": "Jonathan Adkin KC"
+     },
+     {
+      "start": 3092,
+      "end": 3108,
+      "type": "PERSON",
+      "text": "Adil Mohamedbhai"
+     },
+     {
+      "start": 3113,
+      "end": 3120,
+      "type": "ORG",
+      "text": "Rasmala"
+     },
+     {
+      "start": 3134,
+      "end": 3151,
+      "type": "PERSON",
+      "text": "Neil Kitchener KC"
+     },
+     {
+      "start": 3159,
+      "end": 3170,
+      "type": "PERSON",
+      "text": "James Nadin"
+     },
+     {
+      "start": 3175,
+      "end": 3184,
+      "type": "ORG",
+      "text": "Trafigura"
+     },
+     {
+      "start": 3248,
+      "end": 3257,
+      "type": "ORG",
+      "text": "Trafigura"
+     },
+     {
+      "start": 3465,
+      "end": 3474,
+      "type": "ORG",
+      "text": "Trafigura"
+     },
+     {
+      "start": 3566,
+      "end": 3572,
+      "type": "ORG",
+      "text": "Farlin"
+     },
+     {
+      "start": 3603,
+      "end": 3612,
+      "type": "ORG",
+      "text": "Trafigura"
+     },
+     {
+      "start": 3643,
+      "end": 3652,
+      "type": "ORG",
+      "text": "Trafigura"
+     },
+     {
+      "start": 3661,
+      "end": 3667,
+      "type": "ORG",
+      "text": "Farlin"
+     },
+     {
+      "start": 3728,
+      "end": 3737,
+      "type": "ORG",
+      "text": "Trafigura"
+     },
+     {
+      "start": 3818,
+      "end": 3827,
+      "type": "ORG",
+      "text": "Trafigura"
+     },
+     {
+      "start": 3955,
+      "end": 3961,
+      "type": "ORG",
+      "text": "Farlin"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_106_ca3_2026_sandoz_v_united_therapeutics_en",
+    "score": {
+     "precision": 0.8987341772151899,
+     "recall": 0.8068181818181818,
+     "f1": 0.8502994011976047,
+     "tp": 71,
+     "fp": 8,
+     "fn": 17,
+     "by_type": {
+      "ORG": {
+       "precision": 0.8909090909090909,
+       "recall": 0.8909090909090909,
+       "f1": 0.8909090909090909,
+       "tp": 49,
+       "fp": 6,
+       "fn": 6
+      },
+      "PERSON": {
+       "precision": 0.9166666666666666,
+       "recall": 0.9565217391304348,
+       "f1": 0.9361702127659574,
+       "tp": 22,
+       "fp": 2,
+       "fn": 1
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 10
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.9113924050632911,
+     "recall": 0.8181818181818182,
+     "f1": 0.8622754491017964,
+     "tp": 72,
+     "fp": 7,
+     "fn": 16,
+     "by_type": {
+      "ORG": {
+       "precision": 0.9074074074074074,
+       "recall": 0.8909090909090909,
+       "f1": 0.8990825688073394,
+       "tp": 49,
+       "fp": 5,
+       "fn": 6
+      },
+      "PERSON": {
+       "precision": 0.92,
+       "recall": 1.0,
+       "f1": 0.9583333333333334,
+       "tp": 23,
+       "fp": 2,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 10
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 88,
+      "end": 99,
+      "type": "ORG",
+      "text": "SANDOZ, INC"
+     },
+     {
+      "start": 102,
+      "end": 114,
+      "type": "ORG",
+      "text": "RAREGEN, LLC"
+     },
+     {
+      "start": 122,
+      "end": 139,
+      "type": "ORG",
+      "text": "Liquidia PAH, LLC"
+     },
+     {
+      "start": 143,
+      "end": 167,
+      "type": "ORG",
+      "text": "UNITED THERAPEUTICS CORP"
+     },
+     {
+      "start": 170,
+      "end": 193,
+      "type": "ORG",
+      "text": "SMITHS MEDICAL ASD, INC"
+     },
+     {
+      "start": 195,
+      "end": 219,
+      "type": "ORG",
+      "text": "UNITED THERAPEUTICS CORP"
+     },
+     {
+      "start": 247,
+      "end": 258,
+      "type": "ORG",
+      "text": "SANDOZ, INC"
+     },
+     {
+      "start": 286,
+      "end": 298,
+      "type": "ORG",
+      "text": "RAREGEN, LLC"
+     },
+     {
+      "start": 374,
+      "end": 397,
+      "type": "ORG",
+      "text": "the U.S. District Court"
+     },
+     {
+      "start": 412,
+      "end": 431,
+      "type": "PERSON",
+      "text": "Brian R. Martinotti"
+     },
+     {
+      "start": 459,
+      "end": 467,
+      "type": "PERSON",
+      "text": "RESTREPO"
+     },
+     {
+      "start": 469,
+      "end": 474,
+      "type": "PERSON",
+      "text": "MCKEE"
+     },
+     {
+      "start": 480,
+      "end": 485,
+      "type": "PERSON",
+      "text": "AMBRO"
+     },
+     {
+      "start": 626,
+      "end": 634,
+      "type": "PERSON",
+      "text": "RESTREPO"
+     },
+     {
+      "start": 824,
+      "end": 843,
+      "type": "ORG",
+      "text": "United Therapeutics"
+     },
+     {
+      "start": 858,
+      "end": 861,
+      "type": "ORG",
+      "text": "UTC"
+     },
+     {
+      "start": 1085,
+      "end": 1096,
+      "type": "ORG",
+      "text": "Sandoz, Inc"
+     },
+     {
+      "start": 1159,
+      "end": 1165,
+      "type": "ORG",
+      "text": "Sandoz"
+     },
+     {
+      "start": 1192,
+      "end": 1204,
+      "type": "ORG",
+      "text": "RareGen, LLC"
+     },
+     {
+      "start": 1220,
+      "end": 1226,
+      "type": "ORG",
+      "text": "Sandoz"
+     },
+     {
+      "start": 1275,
+      "end": 1281,
+      "type": "ORG",
+      "text": "Sandoz"
+     },
+     {
+      "start": 1376,
+      "end": 1379,
+      "type": "ORG",
+      "text": "UTC"
+     },
+     {
+      "start": 1475,
+      "end": 1481,
+      "type": "ORG",
+      "text": "Sandoz"
+     },
+     {
+      "start": 1573,
+      "end": 1579,
+      "type": "ORG",
+      "text": "Sandoz"
+     },
+     {
+      "start": 1648,
+      "end": 1654,
+      "type": "ORG",
+      "text": "Sandoz"
+     },
+     {
+      "start": 1842,
+      "end": 1845,
+      "type": "ORG",
+      "text": "UTC"
+     },
+     {
+      "start": 1999,
+      "end": 2002,
+      "type": "ORG",
+      "text": "UTC"
+     },
+     {
+      "start": 2139,
+      "end": 2142,
+      "type": "ORG",
+      "text": "UTC"
+     },
+     {
+      "start": 2182,
+      "end": 2185,
+      "type": "ORG",
+      "text": "UTC"
+     },
+     {
+      "start": 2274,
+      "end": 2277,
+      "type": "ORG",
+      "text": "UTC"
+     },
+     {
+      "start": 2282,
+      "end": 2309,
+      "type": "ORG",
+      "text": "Smiths Cartridge Agreements"
+     },
+     {
+      "start": 2310,
+      "end": 2313,
+      "type": "ORG",
+      "text": "UTC"
+     },
+     {
+      "start": 2610,
+      "end": 2633,
+      "type": "ORG",
+      "text": "Smiths Medical ASD, Inc"
+     },
+     {
+      "start": 2637,
+      "end": 2643,
+      "type": "ORG",
+      "text": "Smiths"
+     },
+     {
+      "start": 2752,
+      "end": 2758,
+      "type": "ORG",
+      "text": "Smiths"
+     },
+     {
+      "start": 2828,
+      "end": 2848,
+      "type": "ORG",
+      "text": "Accredo Health Group"
+     },
+     {
+      "start": 2851,
+      "end": 2858,
+      "type": "ORG",
+      "text": "Accredo"
+     },
+     {
+      "start": 2865,
+      "end": 2868,
+      "type": "ORG",
+      "text": "CVS"
+     },
+     {
+      "start": 2869,
+      "end": 2878,
+      "type": "ORG",
+      "text": "Specialty"
+     },
+     {
+      "start": 2881,
+      "end": 2884,
+      "type": "ORG",
+      "text": "CVS"
+     },
+     {
+      "start": 2895,
+      "end": 2902,
+      "type": "ORG",
+      "text": "Accredo"
+     },
+     {
+      "start": 2909,
+      "end": 2918,
+      "type": "ORG",
+      "text": "Specialty"
+     },
+     {
+      "start": 2919,
+      "end": 2929,
+      "type": "ORG",
+      "text": "Pharmacies"
+     },
+     {
+      "start": 3038,
+      "end": 3041,
+      "type": "ORG",
+      "text": "UTC"
+     },
+     {
+      "start": 3062,
+      "end": 3066,
+      "type": "ORG",
+      "text": "Jena"
+     },
+     {
+      "start": 3208,
+      "end": 3214,
+      "type": "ORG",
+      "text": "Sandoz"
+     },
+     {
+      "start": 3310,
+      "end": 3313,
+      "type": "ORG",
+      "text": "UTC"
+     },
+     {
+      "start": 3401,
+      "end": 3406,
+      "type": "PERSON",
+      "text": "North"
+     },
+     {
+      "start": 3409,
+      "end": 3413,
+      "type": "PERSON",
+      "text": "Jena"
+     },
+     {
+      "start": 3675,
+      "end": 3678,
+      "type": "ORG",
+      "text": "UTC"
+     },
+     {
+      "start": 3702,
+      "end": 3709,
+      "type": "ORG",
+      "text": "RareGen"
+     },
+     {
+      "start": 3819,
+      "end": 3823,
+      "type": "PERSON",
+      "text": "Jena"
+     },
+     {
+      "start": 4086,
+      "end": 4094,
+      "type": "ORG",
+      "text": "Carolina"
+     },
+     {
+      "start": 4164,
+      "end": 4171,
+      "type": "PERSON",
+      "text": "Daubert"
+     },
+     {
+      "start": 4218,
+      "end": 4229,
+      "type": "PERSON",
+      "text": "Anupam Jena"
+     },
+     {
+      "start": 4338,
+      "end": 4344,
+      "type": "ORG",
+      "text": "Sandoz"
+     },
+     {
+      "start": 4517,
+      "end": 4523,
+      "type": "ORG",
+      "text": "Sandoz"
+     },
+     {
+      "start": 4536,
+      "end": 4539,
+      "type": "ORG",
+      "text": "UTC"
+     },
+     {
+      "start": 4631,
+      "end": 4665,
+      "type": "ORG",
+      "text": "Appellant United Therapeutics Corp"
+     },
+     {
+      "start": 4667,
+      "end": 4685,
+      "type": "PERSON",
+      "text": "Charles L. McCloud"
+     },
+     {
+      "start": 4695,
+      "end": 4712,
+      "type": "PERSON",
+      "text": "Edward J. Bennett"
+     },
+     {
+      "start": 4713,
+      "end": 4729,
+      "type": "PERSON",
+      "text": "Jonathan B. Pitt"
+     },
+     {
+      "start": 4730,
+      "end": 4743,
+      "type": "PERSON",
+      "text": "Sean Douglass"
+     },
+     {
+      "start": 4744,
+      "end": 4767,
+      "type": "ORG",
+      "text": "WILLIAMS & CONNOLLY LLP"
+     },
+     {
+      "start": 4768,
+      "end": 4787,
+      "type": "PERSON",
+      "text": "Stephen M. Orlofsky"
+     },
+     {
+      "start": 4788,
+      "end": 4805,
+      "type": "PERSON",
+      "text": "Michael R. Darbee"
+     },
+     {
+      "start": 4806,
+      "end": 4820,
+      "type": "ORG",
+      "text": "BLANK ROME LLP"
+     },
+     {
+      "start": 4833,
+      "end": 4854,
+      "type": "ORG",
+      "text": "Appellant Sandoz, Inc"
+     },
+     {
+      "start": 4856,
+      "end": 4871,
+      "type": "PERSON",
+      "text": "Matthew D. Kent"
+     },
+     {
+      "start": 4881,
+      "end": 4898,
+      "type": "PERSON",
+      "text": "David A. Hatchett"
+     },
+     {
+      "start": 4899,
+      "end": 4911,
+      "type": "PERSON",
+      "text": "Karla M. Doe"
+     },
+     {
+      "start": 4912,
+      "end": 4927,
+      "type": "PERSON",
+      "text": "Jenny R. Kramer"
+     },
+     {
+      "start": 4928,
+      "end": 4947,
+      "type": "PERSON",
+      "text": "Jonathan D. Parente"
+     },
+     {
+      "start": 4948,
+      "end": 4965,
+      "type": "ORG",
+      "text": "ALSTON & BIRD LLP"
+     },
+     {
+      "start": 4978,
+      "end": 5000,
+      "type": "ORG",
+      "text": "Appellant RareGen, LLC"
+     },
+     {
+      "start": 5002,
+      "end": 5022,
+      "type": "PERSON",
+      "text": "Kathleen R. Hartnett"
+     },
+     {
+      "start": 5032,
+      "end": 5049,
+      "type": "PERSON",
+      "text": "Patrick J. Hayden"
+     },
+     {
+      "start": 5050,
+      "end": 5060,
+      "type": "ORG",
+      "text": "COOLEY LLP"
+     },
+     {
+      "start": 5061,
+      "end": 5076,
+      "type": "PERSON",
+      "text": "Kevin H. Marino"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_107_ca6_2026_trustees_main_v_appliancesmart_en",
+    "score": {
+     "precision": 0.9620253164556962,
+     "recall": 0.8837209302325582,
+     "f1": 0.9212121212121213,
+     "tp": 76,
+     "fp": 3,
+     "fn": 10,
+     "by_type": {
+      "ORG": {
+       "precision": 0.972972972972973,
+       "recall": 0.9863013698630136,
+       "f1": 0.979591836734694,
+       "tp": 72,
+       "fp": 2,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 0.8,
+       "recall": 0.8,
+       "f1": 0.8000000000000002,
+       "tp": 4,
+       "fp": 1,
+       "fn": 1
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 8
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.9620253164556962,
+     "recall": 0.8837209302325582,
+     "f1": 0.9212121212121213,
+     "tp": 76,
+     "fp": 3,
+     "fn": 10,
+     "by_type": {
+      "ORG": {
+       "precision": 0.972972972972973,
+       "recall": 0.9863013698630136,
+       "f1": 0.979591836734694,
+       "tp": 72,
+       "fp": 2,
+       "fn": 1
+      },
+      "PERSON": {
+       "precision": 0.8,
+       "recall": 0.8,
+       "f1": 0.8000000000000002,
+       "tp": 4,
+       "fp": 1,
+       "fn": 1
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 8
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 125,
+      "end": 147,
+      "type": "ORG",
+      "text": "TRUSTEES MAIN/270, LLC"
+     },
+     {
+      "start": 149,
+      "end": 167,
+      "type": "ORG",
+      "text": "Plaintiff-Appellee"
+     },
+     {
+      "start": 172,
+      "end": 191,
+      "type": "ORG",
+      "text": "APPLIANCESMART, INC"
+     },
+     {
+      "start": 194,
+      "end": 205,
+      "type": "ORG",
+      "text": "JANONE, INC"
+     },
+     {
+      "start": 405,
+      "end": 410,
+      "type": "PERSON",
+      "text": "MOORE"
+     },
+     {
+      "start": 412,
+      "end": 416,
+      "type": "PERSON",
+      "text": "CLAY"
+     },
+     {
+      "start": 422,
+      "end": 432,
+      "type": "PERSON",
+      "text": "NALBANDIAN"
+     },
+     {
+      "start": 450,
+      "end": 460,
+      "type": "PERSON",
+      "text": "NALBANDIAN"
+     },
+     {
+      "start": 477,
+      "end": 496,
+      "type": "ORG",
+      "text": "ApplianceSmart, Inc"
+     },
+     {
+      "start": 514,
+      "end": 531,
+      "type": "ORG",
+      "text": "Trustees Main/270"
+     },
+     {
+      "start": 533,
+      "end": 536,
+      "type": "ORG",
+      "text": "LLC"
+     },
+     {
+      "start": 540,
+      "end": 553,
+      "type": "ORG",
+      "text": "Trustees Main"
+     },
+     {
+      "start": 583,
+      "end": 594,
+      "type": "ORG",
+      "text": "JanOne, Inc"
+     },
+     {
+      "start": 597,
+      "end": 611,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 660,
+      "end": 674,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 790,
+      "end": 803,
+      "type": "ORG",
+      "text": "Trustees Main"
+     },
+     {
+      "start": 945,
+      "end": 951,
+      "type": "ORG",
+      "text": "JanOne"
+     },
+     {
+      "start": 975,
+      "end": 993,
+      "type": "ORG",
+      "text": "Live Ventures, Inc"
+     },
+     {
+      "start": 1052,
+      "end": 1067,
+      "type": "ORG",
+      "text": "Trustees Main’s"
+     },
+     {
+      "start": 1105,
+      "end": 1119,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 1132,
+      "end": 1145,
+      "type": "ORG",
+      "text": "Trustees Main"
+     },
+     {
+      "start": 1242,
+      "end": 1257,
+      "type": "ORG",
+      "text": "Trustees Main’s"
+     },
+     {
+      "start": 1456,
+      "end": 1461,
+      "type": "PERSON",
+      "text": "FILED"
+     },
+     {
+      "start": 1513,
+      "end": 1534,
+      "type": "ORG",
+      "text": "Trustees Main/270 LLC"
+     },
+     {
+      "start": 1538,
+      "end": 1556,
+      "type": "ORG",
+      "text": "ApplianceSmart Inc"
+     },
+     {
+      "start": 1849,
+      "end": 1862,
+      "type": "ORG",
+      "text": "Trustees Main"
+     },
+     {
+      "start": 2122,
+      "end": 2141,
+      "type": "ORG",
+      "text": "ApplianceSmart, Inc"
+     },
+     {
+      "start": 2176,
+      "end": 2191,
+      "type": "ORG",
+      "text": "Trustees Main’s"
+     },
+     {
+      "start": 2284,
+      "end": 2298,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 2353,
+      "end": 2366,
+      "type": "ORG",
+      "text": "Trustees Main"
+     },
+     {
+      "start": 2522,
+      "end": 2536,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 2541,
+      "end": 2552,
+      "type": "ORG",
+      "text": "JanOne, Inc"
+     },
+     {
+      "start": 2585,
+      "end": 2599,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 2642,
+      "end": 2656,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 2672,
+      "end": 2687,
+      "type": "ORG",
+      "text": "Trustees Main’s"
+     },
+     {
+      "start": 2790,
+      "end": 2804,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 2811,
+      "end": 2826,
+      "type": "ORG",
+      "text": "Trustees Main’s"
+     },
+     {
+      "start": 2912,
+      "end": 2926,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 2968,
+      "end": 2982,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 3043,
+      "end": 3057,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 3110,
+      "end": 3124,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 3152,
+      "end": 3182,
+      "type": "ORG",
+      "text": "Appliance Recycling Centers of"
+     },
+     {
+      "start": 3198,
+      "end": 3202,
+      "type": "ORG",
+      "text": "ARCA"
+     },
+     {
+      "start": 3209,
+      "end": 3224,
+      "type": "ORG",
+      "text": "Trustees Main’s"
+     },
+     {
+      "start": 3344,
+      "end": 3348,
+      "type": "ORG",
+      "text": "ARCA"
+     },
+     {
+      "start": 3443,
+      "end": 3464,
+      "type": "ORG",
+      "text": "Trustees Main/270 LLC"
+     },
+     {
+      "start": 3468,
+      "end": 3486,
+      "type": "ORG",
+      "text": "ApplianceSmart Inc"
+     },
+     {
+      "start": 3535,
+      "end": 3549,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 3598,
+      "end": 3602,
+      "type": "ORG",
+      "text": "ARCA"
+     },
+     {
+      "start": 3739,
+      "end": 3752,
+      "type": "ORG",
+      "text": "Trustees Main"
+     },
+     {
+      "start": 3764,
+      "end": 3778,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 3794,
+      "end": 3798,
+      "type": "ORG",
+      "text": "ARCA"
+     },
+     {
+      "start": 3880,
+      "end": 3894,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 3988,
+      "end": 4001,
+      "type": "ORG",
+      "text": "Trustees Main"
+     },
+     {
+      "start": 4037,
+      "end": 4051,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 4160,
+      "end": 4164,
+      "type": "ORG",
+      "text": "ARCA"
+     },
+     {
+      "start": 4188,
+      "end": 4202,
+      "type": "ORG",
+      "text": "JanOne, Inc.—a"
+     },
+     {
+      "start": 4265,
+      "end": 4271,
+      "type": "ORG",
+      "text": "JanOne"
+     },
+     {
+      "start": 4285,
+      "end": 4289,
+      "type": "ORG",
+      "text": "ARCA"
+     },
+     {
+      "start": 4301,
+      "end": 4315,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 4348,
+      "end": 4354,
+      "type": "ORG",
+      "text": "JanOne"
+     },
+     {
+      "start": 4360,
+      "end": 4374,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 4399,
+      "end": 4417,
+      "type": "ORG",
+      "text": "Live Ventures, Inc"
+     },
+     {
+      "start": 4423,
+      "end": 4436,
+      "type": "ORG",
+      "text": "Live Ventures"
+     },
+     {
+      "start": 4501,
+      "end": 4507,
+      "type": "ORG",
+      "text": "JanOne"
+     },
+     {
+      "start": 4553,
+      "end": 4567,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 4605,
+      "end": 4619,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 4810,
+      "end": 4824,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 4840,
+      "end": 4853,
+      "type": "ORG",
+      "text": "Trustees Main"
+     },
+     {
+      "start": 5036,
+      "end": 5049,
+      "type": "ORG",
+      "text": "Live Ventures"
+     },
+     {
+      "start": 5050,
+      "end": 5064,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 5132,
+      "end": 5145,
+      "type": "ORG",
+      "text": "Trustees Main"
+     },
+     {
+      "start": 5177,
+      "end": 5191,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 5279,
+      "end": 5293,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 5327,
+      "end": 5340,
+      "type": "ORG",
+      "text": "Trustees Main"
+     },
+     {
+      "start": 5388,
+      "end": 5402,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     },
+     {
+      "start": 5605,
+      "end": 5626,
+      "type": "ORG",
+      "text": "Trustees Main/270 LLC"
+     },
+     {
+      "start": 5630,
+      "end": 5648,
+      "type": "ORG",
+      "text": "ApplianceSmart Inc"
+     },
+     {
+      "start": 5787,
+      "end": 5801,
+      "type": "ORG",
+      "text": "ApplianceSmart"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_108_cafc_2026_alexsam_v_simon_property_group_en",
+    "score": {
+     "precision": 0.7922077922077922,
+     "recall": 0.7011494252873564,
+     "f1": 0.7439024390243902,
+     "tp": 61,
+     "fp": 16,
+     "fn": 26,
+     "by_type": {
+      "ORG": {
+       "precision": 0.8627450980392157,
+       "recall": 0.7586206896551724,
+       "f1": 0.8073394495412843,
+       "tp": 44,
+       "fp": 7,
+       "fn": 14
+      },
+      "PERSON": {
+       "precision": 0.68,
+       "recall": 0.9444444444444444,
+       "f1": 0.7906976744186047,
+       "tp": 17,
+       "fp": 8,
+       "fn": 1
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 1,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 6
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 5
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.8701298701298701,
+     "recall": 0.7701149425287356,
+     "f1": 0.8170731707317073,
+     "tp": 67,
+     "fp": 10,
+     "fn": 20,
+     "by_type": {
+      "ORG": {
+       "precision": 0.8771929824561403,
+       "recall": 0.8620689655172413,
+       "f1": 0.8695652173913043,
+       "tp": 50,
+       "fp": 7,
+       "fn": 8
+      },
+      "PERSON": {
+       "precision": 0.8947368421052632,
+       "recall": 0.9444444444444444,
+       "f1": 0.918918918918919,
+       "tp": 17,
+       "fp": 2,
+       "fn": 1
+      },
+      "LOC": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 1,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 6
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 5
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 43,
+      "end": 73,
+      "type": "ORG",
+      "text": "United States Court of Appeals"
+     },
+     {
+      "start": 78,
+      "end": 97,
+      "type": "ORG",
+      "text": "the Federal Circuit"
+     },
+     {
+      "start": 121,
+      "end": 133,
+      "type": "ORG",
+      "text": "ALEXSAM, INC"
+     },
+     {
+      "start": 136,
+      "end": 154,
+      "type": "ORG",
+      "text": "Plaintiff-Appellee"
+     },
+     {
+      "start": 186,
+      "end": 205,
+      "type": "ORG",
+      "text": "Defendant-Appellant"
+     },
+     {
+      "start": 231,
+      "end": 249,
+      "type": "ORG",
+      "text": "Defendant-Appellee"
+     },
+     {
+      "start": 443,
+      "end": 459,
+      "type": "PERSON",
+      "text": "Robert Schroeder"
+     },
+     {
+      "start": 537,
+      "end": 547,
+      "type": "PERSON",
+      "text": "CHRIS HOOD"
+     },
+     {
+      "start": 648,
+      "end": 664,
+      "type": "PERSON",
+      "text": "TIMOTHY C. DAVIS"
+     },
+     {
+      "start": 687,
+      "end": 697,
+      "type": "PERSON",
+      "text": "JACQUELINE"
+     },
+     {
+      "start": 723,
+      "end": 739,
+      "type": "PERSON",
+      "text": "STEVEN RITCHESON"
+     },
+     {
+      "start": 741,
+      "end": 748,
+      "type": "ORG",
+      "text": "Insight"
+     },
+     {
+      "start": 805,
+      "end": 817,
+      "type": "ORG",
+      "text": "ALEXSAM, INC"
+     },
+     {
+      "start": 822,
+      "end": 847,
+      "type": "ORG",
+      "text": "SIMON PROPERTY GROUP, L.P"
+     },
+     {
+      "start": 874,
+      "end": 889,
+      "type": "PERSON",
+      "text": "TODD E. LUNDELL"
+     },
+     {
+      "start": 891,
+      "end": 922,
+      "type": "ORG",
+      "text": "Sheppard Mullin Richter & Hamp-"
+     },
+     {
+      "start": 1013,
+      "end": 1025,
+      "type": "PERSON",
+      "text": "MARTIN BADER"
+     },
+     {
+      "start": 1042,
+      "end": 1057,
+      "type": "PERSON",
+      "text": "ROBERT E. HOUGH"
+     },
+     {
+      "start": 1075,
+      "end": 1095,
+      "type": "PERSON",
+      "text": "MATTHEW ERIC FISCHER"
+     },
+     {
+      "start": 1097,
+      "end": 1122,
+      "type": "ORG",
+      "text": "Potter Anderson & Corroon"
+     },
+     {
+      "start": 1197,
+      "end": 1217,
+      "type": "PERSON",
+      "text": "JAMES MATTHEW BELGER"
+     },
+     {
+      "start": 1219,
+      "end": 1226,
+      "type": "PERSON",
+      "text": "TYLER E"
+     },
+     {
+      "start": 1228,
+      "end": 1233,
+      "type": "PERSON",
+      "text": "CRAGG"
+     },
+     {
+      "start": 1235,
+      "end": 1253,
+      "type": "PERSON",
+      "text": "TIMOTHY J. CARROLL"
+     },
+     {
+      "start": 1255,
+      "end": 1280,
+      "type": "ORG",
+      "text": "Orrick, Herrington & Sut-"
+     },
+     {
+      "start": 1306,
+      "end": 1321,
+      "type": "PERSON",
+      "text": "LAURA A. WYTSMA"
+     },
+     {
+      "start": 1370,
+      "end": 1373,
+      "type": "PERSON",
+      "text": "DYK"
+     },
+     {
+      "start": 1375,
+      "end": 1380,
+      "type": "PERSON",
+      "text": "PROST"
+     },
+     {
+      "start": 1386,
+      "end": 1396,
+      "type": "PERSON",
+      "text": "CUNNINGHAM"
+     },
+     {
+      "start": 1414,
+      "end": 1417,
+      "type": "PERSON",
+      "text": "DYK"
+     },
+     {
+      "start": 1450,
+      "end": 1457,
+      "type": "ORG",
+      "text": "AlexSam"
+     },
+     {
+      "start": 1595,
+      "end": 1602,
+      "type": "ORG",
+      "text": "AlexSam"
+     },
+     {
+      "start": 1608,
+      "end": 1633,
+      "type": "ORG",
+      "text": "Simon Property Group, L.P"
+     },
+     {
+      "start": 1637,
+      "end": 1642,
+      "type": "ORG",
+      "text": "Simon"
+     },
+     {
+      "start": 1665,
+      "end": 1694,
+      "type": "LOC",
+      "text": "the Eastern District of Texas"
+     },
+     {
+      "start": 1696,
+      "end": 1701,
+      "type": "ORG",
+      "text": "Simon"
+     },
+     {
+      "start": 1794,
+      "end": 1803,
+      "type": "ORG",
+      "text": "Blackhawk"
+     },
+     {
+      "start": 1804,
+      "end": 1816,
+      "type": "ORG",
+      "text": "Network, Inc"
+     },
+     {
+      "start": 1820,
+      "end": 1829,
+      "type": "ORG",
+      "text": "Blackhawk"
+     },
+     {
+      "start": 1839,
+      "end": 1844,
+      "type": "ORG",
+      "text": "Simon"
+     },
+     {
+      "start": 2227,
+      "end": 2232,
+      "type": "ORG",
+      "text": "Simon"
+     },
+     {
+      "start": 2260,
+      "end": 2265,
+      "type": "PERSON",
+      "text": "Simon"
+     },
+     {
+      "start": 2348,
+      "end": 2353,
+      "type": "PERSON",
+      "text": "Simon"
+     },
+     {
+      "start": 2487,
+      "end": 2512,
+      "type": "ORG",
+      "text": "SIMON PROPERTY GROUP, L.P"
+     },
+     {
+      "start": 2676,
+      "end": 2681,
+      "type": "ORG",
+      "text": "Simon"
+     },
+     {
+      "start": 2795,
+      "end": 2802,
+      "type": "ORG",
+      "text": "AlexSam"
+     },
+     {
+      "start": 2899,
+      "end": 2911,
+      "type": "ORG",
+      "text": "AlexSam, Inc"
+     },
+     {
+      "start": 2916,
+      "end": 2937,
+      "type": "ORG",
+      "text": "Simon Prop. Grp., L.P"
+     },
+     {
+      "start": 2940,
+      "end": 2949,
+      "type": "ORG",
+      "text": "AlexSam I"
+     },
+     {
+      "start": 2976,
+      "end": 2984,
+      "type": "ORG",
+      "text": "Fed. Cir"
+     },
+     {
+      "start": 3001,
+      "end": 3008,
+      "type": "ORG",
+      "text": "AlexSam"
+     },
+     {
+      "start": 3030,
+      "end": 3035,
+      "type": "ORG",
+      "text": "Simon"
+     },
+     {
+      "start": 3106,
+      "end": 3111,
+      "type": "ORG",
+      "text": "Simon"
+     },
+     {
+      "start": 3191,
+      "end": 3200,
+      "type": "ORG",
+      "text": "Blackhawk"
+     },
+     {
+      "start": 3255,
+      "end": 3264,
+      "type": "ORG",
+      "text": "Blackhawk"
+     },
+     {
+      "start": 3318,
+      "end": 3323,
+      "type": "ORG",
+      "text": "Simon"
+     },
+     {
+      "start": 3408,
+      "end": 3417,
+      "type": "ORG",
+      "text": "Blackhawk"
+     },
+     {
+      "start": 3442,
+      "end": 3447,
+      "type": "ORG",
+      "text": "Simon"
+     },
+     {
+      "start": 3534,
+      "end": 3541,
+      "type": "ORG",
+      "text": "AlexSam"
+     },
+     {
+      "start": 3595,
+      "end": 3604,
+      "type": "ORG",
+      "text": "Blackhawk"
+     },
+     {
+      "start": 3610,
+      "end": 3615,
+      "type": "ORG",
+      "text": "Simon"
+     },
+     {
+      "start": 3666,
+      "end": 3673,
+      "type": "ORG",
+      "text": "AlexSam"
+     },
+     {
+      "start": 3720,
+      "end": 3725,
+      "type": "ORG",
+      "text": "Simon"
+     },
+     {
+      "start": 3730,
+      "end": 3739,
+      "type": "ORG",
+      "text": "Blackhawk"
+     },
+     {
+      "start": 4090,
+      "end": 4102,
+      "type": "ORG",
+      "text": "ALEXSAM, INC"
+     },
+     {
+      "start": 4107,
+      "end": 4132,
+      "type": "ORG",
+      "text": "SIMON PROPERTY GROUP, L.P"
+     },
+     {
+      "start": 4248,
+      "end": 4253,
+      "type": "ORG",
+      "text": "Simon"
+     },
+     {
+      "start": 4258,
+      "end": 4267,
+      "type": "ORG",
+      "text": "Blackhawk"
+     },
+     {
+      "start": 4470,
+      "end": 4475,
+      "type": "ORG",
+      "text": "Simon"
+     },
+     {
+      "start": 4480,
+      "end": 4489,
+      "type": "ORG",
+      "text": "Blackhawk"
+     },
+     {
+      "start": 4626,
+      "end": 4631,
+      "type": "PERSON",
+      "text": "Simon"
+     },
+     {
+      "start": 4636,
+      "end": 4645,
+      "type": "PERSON",
+      "text": "Blackhawk"
+     },
+     {
+      "start": 4660,
+      "end": 4667,
+      "type": "ORG",
+      "text": "AlexSam"
+     },
+     {
+      "start": 4699,
+      "end": 4704,
+      "type": "PERSON",
+      "text": "Simon"
+     },
+     {
+      "start": 4839,
+      "end": 4844,
+      "type": "PERSON",
+      "text": "Simon"
+     },
+     {
+      "start": 4883,
+      "end": 4892,
+      "type": "ORG",
+      "text": "Blackhawk"
+     },
+     {
+      "start": 4928,
+      "end": 4931,
+      "type": "PERSON",
+      "text": "J.A"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_109_cass_2023_international_tools_service_v__fr",
+    "score": {
+     "precision": 0.5,
+     "recall": 0.5714285714285714,
+     "f1": 0.5333333333333333,
+     "tp": 8,
+     "fp": 8,
+     "fn": 6,
+     "by_type": {
+      "LOC": {
+       "precision": 0.5,
+       "recall": 1.0,
+       "f1": 0.6666666666666666,
+       "tp": 3,
+       "fp": 3,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 0.5,
+       "recall": 1.0,
+       "f1": 0.6666666666666666,
+       "tp": 3,
+       "fp": 3,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.5,
+       "recall": 0.6666666666666666,
+       "f1": 0.5714285714285715,
+       "tp": 2,
+       "fp": 2,
+       "fn": 1
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.5625,
+     "recall": 0.6428571428571429,
+     "f1": 0.6000000000000001,
+     "tp": 9,
+     "fp": 7,
+     "fn": 5,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.3333333333333333,
+       "f1": 0.5,
+       "tp": 1,
+       "fp": 0,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.5,
+       "recall": 1.0,
+       "f1": 0.6666666666666666,
+       "tp": 3,
+       "fp": 3,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.6,
+       "recall": 1.0,
+       "f1": 0.7499999999999999,
+       "tp": 3,
+       "fp": 2,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.5,
+       "recall": 0.6666666666666666,
+       "f1": 0.5714285714285715,
+       "tp": 2,
+       "fp": 2,
+       "fn": 1
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 27,
+      "end": 44,
+      "type": "LOC",
+      "text": "ARR.20230223.1F.3"
+     },
+     {
+      "start": 115,
+      "end": 116,
+      "type": "PERSON",
+      "text": "H"
+     },
+     {
+      "start": 149,
+      "end": 156,
+      "type": "LOC",
+      "text": "Domaine"
+     },
+     {
+      "start": 222,
+      "end": 235,
+      "type": "ORG",
+      "text": "INTERNATIONAL"
+     },
+     {
+      "start": 242,
+      "end": 249,
+      "type": "ORG",
+      "text": "SERVICE"
+     },
+     {
+      "start": 304,
+      "end": 320,
+      "type": "LOC",
+      "text": "rue du Printemps"
+     },
+     {
+      "start": 469,
+      "end": 475,
+      "type": "PERSON",
+      "text": "Maître"
+     },
+     {
+      "start": 476,
+      "end": 492,
+      "type": "PERSON",
+      "text": "Michèle Grégoire"
+     },
+     {
+      "start": 565,
+      "end": 582,
+      "type": "LOC",
+      "text": "rue de la Régence"
+     },
+     {
+      "start": 669,
+      "end": 676,
+      "type": "ORG",
+      "text": "HORELEC"
+     },
+     {
+      "start": 746,
+      "end": 762,
+      "type": "LOC",
+      "text": "rue du Printemps"
+     },
+     {
+      "start": 880,
+      "end": 891,
+      "type": "PERSON",
+      "text": "Maître E. S"
+     },
+     {
+      "start": 906,
+      "end": 910,
+      "type": "ORG",
+      "text": "E. J"
+     },
+     {
+      "start": 1060,
+      "end": 1085,
+      "type": "LOC",
+      "text": "cour d’appel de Bruxelles"
+     },
+     {
+      "start": 1102,
+      "end": 1122,
+      "type": "PERSON",
+      "text": "Marie-Claire Ernotte"
+     },
+     {
+      "start": 1157,
+      "end": 1172,
+      "type": "PERSON",
+      "text": "Thierry Werquin"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_110_cass_2025_ville_de_virton_v_trema_archit_fr",
+    "score": {
+     "precision": 0.7272727272727273,
+     "recall": 0.8,
+     "f1": 0.761904761904762,
+     "tp": 16,
+     "fp": 6,
+     "fn": 4,
+     "by_type": {
+      "ORG": {
+       "precision": 0.5,
+       "recall": 1.0,
+       "f1": 0.6666666666666666,
+       "tp": 3,
+       "fp": 3,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 0.9166666666666666,
+       "recall": 1.0,
+       "f1": 0.9565217391304348,
+       "tp": 11,
+       "fp": 1,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.5,
+       "recall": 1.0,
+       "f1": 0.6666666666666666,
+       "tp": 2,
+       "fp": 2,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.8181818181818182,
+     "recall": 0.9,
+     "f1": 0.8571428571428572,
+     "tp": 18,
+     "fp": 4,
+     "fn": 2,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.6666666666666666,
+       "f1": 0.8,
+       "tp": 2,
+       "fp": 0,
+       "fn": 1
+      },
+      "ORG": {
+       "precision": 0.6,
+       "recall": 1.0,
+       "f1": 0.7499999999999999,
+       "tp": 3,
+       "fp": 2,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.5,
+       "recall": 1.0,
+       "f1": 0.6666666666666666,
+       "tp": 2,
+       "fp": 2,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 11,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 1
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 27,
+      "end": 44,
+      "type": "ORG",
+      "text": "ARR.20250313.1F.1"
+     },
+     {
+      "start": 54,
+      "end": 65,
+      "type": "PERSON",
+      "text": "C.24.0271.F"
+     },
+     {
+      "start": 84,
+      "end": 90,
+      "type": "ORG",
+      "text": "VIRTON"
+     },
+     {
+      "start": 98,
+      "end": 116,
+      "type": "ORG",
+      "text": "TREMA ARCHITECTURE"
+     },
+     {
+      "start": 124,
+      "end": 131,
+      "type": "ORG",
+      "text": "Chambre"
+     },
+     {
+      "start": 155,
+      "end": 162,
+      "type": "LOC",
+      "text": "Domaine"
+     },
+     {
+      "start": 234,
+      "end": 240,
+      "type": "ORG",
+      "text": "VIRTON"
+     },
+     {
+      "start": 320,
+      "end": 340,
+      "type": "LOC",
+      "text": "rue Charles Magnette"
+     },
+     {
+      "start": 467,
+      "end": 492,
+      "type": "PERSON",
+      "text": "Maître Paul Alain Foriers"
+     },
+     {
+      "start": 565,
+      "end": 578,
+      "type": "LOC",
+      "text": "avenue Louise"
+     },
+     {
+      "start": 811,
+      "end": 832,
+      "type": "LOC",
+      "text": "cour d’appel de Liège"
+     },
+     {
+      "start": 859,
+      "end": 871,
+      "type": "PERSON",
+      "text": "Michel Lemal"
+     },
+     {
+      "start": 906,
+      "end": 921,
+      "type": "PERSON",
+      "text": "Thierry Werquin"
+     },
+     {
+      "start": 4720,
+      "end": 4727,
+      "type": "ORG",
+      "text": "Réserve"
+     },
+     {
+      "start": 4969,
+      "end": 4985,
+      "type": "PERSON",
+      "text": "Christian Storck"
+     },
+     {
+      "start": 5022,
+      "end": 5034,
+      "type": "PERSON",
+      "text": "Michel Lemal"
+     },
+     {
+      "start": 5052,
+      "end": 5068,
+      "type": "PERSON",
+      "text": "Ariane Jacquemin"
+     },
+     {
+      "start": 5070,
+      "end": 5088,
+      "type": "PERSON",
+      "text": "Maxime Marchandise"
+     },
+     {
+      "start": 5092,
+      "end": 5105,
+      "type": "PERSON",
+      "text": "Simon Claisse"
+     },
+     {
+      "start": 5205,
+      "end": 5221,
+      "type": "PERSON",
+      "text": "Christian Storck"
+     },
+     {
+      "start": 5255,
+      "end": 5270,
+      "type": "PERSON",
+      "text": "Thierry Werquin"
+     },
+     {
+      "start": 5302,
+      "end": 5323,
+      "type": "PERSON",
+      "text": "Patricia De Wadripont"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_111_cass_2025_g_v_etat_belge_fr",
+    "score": {
+     "precision": 0.7,
+     "recall": 0.8235294117647058,
+     "f1": 0.7567567567567567,
+     "tp": 14,
+     "fp": 6,
+     "fn": 3,
+     "by_type": {
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 2,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.4,
+       "recall": 1.0,
+       "f1": 0.5714285714285715,
+       "tp": 2,
+       "fp": 3,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 0.9230769230769231,
+       "recall": 1.0,
+       "f1": 0.9600000000000001,
+       "tp": 12,
+       "fp": 1,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.75,
+     "recall": 0.8823529411764706,
+     "f1": 0.8108108108108107,
+     "tp": 15,
+     "fp": 5,
+     "fn": 2,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.3333333333333333,
+       "f1": 0.5,
+       "tp": 1,
+       "fp": 0,
+       "fn": 2
+      },
+      "LOC": {
+       "precision": 0.4,
+       "recall": 1.0,
+       "f1": 0.5714285714285715,
+       "tp": 2,
+       "fp": 3,
+       "fn": 0
+      },
+      "PERSON": {
+       "precision": 0.9230769230769231,
+       "recall": 1.0,
+       "f1": 0.9600000000000001,
+       "tp": 12,
+       "fp": 1,
+       "fn": 0
+      },
+      "ORG": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 1,
+       "fn": 0
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 27,
+      "end": 44,
+      "type": "ORG",
+      "text": "ARR.20250116.1F.1"
+     },
+     {
+      "start": 136,
+      "end": 143,
+      "type": "LOC",
+      "text": "Domaine"
+     },
+     {
+      "start": 201,
+      "end": 205,
+      "type": "PERSON",
+      "text": "C. G"
+     },
+     {
+      "start": 253,
+      "end": 277,
+      "type": "PERSON",
+      "text": "Maître Daniel Garabedian"
+     },
+     {
+      "start": 350,
+      "end": 365,
+      "type": "LOC",
+      "text": "rue de la Bonté"
+     },
+     {
+      "start": 446,
+      "end": 467,
+      "type": "ORG",
+      "text": "ministre des Finances"
+     },
+     {
+      "start": 509,
+      "end": 522,
+      "type": "LOC",
+      "text": "rue de la Loi"
+     },
+     {
+      "start": 569,
+      "end": 598,
+      "type": "PERSON",
+      "text": "Maître Geoffroy de Foestraets"
+     },
+     {
+      "start": 671,
+      "end": 687,
+      "type": "LOC",
+      "text": "rue de la Vallée"
+     },
+     {
+      "start": 840,
+      "end": 860,
+      "type": "LOC",
+      "text": "cour d’appel de Mons"
+     },
+     {
+      "start": 877,
+      "end": 897,
+      "type": "PERSON",
+      "text": "Marie-Claire Ernotte"
+     },
+     {
+      "start": 932,
+      "end": 947,
+      "type": "PERSON",
+      "text": "Thierry Werquin"
+     },
+     {
+      "start": 2963,
+      "end": 2979,
+      "type": "PERSON",
+      "text": "Christian Storck"
+     },
+     {
+      "start": 3016,
+      "end": 3032,
+      "type": "PERSON",
+      "text": "Mireille Delange"
+     },
+     {
+      "start": 3050,
+      "end": 3070,
+      "type": "PERSON",
+      "text": "Marie-Claire Ernotte"
+     },
+     {
+      "start": 3072,
+      "end": 3090,
+      "type": "PERSON",
+      "text": "Maxime Marchandise"
+     },
+     {
+      "start": 3094,
+      "end": 3107,
+      "type": "PERSON",
+      "text": "Simon Claisse"
+     },
+     {
+      "start": 3209,
+      "end": 3225,
+      "type": "PERSON",
+      "text": "Christian Storck"
+     },
+     {
+      "start": 3259,
+      "end": 3274,
+      "type": "PERSON",
+      "text": "Thierry Werquin"
+     },
+     {
+      "start": 3306,
+      "end": 3327,
+      "type": "PERSON",
+      "text": "Patricia De Wadripont"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_112_cc_2026_rossel_ipm_fr",
+    "score": {
+     "precision": 0.575,
+     "recall": 0.5287356321839081,
+     "f1": 0.5508982035928144,
+     "tp": 46,
+     "fp": 34,
+     "fn": 41,
+     "by_type": {
+      "LOC": {
+       "precision": 0.6666666666666666,
+       "recall": 0.3333333333333333,
+       "f1": 0.4444444444444444,
+       "tp": 2,
+       "fp": 1,
+       "fn": 4
+      },
+      "PERSON": {
+       "precision": 0.5517241379310345,
+       "recall": 0.8888888888888888,
+       "f1": 0.6808510638297872,
+       "tp": 16,
+       "fp": 13,
+       "fn": 2
+      },
+      "ORG": {
+       "precision": 0.5833333333333334,
+       "recall": 0.56,
+       "f1": 0.5714285714285714,
+       "tp": 28,
+       "fp": 20,
+       "fn": 22
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 3
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      },
+      "PHONE": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      },
+      "EMAIL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.725,
+     "recall": 0.6666666666666666,
+     "f1": 0.6946107784431137,
+     "tp": 58,
+     "fp": 22,
+     "fn": 29,
+     "by_type": {
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.3333333333333333,
+       "f1": 0.5,
+       "tp": 1,
+       "fp": 0,
+       "fn": 2
+      },
+      "ORG": {
+       "precision": 0.6491228070175439,
+       "recall": 0.74,
+       "f1": 0.6915887850467289,
+       "tp": 37,
+       "fp": 20,
+       "fn": 13
+      },
+      "PERSON": {
+       "precision": 0.8888888888888888,
+       "recall": 0.8888888888888888,
+       "f1": 0.8888888888888888,
+       "tp": 16,
+       "fp": 2,
+       "fn": 2
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 0.6666666666666666,
+       "f1": 0.8,
+       "tp": 4,
+       "fp": 0,
+       "fn": 2
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      },
+      "PHONE": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 4
+      },
+      "EMAIL": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 178,
+      "end": 182,
+      "type": "LOC",
+      "text": "C.25"
+     },
+     {
+      "start": 188,
+      "end": 194,
+      "type": "PERSON",
+      "text": "Rossel"
+     },
+     {
+      "start": 197,
+      "end": 200,
+      "type": "ORG",
+      "text": "IPM"
+     },
+     {
+      "start": 265,
+      "end": 271,
+      "type": "PERSON",
+      "text": "Rossel"
+     },
+     {
+      "start": 327,
+      "end": 333,
+      "type": "PERSON",
+      "text": "Rossel"
+     },
+     {
+      "start": 450,
+      "end": 464,
+      "type": "ORG",
+      "text": "IPM Presse S.A"
+     },
+     {
+      "start": 480,
+      "end": 493,
+      "type": "ORG",
+      "text": "IPM Group S.A"
+     },
+     {
+      "start": 508,
+      "end": 511,
+      "type": "ORG",
+      "text": "IPM"
+     },
+     {
+      "start": 548,
+      "end": 552,
+      "type": "ORG",
+      "text": "MAJA"
+     },
+     {
+      "start": 585,
+      "end": 591,
+      "type": "PERSON",
+      "text": "Rossel"
+     },
+     {
+      "start": 645,
+      "end": 651,
+      "type": "PERSON",
+      "text": "Rossel"
+     },
+     {
+      "start": 653,
+      "end": 656,
+      "type": "ORG",
+      "text": "IPM"
+     },
+     {
+      "start": 662,
+      "end": 694,
+      "type": "ORG",
+      "text": "Autorité belge de la Concurrence"
+     },
+     {
+      "start": 698,
+      "end": 706,
+      "type": "ORG",
+      "text": "Autorité"
+     },
+     {
+      "start": 740,
+      "end": 758,
+      "type": "PERSON",
+      "text": "Jérémie Haldermans"
+     },
+     {
+      "start": 890,
+      "end": 893,
+      "type": "ORG",
+      "text": "CDE"
+     },
+     {
+      "start": 898,
+      "end": 912,
+      "type": "PERSON",
+      "text": "Suzanne Beguin"
+     },
+     {
+      "start": 914,
+      "end": 929,
+      "type": "PERSON",
+      "text": "Thomas Gougnard"
+     },
+     {
+      "start": 931,
+      "end": 942,
+      "type": "PERSON",
+      "text": "Benoît Lysy"
+     },
+     {
+      "start": 947,
+      "end": 963,
+      "type": "PERSON",
+      "text": "François Bernard"
+     },
+     {
+      "start": 991,
+      "end": 999,
+      "type": "ORG",
+      "text": "Autorité"
+     },
+     {
+      "start": 1105,
+      "end": 1119,
+      "type": "PERSON",
+      "text": "Clara Garmigny"
+     },
+     {
+      "start": 1121,
+      "end": 1137,
+      "type": "PERSON",
+      "text": "Antoine Tonnerre"
+     },
+     {
+      "start": 1139,
+      "end": 1157,
+      "type": "PERSON",
+      "text": "Baptiste Souillard"
+     },
+     {
+      "start": 1161,
+      "end": 1183,
+      "type": "PERSON",
+      "text": "Jeroen Vander Cruyssen"
+     },
+     {
+      "start": 1364,
+      "end": 1379,
+      "type": "PERSON",
+      "text": "Marielle Fassin"
+     },
+     {
+      "start": 1515,
+      "end": 1520,
+      "type": "ORG",
+      "text": "IV.10"
+     },
+     {
+      "start": 1527,
+      "end": 1530,
+      "type": "ORG",
+      "text": "CDE"
+     },
+     {
+      "start": 1560,
+      "end": 1572,
+      "type": "ORG",
+      "text": "III.1 Partie"
+     },
+     {
+      "start": 1623,
+      "end": 1629,
+      "type": "PERSON",
+      "text": "Rossel"
+     },
+     {
+      "start": 1676,
+      "end": 1682,
+      "type": "PERSON",
+      "text": "Rossel"
+     },
+     {
+      "start": 1738,
+      "end": 1752,
+      "type": "LOC",
+      "text": "rue Royale 100"
+     },
+     {
+      "start": 1784,
+      "end": 1790,
+      "type": "ORG",
+      "text": "Banque"
+     },
+     {
+      "start": 1850,
+      "end": 1856,
+      "type": "PERSON",
+      "text": "Rossel"
+     },
+     {
+      "start": 1959,
+      "end": 1965,
+      "type": "PERSON",
+      "text": "Rossel"
+     },
+     {
+      "start": 2030,
+      "end": 2043,
+      "type": "ORG",
+      "text": "Rossel Invest"
+     },
+     {
+      "start": 2114,
+      "end": 2128,
+      "type": "LOC",
+      "text": "rue Royale 100"
+     },
+     {
+      "start": 2162,
+      "end": 2168,
+      "type": "ORG",
+      "text": "Banque"
+     },
+     {
+      "start": 2230,
+      "end": 2240,
+      "type": "ORG",
+      "text": "Entreprise"
+     },
+     {
+      "start": 2251,
+      "end": 2263,
+      "type": "PERSON",
+      "text": "L‘entreprise"
+     },
+     {
+      "start": 2274,
+      "end": 2288,
+      "type": "ORG",
+      "text": "IPM Presse S.A"
+     },
+     {
+      "start": 2392,
+      "end": 2424,
+      "type": "ORG",
+      "text": "Banque Carrefour des Entreprises"
+     },
+     {
+      "start": 2493,
+      "end": 2496,
+      "type": "ORG",
+      "text": "IPM"
+     },
+     {
+      "start": 2634,
+      "end": 2647,
+      "type": "ORG",
+      "text": "IPM Group S.A"
+     },
+     {
+      "start": 2719,
+      "end": 2727,
+      "type": "ORG",
+      "text": "MAJA S.A"
+     },
+     {
+      "start": 2845,
+      "end": 2858,
+      "type": "ORG",
+      "text": "IPM Group S.A"
+     },
+     {
+      "start": 2871,
+      "end": 2881,
+      "type": "ORG",
+      "text": "IPM Presse"
+     },
+     {
+      "start": 3011,
+      "end": 3015,
+      "type": "ORG",
+      "text": "LN24"
+     },
+     {
+      "start": 3017,
+      "end": 3025,
+      "type": "ORG",
+      "text": "LN Radio"
+     },
+     {
+      "start": 3029,
+      "end": 3038,
+      "type": "ORG",
+      "text": "FUN Radio"
+     },
+     {
+      "start": 3191,
+      "end": 3201,
+      "type": "ORG",
+      "text": "IPM Presse"
+     },
+     {
+      "start": 3308,
+      "end": 3316,
+      "type": "ORG",
+      "text": "L’Avenir"
+     },
+     {
+      "start": 3429,
+      "end": 3440,
+      "type": "ORG",
+      "text": "Paris-Match"
+     },
+     {
+      "start": 3453,
+      "end": 3481,
+      "type": "ORG",
+      "text": "Le Courrier International 12"
+     },
+     {
+      "start": 3501,
+      "end": 3509,
+      "type": "ORG",
+      "text": "MAJA S.A"
+     },
+     {
+      "start": 3618,
+      "end": 3650,
+      "type": "ORG",
+      "text": "Banque Carrefour des Entreprises"
+     },
+     {
+      "start": 3771,
+      "end": 3785,
+      "type": "ORG",
+      "text": "IPM Presse S.A"
+     },
+     {
+      "start": 3827,
+      "end": 3840,
+      "type": "ORG",
+      "text": "IPM Group S.A"
+     },
+     {
+      "start": 3898,
+      "end": 3901,
+      "type": "ORG",
+      "text": "IPM"
+     },
+     {
+      "start": 3952,
+      "end": 3960,
+      "type": "ORG",
+      "text": "LN Radio"
+     },
+     {
+      "start": 3964,
+      "end": 3968,
+      "type": "ORG",
+      "text": "LN24"
+     },
+     {
+      "start": 3985,
+      "end": 3995,
+      "type": "ORG",
+      "text": "Mr.Energie"
+     },
+     {
+      "start": 4197,
+      "end": 4212,
+      "type": "PERSON",
+      "text": "Thomas De Meese"
+     },
+     {
+      "start": 4213,
+      "end": 4222,
+      "type": "PERSON",
+      "text": "Karl Stas"
+     },
+     {
+      "start": 4223,
+      "end": 4229,
+      "type": "ORG",
+      "text": "Bureau"
+     },
+     {
+      "start": 4251,
+      "end": 4271,
+      "type": "ORG",
+      "text": "Crowell & Moring LLP"
+     },
+     {
+      "start": 4272,
+      "end": 4281,
+      "type": "ORG",
+      "text": "Téléphone"
+     },
+     {
+      "start": 4343,
+      "end": 4350,
+      "type": "PERSON",
+      "text": "Adresse"
+     },
+     {
+      "start": 4355,
+      "end": 4369,
+      "type": "PERSON",
+      "text": "Joseph Stevens"
+     },
+     {
+      "start": 4392,
+      "end": 4406,
+      "type": "PERSON",
+      "text": "Joseph Stevens"
+     },
+     {
+      "start": 4475,
+      "end": 4479,
+      "type": "ORG",
+      "text": "XIII"
+     },
+     {
+      "start": 4561,
+      "end": 4564,
+      "type": "ORG",
+      "text": "CDE"
+     },
+     {
+      "start": 4569,
+      "end": 4594,
+      "type": "ORG",
+      "text": "Collège de la concurrence"
+     },
+     {
+      "start": 4642,
+      "end": 4650,
+      "type": "ORG",
+      "text": "Autorité"
+     },
+     {
+      "start": 4770,
+      "end": 4773,
+      "type": "ORG",
+      "text": "CDE"
+     },
+     {
+      "start": 5137,
+      "end": 5141,
+      "type": "PERSON",
+      "text": "Axel"
+     },
+     {
+      "start": 5206,
+      "end": 5218,
+      "type": "PERSON",
+      "text": "Damien Neven"
+     },
+     {
+      "start": 5222,
+      "end": 5241,
+      "type": "PERSON",
+      "text": "Christian Huveneers"
+     },
+     {
+      "start": 5259,
+      "end": 5291,
+      "type": "ORG",
+      "text": "Autorité belge de la Concurrence"
+     },
+     {
+      "start": 5303,
+      "end": 5313,
+      "type": "PERSON",
+      "text": "A. Desmedt"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_113_rpr_2026_rfb_v_urbsfa_fr",
+    "score": {
+     "precision": 0.4696969696969697,
+     "recall": 0.484375,
+     "f1": 0.47692307692307695,
+     "tp": 31,
+     "fp": 35,
+     "fn": 33,
+     "by_type": {
+      "ORG": {
+       "precision": 0.43137254901960786,
+       "recall": 0.5365853658536586,
+       "f1": 0.47826086956521746,
+       "tp": 22,
+       "fp": 29,
+       "fn": 19
+      },
+      "PERSON": {
+       "precision": 0.5454545454545454,
+       "recall": 1.0,
+       "f1": 0.7058823529411764,
+       "tp": 6,
+       "fp": 5,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 0.75,
+       "recall": 0.5,
+       "f1": 0.6,
+       "tp": 3,
+       "fp": 1,
+       "fn": 3
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 5
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 6
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.5151515151515151,
+     "recall": 0.53125,
+     "f1": 0.5230769230769231,
+     "tp": 34,
+     "fp": 32,
+     "fn": 30,
+     "by_type": {
+      "ORG": {
+       "precision": 0.45098039215686275,
+       "recall": 0.5609756097560976,
+       "f1": 0.5,
+       "tp": 23,
+       "fp": 28,
+       "fn": 18
+      },
+      "LOC": {
+       "precision": 0.8,
+       "recall": 0.6666666666666666,
+       "f1": 0.7272727272727272,
+       "tp": 4,
+       "fp": 1,
+       "fn": 2
+      },
+      "PERSON": {
+       "precision": 0.6666666666666666,
+       "recall": 1.0,
+       "f1": 0.8,
+       "tp": 6,
+       "fp": 3,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.2,
+       "f1": 0.33333333333333337,
+       "tp": 1,
+       "fp": 0,
+       "fn": 4
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 6
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 33,
+      "end": 42,
+      "type": "ORG",
+      "text": "Auditorat"
+     },
+     {
+      "start": 336,
+      "end": 356,
+      "type": "ORG",
+      "text": "Autorité belge de la"
+     },
+     {
+      "start": 384,
+      "end": 392,
+      "type": "ORG",
+      "text": "Autorité"
+     },
+     {
+      "start": 402,
+      "end": 427,
+      "type": "ORG",
+      "text": "ASBL Royal Francs Borains"
+     },
+     {
+      "start": 452,
+      "end": 454,
+      "type": "ORG",
+      "text": "NV"
+     },
+     {
+      "start": 455,
+      "end": 488,
+      "type": "ORG",
+      "text": "Koninklijke Sporting Club Lokeren"
+     },
+     {
+      "start": 502,
+      "end": 513,
+      "type": "PERSON",
+      "text": "KFC Lokeren"
+     },
+     {
+      "start": 523,
+      "end": 553,
+      "type": "ORG",
+      "text": "SA Royal Football Club Seraing"
+     },
+     {
+      "start": 669,
+      "end": 675,
+      "type": "ORG",
+      "text": "URBSFA"
+     },
+     {
+      "start": 721,
+      "end": 738,
+      "type": "ORG",
+      "text": "Conseil Supérieur"
+     },
+     {
+      "start": 744,
+      "end": 750,
+      "type": "ORG",
+      "text": "URBSFA"
+     },
+     {
+      "start": 846,
+      "end": 849,
+      "type": "ORG",
+      "text": "U23"
+     },
+     {
+      "start": 1002,
+      "end": 1005,
+      "type": "LOC",
+      "text": "U23"
+     },
+     {
+      "start": 1042,
+      "end": 1049,
+      "type": "PERSON",
+      "text": "Quota »"
+     },
+     {
+      "start": 1157,
+      "end": 1160,
+      "type": "ORG",
+      "text": "CDE"
+     },
+     {
+      "start": 1436,
+      "end": 1452,
+      "type": "ORG",
+      "text": "Union européenne"
+     },
+     {
+      "start": 1500,
+      "end": 1529,
+      "type": "ORG",
+      "text": "BV Royal Union Saint-Gilloise"
+     },
+     {
+      "start": 1737,
+      "end": 1740,
+      "type": "ORG",
+      "text": "JPL"
+     },
+     {
+      "start": 1885,
+      "end": 1888,
+      "type": "ORG",
+      "text": "U23"
+     },
+     {
+      "start": 1978,
+      "end": 1986,
+      "type": "ORG",
+      "text": "Autorité"
+     },
+     {
+      "start": 2012,
+      "end": 2034,
+      "type": "ORG",
+      "text": "SA Racing White Daring"
+     },
+     {
+      "start": 2091,
+      "end": 2097,
+      "type": "ORG",
+      "text": "URBSFA"
+     },
+     {
+      "start": 2270,
+      "end": 2273,
+      "type": "ORG",
+      "text": "U23"
+     },
+     {
+      "start": 2524,
+      "end": 2535,
+      "type": "ORG",
+      "text": "KSC Lokeren"
+     },
+     {
+      "start": 2542,
+      "end": 2553,
+      "type": "ORG",
+      "text": "RFC Seraing"
+     },
+     {
+      "start": 2788,
+      "end": 2799,
+      "type": "ORG",
+      "text": "KSC Lokeren"
+     },
+     {
+      "start": 2809,
+      "end": 2812,
+      "type": "ORG",
+      "text": "RFC"
+     },
+     {
+      "start": 2869,
+      "end": 2873,
+      "type": "ORG",
+      "text": "CONC"
+     },
+     {
+      "start": 2929,
+      "end": 2932,
+      "type": "ORG",
+      "text": "CDE"
+     },
+     {
+      "start": 2970,
+      "end": 2985,
+      "type": "PERSON",
+      "text": "Marielle Fassin"
+     },
+     {
+      "start": 3101,
+      "end": 3104,
+      "type": "ORG",
+      "text": "CDE"
+     },
+     {
+      "start": 3113,
+      "end": 3127,
+      "type": "PERSON",
+      "text": "Naura Guilbeau"
+     },
+     {
+      "start": 3138,
+      "end": 3148,
+      "type": "PERSON",
+      "text": "Arno Semey"
+     },
+     {
+      "start": 3161,
+      "end": 3174,
+      "type": "PERSON",
+      "text": "Victor Bouret"
+     },
+     {
+      "start": 3224,
+      "end": 3233,
+      "type": "ORG",
+      "text": "Auditorat"
+     },
+     {
+      "start": 3332,
+      "end": 3335,
+      "type": "ORG",
+      "text": "CDE"
+     },
+     {
+      "start": 3372,
+      "end": 3387,
+      "type": "PERSON",
+      "text": "Delphine Strohl"
+     },
+     {
+      "start": 3527,
+      "end": 3544,
+      "type": "LOC",
+      "text": "rue Saint Antoine"
+     },
+     {
+      "start": 3591,
+      "end": 3623,
+      "type": "ORG",
+      "text": "Banque Carrefour des Entreprises"
+     },
+     {
+      "start": 3637,
+      "end": 3640,
+      "type": "ORG",
+      "text": "BCE"
+     },
+     {
+      "start": 3676,
+      "end": 3687,
+      "type": "ORG",
+      "text": "KSC Lokeren"
+     },
+     {
+      "start": 3717,
+      "end": 3732,
+      "type": "LOC",
+      "text": "Daknamstraat 91"
+     },
+     {
+      "start": 3739,
+      "end": 3746,
+      "type": "PERSON",
+      "text": "Lokeren"
+     },
+     {
+      "start": 3775,
+      "end": 3778,
+      "type": "ORG",
+      "text": "BCE"
+     },
+     {
+      "start": 3811,
+      "end": 3822,
+      "type": "ORG",
+      "text": "RFC Seraing"
+     },
+     {
+      "start": 3852,
+      "end": 3869,
+      "type": "LOC",
+      "text": "rue de la Boverie"
+     },
+     {
+      "start": 3916,
+      "end": 3919,
+      "type": "ORG",
+      "text": "BCE"
+     },
+     {
+      "start": 3949,
+      "end": 3955,
+      "type": "ORG",
+      "text": "II.1.2"
+     },
+     {
+      "start": 4108,
+      "end": 4111,
+      "type": "ORG",
+      "text": "BCE"
+     },
+     {
+      "start": 4201,
+      "end": 4218,
+      "type": "ORG",
+      "text": "Conseil Supérieur"
+     },
+     {
+      "start": 4224,
+      "end": 4230,
+      "type": "ORG",
+      "text": "URBSFA"
+     },
+     {
+      "start": 4295,
+      "end": 4308,
+      "type": "PERSON",
+      "text": "Charles Malis"
+     },
+     {
+      "start": 4368,
+      "end": 4371,
+      "type": "ORG",
+      "text": "BCE"
+     },
+     {
+      "start": 4550,
+      "end": 4554,
+      "type": "ORG",
+      "text": "RWDM"
+     },
+     {
+      "start": 4571,
+      "end": 4582,
+      "type": "ORG",
+      "text": "KSC Lokeren"
+     },
+     {
+      "start": 4586,
+      "end": 4597,
+      "type": "ORG",
+      "text": "RFC Seraing"
+     },
+     {
+      "start": 4680,
+      "end": 4691,
+      "type": "ORG",
+      "text": "KSC Lokeren"
+     },
+     {
+      "start": 4693,
+      "end": 4704,
+      "type": "ORG",
+      "text": "RFC Seraing"
+     },
+     {
+      "start": 4720,
+      "end": 4724,
+      "type": "ORG",
+      "text": "RWDM"
+     },
+     {
+      "start": 4768,
+      "end": 4778,
+      "type": "ORG",
+      "text": "Plaignants"
+     },
+     {
+      "start": 4858,
+      "end": 4864,
+      "type": "ORG",
+      "text": "URBSFA"
+     },
+     {
+      "start": 4883,
+      "end": 4886,
+      "type": "ORG",
+      "text": "BCE"
+     },
+     {
+      "start": 4993,
+      "end": 4995,
+      "type": "PERSON",
+      "text": "VI"
+     },
+     {
+      "start": 5170,
+      "end": 5173,
+      "type": "ORG",
+      "text": "CDE"
+     },
+     {
+      "start": 5203,
+      "end": 5218,
+      "type": "PERSON",
+      "text": "Marielle Fassin"
+     },
+     {
+      "start": 5219,
+      "end": 5227,
+      "type": "ORG",
+      "text": "Auditeur"
+     }
+    ]
+   },
+   {
+    "doc_id": "doc_114_ccs_2026_rmga_pierre_joel_aag_fr",
+    "score": {
+     "precision": 0.38461538461538464,
+     "recall": 0.7575757575757576,
+     "f1": 0.5102040816326531,
+     "tp": 25,
+     "fp": 40,
+     "fn": 8,
+     "by_type": {
+      "ORG": {
+       "precision": 0.3728813559322034,
+       "recall": 0.8461538461538461,
+       "f1": 0.5176470588235295,
+       "tp": 22,
+       "fp": 37,
+       "fn": 4
+      },
+      "PERSON": {
+       "precision": 0.25,
+       "recall": 1.0,
+       "f1": 0.4,
+       "tp": 1,
+       "fp": 3,
+       "fn": 0
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      }
+     }
+    },
+    "score_any_type": {
+     "precision": 0.4153846153846154,
+     "recall": 0.8181818181818182,
+     "f1": 0.5510204081632654,
+     "tp": 27,
+     "fp": 38,
+     "fn": 6,
+     "by_type": {
+      "ORG": {
+       "precision": 0.3898305084745763,
+       "recall": 0.8846153846153846,
+       "f1": 0.5411764705882353,
+       "tp": 23,
+       "fp": 36,
+       "fn": 3
+      },
+      "PERSON": {
+       "precision": 0.3333333333333333,
+       "recall": 1.0,
+       "f1": 0.5,
+       "tp": 1,
+       "fp": 2,
+       "fn": 0
+      },
+      "CASE_REF": {
+       "precision": 1.0,
+       "recall": 0.5,
+       "f1": 0.6666666666666666,
+       "tp": 1,
+       "fp": 0,
+       "fn": 1
+      },
+      "LOC": {
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "tp": 2,
+       "fp": 0,
+       "fn": 0
+      },
+      "IBAN": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 2
+      }
+     }
+    },
+    "pred_spans": [
+     {
+      "start": 65,
+      "end": 84,
+      "type": "ORG",
+      "text": "Numéro d’entreprise"
+     },
+     {
+      "start": 232,
+      "end": 240,
+      "type": "PERSON",
+      "text": "Livre IV"
+     },
+     {
+      "start": 260,
+      "end": 284,
+      "type": "ORG",
+      "text": "Affaire CONC-CCS-26/0017"
+     },
+     {
+      "start": 287,
+      "end": 300,
+      "type": "ORG",
+      "text": "Groupe RMGA /"
+     },
+     {
+      "start": 301,
+      "end": 340,
+      "type": "ORG",
+      "text": "Groupe Pierre-Joël/ Alliance Automotive"
+     },
+     {
+      "start": 349,
+      "end": 352,
+      "type": "ORG",
+      "text": "AAG"
+     },
+     {
+      "start": 354,
+      "end": 363,
+      "type": "ORG",
+      "text": "Procédure"
+     },
+     {
+      "start": 551,
+      "end": 556,
+      "type": "ORG",
+      "text": "IV.10"
+     },
+     {
+      "start": 603,
+      "end": 606,
+      "type": "ORG",
+      "text": "CDE"
+     },
+     {
+      "start": 658,
+      "end": 665,
+      "type": "ORG",
+      "text": "RMGA SA"
+     },
+     {
+      "start": 702,
+      "end": 724,
+      "type": "ORG",
+      "text": "O.P.I.M Automotive SRL"
+     },
+     {
+      "start": 739,
+      "end": 758,
+      "type": "ORG",
+      "text": "O.P.I.M. Automotive"
+     },
+     {
+      "start": 865,
+      "end": 891,
+      "type": "ORG",
+      "text": "Alliance Automotive Groupe"
+     },
+     {
+      "start": 1012,
+      "end": 1015,
+      "type": "ORG",
+      "text": "CDE"
+     },
+     {
+      "start": 1127,
+      "end": 1130,
+      "type": "ORG",
+      "text": "CDE"
+     },
+     {
+      "start": 1384,
+      "end": 1388,
+      "type": "ORG",
+      "text": "RMGA"
+     },
+     {
+      "start": 1444,
+      "end": 1465,
+      "type": "LOC",
+      "text": "Chaussée de Bruxelles"
+     },
+     {
+      "start": 1519,
+      "end": 1551,
+      "type": "ORG",
+      "text": "Banque Carrefour des Entreprises"
+     },
+     {
+      "start": 1564,
+      "end": 1567,
+      "type": "ORG",
+      "text": "BCE"
+     },
+     {
+      "start": 1600,
+      "end": 1604,
+      "type": "ORG",
+      "text": "RMGA"
+     },
+     {
+      "start": 1655,
+      "end": 1659,
+      "type": "ORG",
+      "text": "RMGA"
+     },
+     {
+      "start": 1671,
+      "end": 1675,
+      "type": "ORG",
+      "text": "RMGA"
+     },
+     {
+      "start": 1857,
+      "end": 1861,
+      "type": "ORG",
+      "text": "RMGA"
+     },
+     {
+      "start": 1898,
+      "end": 1905,
+      "type": "ORG",
+      "text": "Renault"
+     },
+     {
+      "start": 1906,
+      "end": 1911,
+      "type": "ORG",
+      "text": "Dacia"
+     },
+     {
+      "start": 1913,
+      "end": 1919,
+      "type": "ORG",
+      "text": "Alpine"
+     },
+     {
+      "start": 1921,
+      "end": 1928,
+      "type": "ORG",
+      "text": "Hyundai"
+     },
+     {
+      "start": 1930,
+      "end": 1936,
+      "type": "ORG",
+      "text": "Suzuki"
+     },
+     {
+      "start": 1938,
+      "end": 1940,
+      "type": "ORG",
+      "text": "MG"
+     },
+     {
+      "start": 1942,
+      "end": 1946,
+      "type": "ORG",
+      "text": "Fiat"
+     },
+     {
+      "start": 1948,
+      "end": 1956,
+      "type": "ORG",
+      "text": "Fiat Pro"
+     },
+     {
+      "start": 1964,
+      "end": 1970,
+      "type": "ORG",
+      "text": "Abarth"
+     },
+     {
+      "start": 1972,
+      "end": 1976,
+      "type": "ORG",
+      "text": "Jeep"
+     },
+     {
+      "start": 1978,
+      "end": 1984,
+      "type": "ORG",
+      "text": "Nissan"
+     },
+     {
+      "start": 1986,
+      "end": 1991,
+      "type": "ORG",
+      "text": "Isuzu"
+     },
+     {
+      "start": 1993,
+      "end": 1997,
+      "type": "ORG",
+      "text": "Opel"
+     },
+     {
+      "start": 1999,
+      "end": 2004,
+      "type": "ORG",
+      "text": "Omoda"
+     },
+     {
+      "start": 2025,
+      "end": 2035,
+      "type": "ORG",
+      "text": "AUTOMOTIVE"
+     },
+     {
+      "start": 2108,
+      "end": 2127,
+      "type": "LOC",
+      "text": "Chaussée de Louvain"
+     },
+     {
+      "start": 2173,
+      "end": 2176,
+      "type": "ORG",
+      "text": "BCE"
+     },
+     {
+      "start": 2215,
+      "end": 2225,
+      "type": "ORG",
+      "text": "AUTOMOTIVE"
+     },
+     {
+      "start": 2276,
+      "end": 2287,
+      "type": "ORG",
+      "text": "Pierre-Joël"
+     },
+     {
+      "start": 2299,
+      "end": 2306,
+      "type": "PERSON",
+      "text": "Pierre-"
+     },
+     {
+      "start": 2445,
+      "end": 2452,
+      "type": "ORG",
+      "text": "Peugeot"
+     },
+     {
+      "start": 2456,
+      "end": 2463,
+      "type": "ORG",
+      "text": "Citroën"
+     },
+     {
+      "start": 2465,
+      "end": 2475,
+      "type": "PERSON",
+      "text": "Stellantis"
+     },
+     {
+      "start": 2517,
+      "end": 2536,
+      "type": "ORG",
+      "text": "Alliance Automotive"
+     },
+     {
+      "start": 2579,
+      "end": 2590,
+      "type": "ORG",
+      "text": "RICCO ARLON"
+     },
+     {
+      "start": 2598,
+      "end": 2600,
+      "type": "ORG",
+      "text": "SB"
+     },
+     {
+      "start": 2644,
+      "end": 2652,
+      "type": "ORG",
+      "text": "SB-LEASE"
+     },
+     {
+      "start": 2678,
+      "end": 2683,
+      "type": "ORG",
+      "text": "RICCO"
+     },
+     {
+      "start": 2704,
+      "end": 2707,
+      "type": "ORG",
+      "text": "SRL"
+     },
+     {
+      "start": 2735,
+      "end": 2754,
+      "type": "ORG",
+      "text": "Alliance Automotive"
+     },
+     {
+      "start": 2806,
+      "end": 2813,
+      "type": "ORG",
+      "text": "Peugeot"
+     },
+     {
+      "start": 2815,
+      "end": 2822,
+      "type": "ORG",
+      "text": "Citroën"
+     },
+     {
+      "start": 2824,
+      "end": 2838,
+      "type": "ORG",
+      "text": "DS Automobiles"
+     },
+     {
+      "start": 2840,
+      "end": 2845,
+      "type": "ORG",
+      "text": "Iveco"
+     },
+     {
+      "start": 2847,
+      "end": 2852,
+      "type": "ORG",
+      "text": "Omoda"
+     },
+     {
+      "start": 3044,
+      "end": 3047,
+      "type": "ORG",
+      "text": "CDE"
+     },
+     {
+      "start": 3110,
+      "end": 3117,
+      "type": "ORG",
+      "text": "Conseil"
+     },
+     {
+      "start": 3753,
+      "end": 3756,
+      "type": "ORG",
+      "text": "CDE"
+     },
+     {
+      "start": 3759,
+      "end": 3769,
+      "type": "ORG",
+      "text": "L'Auditeur"
+     },
+     {
+      "start": 3772,
+      "end": 3784,
+      "type": "PERSON",
+      "text": "Bert Stulens"
+     },
+     {
+      "start": 4011,
+      "end": 4017,
+      "type": "ORG",
+      "text": "Comité"
+     },
+     {
+      "start": 4036,
+      "end": 4050,
+      "type": "ORG",
+      "text": "Autorité belge"
      }
     ]
    }

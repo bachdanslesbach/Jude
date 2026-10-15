@@ -27,7 +27,7 @@ OpenAI, Google Vertex, Mistral, or any other provider is a small
 
 [Install →](installation.html) · [Architecture →](architecture.html) ·
 [Threat model →](threat-model.html) · [Benchmark →](benchmark-pii-models.html) ·
-[Efficiency →](efficiency-frontier.html) · [Training data →](training-data.html) · [Decision models →](decision-models.html) ·
+[Efficiency →](efficiency-frontier.html) · [Training data →](training-data.html) · [Decision models →](decision-models.html) · [Review UX →](review-ux.html) ·
 [FAQ →](faq.html) ·
 [Source on GitHub →](https://github.com/bachdanslesbach/Jude)
 

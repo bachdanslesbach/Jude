@@ -96,19 +96,19 @@ the numbers below are the current run.*
 <!-- LADDER_TABLE -->
 | Runner | Params | Device | Pages / s | s / page | Recall | Precision | F1 | Public-body over-redaction | Peak RSS |
 |---|---|---|---|---|---|---|---|---|---|
-| `rules-only` | 0 | cpu | 116.73 | 0.0 | 0.604 | 0.962 | **0.742** | 3% | 308 MB |
-| `regex-only` | 0 | cpu | 1158.66 | 0.0 | 0.148 | 0.956 | **0.257** | 0% | 308 MB |
-| `gliner-small-v2.1-jude-labels` | 50 M | mps | 2.19 | 0.5 | 0.477 | 0.708 | **0.570** | 26% | 1674 MB |
-| `spacy-only` | 125 M | cpu | 1.77 | 0.6 | 0.602 | 0.640 | **0.621** | 40% | 2206 MB |
-| `jude-full-no-gliner` | 125 M | cpu | 0.97 | 1.0 | 0.846 | 0.690 | **0.760** | 19% | 2059 MB |
-| `jude-full-gliner-small` | 175 M | cpu | 0.54 | 1.8 | 0.883 | 0.688 | **0.774** | 21% | 1949 MB |
-| `gliner-large-v2.1-jude-labels` | 440 M | mps | 0.89 | 1.1 | 0.549 | 0.674 | **0.605** | 37% | 3442 MB |
-| `gliner-large-v2.1-jude-labels-cpu` | 440 M | cpu | 0.72 | 1.4 | 0.572 | 0.578 | **0.575** | 51% | 3814 MB |
-| `nvidia-gliner-pii-native` | 440 M | mps | 0.83 | 1.2 | 0.625 | 0.646 | **0.635** | 24% | 3434 MB |
-| `jude-full` | 565 M | cpu | 0.18 | 5.5 | 0.910 | 0.690 | **0.785** | 22% | 2445 MB |
-| `pplx-pii-masking` | 596 M | mps | 0.70 | 1.4 | 0.468 | 0.916 | **0.619** | 2% | 755 MB |
-| `pplx-pii-masking-cpu` | 596 M | cpu | 0.04 | 23.0 | 0.469 | 0.916 | **0.620** | 2% | 1572 MB |
-| `roblox-pii-classifier` | 560 M | mps | 1.07 | 0.9 | — | — | **—** | — | 943 MB |
+| `rules-only` | 0 | cpu | 115.41 | 0.0 | 0.473 | 0.950 | **0.632** | 2% | 290 MB |
+| `regex-only` | 0 | cpu | 1155.24 | 0.0 | 0.111 | 0.949 | **0.198** | 0% | 289 MB |
+| `gliner-small-v2.1-jude-labels` | 50 M | mps | 1.80 | 0.6 | 0.524 | 0.728 | **0.610** | 19% | 1466 MB |
+| `spacy-only` | 125 M | cpu | 1.64 | 0.6 | 0.652 | 0.672 | **0.661** | 27% | 1234 MB |
+| `jude-full-no-gliner` | 125 M | cpu | 0.89 | 1.1 | 0.837 | 0.689 | **0.756** | 21% | 1300 MB |
+| `jude-full-gliner-small` | 175 M | cpu | 0.53 | 1.9 | 0.872 | 0.684 | **0.767** | 24% | 1834 MB |
+| `gliner-large-v2.1-jude-labels` | 440 M | mps | 0.70 | 1.4 | 0.548 | 0.686 | **0.609** | 25% | 2792 MB |
+| `gliner-large-v2.1-jude-labels-cpu` | 440 M | cpu | 0.69 | 1.4 | 0.548 | 0.686 | **0.609** | 25% | 3435 MB |
+| `nvidia-gliner-pii-native` | 440 M | mps | 0.79 | 1.3 | 0.573 | 0.649 | **0.609** | 16% | 1865 MB |
+| `jude-full` | 565 M | cpu | 0.18 | 5.4 | 0.900 | 0.688 | **0.780** | 24% | 2494 MB |
+| `pplx-pii-masking` | 596 M | mps | 0.63 | 1.6 | 0.373 | 0.906 | **0.528** | 2% | 361 MB |
+| `pplx-pii-masking-cpu` | 596 M | cpu | 0.04 | 23.0 | 0.373 | 0.905 | **0.529** | 2% | 1363 MB |
+| `roblox-pii-classifier` | 560 M | mps | 1.09 | 0.9 | — | — | **—** | — | 750 MB |
 | `ollama-qwen3-4b` | 4.0 B | ollama | 0.01 | 115.2 | 0.652 | 0.520 | **0.579** | 46% | 281 MB |
 <!-- /LADDER_TABLE -->
 

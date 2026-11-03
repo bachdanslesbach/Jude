@@ -122,7 +122,7 @@ Span-level F1 across the 58-document gold corpus in `benchmark/corpus/`. Lenient
 | `nvidia-gliner-pii-jude-labels` | 0.809 | 0.507 | **0.624** | 0.632 | 236/1466 (16%) | 808/1158 | 28 | 0.743 | 2,692 | 3,540 MB |
 | `nvidia-gliner-pii-native-t03` | 0.641 | 0.599 | **0.619** | 0.721 | 252/1466 (17%) | 592/942 | 24 | 0.828 | 2,358 | 3,502 MB |
 | `nvidia-gliner-pii-native` | 0.649 | 0.573 | **0.609** | 0.703 | 233/1466 (16%) | 661/1004 | 24 | 0.812 | 2,380 | 1,865 MB |
-| `ollama-qwen3-4b` | 0.520 | 0.652 | **0.579** | 0.640 | 280/613 (46%) | 390/566 | 19 | 0.745 | 26 | 281 MB |
+| `ollama-qwen3-4b` | 0.514 | 0.634 | **0.568** | 0.648 | 601/1466 (41%) | 535/861 | 19 | 0.737 | 32 | 283 MB |
 | `pplx-pii-masking-cpu` | 0.905 | 0.373 | **0.529** | 0.569 | 31/1466 (2%) | 1252/1473 | 33 | 0.647 | 130 | 1,363 MB |
 | `pplx-pii-masking` | 0.906 | 0.373 | **0.528** | 0.568 | 30/1466 (2%) | 1254/1475 | 33 | 0.646 | 1,903 | 361 MB |
 | `regex-only` | 0.949 | 0.111 | **0.198** | 0.198 | 3/1466 (0%) | 1981/2091 | 44 | 0.221 | 3,465,718 | 289 MB |
@@ -146,7 +146,7 @@ Span-level F1 across the 58-document gold corpus in `benchmark/corpus/`. Lenient
 | `nvidia-gliner-pii-jude-labels` | **0.654** (0.82 / 0.55, 19) | **0.619** (0.79 / 0.51, 25) | **0.617** (0.84 / 0.49, 14) |
 | `nvidia-gliner-pii-native-t03` | **0.670** (0.67 / 0.67, 19) | **0.634** (0.63 / 0.64, 25) | **0.563** (0.65 / 0.49, 14) |
 | `nvidia-gliner-pii-native` | **0.662** (0.68 / 0.65, 19) | **0.628** (0.64 / 0.62, 25) | **0.539** (0.66 / 0.46, 14) |
-| `ollama-qwen3-4b` | **0.694** (0.59 / 0.85, 19) | **0.544** (0.50 / 0.60, 25) | — |
+| `ollama-qwen3-4b` | **0.694** (0.59 / 0.85, 19) | **0.544** (0.50 / 0.60, 25) | **0.542** (0.50 / 0.59, 14) |
 | `pplx-pii-masking-cpu` | **0.570** (0.89 / 0.42, 19) | **0.634** (0.92 / 0.48, 25) | **0.267** (0.84 / 0.16, 14) |
 | `pplx-pii-masking` | **0.570** (0.89 / 0.42, 19) | **0.632** (0.92 / 0.48, 25) | **0.267** (0.85 / 0.16, 14) |
 | `regex-only` | **0.349** (0.92 / 0.22, 19) | **0.229** (0.98 / 0.13, 25) | **0.051** (0.86 / 0.03, 14) |
@@ -167,7 +167,7 @@ Span-level F1 across the 58-document gold corpus in `benchmark/corpus/`. Lenient
 | `nvidia-gliner-pii-jude-labels` | 0.862 | 0.653 | **0.743** | 1002 | 160 | 532 |
 | `nvidia-gliner-pii-native-t03` | 0.871 | 0.788 | **0.828** | 1209 | 179 | 325 |
 | `nvidia-gliner-pii-native` | 0.880 | 0.754 | **0.812** | 1156 | 158 | 378 |
-| `ollama-qwen3-4b` | 0.726 | 0.765 | **0.745** | 784 | 296 | 241 |
+| `ollama-qwen3-4b` | 0.712 | 0.764 | **0.737** | 1172 | 474 | 362 |
 | `pplx-pii-masking-cpu` | 0.905 | 0.504 | **0.647** | 773 | 81 | 761 |
 | `pplx-pii-masking` | 0.906 | 0.502 | **0.646** | 770 | 80 | 764 |
 | `regex-only` | 0.974 | 0.125 | **0.221** | 191 | 5 | 1343 |
@@ -223,20 +223,20 @@ Span-level F1 across the 58-document gold corpus in `benchmark/corpus/`. Lenient
 | doc_043_mise_en_demeure_fr | 0.456 | 0.456 | 0.414 | 0.644 | 0.682 | 0.574 | 0.594 | 0.625 | 0.608 | 0.615 | 0.651 | 0.667 | 0.667 | 0.327 | 0.738 | 0.417 |
 | doc_044_fil_emails_budget_fr | 0.490 | 0.490 | 0.447 | 0.761 | 0.721 | 0.752 | 0.759 | 0.608 | 0.574 | 0.587 | 0.600 | 0.726 | 0.726 | 0.317 | 0.500 | 0.536 |
 | doc_045_escrow_agreement_excerpt_en | 0.538 | 0.538 | 0.561 | 0.740 | 0.698 | 0.719 | 0.719 | 0.585 | 0.701 | 0.692 | 0.742 | 0.679 | 0.679 | 0.225 | 0.732 | 0.645 |
-| doc_101_commercial_2026_central_termica_v_santan_en | 0.773 | 0.773 | 0.791 | 0.807 | 0.815 | 0.829 | 0.807 | 0.692 | 0.390 | 0.364 | — | 0.231 | 0.231 | 0.043 | 0.537 | 0.828 |
-| doc_102_commercial_2026_intralinks_v_nexans_en | 0.747 | 0.747 | 0.780 | 0.699 | 0.706 | 0.712 | 0.685 | 0.753 | 0.587 | 0.593 | — | 0.340 | 0.340 | 0.050 | 0.386 | 0.810 |
-| doc_103_chancery_2026_glencore_v_prax_lindsey_en | 0.714 | 0.714 | 0.682 | 0.759 | 0.748 | 0.771 | 0.778 | 0.687 | 0.579 | 0.605 | — | 0.333 | 0.333 | 0.045 | 0.545 | 0.848 |
-| doc_104_chancery_2026_nocopyrightsounds_v_aei_mu_en | 0.874 | 0.874 | 0.815 | 0.920 | 0.916 | 0.943 | 0.932 | 0.708 | 0.685 | 0.562 | — | 0.360 | 0.360 | 0.048 | 0.292 | 0.892 |
-| doc_105_coa_2026_rasmala_v_trafigura_en | 0.745 | 0.745 | 0.829 | 0.918 | 0.949 | 0.967 | 0.952 | 0.674 | 0.648 | 0.648 | — | 0.290 | 0.290 | 0.033 | 0.356 | 0.914 |
-| doc_106_ca3_2026_sandoz_v_united_therapeutics_en | 0.718 | 0.718 | 0.765 | 0.841 | 0.785 | 0.827 | 0.822 | 0.621 | 0.563 | 0.532 | — | 0.352 | 0.352 | 0.022 | 0.240 | 0.850 |
-| doc_107_ca6_2026_trustees_main_v_appliancesmart_en | 0.512 | 0.512 | 0.890 | 0.895 | 0.906 | 0.939 | 0.939 | 0.743 | 0.740 | 0.686 | — | 0.067 | 0.067 | 0.000 | 0.089 | 0.921 |
-| doc_108_cafc_2026_alexsam_v_simon_property_group_en | 0.474 | 0.474 | 0.613 | 0.768 | 0.768 | 0.738 | 0.556 | 0.504 | 0.425 | 0.410 | — | 0.260 | 0.260 | 0.023 | 0.129 | 0.744 |
-| doc_109_cass_2023_international_tools_service_v__fr | 0.353 | 0.353 | 0.400 | 0.500 | 0.541 | 0.465 | 0.465 | 0.462 | 0.615 | 0.615 | — | 0.387 | 0.387 | 0.133 | 0.250 | 0.533 |
-| doc_110_cass_2025_ville_de_virton_v_trema_archit_fr | 0.464 | 0.464 | 0.486 | 0.642 | 0.739 | 0.642 | 0.642 | 0.634 | 0.650 | 0.650 | — | 0.320 | 0.320 | 0.095 | 0.182 | 0.762 |
-| doc_111_cass_2025_g_v_etat_belge_fr | 0.632 | 0.632 | 0.343 | 0.698 | 0.811 | 0.732 | 0.732 | 0.743 | 0.778 | 0.800 | — | 0.765 | 0.765 | 0.111 | 0.300 | 0.757 |
-| doc_112_cc_2026_rossel_ipm_fr | 0.552 | 0.552 | 0.652 | 0.739 | 0.670 | 0.731 | 0.660 | 0.496 | 0.552 | 0.554 | — | 0.224 | 0.224 | 0.149 | 0.418 | 0.551 |
-| doc_113_rpr_2026_rfb_v_urbsfa_fr | 0.374 | 0.374 | 0.366 | 0.561 | 0.507 | 0.638 | 0.623 | 0.418 | 0.481 | 0.396 | — | 0.031 | 0.031 | 0.031 | 0.061 | 0.477 |
-| doc_114_ccs_2026_rmga_pierre_joel_aag_fr | 0.646 | 0.646 | 0.565 | 0.500 | 0.509 | 0.532 | 0.496 | 0.549 | 0.371 | 0.358 | — | 0.154 | 0.158 | 0.054 | 0.364 | 0.510 |
+| doc_101_commercial_2026_central_termica_v_santan_en | 0.773 | 0.773 | 0.791 | 0.807 | 0.815 | 0.829 | 0.807 | 0.692 | 0.390 | 0.364 | 0.333 | 0.231 | 0.231 | 0.043 | 0.537 | 0.828 |
+| doc_102_commercial_2026_intralinks_v_nexans_en | 0.747 | 0.747 | 0.780 | 0.699 | 0.706 | 0.712 | 0.685 | 0.753 | 0.587 | 0.593 | 0.296 | 0.340 | 0.340 | 0.050 | 0.386 | 0.810 |
+| doc_103_chancery_2026_glencore_v_prax_lindsey_en | 0.714 | 0.714 | 0.682 | 0.759 | 0.748 | 0.771 | 0.778 | 0.687 | 0.579 | 0.605 | 0.513 | 0.333 | 0.333 | 0.045 | 0.545 | 0.848 |
+| doc_104_chancery_2026_nocopyrightsounds_v_aei_mu_en | 0.874 | 0.874 | 0.815 | 0.920 | 0.916 | 0.943 | 0.932 | 0.708 | 0.685 | 0.562 | 0.500 | 0.360 | 0.360 | 0.048 | 0.292 | 0.892 |
+| doc_105_coa_2026_rasmala_v_trafigura_en | 0.745 | 0.745 | 0.829 | 0.918 | 0.949 | 0.967 | 0.952 | 0.674 | 0.648 | 0.648 | 0.879 | 0.290 | 0.290 | 0.033 | 0.356 | 0.914 |
+| doc_106_ca3_2026_sandoz_v_united_therapeutics_en | 0.718 | 0.718 | 0.765 | 0.841 | 0.785 | 0.827 | 0.822 | 0.621 | 0.563 | 0.532 | 0.412 | 0.352 | 0.352 | 0.022 | 0.240 | 0.850 |
+| doc_107_ca6_2026_trustees_main_v_appliancesmart_en | 0.512 | 0.512 | 0.890 | 0.895 | 0.906 | 0.939 | 0.939 | 0.743 | 0.740 | 0.686 | 0.738 | 0.067 | 0.067 | 0.000 | 0.089 | 0.921 |
+| doc_108_cafc_2026_alexsam_v_simon_property_group_en | 0.474 | 0.474 | 0.613 | 0.768 | 0.768 | 0.738 | 0.556 | 0.504 | 0.425 | 0.410 | 0.442 | 0.260 | 0.260 | 0.023 | 0.129 | 0.744 |
+| doc_109_cass_2023_international_tools_service_v__fr | 0.353 | 0.353 | 0.400 | 0.500 | 0.541 | 0.465 | 0.465 | 0.462 | 0.615 | 0.615 | 0.560 | 0.387 | 0.387 | 0.133 | 0.250 | 0.533 |
+| doc_110_cass_2025_ville_de_virton_v_trema_archit_fr | 0.464 | 0.464 | 0.486 | 0.642 | 0.739 | 0.642 | 0.642 | 0.634 | 0.650 | 0.650 | 0.889 | 0.320 | 0.320 | 0.095 | 0.182 | 0.762 |
+| doc_111_cass_2025_g_v_etat_belge_fr | 0.632 | 0.632 | 0.343 | 0.698 | 0.811 | 0.732 | 0.732 | 0.743 | 0.778 | 0.800 | 0.652 | 0.765 | 0.765 | 0.111 | 0.300 | 0.757 |
+| doc_112_cc_2026_rossel_ipm_fr | 0.552 | 0.552 | 0.652 | 0.739 | 0.670 | 0.731 | 0.660 | 0.496 | 0.552 | 0.554 | 0.752 | 0.224 | 0.224 | 0.149 | 0.418 | 0.551 |
+| doc_113_rpr_2026_rfb_v_urbsfa_fr | 0.374 | 0.374 | 0.366 | 0.561 | 0.507 | 0.638 | 0.623 | 0.418 | 0.481 | 0.396 | 0.455 | 0.031 | 0.031 | 0.031 | 0.061 | 0.477 |
+| doc_114_ccs_2026_rmga_pierre_joel_aag_fr | 0.646 | 0.646 | 0.565 | 0.500 | 0.509 | 0.532 | 0.496 | 0.549 | 0.371 | 0.358 | 0.446 | 0.154 | 0.158 | 0.054 | 0.364 | 0.510 |
 
 ## Per entity type
 
@@ -363,15 +363,15 @@ Span-level F1 across the 58-document gold corpus in `benchmark/corpus/`. Lenient
 ### ollama-qwen3-4b — per type
 | Type | Precision | Recall | F1 | TP | FP | FN |
 |---|---|---|---|---|---|---|
-| CASE_REF | 0.673 | 0.810 | 0.735 | 68 | 33 | 16 |
-| EMAIL | 1.000 | 0.970 | 0.985 | 96 | 0 | 3 |
-| IBAN | 1.000 | 0.633 | 0.776 | 38 | 0 | 22 |
-| LOC | 0.443 | 0.807 | 0.572 | 117 | 147 | 28 |
-| ORG | 0.681 | 0.573 | 0.622 | 377 | 177 | 281 |
-| PERSON | 0.797 | 0.553 | 0.653 | 259 | 66 | 209 |
-| PHONE | 0.941 | 0.952 | 0.947 | 80 | 5 | 4 |
-| SECRET | 0.000 | 0.000 | 0.000 | 0 | 549 | 0 |
-| URL | 0.963 | 0.897 | 0.929 | 26 | 1 | 3 |
+| CASE_REF | 0.757 | 0.773 | 0.765 | 109 | 35 | 32 |
+| EMAIL | 0.980 | 0.970 | 0.975 | 98 | 2 | 3 |
+| IBAN | 0.981 | 0.650 | 0.782 | 52 | 1 | 28 |
+| LOC | 0.404 | 0.802 | 0.537 | 134 | 198 | 33 |
+| ORG | 0.729 | 0.563 | 0.635 | 637 | 237 | 495 |
+| PERSON | 0.768 | 0.571 | 0.655 | 350 | 106 | 263 |
+| PHONE | 0.933 | 0.955 | 0.944 | 84 | 6 | 4 |
+| SECRET | 0.000 | 0.000 | 0.000 | 0 | 821 | 0 |
+| URL | 0.929 | 0.897 | 0.912 | 26 | 2 | 3 |
 
 ### pplx-pii-masking-cpu — per type
 | Type | Precision | Recall | F1 | TP | FP | FN |
@@ -445,7 +445,7 @@ Span-level F1 across the 58-document gold corpus in `benchmark/corpus/`. Lenient
 - **`nvidia-gliner-pii-jude-labels`** — model `nvidia/gliner-PII` @ `bd23e8ef`; device mps; load 12.5 s; threshold 0.5.
 - **`nvidia-gliner-pii-native-t03`** — model `nvidia/gliner-PII` @ `bd23e8ef`; device mps; load 12.6 s; threshold 0.3.
 - **`nvidia-gliner-pii-native`** — model `nvidia/gliner-PII` @ `bd23e8ef`; device mps; load 14.3 s; threshold 0.5.
-- **`ollama-qwen3-4b`** — model `qwen3:4b`; device ollama; load 11.2 s; **not run on 14 corpus document(s)**: doc_101_commercial_2026_central_termica_v_santan_en, doc_102_commercial_2026_intralinks_v_nexans_en, doc_103_chancery_2026_glencore_v_prax_lindsey_en, doc_104_chancery_2026_nocopyrightsounds_v_aei_mu_en, doc_105_coa_2026_rasmala_v_trafigura_en, doc_106_ca3_2026_sandoz_v_united_therapeutics_en, doc_107_ca6_2026_trustees_main_v_appliancesmart_en, doc_108_cafc_2026_alexsam_v_simon_property_group_en, doc_109_cass_2023_international_tools_service_v__fr, doc_110_cass_2025_ville_de_virton_v_trema_archit_fr, doc_111_cass_2025_g_v_etat_belge_fr, doc_112_cc_2026_rossel_ipm_fr, doc_113_rpr_2026_rfb_v_urbsfa_fr, doc_114_ccs_2026_rmga_pierre_joel_aag_fr.
+- **`ollama-qwen3-4b`** — model `qwen3:4b`; device ollama; load 10.7 s.
   - Generative extraction via Ollama (local); thinking disabled, temperature 0.
   - Surfaces are located by exact string search — every occurrence counts.
 - **`pplx-pii-masking-cpu`** — model `perplexity-ai/pplx-pii-masking` @ `f1f90a53`; device cpu; load 5.7 s; out-of-schema predictions dropped: other_pii×9, private_date×175; mean document sensitivity 0.18.
@@ -532,6 +532,7 @@ decisions, counsel's addresses) are items 8–17 of
 | `rules-only` | 0.714 (0.95 / 0.57) | 0.296 (0.87 / 0.18) | −0.42 |
 | `regex-only` | 0.229 (0.98 / 0.13) | 0.051 (0.86 / 0.03) | −0.18 |
 | `roblox-pii-classifier` (sentence F1) | 0.751 | 0.674 | −0.08 |
+| `ollama-qwen3-4b` (generative, 4 B) | 0.544 (0.50 / 0.60) | 0.542 (0.50 / 0.59) | 0.00 |
 
 Five things the real documents say.
 
@@ -558,6 +559,8 @@ Five things the real documents say.
    encoder: on the persons it does label it is precise (0.87).
    `nvidia/gliner-PII` keeps an organisation label and lands at
    0.54–0.62; GLiNER with Jude's legal labels at 0.62–0.69.
+   The generative 4 B model stays where it was (0.54), redacting 38 %
+   of the public bodies at 32 characters per second.
 4. **What Jude misses on real documents (88 spans)** — the shapes it has
    never seen: every Belgian enterprise number written with dots
    (`0447.966.784`, 20 of 20 missed — the registry bucket is at recall
@@ -750,9 +753,10 @@ For anyone minded to train one — the plan is in `training-data.html`:
   reviewed by the lawyer, with ten further policy questions open
   (items 8–17). The numbers are indicative; the ranking and the size
   of the generalisation gap are robust.
-* The generative baseline (`ollama-qwen3-4b`) is being re-run on the
-  real documents; until then its row is scored on the 44 synthetic
-  documents only.
+* The generative baseline (`ollama-qwen3-4b`) was re-run on the real
+  documents on 19 October 2026: 0.542 (P 0.50 / R 0.59), 38 % of public
+  bodies redacted, 32 characters per second — the same picture as on
+  the synthetic splits.
 * Where a mapping choice was ambiguous it was made in the external
   model's favour: dates and demographic labels are dropped rather than
   counted as false positives; adjacent name fragments are merged.

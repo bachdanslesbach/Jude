@@ -66,6 +66,7 @@ decisions, counsel's addresses) are items 8–17 of
 | `rules-only` | 0.714 (0.95 / 0.57) | 0.296 (0.87 / 0.18) | −0.42 |
 | `regex-only` | 0.229 (0.98 / 0.13) | 0.051 (0.86 / 0.03) | −0.18 |
 | `roblox-pii-classifier` (sentence F1) | 0.751 | 0.674 | −0.08 |
+| `ollama-qwen3-4b` (generative, 4 B) | 0.544 (0.50 / 0.60) | 0.542 (0.50 / 0.59) | 0.00 |
 
 Five things the real documents say.
 
@@ -92,6 +93,8 @@ Five things the real documents say.
    encoder: on the persons it does label it is precise (0.87).
    `nvidia/gliner-PII` keeps an organisation label and lands at
    0.54–0.62; GLiNER with Jude's legal labels at 0.62–0.69.
+   The generative 4 B model stays where it was (0.54), redacting 38 %
+   of the public bodies at 32 characters per second.
 4. **What Jude misses on real documents (88 spans)** — the shapes it has
    never seen: every Belgian enterprise number written with dots
    (`0447.966.784`, 20 of 20 missed — the registry bucket is at recall
@@ -284,9 +287,10 @@ For anyone minded to train one — the plan is in `training-data.html`:
   reviewed by the lawyer, with ten further policy questions open
   (items 8–17). The numbers are indicative; the ranking and the size
   of the generalisation gap are robust.
-* The generative baseline (`ollama-qwen3-4b`) is being re-run on the
-  real documents; until then its row is scored on the 44 synthetic
-  documents only.
+* The generative baseline (`ollama-qwen3-4b`) was re-run on the real
+  documents on 19 October 2026: 0.542 (P 0.50 / R 0.59), 38 % of public
+  bodies redacted, 32 characters per second — the same picture as on
+  the synthetic splits.
 * Where a mapping choice was ambiguous it was made in the external
   model's favour: dates and demographic labels are dropped rather than
   counted as false positives; adjacent name fragments are merged.

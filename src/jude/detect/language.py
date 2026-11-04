@@ -29,6 +29,29 @@ def detect_language(
     return None
 
 
+def detect_language_any(
+    text: str,
+    min_confidence: float = 0.6,
+    min_chars: int = 20,
+) -> str | None:
+    """Language detection without a `supported` filter: the most likely
+    language of the chunk when the detector is confident enough, else
+    None. Used to report languages Jude has no model for.
+    """
+
+    s = text.strip()
+    if len(s) < min_chars:
+        return None
+    try:
+        candidates = detect_langs(s)
+    except LangDetectException:
+        return None
+    if not candidates:
+        return None
+    best = max(candidates, key=lambda c: c.prob)
+    return best.lang if best.prob >= min_confidence else None
+
+
 def split_into_paragraphs(text: str) -> list[tuple[int, str]]:
     """Split `text` into paragraphs, returning `(start_offset, paragraph)` pairs.
 

@@ -4,6 +4,7 @@ import os
 import subprocess
 import sys
 from pathlib import Path
+from typing import Annotated
 
 import typer
 from rich import print as rprint
@@ -52,10 +53,19 @@ def init() -> None:
         )
 
 
+MATTER_ENDPOINTS: tuple[str, ...] = ("anthropic", "ollama", "azure", "claude-desktop")
+
+
 @matter_app.command("create")
 def matter_create(
     name: str,
     mode: Mode = Mode.STRICT,
+    endpoint: str = typer.Option(
+        "anthropic", "--endpoint",
+        help="The LLM endpoint the matter's attestation is about: anthropic, ollama, azure "
+        "or claude-desktop. Smart mode in the Claude Desktop plugin needs "
+        "--endpoint claude-desktop --zr.",
+    ),
     zero_retention: bool = typer.Option(
         False, "--zr", help="Attest the LLM endpoint is zero-retention (smart mode)."
     ),
@@ -64,12 +74,17 @@ def matter_create(
         help="Also redact deal codenames (\"Project X\" and bare \"X\"). Off by default.",
     ),
 ) -> None:
+    if endpoint not in MATTER_ENDPOINTS:
+        rprint(f"[red]--endpoint must be one of: {', '.join(MATTER_ENDPOINTS)}[/red]")
+        raise typer.Exit(2)
     with Store(default_db_path()) as store:
         m = store.create_matter(
-            name=name, mode=mode, zero_retention_attested=zero_retention,
-            redact_codenames=redact_codenames,
+            name=name, mode=mode, llm_endpoint=endpoint,
+            zero_retention_attested=zero_retention, redact_codenames=redact_codenames,
         )
-    rprint(f"[green]Created matter[/green] {m.id} — {m.name} ({m.mode.value})")
+    rprint(
+        f"[green]Created matter[/green] {m.id} — {m.name} ({m.mode.value}, {m.llm_endpoint})"
+    )
 
 
 @matter_app.command("list")
@@ -77,13 +92,14 @@ def matter_list() -> None:
     with Store(default_db_path()) as store:
         matters = store.list_matters()
     table = Table(title="Matters")
-    for col in ("id", "name", "mode", "zr", "created_at"):
+    for col in ("id", "name", "mode", "endpoint", "zr", "created_at"):
         table.add_column(col)
     for m in matters:
         table.add_row(
             m.id,
             m.name,
             m.mode.value,
+            m.llm_endpoint,
             "yes" if m.zero_retention_attested else "no",
             m.created_at.isoformat() if m.created_at else "",
         )
@@ -92,14 +108,14 @@ def matter_list() -> None:
 
 @app.command(name="redact")
 def redact_file(
-    paths: list[Path] = typer.Argument(
+    paths: list[Path] = typer.Argument(  # noqa: B008
         ...,
         help="One or more .txt / .docx / .pdf / .xlsx files to redact.",
         exists=True,
         readable=True,
     ),
     matter: str = typer.Option(..., help="Matter id."),
-    out: Path | None = typer.Option(
+    out: Path | None = typer.Option(  # noqa: B008
         None,
         help="Output path. Only valid with a single input. "
         "Defaults to <input>.redacted.<ext>.",
@@ -227,7 +243,7 @@ def _read_text(path: Path, ocr: bool = False) -> str:
 
 @app.command()
 def review(
-    path: Path = typer.Argument(
+    path: Path = typer.Argument(  # noqa: B008
         ..., exists=True, readable=True, help="A .txt / .docx / .pdf / .xlsx file."
     ),
     matter: str = typer.Option(..., help="Matter id."),
@@ -267,7 +283,7 @@ def review(
         "Add what identifies a party with `jude entities` / the UI, then re-run.[/dim]"
     )
     for t in terms:
-        rprint(f"  [bold]{escape(t.text)}[/bold] ×{t.count}   [dim]{escape(t.context)}[/dim]")
+        rprint(f"  [bold]{escape(t.text)}[/bold] ×{t.count}   [dim]{escape(t.context)}[/dim]")  # noqa: RUF001
 
 
 @app.command()
@@ -292,9 +308,9 @@ def entities(matter: str = typer.Option(..., help="Matter id.")) -> None:
 
 @app.command(name="rehydrate")
 def rehydrate_file(
-    path: Path = typer.Argument(..., exists=True, readable=True),
+    path: Path = typer.Argument(..., exists=True, readable=True),  # noqa: B008
     matter: str = typer.Option(..., help="Matter id."),
-    out: Path | None = typer.Option(None),
+    out: Path | None = typer.Option(None),  # noqa: B008
 ) -> None:
     """Replace pseudonyms in an LLM output back to real names."""
 
@@ -318,7 +334,7 @@ def enrich(matter: str = typer.Option(..., help="Matter id.")) -> None:
 @app.command(name="export")
 def export_matter(
     matter: str = typer.Argument(..., help="Matter id."),
-    out: Path | None = typer.Option(
+    out: Path | None = typer.Option(  # noqa: B008
         None, help="Output path. Defaults to ./jude-matter-<id>.json"
     ),
 ) -> None:
@@ -365,6 +381,148 @@ def ui() -> None:
         check=False,
         env=env,
     )
+
+
+# ----- `jude mcp` — Claude Desktop plugin -----
+
+mcp_app = typer.Typer(
+    help=(
+        "Use Jude from Claude Desktop. `jude mcp` alone runs the local server over "
+        "stdio (Claude Desktop starts it); the subcommands install, check and open."
+    ),
+    invoke_without_command=True,
+    no_args_is_help=False,
+)
+app.add_typer(mcp_app, name="mcp")
+
+
+@mcp_app.callback(invoke_without_command=True)
+def mcp_serve(
+    ctx: typer.Context,
+    idle_ttl: int = typer.Option(
+        1200, "--idle-ttl",
+        help="Seconds a review stays open without the lawyer interacting with the window "
+        "(polls do not count).",
+    ),
+    approved_hold: int = typer.Option(
+        1800, "--approved-hold",
+        help="Seconds an approved text waits for Claude before the approval lapses.",
+    ),
+    lang: str = typer.Option("en", "--lang", help="Language of the window and hints: en or fr."),
+) -> None:
+    """Run the Jude MCP server over stdio (default when no subcommand is given).
+
+    Never prints to stdout: stdout is the protocol wire. Logs go to stderr
+    (static lines only) and to <jude_home>/mcp/trace.log (local, 0600).
+    """
+
+    if ctx.invoked_subcommand is not None:
+        return
+    if lang not in ("en", "fr"):
+        rprint("[red]--lang must be en or fr[/red]", file=sys.stderr)
+        raise typer.Exit(2)
+    try:
+        from .mcp.server import main as mcp_main
+    except ImportError as exc:
+        rprint(
+            "[red]The MCP SDK is not installed. Run: pip install \"jude[mcp]\"[/red]",
+            file=sys.stderr,
+        )
+        raise typer.Exit(1) from exc
+    code = mcp_main(
+        ["--idle-ttl", str(idle_ttl), "--approved-hold", str(approved_hold), "--lang", lang]
+    )
+    raise typer.Exit(code)
+
+
+@mcp_app.command("install-claude-desktop")
+def mcp_install_claude_desktop(
+    dry_run: bool = typer.Option(False, "--dry-run", help="Print the result; write nothing."),
+    uninstall: bool = typer.Option(False, "--uninstall", help="Remove the jude entry."),
+    jude_home: Annotated[
+        Path | None,
+        typer.Option("--jude-home", help="Put JUDE_HOME in the server's environment."),
+    ] = None,
+    skip_doctor: bool = typer.Option(
+        False, "--skip-doctor", help="Write the configuration even if `jude mcp doctor` fails."
+    ),
+) -> None:
+    """Add Jude to Claude Desktop's configuration (with a backup). Ends with
+    "Restart Claude Desktop."."""
+
+    from .mcp.install import install
+
+    code = install(
+        dry_run=dry_run,
+        uninstall=uninstall,
+        jude_home=str(jude_home) if jude_home else os.environ.get("JUDE_HOME"),
+        skip_doctor=skip_doctor,
+        echo=typer.echo,
+    )
+    raise typer.Exit(code)
+
+
+@mcp_app.command("doctor")
+def mcp_doctor(
+    fix: bool = typer.Option(
+        False, "--fix",
+        help="Download missing models, fix permissions, sweep stale files, delete the trace "
+        "(asks once).",
+    ),
+    as_desktop: bool = typer.Option(
+        False, "--as-desktop",
+        help="Also run the checks with the environment Claude Desktop gives the server, and "
+        "show both when they differ.",
+    ),
+) -> None:
+    """Check everything the plugin needs: interpreter, models, permissions, port."""
+
+    from .mcp.doctor import (
+        desktop_environment,
+        differences,
+        doctor_ok,
+        run_checks,
+        run_checks_as_desktop,
+    )
+    from .mcp.doctor import fix as apply_fixes
+
+    checks = run_checks()
+    if as_desktop:
+        desktop_checks = run_checks_as_desktop(desktop_environment())
+        diff = differences(checks, desktop_checks)
+        if diff:
+            typer.echo("as this terminal")
+            for c in checks:
+                typer.echo("  " + c.line())
+            typer.echo("as Claude Desktop")
+            for c in desktop_checks:
+                typer.echo("  " + c.line())
+            checks = desktop_checks
+        else:
+            for c in checks:
+                typer.echo(c.line())
+            typer.echo("(identical when run as Claude Desktop)")
+    else:
+        for c in checks:
+            typer.echo(c.line())
+    if fix:
+        apply_fixes(
+            checks,
+            confirm=lambda prompt: typer.confirm(prompt.replace(" [y/N] ", ""), default=False),
+            echo=typer.echo,
+        )
+        return
+    if not doctor_ok(checks):
+        raise typer.Exit(1)
+
+
+@mcp_app.command("open")
+def mcp_open() -> None:
+    """Re-open the Jude window of a running server in your browser."""
+
+    from .mcp.launch import open_window
+
+    raise typer.Exit(open_window(echo=typer.echo))
 
 
 def _silence_streamlit_prompts() -> None:

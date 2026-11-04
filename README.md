@@ -101,8 +101,8 @@ src/jude/
 ## Quick start
 
 ```bash
-git clone https://github.com/etienne/jude.git
-cd jude
+git clone https://github.com/bachdanslesbach/Jude.git
+cd Jude
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
 python -m spacy download en_core_web_lg     # English (preferred)
@@ -128,6 +128,46 @@ jude enrich   --matter "matter-2026-001"                   # auto-fill public co
 jude rehydrate path/to/llm-output.txt --matter "matter-2026-001"
 jude review   path/to/brief.docx --matter "matter-2026-001"  # what was NOT redacted and is not public — one confirmation pass
 ```
+
+## Use Jude inside Claude Desktop
+
+Jude installs as a Claude Desktop plugin (an MCP server that runs on
+your machine, with no network access). Two commands, then a check:
+
+```bash
+pip install -e ".[mcp]"
+jude mcp install-claude-desktop      # then restart Claude Desktop
+jude mcp doctor --as-desktop         # checks the models in the environment Desktop uses
+```
+
+or install the one-click bundle `jude-<version>.mcpb` from the GitHub
+Release (*Settings › Extensions › Advanced settings › Install
+Extension…*; build it yourself with `python scripts/build_mcpb.py`).
+
+The plugin exposes three tools. Ask Claude to analyse a document;
+Claude calls **`prepare_document`**, which takes no arguments and
+opens Jude's review window on your computer. There — never in the
+chat — you choose the matter and the file, read what will be hidden
+and what will leave (up to 150 000 characters, about 50 pages), and
+approve. Approving is two steps, and the words on the screen say so:
+
+1. You tick the attestation and press **Approve**. The approval is
+   recorded on your computer first, with a SHA-256 of the exact text.
+   From that moment Claude can collect that exact text the moment it
+   asks for it, once; until it does, you can still withdraw.
+2. You tell Claude, in the chat: *Approved in Jude.* Claude cannot see
+   the window; your message is what makes it call
+   **`fetch_approved`**, which hands the pseudonymized text over once.
+   Until that call you can press *Withdraw approval*; the approval
+   lapses by itself after 30 minutes.
+
+Claude answers in pseudonyms and calls **`show_answer`**: Jude shows the
+answer with the real names in its window and returns only a character
+count to Claude. Matter names, file names, real names and the mapping
+never reach the model. What you type in the chat box is *not* filtered —
+the plugin protects documents and answers, never the prompt. Details,
+limits, and what ChatGPT and Mistral's Le Chat (now Vibe) would require:
+[docs/plugins.md](docs/plugins.md).
 
 ## Tests
 
@@ -158,7 +198,7 @@ throughput and peak memory.
 | spaCy alone | 0.593 | 0.749 | 0.76 | 17 % |
 | `nvidia/gliner-PII` (native labels) | 0.628 | 0.539 | 0.46 | 10 % |
 | `perplexity-ai/pplx-pii-masking` | 0.632 | 0.267 | 0.16 | 2 % |
-| `ollama` qwen3 4 B (generative) | 0.544 | running | — | — |
+| `ollama` qwen3 4 B (generative) | 0.544 | 0.542 | 0.59 | 38 % |
 | `roblox/roblox-pii-classifier` | — (sentence-level 0.751) | — (sentence-level 0.674) | — | — |
 
 Two numbers to quote. On `heldout` (synthetic, never tuned on, every

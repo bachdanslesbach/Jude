@@ -1,0 +1,9 @@
+#!/bin/sh
+# Entry point of the Jude bundle for Claude Desktop.
+#
+# Claude Desktop does not run this file: manifest.json names the `jude`
+# executable the user picks at install time (user_config.jude_path) and
+# starts it as `jude mcp`. This stub exists so the bundle has an entry
+# point that `mcpb validate` accepts, and so a shell user can start the
+# same server by hand:   JUDE_BIN=/path/to/.venv/bin/jude server/jude-launcher
+exec "${JUDE_BIN:-jude}" mcp "$@"

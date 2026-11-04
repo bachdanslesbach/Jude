@@ -51,6 +51,7 @@ class DetectionPipeline:
         use_privacy_filter: bool = False,
         gliner_model: str | None = None,
         redact_codenames: bool | None = None,
+        review_id: str | None = None,
     ):
         self.store = store
         self.matter_id = matter_id
@@ -64,7 +65,9 @@ class DetectionPipeline:
         self.patterns = PatternDetector(redact_codenames=redact_codenames)
         self.known = KnownEntityDetector()
         self.spacy = SpacyDetector(languages=languages, redact_codenames=redact_codenames)
-        self.dictionary = DictionaryDetector(store=store, matter_id=matter_id)
+        self.dictionary = DictionaryDetector(
+            store=store, matter_id=matter_id, review_id=review_id
+        )
         # GLiNER auto-detect: when use_gliner is None (the default) we
         # enable it iff the `gliner` package is importable. Explicit
         # True/False overrides the auto behaviour. This makes
@@ -92,6 +95,17 @@ class DetectionPipeline:
         else:
             self.privacy_filter = None
 
+    @property
+    def review_id(self) -> str | None:
+        """The plugin review whose provisional entities the dictionary may
+        use (None outside the plugin: confirmed entities only)."""
+
+        return self.dictionary.review_id
+
+    @review_id.setter
+    def review_id(self, value: str | None) -> None:
+        self.dictionary.review_id = value
+
     def detect(self, text: str) -> list[Detection]:
         candidates: list[Detection] = []
         candidates.extend(self.regex.detect(text))
@@ -104,6 +118,13 @@ class DetectionPipeline:
         if self.privacy_filter is not None:
             candidates.extend(self.privacy_filter.detect(text))
         return resolve_overlaps(candidates)
+
+    def language_report(self) -> tuple[dict[str, int], tuple[str, ...]]:
+        """Paragraph counts by language seen in the last ``detect()`` ("und"
+        for undetermined) and the languages seen that have no configured
+        model — the plugin's review screen shows both."""
+
+        return dict(self.spacy.last_languages), tuple(self.spacy.last_unmodelled)
 
 
 def resolve_overlaps(detections: Iterable[Detection]) -> list[Detection]:

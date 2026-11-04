@@ -28,7 +28,7 @@ OpenAI, Google Vertex, Mistral, or any other provider is a small
 [Install →](installation.html) · [Architecture →](architecture.html) ·
 [Threat model →](threat-model.html) · [Benchmark →](benchmark-pii-models.html) ·
 [Efficiency →](efficiency-frontier.html) · [Training data →](training-data.html) · [Decision models →](decision-models.html) · [Review UX →](review-ux.html) ·
-[FAQ →](faq.html) ·
+[Plugins →](plugins.html) · [FAQ →](faq.html) ·
 [Source on GitHub →](https://github.com/bachdanslesbach/Jude)
 
 ---
@@ -99,6 +99,12 @@ in the chat opens the review panel; only **Approve & send** actually
 calls the LLM. This is the structural guarantee Jude is built around:
 no client data leaves your machine without an explicit human OK on the
 exact text that will leave.
+
+The same gate works from inside Claude Desktop: Jude installs as a
+plugin that opens its review window on your machine and hands Claude
+only the text you approved there — see [Plugins](plugins.html). What
+you type in the chat box itself is not filtered; the plugin protects
+documents and answers, never the prompt.
 
 The pseudonym mapping is per-matter and lives in a single SQLite file
 on your disk. The LLM never sees a real name. When the LLM responds

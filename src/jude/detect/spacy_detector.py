@@ -1,11 +1,12 @@
 from __future__ import annotations
 
 import re
+from collections import Counter
 from functools import lru_cache
 from typing import TYPE_CHECKING
 
 from ..types import Detection, DetectionSource, EntityType
-from .language import detect_language, split_into_paragraphs
+from .language import detect_language, detect_language_any, split_into_paragraphs
 
 if TYPE_CHECKING:
     import spacy.language
@@ -358,11 +359,22 @@ class SpacyDetector:
         self.languages = languages
         self.model_overrides = models or {}
         self.redact_codenames = redact_codenames
+        # Report of the last detect() call: paragraphs per detected
+        # language ("und" when undetermined) and the languages seen with
+        # confidence that have no configured model. The plugin shows both.
+        self.last_languages: Counter[str] = Counter()
+        self.last_unmodelled: list[str] = []
 
     def detect(self, text: str) -> list[Detection]:
         out: list[Detection] = []
+        self.last_languages = Counter()
+        self.last_unmodelled = []
         paragraphs = split_into_paragraphs(text) or [(0, text)]
         for offset, chunk in paragraphs:
+            seen = detect_language_any(chunk)
+            self.last_languages[seen or "und"] += 1
+            if seen is not None and seen not in self.languages and seen not in self.last_unmodelled:
+                self.last_unmodelled.append(seen)
             lang = detect_language(chunk, supported=self.languages)
             if lang is None:
                 lang = self.languages[0]

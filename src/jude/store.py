@@ -3,12 +3,14 @@ from __future__ import annotations
 import json
 import sqlite3
 import uuid
+from collections.abc import Iterable, Iterator
 from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Iterator
+from typing import Literal
 
 from .types import (
+    Approval,
     Conversation,
     Entity,
     EntityType,
@@ -91,6 +93,35 @@ CREATE TABLE IF NOT EXISTS messages (
 
 CREATE INDEX IF NOT EXISTS idx_messages_conversation
     ON messages(conversation_id, id ASC);
+
+-- The approval ledger (docs/review-ux.md §7, trimmed to what the MCP
+-- plugin records today). Written BEFORE any text leaves; re-verified at
+-- release time. One row per approved document.
+CREATE TABLE IF NOT EXISTS approvals (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    review_id TEXT,
+    matter_id TEXT NOT NULL,
+    purpose TEXT NOT NULL,
+    payload_sha256 TEXT NOT NULL,
+    chars INTEGER,
+    endpoint TEXT NOT NULL,
+    endpoint_host TEXT NOT NULL,
+    model TEXT,
+    mode TEXT,
+    zero_retention INTEGER,
+    n_hidden INTEGER,
+    n_kept INTEGER,
+    n_user_marked INTEGER,
+    attestation TEXT NOT NULL,
+    approver_os_user TEXT NOT NULL,
+    ui_lang TEXT,
+    verified_at_send INTEGER,
+    approved_at TEXT NOT NULL,
+    released_at TEXT
+);
+
+CREATE INDEX IF NOT EXISTS idx_approvals_matter
+    ON approvals(matter_id, approved_at DESC);
 """
 
 
@@ -116,6 +147,7 @@ class Store:
         self._conn.execute("PRAGMA foreign_keys = ON;")
         self._conn.executescript(SCHEMA)
         self._migrate_v2()
+        self._migrate_v3()
 
     def _migrate_v2(self) -> None:
         """Add columns added after the original schema. Idempotent."""
@@ -133,6 +165,33 @@ class Store:
                 "ALTER TABLE matters ADD COLUMN redact_codenames INTEGER NOT NULL DEFAULT 0"
             )
 
+    def _migrate_v3(self) -> None:
+        """Columns the MCP plugin needs. Idempotent.
+
+        ``entities.provisional_review_id`` marks an entity created by a
+        review that has not been approved yet; an approval sets it back to
+        NULL, a cancel deletes the row, and ``recover_after_restart`` sweeps
+        what a crash left behind. ``approvals.outcome`` says how each
+        approval ended (released, refused, withdrawn, expired,
+        lost_on_restart), so the ledger never stays silent."""
+
+        ecols = {
+            row["name"]
+            for row in self._conn.execute("PRAGMA table_info(entities)").fetchall()
+        }
+        if "provisional_review_id" not in ecols:
+            self._conn.execute("ALTER TABLE entities ADD COLUMN provisional_review_id TEXT")
+        self._conn.execute(
+            "CREATE INDEX IF NOT EXISTS idx_entities_provisional "
+            "ON entities(provisional_review_id)"
+        )
+        acols = {
+            row["name"]
+            for row in self._conn.execute("PRAGMA table_info(approvals)").fetchall()
+        }
+        if "outcome" not in acols:
+            self._conn.execute("ALTER TABLE approvals ADD COLUMN outcome TEXT")
+
     def close(self) -> None:
         self._conn.close()
 
@@ -143,8 +202,12 @@ class Store:
         self.close()
 
     @contextmanager
-    def _tx(self) -> Iterator[sqlite3.Connection]:
-        self._conn.execute("BEGIN")
+    def _tx(self, immediate: bool = False) -> Iterator[sqlite3.Connection]:
+        """One transaction. ``immediate`` takes the write lock at BEGIN, so
+        two connections (two processes on one jude.db) serialise on it
+        instead of both reading the same counter."""
+
+        self._conn.execute("BEGIN IMMEDIATE" if immediate else "BEGIN")
         try:
             yield self._conn
             self._conn.execute("COMMIT")
@@ -282,18 +345,28 @@ class Store:
 
     # ----- entities -----
 
-    def find_entity_by_surface(self, matter_id: str, surface: str) -> Entity | None:
+    # Provisional entities (``provisional_review_id`` set) belong to one
+    # unfinished plugin review. Every reader takes ``review_id``: the plugin
+    # passes its review's id and sees its own provisional rows; the CLI, the
+    # Streamlit UI and ``rehydrate()`` pass nothing and see confirmed rows
+    # only, so a pseudonym that a cancel or a restart may still delete is
+    # never reused by another front-end (nor shown as a known entity).
+    _VISIBLE = "(e.provisional_review_id IS NULL OR e.provisional_review_id = ?)"
+
+    def find_entity_by_surface(
+        self, matter_id: str, surface: str, *, review_id: str | None = None
+    ) -> Entity | None:
         norm = normalize_surface(surface)
         if not norm:
             return None
         row = self._conn.execute(
-            """
+            f"""
             SELECT e.* FROM entities e
             JOIN surface_forms s ON s.entity_id = e.id
-            WHERE e.matter_id = ? AND s.normalized = ?
+            WHERE e.matter_id = ? AND s.normalized = ? AND {self._VISIBLE}
             LIMIT 1
             """,
-            (matter_id, norm),
+            (matter_id, norm, review_id),
         ).fetchone()
         return self._row_to_entity(row) if row else None
 
@@ -302,9 +375,12 @@ class Store:
         matter_id: str,
         surface: str,
         entity_type: EntityType,
+        *,
+        review_id: str | None = None,
     ) -> Entity | None:
         """Look up an entity by surface form, falling back to a
-        substring-token alias for PERSON and ORG types.
+        substring-token alias for PERSON and ORG types. ``review_id`` scopes
+        the lookup to confirmed entities plus that review's provisional ones.
 
         Solves the duplicate-pseudonym problem when a document mentions
         someone in the header by full name ("Marie-Claire Lefèvre") and
@@ -322,7 +398,7 @@ class Store:
             but not "PioneerX".
         """
 
-        exact = self.find_entity_by_surface(matter_id, surface)
+        exact = self.find_entity_by_surface(matter_id, surface, review_id=review_id)
         if exact and exact.entity_type == entity_type:
             return exact
 
@@ -337,7 +413,7 @@ class Store:
             return None
 
         candidates: list[Entity] = []
-        for ent in self.list_entities(matter_id):
+        for ent in self.list_entities(matter_id, review_id=review_id):
             if ent.entity_type != entity_type:
                 continue
             for form in {ent.canonical, *ent.surface_forms}:
@@ -352,10 +428,13 @@ class Store:
             return candidates[0]
         return None
 
-    def find_entity_by_pseudonym(self, matter_id: str, pseudonym: str) -> Entity | None:
+    def find_entity_by_pseudonym(
+        self, matter_id: str, pseudonym: str, *, review_id: str | None = None
+    ) -> Entity | None:
         row = self._conn.execute(
-            "SELECT * FROM entities WHERE matter_id = ? AND pseudonym = ?",
-            (matter_id, pseudonym),
+            f"SELECT e.* FROM entities e WHERE e.matter_id = ? AND e.pseudonym = ? "
+            f"AND {self._VISIBLE}",
+            (matter_id, pseudonym, review_id),
         ).fetchone()
         return self._row_to_entity(row) if row else None
 
@@ -367,15 +446,28 @@ class Store:
         surface_forms: set[str] | None = None,
         public_context: str | None = None,
         user_marked: bool = False,
+        *,
+        provisional_review_id: str | None = None,
     ) -> Entity:
+        """Create an entity with the next pseudonym of its type.
+
+        The counter update and the insert are ONE ``BEGIN IMMEDIATE``
+        transaction, so two processes on the same database can never both
+        read ``next_n = 7`` and both issue ``Org7``. An entity created on
+        behalf of an unfinished review carries ``provisional_review_id``
+        and writes no ``entity.create`` audit line (which would carry the
+        real name): it is logged as ``entity.confirm`` at approval or
+        deleted on cancel."""
+
         forms = set(surface_forms or set())
         forms.add(canonical)
-        pseudonym = self._next_pseudonym(matter_id, entity_type)
         now = datetime.now(timezone.utc).isoformat()
-        with self._tx() as c:
+        with self._tx(immediate=True) as c:
+            pseudonym = self._allocate_pseudonym(c, matter_id, entity_type)
             cur = c.execute(
                 "INSERT INTO entities (matter_id, canonical, entity_type, pseudonym, "
-                "public_context, user_marked, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                "public_context, user_marked, created_at, provisional_review_id) "
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
                 (
                     matter_id,
                     canonical,
@@ -384,6 +476,7 @@ class Store:
                     public_context,
                     int(user_marked),
                     now,
+                    provisional_review_id,
                 ),
             )
             entity_id = int(cur.lastrowid)
@@ -395,11 +488,12 @@ class Store:
                         "VALUES (?, ?, ?)",
                         (entity_id, form, norm),
                     )
-        self._log(
-            matter_id,
-            "entity.create",
-            json.dumps({"canonical": canonical, "pseudonym": pseudonym}),
-        )
+            if provisional_review_id is None:
+                self._log(
+                    matter_id,
+                    "entity.create",
+                    json.dumps({"canonical": canonical, "pseudonym": pseudonym}),
+                )
         return Entity(
             id=entity_id,
             matter_id=matter_id,
@@ -412,15 +506,33 @@ class Store:
             created_at=datetime.fromisoformat(now),
         )
 
-    def add_surface_form(self, entity_id: int, form: str) -> None:
+    def add_surface_form(self, entity_id: int, form: str) -> bool:
+        """Add a surface form. Returns True when a row was inserted, False
+        when the (normalised) form was already there or is empty."""
+
+        norm = normalize_surface(form)
+        if not norm:
+            return False
+        with self._tx() as c:
+            cur = c.execute(
+                "INSERT OR IGNORE INTO surface_forms (entity_id, form, normalized) "
+                "VALUES (?, ?, ?)",
+                (entity_id, form, norm),
+            )
+            inserted = cur.rowcount == 1
+        return inserted
+
+    def remove_surface_form(self, entity_id: int, form: str) -> None:
+        """Undo ``add_surface_form`` (a cancelled review leaves a
+        pre-existing entity's dictionary as it found it)."""
+
         norm = normalize_surface(form)
         if not norm:
             return
         with self._tx() as c:
             c.execute(
-                "INSERT OR IGNORE INTO surface_forms (entity_id, form, normalized) "
-                "VALUES (?, ?, ?)",
-                (entity_id, form, norm),
+                "DELETE FROM surface_forms WHERE entity_id = ? AND normalized = ?",
+                (entity_id, norm),
             )
 
     def set_public_context(self, entity_id: int, context: str | None) -> None:
@@ -683,6 +795,216 @@ class Store:
             for r in rows
         ]
 
+    # ----- approvals (the ledger) -----
+
+    def record_approval(
+        self,
+        *,
+        review_id: str,
+        matter_id: str,
+        payload_sha256: str,
+        chars: int,
+        endpoint: str,
+        endpoint_host: str,
+        mode: str,
+        zero_retention: bool,
+        n_hidden: int,
+        n_kept: int,
+        n_user_marked: int,
+        attestation: str,
+        approver_os_user: str,
+        ui_lang: str | None,
+        delete_entity_ids: Iterable[int] = (),
+        purpose: str = "mcp_document",
+        model: str | None = None,
+        confirm_entity_ids: Iterable[int] = (),
+    ) -> int:
+        """Write the approval row, confirm the provisional entities the
+        review used (``provisional_review_id`` back to NULL, one
+        ``entity.confirm`` audit line each), delete the entities the user
+        chose to keep visible (and that this review alone created) and log
+        the ``mcp.approve`` row — all in ONE transaction. Either every
+        effect lands or none does: a text must never be releasable without
+        its record, and the record must never exist without the deletions
+        and confirmations it describes."""
+
+        now = datetime.now(timezone.utc).isoformat()
+        ids = list(delete_entity_ids)
+        confirm = [i for i in confirm_entity_ids if i not in ids]
+        with self._tx(immediate=True) as c:
+            cur = c.execute(
+                "INSERT INTO approvals (review_id, matter_id, purpose, payload_sha256, chars, "
+                "endpoint, endpoint_host, model, mode, zero_retention, n_hidden, n_kept, "
+                "n_user_marked, attestation, approver_os_user, ui_lang, verified_at_send, "
+                "approved_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NULL, ?)",
+                (
+                    review_id, matter_id, purpose, payload_sha256, chars,
+                    endpoint, endpoint_host, model, mode, int(zero_retention),
+                    n_hidden, n_kept, n_user_marked, attestation, approver_os_user,
+                    ui_lang, now,
+                ),
+            )
+            approval_id = int(cur.lastrowid)
+            if confirm:
+                marks = ",".join("?" for _ in confirm)
+                provisional = c.execute(
+                    f"SELECT id, canonical, pseudonym FROM entities WHERE id IN ({marks}) "
+                    "AND provisional_review_id IS NOT NULL ORDER BY id",
+                    confirm,
+                ).fetchall()
+                c.execute(
+                    f"UPDATE entities SET provisional_review_id = NULL WHERE id IN ({marks})",
+                    confirm,
+                )
+                for row in provisional:
+                    self._log(
+                        matter_id,
+                        "entity.confirm",
+                        json.dumps(
+                            {
+                                "canonical": row["canonical"],
+                                "pseudonym": row["pseudonym"],
+                                "review_id": review_id,
+                            }
+                        ),
+                    )
+            for entity_id in ids:
+                c.execute("DELETE FROM entities WHERE id = ?", (entity_id,))
+            # _log() runs inside the open transaction (no BEGIN of its own),
+            # so a failure here rolls the row and the deletions back too.
+            self._log(
+                matter_id,
+                "mcp.approve",
+                json.dumps(
+                    {
+                        "approval_id": approval_id,
+                        "review_id": review_id,
+                        "sha256": payload_sha256,
+                        "chars": chars,
+                        "n_hidden": n_hidden,
+                        "n_kept": n_kept,
+                        "pruned_entity_ids": ids,
+                        "confirmed_entity_ids": confirm,
+                    }
+                ),
+            )
+        return approval_id
+
+    def get_approval(self, approval_id: int) -> Approval | None:
+        row = self._conn.execute(
+            "SELECT * FROM approvals WHERE id = ?", (approval_id,)
+        ).fetchone()
+        if row is None:
+            return None
+        return Approval(
+            id=row["id"],
+            review_id=row["review_id"],
+            matter_id=row["matter_id"],
+            purpose=row["purpose"],
+            payload_sha256=row["payload_sha256"],
+            chars=row["chars"],
+            endpoint=row["endpoint"],
+            endpoint_host=row["endpoint_host"],
+            mode=row["mode"],
+            zero_retention=bool(row["zero_retention"]),
+            n_hidden=row["n_hidden"],
+            n_kept=row["n_kept"],
+            n_user_marked=row["n_user_marked"],
+            attestation=row["attestation"],
+            approver_os_user=row["approver_os_user"],
+            ui_lang=row["ui_lang"],
+            verified_at_send=row["verified_at_send"],
+            approved_at=datetime.fromisoformat(row["approved_at"]),
+            released_at=(
+                datetime.fromisoformat(row["released_at"]) if row["released_at"] else None
+            ),
+            outcome=row["outcome"],
+        )
+
+    def set_approval_verified(
+        self,
+        approval_id: int,
+        verified: bool,
+        *,
+        audit: tuple[str, str, str] | None = None,
+    ) -> None:
+        """Record the release-time check: 1 when the text re-hashed to the
+        recorded digest and was handed to the local pipe (``outcome`` =
+        released); 0 when it did not and was refused (``outcome`` =
+        refused). ``released_at`` means handed to the pipe, not received
+        by the model. ``audit`` — ``(matter_id, action, detail)`` — is
+        written in the SAME transaction, so the ledger never says released
+        without its ``mcp.release`` line (or the reverse)."""
+
+        released_at = datetime.now(timezone.utc).isoformat() if verified else None
+        outcome = "released" if verified else "refused"
+        with self._tx(immediate=True) as c:
+            c.execute(
+                "UPDATE approvals SET verified_at_send = ?, released_at = ?, outcome = ? "
+                "WHERE id = ?",
+                (int(verified), released_at, outcome, approval_id),
+            )
+            if audit is not None:
+                self._log(*audit)
+
+    def close_approval(
+        self,
+        approval_id: int,
+        outcome: Literal["withdrawn", "expired", "lost_on_restart"],
+    ) -> None:
+        """An approval that will never be released: the lawyer withdrew it,
+        the model never collected it, or the server restarted."""
+
+        with self._tx() as c:
+            c.execute(
+                "UPDATE approvals SET outcome = ? WHERE id = ? AND outcome IS NULL",
+                (outcome, approval_id),
+            )
+
+    def recover_after_restart(self) -> dict[str, int]:
+        """Sweep what an abrupt stop left behind: delete every entity still
+        marked provisional (its review died with the process) and close
+        every approval that was neither released nor refused as
+        ``lost_on_restart``. One ``mcp.recover`` audit line per matter
+        touched. Safe because the server's instance lock guarantees no
+        other server holds a live review on this home."""
+
+        per_matter: dict[str, dict[str, int]] = {}
+        with self._tx(immediate=True) as c:
+            for row in c.execute(
+                "SELECT matter_id, COUNT(*) AS n FROM entities "
+                "WHERE provisional_review_id IS NOT NULL GROUP BY matter_id"
+            ).fetchall():
+                per_matter.setdefault(row["matter_id"], {"pruned": 0, "approvals_lost": 0})
+                per_matter[row["matter_id"]]["pruned"] = int(row["n"])
+            c.execute("DELETE FROM entities WHERE provisional_review_id IS NOT NULL")
+            for row in c.execute(
+                "SELECT matter_id, COUNT(*) AS n FROM approvals "
+                "WHERE outcome IS NULL AND verified_at_send IS NULL GROUP BY matter_id"
+            ).fetchall():
+                per_matter.setdefault(row["matter_id"], {"pruned": 0, "approvals_lost": 0})
+                per_matter[row["matter_id"]]["approvals_lost"] = int(row["n"])
+            c.execute(
+                "UPDATE approvals SET outcome = 'lost_on_restart' "
+                "WHERE outcome IS NULL AND verified_at_send IS NULL"
+            )
+            for matter_id, counts in per_matter.items():
+                self._log(matter_id, "mcp.recover", json.dumps(counts))
+        return {
+            "pruned": sum(v["pruned"] for v in per_matter.values()),
+            "approvals_lost": sum(v["approvals_lost"] for v in per_matter.values()),
+            "matters": len(per_matter),
+        }
+
+    def last_used_by_matter(self) -> dict[str, str]:
+        """Latest audit timestamp per matter — the 'last used' order the
+        plugin window sorts matters by."""
+
+        rows = self._conn.execute(
+            "SELECT matter_id, MAX(ts) AS ts FROM audit_log GROUP BY matter_id"
+        ).fetchall()
+        return {r["matter_id"]: r["ts"] for r in rows}
+
     def _fetch_entity_by_id(self, matter_id: str, entity_id: int) -> Entity | None:
         row = self._conn.execute(
             "SELECT * FROM entities WHERE matter_id = ? AND id = ?",
@@ -690,10 +1012,14 @@ class Store:
         ).fetchone()
         return self._row_to_entity(row) if row else None
 
-    def list_entities(self, matter_id: str) -> list[Entity]:
+    def list_entities(self, matter_id: str, *, review_id: str | None = None) -> list[Entity]:
+        """The confirmed entities of a matter, plus the provisional ones of
+        ``review_id`` when given (the plugin review that created them)."""
+
         rows = self._conn.execute(
-            "SELECT * FROM entities WHERE matter_id = ? ORDER BY id ASC",
-            (matter_id,),
+            f"SELECT e.* FROM entities e WHERE e.matter_id = ? AND {self._VISIBLE} "
+            "ORDER BY e.id ASC",
+            (matter_id, review_id),
         ).fetchall()
         return [self._row_to_entity(r) for r in rows]
 
@@ -718,27 +1044,30 @@ class Store:
 
     # ----- pseudonym allocation -----
 
-    def _next_pseudonym(self, matter_id: str, entity_type: EntityType) -> str:
-        """Allocate the next pseudonym for `entity_type` in `matter_id`.
+    @staticmethod
+    def _allocate_pseudonym(
+        c: sqlite3.Connection, matter_id: str, entity_type: EntityType
+    ) -> str:
+        """Allocate the next pseudonym for `entity_type` in `matter_id`,
+        inside the caller's (IMMEDIATE) transaction.
 
-        Counters are monotonic per (matter, type) and never decremented, so a
-        deleted or merged-away pseudonym is never reused. This preserves the
-        integrity of any document that was redacted before the change.
+        One statement reads and advances the counter (``RETURNING`` gives
+        the value after the update), so no interleaving can hand the same
+        number to two callers. Counters are monotonic per (matter, type)
+        and never decremented, so a deleted or merged-away pseudonym is
+        never reused. This preserves the integrity of any document that
+        was redacted before the change.
         """
 
         prefix = _pseudonym_prefix(entity_type)
-        row = self._conn.execute(
-            "SELECT next_n FROM pseudonym_counters "
-            "WHERE matter_id = ? AND entity_type = ?",
+        row = c.execute(
+            "INSERT INTO pseudonym_counters (matter_id, entity_type, next_n) "
+            "VALUES (?, ?, 2) "
+            "ON CONFLICT(matter_id, entity_type) DO UPDATE SET next_n = next_n + 1 "
+            "RETURNING next_n",
             (matter_id, entity_type.value),
         ).fetchone()
-        n = int(row["next_n"]) if row else 1
-        self._conn.execute(
-            "INSERT INTO pseudonym_counters (matter_id, entity_type, next_n) "
-            "VALUES (?, ?, ?) "
-            "ON CONFLICT(matter_id, entity_type) DO UPDATE SET next_n = ?",
-            (matter_id, entity_type.value, n + 1, n + 1),
-        )
+        n = int(row[0]) - 1
         return f"{prefix}{n}"
 
     # ----- audit -----

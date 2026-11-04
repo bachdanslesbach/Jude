@@ -77,6 +77,21 @@ class Matter(BaseModel):
     created_at: datetime | None = None
 
 
+class Segment(BaseModel):
+    """One emitted replacement: the span of the raw text that was replaced,
+    where its replacement sits in the redacted text, and the entity it
+    resolved to. Type-aware by construction (it comes out of `redact()`),
+    unlike a surface lookup after the fact."""
+
+    model_config = ConfigDict(frozen=True)
+
+    raw_start: int
+    raw_end: int
+    red_start: int
+    red_end: int
+    entity_id: int
+
+
 class RedactionResult(BaseModel):
     """Output of a redaction pass."""
 
@@ -84,6 +99,44 @@ class RedactionResult(BaseModel):
     detections: list[Detection]
     entities_used: list[Entity]
     mode: Mode
+    # One per emitted span, in text order. Empty for results built by
+    # callers that predate the field.
+    segments: list[Segment] = Field(default_factory=list)
+    # Ids of the entities this pass created in the store (not the ones
+    # it reused). A review that is cancelled prunes exactly these.
+    created_entity_ids: list[int] = Field(default_factory=list)
+    # (entity_id, form) for every surface form this pass added to an
+    # entity that already existed. A cancelled review removes exactly
+    # these, so a pre-existing entity's dictionary is left as it was.
+    added_surface_forms: list[tuple[int, str]] = Field(default_factory=list)
+
+
+class Approval(BaseModel):
+    """One row of the `approvals` ledger: a text the user approved for
+    release, hashed and recorded on disk before anything left."""
+
+    id: int
+    review_id: str | None
+    matter_id: str
+    purpose: str
+    payload_sha256: str
+    chars: int | None
+    endpoint: str
+    endpoint_host: str
+    mode: str | None
+    zero_retention: bool
+    n_hidden: int | None
+    n_kept: int | None
+    n_user_marked: int | None
+    attestation: str
+    approver_os_user: str
+    ui_lang: str | None
+    verified_at_send: int | None
+    approved_at: datetime
+    released_at: datetime | None
+    # How the approval ended: released | refused | withdrawn | expired |
+    # lost_on_restart. None while the text is still waiting for the model.
+    outcome: str | None = None
 
 
 class MessageRole(StrEnum):

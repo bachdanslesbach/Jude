@@ -35,9 +35,14 @@ class DictionaryDetector:
     though the matter dictionary has the full name.
     """
 
-    def __init__(self, store: Store, matter_id: str):
+    def __init__(self, store: Store, matter_id: str, review_id: str | None = None):
         self.store = store
         self.matter_id = matter_id
+        # The plugin sets this to its open review's id so the dictionary
+        # also knows the entities that review created provisionally (second
+        # pass). Any other caller sees confirmed entities only: a form that
+        # a cancel or a restart may still delete is never a dictionary hit.
+        self.review_id = review_id
 
     def detect(self, text: str) -> list[Detection]:
         forms = self._all_forms_with_aliases()
@@ -79,8 +84,9 @@ class DictionaryDetector:
             FROM surface_forms s
             JOIN entities e ON e.id = s.entity_id
             WHERE e.matter_id = ?
+              AND (e.provisional_review_id IS NULL OR e.provisional_review_id = ?)
             """,
-            (self.matter_id,),
+            (self.matter_id, self.review_id),
         ).fetchall()
 
         forms: list[tuple[str, EntityType]] = []

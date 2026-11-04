@@ -1,0 +1,86 @@
+{
+  "manifest_version": "0.3",
+  "name": "jude",
+  "display_name": "Jude",
+  "version": "0.1.0",
+  "description": "Anonymize a legal document on your machine, review it in a local window, and hand Claude only the approved pseudonymized text.",
+  "long_description": "Jude runs entirely on your computer. Ask Claude to analyse a document: Jude opens a local window where you choose the matter and the file, shows you what will be hidden and what will leave, and records your approval (with a SHA-256 of the exact text) on this computer before releasing the pseudonymized text to Claude, once. Claude's answer is shown with the real names in the same local window and never returned to the model. Matter names, file names and the pseudonym mapping never reach Claude. The chat box is not filtered: say which document to open in Jude's window, not in the chat. Requires a working Jude installation (Python); the bundle contains no Python runtime and no language models.",
+  "author": {
+    "name": "Etienne Perrin",
+    "url": "https://github.com/bachdanslesbach/Jude"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bachdanslesbach/Jude"
+  },
+  "homepage": "https://github.com/bachdanslesbach/Jude",
+  "documentation": "https://bachdanslesbach.github.io/Jude/plugins.html",
+  "support": "https://github.com/bachdanslesbach/Jude/issues",
+  "icon": "icon.png",
+  "server": {
+    "type": "binary",
+    "entry_point": "server/jude-launcher",
+    "mcp_config": {
+      "command": "${user_config.jude_path}",
+      "args": ["mcp"],
+      "env": {
+        "HF_HUB_OFFLINE": "1",
+        "TRANSFORMERS_OFFLINE": "1",
+        "HF_HUB_DISABLE_TELEMETRY": "1",
+        "DO_NOT_TRACK": "1",
+        "PYTHONUTF8": "1",
+        "TOKENIZERS_PARALLELISM": "false",
+        "JUDE_HOME": "${user_config.jude_home}",
+        "HF_HOME": "${user_config.hf_home}"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "prepare_document",
+      "description": "Start a Jude review so the user can hand you one document from their own computer with the confidential names replaced by pseudonyms such as Org1 or Person2. Takes no arguments: the user chooses the matter and the document in the Jude window on their computer, so never ask the user which matter or which file, and never ask them to paste the document into the chat. Returns a review_id and a status. The document itself arrives later, through fetch_approved, only after the user has approved it in the Jude window."
+    },
+    {
+      "name": "fetch_approved",
+      "description": "Collect the approved, pseudonymized text of a review started with prepare_document. Call it only after the user says they have approved in the Jude window. It waits up to wait_seconds (between 5 and 30) and returns the text once the review is released. The text is handed out once, so keep the copy you receive. If the status is not released, stop and wait for the user to say they have approved; call this at most three times for one approval, never in a loop."
+    },
+    {
+      "name": "show_answer",
+      "description": "Show your answer about an approved document to the user in the Jude window, where Jude puts the real names back locally. Pass the review_id of the document you received through fetch_approved and the full text of your answer, using the pseudonyms exactly as you received them (Org1, Person2). Returns only a status and a character count: the real names never come back to you."
+    }
+  ],
+  "tools_generated": false,
+  "keywords": [
+    "legal",
+    "anonymization",
+    "pseudonymization",
+    "professional secrecy",
+    "privacy",
+    "local-first"
+  ],
+  "license": "MIT",
+  "privacy_policies": [],
+  "compatibility": {
+    "platforms": ["darwin", "win32"]
+  },
+  "user_config": {
+    "jude_path": {
+      "type": "file",
+      "title": "Jude executable",
+      "description": "Pick the `jude` executable inside your Jude virtual environment (`.venv/bin/jude`, or `.venv\\Scripts\\jude.exe` on Windows), not a pyenv/asdf shim",
+      "required": true
+    },
+    "jude_home": {
+      "type": "directory",
+      "title": "Jude data folder",
+      "description": "Leave empty for the default ~/.jude; set it only if you run Jude with JUDE_HOME",
+      "required": false
+    },
+    "hf_home": {
+      "type": "directory",
+      "title": "Hugging Face cache folder",
+      "description": "Leave empty unless you moved the Hugging Face cache (HF_HOME) where the GLiNER weights live",
+      "required": false
+    }
+  }
+}
